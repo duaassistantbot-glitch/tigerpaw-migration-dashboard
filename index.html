@@ -83,11 +83,14 @@
 
   /* Clickable reg numbers */
   .reg-link { cursor:pointer; color:#6EBE4F; text-decoration:underline; text-decoration-style:dotted; text-underline-offset:2px; font-weight:700; background:none; border:none; font-family:'Montserrat',sans-serif; font-size:inherit; padding:0; }
+  .reg-link::after { content:''; display:inline-block; width:11px; height:11px; margin-left:4px; vertical-align:middle; background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23b0b8c1' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='8'/%3E%3Cpath d='m21 21-4.35-4.35'/%3E%3C/svg%3E"); background-size:contain; background-repeat:no-repeat; opacity:0.75; }
   .reg-link:hover { color:#4a9e32; }
   .regacct-link { cursor:pointer; color:#2399B5; text-decoration:underline; text-decoration-style:dotted; text-underline-offset:2px; font-weight:700; background:none; border:none; font-family:'Montserrat',sans-serif; font-size:inherit; padding:0; }
   .regacct-link:hover { color:#1a7a91; }
   .bar-reg-link { cursor:pointer; text-decoration:underline; text-decoration-style:dotted; text-underline-offset:2px; background:none; border:none; font-family:'Montserrat',sans-serif; font-weight:700; font-size:15px; color:#1D3756; padding:0; }
+  .bar-reg-link::after { content:''; display:inline-block; width:11px; height:11px; margin-left:4px; vertical-align:middle; background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23b0b8c1' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='8'/%3E%3Cpath d='m21 21-4.35-4.35'/%3E%3C/svg%3E"); background-size:contain; background-repeat:no-repeat; opacity:0.75; }
   .bar-reg-link:hover { color:#2399B5; }
+  .wb-search-icon { display:inline-block; width:13px; height:13px; margin-left:5px; vertical-align:middle; background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='rgba(255,255,255,0.45)' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='8'/%3E%3Cpath d='m21 21-4.35-4.35'/%3E%3C/svg%3E"); background-size:contain; background-repeat:no-repeat; }
 
   /* Two col / three col */
   .two-col { display:grid; grid-template-columns:1fr 1fr; gap:20px; }
@@ -217,7 +220,7 @@
       <div class="wb-sub">External registrants only (6 internal @rev.io excluded)</div>
     </div>
     <div class="wb-metrics">
-      <div class="wm"><div class="v" id="wb-contacts" style="cursor:pointer" onclick="showRegistrants('all','all')" title="Click to see registrant list">119</div><div class="l">Contacts Registered</div></div>
+      <div class="wm"><div class="v" id="wb-contacts" style="cursor:pointer;text-decoration:underline;text-decoration-style:dotted;text-underline-offset:3px" onclick="showRegistrants('all','all')" title="Click to see registrant list">119<span class="wb-search-icon"></span></div><div class="l">Contacts Registered</div></div>
       <div class="wm"><div class="v teal" id="wb-accounts">87</div><div class="l">Unique Accounts</div></div>
       <div class="wm"><div class="v" id="wb-rate" style="color:#fff;font-size:20px;margin-top:4px;">16+71+32</div><div class="l">RTM + Unknown + Other</div></div>
     </div>
