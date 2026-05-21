@@ -1,0 +1,180 @@
+{
+  "generatedAt": "2026-05-21T13:13:51.051Z",
+  "audienceStats": {
+    "Ready to Migrate": {
+      "uniqueContactsEmailed": 558,
+      "uniqueAccountsEmailed": 82,
+      "totalSent": 1638,
+      "totalDelivered": 1628,
+      "totalOpens": 185,
+      "totalClicks": 19,
+      "webinarRegistrants": 21,
+      "uniqueAccountsRegistered": 18
+    },
+    "Unknown": {
+      "uniqueContactsEmailed": 1874,
+      "uniqueAccountsEmailed": 293,
+      "totalSent": 1856,
+      "totalDelivered": 1821,
+      "totalOpens": 235,
+      "totalClicks": 78,
+      "webinarRegistrants": 93,
+      "uniqueAccountsRegistered": 66
+    },
+    "Migrate Later": {
+      "uniqueContactsEmailed": 0,
+      "uniqueAccountsEmailed": 0,
+      "totalSent": 0,
+      "totalDelivered": 0,
+      "totalOpens": 0,
+      "totalClicks": 0,
+      "webinarRegistrants": 0,
+      "uniqueAccountsRegistered": 0
+    }
+  },
+  "verticalSummary": [
+    {
+      "vertical": "MSP",
+      "registeredContacts": 96,
+      "registeredCompanies": 63
+    },
+    {
+      "vertical": "Integrator",
+      "registeredContacts": 41,
+      "registeredCompanies": 27
+    },
+    {
+      "vertical": "Unknown",
+      "registeredContacts": 40,
+      "registeredCompanies": 17
+    },
+    {
+      "vertical": "AV / Home Automation",
+      "registeredContacts": 1,
+      "registeredCompanies": 1
+    }
+  ],
+  "webinarTotal": {
+    "totalContacts": 178,
+    "uniqueAccounts": 108
+  },
+  "emailDetails": [
+    {
+      "id": "211671857029",
+      "campaignId": "418179386",
+      "name": "Email 1: A Personal Note (Brent Maropis)",
+      "audience": "Ready to Migrate",
+      "stats": {
+        "sent": 552,
+        "delivered": 547,
+        "opens": 74,
+        "clicks": 1,
+        "audience": "Ready to Migrate"
+      }
+    },
+    {
+      "id": "211671881243",
+      "campaignId": "418566767",
+      "name": "Email 2a: What's Coming Next",
+      "audience": "Ready to Migrate",
+      "stats": {
+        "sent": 541,
+        "delivered": 541,
+        "opens": 65,
+        "clicks": 11,
+        "audience": "Ready to Migrate"
+      }
+    },
+    {
+      "id": "211671881246",
+      "campaignId": "419250252",
+      "name": "Email 3: Webinar Invite",
+      "audience": "Ready to Migrate",
+      "stats": {
+        "sent": 545,
+        "delivered": 540,
+        "opens": 46,
+        "clicks": 7,
+        "audience": "Ready to Migrate"
+      }
+    },
+    {
+      "id": "212743616627",
+      "campaignId": "418566191",
+      "name": "Email 2b: What's Coming Next - Unknown Group 1",
+      "audience": "Unknown",
+      "stats": {
+        "sent": 115,
+        "delivered": 115,
+        "opens": 13,
+        "clicks": 7,
+        "audience": "Unknown"
+      }
+    },
+    {
+      "id": "212822181518",
+      "campaignId": "418622481",
+      "name": "Email 2b: What's Coming Next - Unknown Group 2",
+      "audience": "Unknown",
+      "stats": {
+        "sent": 111,
+        "delivered": 111,
+        "opens": 18,
+        "clicks": 5,
+        "audience": "Unknown"
+      }
+    },
+    {
+      "id": "212882551819",
+      "campaignId": "418777581",
+      "name": "Email 2b: What's Coming Next - Unknown Group 3",
+      "audience": "Unknown",
+      "stats": {
+        "sent": 160,
+        "delivered": 159,
+        "opens": 19,
+        "clicks": 11,
+        "audience": "Unknown"
+      }
+    },
+    {
+      "id": "212906429731",
+      "campaignId": "418932593",
+      "name": "Email 2b: What's Coming Next - Unknown Group 4",
+      "audience": "Unknown",
+      "stats": {
+        "sent": 707,
+        "delivered": 706,
+        "opens": 89,
+        "clicks": 32,
+        "audience": "Unknown"
+      }
+    },
+    {
+      "id": "212956274251",
+      "campaignId": "418954930",
+      "name": "Email 2b: What's Coming Next - Unknown Group 5",
+      "audience": "Unknown",
+      "stats": {
+        "sent": 190,
+        "delivered": 175,
+        "opens": 29,
+        "clicks": 12,
+        "audience": "Unknown"
+      }
+    },
+    {
+      "id": "213100807835",
+      "campaignId": "419249857",
+      "name": "Email 2b: What's Coming Next - Unknown Group 6",
+      "audience": "Unknown",
+      "stats": {
+        "sent": 573,
+        "delivered": 555,
+        "opens": 67,
+        "clicks": 11,
+        "audience": "Unknown"
+      }
+    }
+  ]
+}
