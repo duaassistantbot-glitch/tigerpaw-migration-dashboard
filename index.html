@@ -429,6 +429,57 @@
     </div>
   </div><!-- end two-col -->
 
+  <!-- ── MIGRATION PIPELINE BANNER ── -->
+  <div class="webinar-bar" style="background:linear-gradient(135deg,#0f3025 0%,#1a5c3a 100%);margin-top:0;">
+    <div class="wb-left">
+      <div class="wb-label" style="background:rgba(110,190,79,0.25);color:#6EBE4F;">Salesforce Pipeline</div>
+      <div class="wb-title">Legacy Migration Opportunities</div>
+      <div class="wb-sub">Contacts with Web Migration Request checked · Opp Type = Legacy Migration</div>
+    </div>
+    <div class="wb-metrics">
+      <div class="wm"><div class="v" id="mig-count">1</div><div class="l">Opportunities</div></div>
+      <div class="wm"><div class="v" id="mig-amount" style="color:#6EBE4F;">$0</div><div class="l">Renewal Amount</div></div>
+      <div class="wm"><div class="v" id="mig-breakdown" style="color:#fff;font-size:20px;margin-top:4px;">0 + 0 + 1</div><div class="l">RTM + Unknown + Other</div></div>
+    </div>
+  </div>
+
+  <!-- ── MIGRATION PIPELINE BY AUDIENCE ── -->
+  <div class="section-title">Migration Pipeline by Audience</div>
+  <div class="card">
+    <div class="card-header">
+      <h2>Opportunities &amp; Renewal Amount</h2>
+      <span>Salesforce · Web Migration Request = Checked · Opp Type = Legacy Migration</span>
+    </div>
+    <div class="vbar-row">
+      <div class="vbar-name"><span class="dot d-teal"></span>Ready to Migrate</div>
+      <div class="vbar-wrap"><div class="vbar-bg"><div class="vbar-fill" id="mig-rtm-bar" style="width:0%;background:linear-gradient(90deg,#2399B5,#6EBE4F)"></div></div></div>
+      <div class="vbar-nums">
+        <div class="big" id="mig-rtm-count" style="font-size:22px;font-weight:800;color:#1D3756;">0</div>
+        <div class="sm" id="mig-rtm-amount">$0 Renewal</div>
+      </div>
+    </div>
+    <div class="vbar-row">
+      <div class="vbar-name"><span class="dot d-orange"></span>Unknown</div>
+      <div class="vbar-wrap"><div class="vbar-bg"><div class="vbar-fill" id="mig-unk-bar" style="width:0%;background:linear-gradient(90deg,#f59e0b,#f59e0b)"></div></div></div>
+      <div class="vbar-nums">
+        <div class="big" id="mig-unk-count" style="font-size:22px;font-weight:800;color:#1D3756;">0</div>
+        <div class="sm" id="mig-unk-amount">$0 Renewal</div>
+      </div>
+    </div>
+    <div class="vbar-row">
+      <div class="vbar-name"><span class="dot d-gray"></span>Other / Direct</div>
+      <div class="vbar-wrap"><div class="vbar-bg"><div class="vbar-fill" id="mig-oth-bar" style="width:100%;background:linear-gradient(90deg,#94a3b8,#64748b)"></div></div></div>
+      <div class="vbar-nums">
+        <div class="big" id="mig-oth-count" style="font-size:22px;font-weight:800;color:#1D3756;">1</div>
+        <div class="sm" id="mig-oth-amount">$0 Renewal</div>
+      </div>
+    </div>
+    <div style="padding:11px 20px;background:#F5F7FA;border-top:1px solid #DDE2E8;display:flex;justify-content:space-between;font-size:12px;color:#3d4d5c;" id="mig-summary">
+      <span><strong id="mig-summary-count">1</strong> total opportunities in pipeline</span>
+      <span id="mig-summary-amount">$0 total Renewal Amount</span>
+    </div>
+  </div>
+
   <div class="footer-note">
     Rev.io Marketing Ops · Tigerpaw Migration Campaign · HubSpot API · May 18, 2026 · Internal @rev.io contacts excluded from registration counts
   </div>
@@ -444,7 +495,8 @@ const DATA = {
     wbContacts:'162', wbAccts:'106', wbBreak:'21 + 93 + 48',
     totals:{ accts:'375', contacts:'2,432', sent:'3,493', opens:'429', openRate:'12.4%', clicks:'100', clickRate:'2.9%', reg:'162', regAccts:'106' },
     vbars:{ mspReg:120, mspAccts:78, intReg:42, intAccts:28, total:162, totalAccts:106 },
-    abars:{ rtmReg:21, rtmAccts:18, unkReg:93, unkAccts:66, mlReg:48, mlAccts:22, total:162, totalAccts:106 }
+    abars:{ rtmReg:21, rtmAccts:18, unkReg:93, unkAccts:66, mlReg:48, mlAccts:22, total:162, totalAccts:106 },
+    sfOpps:{ rtmCount:0, rtmAmt:0, unkCount:0, unkAmt:0, othCount:1, othAmt:0, total:1, totalAmt:0 }
   },
   ready: {
     contacts:'558', accts:'Unique · 82 accounts', sent:'1,638', delivered:'1,628 delivered',
@@ -452,7 +504,8 @@ const DATA = {
     wbContacts:'21', wbAccts:'18', wbBreak:'Ready to Migrate only',
     totals:{ accts:'82', contacts:'558', sent:'1,638', opens:'189', openRate:'11.6%', clicks:'20', clickRate:'1.2%', reg:'21', regAccts:'18' },
     vbars:{ mspReg:15, mspAccts:13, intReg:6, intAccts:5, total:21, totalAccts:18 },
-    abars:{ rtmReg:21, rtmAccts:18, unkReg:0, unkAccts:0, mlReg:0, mlAccts:0, total:21, totalAccts:18 }
+    abars:{ rtmReg:21, rtmAccts:18, unkReg:0, unkAccts:0, mlReg:0, mlAccts:0, total:21, totalAccts:18 },
+    sfOpps:{ rtmCount:0, rtmAmt:0, unkCount:0, unkAmt:0, othCount:0, othAmt:0, total:0, totalAmt:0 }
   },
   unknown: {
     contacts:'1,874', accts:'Unique · 293 accounts', sent:'1,855', delivered:'1,821 delivered',
@@ -460,7 +513,8 @@ const DATA = {
     wbContacts:'93', wbAccts:'66', wbBreak:'Unknown only',
     totals:{ accts:'293', contacts:'1,874', sent:'1,855', opens:'240', openRate:'13.2%', clicks:'80', clickRate:'4.4%', reg:'93', regAccts:'66' },
     vbars:{ mspReg:64, mspAccts:45, intReg:29, intAccts:21, total:93, totalAccts:66 },
-    abars:{ rtmReg:0, rtmAccts:0, unkReg:93, unkAccts:66, mlReg:0, mlAccts:0, total:93, totalAccts:66 }
+    abars:{ rtmReg:0, rtmAccts:0, unkReg:93, unkAccts:66, mlReg:0, mlAccts:0, total:93, totalAccts:66 },
+    sfOpps:{ rtmCount:0, rtmAmt:0, unkCount:0, unkAmt:0, othCount:0, othAmt:0, total:0, totalAmt:0 }
   },
   later: {
     contacts:'—', accts:'No campaign sent', sent:'—', delivered:'—',
@@ -468,7 +522,8 @@ const DATA = {
     wbContacts:'48', wbAccts:'22', wbBreak:'Organic / direct',
     totals:{ accts:'—', contacts:'—', sent:'—', opens:'—', openRate:'', clicks:'—', clickRate:'', reg:'48', regAccts:'22' },
     vbars:{ mspReg:41, mspAccts:19, intReg:7, intAccts:3, total:48, totalAccts:22 },
-    abars:{ rtmReg:0, rtmAccts:0, unkReg:0, unkAccts:0, mlReg:48, mlAccts:22, total:48, totalAccts:22 }
+    abars:{ rtmReg:0, rtmAccts:0, unkReg:0, unkAccts:0, mlReg:48, mlAccts:22, total:48, totalAccts:22 },
+    sfOpps:{ rtmCount:0, rtmAmt:0, unkCount:0, unkAmt:0, othCount:1, othAmt:0, total:1, totalAmt:0 }
   }
 };
 
@@ -554,6 +609,25 @@ function setFilter(f, btn) {
   document.getElementById('ab-summary').innerHTML =
     `<span><strong>${topAud}</strong> makes up <strong style="color:#2399B5">${topPct2}%</strong> of registrations</span>
      <span>${ab.total} total · ${ab.totalAccts} accounts</span>`;
+
+  // ── Migration Pipeline ──
+  const sf = d.sfOpps;
+  const fmt = n => '$' + (n || 0).toLocaleString();
+  const sfDenom = sf.total || 1;
+  document.getElementById('mig-count').textContent = sf.total;
+  document.getElementById('mig-amount').textContent = fmt(sf.totalAmt);
+  document.getElementById('mig-breakdown').textContent = sf.rtmCount + ' + ' + sf.unkCount + ' + ' + sf.othCount;
+  document.getElementById('mig-rtm-bar').style.width = (sf.total === 0 ? 0 : Math.round(sf.rtmCount / sfDenom * 100)) + '%';
+  document.getElementById('mig-rtm-count').textContent = sf.rtmCount;
+  document.getElementById('mig-rtm-amount').textContent = fmt(sf.rtmAmt) + ' Renewal';
+  document.getElementById('mig-unk-bar').style.width = (sf.total === 0 ? 0 : Math.round(sf.unkCount / sfDenom * 100)) + '%';
+  document.getElementById('mig-unk-count').textContent = sf.unkCount;
+  document.getElementById('mig-unk-amount').textContent = fmt(sf.unkAmt) + ' Renewal';
+  document.getElementById('mig-oth-bar').style.width = (sf.total === 0 ? 0 : Math.round(sf.othCount / sfDenom * 100)) + '%';
+  document.getElementById('mig-oth-count').textContent = sf.othCount;
+  document.getElementById('mig-oth-amount').textContent = fmt(sf.othAmt) + ' Renewal';
+  document.getElementById('mig-summary-count').textContent = sf.total;
+  document.getElementById('mig-summary-amount').textContent = fmt(sf.totalAmt) + ' total Renewal Amount';
 }
 
 // ── REGISTRANT DATA ──
