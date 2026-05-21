@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-05-21T13:13:51.051Z",
+  "generatedAt": "2026-05-21T19:06:41.869Z",
   "audienceStats": {
     "Ready to Migrate": {
       "uniqueContactsEmailed": 558,
-      "uniqueAccountsEmailed": 82,
+      "uniqueAccountsEmailed": 83,
       "totalSent": 1638,
       "totalDelivered": 1628,
       "totalOpens": 185,
       "totalClicks": 19,
-      "webinarRegistrants": 21,
-      "uniqueAccountsRegistered": 18
+      "webinarRegistrants": 26,
+      "uniqueAccountsRegistered": 19
     },
     "Unknown": {
       "uniqueContactsEmailed": 1874,
@@ -18,8 +18,8 @@
       "totalDelivered": 1821,
       "totalOpens": 235,
       "totalClicks": 78,
-      "webinarRegistrants": 93,
-      "uniqueAccountsRegistered": 66
+      "webinarRegistrants": 98,
+      "uniqueAccountsRegistered": 67
     },
     "Migrate Later": {
       "uniqueContactsEmailed": 0,
@@ -35,18 +35,18 @@
   "verticalSummary": [
     {
       "vertical": "MSP",
-      "registeredContacts": 96,
-      "registeredCompanies": 63
+      "registeredContacts": 103,
+      "registeredCompanies": 65
     },
     {
       "vertical": "Integrator",
-      "registeredContacts": 41,
+      "registeredContacts": 48,
       "registeredCompanies": 27
     },
     {
       "vertical": "Unknown",
-      "registeredContacts": 40,
-      "registeredCompanies": 17
+      "registeredContacts": 46,
+      "registeredCompanies": 18
     },
     {
       "vertical": "AV / Home Automation",
@@ -55,8 +55,8 @@
     }
   ],
   "webinarTotal": {
-    "totalContacts": 178,
-    "uniqueAccounts": 108
+    "totalContacts": 198,
+    "uniqueAccounts": 111
   },
   "emailDetails": [
     {
