@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-21T19:06:41.869Z",
+  "generatedAt": "2026-05-22T12:00:37.610Z",
   "audienceStats": {
     "Ready to Migrate": {
       "uniqueContactsEmailed": 558,
@@ -18,7 +18,7 @@
       "totalDelivered": 1821,
       "totalOpens": 235,
       "totalClicks": 78,
-      "webinarRegistrants": 98,
+      "webinarRegistrants": 99,
       "uniqueAccountsRegistered": 67
     },
     "Migrate Later": {
@@ -40,13 +40,13 @@
     },
     {
       "vertical": "Integrator",
-      "registeredContacts": 48,
+      "registeredContacts": 49,
       "registeredCompanies": 27
     },
     {
       "vertical": "Unknown",
-      "registeredContacts": 46,
-      "registeredCompanies": 18
+      "registeredContacts": 48,
+      "registeredCompanies": 19
     },
     {
       "vertical": "AV / Home Automation",
@@ -55,8 +55,8 @@
     }
   ],
   "webinarTotal": {
-    "totalContacts": 198,
-    "uniqueAccounts": 111
+    "totalContacts": 201,
+    "uniqueAccounts": 112
   },
   "emailDetails": [
     {
