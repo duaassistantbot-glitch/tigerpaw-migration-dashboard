@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-22T12:01:23.095Z",
+  "generatedAt": "2026-05-23T12:01:14.209Z",
   "audienceStats": {
     "Ready to Migrate": {
       "sent": 1638,
@@ -22,7 +22,7 @@
       "clickRate": "4.4%",
       "uniqueContacts": 1874,
       "uniqueAccts": 293,
-      "webinarReg": 99,
+      "webinarReg": 100,
       "webinarRegAccts": 67
     }
   },
@@ -36,8 +36,8 @@
       "clicks": 64,
       "openRate": "12.4%",
       "clickRate": "2.7%",
-      "webinarReg": 133,
-      "webinarRegAccts": 82
+      "webinarReg": 136,
+      "webinarRegAccts": 83
     },
     "Integrator": {
       "emailedContacts": 863,
@@ -2491,8 +2491,8 @@
     ]
   },
   "sfOpps": {
-    "generatedAt": "2026-05-22T12:01:07.215Z",
-    "wmrContactCount": 2,
+    "generatedAt": "2026-05-23T12:00:54.485Z",
+    "wmrContactCount": 3,
     "oppsByAudience": {
       "Ready to Migrate": {
         "count": 0,
@@ -2500,9 +2500,17 @@
         "opps": []
       },
       "Unknown": {
-        "count": 1,
+        "count": 2,
         "amount": 0,
         "opps": [
+          {
+            "id": "006PX00000b3crTYAQ",
+            "name": "MPS Works Web Migration",
+            "account": "MPS Works",
+            "stage": "1- Discovery Scheduled",
+            "amount": 0,
+            "createdDate": "2026-05-22T20:41:35.000+0000"
+          },
           {
             "id": "006PX00000b0KMPYA2",
             "name": "Pilothouse Communications Web Migration",
@@ -2529,7 +2537,7 @@
       }
     },
     "grandTotal": {
-      "count": 2,
+      "count": 3,
       "amount": 0
     }
   },
@@ -2542,9 +2550,9 @@
     "clickRate": "2.9%",
     "uniqueContacts": 2432,
     "uniqueAccts": 376,
-    "webinarReg": 183,
-    "webinarRegAccts": 110,
-    "internalExcluded": 18
+    "webinarReg": 186,
+    "webinarRegAccts": 111,
+    "internalExcluded": 20
   },
   "regBreakdown": {
     "Ready to Migrate": {
@@ -2552,11 +2560,11 @@
       "Integrator": 9
     },
     "Unknown": {
-      "MSP": 67,
+      "MSP": 68,
       "Integrator": 32
     },
     "Other": {
-      "MSP": 49,
+      "MSP": 51,
       "Integrator": 9
     }
   }
