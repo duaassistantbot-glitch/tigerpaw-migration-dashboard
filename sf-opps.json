@@ -1,11 +1,20 @@
 {
-  "generatedAt": "2026-05-26T12:00:52.692Z",
-  "wmrContactCount": 3,
+  "generatedAt": "2026-05-27T12:01:10.566Z",
+  "wmrContactCount": 5,
   "oppsByAudience": {
     "Ready to Migrate": {
-      "count": 0,
-      "amount": 0,
-      "opps": []
+      "count": 1,
+      "amount": 549.24,
+      "opps": [
+        {
+          "id": "006PX00000bB2cIYAS",
+          "name": "SOLVD Instrument Solutions Web Migration",
+          "account": "SOLVD Instrument Solutions",
+          "stage": "3 - Initial Product Demo",
+          "amount": 549.24,
+          "createdDate": "2026-05-26T12:57:52.000+0000"
+        }
+      ]
     },
     "Unknown": {
       "count": 2,
@@ -13,7 +22,7 @@
       "opps": [
         {
           "id": "006PX00000b3crTYAQ",
-          "name": "MPS Works Web Migration",
+          "name": "MPS Works - Web Migration",
           "account": "MPS Works",
           "stage": "1- Discovery Scheduled",
           "amount": 0,
@@ -21,7 +30,7 @@
         },
         {
           "id": "006PX00000b0KMPYA2",
-          "name": "Pilothouse Communications Web Migration",
+          "name": "Pilothouse Communications - Web Migration",
           "account": "Pilothouse Communications",
           "stage": "1- Discovery Scheduled",
           "amount": 0,
@@ -30,22 +39,30 @@
       ]
     },
     "Other": {
-      "count": 1,
+      "count": 2,
       "amount": 0,
       "opps": [
         {
           "id": "006PX00000aztdzYAA",
-          "name": "Hosted America Web Migration",
+          "name": "Hosted America - Web Migration",
           "account": "Hosted America",
           "stage": "1- Discovery Scheduled",
           "amount": 0,
           "createdDate": "2026-05-21T19:02:48.000+0000"
+        },
+        {
+          "id": "006PX00000bB2kLYAS",
+          "name": "Intelligent Power Solutions Web Migration",
+          "account": "Intelligent Power Solutions",
+          "stage": "1- Discovery Scheduled",
+          "amount": 0,
+          "createdDate": "2026-05-26T12:48:50.000+0000"
         }
       ]
     }
   },
   "grandTotal": {
-    "count": 3,
-    "amount": 0
+    "count": 5,
+    "amount": 549.24
   }
 }

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-26T12:01:13.394Z",
+  "generatedAt": "2026-05-27T12:01:29.170Z",
   "audienceStats": {
     "Ready to Migrate": {
       "sent": 1638,
@@ -21,35 +21,35 @@
       "openRate": "13.2%",
       "clickRate": "4.4%",
       "uniqueContacts": 1874,
-      "uniqueAccts": 293,
-      "webinarReg": 100,
+      "uniqueAccts": 292,
+      "webinarReg": 101,
       "webinarRegAccts": 67
     }
   },
   "verticalStats": {
     "MSP": {
-      "emailedContacts": 1569,
-      "emailedAccts": 270,
-      "sent": 2389,
-      "delivered": 2362,
+      "emailedContacts": 1568,
+      "emailedAccts": 269,
+      "sent": 2388,
+      "delivered": 2361,
       "opens": 292,
       "clicks": 64,
       "openRate": "12.4%",
       "clickRate": "2.7%",
-      "webinarReg": 137,
+      "webinarReg": 136,
       "webinarRegAccts": 83
     },
     "Integrator": {
-      "emailedContacts": 863,
+      "emailedContacts": 864,
       "emailedAccts": 106,
-      "sent": 1104,
-      "delivered": 1087,
+      "sent": 1105,
+      "delivered": 1088,
       "opens": 137,
       "clicks": 36,
       "openRate": "12.6%",
       "clickRate": "3.3%",
-      "webinarReg": 50,
-      "webinarRegAccts": 28
+      "webinarReg": 52,
+      "webinarRegAccts": 29
     }
   },
   "audienceEmails": {
@@ -2491,13 +2491,22 @@
     ]
   },
   "sfOpps": {
-    "generatedAt": "2026-05-26T12:00:52.692Z",
-    "wmrContactCount": 3,
+    "generatedAt": "2026-05-27T12:01:10.566Z",
+    "wmrContactCount": 5,
     "oppsByAudience": {
       "Ready to Migrate": {
-        "count": 0,
-        "amount": 0,
-        "opps": []
+        "count": 1,
+        "amount": 549.24,
+        "opps": [
+          {
+            "id": "006PX00000bB2cIYAS",
+            "name": "SOLVD Instrument Solutions Web Migration",
+            "account": "SOLVD Instrument Solutions",
+            "stage": "3 - Initial Product Demo",
+            "amount": 549.24,
+            "createdDate": "2026-05-26T12:57:52.000+0000"
+          }
+        ]
       },
       "Unknown": {
         "count": 2,
@@ -2505,7 +2514,7 @@
         "opps": [
           {
             "id": "006PX00000b3crTYAQ",
-            "name": "MPS Works Web Migration",
+            "name": "MPS Works - Web Migration",
             "account": "MPS Works",
             "stage": "1- Discovery Scheduled",
             "amount": 0,
@@ -2513,7 +2522,7 @@
           },
           {
             "id": "006PX00000b0KMPYA2",
-            "name": "Pilothouse Communications Web Migration",
+            "name": "Pilothouse Communications - Web Migration",
             "account": "Pilothouse Communications",
             "stage": "1- Discovery Scheduled",
             "amount": 0,
@@ -2522,23 +2531,31 @@
         ]
       },
       "Other": {
-        "count": 1,
+        "count": 2,
         "amount": 0,
         "opps": [
           {
             "id": "006PX00000aztdzYAA",
-            "name": "Hosted America Web Migration",
+            "name": "Hosted America - Web Migration",
             "account": "Hosted America",
             "stage": "1- Discovery Scheduled",
             "amount": 0,
             "createdDate": "2026-05-21T19:02:48.000+0000"
+          },
+          {
+            "id": "006PX00000bB2kLYAS",
+            "name": "Intelligent Power Solutions Web Migration",
+            "account": "Intelligent Power Solutions",
+            "stage": "1- Discovery Scheduled",
+            "amount": 0,
+            "createdDate": "2026-05-26T12:48:50.000+0000"
           }
         ]
       }
     },
     "grandTotal": {
-      "count": 3,
-      "amount": 0
+      "count": 5,
+      "amount": 549.24
     }
   },
   "grandTotals": {
@@ -2549,9 +2566,9 @@
     "openRate": "12.4%",
     "clickRate": "2.9%",
     "uniqueContacts": 2432,
-    "uniqueAccts": 376,
-    "webinarReg": 187,
-    "webinarRegAccts": 111,
+    "uniqueAccts": 375,
+    "webinarReg": 188,
+    "webinarRegAccts": 112,
     "internalExcluded": 20
   },
   "regBreakdown": {
@@ -2560,8 +2577,8 @@
       "Integrator": 9
     },
     "Unknown": {
-      "MSP": 68,
-      "Integrator": 32
+      "MSP": 67,
+      "Integrator": 34
     },
     "Other": {
       "MSP": 52,
