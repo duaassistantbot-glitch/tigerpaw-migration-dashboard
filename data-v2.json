@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-27T12:01:29.170Z",
+  "generatedAt": "2026-05-28T12:01:16.519Z",
   "audienceStats": {
     "Ready to Migrate": {
       "sent": 1638,
@@ -22,7 +22,7 @@
       "clickRate": "4.4%",
       "uniqueContacts": 1874,
       "uniqueAccts": 292,
-      "webinarReg": 101,
+      "webinarReg": 102,
       "webinarRegAccts": 67
     }
   },
@@ -36,7 +36,7 @@
       "clicks": 64,
       "openRate": "12.4%",
       "clickRate": "2.7%",
-      "webinarReg": 136,
+      "webinarReg": 137,
       "webinarRegAccts": 83
     },
     "Integrator": {
@@ -48,7 +48,7 @@
       "clicks": 36,
       "openRate": "12.6%",
       "clickRate": "3.3%",
-      "webinarReg": 52,
+      "webinarReg": 53,
       "webinarRegAccts": 29
     }
   },
@@ -2491,8 +2491,8 @@
     ]
   },
   "sfOpps": {
-    "generatedAt": "2026-05-27T12:01:10.566Z",
-    "wmrContactCount": 5,
+    "generatedAt": "2026-05-28T12:00:56.659Z",
+    "wmrContactCount": 6,
     "oppsByAudience": {
       "Ready to Migrate": {
         "count": 1,
@@ -2509,15 +2509,15 @@
         ]
       },
       "Unknown": {
-        "count": 2,
-        "amount": 0,
+        "count": 3,
+        "amount": 500,
         "opps": [
           {
             "id": "006PX00000b3crTYAQ",
             "name": "MPS Works - Web Migration",
             "account": "MPS Works",
-            "stage": "1- Discovery Scheduled",
-            "amount": 0,
+            "stage": "Closed Lost",
+            "amount": 500,
             "createdDate": "2026-05-22T20:41:35.000+0000"
           },
           {
@@ -2527,12 +2527,20 @@
             "stage": "1- Discovery Scheduled",
             "amount": 0,
             "createdDate": "2026-05-21T19:01:48.000+0000"
+          },
+          {
+            "id": "006PX00000bF31tYAC",
+            "name": "Crowley Web Migration",
+            "account": "Crowley",
+            "stage": "1- Discovery Scheduled",
+            "amount": 0,
+            "createdDate": "2026-05-27T13:58:01.000+0000"
           }
         ]
       },
       "Other": {
         "count": 2,
-        "amount": 0,
+        "amount": 1209,
         "opps": [
           {
             "id": "006PX00000aztdzYAA",
@@ -2547,15 +2555,15 @@
             "name": "Intelligent Power Solutions Web Migration",
             "account": "Intelligent Power Solutions",
             "stage": "1- Discovery Scheduled",
-            "amount": 0,
+            "amount": 1209,
             "createdDate": "2026-05-26T12:48:50.000+0000"
           }
         ]
       }
     },
     "grandTotal": {
-      "count": 5,
-      "amount": 549.24
+      "count": 6,
+      "amount": 2258.24
     }
   },
   "grandTotals": {
@@ -2567,9 +2575,9 @@
     "clickRate": "2.9%",
     "uniqueContacts": 2432,
     "uniqueAccts": 375,
-    "webinarReg": 188,
+    "webinarReg": 190,
     "webinarRegAccts": 112,
-    "internalExcluded": 20
+    "internalExcluded": 21
   },
   "regBreakdown": {
     "Ready to Migrate": {
@@ -2578,10 +2586,10 @@
     },
     "Unknown": {
       "MSP": 67,
-      "Integrator": 34
+      "Integrator": 35
     },
     "Other": {
-      "MSP": 52,
+      "MSP": 53,
       "Integrator": 9
     }
   }

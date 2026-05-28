@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-05-27T12:01:10.566Z",
-  "wmrContactCount": 5,
+  "generatedAt": "2026-05-28T12:00:56.659Z",
+  "wmrContactCount": 6,
   "oppsByAudience": {
     "Ready to Migrate": {
       "count": 1,
@@ -17,15 +17,15 @@
       ]
     },
     "Unknown": {
-      "count": 2,
-      "amount": 0,
+      "count": 3,
+      "amount": 500,
       "opps": [
         {
           "id": "006PX00000b3crTYAQ",
           "name": "MPS Works - Web Migration",
           "account": "MPS Works",
-          "stage": "1- Discovery Scheduled",
-          "amount": 0,
+          "stage": "Closed Lost",
+          "amount": 500,
           "createdDate": "2026-05-22T20:41:35.000+0000"
         },
         {
@@ -35,12 +35,20 @@
           "stage": "1- Discovery Scheduled",
           "amount": 0,
           "createdDate": "2026-05-21T19:01:48.000+0000"
+        },
+        {
+          "id": "006PX00000bF31tYAC",
+          "name": "Crowley Web Migration",
+          "account": "Crowley",
+          "stage": "1- Discovery Scheduled",
+          "amount": 0,
+          "createdDate": "2026-05-27T13:58:01.000+0000"
         }
       ]
     },
     "Other": {
       "count": 2,
-      "amount": 0,
+      "amount": 1209,
       "opps": [
         {
           "id": "006PX00000aztdzYAA",
@@ -55,14 +63,14 @@
           "name": "Intelligent Power Solutions Web Migration",
           "account": "Intelligent Power Solutions",
           "stage": "1- Discovery Scheduled",
-          "amount": 0,
+          "amount": 1209,
           "createdDate": "2026-05-26T12:48:50.000+0000"
         }
       ]
     }
   },
   "grandTotal": {
-    "count": 5,
-    "amount": 549.24
+    "count": 6,
+    "amount": 2258.24
   }
 }
