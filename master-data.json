@@ -1,21 +1,21 @@
 {
-  "generatedAt": "2026-05-29T02:08:37.472Z",
+  "generatedAt": "2026-05-29T14:19:57.323Z",
   "filters": {
     "account": "Tigerpaw__c = true AND Type != 'Churn'",
     "opportunity": "Type = 'Legacy Migration'",
     "closedLost": "StageName = 'Closed Lost'"
   },
   "totals": {
-    "tigerpawAccounts": 614,
+    "tigerpawAccounts": 613,
     "legacyMigrationOpps": 41,
-    "legacyMigrationAmount": 33637.420000000006,
+    "legacyMigrationAmount": 34407.420000000006,
     "closedLostOpps": 4
   },
   "statusBreakdown": [
     {
       "label": "Unknown",
       "count": 287,
-      "pct": 46.7,
+      "pct": 46.8,
       "accounts": [
         {
           "id": "0016O00003dmuJSQAY",
@@ -315,17 +315,6 @@
           "psaWeb": false
         },
         {
-          "id": "0016O00003dmuKPQAY",
-          "name": "Audio-Video Corporation",
-          "type": "TigerPaw Client",
-          "webMigrationStatus": "Unknown",
-          "webMigrationDetails": "",
-          "accountStatus": "Active - Unleashed",
-          "owner": "Gavin Aylward",
-          "vertical": "",
-          "psaWeb": false
-        },
-        {
           "id": "0016O00003ebhnMQAQ",
           "name": "Audio-Video Corporation",
           "type": "Rev.io PSA Client",
@@ -333,6 +322,17 @@
           "webMigrationDetails": "",
           "accountStatus": "Inactive",
           "owner": "",
+          "vertical": "",
+          "psaWeb": false
+        },
+        {
+          "id": "0016O00003dmuKPQAY",
+          "name": "Audio-Video Corporation",
+          "type": "TigerPaw Client",
+          "webMigrationStatus": "Unknown",
+          "webMigrationDetails": "",
+          "accountStatus": "Active - Unleashed",
+          "owner": "Gavin Aylward",
           "vertical": "",
           "psaWeb": false
         },
@@ -3178,20 +3178,9 @@
     },
     {
       "label": "Blank",
-      "count": 145,
-      "pct": 23.6,
+      "count": 144,
+      "pct": 23.5,
       "accounts": [
-        {
-          "id": "0011500001Ww0d3AAB",
-          "name": "1Path Managed Services",
-          "type": "Rev.io Billing Client",
-          "webMigrationStatus": "Blank",
-          "webMigrationDetails": "",
-          "accountStatus": "",
-          "owner": "",
-          "vertical": "",
-          "psaWeb": false
-        },
         {
           "id": "001PX00000LTJGBYA5",
           "name": "210 Solutions",
@@ -6813,7 +6802,7 @@
     {
       "label": "1- Discovery Scheduled",
       "count": 6,
-      "amount": 4494.25,
+      "amount": 5264.25,
       "pct": 14.6,
       "opportunities": [
         {
@@ -6879,7 +6868,7 @@
           "accountId": "0016O00003dmuV7QAI",
           "account": "Phoenix Energy Supply",
           "stage": "1- Discovery Scheduled",
-          "amount": 0,
+          "amount": 770,
           "owner": "Justin Lee",
           "nextStep": "Demo set for 6/2 at 11:30am ET - Added Reid",
           "createdDate": "2026-05-28T18:29:14.000+0000",
@@ -7762,17 +7751,6 @@
   ],
   "accounts": [
     {
-      "id": "0011500001Ww0d3AAB",
-      "name": "1Path Managed Services",
-      "type": "Rev.io Billing Client",
-      "webMigrationStatus": "Blank",
-      "webMigrationDetails": "",
-      "accountStatus": "",
-      "owner": "",
-      "vertical": "",
-      "psaWeb": false
-    },
-    {
       "id": "0016O00003dmuJPQAY",
       "name": "1st Business Solutions, Inc.",
       "type": "Rev.io PSA Client",
@@ -8488,17 +8466,6 @@
       "psaWeb": false
     },
     {
-      "id": "0016O00003dmuKPQAY",
-      "name": "Audio-Video Corporation",
-      "type": "TigerPaw Client",
-      "webMigrationStatus": "Unknown",
-      "webMigrationDetails": "",
-      "accountStatus": "Active - Unleashed",
-      "owner": "Gavin Aylward",
-      "vertical": "",
-      "psaWeb": false
-    },
-    {
       "id": "0016O00003ebhnMQAQ",
       "name": "Audio-Video Corporation",
       "type": "Rev.io PSA Client",
@@ -8506,6 +8473,17 @@
       "webMigrationDetails": "",
       "accountStatus": "Inactive",
       "owner": "",
+      "vertical": "",
+      "psaWeb": false
+    },
+    {
+      "id": "0016O00003dmuKPQAY",
+      "name": "Audio-Video Corporation",
+      "type": "TigerPaw Client",
+      "webMigrationStatus": "Unknown",
+      "webMigrationDetails": "",
+      "accountStatus": "Active - Unleashed",
+      "owner": "Gavin Aylward",
       "vertical": "",
       "psaWeb": false
     },
@@ -14941,7 +14919,7 @@
       "accountId": "0016O00003dmuV7QAI",
       "account": "Phoenix Energy Supply",
       "stage": "1- Discovery Scheduled",
-      "amount": 0,
+      "amount": 770,
       "owner": "Justin Lee",
       "nextStep": "Demo set for 6/2 at 11:30am ET - Added Reid",
       "createdDate": "2026-05-28T18:29:14.000+0000",
