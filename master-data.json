@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-29T00:51:47.046Z",
+  "generatedAt": "2026-05-29T02:08:37.472Z",
   "filters": {
     "account": "Tigerpaw__c = true AND Type != 'Churn'",
     "opportunity": "Type = 'Legacy Migration'",
@@ -6811,358 +6811,6 @@
   ],
   "stageBreakdown": [
     {
-      "label": "3 - Initial Product Demo",
-      "count": 12,
-      "amount": 16373.62,
-      "pct": 29.3,
-      "opportunities": [
-        {
-          "id": "006PX00000bIjKkYAK",
-          "name": "A&A - Legacy Migration",
-          "accountId": "001PX000004hVzmYAE",
-          "account": "A & A Telecom Group Inc.",
-          "stage": "3 - Initial Product Demo",
-          "amount": 690,
-          "createdDate": "2026-05-28T14:20:05.000+0000",
-          "closeDate": "2026-06-30",
-          "isClosed": false,
-          "isWon": false,
-          "lossReason": "Unspecified",
-          "lossDetail": "",
-          "competitor": "",
-          "stageLoss": ""
-        },
-        {
-          "id": "006PX00000bC9mzYAC",
-          "name": "Central Maine Communications - TP Web Migration",
-          "accountId": "0016O00003dmuLBQAY",
-          "account": "Central Maine Communications",
-          "stage": "3 - Initial Product Demo",
-          "amount": 535.5,
-          "createdDate": "2026-05-26T17:19:43.000+0000",
-          "closeDate": "2026-06-30",
-          "isClosed": false,
-          "isWon": false,
-          "lossReason": "Unspecified",
-          "lossDetail": "",
-          "competitor": "",
-          "stageLoss": ""
-        },
-        {
-          "id": "006PX00000bBzm1YAC",
-          "name": "DEP Technologies - TP Web Migration",
-          "accountId": "0016O00003dmuOhQAI",
-          "account": "DEP Technologies",
-          "stage": "3 - Initial Product Demo",
-          "amount": 629.7,
-          "createdDate": "2026-05-26T16:31:40.000+0000",
-          "closeDate": "2026-06-30",
-          "isClosed": false,
-          "isWon": false,
-          "lossReason": "Unspecified",
-          "lossDetail": "",
-          "competitor": "",
-          "stageLoss": ""
-        },
-        {
-          "id": "006PX00000bBtyMYAS",
-          "name": "Bri-Tech - TP Web Migration",
-          "accountId": "0016O00003dmuKtQAI",
-          "account": "Bri-Tech Inc.",
-          "stage": "3 - Initial Product Demo",
-          "amount": 1318.72,
-          "createdDate": "2026-05-26T16:29:15.000+0000",
-          "closeDate": "2026-06-30",
-          "isClosed": false,
-          "isWon": false,
-          "lossReason": "Unspecified",
-          "lossDetail": "",
-          "competitor": "",
-          "stageLoss": ""
-        },
-        {
-          "id": "006PX00000aP8k1YAC",
-          "name": "tigerpaw to Web Migration",
-          "accountId": "0016O00003dmuLuQAI",
-          "account": "COS COB TV LLC",
-          "stage": "3 - Initial Product Demo",
-          "amount": 474,
-          "createdDate": "2026-05-07T20:00:11.000+0000",
-          "closeDate": "2026-06-30",
-          "isClosed": false,
-          "isWon": false,
-          "lossReason": "Unspecified",
-          "lossDetail": "",
-          "competitor": "",
-          "stageLoss": ""
-        },
-        {
-          "id": "006PX00000bBEbpYAG",
-          "name": "Home Technology Experts - Tigerpaw Web Migration",
-          "accountId": "0016O00003dmuQ4QAI",
-          "account": "Home Technology Experts",
-          "stage": "3 - Initial Product Demo",
-          "amount": 1435.94,
-          "createdDate": "2026-05-26T13:40:45.000+0000",
-          "closeDate": "2026-06-30",
-          "isClosed": false,
-          "isWon": false,
-          "lossReason": "Unspecified",
-          "lossDetail": "",
-          "competitor": "",
-          "stageLoss": ""
-        },
-        {
-          "id": "006PX00000aJ6xpYAC",
-          "name": "Tigerpaw to Web Migration",
-          "accountId": "001PX000004hVa5YAE",
-          "account": "ECI-Empire Communications",
-          "stage": "3 - Initial Product Demo",
-          "amount": 1354,
-          "createdDate": "2026-05-05T22:05:06.000+0000",
-          "closeDate": "2026-06-30",
-          "isClosed": false,
-          "isWon": false,
-          "lossReason": "Unspecified",
-          "lossDetail": "",
-          "competitor": "",
-          "stageLoss": ""
-        },
-        {
-          "id": "006PX00000bEyILYA0",
-          "name": "Tele-Plus Corp - TP Web Migration",
-          "accountId": "0016O00003dmuZjQAI",
-          "account": "Tele-Plus Corporation",
-          "stage": "3 - Initial Product Demo",
-          "amount": 4268.29,
-          "createdDate": "2026-05-27T13:42:13.000+0000",
-          "closeDate": "2026-06-30",
-          "isClosed": false,
-          "isWon": false,
-          "lossReason": "Unspecified",
-          "lossDetail": "",
-          "competitor": "",
-          "stageLoss": ""
-        },
-        {
-          "id": "006PX00000bC9WrYAK",
-          "name": "United Systems - TP Web Migration",
-          "accountId": "0016O00003dmuaHQAQ",
-          "account": "United Systems Inc",
-          "stage": "3 - Initial Product Demo",
-          "amount": 1227.65,
-          "createdDate": "2026-05-26T17:18:24.000+0000",
-          "closeDate": "2026-06-30",
-          "isClosed": false,
-          "isWon": false,
-          "lossReason": "Unspecified",
-          "lossDetail": "",
-          "competitor": "",
-          "stageLoss": ""
-        },
-        {
-          "id": "006PX00000bB2cIYAS",
-          "name": "SOLVD Instrument Solutions Web Migration",
-          "accountId": "0016O00003dmuabQAA",
-          "account": "SOLVD Instrument Solutions",
-          "stage": "3 - Initial Product Demo",
-          "amount": 549.24,
-          "createdDate": "2026-05-26T12:57:52.000+0000",
-          "closeDate": "2026-06-25",
-          "isClosed": false,
-          "isWon": false,
-          "lossReason": "Unspecified",
-          "lossDetail": "",
-          "competitor": "",
-          "stageLoss": ""
-        },
-        {
-          "id": "006PX00000Z5niHYAR",
-          "name": "West Coast - Tigerpaw to Web Migration",
-          "accountId": "0016O00003dmuafQAA",
-          "account": "West Coast Cabling, Inc.",
-          "stage": "3 - Initial Product Demo",
-          "amount": 1140,
-          "createdDate": "2026-04-07T19:25:48.000+0000",
-          "closeDate": "2026-06-30",
-          "isClosed": false,
-          "isWon": false,
-          "lossReason": "Unspecified",
-          "lossDetail": "",
-          "competitor": "",
-          "stageLoss": ""
-        },
-        {
-          "id": "006PX00000bC08dYAC",
-          "name": "WTS - TP Web Migration",
-          "accountId": "0011C00002wbGFxQAM",
-          "account": "WTS (waccamaw Telcommunications Systems Inc)",
-          "stage": "3 - Initial Product Demo",
-          "amount": 2750.58,
-          "createdDate": "2026-05-26T17:22:44.000+0000",
-          "closeDate": "2026-06-30",
-          "isClosed": false,
-          "isWon": false,
-          "lossReason": "Unspecified",
-          "lossDetail": "",
-          "competitor": "",
-          "stageLoss": ""
-        }
-      ]
-    },
-    {
-      "label": "Closed Won",
-      "count": 9,
-      "amount": 3168,
-      "pct": 22,
-      "opportunities": [
-        {
-          "id": "006PX00000Z5oBJYAZ",
-          "name": "Tigerpaw to Web migration",
-          "accountId": "0016O00003dmuJuQAI",
-          "account": "All Secure Lock Service",
-          "stage": "Closed Won",
-          "amount": 1110,
-          "createdDate": "2026-04-07T19:28:11.000+0000",
-          "closeDate": "2026-04-22",
-          "isClosed": true,
-          "isWon": true,
-          "lossReason": "Unspecified",
-          "lossDetail": "",
-          "competitor": "",
-          "stageLoss": ""
-        },
-        {
-          "id": "006PX00000Z5jWbYAJ",
-          "name": "Tigerpaw to Web Migration",
-          "accountId": "0016O00003dmuK6QAI",
-          "account": "Arcomm Communications",
-          "stage": "Closed Won",
-          "amount": 2058,
-          "createdDate": "2026-04-07T19:06:15.000+0000",
-          "closeDate": "2026-05-27",
-          "isClosed": true,
-          "isWon": true,
-          "lossReason": "Unspecified",
-          "lossDetail": "",
-          "competitor": "",
-          "stageLoss": ""
-        },
-        {
-          "id": "006PX00000WcHyJYAV",
-          "name": "Tigerpaw Web Conversion",
-          "accountId": "0016O00003doC3SQAU",
-          "account": "Bank-Tec South",
-          "stage": "Closed Won",
-          "amount": 0,
-          "createdDate": "2026-02-09T18:26:58.000+0000",
-          "closeDate": "2026-02-09",
-          "isClosed": true,
-          "isWon": true,
-          "lossReason": "Unspecified",
-          "lossDetail": "",
-          "competitor": "",
-          "stageLoss": ""
-        },
-        {
-          "id": "006PX00000ZLpZhYAL",
-          "name": "Tigerpaw Web Conversion",
-          "accountId": "0016O00003dmuPOQAY",
-          "account": "Fire Team Security, Inc",
-          "stage": "Closed Won",
-          "amount": 0,
-          "createdDate": "2026-04-13T18:17:15.000+0000",
-          "closeDate": "2026-04-09",
-          "isClosed": true,
-          "isWon": true,
-          "lossReason": "Unspecified",
-          "lossDetail": "",
-          "competitor": "",
-          "stageLoss": ""
-        },
-        {
-          "id": "006PX00000Wc7ywYAB",
-          "name": "Tigerpaw Web Conversion",
-          "accountId": "0016O00003dmuQ0QAI",
-          "account": "High Country Workplace Technologies",
-          "stage": "Closed Won",
-          "amount": 0,
-          "createdDate": "2026-02-09T18:28:26.000+0000",
-          "closeDate": "2026-02-05",
-          "isClosed": true,
-          "isWon": true,
-          "lossReason": "Unspecified",
-          "lossDetail": "",
-          "competitor": "",
-          "stageLoss": ""
-        },
-        {
-          "id": "006PX00000aPACLYA4",
-          "name": "Tigerpaw to Web Migration",
-          "accountId": "0011500001HNPwtAAH",
-          "account": "Sunrise Solutions Inc",
-          "stage": "Closed Won",
-          "amount": 0,
-          "createdDate": "2026-05-07T20:07:42.000+0000",
-          "closeDate": "2026-05-07",
-          "isClosed": true,
-          "isWon": true,
-          "lossReason": "Unspecified",
-          "lossDetail": "",
-          "competitor": "",
-          "stageLoss": ""
-        },
-        {
-          "id": "006PX00000ZOapPYAT",
-          "name": "TIgerpaw Web Migration",
-          "accountId": "0016O00003dmuYoQAI",
-          "account": "SmartCom Home Technologies, Inc.",
-          "stage": "Closed Won",
-          "amount": 0,
-          "createdDate": "2026-04-14T17:32:43.000+0000",
-          "closeDate": "2026-04-14",
-          "isClosed": true,
-          "isWon": true,
-          "lossReason": "Unspecified",
-          "lossDetail": "",
-          "competitor": "",
-          "stageLoss": ""
-        },
-        {
-          "id": "006PX00000Z8YtBYAV",
-          "name": "Tigerpaw Web Conversion",
-          "accountId": "0016O00003dmuVoQAI",
-          "account": "Rel Comm Inc",
-          "stage": "Closed Won",
-          "amount": 0,
-          "createdDate": "2026-04-08T14:22:40.000+0000",
-          "closeDate": "2026-04-06",
-          "isClosed": true,
-          "isWon": true,
-          "lossReason": "Unspecified",
-          "lossDetail": "",
-          "competitor": "",
-          "stageLoss": ""
-        },
-        {
-          "id": "006PX00000ZneQ2YAJ",
-          "name": "Tigerpaw Web Conversion (dual client)",
-          "accountId": "0011500001HNPlFAAX",
-          "account": "Xclutel",
-          "stage": "Closed Won",
-          "amount": 0,
-          "createdDate": "2026-04-23T15:23:08.000+0000",
-          "closeDate": "2026-05-28",
-          "isClosed": true,
-          "isWon": true,
-          "lossReason": "Unspecified",
-          "lossDetail": "",
-          "competitor": "",
-          "stageLoss": ""
-        }
-      ]
-    },
-    {
       "label": "1- Discovery Scheduled",
       "count": 6,
       "amount": 4494.25,
@@ -7175,6 +6823,8 @@
           "account": "Adalex Communications",
           "stage": "1- Discovery Scheduled",
           "amount": 575,
+          "owner": "Justin Lee",
+          "nextStep": "Demo set for 6/1 at 11am ET - Added Reid and Jay",
           "createdDate": "2026-05-26T15:01:57.000+0000",
           "closeDate": "2026-06-30",
           "isClosed": false,
@@ -7182,7 +6832,8 @@
           "lossReason": "Unspecified",
           "lossDetail": "",
           "competitor": "",
-          "stageLoss": ""
+          "stageLoss": "",
+          "smc": ""
         },
         {
           "id": "006PX00000bB2kLYAS",
@@ -7191,6 +6842,8 @@
           "account": "Intelligent Power Solutions",
           "stage": "1- Discovery Scheduled",
           "amount": 1209,
+          "owner": "Blaine Villafuerte",
+          "nextStep": "",
           "createdDate": "2026-05-26T12:48:50.000+0000",
           "closeDate": "2026-06-25",
           "isClosed": false,
@@ -7198,7 +6851,8 @@
           "lossReason": "Unspecified",
           "lossDetail": "",
           "competitor": "",
-          "stageLoss": ""
+          "stageLoss": "",
+          "smc": ""
         },
         {
           "id": "006PX00000aztdzYAA",
@@ -7207,6 +6861,8 @@
           "account": "Hosted America",
           "stage": "1- Discovery Scheduled",
           "amount": 1350,
+          "owner": "Justin Lee",
+          "nextStep": "Adrew's wife went into labor and needed to reschedule- confirm availability next week",
           "createdDate": "2026-05-21T19:02:48.000+0000",
           "closeDate": "2026-06-20",
           "isClosed": false,
@@ -7214,7 +6870,8 @@
           "lossReason": "Unspecified",
           "lossDetail": "",
           "competitor": "",
-          "stageLoss": ""
+          "stageLoss": "",
+          "smc": ""
         },
         {
           "id": "006PX00000bJPyIYAW",
@@ -7223,6 +6880,8 @@
           "account": "Phoenix Energy Supply",
           "stage": "1- Discovery Scheduled",
           "amount": 0,
+          "owner": "Justin Lee",
+          "nextStep": "Demo set for 6/2 at 11:30am ET - Added Reid",
           "createdDate": "2026-05-28T18:29:14.000+0000",
           "closeDate": "2026-06-27",
           "isClosed": false,
@@ -7230,7 +6889,8 @@
           "lossReason": "Unspecified",
           "lossDetail": "",
           "competitor": "",
-          "stageLoss": ""
+          "stageLoss": "",
+          "smc": ""
         },
         {
           "id": "006PX00000bIFWLYA4",
@@ -7239,6 +6899,8 @@
           "account": "Unique Communications",
           "stage": "1- Discovery Scheduled",
           "amount": 660,
+          "owner": "Justin Lee",
+          "nextStep": "Wants to see pricing before scheduling demo- Working with Reid on price",
           "createdDate": "2026-05-28T11:54:01.000+0000",
           "closeDate": "2026-06-30",
           "isClosed": false,
@@ -7246,7 +6908,8 @@
           "lossReason": "Unspecified",
           "lossDetail": "",
           "competitor": "",
-          "stageLoss": ""
+          "stageLoss": "",
+          "smc": ""
         },
         {
           "id": "006PX00000bB2KZYA0",
@@ -7255,6 +6918,8 @@
           "account": "T. Daniels Consulting, Inc.",
           "stage": "1- Discovery Scheduled",
           "amount": 700.25,
+          "owner": "Olivia Sandefur",
+          "nextStep": "",
           "createdDate": "2026-05-26T13:36:21.000+0000",
           "closeDate": "2026-06-30",
           "isClosed": false,
@@ -7262,167 +6927,8 @@
           "lossReason": "Unspecified",
           "lossDetail": "",
           "competitor": "",
-          "stageLoss": ""
-        }
-      ]
-    },
-    {
-      "label": "6 - Verbal Commit",
-      "count": 5,
-      "amount": 5301.33,
-      "pct": 12.2,
-      "opportunities": [
-        {
-          "id": "006PX00000bBvNRYA0",
-          "name": "Eastern American Data / Voice Inc. - TP Web Migration",
-          "accountId": "0016O00003dmuOzQAI",
-          "account": "Eastern American Data / Voice Inc.",
-          "stage": "6 - Verbal Commit",
-          "amount": 1239.72,
-          "createdDate": "2026-05-26T16:14:35.000+0000",
-          "closeDate": "2026-06-30",
-          "isClosed": false,
-          "isWon": false,
-          "lossReason": "Unspecified",
-          "lossDetail": "",
-          "competitor": "",
-          "stageLoss": ""
-        },
-        {
-          "id": "006PX00000bByGTYA0",
-          "name": "Five Star Telecom - TP Web Migration",
-          "accountId": "001PX0000026cPjYAI",
-          "account": "Five Star Telecom Inc",
-          "stage": "6 - Verbal Commit",
-          "amount": 1041.93,
-          "createdDate": "2026-05-26T16:24:57.000+0000",
-          "closeDate": "2026-06-30",
-          "isClosed": false,
-          "isWon": false,
-          "lossReason": "Unspecified",
-          "lossDetail": "",
-          "competitor": "",
-          "stageLoss": ""
-        },
-        {
-          "id": "006PX00000bBw8DYAS",
-          "name": "Electronic Specialities - TP Web Migration",
-          "accountId": "0016O00003IS0O0QAL",
-          "account": "Electronic Specialties, Inc",
-          "stage": "6 - Verbal Commit",
-          "amount": 474,
-          "createdDate": "2026-05-26T16:16:55.000+0000",
-          "closeDate": "2026-06-30",
-          "isClosed": false,
-          "isWon": false,
-          "lossReason": "Unspecified",
-          "lossDetail": "",
-          "competitor": "",
-          "stageLoss": ""
-        },
-        {
-          "id": "006PX00000bBxp3YAC",
-          "name": "Virtual Guard - TP Web Migration",
-          "accountId": "0016O00003eao1eQAA",
-          "account": "Virtual Guard",
-          "stage": "6 - Verbal Commit",
-          "amount": 1970.68,
-          "createdDate": "2026-05-26T16:22:56.000+0000",
-          "closeDate": "2026-06-30",
-          "isClosed": false,
-          "isWon": false,
-          "lossReason": "Unspecified",
-          "lossDetail": "",
-          "competitor": "",
-          "stageLoss": ""
-        },
-        {
-          "id": "006PX00000b0KMPYA2",
-          "name": "Pilothouse Communications - Web Migration",
-          "accountId": "0016O00003dmuVCQAY",
-          "account": "Pilothouse Communications",
-          "stage": "6 - Verbal Commit",
-          "amount": 575,
-          "createdDate": "2026-05-21T19:01:48.000+0000",
-          "closeDate": "2026-05-29",
-          "isClosed": false,
-          "isWon": false,
-          "lossReason": "Unspecified",
-          "lossDetail": "",
-          "competitor": "",
-          "stageLoss": ""
-        }
-      ]
-    },
-    {
-      "label": "Closed Lost",
-      "count": 4,
-      "amount": 500,
-      "pct": 9.8,
-      "opportunities": [
-        {
-          "id": "006PX00000bF31tYAC",
-          "name": "Crowley Web Migration",
-          "accountId": "0016O00003dmuZqQAI",
-          "account": "Crowley",
-          "stage": "Closed Lost",
-          "amount": 0,
-          "createdDate": "2026-05-27T13:58:01.000+0000",
-          "closeDate": "2026-05-28",
-          "isClosed": true,
-          "isWon": false,
-          "lossReason": "Not the Right Time",
-          "lossDetail": "Spoke to Debbie on 5/28- She shared she wants to \"clean up their data\" before moving over to the new platform. The webinar answered most of her questions. Target date to begin migrating over would be Jan. 1st, 2027.",
-          "competitor": "",
-          "stageLoss": "1- Discovery Scheduled"
-        },
-        {
-          "id": "006PX00000b3NfVYAU",
-          "name": "A&A - TP Migration",
-          "accountId": "001PX000004hVzmYAE",
-          "account": "A & A Telecom Group Inc.",
-          "stage": "Closed Lost",
-          "amount": 0,
-          "createdDate": "2026-05-22T18:57:43.000+0000",
-          "closeDate": "2026-05-28",
-          "isClosed": true,
-          "isWon": false,
-          "lossReason": "Discovery No Show",
-          "lossDetail": "duplicated opportunity",
-          "competitor": "",
-          "stageLoss": "1- Discovery Scheduled"
-        },
-        {
-          "id": "006PX00000b3crTYAQ",
-          "name": "MPS Works - Web Migration",
-          "accountId": "0016O00003dmuUMQAY",
-          "account": "MPS Works",
-          "stage": "Closed Lost",
-          "amount": 500,
-          "createdDate": "2026-05-22T20:41:35.000+0000",
-          "closeDate": "2026-05-27",
-          "isClosed": true,
-          "isWon": false,
-          "lossReason": "Software Missing Capabilities",
-          "lossDetail": "To move forward with the new PSA platform, we will need to handle meter billing and offer a QB Desktop integration. Big user of tickets on Halo and there's an opportunity to grow this account once we have both meter billing & QB Desktop\r\nThey only need 5 seats and they were told $100/seat initially - Just a reminder!",
-          "competitor": "",
-          "stageLoss": "1- Discovery Scheduled"
-        },
-        {
-          "id": "006PX00000aJ3OsYAK",
-          "name": "Tigerpaw to Web Migration",
-          "accountId": "001PX00000D4NYNYA3",
-          "account": "RCH Communications",
-          "stage": "Closed Lost",
-          "amount": 0,
-          "createdDate": "2026-05-05T22:05:52.000+0000",
-          "closeDate": "2026-05-26",
-          "isClosed": true,
-          "isWon": false,
-          "lossReason": "Lack of Decision Maker Involvement",
-          "lossDetail": "Duplicate opportunity",
-          "competitor": "",
-          "stageLoss": "3 - Initial Product Demo"
+          "stageLoss": "",
+          "smc": ""
         }
       ]
     },
@@ -7439,6 +6945,8 @@
           "account": "B. Moyer Radio Communications LLC",
           "stage": "2 - Discovery Completed",
           "amount": 1680,
+          "owner": "Ingrid Beard",
+          "nextStep": "5/28 reached out for statements and to schedule PSA review/demo",
           "createdDate": "2026-05-19T18:55:17.000+0000",
           "closeDate": "2026-06-30",
           "isClosed": false,
@@ -7446,7 +6954,8 @@
           "lossReason": "Unspecified",
           "lossDetail": "",
           "competitor": "",
-          "stageLoss": ""
+          "stageLoss": "",
+          "smc": ""
         },
         {
           "id": "006PX00000bF53hYAC",
@@ -7455,6 +6964,8 @@
           "account": "Telecom Unlimited",
           "stage": "2 - Discovery Completed",
           "amount": 913.22,
+          "owner": "Olivia Sandefur",
+          "nextStep": "Demo scheduled",
           "createdDate": "2026-05-27T14:08:30.000+0000",
           "closeDate": "2026-06-30",
           "isClosed": false,
@@ -7462,7 +6973,8 @@
           "lossReason": "Unspecified",
           "lossDetail": "",
           "competitor": "",
-          "stageLoss": ""
+          "stageLoss": "",
+          "smc": ""
         },
         {
           "id": "006PX00000asRxlYAE",
@@ -7471,6 +6983,8 @@
           "account": "Omidi Enterprises",
           "stage": "2 - Discovery Completed",
           "amount": 770,
+          "owner": "Ingrid Beard",
+          "nextStep": "5/28 working to schedule demo review conversation with Jay",
           "createdDate": "2026-05-19T13:05:56.000+0000",
           "closeDate": "2026-06-30",
           "isClosed": false,
@@ -7478,7 +6992,244 @@
           "lossReason": "Unspecified",
           "lossDetail": "",
           "competitor": "",
-          "stageLoss": ""
+          "stageLoss": "",
+          "smc": ""
+        }
+      ]
+    },
+    {
+      "label": "3 - Initial Product Demo",
+      "count": 12,
+      "amount": 16373.62,
+      "pct": 29.3,
+      "opportunities": [
+        {
+          "id": "006PX00000bIjKkYAK",
+          "name": "A&A - Legacy Migration",
+          "accountId": "001PX000004hVzmYAE",
+          "account": "A & A Telecom Group Inc.",
+          "stage": "3 - Initial Product Demo",
+          "amount": 690,
+          "owner": "Ingrid Beard",
+          "nextStep": "5/28 Deep dive with Tony on 6/3 will be retaining on 6 licenses",
+          "createdDate": "2026-05-28T14:20:05.000+0000",
+          "closeDate": "2026-06-30",
+          "isClosed": false,
+          "isWon": false,
+          "lossReason": "Unspecified",
+          "lossDetail": "",
+          "competitor": "",
+          "stageLoss": "",
+          "smc": ""
+        },
+        {
+          "id": "006PX00000bC9mzYAC",
+          "name": "Central Maine Communications - TP Web Migration",
+          "accountId": "0016O00003dmuLBQAY",
+          "account": "Central Maine Communications",
+          "stage": "3 - Initial Product Demo",
+          "amount": 535.5,
+          "owner": "Olivia Sandefur",
+          "nextStep": "Waiting for June release - Contracts/Agreements",
+          "createdDate": "2026-05-26T17:19:43.000+0000",
+          "closeDate": "2026-06-30",
+          "isClosed": false,
+          "isWon": false,
+          "lossReason": "Unspecified",
+          "lossDetail": "",
+          "competitor": "",
+          "stageLoss": "",
+          "smc": ""
+        },
+        {
+          "id": "006PX00000bBzm1YAC",
+          "name": "DEP Technologies - TP Web Migration",
+          "accountId": "0016O00003dmuOhQAI",
+          "account": "DEP Technologies",
+          "stage": "3 - Initial Product Demo",
+          "amount": 629.7,
+          "owner": "Olivia Sandefur",
+          "nextStep": "Waiting for June Release | QBD Integration",
+          "createdDate": "2026-05-26T16:31:40.000+0000",
+          "closeDate": "2026-06-30",
+          "isClosed": false,
+          "isWon": false,
+          "lossReason": "Unspecified",
+          "lossDetail": "",
+          "competitor": "",
+          "stageLoss": "",
+          "smc": ""
+        },
+        {
+          "id": "006PX00000bBtyMYAS",
+          "name": "Bri-Tech - TP Web Migration",
+          "accountId": "0016O00003dmuKtQAI",
+          "account": "Bri-Tech Inc.",
+          "stage": "3 - Initial Product Demo",
+          "amount": 1318.72,
+          "owner": "Olivia Sandefur",
+          "nextStep": "Web Demo",
+          "createdDate": "2026-05-26T16:29:15.000+0000",
+          "closeDate": "2026-06-30",
+          "isClosed": false,
+          "isWon": false,
+          "lossReason": "Unspecified",
+          "lossDetail": "",
+          "competitor": "",
+          "stageLoss": "",
+          "smc": ""
+        },
+        {
+          "id": "006PX00000aP8k1YAC",
+          "name": "tigerpaw to Web Migration",
+          "accountId": "0016O00003dmuLuQAI",
+          "account": "COS COB TV LLC",
+          "stage": "3 - Initial Product Demo",
+          "amount": 474,
+          "owner": "Blaine Villafuerte",
+          "nextStep": "05/28 follow up call with questions",
+          "createdDate": "2026-05-07T20:00:11.000+0000",
+          "closeDate": "2026-06-30",
+          "isClosed": false,
+          "isWon": false,
+          "lossReason": "Unspecified",
+          "lossDetail": "",
+          "competitor": "",
+          "stageLoss": "",
+          "smc": ""
+        },
+        {
+          "id": "006PX00000bBEbpYAG",
+          "name": "Home Technology Experts - Tigerpaw Web Migration",
+          "accountId": "0016O00003dmuQ4QAI",
+          "account": "Home Technology Experts",
+          "stage": "3 - Initial Product Demo",
+          "amount": 1435.94,
+          "owner": "Olivia Sandefur",
+          "nextStep": "Need SMS notifications for clients",
+          "createdDate": "2026-05-26T13:40:45.000+0000",
+          "closeDate": "2026-06-30",
+          "isClosed": false,
+          "isWon": false,
+          "lossReason": "Unspecified",
+          "lossDetail": "",
+          "competitor": "",
+          "stageLoss": "",
+          "smc": ""
+        },
+        {
+          "id": "006PX00000aJ6xpYAC",
+          "name": "Tigerpaw to Web Migration",
+          "accountId": "001PX000004hVa5YAE",
+          "account": "ECI-Empire Communications",
+          "stage": "3 - Initial Product Demo",
+          "amount": 1354,
+          "owner": "Blaine Villafuerte",
+          "nextStep": "5/28 send webinar Q&A responses",
+          "createdDate": "2026-05-05T22:05:06.000+0000",
+          "closeDate": "2026-06-30",
+          "isClosed": false,
+          "isWon": false,
+          "lossReason": "Unspecified",
+          "lossDetail": "",
+          "competitor": "",
+          "stageLoss": "",
+          "smc": ""
+        },
+        {
+          "id": "006PX00000bEyILYA0",
+          "name": "Tele-Plus Corp - TP Web Migration",
+          "accountId": "0016O00003dmuZjQAI",
+          "account": "Tele-Plus Corporation",
+          "stage": "3 - Initial Product Demo",
+          "amount": 4268.29,
+          "owner": "Olivia Sandefur",
+          "nextStep": "Waiting for June Release",
+          "createdDate": "2026-05-27T13:42:13.000+0000",
+          "closeDate": "2026-06-30",
+          "isClosed": false,
+          "isWon": false,
+          "lossReason": "Unspecified",
+          "lossDetail": "",
+          "competitor": "",
+          "stageLoss": "",
+          "smc": ""
+        },
+        {
+          "id": "006PX00000bC9WrYAK",
+          "name": "United Systems - TP Web Migration",
+          "accountId": "0016O00003dmuaHQAQ",
+          "account": "United Systems Inc",
+          "stage": "3 - Initial Product Demo",
+          "amount": 1227.65,
+          "owner": "Olivia Sandefur",
+          "nextStep": "Waiting on June release - Contract/Agreements",
+          "createdDate": "2026-05-26T17:18:24.000+0000",
+          "closeDate": "2026-06-30",
+          "isClosed": false,
+          "isWon": false,
+          "lossReason": "Unspecified",
+          "lossDetail": "",
+          "competitor": "",
+          "stageLoss": "",
+          "smc": ""
+        },
+        {
+          "id": "006PX00000bB2cIYAS",
+          "name": "SOLVD Instrument Solutions Web Migration",
+          "accountId": "0016O00003dmuabQAA",
+          "account": "SOLVD Instrument Solutions",
+          "stage": "3 - Initial Product Demo",
+          "amount": 549.24,
+          "owner": "Olivia Sandefur",
+          "nextStep": "Olivia working with Lou- Work on scheduling next steps",
+          "createdDate": "2026-05-26T12:57:52.000+0000",
+          "closeDate": "2026-06-25",
+          "isClosed": false,
+          "isWon": false,
+          "lossReason": "Unspecified",
+          "lossDetail": "",
+          "competitor": "",
+          "stageLoss": "",
+          "smc": ""
+        },
+        {
+          "id": "006PX00000Z5niHYAR",
+          "name": "West Coast - Tigerpaw to Web Migration",
+          "accountId": "0016O00003dmuafQAA",
+          "account": "West Coast Cabling, Inc.",
+          "stage": "3 - Initial Product Demo",
+          "amount": 1140,
+          "owner": "Ingrid Beard",
+          "nextStep": "Blaine handing off to Ingrid 5/28 reach out to schedule review",
+          "createdDate": "2026-04-07T19:25:48.000+0000",
+          "closeDate": "2026-06-30",
+          "isClosed": false,
+          "isWon": false,
+          "lossReason": "Unspecified",
+          "lossDetail": "",
+          "competitor": "",
+          "stageLoss": "",
+          "smc": ""
+        },
+        {
+          "id": "006PX00000bC08dYAC",
+          "name": "WTS - TP Web Migration",
+          "accountId": "0011C00002wbGFxQAM",
+          "account": "WTS (waccamaw Telcommunications Systems Inc)",
+          "stage": "3 - Initial Product Demo",
+          "amount": 2750.58,
+          "owner": "Olivia Sandefur",
+          "nextStep": "Waiting for June release - Contracts/Agreements",
+          "createdDate": "2026-05-26T17:22:44.000+0000",
+          "closeDate": "2026-06-30",
+          "isClosed": false,
+          "isWon": false,
+          "lossReason": "Unspecified",
+          "lossDetail": "",
+          "competitor": "",
+          "stageLoss": "",
+          "smc": ""
         }
       ]
     },
@@ -7495,6 +7246,8 @@
           "account": "Rave Systems, LLC dba Reference Audio Video & Security",
           "stage": "4 - Proposal Sent",
           "amount": 0,
+          "owner": "Blaine Villafuerte",
+          "nextStep": "05/26 all again and handoff to Jay if they do not respond",
           "createdDate": "2026-04-07T19:23:09.000+0000",
           "closeDate": "2026-05-31",
           "isClosed": false,
@@ -7502,7 +7255,8 @@
           "lossReason": "Unspecified",
           "lossDetail": "",
           "competitor": "",
-          "stageLoss": ""
+          "stageLoss": "",
+          "smc": ""
         }
       ]
     },
@@ -7519,6 +7273,8 @@
           "account": "Wolf Technology Group",
           "stage": "5 - Product / Contract Validated",
           "amount": 437,
+          "owner": "Blaine Villafuerte",
+          "nextStep": "05/26  send webinar recording",
           "createdDate": "2026-05-05T22:11:42.000+0000",
           "closeDate": "2026-05-31",
           "isClosed": false,
@@ -7526,7 +7282,374 @@
           "lossReason": "Unspecified",
           "lossDetail": "",
           "competitor": "",
-          "stageLoss": ""
+          "stageLoss": "",
+          "smc": ""
+        }
+      ]
+    },
+    {
+      "label": "6 - Verbal Commit",
+      "count": 5,
+      "amount": 5301.33,
+      "pct": 12.2,
+      "opportunities": [
+        {
+          "id": "006PX00000bBvNRYA0",
+          "name": "Eastern American Data / Voice Inc. - TP Web Migration",
+          "accountId": "0016O00003dmuOzQAI",
+          "account": "Eastern American Data / Voice Inc.",
+          "stage": "6 - Verbal Commit",
+          "amount": 1239.72,
+          "owner": "Olivia Sandefur",
+          "nextStep": "Waiting on QBD Integration/batching",
+          "createdDate": "2026-05-26T16:14:35.000+0000",
+          "closeDate": "2026-06-30",
+          "isClosed": false,
+          "isWon": false,
+          "lossReason": "Unspecified",
+          "lossDetail": "",
+          "competitor": "",
+          "stageLoss": "",
+          "smc": ""
+        },
+        {
+          "id": "006PX00000bByGTYA0",
+          "name": "Five Star Telecom - TP Web Migration",
+          "accountId": "001PX0000026cPjYAI",
+          "account": "Five Star Telecom Inc",
+          "stage": "6 - Verbal Commit",
+          "amount": 1041.93,
+          "owner": "Olivia Sandefur",
+          "nextStep": "Waiting for June release - Demo scheduled",
+          "createdDate": "2026-05-26T16:24:57.000+0000",
+          "closeDate": "2026-06-30",
+          "isClosed": false,
+          "isWon": false,
+          "lossReason": "Unspecified",
+          "lossDetail": "",
+          "competitor": "",
+          "stageLoss": "",
+          "smc": ""
+        },
+        {
+          "id": "006PX00000bBw8DYAS",
+          "name": "Electronic Specialities - TP Web Migration",
+          "accountId": "0016O00003IS0O0QAL",
+          "account": "Electronic Specialties, Inc",
+          "stage": "6 - Verbal Commit",
+          "amount": 474,
+          "owner": "Olivia Sandefur",
+          "nextStep": "Waiting on QBD Integration/batching",
+          "createdDate": "2026-05-26T16:16:55.000+0000",
+          "closeDate": "2026-06-30",
+          "isClosed": false,
+          "isWon": false,
+          "lossReason": "Unspecified",
+          "lossDetail": "",
+          "competitor": "",
+          "stageLoss": "",
+          "smc": ""
+        },
+        {
+          "id": "006PX00000bBxp3YAC",
+          "name": "Virtual Guard - TP Web Migration",
+          "accountId": "0016O00003eao1eQAA",
+          "account": "Virtual Guard",
+          "stage": "6 - Verbal Commit",
+          "amount": 1970.68,
+          "owner": "Olivia Sandefur",
+          "nextStep": "",
+          "createdDate": "2026-05-26T16:22:56.000+0000",
+          "closeDate": "2026-06-30",
+          "isClosed": false,
+          "isWon": false,
+          "lossReason": "Unspecified",
+          "lossDetail": "",
+          "competitor": "",
+          "stageLoss": "",
+          "smc": ""
+        },
+        {
+          "id": "006PX00000b0KMPYA2",
+          "name": "Pilothouse Communications - Web Migration",
+          "accountId": "0016O00003dmuVCQAY",
+          "account": "Pilothouse Communications",
+          "stage": "6 - Verbal Commit",
+          "amount": 575,
+          "owner": "Justin Lee",
+          "nextStep": "Jessica signed on 5/28 - pending Ryan's signature",
+          "createdDate": "2026-05-21T19:01:48.000+0000",
+          "closeDate": "2026-05-29",
+          "isClosed": false,
+          "isWon": false,
+          "lossReason": "Unspecified",
+          "lossDetail": "",
+          "competitor": "",
+          "stageLoss": "",
+          "smc": ""
+        }
+      ]
+    },
+    {
+      "label": "Closed Lost",
+      "count": 4,
+      "amount": 500,
+      "pct": 9.8,
+      "opportunities": [
+        {
+          "id": "006PX00000bF31tYAC",
+          "name": "Crowley Web Migration",
+          "accountId": "0016O00003dmuZqQAI",
+          "account": "Crowley",
+          "stage": "Closed Lost",
+          "amount": 0,
+          "owner": "Justin Lee",
+          "nextStep": "Left VM for Debbie on 5/27 - Set meeting by EOW",
+          "createdDate": "2026-05-27T13:58:01.000+0000",
+          "closeDate": "2026-05-28",
+          "isClosed": true,
+          "isWon": false,
+          "lossReason": "Not the Right Time",
+          "lossDetail": "Spoke to Debbie on 5/28- She shared she wants to \"clean up their data\" before moving over to the new platform. The webinar answered most of her questions. Target date to begin migrating over would be Jan. 1st, 2027.",
+          "competitor": "",
+          "stageLoss": "1- Discovery Scheduled",
+          "smc": ""
+        },
+        {
+          "id": "006PX00000b3NfVYAU",
+          "name": "A&A - TP Migration",
+          "accountId": "001PX000004hVzmYAE",
+          "account": "A & A Telecom Group Inc.",
+          "stage": "Closed Lost",
+          "amount": 0,
+          "owner": "Ingrid Beard",
+          "nextStep": "5/28 initial conversation",
+          "createdDate": "2026-05-22T18:57:43.000+0000",
+          "closeDate": "2026-05-28",
+          "isClosed": true,
+          "isWon": false,
+          "lossReason": "Discovery No Show",
+          "lossDetail": "duplicated opportunity",
+          "competitor": "",
+          "stageLoss": "1- Discovery Scheduled",
+          "smc": ""
+        },
+        {
+          "id": "006PX00000b3crTYAQ",
+          "name": "MPS Works - Web Migration",
+          "accountId": "0016O00003dmuUMQAY",
+          "account": "MPS Works",
+          "stage": "Closed Lost",
+          "amount": 500,
+          "owner": "Justin Lee",
+          "nextStep": "Demo set for 5/27 at 1pm ET- Added Reid and Jay",
+          "createdDate": "2026-05-22T20:41:35.000+0000",
+          "closeDate": "2026-05-27",
+          "isClosed": true,
+          "isWon": false,
+          "lossReason": "Software Missing Capabilities",
+          "lossDetail": "To move forward with the new PSA platform, we will need to handle meter billing and offer a QB Desktop integration. Big user of tickets on Halo and there's an opportunity to grow this account once we have both meter billing & QB Desktop\r\nThey only need 5 seats and they were told $100/seat initially - Just a reminder!",
+          "competitor": "",
+          "stageLoss": "1- Discovery Scheduled",
+          "smc": ""
+        },
+        {
+          "id": "006PX00000aJ3OsYAK",
+          "name": "Tigerpaw to Web Migration",
+          "accountId": "001PX00000D4NYNYA3",
+          "account": "RCH Communications",
+          "stage": "Closed Lost",
+          "amount": 0,
+          "owner": "Blaine Villafuerte",
+          "nextStep": "05/28 Send webinar Q&A answers",
+          "createdDate": "2026-05-05T22:05:52.000+0000",
+          "closeDate": "2026-05-26",
+          "isClosed": true,
+          "isWon": false,
+          "lossReason": "Lack of Decision Maker Involvement",
+          "lossDetail": "Duplicate opportunity",
+          "competitor": "",
+          "stageLoss": "3 - Initial Product Demo",
+          "smc": ""
+        }
+      ]
+    },
+    {
+      "label": "Closed Won",
+      "count": 9,
+      "amount": 3168,
+      "pct": 22,
+      "opportunities": [
+        {
+          "id": "006PX00000Z5oBJYAZ",
+          "name": "Tigerpaw to Web migration",
+          "accountId": "0016O00003dmuJuQAI",
+          "account": "All Secure Lock Service",
+          "stage": "Closed Won",
+          "amount": 1110,
+          "owner": "Blaine Villafuerte",
+          "nextStep": "4/22/25 migration tool conversation with josh",
+          "createdDate": "2026-04-07T19:28:11.000+0000",
+          "closeDate": "2026-04-22",
+          "isClosed": true,
+          "isWon": true,
+          "lossReason": "Unspecified",
+          "lossDetail": "",
+          "competitor": "",
+          "stageLoss": "",
+          "smc": ""
+        },
+        {
+          "id": "006PX00000Z5jWbYAJ",
+          "name": "Tigerpaw to Web Migration",
+          "accountId": "0016O00003dmuK6QAI",
+          "account": "Arcomm Communications",
+          "stage": "Closed Won",
+          "amount": 2058,
+          "owner": "Blaine Villafuerte",
+          "nextStep": "week of 06/04 - web kick off call",
+          "createdDate": "2026-04-07T19:06:15.000+0000",
+          "closeDate": "2026-05-27",
+          "isClosed": true,
+          "isWon": true,
+          "lossReason": "Unspecified",
+          "lossDetail": "",
+          "competitor": "",
+          "stageLoss": "",
+          "smc": ""
+        },
+        {
+          "id": "006PX00000WcHyJYAV",
+          "name": "Tigerpaw Web Conversion",
+          "accountId": "0016O00003doC3SQAU",
+          "account": "Bank-Tec South",
+          "stage": "Closed Won",
+          "amount": 0,
+          "owner": "Blaine Villafuerte",
+          "nextStep": "Kick Off Call",
+          "createdDate": "2026-02-09T18:26:58.000+0000",
+          "closeDate": "2026-02-09",
+          "isClosed": true,
+          "isWon": true,
+          "lossReason": "Unspecified",
+          "lossDetail": "",
+          "competitor": "",
+          "stageLoss": "",
+          "smc": ""
+        },
+        {
+          "id": "006PX00000ZLpZhYAL",
+          "name": "Tigerpaw Web Conversion",
+          "accountId": "0016O00003dmuPOQAY",
+          "account": "Fire Team Security, Inc",
+          "stage": "Closed Won",
+          "amount": 0,
+          "owner": "Olivia Sandefur",
+          "nextStep": "",
+          "createdDate": "2026-04-13T18:17:15.000+0000",
+          "closeDate": "2026-04-09",
+          "isClosed": true,
+          "isWon": true,
+          "lossReason": "Unspecified",
+          "lossDetail": "",
+          "competitor": "",
+          "stageLoss": "",
+          "smc": ""
+        },
+        {
+          "id": "006PX00000Wc7ywYAB",
+          "name": "Tigerpaw Web Conversion",
+          "accountId": "0016O00003dmuQ0QAI",
+          "account": "High Country Workplace Technologies",
+          "stage": "Closed Won",
+          "amount": 0,
+          "owner": "Blaine Villafuerte",
+          "nextStep": "",
+          "createdDate": "2026-02-09T18:28:26.000+0000",
+          "closeDate": "2026-02-05",
+          "isClosed": true,
+          "isWon": true,
+          "lossReason": "Unspecified",
+          "lossDetail": "",
+          "competitor": "",
+          "stageLoss": "",
+          "smc": ""
+        },
+        {
+          "id": "006PX00000aPACLYA4",
+          "name": "Tigerpaw to Web Migration",
+          "accountId": "0011500001HNPwtAAH",
+          "account": "Sunrise Solutions Inc",
+          "stage": "Closed Won",
+          "amount": 0,
+          "owner": "Blaine Villafuerte",
+          "nextStep": "week of 5/15 Kick off call",
+          "createdDate": "2026-05-07T20:07:42.000+0000",
+          "closeDate": "2026-05-07",
+          "isClosed": true,
+          "isWon": true,
+          "lossReason": "Unspecified",
+          "lossDetail": "",
+          "competitor": "",
+          "stageLoss": "",
+          "smc": ""
+        },
+        {
+          "id": "006PX00000ZOapPYAT",
+          "name": "TIgerpaw Web Migration",
+          "accountId": "0016O00003dmuYoQAI",
+          "account": "SmartCom Home Technologies, Inc.",
+          "stage": "Closed Won",
+          "amount": 0,
+          "owner": "Blaine Villafuerte",
+          "nextStep": "schedule kick off call when client",
+          "createdDate": "2026-04-14T17:32:43.000+0000",
+          "closeDate": "2026-04-14",
+          "isClosed": true,
+          "isWon": true,
+          "lossReason": "Unspecified",
+          "lossDetail": "",
+          "competitor": "",
+          "stageLoss": "",
+          "smc": ""
+        },
+        {
+          "id": "006PX00000Z8YtBYAV",
+          "name": "Tigerpaw Web Conversion",
+          "accountId": "0016O00003dmuVoQAI",
+          "account": "Rel Comm Inc",
+          "stage": "Closed Won",
+          "amount": 0,
+          "owner": "Olivia Sandefur",
+          "nextStep": "",
+          "createdDate": "2026-04-08T14:22:40.000+0000",
+          "closeDate": "2026-04-06",
+          "isClosed": true,
+          "isWon": true,
+          "lossReason": "Unspecified",
+          "lossDetail": "",
+          "competitor": "",
+          "stageLoss": "",
+          "smc": ""
+        },
+        {
+          "id": "006PX00000ZneQ2YAJ",
+          "name": "Tigerpaw Web Conversion (dual client)",
+          "accountId": "0011500001HNPlFAAX",
+          "account": "Xclutel",
+          "stage": "Closed Won",
+          "amount": 0,
+          "owner": "Blaine Villafuerte",
+          "nextStep": "week of June 1 - web kick off call",
+          "createdDate": "2026-04-23T15:23:08.000+0000",
+          "closeDate": "2026-05-28",
+          "isClosed": true,
+          "isWon": true,
+          "lossReason": "Unspecified",
+          "lossDetail": "",
+          "competitor": "",
+          "stageLoss": "",
+          "smc": ""
         }
       ]
     }
@@ -7544,6 +7667,8 @@
           "account": "A & A Telecom Group Inc.",
           "stage": "Closed Lost",
           "amount": 0,
+          "owner": "Ingrid Beard",
+          "nextStep": "5/28 initial conversation",
           "createdDate": "2026-05-22T18:57:43.000+0000",
           "closeDate": "2026-05-28",
           "isClosed": true,
@@ -7551,7 +7676,8 @@
           "lossReason": "Discovery No Show",
           "lossDetail": "duplicated opportunity",
           "competitor": "",
-          "stageLoss": "1- Discovery Scheduled"
+          "stageLoss": "1- Discovery Scheduled",
+          "smc": ""
         }
       ]
     },
@@ -7567,6 +7693,8 @@
           "account": "RCH Communications",
           "stage": "Closed Lost",
           "amount": 0,
+          "owner": "Blaine Villafuerte",
+          "nextStep": "05/28 Send webinar Q&A answers",
           "createdDate": "2026-05-05T22:05:52.000+0000",
           "closeDate": "2026-05-26",
           "isClosed": true,
@@ -7574,7 +7702,8 @@
           "lossReason": "Lack of Decision Maker Involvement",
           "lossDetail": "Duplicate opportunity",
           "competitor": "",
-          "stageLoss": "3 - Initial Product Demo"
+          "stageLoss": "3 - Initial Product Demo",
+          "smc": ""
         }
       ]
     },
@@ -7590,6 +7719,8 @@
           "account": "Crowley",
           "stage": "Closed Lost",
           "amount": 0,
+          "owner": "Justin Lee",
+          "nextStep": "Left VM for Debbie on 5/27 - Set meeting by EOW",
           "createdDate": "2026-05-27T13:58:01.000+0000",
           "closeDate": "2026-05-28",
           "isClosed": true,
@@ -7597,7 +7728,8 @@
           "lossReason": "Not the Right Time",
           "lossDetail": "Spoke to Debbie on 5/28- She shared she wants to \"clean up their data\" before moving over to the new platform. The webinar answered most of her questions. Target date to begin migrating over would be Jan. 1st, 2027.",
           "competitor": "",
-          "stageLoss": "1- Discovery Scheduled"
+          "stageLoss": "1- Discovery Scheduled",
+          "smc": ""
         }
       ]
     },
@@ -7613,6 +7745,8 @@
           "account": "MPS Works",
           "stage": "Closed Lost",
           "amount": 500,
+          "owner": "Justin Lee",
+          "nextStep": "Demo set for 5/27 at 1pm ET- Added Reid and Jay",
           "createdDate": "2026-05-22T20:41:35.000+0000",
           "closeDate": "2026-05-27",
           "isClosed": true,
@@ -7620,7 +7754,8 @@
           "lossReason": "Software Missing Capabilities",
           "lossDetail": "To move forward with the new PSA platform, we will need to handle meter billing and offer a QB Desktop integration. Big user of tickets on Halo and there's an opportunity to grow this account once we have both meter billing & QB Desktop\r\nThey only need 5 seats and they were told $100/seat initially - Just a reminder!",
           "competitor": "",
-          "stageLoss": "1- Discovery Scheduled"
+          "stageLoss": "1- Discovery Scheduled",
+          "smc": ""
         }
       ]
     }
@@ -14389,6 +14524,8 @@
       "account": "A & A Telecom Group Inc.",
       "stage": "3 - Initial Product Demo",
       "amount": 690,
+      "owner": "Ingrid Beard",
+      "nextStep": "5/28 Deep dive with Tony on 6/3 will be retaining on 6 licenses",
       "createdDate": "2026-05-28T14:20:05.000+0000",
       "closeDate": "2026-06-30",
       "isClosed": false,
@@ -14396,7 +14533,8 @@
       "lossReason": "Unspecified",
       "lossDetail": "",
       "competitor": "",
-      "stageLoss": ""
+      "stageLoss": "",
+      "smc": ""
     },
     {
       "id": "006PX00000bF31tYAC",
@@ -14405,6 +14543,8 @@
       "account": "Crowley",
       "stage": "Closed Lost",
       "amount": 0,
+      "owner": "Justin Lee",
+      "nextStep": "Left VM for Debbie on 5/27 - Set meeting by EOW",
       "createdDate": "2026-05-27T13:58:01.000+0000",
       "closeDate": "2026-05-28",
       "isClosed": true,
@@ -14412,7 +14552,8 @@
       "lossReason": "Not the Right Time",
       "lossDetail": "Spoke to Debbie on 5/28- She shared she wants to \"clean up their data\" before moving over to the new platform. The webinar answered most of her questions. Target date to begin migrating over would be Jan. 1st, 2027.",
       "competitor": "",
-      "stageLoss": "1- Discovery Scheduled"
+      "stageLoss": "1- Discovery Scheduled",
+      "smc": ""
     },
     {
       "id": "006PX00000bC9mzYAC",
@@ -14421,6 +14562,8 @@
       "account": "Central Maine Communications",
       "stage": "3 - Initial Product Demo",
       "amount": 535.5,
+      "owner": "Olivia Sandefur",
+      "nextStep": "Waiting for June release - Contracts/Agreements",
       "createdDate": "2026-05-26T17:19:43.000+0000",
       "closeDate": "2026-06-30",
       "isClosed": false,
@@ -14428,7 +14571,8 @@
       "lossReason": "Unspecified",
       "lossDetail": "",
       "competitor": "",
-      "stageLoss": ""
+      "stageLoss": "",
+      "smc": ""
     },
     {
       "id": "006PX00000bBzm1YAC",
@@ -14437,6 +14581,8 @@
       "account": "DEP Technologies",
       "stage": "3 - Initial Product Demo",
       "amount": 629.7,
+      "owner": "Olivia Sandefur",
+      "nextStep": "Waiting for June Release | QBD Integration",
       "createdDate": "2026-05-26T16:31:40.000+0000",
       "closeDate": "2026-06-30",
       "isClosed": false,
@@ -14444,7 +14590,8 @@
       "lossReason": "Unspecified",
       "lossDetail": "",
       "competitor": "",
-      "stageLoss": ""
+      "stageLoss": "",
+      "smc": ""
     },
     {
       "id": "006PX00000bBtyMYAS",
@@ -14453,6 +14600,8 @@
       "account": "Bri-Tech Inc.",
       "stage": "3 - Initial Product Demo",
       "amount": 1318.72,
+      "owner": "Olivia Sandefur",
+      "nextStep": "Web Demo",
       "createdDate": "2026-05-26T16:29:15.000+0000",
       "closeDate": "2026-06-30",
       "isClosed": false,
@@ -14460,7 +14609,8 @@
       "lossReason": "Unspecified",
       "lossDetail": "",
       "competitor": "",
-      "stageLoss": ""
+      "stageLoss": "",
+      "smc": ""
     },
     {
       "id": "006PX00000bBvNRYA0",
@@ -14469,6 +14619,8 @@
       "account": "Eastern American Data / Voice Inc.",
       "stage": "6 - Verbal Commit",
       "amount": 1239.72,
+      "owner": "Olivia Sandefur",
+      "nextStep": "Waiting on QBD Integration/batching",
       "createdDate": "2026-05-26T16:14:35.000+0000",
       "closeDate": "2026-06-30",
       "isClosed": false,
@@ -14476,7 +14628,8 @@
       "lossReason": "Unspecified",
       "lossDetail": "",
       "competitor": "",
-      "stageLoss": ""
+      "stageLoss": "",
+      "smc": ""
     },
     {
       "id": "006PX00000bBbLVYA0",
@@ -14485,6 +14638,8 @@
       "account": "Adalex Communications",
       "stage": "1- Discovery Scheduled",
       "amount": 575,
+      "owner": "Justin Lee",
+      "nextStep": "Demo set for 6/1 at 11am ET - Added Reid and Jay",
       "createdDate": "2026-05-26T15:01:57.000+0000",
       "closeDate": "2026-06-30",
       "isClosed": false,
@@ -14492,7 +14647,8 @@
       "lossReason": "Unspecified",
       "lossDetail": "",
       "competitor": "",
-      "stageLoss": ""
+      "stageLoss": "",
+      "smc": ""
     },
     {
       "id": "006PX00000b3NfVYAU",
@@ -14501,6 +14657,8 @@
       "account": "A & A Telecom Group Inc.",
       "stage": "Closed Lost",
       "amount": 0,
+      "owner": "Ingrid Beard",
+      "nextStep": "5/28 initial conversation",
       "createdDate": "2026-05-22T18:57:43.000+0000",
       "closeDate": "2026-05-28",
       "isClosed": true,
@@ -14508,7 +14666,8 @@
       "lossReason": "Discovery No Show",
       "lossDetail": "duplicated opportunity",
       "competitor": "",
-      "stageLoss": "1- Discovery Scheduled"
+      "stageLoss": "1- Discovery Scheduled",
+      "smc": ""
     },
     {
       "id": "006PX00000ato97YAA",
@@ -14517,6 +14676,8 @@
       "account": "B. Moyer Radio Communications LLC",
       "stage": "2 - Discovery Completed",
       "amount": 1680,
+      "owner": "Ingrid Beard",
+      "nextStep": "5/28 reached out for statements and to schedule PSA review/demo",
       "createdDate": "2026-05-19T18:55:17.000+0000",
       "closeDate": "2026-06-30",
       "isClosed": false,
@@ -14524,7 +14685,8 @@
       "lossReason": "Unspecified",
       "lossDetail": "",
       "competitor": "",
-      "stageLoss": ""
+      "stageLoss": "",
+      "smc": ""
     },
     {
       "id": "006PX00000aP8k1YAC",
@@ -14533,6 +14695,8 @@
       "account": "COS COB TV LLC",
       "stage": "3 - Initial Product Demo",
       "amount": 474,
+      "owner": "Blaine Villafuerte",
+      "nextStep": "05/28 follow up call with questions",
       "createdDate": "2026-05-07T20:00:11.000+0000",
       "closeDate": "2026-06-30",
       "isClosed": false,
@@ -14540,7 +14704,8 @@
       "lossReason": "Unspecified",
       "lossDetail": "",
       "competitor": "",
-      "stageLoss": ""
+      "stageLoss": "",
+      "smc": ""
     },
     {
       "id": "006PX00000Z5oBJYAZ",
@@ -14549,6 +14714,8 @@
       "account": "All Secure Lock Service",
       "stage": "Closed Won",
       "amount": 1110,
+      "owner": "Blaine Villafuerte",
+      "nextStep": "4/22/25 migration tool conversation with josh",
       "createdDate": "2026-04-07T19:28:11.000+0000",
       "closeDate": "2026-04-22",
       "isClosed": true,
@@ -14556,7 +14723,8 @@
       "lossReason": "Unspecified",
       "lossDetail": "",
       "competitor": "",
-      "stageLoss": ""
+      "stageLoss": "",
+      "smc": ""
     },
     {
       "id": "006PX00000Z5jWbYAJ",
@@ -14565,6 +14733,8 @@
       "account": "Arcomm Communications",
       "stage": "Closed Won",
       "amount": 2058,
+      "owner": "Blaine Villafuerte",
+      "nextStep": "week of 06/04 - web kick off call",
       "createdDate": "2026-04-07T19:06:15.000+0000",
       "closeDate": "2026-05-27",
       "isClosed": true,
@@ -14572,7 +14742,8 @@
       "lossReason": "Unspecified",
       "lossDetail": "",
       "competitor": "",
-      "stageLoss": ""
+      "stageLoss": "",
+      "smc": ""
     },
     {
       "id": "006PX00000WcHyJYAV",
@@ -14581,6 +14752,8 @@
       "account": "Bank-Tec South",
       "stage": "Closed Won",
       "amount": 0,
+      "owner": "Blaine Villafuerte",
+      "nextStep": "Kick Off Call",
       "createdDate": "2026-02-09T18:26:58.000+0000",
       "closeDate": "2026-02-09",
       "isClosed": true,
@@ -14588,7 +14761,8 @@
       "lossReason": "Unspecified",
       "lossDetail": "",
       "competitor": "",
-      "stageLoss": ""
+      "stageLoss": "",
+      "smc": ""
     },
     {
       "id": "006PX00000bByGTYA0",
@@ -14597,6 +14771,8 @@
       "account": "Five Star Telecom Inc",
       "stage": "6 - Verbal Commit",
       "amount": 1041.93,
+      "owner": "Olivia Sandefur",
+      "nextStep": "Waiting for June release - Demo scheduled",
       "createdDate": "2026-05-26T16:24:57.000+0000",
       "closeDate": "2026-06-30",
       "isClosed": false,
@@ -14604,7 +14780,8 @@
       "lossReason": "Unspecified",
       "lossDetail": "",
       "competitor": "",
-      "stageLoss": ""
+      "stageLoss": "",
+      "smc": ""
     },
     {
       "id": "006PX00000bBw8DYAS",
@@ -14613,6 +14790,8 @@
       "account": "Electronic Specialties, Inc",
       "stage": "6 - Verbal Commit",
       "amount": 474,
+      "owner": "Olivia Sandefur",
+      "nextStep": "Waiting on QBD Integration/batching",
       "createdDate": "2026-05-26T16:16:55.000+0000",
       "closeDate": "2026-06-30",
       "isClosed": false,
@@ -14620,7 +14799,8 @@
       "lossReason": "Unspecified",
       "lossDetail": "",
       "competitor": "",
-      "stageLoss": ""
+      "stageLoss": "",
+      "smc": ""
     },
     {
       "id": "006PX00000bBEbpYAG",
@@ -14629,6 +14809,8 @@
       "account": "Home Technology Experts",
       "stage": "3 - Initial Product Demo",
       "amount": 1435.94,
+      "owner": "Olivia Sandefur",
+      "nextStep": "Need SMS notifications for clients",
       "createdDate": "2026-05-26T13:40:45.000+0000",
       "closeDate": "2026-06-30",
       "isClosed": false,
@@ -14636,7 +14818,8 @@
       "lossReason": "Unspecified",
       "lossDetail": "",
       "competitor": "",
-      "stageLoss": ""
+      "stageLoss": "",
+      "smc": ""
     },
     {
       "id": "006PX00000bB2kLYAS",
@@ -14645,6 +14828,8 @@
       "account": "Intelligent Power Solutions",
       "stage": "1- Discovery Scheduled",
       "amount": 1209,
+      "owner": "Blaine Villafuerte",
+      "nextStep": "",
       "createdDate": "2026-05-26T12:48:50.000+0000",
       "closeDate": "2026-06-25",
       "isClosed": false,
@@ -14652,7 +14837,8 @@
       "lossReason": "Unspecified",
       "lossDetail": "",
       "competitor": "",
-      "stageLoss": ""
+      "stageLoss": "",
+      "smc": ""
     },
     {
       "id": "006PX00000b3crTYAQ",
@@ -14661,6 +14847,8 @@
       "account": "MPS Works",
       "stage": "Closed Lost",
       "amount": 500,
+      "owner": "Justin Lee",
+      "nextStep": "Demo set for 5/27 at 1pm ET- Added Reid and Jay",
       "createdDate": "2026-05-22T20:41:35.000+0000",
       "closeDate": "2026-05-27",
       "isClosed": true,
@@ -14668,7 +14856,8 @@
       "lossReason": "Software Missing Capabilities",
       "lossDetail": "To move forward with the new PSA platform, we will need to handle meter billing and offer a QB Desktop integration. Big user of tickets on Halo and there's an opportunity to grow this account once we have both meter billing & QB Desktop\r\nThey only need 5 seats and they were told $100/seat initially - Just a reminder!",
       "competitor": "",
-      "stageLoss": "1- Discovery Scheduled"
+      "stageLoss": "1- Discovery Scheduled",
+      "smc": ""
     },
     {
       "id": "006PX00000aztdzYAA",
@@ -14677,6 +14866,8 @@
       "account": "Hosted America",
       "stage": "1- Discovery Scheduled",
       "amount": 1350,
+      "owner": "Justin Lee",
+      "nextStep": "Adrew's wife went into labor and needed to reschedule- confirm availability next week",
       "createdDate": "2026-05-21T19:02:48.000+0000",
       "closeDate": "2026-06-20",
       "isClosed": false,
@@ -14684,7 +14875,8 @@
       "lossReason": "Unspecified",
       "lossDetail": "",
       "competitor": "",
-      "stageLoss": ""
+      "stageLoss": "",
+      "smc": ""
     },
     {
       "id": "006PX00000aJ6xpYAC",
@@ -14693,6 +14885,8 @@
       "account": "ECI-Empire Communications",
       "stage": "3 - Initial Product Demo",
       "amount": 1354,
+      "owner": "Blaine Villafuerte",
+      "nextStep": "5/28 send webinar Q&A responses",
       "createdDate": "2026-05-05T22:05:06.000+0000",
       "closeDate": "2026-06-30",
       "isClosed": false,
@@ -14700,7 +14894,8 @@
       "lossReason": "Unspecified",
       "lossDetail": "",
       "competitor": "",
-      "stageLoss": ""
+      "stageLoss": "",
+      "smc": ""
     },
     {
       "id": "006PX00000ZLpZhYAL",
@@ -14709,6 +14904,8 @@
       "account": "Fire Team Security, Inc",
       "stage": "Closed Won",
       "amount": 0,
+      "owner": "Olivia Sandefur",
+      "nextStep": "",
       "createdDate": "2026-04-13T18:17:15.000+0000",
       "closeDate": "2026-04-09",
       "isClosed": true,
@@ -14716,7 +14913,8 @@
       "lossReason": "Unspecified",
       "lossDetail": "",
       "competitor": "",
-      "stageLoss": ""
+      "stageLoss": "",
+      "smc": ""
     },
     {
       "id": "006PX00000Wc7ywYAB",
@@ -14725,6 +14923,8 @@
       "account": "High Country Workplace Technologies",
       "stage": "Closed Won",
       "amount": 0,
+      "owner": "Blaine Villafuerte",
+      "nextStep": "",
       "createdDate": "2026-02-09T18:28:26.000+0000",
       "closeDate": "2026-02-05",
       "isClosed": true,
@@ -14732,7 +14932,8 @@
       "lossReason": "Unspecified",
       "lossDetail": "",
       "competitor": "",
-      "stageLoss": ""
+      "stageLoss": "",
+      "smc": ""
     },
     {
       "id": "006PX00000bJPyIYAW",
@@ -14741,6 +14942,8 @@
       "account": "Phoenix Energy Supply",
       "stage": "1- Discovery Scheduled",
       "amount": 0,
+      "owner": "Justin Lee",
+      "nextStep": "Demo set for 6/2 at 11:30am ET - Added Reid",
       "createdDate": "2026-05-28T18:29:14.000+0000",
       "closeDate": "2026-06-27",
       "isClosed": false,
@@ -14748,7 +14951,8 @@
       "lossReason": "Unspecified",
       "lossDetail": "",
       "competitor": "",
-      "stageLoss": ""
+      "stageLoss": "",
+      "smc": ""
     },
     {
       "id": "006PX00000bIFWLYA4",
@@ -14757,6 +14961,8 @@
       "account": "Unique Communications",
       "stage": "1- Discovery Scheduled",
       "amount": 660,
+      "owner": "Justin Lee",
+      "nextStep": "Wants to see pricing before scheduling demo- Working with Reid on price",
       "createdDate": "2026-05-28T11:54:01.000+0000",
       "closeDate": "2026-06-30",
       "isClosed": false,
@@ -14764,7 +14970,8 @@
       "lossReason": "Unspecified",
       "lossDetail": "",
       "competitor": "",
-      "stageLoss": ""
+      "stageLoss": "",
+      "smc": ""
     },
     {
       "id": "006PX00000bF53hYAC",
@@ -14773,6 +14980,8 @@
       "account": "Telecom Unlimited",
       "stage": "2 - Discovery Completed",
       "amount": 913.22,
+      "owner": "Olivia Sandefur",
+      "nextStep": "Demo scheduled",
       "createdDate": "2026-05-27T14:08:30.000+0000",
       "closeDate": "2026-06-30",
       "isClosed": false,
@@ -14780,7 +14989,8 @@
       "lossReason": "Unspecified",
       "lossDetail": "",
       "competitor": "",
-      "stageLoss": ""
+      "stageLoss": "",
+      "smc": ""
     },
     {
       "id": "006PX00000bEyILYA0",
@@ -14789,6 +14999,8 @@
       "account": "Tele-Plus Corporation",
       "stage": "3 - Initial Product Demo",
       "amount": 4268.29,
+      "owner": "Olivia Sandefur",
+      "nextStep": "Waiting for June Release",
       "createdDate": "2026-05-27T13:42:13.000+0000",
       "closeDate": "2026-06-30",
       "isClosed": false,
@@ -14796,7 +15008,8 @@
       "lossReason": "Unspecified",
       "lossDetail": "",
       "competitor": "",
-      "stageLoss": ""
+      "stageLoss": "",
+      "smc": ""
     },
     {
       "id": "006PX00000bC9WrYAK",
@@ -14805,6 +15018,8 @@
       "account": "United Systems Inc",
       "stage": "3 - Initial Product Demo",
       "amount": 1227.65,
+      "owner": "Olivia Sandefur",
+      "nextStep": "Waiting on June release - Contract/Agreements",
       "createdDate": "2026-05-26T17:18:24.000+0000",
       "closeDate": "2026-06-30",
       "isClosed": false,
@@ -14812,7 +15027,8 @@
       "lossReason": "Unspecified",
       "lossDetail": "",
       "competitor": "",
-      "stageLoss": ""
+      "stageLoss": "",
+      "smc": ""
     },
     {
       "id": "006PX00000bBxp3YAC",
@@ -14821,6 +15037,8 @@
       "account": "Virtual Guard",
       "stage": "6 - Verbal Commit",
       "amount": 1970.68,
+      "owner": "Olivia Sandefur",
+      "nextStep": "",
       "createdDate": "2026-05-26T16:22:56.000+0000",
       "closeDate": "2026-06-30",
       "isClosed": false,
@@ -14828,7 +15046,8 @@
       "lossReason": "Unspecified",
       "lossDetail": "",
       "competitor": "",
-      "stageLoss": ""
+      "stageLoss": "",
+      "smc": ""
     },
     {
       "id": "006PX00000bB2KZYA0",
@@ -14837,6 +15056,8 @@
       "account": "T. Daniels Consulting, Inc.",
       "stage": "1- Discovery Scheduled",
       "amount": 700.25,
+      "owner": "Olivia Sandefur",
+      "nextStep": "",
       "createdDate": "2026-05-26T13:36:21.000+0000",
       "closeDate": "2026-06-30",
       "isClosed": false,
@@ -14844,7 +15065,8 @@
       "lossReason": "Unspecified",
       "lossDetail": "",
       "competitor": "",
-      "stageLoss": ""
+      "stageLoss": "",
+      "smc": ""
     },
     {
       "id": "006PX00000bB2cIYAS",
@@ -14853,6 +15075,8 @@
       "account": "SOLVD Instrument Solutions",
       "stage": "3 - Initial Product Demo",
       "amount": 549.24,
+      "owner": "Olivia Sandefur",
+      "nextStep": "Olivia working with Lou- Work on scheduling next steps",
       "createdDate": "2026-05-26T12:57:52.000+0000",
       "closeDate": "2026-06-25",
       "isClosed": false,
@@ -14860,7 +15084,8 @@
       "lossReason": "Unspecified",
       "lossDetail": "",
       "competitor": "",
-      "stageLoss": ""
+      "stageLoss": "",
+      "smc": ""
     },
     {
       "id": "006PX00000b0KMPYA2",
@@ -14869,6 +15094,8 @@
       "account": "Pilothouse Communications",
       "stage": "6 - Verbal Commit",
       "amount": 575,
+      "owner": "Justin Lee",
+      "nextStep": "Jessica signed on 5/28 - pending Ryan's signature",
       "createdDate": "2026-05-21T19:01:48.000+0000",
       "closeDate": "2026-05-29",
       "isClosed": false,
@@ -14876,7 +15103,8 @@
       "lossReason": "Unspecified",
       "lossDetail": "",
       "competitor": "",
-      "stageLoss": ""
+      "stageLoss": "",
+      "smc": ""
     },
     {
       "id": "006PX00000asRxlYAE",
@@ -14885,6 +15113,8 @@
       "account": "Omidi Enterprises",
       "stage": "2 - Discovery Completed",
       "amount": 770,
+      "owner": "Ingrid Beard",
+      "nextStep": "5/28 working to schedule demo review conversation with Jay",
       "createdDate": "2026-05-19T13:05:56.000+0000",
       "closeDate": "2026-06-30",
       "isClosed": false,
@@ -14892,7 +15122,8 @@
       "lossReason": "Unspecified",
       "lossDetail": "",
       "competitor": "",
-      "stageLoss": ""
+      "stageLoss": "",
+      "smc": ""
     },
     {
       "id": "006PX00000aPACLYA4",
@@ -14901,6 +15132,8 @@
       "account": "Sunrise Solutions Inc",
       "stage": "Closed Won",
       "amount": 0,
+      "owner": "Blaine Villafuerte",
+      "nextStep": "week of 5/15 Kick off call",
       "createdDate": "2026-05-07T20:07:42.000+0000",
       "closeDate": "2026-05-07",
       "isClosed": true,
@@ -14908,7 +15141,8 @@
       "lossReason": "Unspecified",
       "lossDetail": "",
       "competitor": "",
-      "stageLoss": ""
+      "stageLoss": "",
+      "smc": ""
     },
     {
       "id": "006PX00000aJ3OsYAK",
@@ -14917,6 +15151,8 @@
       "account": "RCH Communications",
       "stage": "Closed Lost",
       "amount": 0,
+      "owner": "Blaine Villafuerte",
+      "nextStep": "05/28 Send webinar Q&A answers",
       "createdDate": "2026-05-05T22:05:52.000+0000",
       "closeDate": "2026-05-26",
       "isClosed": true,
@@ -14924,7 +15160,8 @@
       "lossReason": "Lack of Decision Maker Involvement",
       "lossDetail": "Duplicate opportunity",
       "competitor": "",
-      "stageLoss": "3 - Initial Product Demo"
+      "stageLoss": "3 - Initial Product Demo",
+      "smc": ""
     },
     {
       "id": "006PX00000ZOapPYAT",
@@ -14933,6 +15170,8 @@
       "account": "SmartCom Home Technologies, Inc.",
       "stage": "Closed Won",
       "amount": 0,
+      "owner": "Blaine Villafuerte",
+      "nextStep": "schedule kick off call when client",
       "createdDate": "2026-04-14T17:32:43.000+0000",
       "closeDate": "2026-04-14",
       "isClosed": true,
@@ -14940,7 +15179,8 @@
       "lossReason": "Unspecified",
       "lossDetail": "",
       "competitor": "",
-      "stageLoss": ""
+      "stageLoss": "",
+      "smc": ""
     },
     {
       "id": "006PX00000Z8YtBYAV",
@@ -14949,6 +15189,8 @@
       "account": "Rel Comm Inc",
       "stage": "Closed Won",
       "amount": 0,
+      "owner": "Olivia Sandefur",
+      "nextStep": "",
       "createdDate": "2026-04-08T14:22:40.000+0000",
       "closeDate": "2026-04-06",
       "isClosed": true,
@@ -14956,7 +15198,8 @@
       "lossReason": "Unspecified",
       "lossDetail": "",
       "competitor": "",
-      "stageLoss": ""
+      "stageLoss": "",
+      "smc": ""
     },
     {
       "id": "006PX00000Z5niHYAR",
@@ -14965,6 +15208,8 @@
       "account": "West Coast Cabling, Inc.",
       "stage": "3 - Initial Product Demo",
       "amount": 1140,
+      "owner": "Ingrid Beard",
+      "nextStep": "Blaine handing off to Ingrid 5/28 reach out to schedule review",
       "createdDate": "2026-04-07T19:25:48.000+0000",
       "closeDate": "2026-06-30",
       "isClosed": false,
@@ -14972,7 +15217,8 @@
       "lossReason": "Unspecified",
       "lossDetail": "",
       "competitor": "",
-      "stageLoss": ""
+      "stageLoss": "",
+      "smc": ""
     },
     {
       "id": "006PX00000Z5nNJYAZ",
@@ -14981,6 +15227,8 @@
       "account": "Rave Systems, LLC dba Reference Audio Video & Security",
       "stage": "4 - Proposal Sent",
       "amount": 0,
+      "owner": "Blaine Villafuerte",
+      "nextStep": "05/26 all again and handoff to Jay if they do not respond",
       "createdDate": "2026-04-07T19:23:09.000+0000",
       "closeDate": "2026-05-31",
       "isClosed": false,
@@ -14988,7 +15236,8 @@
       "lossReason": "Unspecified",
       "lossDetail": "",
       "competitor": "",
-      "stageLoss": ""
+      "stageLoss": "",
+      "smc": ""
     },
     {
       "id": "006PX00000bC08dYAC",
@@ -14997,6 +15246,8 @@
       "account": "WTS (waccamaw Telcommunications Systems Inc)",
       "stage": "3 - Initial Product Demo",
       "amount": 2750.58,
+      "owner": "Olivia Sandefur",
+      "nextStep": "Waiting for June release - Contracts/Agreements",
       "createdDate": "2026-05-26T17:22:44.000+0000",
       "closeDate": "2026-06-30",
       "isClosed": false,
@@ -15004,7 +15255,8 @@
       "lossReason": "Unspecified",
       "lossDetail": "",
       "competitor": "",
-      "stageLoss": ""
+      "stageLoss": "",
+      "smc": ""
     },
     {
       "id": "006PX00000aIpAcYAK",
@@ -15013,6 +15265,8 @@
       "account": "Wolf Technology Group",
       "stage": "5 - Product / Contract Validated",
       "amount": 437,
+      "owner": "Blaine Villafuerte",
+      "nextStep": "05/26  send webinar recording",
       "createdDate": "2026-05-05T22:11:42.000+0000",
       "closeDate": "2026-05-31",
       "isClosed": false,
@@ -15020,7 +15274,8 @@
       "lossReason": "Unspecified",
       "lossDetail": "",
       "competitor": "",
-      "stageLoss": ""
+      "stageLoss": "",
+      "smc": ""
     },
     {
       "id": "006PX00000ZneQ2YAJ",
@@ -15029,6 +15284,8 @@
       "account": "Xclutel",
       "stage": "Closed Won",
       "amount": 0,
+      "owner": "Blaine Villafuerte",
+      "nextStep": "week of June 1 - web kick off call",
       "createdDate": "2026-04-23T15:23:08.000+0000",
       "closeDate": "2026-05-28",
       "isClosed": true,
@@ -15036,7 +15293,8 @@
       "lossReason": "Unspecified",
       "lossDetail": "",
       "competitor": "",
-      "stageLoss": ""
+      "stageLoss": "",
+      "smc": ""
     }
   ]
 }

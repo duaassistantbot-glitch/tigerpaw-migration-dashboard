@@ -108,6 +108,22 @@ function groupBy(records, keyFn, valueFn) {
   return [...groups.values()].sort((a, b) => b.count - a.count || a.label.localeCompare(b.label));
 }
 
+function stageSortValue(label) {
+  const value = clean(label, 'Unknown');
+  const numbered = value.match(/^(\d+)/);
+  if (numbered) return Number(numbered[1]);
+  if (value === 'Closed Lost') return 100;
+  if (value === 'Closed Won') return 101;
+  return 1000;
+}
+
+function sortStageGroups(groups) {
+  return groups.sort((a, b) =>
+    stageSortValue(a.label) - stageSortValue(b.label) ||
+    a.label.localeCompare(b.label)
+  );
+}
+
 function pct(count, total) {
   if (!total) return 0;
   return Math.round((count / total) * 1000) / 10;
@@ -135,6 +151,8 @@ function publicOpp(opp) {
     account: opp.Account?.Name || '',
     stage: clean(opp.StageName, 'Unknown'),
     amount: currencyValue(opp),
+    owner: opp.Owner?.Name || '',
+    nextStep: opp.NextStep || '',
     createdDate: opp.CreatedDate,
     closeDate: opp.CloseDate,
     isClosed: !!opp.IsClosed,
@@ -142,7 +160,8 @@ function publicOpp(opp) {
     lossReason: clean(opp.Loss_Reason__c, 'Unspecified'),
     lossDetail: opp.Reason_Lost_Detail__c || '',
     competitor: opp.If_Lost_to_Competitor__c || '',
-    stageLoss: opp.Stage_Loss__c || ''
+    stageLoss: opp.Stage_Loss__c || '',
+    smc: opp.Strategic_Partner_Source__c || ''
   };
 }
 
@@ -170,8 +189,9 @@ async function main() {
     console.log(`Fetching Legacy Migration opps for accounts ${i + 1}-${Math.min(i + 200, accountIds.length)}...`);
     const opps = await sfQueryAll(token, `
       SELECT Id, Name, Type, StageName, Amount, Renewal_Amount__c, AccountId, Account.Name,
-             CreatedDate, CloseDate, IsClosed, IsWon, Loss_Reason__c, Reason_Lost_Detail__c,
-             If_Lost_to_Competitor__c, Stage_Loss__c
+             Owner.Name, NextStep, CreatedDate, CloseDate, IsClosed, IsWon, Loss_Reason__c,
+             Reason_Lost_Detail__c, If_Lost_to_Competitor__c, Stage_Loss__c,
+             Strategic_Partner_Source__c
       FROM Opportunity
       WHERE Type = 'Legacy Migration'
         AND AccountId IN (${inClause})
@@ -192,7 +212,7 @@ async function main() {
     accounts: group.records
   }));
 
-  const stageBreakdown = groupBy(publicOpps, opp => opp.stage, opp => opp.amount).map(group => ({
+  const stageBreakdown = sortStageGroups(groupBy(publicOpps, opp => opp.stage, opp => opp.amount)).map(group => ({
     label: group.label,
     count: group.count,
     amount: group.amount,

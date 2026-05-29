@@ -185,11 +185,13 @@
     <table>
       <thead>
         <tr>
-          <th>Opportunity</th>
-          <th>Account</th>
-          <th>Stage</th>
-          <th class="num-h">Amount</th>
-          <th>Close / Loss Detail</th>
+          <th>Account Name</th>
+          <th class="num-h">Renewal Amount</th>
+          <th>Opportunity Owner</th>
+          <th>Next Step</th>
+          <th>Loss Reason</th>
+          <th>Loss Reason Detail</th>
+          <th>SMC</th>
         </tr>
       </thead>
       <tbody id="opp-table"></tbody>
@@ -275,11 +277,13 @@ function openOpps(title, rows) {
   document.getElementById('drill-search').value = '';
   document.getElementById('drill-head').innerHTML = `
     <tr>
-      <th>Opportunity</th>
-      <th>Account</th>
-      <th>Stage</th>
-      <th class="num-h">Amount</th>
-      <th>Close / Loss Detail</th>
+      <th>Account Name</th>
+      <th class="num-h">Renewal Amount</th>
+      <th>Opportunity Owner</th>
+      <th>Next Step</th>
+      <th>Loss Reason</th>
+      <th>Loss Reason Detail</th>
+      <th>SMC</th>
     </tr>`;
   document.getElementById('drill-modal').classList.add('open');
   renderDrilldownRows();
@@ -305,19 +309,20 @@ function renderDrilldownRows() {
     return;
   }
 
-  body.innerHTML = rows.map(opp => {
-    const loss = opp.stage === 'Closed Lost'
-      ? `<strong>${esc(opp.lossReason || 'Unspecified')}</strong><br>${esc(opp.lossDetail || 'No detail entered')}`
-      : esc(opp.closeDate || '');
-    return `
-      <tr>
-        <td><strong>${esc(opp.name)}</strong></td>
-        <td>${esc(opp.account)}</td>
-        <td><span class="pill">${esc(opp.stage)}</span></td>
-        <td class="num-c">${money.format(opp.amount || 0)}</td>
-        <td class="detail">${loss}</td>
-      </tr>`;
-  }).join('');
+  body.innerHTML = rows.map(opp => oppDetailRow(opp)).join('');
+}
+
+function oppDetailRow(opp) {
+  return `
+    <tr>
+      <td><strong>${esc(opp.account)}</strong></td>
+      <td class="num-c">${money.format(opp.amount || 0)}</td>
+      <td>${esc(opp.owner || '')}</td>
+      <td class="detail">${esc(opp.nextStep || '')}</td>
+      <td>${esc(opp.stage === 'Closed Lost' ? (opp.lossReason || 'Unspecified') : '')}</td>
+      <td class="detail">${esc(opp.stage === 'Closed Lost' ? (opp.lossDetail || '') : '')}</td>
+      <td>${esc(opp.smc || '')}</td>
+    </tr>`;
 }
 
 function barRows(groups, total, kind) {
@@ -345,25 +350,13 @@ function renderOppTable() {
 
   const rows = MASTER.opportunities.filter(opp => {
     const matchesStage = stage === 'all' || opp.stage === stage;
-    const haystack = [opp.name, opp.account, opp.stage, opp.lossReason, opp.lossDetail].join(' ').toLowerCase();
+    const haystack = [opp.account, opp.stage, opp.amount, opp.owner, opp.nextStep, opp.lossReason, opp.lossDetail, opp.smc].join(' ').toLowerCase();
     return matchesStage && (!search || haystack.includes(search));
   });
 
   document.getElementById('opp-count-label').textContent = `${fmt.format(rows.length)} of ${fmt.format(MASTER.opportunities.length)} opportunities`;
   empty.style.display = rows.length ? 'none' : 'block';
-  tbody.innerHTML = rows.map(opp => {
-    const loss = opp.stage === 'Closed Lost'
-      ? `<strong>${esc(opp.lossReason)}</strong><br>${esc(opp.lossDetail || 'No detail entered')}`
-      : esc(opp.closeDate || '');
-    return `
-      <tr>
-        <td><strong>${esc(opp.name)}</strong></td>
-        <td>${esc(opp.account)}</td>
-        <td><span class="pill">${esc(opp.stage)}</span></td>
-        <td class="num-c">${money.format(opp.amount || 0)}</td>
-        <td class="detail">${loss}</td>
-      </tr>`;
-  }).join('');
+  tbody.innerHTML = rows.map(opp => oppDetailRow(opp)).join('');
 }
 
 function populateStageFilter(stages) {
