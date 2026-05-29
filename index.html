@@ -170,25 +170,6 @@
     </div>
   </section>
 
-  <div class="section-title">Closed Lost Detail</div>
-  <section class="card">
-    <div class="card-head">
-      <h2>Closed Lost Legacy Migration Opportunities</h2>
-      <span>Loss reason and detail from Salesforce</span>
-    </div>
-    <table>
-      <thead>
-        <tr>
-          <th>Loss Reason</th>
-          <th class="num-h">Opps</th>
-          <th class="num-h">Amount</th>
-          <th>Details</th>
-        </tr>
-      </thead>
-      <tbody id="loss-table"></tbody>
-    </table>
-  </section>
-
   <div class="section-title">Opportunity Detail</div>
   <div class="controls">
     <input class="search" id="opp-search" type="search" placeholder="Search opportunity, account, stage, or reason">
@@ -356,32 +337,6 @@ function barRows(groups, total, kind) {
   }).join('');
 }
 
-function renderLossTable(lossBreakdown) {
-  const body = document.getElementById('loss-table');
-  if (!lossBreakdown.length) {
-    body.innerHTML = '<tr><td colspan="4" class="empty">No Closed Lost Legacy Migration opportunities found.</td></tr>';
-    return;
-  }
-
-  body.innerHTML = lossBreakdown.map(group => {
-    const details = group.opportunities.map(opp => {
-      const pieces = [
-        `<strong>${esc(opp.account)}</strong> - ${esc(opp.name)}`,
-        opp.lossDetail ? esc(opp.lossDetail) : 'No detail entered',
-        opp.stageLoss ? `Stage lost: ${esc(opp.stageLoss)}` : ''
-      ].filter(Boolean);
-      return `<div class="detail">${pieces.join('<br>')}</div>`;
-    }).join('<div style="height:10px"></div>');
-    return `
-      <tr>
-        <td><span class="pill">${esc(group.label)}</span></td>
-        <td class="num-c"><button class="num-btn" onclick="openOpps('${esc(group.label)} Lost Opportunities', oppRowsByLossReason('${esc(group.label)}'))">${fmt.format(group.count)}</button></td>
-        <td class="num-c">${money.format(group.amount || 0)}</td>
-        <td>${details}</td>
-      </tr>`;
-  }).join('');
-}
-
 function renderOppTable() {
   const tbody = document.getElementById('opp-table');
   const empty = document.getElementById('opp-empty');
@@ -442,7 +397,6 @@ function render(data) {
   document.getElementById('footer-note').textContent =
     `Rev.io Marketing Ops - Tigerpaw Master Dashboard - Salesforce refresh ${generated.toLocaleString()}`;
 
-  renderLossTable(data.lossBreakdown);
   populateStageFilter(data.stageBreakdown);
   renderOppTable();
 }
