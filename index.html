@@ -20,10 +20,12 @@
   .section-title { margin: 24px 0 12px; color: #2399B5; font-size: 12px; font-weight: 800; letter-spacing: .8px; text-transform: uppercase; display: flex; align-items: center; gap: 10px; }
   .section-title::after { content: ""; height: 1px; background: #DDE2E8; flex: 1; }
   .hero-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }
-  .hero-card { background: #1D3756; color: #FFFFFF; border-radius: 8px; padding: 18px; border-top: 4px solid #2399B5; min-height: 126px; }
+  .hero-card { background: #1D3756; color: #FFFFFF; border-radius: 8px; padding: 18px; border-top: 4px solid #2399B5; min-height: 112px; }
   .hero-card.green { border-top-color: #6EBE4F; }
   .label { font-size: 11px; text-transform: uppercase; letter-spacing: .6px; font-weight: 800; color: #FFFFFF; }
   .value { font-family: 'Montserrat', sans-serif; font-size: 32px; line-height: 1; margin-top: 10px; font-weight: 800; color: #FFFFFF; }
+  .value-btn { cursor: pointer; color: #FFFFFF; text-decoration: underline; text-decoration-style: dotted; text-underline-offset: 4px; background: none; border: 0; padding: 0; font: inherit; }
+  .value-btn:hover { color: #6EBE4F; }
   .sub { margin-top: 8px; font-size: 12px; color: #FFFFFF; line-height: 1.35; }
   .grid-2 { display: grid; grid-template-columns: 1.2fr .8fr; gap: 18px; }
   .card { background: #FFFFFF; border: 1px solid #DDE2E8; border-radius: 8px; overflow: hidden; }
@@ -41,6 +43,8 @@
   .bar { height: 9px; border-radius: 5px; background: #EEF2F6; overflow: hidden; }
   .fill { height: 100%; border-radius: 5px; background: linear-gradient(90deg, #2399B5, #6EBE4F); min-width: 3px; }
   .num { text-align: right; font-family: 'Montserrat', sans-serif; font-size: 17px; color: #1D3756; font-weight: 800; }
+  .num-btn { cursor: pointer; color: #1D3756; text-decoration: underline; text-decoration-style: dotted; text-underline-offset: 3px; background: none; border: 0; padding: 0; font: inherit; }
+  .num-btn:hover { color: #2399B5; }
   .num small { display: block; margin-top: 2px; font-family: 'Open Sans', Arial, sans-serif; color: #687789; font-size: 11px; font-weight: 700; }
   .summary-strip { background: #F5F7FA; border-top: 1px solid #DDE2E8; padding: 11px 16px; font-size: 12px; display: flex; justify-content: space-between; gap: 16px; }
   table { width: 100%; border-collapse: collapse; }
@@ -56,6 +60,20 @@
   .detail { color: #3d4d5c; line-height: 1.45; max-width: 520px; }
   .empty { padding: 28px; text-align: center; color: #687789; font-size: 13px; }
   .footer { margin-top: 24px; padding-top: 18px; border-top: 1px solid #DDE2E8; font-size: 11px; color: #687789; text-align: center; }
+  .modal-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,.52); z-index: 1000; align-items: center; justify-content: center; padding: 18px; }
+  .modal-overlay.open { display: flex; }
+  .modal { background: #FFFFFF; border-radius: 8px; width: min(940px, 96vw); max-height: 88vh; display: flex; flex-direction: column; overflow: hidden; box-shadow: 0 20px 60px rgba(0,0,0,.3); }
+  .modal-head { background: #1D3756; color: #FFFFFF; padding: 15px 18px; display: flex; align-items: center; justify-content: space-between; gap: 14px; position: relative; }
+  .modal-head::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 3px; background: linear-gradient(90deg, #2399B5, #6EBE4F); }
+  .modal-head h2 { margin: 0; font-size: 15px; line-height: 1.25; }
+  .modal-count { margin-top: 2px; font-size: 12px; color: #FFFFFF; }
+  .modal-close { width: 30px; height: 30px; border: 0; border-radius: 6px; cursor: pointer; color: #FFFFFF; background: rgba(255,255,255,.16); font-size: 17px; }
+  .modal-close:hover { background: rgba(255,255,255,.26); }
+  .modal-search { padding: 12px 16px; border-bottom: 1px solid #DDE2E8; }
+  .modal-search input { width: 100%; padding: 9px 11px; border: 1px solid #DDE2E8; border-radius: 6px; font: inherit; color: #1D3756; }
+  .modal-body { overflow: auto; }
+  .modal-table thead th { position: sticky; top: 0; }
+  .modal-table td { font-size: 12px; }
   @media (max-width: 900px) {
     .header-inner { align-items: flex-start; flex-direction: column; }
     .hero-grid, .grid-2 { grid-template-columns: 1fr; }
@@ -66,6 +84,28 @@
 </style>
 </head>
 <body>
+<div class="modal-overlay" id="drill-modal" onclick="if(event.target===this)closeDrilldown()">
+  <div class="modal">
+    <div class="modal-head">
+      <div>
+        <h2 id="drill-title">Details</h2>
+        <div class="modal-count" id="drill-count"></div>
+      </div>
+      <button class="modal-close" onclick="closeDrilldown()" aria-label="Close">x</button>
+    </div>
+    <div class="modal-search">
+      <input id="drill-search" type="search" placeholder="Search this list" oninput="renderDrilldownRows()">
+    </div>
+    <div class="modal-body">
+      <table class="modal-table">
+        <thead id="drill-head"></thead>
+        <tbody id="drill-body"></tbody>
+      </table>
+      <div class="empty" id="drill-empty" style="display:none;">No records match this view.</div>
+    </div>
+  </div>
+</div>
+
 <header class="header">
   <div class="header-inner">
     <div>
@@ -84,23 +124,19 @@
   <section class="hero-grid">
     <div class="hero-card">
       <div class="label">Active Tigerpaw Clients</div>
-      <div class="value" id="total-accounts">--</div>
-      <div class="sub">Account Tigerpaw checked and Type is not Churn</div>
+      <div class="value"><button class="value-btn" id="total-accounts" onclick="openAllAccounts()">--</button></div>
     </div>
     <div class="hero-card green">
       <div class="label">Want to Migrate</div>
-      <div class="value" id="want-migrate">--</div>
-      <div class="sub">ASAP plus timeline unknown</div>
+      <div class="value"><button class="value-btn" id="want-migrate" onclick="openAccounts('Want to Migrate', wantMigrateAccounts())">--</button></div>
     </div>
     <div class="hero-card">
       <div class="label">Legacy Migration Opps</div>
-      <div class="value" id="total-opps">--</div>
-      <div class="sub" id="total-opp-amount">Renewal amount loading</div>
+      <div class="value"><button class="value-btn" id="total-opps" onclick="openAllOpps()">--</button></div>
     </div>
     <div class="hero-card green">
       <div class="label">Closed Lost Opps</div>
-      <div class="value" id="closed-lost">--</div>
-      <div class="sub">Broken down by loss reason below</div>
+      <div class="value"><button class="value-btn" id="closed-lost" onclick="openClosedLostOpps()">--</button></div>
     </div>
   </section>
 
@@ -185,6 +221,7 @@
 
 <script>
 let MASTER = null;
+let DRILLDOWN = { type: 'accounts', rows: [], title: '' };
 
 const fmt = new Intl.NumberFormat('en-US');
 const money = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 });
@@ -195,16 +232,126 @@ function esc(value) {
   }[char]));
 }
 
+function wantMigrateAccounts() {
+  if (!MASTER) return [];
+  return MASTER.accounts.filter(account =>
+    account.webMigrationStatus === 'Want to migrate asap' ||
+    account.webMigrationStatus === 'Want to migrate / timeline unknown'
+  );
+}
+
+function accountRowsByStatus(status) {
+  return MASTER.accounts.filter(account => (account.webMigrationStatus || 'Blank') === status);
+}
+
+function oppRowsByStage(stage) {
+  return MASTER.opportunities.filter(opp => opp.stage === stage);
+}
+
+function oppRowsByLossReason(reason) {
+  return MASTER.opportunities.filter(opp => opp.stage === 'Closed Lost' && (opp.lossReason || 'Unspecified') === reason);
+}
+
+function openAllAccounts() {
+  if (!MASTER) return;
+  openAccounts('Active Tigerpaw Clients', MASTER.accounts);
+}
+
+function openAllOpps() {
+  if (!MASTER) return;
+  openOpps('Legacy Migration Opportunities', MASTER.opportunities);
+}
+
+function openClosedLostOpps() {
+  if (!MASTER) return;
+  openOpps('Closed Lost Opportunities', MASTER.opportunities.filter(opp => opp.stage === 'Closed Lost'));
+}
+
+function closeDrilldown() {
+  document.getElementById('drill-modal').classList.remove('open');
+}
+
+function openAccounts(title, rows) {
+  if (!MASTER) return;
+  DRILLDOWN = { type: 'accounts', rows: rows || [], title };
+  document.getElementById('drill-title').textContent = title;
+  document.getElementById('drill-search').value = '';
+  document.getElementById('drill-head').innerHTML = `
+    <tr>
+      <th>Account</th>
+      <th>Web Migration Status</th>
+      <th>Type</th>
+      <th>Owner</th>
+    </tr>`;
+  document.getElementById('drill-modal').classList.add('open');
+  renderDrilldownRows();
+}
+
+function openOpps(title, rows) {
+  if (!MASTER) return;
+  DRILLDOWN = { type: 'opps', rows: rows || [], title };
+  document.getElementById('drill-title').textContent = title;
+  document.getElementById('drill-search').value = '';
+  document.getElementById('drill-head').innerHTML = `
+    <tr>
+      <th>Opportunity</th>
+      <th>Account</th>
+      <th>Stage</th>
+      <th class="num-h">Amount</th>
+      <th>Close / Loss Detail</th>
+    </tr>`;
+  document.getElementById('drill-modal').classList.add('open');
+  renderDrilldownRows();
+}
+
+function renderDrilldownRows() {
+  const search = document.getElementById('drill-search').value.trim().toLowerCase();
+  const rows = DRILLDOWN.rows.filter(row => Object.values(row).join(' ').toLowerCase().includes(search));
+  const body = document.getElementById('drill-body');
+  const empty = document.getElementById('drill-empty');
+
+  document.getElementById('drill-count').textContent = `${fmt.format(rows.length)} ${DRILLDOWN.type === 'accounts' ? 'account' : 'opportunit'}${rows.length === 1 ? (DRILLDOWN.type === 'accounts' ? '' : 'y') : (DRILLDOWN.type === 'accounts' ? 's' : 'ies')}`;
+  empty.style.display = rows.length ? 'none' : 'block';
+
+  if (DRILLDOWN.type === 'accounts') {
+    body.innerHTML = rows.map(account => `
+      <tr>
+        <td><strong>${esc(account.name)}</strong></td>
+        <td><span class="pill">${esc(account.webMigrationStatus || 'Blank')}</span></td>
+        <td>${esc(account.type || '')}</td>
+        <td>${esc(account.owner || '')}</td>
+      </tr>`).join('');
+    return;
+  }
+
+  body.innerHTML = rows.map(opp => {
+    const loss = opp.stage === 'Closed Lost'
+      ? `<strong>${esc(opp.lossReason || 'Unspecified')}</strong><br>${esc(opp.lossDetail || 'No detail entered')}`
+      : esc(opp.closeDate || '');
+    return `
+      <tr>
+        <td><strong>${esc(opp.name)}</strong></td>
+        <td>${esc(opp.account)}</td>
+        <td><span class="pill">${esc(opp.stage)}</span></td>
+        <td class="num-c">${money.format(opp.amount || 0)}</td>
+        <td class="detail">${loss}</td>
+      </tr>`;
+  }).join('');
+}
+
 function barRows(groups, total, kind) {
   return groups.map((group, idx) => {
     const pct = total ? Math.max(2, Math.round((group.count / total) * 100)) : 0;
     const dotClass = idx % 4 === 0 ? '' : idx % 4 === 1 ? 'green' : idx % 4 === 2 ? 'navy' : 'gray';
     const sub = kind === 'stage' ? `${money.format(group.amount || 0)} Renewal` : `${group.pct || Math.round((group.count / total) * 1000) / 10}% of accounts`;
+    const onclick = kind === 'stage'
+      ? `openOpps('${esc(group.label)} Opportunities', oppRowsByStage('${esc(group.label)}'))`
+      : `openAccounts('${esc(group.label)} Accounts', accountRowsByStatus('${esc(group.label)}'))`;
     return `
       <div class="bar-row">
         <div class="name"><span class="dot ${dotClass}"></span><span>${esc(group.label)}</span></div>
         <div class="bar"><div class="fill" style="width:${pct}%"></div></div>
-        <div class="num">${fmt.format(group.count)}<small>${esc(sub)}</small></div>
+        <div class="num"><button class="num-btn" onclick="${onclick}">${fmt.format(group.count)}</button><small>${esc(sub)}</small></div>
       </div>`;
   }).join('');
 }
@@ -228,7 +375,7 @@ function renderLossTable(lossBreakdown) {
     return `
       <tr>
         <td><span class="pill">${esc(group.label)}</span></td>
-        <td class="num-c">${fmt.format(group.count)}</td>
+        <td class="num-c"><button class="num-btn" onclick="openOpps('${esc(group.label)} Lost Opportunities', oppRowsByLossReason('${esc(group.label)}'))">${fmt.format(group.count)}</button></td>
         <td class="num-c">${money.format(group.amount || 0)}</td>
         <td>${details}</td>
       </tr>`;
@@ -286,7 +433,6 @@ function render(data) {
   document.getElementById('total-accounts').textContent = fmt.format(data.totals.tigerpawAccounts);
   document.getElementById('want-migrate').textContent = fmt.format(want);
   document.getElementById('total-opps').textContent = fmt.format(data.totals.legacyMigrationOpps);
-  document.getElementById('total-opp-amount').textContent = `${money.format(data.totals.legacyMigrationAmount)} Renewal Amount`;
   document.getElementById('closed-lost').textContent = fmt.format(data.totals.closedLostOpps);
 
   document.getElementById('status-bars').innerHTML = barRows(data.statusBreakdown, data.totals.tigerpawAccounts, 'status');
