@@ -3,776 +3,317 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tigerpaw Migration Campaign Dashboard — Rev.io</title>
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+<title>Tigerpaw Master Dashboard - Rev.io</title>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
 <style>
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  body { font-family: 'Open Sans', Arial, sans-serif; background: #F5F7FA; color: #3d4d5c; min-height: 100vh; }
-
-  .header { background: #1D3756; padding: 28px 40px 24px; position: relative; overflow: hidden; }
-  .header::after { content:''; display:block; background:linear-gradient(90deg,#2399B5 0%,#6EBE4F 100%); height:4px; position:absolute; bottom:0;left:0;right:0; }
-  .header-inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; }
-  .header-left h1 { font-size: 22px; font-weight: 800; color: #FFFFFF; letter-spacing: -0.3px; }
-  .header-left p { font-size: 13px; color: rgba(255,255,255,0.55); margin-top: 3px; }
-  .badge { background: rgba(35,153,181,0.25); color: #fff; font-size: 12px; font-weight: 600; padding: 4px 12px; border-radius: 20px; border: 1px solid rgba(35,153,181,0.5); }
-
-  .main { max-width: 1200px; margin: 28px auto; padding: 0 24px 48px; }
-
-  .section-title { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px; color: #2399B5; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
-  .section-title::after { content:''; flex:1; height:1px; background:#DDE2E8; }
-
-  /* Hero */
-  .hero-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 14px; margin-bottom: 24px; }
-  .hero-card { background: #1D3756; border-radius: 10px; padding: 20px 18px; position: relative; overflow: hidden; }
-  .hero-card::before { content:''; position:absolute; top:0;left:0;right:0; height:3px; background:linear-gradient(90deg,#2399B5,#6EBE4F); }
-  .hero-card .label { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.6px; color: rgba(255,255,255,0.5); margin-bottom: 8px; }
-  .hero-card .value { font-family: 'Montserrat',sans-serif; font-size: 32px; font-weight: 800; color: #fff; line-height: 1; }
-  .hero-card .sub { font-size: 12px; color: rgba(255,255,255,0.45); margin-top: 5px; }
-
-  /* Webinar bar */
-  .webinar-bar { background: linear-gradient(135deg,#1D3756,#0f2240); border-radius: 10px; padding: 18px 24px; display: flex; align-items: center; justify-content: space-between; margin-bottom: 24px; border: 1px solid rgba(35,153,181,0.3); }
-  .wb-left .wb-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.6px; color: rgba(255,255,255,0.55); }
-  .wb-left .wb-title { font-size: 15px; font-weight: 700; color: #fff; margin: 4px 0 2px; }
-  .wb-left .wb-sub { font-size: 12px; color: rgba(255,255,255,0.45); }
-  .wb-metrics { display: flex; gap: 28px; }
-  .wm { text-align: center; }
-  .wm .v { font-family: 'Montserrat',sans-serif; font-size: 28px; font-weight: 800; color: #6EBE4F; }
-  .wm .l { font-size: 11px; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 0.4px; margin-top: 2px; }
-  .wm .v.teal { color: #2399B5; }
-
-  /* Card / Table */
-  .card { background: #fff; border-radius: 10px; border: 1px solid #DDE2E8; overflow: hidden; margin-bottom: 20px; }
-  .card-header { background: #1D3756; padding: 13px 20px; display: flex; align-items: center; justify-content: space-between; }
-  .card-header h2 { font-size: 14px; font-weight: 700; color: #fff; }
-  .card-header span { font-size: 11px; color: rgba(255,255,255,0.45); }
-
+  *, *::before, *::after { box-sizing: border-box; }
+  body { margin: 0; font-family: 'Open Sans', Arial, sans-serif; background: #F5F7FA; color: #3d4d5c; }
+  .header { background: #1D3756; color: #FFFFFF; position: relative; }
+  .header::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 4px; background: linear-gradient(90deg, #2399B5, #6EBE4F); }
+  .header-inner { max-width: 1200px; margin: 0 auto; padding: 28px 24px 24px; display: flex; align-items: center; justify-content: space-between; gap: 18px; }
+  h1 { margin: 0; font-size: 24px; line-height: 1.2; letter-spacing: 0; }
+  .subtitle { margin-top: 5px; font-size: 13px; color: #FFFFFF; }
+  .nav { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; justify-content: flex-end; }
+  .nav a { color: #FFFFFF; border: 1px solid rgba(255,255,255,0.45); text-decoration: none; padding: 7px 12px; border-radius: 6px; font-size: 12px; font-weight: 700; }
+  .nav a.active { background: #2399B5; border-color: #2399B5; }
+  .main { max-width: 1200px; margin: 0 auto; padding: 26px 24px 44px; }
+  .section-title { margin: 24px 0 12px; color: #2399B5; font-size: 12px; font-weight: 800; letter-spacing: .8px; text-transform: uppercase; display: flex; align-items: center; gap: 10px; }
+  .section-title::after { content: ""; height: 1px; background: #DDE2E8; flex: 1; }
+  .hero-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }
+  .hero-card { background: #1D3756; color: #FFFFFF; border-radius: 8px; padding: 18px; border-top: 4px solid #2399B5; min-height: 126px; }
+  .hero-card.green { border-top-color: #6EBE4F; }
+  .label { font-size: 11px; text-transform: uppercase; letter-spacing: .6px; font-weight: 800; color: #FFFFFF; }
+  .value { font-family: 'Montserrat', sans-serif; font-size: 32px; line-height: 1; margin-top: 10px; font-weight: 800; color: #FFFFFF; }
+  .sub { margin-top: 8px; font-size: 12px; color: #FFFFFF; line-height: 1.35; }
+  .grid-2 { display: grid; grid-template-columns: 1.2fr .8fr; gap: 18px; }
+  .card { background: #FFFFFF; border: 1px solid #DDE2E8; border-radius: 8px; overflow: hidden; }
+  .card-head { background: #1D3756; color: #FFFFFF; padding: 13px 16px; display: flex; justify-content: space-between; gap: 16px; align-items: center; }
+  .card-head h2 { margin: 0; font-size: 14px; line-height: 1.25; }
+  .card-head span { color: #FFFFFF; font-size: 11px; text-align: right; }
+  .rows { padding: 4px 0; }
+  .bar-row { display: grid; grid-template-columns: minmax(190px, 260px) 1fr minmax(110px, 150px); gap: 14px; align-items: center; padding: 13px 16px; border-bottom: 1px solid #F0F2F5; }
+  .bar-row:last-child { border-bottom: 0; }
+  .name { font-size: 13px; font-weight: 800; color: #1D3756; display: flex; align-items: center; gap: 8px; min-width: 0; }
+  .dot { width: 9px; height: 9px; border-radius: 50%; background: #2399B5; flex: 0 0 auto; }
+  .dot.green { background: #6EBE4F; }
+  .dot.navy { background: #1D3756; }
+  .dot.gray { background: #8b98a7; }
+  .bar { height: 9px; border-radius: 5px; background: #EEF2F6; overflow: hidden; }
+  .fill { height: 100%; border-radius: 5px; background: linear-gradient(90deg, #2399B5, #6EBE4F); min-width: 3px; }
+  .num { text-align: right; font-family: 'Montserrat', sans-serif; font-size: 17px; color: #1D3756; font-weight: 800; }
+  .num small { display: block; margin-top: 2px; font-family: 'Open Sans', Arial, sans-serif; color: #687789; font-size: 11px; font-weight: 700; }
+  .summary-strip { background: #F5F7FA; border-top: 1px solid #DDE2E8; padding: 11px 16px; font-size: 12px; display: flex; justify-content: space-between; gap: 16px; }
   table { width: 100%; border-collapse: collapse; }
-  thead th { background: #F5F7FA; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; color: #1D3756; padding: 11px 14px; text-align: left; border-bottom: 2px solid #DDE2E8; white-space: nowrap; }
-  thead th:not(:first-child) { text-align: right; }
-  tbody tr:hover td { background: #f8fafc; }
-  tbody td { padding: 13px 14px; font-size: 13px; border-bottom: 1px solid #F0F2F5; }
-  tbody tr:last-child td { border-bottom: none; }
-  tbody td:not(:first-child) { text-align: right; font-family: 'Montserrat',sans-serif; font-weight: 600; }
-  tfoot td { padding: 12px 14px; background: #F5F7FA; font-weight: 700; font-size: 13px; border-top: 2px solid #DDE2E8; }
-  tfoot td:not(:first-child) { text-align: right; font-family: 'Montserrat',sans-serif; }
-
-  .pill { display: inline-flex; align-items: center; gap: 6px; font-weight: 700; font-size: 13px; }
-  .dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
-  .d-teal { background: #2399B5; } .d-orange { background: #f59e0b; } .d-gray { background: #94a3b8; }
-  .d-navy { background: #1D3756; } .d-green { background: #6EBE4F; } .d-purple { background: #8b5cf6; }
-
-  .rate { font-size: 11px; color: #6EBE4F; font-weight: 600; margin-left: 3px; }
-
-  /* Filter bar */
-  .filter-bar { display: flex; align-items: center; gap: 8px; margin-bottom: 18px; flex-wrap: wrap; }
-  .flabel { font-size: 12px; font-weight: 600; color: #94a3b8; }
-  .fbtn { padding: 6px 16px; border-radius: 20px; border: 1px solid #DDE2E8; background: #fff; font-family: 'Open Sans',sans-serif; font-size: 12px; font-weight: 600; color: #3d4d5c; cursor: pointer; transition: all 0.15s; }
-  .fbtn:hover { border-color: #2399B5; color: #2399B5; }
-  .fbtn.active { background: #1D3756; color: #fff; border-color: #1D3756; }
-
-  /* Vertical / audience bars */
-  .vbar-row { display:flex; align-items:center; padding:12px 20px; border-bottom:1px solid #F0F2F5; gap:12px; }
-  .vbar-row:last-child { border-bottom:none; }
-  .vbar-name { font-weight:600; font-size:13px; flex:0 0 140px; display:flex; align-items:center; gap:8px; }
-  .vbar-wrap { flex:1; }
-  .vbar-bg { background:#F0F2F5; border-radius:4px; height:8px; overflow:hidden; }
-  .vbar-fill { height:100%; border-radius:4px; background:linear-gradient(90deg,#2399B5,#6EBE4F); transition: width 0.4s ease; }
-  .vbar-nums { min-width:110px; text-align:right; }
-  .vbar-nums .big { font-family:'Montserrat',sans-serif; font-weight:700; font-size:15px; color:#1D3756; }
-  .vbar-nums .sm { font-size:11px; color:#94a3b8; margin-top:1px; }
-
-  /* Clickable reg numbers */
-  .reg-link { cursor:pointer; color:#6EBE4F; text-decoration:underline; text-decoration-style:dotted; text-underline-offset:2px; font-weight:700; background:none; border:none; font-family:'Montserrat',sans-serif; font-size:inherit; padding:0; }
-  .reg-link::after { content:''; display:inline-block; width:11px; height:11px; margin-left:4px; vertical-align:middle; background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23b0b8c1' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='8'/%3E%3Cpath d='m21 21-4.35-4.35'/%3E%3C/svg%3E"); background-size:contain; background-repeat:no-repeat; opacity:0.75; }
-  .reg-link:hover { color:#4a9e32; }
-  .regacct-link { cursor:pointer; color:#2399B5; text-decoration:underline; text-decoration-style:dotted; text-underline-offset:2px; font-weight:700; background:none; border:none; font-family:'Montserrat',sans-serif; font-size:inherit; padding:0; }
-  .regacct-link:hover { color:#1a7a91; }
-  .bar-reg-link { cursor:pointer; text-decoration:underline; text-decoration-style:dotted; text-underline-offset:2px; background:none; border:none; font-family:'Montserrat',sans-serif; font-weight:700; font-size:15px; color:#1D3756; padding:0; }
-  .bar-reg-link::after { content:''; display:inline-block; width:11px; height:11px; margin-left:4px; vertical-align:middle; background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23b0b8c1' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='8'/%3E%3Cpath d='m21 21-4.35-4.35'/%3E%3C/svg%3E"); background-size:contain; background-repeat:no-repeat; opacity:0.75; }
-  .bar-reg-link:hover { color:#2399B5; }
-  .wb-search-icon { display:inline-block; width:13px; height:13px; margin-left:5px; vertical-align:middle; background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='rgba(255,255,255,0.45)' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='8'/%3E%3Cpath d='m21 21-4.35-4.35'/%3E%3C/svg%3E"); background-size:contain; background-repeat:no-repeat; }
-
-  /* Two col / three col */
-  .two-col { display:grid; grid-template-columns:1fr 1fr; gap:20px; }
-  .bar-charts-col { display:flex; flex-direction:column; gap:20px; }
-
-  /* Insight cards */
-  .insight-card { background:#fff; border-radius:10px; border:1px solid #DDE2E8; padding:16px 18px; }
-  .insight-card .eyebrow { font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:0.6px; color:#2399B5; margin-bottom:6px; }
-  .insight-card h3 { font-size:13px; font-weight:700; color:#1D3756; margin-bottom:5px; }
-  .insight-card p { font-size:12px; color:#3d4d5c; line-height:1.6; }
-
-  .footer-note { text-align:center; font-size:11px; color:#94a3b8; padding-top:20px; border-top:1px solid #DDE2E8; }
-
-  /* SF Pipeline banner */
-  .sf-pipeline-bar { background: linear-gradient(135deg,#1a3a28,#0f2820); border-radius: 10px; padding: 20px 28px; display: flex; align-items: center; justify-content: space-between; margin-bottom: 24px; border: 1px solid rgba(110,190,79,0.35); }
-  .sp-left .sp-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.7px; color: #6EBE4F; margin-bottom: 5px; }
-  .sp-left .sp-title { font-size: 15px; font-weight: 700; color: #fff; margin-bottom: 3px; }
-  .sp-left .sp-sub { font-size: 12px; color: rgba(255,255,255,0.45); }
-  .sp-metrics { display: flex; gap: 36px; align-items: center; }
-  .spm { text-align: center; }
-  .spm .sv { font-family: 'Montserrat',sans-serif; font-size: 30px; font-weight: 800; color: #6EBE4F; line-height: 1; }
-  .spm .sl { font-size: 10px; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 0.5px; margin-top: 4px; }
-  .opp-hero-link { cursor:pointer; color:#6EBE4F; text-decoration:underline; text-decoration-style:dotted; text-underline-offset:3px; font-weight:800; background:none; border:none; font-family:'Montserrat',sans-serif; font-size:30px; line-height:1; padding:0; }
-  .opp-hero-link::after { content:''; display:inline-block; width:12px; height:12px; margin-left:4px; vertical-align:middle; background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236EBE4F' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='8'/%3E%3Cpath d='m21 21-4.35-4.35'/%3E%3C/svg%3E"); background-size:contain; background-repeat:no-repeat; opacity:0.7; }
-  .opp-hero-link:hover { color:#4a9e32; }
-  .opp-bar-link { cursor:pointer; text-decoration:underline; text-decoration-style:dotted; text-underline-offset:2px; background:none; border:none; font-family:'Montserrat',sans-serif; font-weight:700; font-size:15px; color:#1D3756; padding:0; }
-  .opp-bar-link::after { content:''; display:inline-block; width:11px; height:11px; margin-left:4px; vertical-align:middle; background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23b0b8c1' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='8'/%3E%3Cpath d='m21 21-4.35-4.35'/%3E%3C/svg%3E"); background-size:contain; background-repeat:no-repeat; opacity:0.75; }
-  .opp-bar-link:hover { color:#2399B5; }
-
-  /* ── MODAL ── */
-  .modal-overlay { display:none; position:fixed; inset:0; background:rgba(0,0,0,0.5); z-index:1000; align-items:center; justify-content:center; }
-  .modal-overlay.open { display:flex; }
-  .modal { background:#fff; border-radius:12px; width:92%; max-width:760px; max-height:88vh; display:flex; flex-direction:column; overflow:hidden; box-shadow:0 20px 60px rgba(0,0,0,0.3); }
-  .modal-head { background:#1D3756; padding:16px 20px; display:flex; align-items:center; justify-content:space-between; flex-shrink:0; position:relative; }
-  .modal-head::after { content:''; position:absolute; bottom:0;left:0;right:0;height:3px; background:linear-gradient(90deg,#2399B5,#6EBE4F); }
-  .modal-head h2 { font-size:15px; font-weight:700; color:#fff; }
-  .modal-head .modal-count { font-size:12px; color:rgba(255,255,255,0.55); margin-top:2px; }
-  .modal-close { background:rgba(255,255,255,0.15); border:none; color:#fff; border-radius:6px; width:28px; height:28px; cursor:pointer; font-size:16px; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
-  .modal-close:hover { background:rgba(255,255,255,0.25); }
-  .modal-search { padding:12px 16px; border-bottom:1px solid #DDE2E8; flex-shrink:0; }
-  .modal-search input { width:100%; padding:8px 12px; border:1px solid #DDE2E8; border-radius:6px; font-family:'Open Sans',sans-serif; font-size:13px; outline:none; color:#1D3756; }
-  .modal-search input:focus { border-color:#2399B5; box-shadow:0 0 0 3px rgba(35,153,181,0.15); }
-  .modal-body { overflow-y:auto; flex:1; }
-  .modal-table { width:100%; border-collapse:collapse; }
-  .modal-table thead th { background:#F5F7FA; font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:0.5px; color:#1D3756; padding:9px 14px; text-align:left; border-bottom:2px solid #DDE2E8; position:sticky; top:0; }
-  .modal-table tbody tr:hover td { background:#f8fafc; }
-  .modal-table tbody td { padding:10px 14px; font-size:13px; border-bottom:1px solid #F0F2F5; color:#3d4d5c; }
-  .modal-table tbody tr:last-child td { border-bottom:none; }
-  .modal-empty { text-align:center; padding:40px 20px; color:#94a3b8; font-size:13px; }
-  .aud-badge { display:inline-block; padding:2px 8px; border-radius:10px; font-size:11px; font-weight:600; }
-  .aud-rtm { background:#dbeafe; color:#1e40af; }
-  .aud-unk { background:#fef3c7; color:#92400e; }
-  .aud-later { background:#f3f4f6; color:#4b5563; }
-  .vert-badge { display:inline-block; padding:2px 8px; border-radius:10px; font-size:11px; font-weight:600; }
-  .vert-msp { background:#dcfce7; color:#166534; }
-  .vert-int { background:#ede9fe; color:#5b21b6; }
-  .vert-oth { background:#f1f5f9; color:#475569; }
+  th { background: #F5F7FA; color: #1D3756; font-size: 11px; text-transform: uppercase; letter-spacing: .5px; text-align: left; padding: 11px 12px; border-bottom: 2px solid #DDE2E8; white-space: nowrap; }
+  th.num-h, td.num-c { text-align: right; }
+  td { padding: 12px; border-bottom: 1px solid #F0F2F5; font-size: 13px; vertical-align: top; }
+  tr:last-child td { border-bottom: 0; }
+  td.num-c { font-family: 'Montserrat', sans-serif; font-weight: 800; color: #1D3756; }
+  .pill { display: inline-block; background: #EAF6F9; color: #1D3756; padding: 3px 8px; border-radius: 999px; font-size: 11px; font-weight: 800; }
+  .controls { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; margin-bottom: 12px; }
+  .search { flex: 1; min-width: 220px; padding: 9px 11px; border: 1px solid #DDE2E8; border-radius: 6px; font: inherit; color: #1D3756; background: #FFFFFF; }
+  .select { padding: 9px 11px; border: 1px solid #DDE2E8; border-radius: 6px; font: inherit; color: #1D3756; background: #FFFFFF; min-width: 190px; }
+  .detail { color: #3d4d5c; line-height: 1.45; max-width: 520px; }
+  .empty { padding: 28px; text-align: center; color: #687789; font-size: 13px; }
+  .footer { margin-top: 24px; padding-top: 18px; border-top: 1px solid #DDE2E8; font-size: 11px; color: #687789; text-align: center; }
+  @media (max-width: 900px) {
+    .header-inner { align-items: flex-start; flex-direction: column; }
+    .hero-grid, .grid-2 { grid-template-columns: 1fr; }
+    .bar-row { grid-template-columns: 1fr; gap: 8px; }
+    .num { text-align: left; }
+    .summary-strip { flex-direction: column; }
+  }
 </style>
 </head>
 <body>
-
-<!-- ── SF OPP MODAL ── -->
-<div class="modal-overlay" id="opp-modal" onclick="if(event.target===this)closeOppModal()">
-  <div class="modal">
-    <div class="modal-head">
-      <div>
-        <h2 id="opp-modal-title">Legacy Migration Opportunities</h2>
-        <div class="modal-count" id="opp-modal-count"></div>
-      </div>
-      <button class="modal-close" onclick="closeOppModal()">✕</button>
-    </div>
-    <div class="modal-body">
-      <table class="modal-table">
-        <thead>
-          <tr>
-            <th>Opportunity</th>
-            <th>Account</th>
-            <th>Stage</th>
-            <th>Audience</th>
-            <th>Created</th>
-          </tr>
-        </thead>
-        <tbody id="opp-modal-tbody"></tbody>
-      </table>
-      <div class="modal-empty" id="opp-modal-empty" style="display:none">No opportunities in this segment.</div>
-    </div>
-  </div>
-</div>
-
-<!-- ── REGISTRANT MODAL ── -->
-<div class="modal-overlay" id="reg-modal" onclick="if(event.target===this)closeModal()">
-  <div class="modal">
-    <div class="modal-head">
-      <div>
-        <h2 id="modal-title">Webinar Registrants</h2>
-        <div class="modal-count" id="modal-count"></div>
-      </div>
-      <button class="modal-close" onclick="closeModal()">✕</button>
-    </div>
-    <div class="modal-search">
-      <input type="text" id="modal-search-input" placeholder="Search by name, company, or email…" oninput="filterModal()">
-    </div>
-    <div class="modal-body">
-      <table class="modal-table">
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Company</th>
-            <th>Vertical</th>
-            <th>Audience</th>
-          </tr>
-        </thead>
-        <tbody id="modal-tbody"></tbody>
-      </table>
-      <div class="modal-empty" id="modal-empty" style="display:none">No registrants match your search.</div>
-    </div>
-  </div>
-</div>
-
-<div class="header">
+<header class="header">
   <div class="header-inner">
-    <div class="header-left">
-      <h1>🔄 Tigerpaw Migration Campaign Dashboard</h1>
-      <p>Data as of May 28, 2026 · Rev.io Marketing Ops · Internal registrants excluded</p>
+    <div>
+      <h1>Tigerpaw Master Dashboard</h1>
+      <div class="subtitle" id="generated-subtitle">Salesforce overview loading...</div>
     </div>
-    <span class="badge">Live Data</span>
+    <nav class="nav">
+      <a class="active" href="./">Master Overview</a>
+      <a href="./webinar.html">TP Webinar Deep Dive</a>
+    </nav>
   </div>
-</div>
+</header>
 
-<div class="main">
-
-  <!-- Filter bar -->
-  <div class="filter-bar">
-    <span class="flabel">View by:</span>
-    <button class="fbtn active" onclick="setFilter('all',this)">All Audiences</button>
-    <button class="fbtn" onclick="setFilter('ready',this)">Ready to Migrate</button>
-    <button class="fbtn" onclick="setFilter('unknown',this)">Unknown</button>
-    <button class="fbtn" onclick="setFilter('later',this)">Migrate Later</button>
-  </div>
-
-  <!-- Hero stats -->
-  <div class="section-title">Campaign Overview</div>
-  <div class="hero-grid">
+<main class="main">
+  <div class="section-title">Tigerpaw Client Overview</div>
+  <section class="hero-grid">
     <div class="hero-card">
-      <div class="label">Contacts Emailed</div>
-      <div class="value" id="h-contacts">2,432</div>
-      <div class="sub" id="h-contacts-sub">Unique · 375 accounts</div>
+      <div class="label">Active Tigerpaw Clients</div>
+      <div class="value" id="total-accounts">--</div>
+      <div class="sub">Account Tigerpaw checked and Type is not Churn</div>
+    </div>
+    <div class="hero-card green">
+      <div class="label">Want to Migrate</div>
+      <div class="value" id="want-migrate">--</div>
+      <div class="sub">ASAP plus timeline unknown</div>
     </div>
     <div class="hero-card">
-      <div class="label">Total Sent</div>
-      <div class="value" id="h-sent">3,493</div>
-      <div class="sub" id="h-delivered-sub">3,449 delivered</div>
+      <div class="label">Legacy Migration Opps</div>
+      <div class="value" id="total-opps">--</div>
+      <div class="sub" id="total-opp-amount">Renewal amount loading</div>
     </div>
-    <div class="hero-card">
-      <div class="label">Open Rate</div>
-      <div class="value" id="h-openrate" style="color:#6EBE4F">12.4%</div>
-      <div class="sub" id="h-opens-sub">429 opens · of delivered</div>
+    <div class="hero-card green">
+      <div class="label">Closed Lost Opps</div>
+      <div class="value" id="closed-lost">--</div>
+      <div class="sub">Broken down by loss reason below</div>
     </div>
-    <div class="hero-card">
-      <div class="label">Click Rate</div>
-      <div class="value" id="h-clickrate" style="color:#2399B5">2.9%</div>
-      <div class="sub" id="h-clicks-sub">100 clicks · of delivered</div>
-    </div>
-  </div>
+  </section>
 
-  <!-- Webinar banner -->
-  <div class="webinar-bar">
-    <div class="wb-left">
-      <div class="wb-label">Webinar</div>
-      <div class="wb-title">See It for Yourself — Introducing Rev.io PSA</div>
-      <div class="wb-sub">External registrants only (21 internal @rev.io excluded)</div>
+  <section class="grid-2">
+    <div>
+      <div class="section-title">Web Migration Status</div>
+      <div class="card">
+        <div class="card-head">
+          <h2>Active Tigerpaw Clients by Web Migration Status</h2>
+          <span>Salesforce Account field: Web_Migration__c</span>
+        </div>
+        <div class="rows" id="status-bars"></div>
+        <div class="summary-strip">
+          <span id="status-summary">Loading status distribution...</span>
+          <span>Filter: Tigerpaw = true, Type != Churn</span>
+        </div>
+      </div>
     </div>
-    <div class="wb-metrics">
-      <div class="wm"><div class="v" id="wb-contacts" style="cursor:pointer;text-decoration:underline;text-decoration-style:dotted;text-underline-offset:3px" onclick="showRegistrants('all','all')" title="Click to see registrant list">190<span class="wb-search-icon"></span></div><div class="l">Contacts Registered</div></div>
-      <div class="wm"><div class="v teal" id="wb-accounts">112</div><div class="l">Unique Accounts</div></div>
-      <div class="wm"><div class="v" id="wb-rate" style="color:#fff;font-size:20px;margin-top:4px;">26+102+62</div><div class="l">RTM + Unknown + Other</div></div>
+    <div>
+      <div class="section-title">Opportunity Stage</div>
+      <div class="card">
+        <div class="card-head">
+          <h2>Legacy Migration Opportunities by Stage</h2>
+          <span>Salesforce Opportunity Type = Legacy Migration</span>
+        </div>
+        <div class="rows" id="stage-bars"></div>
+        <div class="summary-strip">
+          <span id="stage-summary">Loading opportunity stages...</span>
+        </div>
+      </div>
     </div>
-  </div>
+  </section>
 
-  <!-- SF Pipeline -->
-  <div class="section-title">Salesforce Pipeline</div>
-  <div class="sf-pipeline-bar">
-    <div class="sp-left">
-      <div class="sp-label">Salesforce Pipeline</div>
-      <div class="sp-title">Legacy Migration Opportunities</div>
-      <div class="sp-sub">Contacts with Web Migration Request checked &middot; Opp Type = Legacy Migration</div>
+  <div class="section-title">Closed Lost Detail</div>
+  <section class="card">
+    <div class="card-head">
+      <h2>Closed Lost Legacy Migration Opportunities</h2>
+      <span>Loss reason and detail from Salesforce</span>
     </div>
-    <div class="sp-metrics">
-      <div class="spm">
-        <div class="sv"><button class="opp-hero-link" onclick="showOpps('all')" title="View all opportunities">6</button></div>
-        <div class="sl">Opportunities</div>
-      </div>
-      <div class="spm">
-        <div class="sv" style="color:#2399B5">$2,258</div>
-        <div class="sl">Renewal Amount</div>
-      </div>
-      <div class="spm">
-        <div class="sv" style="font-size:20px;color:#fff">1&thinsp;+&thinsp;3&thinsp;+&thinsp;2</div>
-        <div class="sl">RTM&nbsp;&bull;&nbsp;Unknown&nbsp;&bull;&nbsp;Other</div>
-      </div>
-    </div>
-  </div>
-
-  <div class="section-title">Migration Pipeline by Audience</div>
-  <div class="card" style="margin-bottom:28px;">
-    <div class="card-header">
-      <h2>Opportunities &amp; Renewal Amount</h2>
-      <span>Salesforce &middot; Web Migration Request = Checked &middot; Opp Type = Legacy Migration</span>
-    </div>
-    <div class="vbar-row">
-      <div class="vbar-name"><span class="dot d-teal"></span>Ready to Migrate</div>
-      <div class="vbar-wrap"><div class="vbar-bg"><div class="vbar-fill" style="width:17%"></div></div></div>
-      <div class="vbar-nums">
-        <div class="big"><button class="opp-bar-link" onclick="showOpps('Ready to Migrate')">1</button></div>
-        <div class="sm">$549 Renewal</div>
-      </div>
-    </div>
-    <div class="vbar-row">
-      <div class="vbar-name"><span class="dot d-orange"></span>Unknown</div>
-      <div class="vbar-wrap"><div class="vbar-bg"><div class="vbar-fill" style="width:50%;background:linear-gradient(90deg,#f59e0b,#f59e0b)"></div></div></div>
-      <div class="vbar-nums">
-        <div class="big"><button class="opp-bar-link" onclick="showOpps('Unknown')">3</button></div>
-        <div class="sm">$500 Renewal</div>
-      </div>
-    </div>
-    <div class="vbar-row">
-      <div class="vbar-name"><span class="dot d-gray"></span>Other / Direct</div>
-      <div class="vbar-wrap"><div class="vbar-bg"><div class="vbar-fill" style="width:33%;background:linear-gradient(90deg,#94a3b8,#64748b)"></div></div></div>
-      <div class="vbar-nums">
-        <div class="big"><button class="opp-bar-link" onclick="showOpps('Other')">2</button></div>
-        <div class="sm">$1,209 Renewal</div>
-      </div>
-    </div>
-    <div style="padding:11px 20px;background:#F5F7FA;border-top:1px solid #DDE2E8;display:flex;justify-content:space-between;font-size:12px;color:#3d4d5c;">
-      <span><strong>6</strong> total opportunities in pipeline</span>
-      <span>$2,258 total Renewal Amount</span>
-    </div>
-  </div>
-
-  <!-- Combined table: Vertical × Audience -->
-  <div class="section-title">By Vertical &amp; Audience</div>
-  <div class="card">
-    <div class="card-header">
-      <h2>Email Performance — Vertical Breakdown by Audience</h2>
-      <span>Rates based on delivered · Internal @rev.io excluded from registrations</span>
-    </div>
-    <table id="combined-table">
+    <table>
       <thead>
         <tr>
-          <th style="width:180px">Vertical / Audience</th>
-          <th>Unique Accts</th>
-          <th>Contacts</th>
-          <th>Sent</th>
-          <th>Opens</th>
-          <th>Clicks</th>
-          <th>Webinar Reg.</th>
-          <th>Reg. Accounts</th>
+          <th>Loss Reason</th>
+          <th class="num-h">Opps</th>
+          <th class="num-h">Amount</th>
+          <th>Details</th>
         </tr>
       </thead>
-      <tbody>
-        <!-- MSP header -->
-        <tr class="vert-header" data-vert="msp">
-          <td colspan="8" style="padding:9px 14px;font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:0.6px;color:#1D3756;background:#f0f4f8;">
-            <span class="dot d-teal" style="display:inline-block;margin-right:6px;"></span>MSP
-          </td>
-        </tr>
-        <tr data-aud="ready" data-vert="msp">
-          <td style="padding-left:28px;"><div class="pill"><span class="dot d-teal" style="opacity:0.4"></span>Ready to Migrate</div></td>
-          <td>63</td><td>430</td><td>1,262</td>
-          <td>146 <span class="rate">11.6%</span></td>
-          <td>15 <span class="rate">1.2%</span></td>
-          <td><button class="reg-link" onclick="showRegistrants('MSP','ready')">17</button></td>
-          <td>13</td>
-        </tr>
-        <tr data-aud="unknown" data-vert="msp">
-          <td style="padding-left:28px;"><div class="pill"><span class="dot d-orange" style="opacity:0.5"></span>Unknown</div></td>
-          <td>207</td><td>1,139</td><td>1,127</td>
-          <td>146 <span class="rate">13.2%</span></td>
-          <td>49 <span class="rate">4.4%</span></td>
-          <td><button class="reg-link" onclick="showRegistrants('MSP','unknown')">67</button></td>
-          <td>52</td>
-        </tr>
-        <tr data-aud="later" data-vert="msp">
-          <td style="padding-left:28px;"><div class="pill"><span class="dot d-gray" style="opacity:0.5"></span>Migrate Later</div></td>
-          <td>—</td><td>—</td><td>—</td><td>—</td><td>—</td>
-          <td><button class="reg-link" onclick="showRegistrants('MSP','later')">53</button></td>
-          <td>18</td>
-        </tr>
-        <tr class="subtotal-row" data-vert="msp" style="background:#f8fafc;font-weight:700;">
-          <td style="padding-left:28px;font-size:12px;color:#1D3756;">MSP Total</td>
-          <td>269</td><td>1,568</td><td>2,388</td>
-          <td>292 <span class="rate">12.4%</span></td>
-          <td>64 <span class="rate">2.7%</span></td>
-          <td><button class="reg-link" onclick="showRegistrants('MSP','all')">137</button></td>
-          <td>83</td>
-        </tr>
-
-        <!-- Integrator header -->
-        <tr class="vert-header" data-vert="integrator">
-          <td colspan="8" style="padding:9px 14px;font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:0.6px;color:#1D3756;background:#f0f4f8;">
-            <span class="dot d-navy" style="display:inline-block;margin-right:6px;"></span>Integrator
-          </td>
-        </tr>
-        <tr data-aud="ready" data-vert="integrator">
-          <td style="padding-left:28px;"><div class="pill"><span class="dot d-teal" style="opacity:0.4"></span>Ready to Migrate</div></td>
-          <td>19</td><td>128</td><td>376</td>
-          <td>43 <span class="rate">11.5%</span></td>
-          <td>5 <span class="rate">1.3%</span></td>
-          <td><button class="reg-link" onclick="showRegistrants('Integrator','ready')">9</button></td>
-          <td>6</td>
-        </tr>
-        <tr data-aud="unknown" data-vert="integrator">
-          <td style="padding-left:28px;"><div class="pill"><span class="dot d-orange" style="opacity:0.5"></span>Unknown</div></td>
-          <td>86</td><td>735</td><td>728</td>
-          <td>94 <span class="rate">13.2%</span></td>
-          <td>31 <span class="rate">4.3%</span></td>
-          <td><button class="reg-link" onclick="showRegistrants('Integrator','unknown')">35</button></td>
-          <td>15</td>
-        </tr>
-        <tr data-aud="later" data-vert="integrator">
-          <td style="padding-left:28px;"><div class="pill"><span class="dot d-gray" style="opacity:0.5"></span>Migrate Later</div></td>
-          <td>—</td><td>—</td><td>—</td><td>—</td><td>—</td>
-          <td><button class="reg-link" onclick="showRegistrants('Integrator','later')">9</button></td>
-          <td>8</td>
-        </tr>
-        <tr class="subtotal-row" data-vert="integrator" style="background:#f8fafc;font-weight:700;">
-          <td style="padding-left:28px;font-size:12px;color:#1D3756;">Integrator Total</td>
-          <td>106</td><td>864</td><td>1,105</td>
-          <td>137 <span class="rate">12.6%</span></td>
-          <td>36 <span class="rate">3.3%</span></td>
-          <td><button class="reg-link" onclick="showRegistrants('Integrator','all')">53</button></td>
-          <td>29</td>
-        </tr>
-      </tbody>
-      <tfoot>
-        <tr>
-          <td>Grand Total</td>
-          <td id="ft-accts">375</td>
-          <td id="ft-contacts">2,432</td>
-          <td id="ft-sent">3,493</td>
-          <td id="ft-opens">429 <span id="ft-openrate" style="font-size:11px;color:#6EBE4F;font-weight:600">12.4%</span></td>
-          <td id="ft-clicks">100 <span id="ft-clickrate" style="font-size:11px;color:#6EBE4F;font-weight:600">2.9%</span></td>
-          <td><button class="reg-link" id="ft-reg" onclick="showRegistrants('all','all')" style="font-size:13px;">190</button></td>
-          <td id="ft-regaccts">112</td>
-        </tr>
-      </tfoot>
+      <tbody id="loss-table"></tbody>
     </table>
+  </section>
+
+  <div class="section-title">Opportunity Detail</div>
+  <div class="controls">
+    <input class="search" id="opp-search" type="search" placeholder="Search opportunity, account, stage, or reason">
+    <select class="select" id="stage-filter">
+      <option value="all">All stages</option>
+    </select>
   </div>
-
-  <!-- Two col: bar charts + insights -->
-  <div class="two-col" style="margin-bottom:20px;">
-
-    <div class="bar-charts-col">
-
-      <!-- By Vertical -->
-      <div>
-        <div class="section-title">Webinar Registrants by Vertical</div>
-        <div class="card">
-          <div class="card-header"><h2>Registration Breakdown</h2></div>
-          <div class="vbar-row">
-            <div class="vbar-name"><span class="dot d-teal"></span>MSP</div>
-            <div class="vbar-wrap"><div class="vbar-bg"><div class="vbar-fill" id="vb-msp-bar" style="width:72%"></div></div></div>
-            <div class="vbar-nums">
-              <div class="big"><button class="bar-reg-link" onclick="showRegistrants('MSP','all')" id="vb-msp-count">136</button></div>
-              <div class="sm" id="vb-msp-accts">83 accounts</div>
-            </div>
-          </div>
-          <div class="vbar-row">
-            <div class="vbar-name"><span class="dot d-navy"></span>Integrator</div>
-            <div class="vbar-wrap"><div class="vbar-bg"><div class="vbar-fill" id="vb-int-bar" style="width:28%"></div></div></div>
-            <div class="vbar-nums">
-              <div class="big"><button class="bar-reg-link" onclick="showRegistrants('Integrator','all')" id="vb-int-count">52</button></div>
-              <div class="sm" id="vb-int-accts">29 accounts</div>
-            </div>
-          </div>
-          <div style="padding:11px 20px;background:#F5F7FA;border-top:1px solid #DDE2E8;display:flex;justify-content:space-between;font-size:12px;color:#3d4d5c;" id="vb-summary">
-            <span><strong>MSP</strong> makes up <strong style="color:#2399B5">72%</strong> of all registrations</span>
-            <span>190 total · 112 accounts</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- By Audience -->
-      <div>
-        <div class="section-title">Webinar Registrants by Audience</div>
-        <div class="card">
-          <div class="card-header"><h2>Registration Breakdown</h2></div>
-          <div class="vbar-row">
-            <div class="vbar-name"><span class="dot d-teal"></span>Ready to Migrate</div>
-            <div class="vbar-wrap"><div class="vbar-bg"><div class="vbar-fill" id="ab-rtm-bar" style="width:14%;background:linear-gradient(90deg,#2399B5,#6EBE4F)"></div></div></div>
-            <div class="vbar-nums">
-              <div class="big"><button class="bar-reg-link" onclick="showRegistrants('all','ready')" id="ab-rtm-count">26</button></div>
-              <div class="sm" id="ab-rtm-accts">19 accounts</div>
-            </div>
-          </div>
-          <div class="vbar-row">
-            <div class="vbar-name"><span class="dot d-orange"></span>Unknown</div>
-            <div class="vbar-wrap"><div class="vbar-bg"><div class="vbar-fill" id="ab-unk-bar" style="width:54%;background:linear-gradient(90deg,#f59e0b,#f59e0b)"></div></div></div>
-            <div class="vbar-nums">
-              <div class="big"><button class="bar-reg-link" onclick="showRegistrants('all','unknown')" id="ab-unk-count">102</button></div>
-              <div class="sm" id="ab-unk-accts">67 accounts</div>
-            </div>
-          </div>
-          <div class="vbar-row">
-            <div class="vbar-name"><span class="dot d-gray"></span>Migrate Later</div>
-            <div class="vbar-wrap"><div class="vbar-bg"><div class="vbar-fill" id="ab-ml-bar" style="width:32%;background:linear-gradient(90deg,#94a3b8,#64748b)"></div></div></div>
-            <div class="vbar-nums">
-              <div class="big"><button class="bar-reg-link" onclick="showRegistrants('all','later')" id="ab-ml-count">62</button></div>
-              <div class="sm" id="ab-ml-accts">26 accounts</div>
-            </div>
-          </div>
-          <div style="padding:11px 20px;background:#F5F7FA;border-top:1px solid #DDE2E8;display:flex;justify-content:space-between;font-size:12px;color:#3d4d5c;" id="ab-summary">
-            <span><strong>Unknown</strong> makes up <strong style="color:#2399B5">54%</strong> of all registrations</span>
-            <span>190 total · 112 accounts</span>
-          </div>
-        </div>
-      </div>
-
-    </div><!-- end bar-charts-col -->
-
-    <div>
-      <div class="section-title">Key Insights</div>
-      <div style="display:flex;flex-direction:column;gap:12px;">
-        <div class="insight-card">
-          <div class="eyebrow">📈 Engagement</div>
-          <h3>Unknown Audience Clicking 3.7× More</h3>
-          <p>Unknown contacts have a <strong>4.4% click rate</strong> vs <strong>1.2%</strong> for Ready to Migrate — strong nurture signal.</p>
-        </div>
-        <div class="insight-card">
-          <div class="eyebrow">🎯 Webinar</div>
-          <h3>112 Accounts Registered</h3>
-          <p>26+102 from emailed audiences, +62 organic (Migrate Later / direct). <strong>21 internal @rev.io excluded.</strong></p>
-        </div>
-        <div class="insight-card">
-          <div class="eyebrow">⏳ Next Step</div>
-          <h3>Migrate Later — No Campaign Sent</h3>
-          <p>62 contacts from this group registered for the webinar organically. A dedicated sequence is the logical next step.</p>
-        </div>
-      </div>
+  <section class="card">
+    <div class="card-head">
+      <h2>Legacy Migration Opportunity List</h2>
+      <span id="opp-count-label">Loading...</span>
     </div>
-  </div><!-- end two-col -->
+    <table>
+      <thead>
+        <tr>
+          <th>Opportunity</th>
+          <th>Account</th>
+          <th>Stage</th>
+          <th class="num-h">Amount</th>
+          <th>Close / Loss Detail</th>
+        </tr>
+      </thead>
+      <tbody id="opp-table"></tbody>
+    </table>
+    <div class="empty" id="opp-empty" style="display:none;">No opportunities match this view.</div>
+  </section>
 
-  <div class="footer-note">
-    Rev.io Marketing Ops · Tigerpaw Migration Campaign · HubSpot API · May 28, 2026 · Internal @rev.io contacts excluded from registration counts
-  </div>
-
-</div><!-- end main -->
+  <div class="footer" id="footer-note">Rev.io Marketing Ops - Tigerpaw Master Dashboard</div>
+</main>
 
 <script>
-// ── FILTER DATA ──
-const DATA = {
-  all: {
-    contacts:'2,432', accts:'Unique · 375 accounts', sent:'3,493', delivered:'3,449 delivered',
-    openRate:'12.4%', openSub:'429 opens · of delivered', clickRate:'2.9%', clickSub:'100 clicks · of delivered',
-    wbContacts:'190', wbAccts:'112', wbBreak:'26 + 102 + 62',
-    totals:{ accts:'375', contacts:'2,432', sent:'3,493', opens:'429', openRate:'12.4%', clicks:'100', clickRate:'2.9%', reg:'190', regAccts:'112' },
-    vbars:{ mspReg:137, mspAccts:83, intReg:53, intAccts:29, total:190, totalAccts:112 },
-    abars:{ rtmReg:26, rtmAccts:19, unkReg:102, unkAccts:67, mlReg:62, mlAccts:26, total:190, totalAccts:112 }
-  },
-  ready: {
-    contacts:'558', accts:'Unique · 83 accounts', sent:'1,638', delivered:'1,628 delivered',
-    openRate:'11.6%', openSub:'189 opens · of delivered', clickRate:'1.2%', clickSub:'20 clicks · of delivered',
-    wbContacts:'26', wbAccts:'19', wbBreak:'Ready to Migrate only',
-    totals:{ accts:'83', contacts:'558', sent:'1,638', opens:'189', openRate:'11.6%', clicks:'20', clickRate:'1.2%', reg:'26', regAccts:'19' },
-    vbars:{ mspReg:17, mspAccts:13, intReg:9, intAccts:6, total:26, totalAccts:19 },
-    abars:{ rtmReg:26, rtmAccts:19, unkReg:0, unkAccts:0, mlReg:0, mlAccts:0, total:26, totalAccts:19 }
-  },
-  unknown: {
-    contacts:'1,874', accts:'Unique · 292 accounts', sent:'1,855', delivered:'1,821 delivered',
-    openRate:'13.2%', openSub:'240 opens · of delivered', clickRate:'4.4%', clickSub:'80 clicks · of delivered',
-    wbContacts:'102', wbAccts:'67', wbBreak:'Unknown only',
-    totals:{ accts:'292', contacts:'1,874', sent:'1,855', opens:'240', openRate:'13.2%', clicks:'80', clickRate:'4.4%', reg:'102', regAccts:'67' },
-    vbars:{ mspReg:67, mspAccts:52, intReg:35, intAccts:15, total:102, totalAccts:67 },
-    abars:{ rtmReg:0, rtmAccts:0, unkReg:102, unkAccts:67, mlReg:0, mlAccts:0, total:102, totalAccts:67 }
-  },
-  later: {
-    contacts:'—', accts:'No campaign sent', sent:'—', delivered:'—',
-    openRate:'—', openSub:'No campaign sent', clickRate:'—', clickSub:'—',
-    wbContacts:'62', wbAccts:'26', wbBreak:'Organic / direct',
-    totals:{ accts:'—', contacts:'—', sent:'—', opens:'—', openRate:'', clicks:'—', clickRate:'', reg:'62', regAccts:'26' },
-    vbars:{ mspReg:53, mspAccts:18, intReg:9, intAccts:8, total:62, totalAccts:26 },
-    abars:{ rtmReg:0, rtmAccts:0, unkReg:0, unkAccts:0, mlReg:62, mlAccts:26, total:62, totalAccts:26 }
-  }
-};
+let MASTER = null;
 
-function setFilter(f, btn) {
-  document.querySelectorAll('.fbtn').forEach(b => b.classList.remove('active'));
-  btn.classList.add('active');
-  const d = DATA[f];
+const fmt = new Intl.NumberFormat('en-US');
+const money = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 });
 
-  // Hero cards
-  document.getElementById('h-contacts').textContent = d.contacts;
-  document.getElementById('h-contacts-sub').textContent = d.accts;
-  document.getElementById('h-sent').textContent = d.sent;
-  document.getElementById('h-delivered-sub').textContent = d.delivered;
-  document.getElementById('h-openrate').textContent = d.openRate;
-  document.getElementById('h-opens-sub').textContent = d.openSub;
-  document.getElementById('h-clickrate').textContent = d.clickRate;
-  document.getElementById('h-clicks-sub').textContent = d.clickSub;
-
-  // Webinar banner
-  document.getElementById('wb-contacts').textContent = d.wbContacts;
-  document.getElementById('wb-accounts').textContent = d.wbAccts;
-  document.getElementById('wb-rate').textContent = d.wbBreak;
-
-  // Show/hide audience sub-rows
-  document.querySelectorAll('tr[data-aud]').forEach(row => {
-    row.style.display = (f === 'all' || f === row.dataset.aud) ? '' : 'none';
-  });
-  // Show/hide vertical headers and subtotals when filtering to a single audience
-  document.querySelectorAll('.vert-header, .subtotal-row').forEach(row => {
-    row.style.display = '';
-  });
-
-  // ── Dynamic Grand Total ──
-  const t = d.totals;
-  document.getElementById('ft-accts').textContent = t.accts;
-  document.getElementById('ft-contacts').textContent = t.contacts;
-  document.getElementById('ft-sent').textContent = t.sent;
-  // Opens
-  const ftOpens = document.getElementById('ft-opens');
-  ftOpens.childNodes[0].textContent = t.opens + ' ';
-  document.getElementById('ft-openrate').textContent = t.openRate;
-  // Clicks
-  const ftClicks = document.getElementById('ft-clicks');
-  ftClicks.childNodes[0].textContent = t.clicks + ' ';
-  document.getElementById('ft-clickrate').textContent = t.clickRate;
-  // Webinar
-  document.getElementById('ft-reg').textContent = t.reg;
-  document.getElementById('ft-regaccts').textContent = t.regAccts;
-
-  // ── Vertical bar chart ──
-  const vb = d.vbars;
-  const vTotal = vb.mspReg + vb.intReg || 1;
-  const mspPct = Math.round(vb.mspReg / vTotal * 100);
-  const intPct = Math.round(vb.intReg / vTotal * 100);
-  document.getElementById('vb-msp-bar').style.width = mspPct + '%';
-  document.getElementById('vb-msp-count').textContent = vb.mspReg;
-  document.getElementById('vb-msp-accts').textContent = vb.mspAccts + ' accounts';
-  document.getElementById('vb-int-bar').style.width = intPct + '%';
-  document.getElementById('vb-int-count').textContent = vb.intReg;
-  document.getElementById('vb-int-accts').textContent = vb.intAccts + ' accounts';
-  document.getElementById('vb-summary').innerHTML =
-    `<span><strong>MSP</strong> makes up <strong style="color:#2399B5">${mspPct}%</strong> of registrations</span>
-     <span>${vb.total} total · ${vb.totalAccts} accounts</span>`;
-
-  // ── Audience bar chart ──
-  const ab = d.abars;
-  const abTotal = ab.total || 1;
-  const rtmPct = Math.round(ab.rtmReg / abTotal * 100);
-  const unkPct = Math.round(ab.unkReg / abTotal * 100);
-  const mlPct  = Math.round(ab.mlReg  / abTotal * 100);
-  document.getElementById('ab-rtm-bar').style.width = rtmPct + '%';
-  document.getElementById('ab-rtm-count').textContent = ab.rtmReg;
-  document.getElementById('ab-rtm-accts').textContent = ab.rtmAccts + ' accounts';
-  document.getElementById('ab-unk-bar').style.width = unkPct + '%';
-  document.getElementById('ab-unk-count').textContent = ab.unkReg;
-  document.getElementById('ab-unk-accts').textContent = ab.unkAccts + ' accounts';
-  document.getElementById('ab-ml-bar').style.width  = mlPct + '%';
-  document.getElementById('ab-ml-count').textContent = ab.mlReg;
-  document.getElementById('ab-ml-accts').textContent = ab.mlAccts + ' accounts';
-  const topAud = ab.rtmReg >= ab.unkReg && ab.rtmReg >= ab.mlReg ? 'Ready to Migrate'
-               : ab.unkReg >= ab.mlReg ? 'Unknown' : 'Migrate Later';
-  const topPct2 = Math.max(rtmPct, unkPct, mlPct);
-  document.getElementById('ab-summary').innerHTML =
-    `<span><strong>${topAud}</strong> makes up <strong style="color:#2399B5">${topPct2}%</strong> of registrations</span>
-     <span>${ab.total} total · ${ab.totalAccts} accounts</span>`;
+function esc(value) {
+  return String(value ?? '').replace(/[&<>"']/g, char => ({
+    '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+  }[char]));
 }
 
-// ── REGISTRANT DATA ──
-const REGISTRANTS = [{"n":"Scott Webb","e":"swebb1719@gmail.com","c":"","v":"Other","a":"Migrate Later"},{"n":"Tom Dudek","e":"norcommcsi@gmail.com","c":"","v":"Other","a":"Migrate Later"},{"n":"Kathy Halsell","e":"kathy@absi.net","c":"ABSi Telecom","v":"UCaaS / Voip","a":"Migrate Later"},{"n":"Richard Crook","e":"rcrook@accuratesecuritypros.com","c":"Accurate Security Pros, Inc.","v":"Integrator","a":"Unknown"},{"n":"Jim Scott","e":"jscott@acredding.com","c":"Advanced Concepts","v":"MSP","a":"Unknown"},{"n":"Doug Wolf","e":"doug.wolf@advancedhospitality.com","c":"Advanced Hospitality Systems","v":"Integrator","a":"Unknown"},{"n":"Dee Grimes","e":"service@advancedtel.com","c":"Advanced Telecom Inc","v":"MSP","a":"Unknown"},{"n":"Aaron Brookes","e":"aaron@jayhawksoftware.com","c":"Advantage Computer Enterprises, Inc.","v":"MSP","a":"Unknown"},{"n":"Ben Lanning","e":"blanning@all-mode.com","c":"All-Mode Communications Inc","v":"MSP","a":"Ready to Migrate"},{"n":"Keith Swimley","e":"kswimley@all-mode.com","c":"All-Mode Communications Inc","v":"MSP","a":"Ready to Migrate"},{"n":"Baron Ledford","e":"baronl@avdpros.com","c":"Ameritel Voice and Data","v":"MSP","a":"Unknown"},{"n":"Jim Hoyle","e":"jhoyle@audio-light.com","c":"Audio & Light, Inc.","v":"Integrator","a":"Unknown"},{"n":"Sheryl Smith","e":"ssmith@audio-light.com","c":"Audio & Light, Inc.","v":"Integrator","a":"Unknown"},{"n":"Briten Gilbertson","e":"bgilbertson@goavsi.com","c":"AVSi","v":"AV / Home Automation","a":"Ready to Migrate"},{"n":"David Prairie","e":"dprairie@avsi.com","c":"AVSI","v":"Other","a":"Migrate Later"},{"n":"Erik Lamp","e":"elamp@avsi.com","c":"AVSI","v":"Other","a":"Migrate Later"},{"n":"James (Jim) Filbin","e":"jfilbin@beacontelecom.com","c":"Beacon Telecom Inc","v":"MSP","a":"Unknown"},{"n":"Jay D'Antona","e":"jdantona@beacontelecom.com","c":"Beacon Telecom Inc","v":"MSP","a":"Unknown"},{"n":"Jimmy Filbin","e":"jdfilbin@beacontelecom.com","c":"Beacon Telecom Inc","v":"MSP","a":"Unknown"},{"n":"Robert Armstrong","e":"rob@cc-tek.net","c":"CC-Teknologies Inc.","v":"Integrator","a":"Unknown"},{"n":"Able Blaker","e":"ablaker@chiefdatacom.com","c":"Chief Datacom","v":"Integrator","a":"Unknown"},{"n":"Chad NesSmith","e":"cnessmith@chiefdatacom.com","c":"Chief Datacom","v":"Integrator","a":"Unknown"},{"n":"Jason Christenson","e":"jchristenson@rch-com.com","c":"Chortek","v":"MSP","a":"Unknown"},{"n":"Rhiannon Dodgen","e":"cnr-service@cnr-inc.com","c":"CNR Inc.","v":"MSP","a":"Unknown"},{"n":"Rhiannon Dodgen","e":"acne-service@cnr-inc.com","c":"CNR Inc.","v":"MSP","a":"Migrate Later"},{"n":"Cassie Mecsery","e":"cassie@coscobtv.com","c":"COS COB TV LLC","v":"Integrator","a":"Unknown"},{"n":"Jeff Drummond","e":"jeff.drummond@cpitelecom.net","c":"CPI Technologies, LLC","v":"MSP","a":"Ready to Migrate"},{"n":"Nathan Ball","e":"nball@crccommunications.com","c":"CRC Communications Limited","v":"MSP","a":"Migrate Later"},{"n":"Jason Wendt","e":"jwendt@cregsystems.com","c":"CREG Systems Corp","v":"MSP","a":"Unknown"},{"n":"Debbie Harris","e":"debbie@thecrowleycompany.com","c":"Crowley","v":"MSP","a":"Unknown"},{"n":"Gentry Gauer","e":"gentryg@dscabling.biz","c":"Dakota Structured Cabling","v":"MSP","a":"Unknown"},{"n":"Daniel Tenenbaum","e":"dtenenbaum@dtc4you.com","c":"Digital Telecommunications","v":"MSP","a":"Ready to Migrate"},{"n":"Ross Mcnary","e":"rmcnary@digitel.ca","c":"Digitel Systems Inc.","v":"MSP","a":"Unknown"},{"n":"Mike LaPlante","e":"mike@dividia.net","c":"Dividia","v":"Integrator","a":"Ready to Migrate"},{"n":"Joseph Gough","e":"joseph@dominiontx.com","c":"Dominion Design & Integration","v":"Integrator","a":"Unknown"},{"n":"Randy Koerber","e":"randy@dvx.com","c":"DVX Inc _Data Voice Exchange","v":"MSP","a":"Unknown"},{"n":"Rob Inman","e":"rob@intelligentpowersolutions.com","c":"e2 Power","v":"MSP","a":"Migrate Later"},{"n":"Noa Williamson","e":"nwilliamson@eaglecraft.com","c":"EagleCraft","v":"MSP","a":"Migrate Later"},{"n":"Lori Olteanu","e":"lori@empire-team.com","c":"ECI-Empire Communications","v":"MSP","a":"Migrate Later"},{"n":"Raymond Shadman","e":"ray@customvideosecurity.com","c":"eDigitalDeals, Inc","v":"Integrator","a":"Unknown"},{"n":"Spencer Harp","e":"spencer@emibusiness.com","c":"Emi Business Communications","v":"MSP","a":"Migrate Later"},{"n":"Joanne Lanteigne","e":"joanne@empire-team.com","c":"Empire Communications - BCC","v":"UCaaS / Voip","a":"Migrate Later"},{"n":"Tina Kay","e":"tina@empire-team.com","c":"Empire Communications Inc.","v":"MSP","a":"Migrate Later"},{"n":"Brad Robinson","e":"brad@essg.com","c":"Environmental & Safety Support","v":"Integrator","a":"Unknown"},{"n":"Tom Lalli","e":"tomlalli@esmcctv.com","c":"ESM Security Systems","v":"Integrator","a":"Migrate Later"},{"n":"Fusun Bubernack","e":"fusun@et-t.com","c":"ET&T Corporation","v":"MSP","a":"Unknown"},{"n":"Chuck Ellenberger","e":"chuck@favorite1.com","c":"Favorite Office Automation","v":"MSP","a":"Unknown"},{"n":"Jessica Colangelo","e":"jessica@favorite1.com","c":"Favorite Office Automation","v":"MSP","a":"Migrate Later"},{"n":"Rocco Favorite","e":"rafavorite@favorite1.com","c":"Favorite Office Automation","v":"MSP","a":"Unknown"},{"n":"Dave Mcelroy","e":"davem@firstline.net","c":"Firstline Communications","v":"MSP","a":"Unknown"},{"n":"Andy Smith","e":"asmith@5startel.com","c":"Five Star Telecom Inc","v":"MSP","a":"Unknown"},{"n":"JENNIFER  Connelly","e":"jconnelly@5startel.com","c":"Five Star Telecom Inc","v":"MSP","a":"Migrate Later"},{"n":"Roy Brock","e":"rbrock@5startel.com","c":"Five Star Telecom Inc","v":"MSP","a":"Unknown"},{"n":"Samantha Fortun","e":"sfortun@5startel.com","c":"Five Star Telecom Inc","v":"MSP","a":"Unknown"},{"n":"Tony Berra","e":"tberra@5startel.com","c":"Five Star Telecom Inc","v":"MSP","a":"Migrate Later"},{"n":"Meg Carroll","e":"meg@fleetboss.com","c":"FleetBoss GPS","v":"MSP","a":"Migrate Later"},{"n":"Chad Midtlien","e":"chadm@5startel.com","c":"FST Technologies, LLC","v":"MSP","a":"Ready to Migrate"},{"n":"Danny Akins","e":"dakins@greenelectronicsolutions.com","c":"Green Electronic Solutions","v":"Integrator","a":"Unknown"},{"n":"Bobby Roberts","e":"broberts@grennancommunications.com","c":"Grennan Communications","v":"Integrator","a":"Unknown"},{"n":"Ron Grennan","e":"rgrennan@grennancommunications.com","c":"Grennan Communications","v":"Integrator","a":"Unknown"},{"n":"Aaron Hatcher","e":"ahatcher@htechus.com","c":"Herring Technology","v":"Integrator","a":"Unknown"},{"n":"Erin Martin","e":"eprince@htechus.com","c":"Herring Technology","v":"Integrator","a":"Unknown"},{"n":"Nathan Danielson","e":"ndanielson@htechus.com","c":"Herring Technology","v":"Integrator","a":"Unknown"},{"n":"Andrew Turkington","e":"andrew.turkington@hostedamerica.com","c":"Hosted America","v":"MSP","a":"Migrate Later"},{"n":"Gigi Hasinger","e":"gigi.hasinger@hostedamerica.com","c":"Hosted America","v":"MSP","a":"Migrate Later"},{"n":"Steve Jones","e":"steve.jones@hostedamerica.com","c":"Hosted America","v":"MSP","a":"Migrate Later"},{"n":"Joseph Krebasch","e":"jkrebasch@4-ibc.com","c":"Illinois Business Communications, Inc.","v":"Integrator","a":"Migrate Later"},{"n":"Dorothye Brodersen","e":"dorothye@infotelsystems.com","c":"Infotel Systems","v":"MSP","a":"Unknown"},{"n":"Nicole Pritchard","e":"npritchard@innovativetds.com","c":"Innovative Telephone & Data Solutions, LLC","v":"MSP","a":"Ready to Migrate"},{"n":"Matt Connell","e":"mattconnell@integraserv.com","c":"IntegraServ","v":"MSP","a":"Unknown"},{"n":"Aaron Costello","e":"aaronc@ibspos.com","c":"Interstate Business Systems","v":"MSP","a":"Unknown"},{"n":"Suzanne Yeager","e":"syeager@ipcmidwest.com","c":"IP Communications, Inc.","v":"MSP","a":"Unknown"},{"n":"Chad Mattingly","e":"chad.mattingly@isetservice.com","c":"ISET","v":"MSP","a":"Unknown"},{"n":"JoAnn Geier","e":"joann.geier@jamsys.com","c":"J & M Systems LLC","v":"MSP","a":"Migrate Later"},{"n":"Mark Geier","e":"mark.geier@jamsys.com","c":"J & M Systems LLC","v":"MSP","a":"Unknown"},{"n":"Patrick keith","e":"pkeith@linkuscorp.com","c":"LinkUs Corporation","v":"Integrator","a":"Unknown"},{"n":"Brandon Andres","e":"brandon.andres@memlane.ca","c":"Memory Lane Computers","v":"MSP","a":"Unknown"},{"n":"Richard Munro","e":"richard@memlane.ca","c":"Memory Lane Computers","v":"MSP","a":"Unknown"},{"n":"Karrie Gadorus","e":"karrie@mercsys.com","c":"Mercury Systems Corporation","v":"MSP","a":"Unknown"},{"n":"Mark Goldman","e":"markg@microtechsystems.com","c":"Micro Tech Systems","v":"MSP","a":"Unknown"},{"n":"Liz .","e":"liz@microagebasics.com","c":"MicroAge Basics","v":"MSP","a":"Unknown"},{"n":"Matt Weaver","e":"matt.weaver@micromedllc.com","c":"MicroMed LLC","v":"MSP","a":"Ready to Migrate"},{"n":"Janet Gutierrez","e":"janetg@microtechsystems.com","c":"Microtech Systems, Inc.","v":"MSP","a":"Migrate Later"},{"n":"John McFadyen","e":"johnm@nacworx.com","c":"NacTelligence Cloud Services","v":"MSP","a":"Migrate Later"},{"n":"Nolan Quinn","e":"nquinn@necomm.com","c":"New England Communications","v":"MSP","a":"Migrate Later"},{"n":"Jessica Borchers","e":"jessica@nightwatch.net","c":"Nightwatch Security & Telephone","v":"Integrator","a":"Migrate Later"},{"n":"Tawnya Wittman","e":"tawnya@nightwatch.net","c":"Nightwatch Security & Telephone","v":"Integrator","a":"Ready to Migrate"},{"n":"mike mannino","e":"mmannino@optelbcs.com","c":"Optel BCS, Inc","v":"MSP","a":"Unknown"},{"n":"Brad Ormsby","e":"brad@ormsbys.com","c":"Ormsbys Computer Store, Inc.","v":"MSP","a":"Ready to Migrate"},{"n":"Sarah Wilhelm","e":"sarah.wilhelm@pjkco.com","c":"P. J. Kortens and Company, Inc.","v":"Integrator","a":"Unknown"},{"n":"Owen Murphy","e":"omurphy@pathcominc.com","c":"Pathcom Inc.","v":"MSP","a":"Unknown"},{"n":"Sheryl Sweeney","e":"sheryl@pathcominc.com","c":"Pathcom Inc.","v":"MSP","a":"Unknown"},{"n":"Jared Fortna","e":"jfortna@earthsensitive.com","c":"Phoenix Energy Supply","v":"Integrator","a":"Unknown"},{"n":"Jessica Riley","e":"jriley@pilothousecomm.com","c":"Pilothouse Communications","v":"MSP","a":"Unknown"},{"n":"Steve Valli","e":"stevev@pilothousecomm.com","c":"Pilothouse Communications","v":"MSP","a":"Unknown"},{"n":"Kenny Raissifar","e":"kraissifar@premiercomm.net","c":"Premier Communications","v":"Integrator","a":"Unknown"},{"n":"Brandon Kingsley","e":"brandon@profcom.com","c":"Professional Communication Solutions","v":"MSP","a":"Unknown"},{"n":"Matt Leonow","e":"mleonow@raytecsystems.com","c":"Raytec Systems","v":"MSP","a":"Unknown"},{"n":"Kristine Dougherty","e":"kdougherty@solvdinc.com","c":"SOLVD Instrument Solutions","v":"Integrator","a":"Ready to Migrate"},{"n":"Bill Burns","e":"bburns@tatecom.com","c":"Tate Communications, LLC","v":"Integrator","a":"Unknown"},{"n":"Jake Kellar","e":"jkellar@tatecom.com","c":"Tate Communications, LLC","v":"Integrator","a":"Migrate Later"},{"n":"TJ McDonald","e":"tmcdonald@tdsnetworks.com","c":"TDS-Phone","v":"MSP","a":"Unknown"},{"n":"David Nitschke","e":"davidn@tuiusa.com","c":"Technology Unlimited","v":"MSP","a":"Ready to Migrate"},{"n":"Sylvia Valdez","e":"sylviav@tuiusa.com","c":"Technology Unlimited","v":"MSP","a":"Ready to Migrate"},{"n":"Randy Thomas","e":"rthomas@te-usa.com","c":"TEI Communications","v":"MSP","a":"Migrate Later"},{"n":"John Brogan","e":"john@telecomunlimited.com","c":"Telecom Unlimited","v":"MSP","a":"Unknown"},{"n":"Kendall Seidensticker","e":"kendall@telecomunlimited.com","c":"Telecom Unlimited","v":"MSP","a":"Unknown"},{"n":"Mike Nichols","e":"mike@telecomunlimited.com","c":"Telecom Unlimited","v":"MSP","a":"Unknown"},{"n":"Suzette Drew","e":"suzette.drew@telecomdesigns.com","c":"Telecommunications Designs","v":"MSP","a":"Migrate Later"},{"n":"Amanda Toews","e":"amanda.toews@phoneexperts.com","c":"The Phone Experts - Communications Ltd.","v":"MSP","a":"Unknown"},{"n":"Becky Barhorst","e":"bbarhorst@thesmsgroup.com","c":"The SMS Group","v":"MSP","a":"Unknown"},{"n":"Jon Thomas","e":"jmthomas@te-usa.com","c":"Thomas Electronics Inc","v":"MSP","a":"Unknown"},{"n":"Matt Lacroix","e":"mlacroix@te-usa.com","c":"Thomas Electronics Inc","v":"MSP","a":"Migrate Later"},{"n":"Sunny Souder","e":"ssouder@te-usa.com","c":"Thomas Electronics Inc","v":"MSP","a":"Unknown"},{"n":"Shane Gallagher","e":"shaneg@tri-tec.com","c":"Tri-Tec Communications","v":"MSP","a":"Unknown"},{"n":"shane Johnson","e":"shanej@tri-tec.com","c":"Tri-Tec Communications","v":"MSP","a":"Migrate Later"},{"n":"Don Rosa","e":"drosa@trminc.net","c":"TRM Inc","v":"MSP","a":"Ready to Migrate"},{"n":"Kevin Krosse","e":"kevin@usctelcom.com","c":"United Security Communications, Inc.","v":"Integrator","a":"Unknown"},{"n":"Lisa Ruston","e":"lruston@empire-pa.com","c":"Votacall Inc - 2nd Database","v":"MSP","a":"Unknown"},{"n":"Kristina Botten","e":"billing@xclutel.com","c":"Xclutel","v":"MSP","a":"Migrate Later"},{"n":"Paul Lewis","e":"plewis@xclutel.com","c":"Xclutel","v":"MSP","a":"Ready to Migrate"}];
-
-// Normalize vertical / audience for matching
-function matchVert(r, vert) {
-  if (vert === 'all') return true;
-  if (vert === 'MSP') return r.v === 'MSP';
-  if (vert === 'Integrator') return r.v === 'Integrator';
-  return false; // Other verticals excluded from table drill-down
-}
-function matchAud(r, aud) {
-  if (aud === 'all') return true;
-  if (aud === 'ready') return r.a === 'Ready to Migrate';
-  if (aud === 'unknown') return r.a === 'Unknown';
-  if (aud === 'later') return r.a === 'Migrate Later';
-  return true;
+function barRows(groups, total, kind) {
+  return groups.map((group, idx) => {
+    const pct = total ? Math.max(2, Math.round((group.count / total) * 100)) : 0;
+    const dotClass = idx % 4 === 0 ? '' : idx % 4 === 1 ? 'green' : idx % 4 === 2 ? 'navy' : 'gray';
+    const sub = kind === 'stage' ? `${money.format(group.amount || 0)} Renewal` : `${group.pct || Math.round((group.count / total) * 1000) / 10}% of accounts`;
+    return `
+      <div class="bar-row">
+        <div class="name"><span class="dot ${dotClass}"></span><span>${esc(group.label)}</span></div>
+        <div class="bar"><div class="fill" style="width:${pct}%"></div></div>
+        <div class="num">${fmt.format(group.count)}<small>${esc(sub)}</small></div>
+      </div>`;
+  }).join('');
 }
 
-let _modalFilter = { vert:'all', aud:'all' };
-
-function showRegistrants(vert, aud) {
-  _modalFilter = { vert, aud };
-  document.getElementById('modal-search-input').value = '';
-  const audLabels = { all:'All Audiences', ready:'Ready to Migrate', unknown:'Unknown', later:'Migrate Later' };
-  const vertLabel = vert === 'all' ? 'All Verticals' : vert;
-  const audLabel  = audLabels[aud] || aud;
-  const titleParts = [];
-  if (vert !== 'all') titleParts.push(vertLabel);
-  if (aud  !== 'all') titleParts.push(audLabel);
-  document.getElementById('modal-title').textContent = 'Webinar Registrants' + (titleParts.length ? ' — ' + titleParts.join(' · ') : '');
-  renderModal('');
-  document.getElementById('reg-modal').classList.add('open');
-}
-
-function closeModal() {
-  document.getElementById('reg-modal').classList.remove('open');
-}
-
-function filterModal() {
-  renderModal(document.getElementById('modal-search-input').value.toLowerCase().trim());
-}
-
-function vertBadge(v) {
-  if (v === 'MSP') return `<span class="vert-badge vert-msp">MSP</span>`;
-  if (v === 'Integrator') return `<span class="vert-badge vert-int">Integrator</span>`;
-  return `<span class="vert-badge vert-oth">${v || 'Other'}</span>`;
-}
-function audBadge(a) {
-  if (a === 'Ready to Migrate') return `<span class="aud-badge aud-rtm">Ready to Migrate</span>`;
-  if (a === 'Unknown') return `<span class="aud-badge aud-unk">Unknown</span>`;
-  return `<span class="aud-badge aud-later">Migrate Later</span>`;
-}
-
-function renderModal(search) {
-  const { vert, aud } = _modalFilter;
-  const filtered = REGISTRANTS.filter(r =>
-    matchVert(r, vert) && matchAud(r, aud) &&
-    (!search || r.n.toLowerCase().includes(search) || r.c.toLowerCase().includes(search) || r.e.toLowerCase().includes(search))
-  );
-  const tbody = document.getElementById('modal-tbody');
-  const empty = document.getElementById('modal-empty');
-  document.getElementById('modal-count').textContent = `${filtered.length} registrant${filtered.length !== 1 ? 's' : ''}`;
-  if (!filtered.length) {
-    tbody.innerHTML = '';
-    empty.style.display = '';
+function renderLossTable(lossBreakdown) {
+  const body = document.getElementById('loss-table');
+  if (!lossBreakdown.length) {
+    body.innerHTML = '<tr><td colspan="4" class="empty">No Closed Lost Legacy Migration opportunities found.</td></tr>';
     return;
   }
-  empty.style.display = 'none';
-  tbody.innerHTML = filtered.map(r => `
-    <tr>
-      <td><strong>${r.n}</strong><br><span style="font-size:11px;color:#94a3b8">${r.e}</span></td>
-      <td>${r.c || '<span style="color:#94a3b8">—</span>'}</td>
-      <td>${vertBadge(r.v)}</td>
-      <td>${audBadge(r.a)}</td>
-    </tr>`).join('');
+
+  body.innerHTML = lossBreakdown.map(group => {
+    const details = group.opportunities.map(opp => {
+      const pieces = [
+        `<strong>${esc(opp.account)}</strong> - ${esc(opp.name)}`,
+        opp.lossDetail ? esc(opp.lossDetail) : 'No detail entered',
+        opp.stageLoss ? `Stage lost: ${esc(opp.stageLoss)}` : ''
+      ].filter(Boolean);
+      return `<div class="detail">${pieces.join('<br>')}</div>`;
+    }).join('<div style="height:10px"></div>');
+    return `
+      <tr>
+        <td><span class="pill">${esc(group.label)}</span></td>
+        <td class="num-c">${fmt.format(group.count)}</td>
+        <td class="num-c">${money.format(group.amount || 0)}</td>
+        <td>${details}</td>
+      </tr>`;
+  }).join('');
 }
 
-// ── SF OPPS DATA ──
-const SF_OPPS_DATA = [{id:'006PX00000bB2cIYAS',name:'SOLVD Instrument Solutions Web Migration',account:'SOLVD Instrument Solutions',stage:'3 - Initial Product Demo',amount:549.24,createdDate:'2026-05-26',audience:'Ready to Migrate'},{id:'006PX00000b3crTYAQ',name:'MPS Works - Web Migration',account:'MPS Works',stage:'Closed Lost',amount:500,createdDate:'2026-05-22',audience:'Unknown'},{id:'006PX00000b0KMPYA2',name:'Pilothouse Communications - Web Migration',account:'Pilothouse Communications',stage:'1- Discovery Scheduled',amount:0,createdDate:'2026-05-21',audience:'Unknown'},{id:'006PX00000bF31tYAC',name:'Crowley Web Migration',account:'Crowley',stage:'1- Discovery Scheduled',amount:0,createdDate:'2026-05-27',audience:'Unknown'},{id:'006PX00000aztdzYAA',name:'Hosted America - Web Migration',account:'Hosted America',stage:'1- Discovery Scheduled',amount:0,createdDate:'2026-05-21',audience:'Other'},{id:'006PX00000bB2kLYAS',name:'Intelligent Power Solutions Web Migration',account:'Intelligent Power Solutions',stage:'1- Discovery Scheduled',amount:1209,createdDate:'2026-05-26',audience:'Other'}];
+function renderOppTable() {
+  const tbody = document.getElementById('opp-table');
+  const empty = document.getElementById('opp-empty');
+  const search = document.getElementById('opp-search').value.trim().toLowerCase();
+  const stage = document.getElementById('stage-filter').value;
 
-function showOpps(audience) {
-  const filtered = audience === 'all' ? SF_OPPS_DATA : SF_OPPS_DATA.filter(o => o.audience === audience);
-  const audLabel = { all:'All Audiences', Unknown:'Unknown', Other:'Other / Direct', 'Ready to Migrate':'Ready to Migrate' };
-  const titleSuffix = audience === 'all' ? '' : ' — ' + (audLabel[audience] || audience);
-  document.getElementById('opp-modal-title').textContent = 'Legacy Migration Opportunities' + titleSuffix;
-  document.getElementById('opp-modal-count').textContent = filtered.length + ' opportunit' + (filtered.length !== 1 ? 'ies' : 'y');
-  const tbody = document.getElementById('opp-modal-tbody');
-  const empty = document.getElementById('opp-modal-empty');
-  if (!filtered.length) {
-    tbody.innerHTML = '';
-    empty.style.display = '';
-    document.getElementById('opp-modal').classList.add('open');
-    return;
-  }
-  empty.style.display = 'none';
-  const audColors = { Unknown:'background:#fef3c7;color:#92400e', Other:'background:#f1f5f9;color:#475569', 'Ready to Migrate':'background:#dbeafe;color:#1e40af' };
-  tbody.innerHTML = filtered.map(o => `
-    <tr>
-      <td><a href="https://rev-io.lightning.force.com/lightning/r/Opportunity/${o.id}/view" target="_blank" style="color:#2399B5;font-weight:600;text-decoration:none">${o.name} <span style="font-size:11px;opacity:0.6">↗</span></a></td>
-      <td>${o.account}</td>
-      <td><span style="display:inline-block;padding:2px 8px;border-radius:10px;font-size:11px;font-weight:600;background:#dbeafe;color:#1e40af">${o.stage}</span></td>
-      <td><span style="display:inline-block;padding:2px 8px;border-radius:10px;font-size:11px;font-weight:600;${audColors[o.audience] || ''}">${o.audience === 'Other' ? 'Other / Direct' : o.audience}</span></td>
-      <td style="font-size:12px;color:#94a3b8">${o.createdDate}</td>
-    </tr>`).join('');
-  document.getElementById('opp-modal').classList.add('open');
+  const rows = MASTER.opportunities.filter(opp => {
+    const matchesStage = stage === 'all' || opp.stage === stage;
+    const haystack = [opp.name, opp.account, opp.stage, opp.lossReason, opp.lossDetail].join(' ').toLowerCase();
+    return matchesStage && (!search || haystack.includes(search));
+  });
+
+  document.getElementById('opp-count-label').textContent = `${fmt.format(rows.length)} of ${fmt.format(MASTER.opportunities.length)} opportunities`;
+  empty.style.display = rows.length ? 'none' : 'block';
+  tbody.innerHTML = rows.map(opp => {
+    const loss = opp.stage === 'Closed Lost'
+      ? `<strong>${esc(opp.lossReason)}</strong><br>${esc(opp.lossDetail || 'No detail entered')}`
+      : esc(opp.closeDate || '');
+    return `
+      <tr>
+        <td><strong>${esc(opp.name)}</strong></td>
+        <td>${esc(opp.account)}</td>
+        <td><span class="pill">${esc(opp.stage)}</span></td>
+        <td class="num-c">${money.format(opp.amount || 0)}</td>
+        <td class="detail">${loss}</td>
+      </tr>`;
+  }).join('');
 }
 
-function closeOppModal() {
-  document.getElementById('opp-modal').classList.remove('open');
+function populateStageFilter(stages) {
+  const select = document.getElementById('stage-filter');
+  stages.forEach(stage => {
+    const option = document.createElement('option');
+    option.value = stage.label;
+    option.textContent = stage.label;
+    select.appendChild(option);
+  });
 }
 
-// Close modal on Escape key
-document.addEventListener('keydown', e => { if (e.key === 'Escape') { closeModal(); closeOppModal(); } });
+function render(data) {
+  MASTER = data;
+  const generated = new Date(data.generatedAt);
+  const want = data.statusBreakdown
+    .filter(s => s.label === 'Want to migrate asap' || s.label === 'Want to migrate / timeline unknown')
+    .reduce((sum, s) => sum + s.count, 0);
+
+  document.getElementById('generated-subtitle').textContent =
+    `Salesforce data as of ${generated.toLocaleString()} - Active Tigerpaw clients and Legacy Migration opportunities`;
+  document.getElementById('total-accounts').textContent = fmt.format(data.totals.tigerpawAccounts);
+  document.getElementById('want-migrate').textContent = fmt.format(want);
+  document.getElementById('total-opps').textContent = fmt.format(data.totals.legacyMigrationOpps);
+  document.getElementById('total-opp-amount').textContent = `${money.format(data.totals.legacyMigrationAmount)} Renewal Amount`;
+  document.getElementById('closed-lost').textContent = fmt.format(data.totals.closedLostOpps);
+
+  document.getElementById('status-bars').innerHTML = barRows(data.statusBreakdown, data.totals.tigerpawAccounts, 'status');
+  document.getElementById('stage-bars').innerHTML = barRows(data.stageBreakdown, data.totals.legacyMigrationOpps, 'stage');
+  document.getElementById('status-summary').innerHTML = `<strong>${fmt.format(want)}</strong> clients have an active migration interest signal`;
+  document.getElementById('stage-summary').innerHTML = `<strong>${fmt.format(data.totals.legacyMigrationOpps)}</strong> opportunities totaling <strong>${money.format(data.totals.legacyMigrationAmount)}</strong>`;
+  document.getElementById('footer-note').textContent =
+    `Rev.io Marketing Ops - Tigerpaw Master Dashboard - Salesforce refresh ${generated.toLocaleString()}`;
+
+  renderLossTable(data.lossBreakdown);
+  populateStageFilter(data.stageBreakdown);
+  renderOppTable();
+}
+
+document.getElementById('opp-search').addEventListener('input', renderOppTable);
+document.getElementById('stage-filter').addEventListener('change', renderOppTable);
+
+fetch('./master-data.json', { cache: 'no-store' })
+  .then(res => {
+    if (!res.ok) throw new Error(`Unable to load master-data.json (${res.status})`);
+    return res.json();
+  })
+  .then(render)
+  .catch(err => {
+    document.getElementById('generated-subtitle').textContent = err.message;
+    document.querySelector('.main').insertAdjacentHTML('afterbegin', `<div class="card"><div class="empty">${esc(err.message)}</div></div>`);
+  });
 </script>
 </body>
 </html>
