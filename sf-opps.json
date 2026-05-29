@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-05-28T12:00:56.659Z",
-  "wmrContactCount": 6,
+  "generatedAt": "2026-05-29T12:00:57.276Z",
+  "wmrContactCount": 7,
   "oppsByAudience": {
     "Ready to Migrate": {
       "count": 1,
@@ -18,7 +18,7 @@
     },
     "Unknown": {
       "count": 3,
-      "amount": 500,
+      "amount": 1075,
       "opps": [
         {
           "id": "006PX00000b3crTYAQ",
@@ -32,30 +32,30 @@
           "id": "006PX00000b0KMPYA2",
           "name": "Pilothouse Communications - Web Migration",
           "account": "Pilothouse Communications",
-          "stage": "1- Discovery Scheduled",
-          "amount": 0,
+          "stage": "6 - Verbal Commit",
+          "amount": 575,
           "createdDate": "2026-05-21T19:01:48.000+0000"
         },
         {
           "id": "006PX00000bF31tYAC",
           "name": "Crowley Web Migration",
           "account": "Crowley",
-          "stage": "1- Discovery Scheduled",
+          "stage": "Closed Lost",
           "amount": 0,
           "createdDate": "2026-05-27T13:58:01.000+0000"
         }
       ]
     },
     "Other": {
-      "count": 2,
-      "amount": 1209,
+      "count": 3,
+      "amount": 2559,
       "opps": [
         {
           "id": "006PX00000aztdzYAA",
           "name": "Hosted America - Web Migration",
           "account": "Hosted America",
           "stage": "1- Discovery Scheduled",
-          "amount": 0,
+          "amount": 1350,
           "createdDate": "2026-05-21T19:02:48.000+0000"
         },
         {
@@ -65,12 +65,20 @@
           "stage": "1- Discovery Scheduled",
           "amount": 1209,
           "createdDate": "2026-05-26T12:48:50.000+0000"
+        },
+        {
+          "id": "006PX00000bJPyIYAW",
+          "name": "Phoenix Energy Supply - Web Migration",
+          "account": "Phoenix Energy Supply",
+          "stage": "1- Discovery Scheduled",
+          "amount": 0,
+          "createdDate": "2026-05-28T18:29:14.000+0000"
         }
       ]
     }
   },
   "grandTotal": {
-    "count": 6,
-    "amount": 2258.24
+    "count": 7,
+    "amount": 4183.24
   }
 }
