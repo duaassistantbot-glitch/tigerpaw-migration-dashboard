@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-05-29T12:00:57.276Z",
-  "wmrContactCount": 7,
+  "generatedAt": "2026-05-30T12:00:55.575Z",
+  "wmrContactCount": 8,
   "oppsByAudience": {
     "Ready to Migrate": {
       "count": 1,
@@ -17,8 +17,8 @@
       ]
     },
     "Unknown": {
-      "count": 3,
-      "amount": 1075,
+      "count": 4,
+      "amount": 1845,
       "opps": [
         {
           "id": "006PX00000b3crTYAQ",
@@ -29,10 +29,18 @@
           "createdDate": "2026-05-22T20:41:35.000+0000"
         },
         {
+          "id": "006PX00000bJPyIYAW",
+          "name": "Phoenix Energy Supply - Web Migration",
+          "account": "Phoenix Energy Supply",
+          "stage": "1- Discovery Scheduled",
+          "amount": 770,
+          "createdDate": "2026-05-28T18:29:14.000+0000"
+        },
+        {
           "id": "006PX00000b0KMPYA2",
           "name": "Pilothouse Communications - Web Migration",
           "account": "Pilothouse Communications",
-          "stage": "6 - Verbal Commit",
+          "stage": "Closed Won",
           "amount": 575,
           "createdDate": "2026-05-21T19:01:48.000+0000"
         },
@@ -47,7 +55,7 @@
       ]
     },
     "Other": {
-      "count": 3,
+      "count": 2,
       "amount": 2559,
       "opps": [
         {
@@ -65,20 +73,12 @@
           "stage": "1- Discovery Scheduled",
           "amount": 1209,
           "createdDate": "2026-05-26T12:48:50.000+0000"
-        },
-        {
-          "id": "006PX00000bJPyIYAW",
-          "name": "Phoenix Energy Supply - Web Migration",
-          "account": "Phoenix Energy Supply",
-          "stage": "1- Discovery Scheduled",
-          "amount": 0,
-          "createdDate": "2026-05-28T18:29:14.000+0000"
         }
       ]
     }
   },
   "grandTotal": {
     "count": 7,
-    "amount": 4183.24
+    "amount": 4953.24
   }
 }
