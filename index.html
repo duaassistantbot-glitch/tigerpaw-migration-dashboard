@@ -22,7 +22,7 @@
   .hero-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }
   .hero-card { background: #1D3756; color: #FFFFFF; border-radius: 8px; padding: 18px; border-top: 4px solid #2399B5; min-height: 112px; }
   .hero-card.green { border-top-color: #6EBE4F; }
-  .population-note { margin: 10px 0 18px; color: #687789; font-size: 11px; line-height: 1.45; }
+  .population-note { margin: 12px 0 18px; padding: 10px 12px; background: #FFFFFF; border: 1px solid #DDE2E8; border-left: 3px solid #2399B5; border-radius: 6px; color: #687789; font-size: 12px; line-height: 1.45; }
   .population-note strong { color: #1D3756; }
   .label { font-size: 11px; text-transform: uppercase; letter-spacing: .6px; font-weight: 800; color: #FFFFFF; }
   .value { font-family: 'Montserrat', sans-serif; font-size: 32px; line-height: 1; margin-top: 10px; font-weight: 800; color: #FFFFFF; }
@@ -141,8 +141,8 @@
       <div class="value"><button class="value-btn" id="closed-lost" onclick="openClosedLostOpps()">--</button></div>
     </div>
   </section>
-  <div class="population-note">
-    <strong>Population shown:</strong> Salesforce accounts where Web Migration Status is populated. Blank Web Migration Status accounts are excluded.
+  <div class="population-note" aria-label="Dashboard population legend">
+    <strong>Dashboard scope:</strong> Salesforce accounts where Web Migration Status is populated. Blank Web Migration Status accounts are excluded from all Master Overview account counts.
   </div>
 
   <section class="grid-2">
