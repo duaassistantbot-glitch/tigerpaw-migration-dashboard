@@ -34,6 +34,7 @@
 
   /* Webinar bar */
   .webinar-bar { background: linear-gradient(135deg,#1D3756,#0f2240); border-radius: 10px; padding: 18px 24px; display: flex; align-items: center; justify-content: space-between; margin-bottom: 24px; border: 1px solid rgba(35,153,181,0.3); }
+  .webinar-bar.upcoming { background: linear-gradient(135deg,#163e4d,#102d3a); border-color: rgba(110,190,79,0.35); }
   .wb-left .wb-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.6px; color: rgba(255,255,255,0.55); }
   .wb-left .wb-title { font-size: 15px; font-weight: 700; color: #fff; margin: 4px 0 2px; }
   .wb-left .wb-sub { font-size: 12px; color: rgba(255,255,255,0.45); }
@@ -42,6 +43,15 @@
   .wm .v { font-family: 'Montserrat',sans-serif; font-size: 28px; font-weight: 800; color: #6EBE4F; }
   .wm .l { font-size: 11px; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 0.4px; margin-top: 2px; }
   .wm .v.teal { color: #2399B5; }
+  .wm .v.green { color: #6EBE4F; }
+  .mini-metric-row { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; margin-bottom:20px; }
+  .mini-metric { background:#fff; border:1px solid #DDE2E8; border-radius:10px; padding:14px 16px; }
+  .mini-metric .label { font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:0.5px; color:#94a3b8; margin-bottom:4px; }
+  .mini-metric .value { font-family:'Montserrat',sans-serif; font-size:24px; line-height:1; font-weight:800; color:#1D3756; }
+  .mini-metric .sub { font-size:12px; color:#64748b; margin-top:5px; }
+  .compact-table tbody td { font-size:12px; padding:10px 12px; }
+  .compact-table tbody td:not(:first-child) { font-family:'Open Sans',Arial,sans-serif; font-weight:600; text-align:left; }
+  .compact-table thead th:not(:first-child) { text-align:left; }
 
   /* Card / Table */
   .card { background: #fff; border-radius: 10px; border: 1px solid #DDE2E8; overflow: hidden; margin-bottom: 20px; }
@@ -154,6 +164,9 @@
   @media (max-width: 900px) {
     .header { padding-left: 24px; padding-right: 24px; }
     .header-inner { align-items: flex-start; flex-direction: column; }
+    .webinar-bar, .sf-pipeline-bar { flex-direction: column; align-items: flex-start; gap: 16px; }
+    .wb-metrics, .sp-metrics { width:100%; justify-content:space-between; gap:14px; }
+    .mini-metric-row { grid-template-columns: repeat(2,1fr); }
   }
 </style>
 </head>
@@ -278,6 +291,85 @@
       <div class="wm"><div class="v teal" id="wb-accounts">127</div><div class="l">Unique Accounts</div></div>
       <div class="wm"><div class="v" id="wb-rate" style="color:#fff;font-size:20px;margin-top:4px;">26+102+83</div><div class="l">RTM + Unknown + Other</div></div>
     </div>
+  </div>
+
+  <!-- June 10 Webinar -->
+  <div class="section-title">June 10 Webinar</div>
+  <div class="webinar-bar upcoming">
+    <div class="wb-left">
+      <div class="wb-label">Second Webinar</div>
+      <div class="wb-title">See It for Yourself — Introducing Rev.io PSA · June 10</div>
+      <div class="wb-sub">External registrants only (1 internal @rev.io excluded) · Last-week window: May 25-31, 2026</div>
+    </div>
+    <div class="wb-metrics">
+      <div class="wm"><div class="v green">24</div><div class="l">Contacts Registered</div></div>
+      <div class="wm"><div class="v teal">18</div><div class="l">Unique Accounts</div></div>
+      <div class="wm"><div class="v" style="color:#fff;">20</div><div class="l">New Last Week</div></div>
+    </div>
+  </div>
+
+  <div class="mini-metric-row">
+    <div class="mini-metric">
+      <div class="label">Last Week Mix</div>
+      <div class="value">11 / 9</div>
+      <div class="sub">MSP / Integrator</div>
+    </div>
+    <div class="mini-metric">
+      <div class="label">Audience</div>
+      <div class="value">20</div>
+      <div class="sub">All Migrate Later / organic</div>
+    </div>
+    <div class="mini-metric">
+      <div class="label">Registration Date</div>
+      <div class="value">May 29</div>
+      <div class="sub">All last-week external regs</div>
+    </div>
+    <div class="mini-metric">
+      <div class="label">Refresh Script</div>
+      <div class="value">Live</div>
+      <div class="sub">fetch-webinar-data.js</div>
+    </div>
+  </div>
+
+  <div class="card" style="margin-bottom:28px;">
+    <div class="card-header">
+      <h2>June 10 Webinar — New Registrations Received Last Week</h2>
+      <span>HubSpot Contrast registration date · May 25-31, 2026</span>
+    </div>
+    <table class="compact-table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Company</th>
+          <th>Email</th>
+          <th>Vertical</th>
+          <th>Audience</th>
+          <th>Registered</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Jim MacLachlan</strong></td><td>AA LOCK AND ALARM</td><td>jim@aalock.com</td><td>Integrator</td><td>Migrate Later</td><td>2026-05-29</td></tr>
+        <tr><td><strong>Brad Delmar</strong></td><td>BlueWire Communications</td><td>bdelmar@bluewirecomm.com</td><td>MSP</td><td>Migrate Later</td><td>2026-05-29</td></tr>
+        <tr><td><strong>Deta Itaya</strong></td><td>BlueWire Communications</td><td>ditaya@bluewirecomm.com</td><td>MSP</td><td>Migrate Later</td><td>2026-05-29</td></tr>
+        <tr><td><strong>Lincoln Higdon</strong></td><td>Centerpoint IT</td><td>lincoln.higdon@centerpointit.com</td><td>MSP</td><td>Migrate Later</td><td>2026-05-29</td></tr>
+        <tr><td><strong>Amy Labianca</strong></td><td>Communication Resources</td><td>amy.labianca@crinj.com</td><td>MSP</td><td>Migrate Later</td><td>2026-05-29</td></tr>
+        <tr><td><strong>Joe Sabatini</strong></td><td>Communication Resources</td><td>joe.sabatini@crinj.com</td><td>MSP</td><td>Migrate Later</td><td>2026-05-29</td></tr>
+        <tr><td><strong>Loc Nguyen</strong></td><td>DCR-Nashville</td><td>loc@dcrpos.com</td><td>Integrator</td><td>Migrate Later</td><td>2026-05-29</td></tr>
+        <tr><td><strong>Michelle Tomlin</strong></td><td>DCR-Nashville</td><td>mtomlin@dcrpos.com</td><td>Integrator</td><td>Migrate Later</td><td>2026-05-29</td></tr>
+        <tr><td><strong>Donald Hilsenroth</strong></td><td>Diversified Digital Group - Main</td><td>don@diversifieddigital.com</td><td>MSP</td><td>Migrate Later</td><td>2026-05-29</td></tr>
+        <tr><td><strong>Jeff Mortensen</strong></td><td>Electronic Specialties, Inc</td><td>jeff@electronicspecialtiesinc.com</td><td>MSP</td><td>Migrate Later</td><td>2026-05-29</td></tr>
+        <tr><td><strong>Wendy Froehlich</strong></td><td>Electronic Specialties, Inc</td><td>wendy@electronicspecialtiesinc.com</td><td>MSP</td><td>Migrate Later</td><td>2026-05-29</td></tr>
+        <tr><td><strong>Al Stewart</strong></td><td>Glessner Alarm &amp; Communication</td><td>als@glessner.net</td><td>MSP</td><td>Migrate Later</td><td>2026-05-29</td></tr>
+        <tr><td><strong>Charles Evans</strong></td><td>Madrona Digital</td><td>charlese@madronadigital.com</td><td>Integrator</td><td>Migrate Later</td><td>2026-05-29</td></tr>
+        <tr><td><strong>Heather Frazier</strong></td><td>Mathias Lock and Key, Inc.</td><td>heatherf@mathias1901.com</td><td>Integrator</td><td>Migrate Later</td><td>2026-05-29</td></tr>
+        <tr><td><strong>Eliza Lantz</strong></td><td>Neuwave Systems Inc</td><td>eliza@neuwavesystems.com</td><td>Integrator</td><td>Migrate Later</td><td>2026-05-29</td></tr>
+        <tr><td><strong>Jay Hunt</strong></td><td>Neuwave Systems Inc</td><td>jhunt@neuwavesystems.com</td><td>Integrator</td><td>Migrate Later</td><td>2026-05-29</td></tr>
+        <tr><td><strong>Myles Steeves</strong></td><td>NUTEC ELECTRO TEL.</td><td>myles.steeves@nutecelectrotel.com</td><td>MSP</td><td>Migrate Later</td><td>2026-05-29</td></tr>
+        <tr><td><strong>Kelly Hile</strong></td><td>PC Netsource</td><td>khile@pcnetsource.com</td><td>MSP</td><td>Migrate Later</td><td>2026-05-29</td></tr>
+        <tr><td><strong>brad reiber</strong></td><td>Protex Central</td><td>brad.reiber@protexcentral.net</td><td>Integrator</td><td>Migrate Later</td><td>2026-05-29</td></tr>
+        <tr><td><strong>Jeremy Vogel</strong></td><td>Roger's Two Way Radio</td><td>jvogel@rogerstwoway.com</td><td>Integrator</td><td>Migrate Later</td><td>2026-05-29</td></tr>
+      </tbody>
+    </table>
   </div>
 
   <!-- SF Pipeline -->
