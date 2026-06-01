@@ -169,18 +169,17 @@ async function main() {
   console.log('Authenticating with Salesforce...');
   const token = await getToken();
 
-  console.log('Fetching active Tigerpaw client accounts...');
+  console.log('Fetching accounts with Web Migration Status populated...');
   const accounts = await sfQueryAll(token, `
     SELECT Id, Name, Type, Tigerpaw__c, Web_Migration__c, Web_Migration_Status_Details__c,
            TigerPaw_Account_Status__c, Tigerpaw_Vertical__c, Tigerpaw_Owner__c, PSA_Web__c
     FROM Account
-    WHERE Tigerpaw__c = true
-      AND (Type != 'Churn' OR Type = null)
+    WHERE Web_Migration__c != null
     ORDER BY Name
   `);
 
   const accountIds = accounts.map(account => account.Id);
-  console.log(`  Found ${accounts.length} active Tigerpaw clients`);
+  console.log(`  Found ${accounts.length} accounts with Web Migration Status populated`);
 
   const allOpps = [];
   for (let i = 0; i < accountIds.length; i += 200) {
@@ -230,7 +229,7 @@ async function main() {
   const output = {
     generatedAt: new Date().toISOString(),
     filters: {
-      account: "Tigerpaw__c = true AND Type != 'Churn'",
+      account: "Web_Migration__c != null",
       opportunity: "Type = 'Legacy Migration'",
       closedLost: "StageName = 'Closed Lost'"
     },

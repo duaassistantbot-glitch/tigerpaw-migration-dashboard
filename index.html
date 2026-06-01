@@ -120,10 +120,10 @@
 </header>
 
 <main class="main">
-  <div class="section-title">Tigerpaw Client Overview</div>
+  <div class="section-title">Web Migration Overview</div>
   <section class="hero-grid">
     <div class="hero-card">
-      <div class="label">Active Tigerpaw Clients</div>
+      <div class="label">Accounts with Web Migration Status</div>
       <div class="value"><button class="value-btn" id="total-accounts" onclick="openAllAccounts()">--</button></div>
     </div>
     <div class="hero-card green">
@@ -145,13 +145,13 @@
       <div class="section-title">Web Migration Status</div>
       <div class="card">
         <div class="card-head">
-          <h2>Active Tigerpaw Clients by Web Migration Status</h2>
+          <h2>Accounts by Web Migration Status</h2>
           <span>Salesforce Account field: Web_Migration__c</span>
         </div>
         <div class="rows" id="status-bars"></div>
         <div class="summary-strip">
           <span id="status-summary">Loading status distribution...</span>
-          <span>Filter: Tigerpaw = true, Type != Churn</span>
+          <span>Filter: Web Migration Status is not blank</span>
         </div>
       </div>
     </div>
@@ -237,7 +237,7 @@ function oppRowsByLossReason(reason) {
 
 function openAllAccounts() {
   if (!MASTER) return;
-  openAccounts('Active Tigerpaw Clients', MASTER.accounts);
+  openAccounts('Accounts with Web Migration Status', MASTER.accounts);
 }
 
 function openAllOpps() {
@@ -377,7 +377,7 @@ function render(data) {
     .reduce((sum, s) => sum + s.count, 0);
 
   document.getElementById('generated-subtitle').textContent =
-    `Salesforce data as of ${generated.toLocaleString()} - Active Tigerpaw clients and Legacy Migration opportunities`;
+    `Salesforce data as of ${generated.toLocaleString()} - Web Migration Status populated and Legacy Migration opportunities`;
   document.getElementById('total-accounts').textContent = fmt.format(data.totals.tigerpawAccounts);
   document.getElementById('want-migrate').textContent = fmt.format(want);
   document.getElementById('total-opps').textContent = fmt.format(data.totals.legacyMigrationOpps);
