@@ -154,6 +154,16 @@ function countBy(rows, key) {
   }, {});
 }
 
+function summarizeRows(rows) {
+  return {
+    externalTotal: rows.length,
+    uniqueAccounts: new Set(rows.map(registrant => registrant.company).filter(Boolean)).size,
+    byAudience: countBy(rows, 'audience'),
+    byVertical: countBy(rows, 'vertical'),
+    registrants: rows
+  };
+}
+
 async function buildEvent(eventConfig, emailAudience) {
   const contacts = await getRegistrants(eventConfig.eventDate);
   const externalContacts = contacts.filter(contact => !(contact.properties.email || '').toLowerCase().endsWith('@rev.io'));
@@ -208,9 +218,19 @@ async function main() {
     events[eventConfig.key] = await buildEvent(eventConfig, emailAudience);
   }
 
+  const allRegistrants = Object.values(events).flatMap(event => event.registrants);
+  const firstWebinarRows = allRegistrants.filter(registrant => registrant.registrationDate <= '2026-05-31');
+  const june10Rows = allRegistrants.filter(registrant => registrant.registrationDate >= '2026-06-01');
+
   const output = {
     generatedAt: new Date().toISOString(),
     webinarName: WEBINAR_NAME,
+    registrationDateSplit: {
+      firstWebinarThrough: '2026-05-31',
+      june10From: '2026-06-01',
+      firstWebinar: summarizeRows(firstWebinarRows),
+      june10: summarizeRows(june10Rows)
+    },
     events
   };
 

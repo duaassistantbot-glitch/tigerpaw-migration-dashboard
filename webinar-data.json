@@ -1,22 +1,1789 @@
 {
-  "generatedAt": "2026-06-01T15:47:19.697Z",
+  "generatedAt": "2026-06-01T16:44:33.293Z",
   "webinarName": "Webinar: See it for yourself. Introducing Rev.io PSA.",
+  "registrationDateSplit": {
+    "firstWebinarThrough": "2026-05-31",
+    "june10From": "2026-06-01",
+    "firstWebinar": {
+      "externalTotal": 209,
+      "uniqueAccounts": 128,
+      "byAudience": {
+        "Migrate Later": 81,
+        "Unknown": 102,
+        "Ready to Migrate": 26
+      },
+      "byVertical": {
+        "MSP": 147,
+        "Integrator": 62
+      },
+      "registrants": [
+        {
+          "name": "Lori Olteanu",
+          "email": "lori@empire-team.com",
+          "company": "ECI-Empire Communications",
+          "vertical": "MSP",
+          "audience": "Migrate Later",
+          "registrationDate": "2026-05-06"
+        },
+        {
+          "name": "Tina Kay",
+          "email": "tina@empire-team.com",
+          "company": "Empire Communications Inc.",
+          "vertical": "MSP",
+          "audience": "Migrate Later",
+          "registrationDate": "2026-05-06"
+        },
+        {
+          "name": "Roy Brock",
+          "email": "rbrock@5startel.com",
+          "company": "Five Star Telecom Inc",
+          "vertical": "MSP",
+          "audience": "Unknown",
+          "registrationDate": "2026-05-06"
+        },
+        {
+          "name": "Samantha Fortun",
+          "email": "sfortun@5startel.com",
+          "company": "Five Star Telecom Inc",
+          "vertical": "MSP",
+          "audience": "Unknown",
+          "registrationDate": "2026-05-06"
+        },
+        {
+          "name": "Tony Berra",
+          "email": "tberra@5startel.com",
+          "company": "Five Star Telecom Inc",
+          "vertical": "MSP",
+          "audience": "Migrate Later",
+          "registrationDate": "2026-05-06"
+        },
+        {
+          "name": "Chad Midtlien",
+          "email": "chadm@5startel.com",
+          "company": "FST Technologies, LLC",
+          "vertical": "MSP",
+          "audience": "Ready to Migrate",
+          "registrationDate": "2026-05-06"
+        },
+        {
+          "name": "Andrew Turkington",
+          "email": "andrew.turkington@hostedamerica.com",
+          "company": "Hosted America",
+          "vertical": "MSP",
+          "audience": "Migrate Later",
+          "registrationDate": "2026-05-06"
+        },
+        {
+          "name": "Gigi Hasinger",
+          "email": "gigi.hasinger@hostedamerica.com",
+          "company": "Hosted America",
+          "vertical": "MSP",
+          "audience": "Migrate Later",
+          "registrationDate": "2026-05-06"
+        },
+        {
+          "name": "Steve Jones",
+          "email": "steve.jones@hostedamerica.com",
+          "company": "Hosted America",
+          "vertical": "MSP",
+          "audience": "Migrate Later",
+          "registrationDate": "2026-05-06"
+        },
+        {
+          "name": "Jason Christenson",
+          "email": "jchristenson@rch-com.com",
+          "company": "RCH Communications",
+          "vertical": "Integrator",
+          "audience": "Unknown",
+          "registrationDate": "2026-05-06"
+        },
+        {
+          "name": "Andy Smith",
+          "email": "asmith@5startel.com",
+          "company": "Five Star Telecom Inc",
+          "vertical": "MSP",
+          "audience": "Unknown",
+          "registrationDate": "2026-05-07"
+        },
+        {
+          "name": "JENNIFER Connelly",
+          "email": "jconnelly@5startel.com",
+          "company": "Five Star Telecom Inc",
+          "vertical": "MSP",
+          "audience": "Migrate Later",
+          "registrationDate": "2026-05-07"
+        },
+        {
+          "name": "Jessica Borchers",
+          "email": "jessica@nightwatch.net",
+          "company": "Nightwatch Security & Telephone",
+          "vertical": "Integrator",
+          "audience": "Migrate Later",
+          "registrationDate": "2026-05-07"
+        },
+        {
+          "name": "Tawnya Wittman",
+          "email": "tawnya@nightwatch.net",
+          "company": "Nightwatch Security & Telephone",
+          "vertical": "Integrator",
+          "audience": "Ready to Migrate",
+          "registrationDate": "2026-05-07"
+        },
+        {
+          "name": "Joanne Lanteigne",
+          "email": "joanne@empire-team.com",
+          "company": "Empire Communications - BCC",
+          "vertical": "MSP",
+          "audience": "Migrate Later",
+          "registrationDate": "2026-05-08"
+        },
+        {
+          "name": "Cassie Mecsery",
+          "email": "cassie@coscobtv.com",
+          "company": "COS COB TV LLC",
+          "vertical": "Integrator",
+          "audience": "Unknown",
+          "registrationDate": "2026-05-11"
+        },
+        {
+          "name": "Nathan Ball",
+          "email": "nball@crccommunications.com",
+          "company": "CRC Communications Limited",
+          "vertical": "MSP",
+          "audience": "Migrate Later",
+          "registrationDate": "2026-05-11"
+        },
+        {
+          "name": "Jim Scott",
+          "email": "jscott@acredding.com",
+          "company": "Advanced Concepts",
+          "vertical": "MSP",
+          "audience": "Unknown",
+          "registrationDate": "2026-05-13"
+        },
+        {
+          "name": "Crystal Oswald",
+          "email": "service@advancedtel.com",
+          "company": "Advanced Telecom Inc",
+          "vertical": "MSP",
+          "audience": "Unknown",
+          "registrationDate": "2026-05-13"
+        },
+        {
+          "name": "Aaron Brookes",
+          "email": "aaron@jayhawksoftware.com",
+          "company": "Advantage Computer Enterprises, Inc.",
+          "vertical": "MSP",
+          "audience": "Unknown",
+          "registrationDate": "2026-05-13"
+        },
+        {
+          "name": "Ben Lanning",
+          "email": "blanning@all-mode.com",
+          "company": "All-Mode Communications Inc",
+          "vertical": "MSP",
+          "audience": "Ready to Migrate",
+          "registrationDate": "2026-05-13"
+        },
+        {
+          "name": "Keith Swimley",
+          "email": "kswimley@all-mode.com",
+          "company": "All-Mode Communications Inc",
+          "vertical": "MSP",
+          "audience": "Ready to Migrate",
+          "registrationDate": "2026-05-13"
+        },
+        {
+          "name": "Baron Ledford",
+          "email": "baronl@avdpros.com",
+          "company": "Ameritel Voice and Data",
+          "vertical": "MSP",
+          "audience": "Unknown",
+          "registrationDate": "2026-05-13"
+        },
+        {
+          "name": "Briten Gilbertson",
+          "email": "bgilbertson@goavsi.com",
+          "company": "AVSi",
+          "vertical": "Integrator",
+          "audience": "Ready to Migrate",
+          "registrationDate": "2026-05-13"
+        },
+        {
+          "name": "James Filbin",
+          "email": "jdfilbin@beacontelecom.com",
+          "company": "Beacon Telecom Inc",
+          "vertical": "MSP",
+          "audience": "Unknown",
+          "registrationDate": "2026-05-13"
+        },
+        {
+          "name": "Jay D'Antona",
+          "email": "jdantona@beacontelecom.com",
+          "company": "Beacon Telecom Inc",
+          "vertical": "MSP",
+          "audience": "Unknown",
+          "registrationDate": "2026-05-13"
+        },
+        {
+          "name": "Jim Filbin",
+          "email": "jfilbin@beacontelecom.com",
+          "company": "Beacon Telecom Inc",
+          "vertical": "MSP",
+          "audience": "Unknown",
+          "registrationDate": "2026-05-13"
+        },
+        {
+          "name": "Rhiannon Dodgen",
+          "email": "cnr-service@cnr-inc.com",
+          "company": "CNR Inc.",
+          "vertical": "MSP",
+          "audience": "Unknown",
+          "registrationDate": "2026-05-13"
+        },
+        {
+          "name": "Rhiannon Dodgen",
+          "email": "acne-service@cnr-inc.com",
+          "company": "CNR Inc.",
+          "vertical": "MSP",
+          "audience": "Migrate Later",
+          "registrationDate": "2026-05-13"
+        },
+        {
+          "name": "Jeff Drummond",
+          "email": "jeff.drummond@cpitelecom.net",
+          "company": "CPI Technologies, LLC",
+          "vertical": "MSP",
+          "audience": "Ready to Migrate",
+          "registrationDate": "2026-05-13"
+        },
+        {
+          "name": "Daniel Tenenbaum",
+          "email": "dtenenbaum@dtc4you.com",
+          "company": "Digital Telecommunications",
+          "vertical": "MSP",
+          "audience": "Ready to Migrate",
+          "registrationDate": "2026-05-13"
+        },
+        {
+          "name": "Mike LaPlante",
+          "email": "mike@dividia.net",
+          "company": "Dividia",
+          "vertical": "Integrator",
+          "audience": "Ready to Migrate",
+          "registrationDate": "2026-05-13"
+        },
+        {
+          "name": "Nicole Pritchard",
+          "email": "npritchard@innovativetds.com",
+          "company": "Innovative Telephone & Data Solutions, LLC",
+          "vertical": "MSP",
+          "audience": "Ready to Migrate",
+          "registrationDate": "2026-05-13"
+        },
+        {
+          "name": "Kristina Botten",
+          "email": "billing@xclutel.com",
+          "company": "Xclutel",
+          "vertical": "MSP",
+          "audience": "Migrate Later",
+          "registrationDate": "2026-05-13"
+        },
+        {
+          "name": "Paul Lewis",
+          "email": "plewis@xclutel.com",
+          "company": "Xclutel",
+          "vertical": "MSP",
+          "audience": "Ready to Migrate",
+          "registrationDate": "2026-05-13"
+        },
+        {
+          "name": "Scott Webb",
+          "email": "swebb1719@gmail.com",
+          "company": "",
+          "vertical": "MSP",
+          "audience": "Migrate Later",
+          "registrationDate": "2026-05-14"
+        },
+        {
+          "name": "Jason Wendt",
+          "email": "jwendt@cregsystems.com",
+          "company": "CREG Systems Corp",
+          "vertical": "MSP",
+          "audience": "Unknown",
+          "registrationDate": "2026-05-14"
+        },
+        {
+          "name": "Ross McNar",
+          "email": "rmcnary@digitel.ca",
+          "company": "Digitel Systems Inc.",
+          "vertical": "MSP",
+          "audience": "Unknown",
+          "registrationDate": "2026-05-14"
+        },
+        {
+          "name": "Randy Koerber",
+          "email": "randy@dvx.com",
+          "company": "DVX Inc _Data Voice Exchange",
+          "vertical": "MSP",
+          "audience": "Unknown",
+          "registrationDate": "2026-05-14"
+        },
+        {
+          "name": "Spencer Harp",
+          "email": "spencer@emibusiness.com",
+          "company": "Emi Business Communications",
+          "vertical": "MSP",
+          "audience": "Migrate Later",
+          "registrationDate": "2026-05-14"
+        },
+        {
+          "name": "Fusun Bubernack",
+          "email": "fusun@et-t.com",
+          "company": "ET&T Corporation",
+          "vertical": "MSP",
+          "audience": "Unknown",
+          "registrationDate": "2026-05-14"
+        },
+        {
+          "name": "Chuck Ellenberger",
+          "email": "chuck@favorite1.com",
+          "company": "Favorite Office Automation",
+          "vertical": "MSP",
+          "audience": "Unknown",
+          "registrationDate": "2026-05-14"
+        },
+        {
+          "name": "David McElroy",
+          "email": "davem@firstline.net",
+          "company": "Firstline Communications",
+          "vertical": "MSP",
+          "audience": "Unknown",
+          "registrationDate": "2026-05-14"
+        },
+        {
+          "name": "David Nitzschke",
+          "email": "davidn@tuiusa.com",
+          "company": "Technology Unlimited",
+          "vertical": "MSP",
+          "audience": "Ready to Migrate",
+          "registrationDate": "2026-05-14"
+        },
+        {
+          "name": "Sylvia Valdez",
+          "email": "sylviav@tuiusa.com",
+          "company": "Technology Unlimited",
+          "vertical": "MSP",
+          "audience": "Ready to Migrate",
+          "registrationDate": "2026-05-14"
+        },
+        {
+          "name": "Tom Dudek",
+          "email": "norcommcsi@gmail.com",
+          "company": "",
+          "vertical": "MSP",
+          "audience": "Migrate Later",
+          "registrationDate": "2026-05-15"
+        },
+        {
+          "name": "Kathy Halsell",
+          "email": "kathy@absi.net",
+          "company": "ABSi Telecom",
+          "vertical": "MSP",
+          "audience": "Migrate Later",
+          "registrationDate": "2026-05-15"
+        },
+        {
+          "name": "Richard Crook",
+          "email": "rcrook@accuratesecuritypros.com",
+          "company": "Accurate Security Pros, Inc.",
+          "vertical": "Integrator",
+          "audience": "Unknown",
+          "registrationDate": "2026-05-15"
+        },
+        {
+          "name": "Douglas Wolf",
+          "email": "doug.wolf@advancedhospitality.com",
+          "company": "Advanced Hospitality Systems",
+          "vertical": "Integrator",
+          "audience": "Unknown",
+          "registrationDate": "2026-05-15"
+        },
+        {
+          "name": "Robert Armstrong",
+          "email": "rob@cc-tek.net",
+          "company": "CC-Teknologies Inc.",
+          "vertical": "Integrator",
+          "audience": "Unknown",
+          "registrationDate": "2026-05-15"
+        },
+        {
+          "name": "Able Blaker",
+          "email": "ablaker@chiefdatacom.com",
+          "company": "Chief Datacom",
+          "vertical": "Integrator",
+          "audience": "Unknown",
+          "registrationDate": "2026-05-15"
+        },
+        {
+          "name": "Gentry Gauer",
+          "email": "gentryg@dscabling.biz",
+          "company": "Dakota Structured Cabling",
+          "vertical": "MSP",
+          "audience": "Unknown",
+          "registrationDate": "2026-05-15"
+        },
+        {
+          "name": "Noa Williamson",
+          "email": "nwilliamson@eaglecraft.com",
+          "company": "EagleCraft",
+          "vertical": "MSP",
+          "audience": "Migrate Later",
+          "registrationDate": "2026-05-15"
+        },
+        {
+          "name": "Raymond Shadman",
+          "email": "ray@customvideosecurity.com",
+          "company": "eDigitalDeals, Inc",
+          "vertical": "Integrator",
+          "audience": "Unknown",
+          "registrationDate": "2026-05-15"
+        },
+        {
+          "name": "Tom Lalli",
+          "email": "tomlalli@esmcctv.com",
+          "company": "ESM Security Systems",
+          "vertical": "Integrator",
+          "audience": "Migrate Later",
+          "registrationDate": "2026-05-15"
+        },
+        {
+          "name": "Jessica Colangelo",
+          "email": "jessica@favorite1.com",
+          "company": "Favorite Office Automation",
+          "vertical": "MSP",
+          "audience": "Migrate Later",
+          "registrationDate": "2026-05-15"
+        },
+        {
+          "name": "Rocco Favorite",
+          "email": "rafavorite@favorite1.com",
+          "company": "Favorite Office Automation",
+          "vertical": "MSP",
+          "audience": "Unknown",
+          "registrationDate": "2026-05-15"
+        },
+        {
+          "name": "Meg Carroll",
+          "email": "meg@fleetboss.com",
+          "company": "FleetBoss GPS",
+          "vertical": "MSP",
+          "audience": "Migrate Later",
+          "registrationDate": "2026-05-15"
+        },
+        {
+          "name": "Bobby Roberts",
+          "email": "broberts@grennancommunications.com",
+          "company": "Grennan Communications",
+          "vertical": "Integrator",
+          "audience": "Unknown",
+          "registrationDate": "2026-05-15"
+        },
+        {
+          "name": "Ron Grennan",
+          "email": "rgrennan@grennancommunications.com",
+          "company": "Grennan Communications",
+          "vertical": "Integrator",
+          "audience": "Unknown",
+          "registrationDate": "2026-05-15"
+        },
+        {
+          "name": "Dorothye Brodersen",
+          "email": "dorothye@infotelsystems.com",
+          "company": "Infotel Systems",
+          "vertical": "MSP",
+          "audience": "Unknown",
+          "registrationDate": "2026-05-15"
+        },
+        {
+          "name": "Matt Connell",
+          "email": "mattconnell@integraserv.com",
+          "company": "IntegraServ",
+          "vertical": "MSP",
+          "audience": "Unknown",
+          "registrationDate": "2026-05-15"
+        },
+        {
+          "name": "Aaron Costello",
+          "email": "aaronc@ibspos.com",
+          "company": "Interstate Business Systems",
+          "vertical": "MSP",
+          "audience": "Unknown",
+          "registrationDate": "2026-05-15"
+        },
+        {
+          "name": "Suzanne Yeager",
+          "email": "syeager@ipcmidwest.com",
+          "company": "IP Communications, Inc.",
+          "vertical": "MSP",
+          "audience": "Unknown",
+          "registrationDate": "2026-05-15"
+        },
+        {
+          "name": "Chad Mattingly",
+          "email": "chad.mattingly@isetservice.com",
+          "company": "ISET",
+          "vertical": "MSP",
+          "audience": "Unknown",
+          "registrationDate": "2026-05-15"
+        },
+        {
+          "name": "Brandon Andres",
+          "email": "brandon.andres@memlane.ca",
+          "company": "Memory Lane Computers",
+          "vertical": "MSP",
+          "audience": "Unknown",
+          "registrationDate": "2026-05-15"
+        },
+        {
+          "name": "Richard Munro",
+          "email": "richard@memlane.ca",
+          "company": "Memory Lane Computers",
+          "vertical": "MSP",
+          "audience": "Unknown",
+          "registrationDate": "2026-05-15"
+        },
+        {
+          "name": "Karrie Gadorus",
+          "email": "karrie@mercsys.com",
+          "company": "Mercury Systems Corporation",
+          "vertical": "MSP",
+          "audience": "Unknown",
+          "registrationDate": "2026-05-15"
+        },
+        {
+          "name": "Mark Goldman",
+          "email": "markg@microtechsystems.com",
+          "company": "Micro Tech Systems",
+          "vertical": "MSP",
+          "audience": "Unknown",
+          "registrationDate": "2026-05-15"
+        },
+        {
+          "name": "Liz Chamas",
+          "email": "liz@microagebasics.com",
+          "company": "MicroAge Basics",
+          "vertical": "MSP",
+          "audience": "Unknown",
+          "registrationDate": "2026-05-15"
+        },
+        {
+          "name": "JANET GUTIERREZ",
+          "email": "janetg@microtechsystems.com",
+          "company": "Microtech Systems, Inc.",
+          "vertical": "MSP",
+          "audience": "Migrate Later",
+          "registrationDate": "2026-05-15"
+        },
+        {
+          "name": "John McFadyen",
+          "email": "johnm@nacworx.com",
+          "company": "NacTelligence Cloud Services",
+          "vertical": "MSP",
+          "audience": "Migrate Later",
+          "registrationDate": "2026-05-15"
+        },
+        {
+          "name": "Mike Mannino",
+          "email": "mmannino@optelbcs.com",
+          "company": "Optel BCS, Inc",
+          "vertical": "MSP",
+          "audience": "Unknown",
+          "registrationDate": "2026-05-15"
+        },
+        {
+          "name": "Sarah Wilhelm",
+          "email": "sarah.wilhelm@pjkco.com",
+          "company": "P. J. Kortens and Company, Inc.",
+          "vertical": "Integrator",
+          "audience": "Unknown",
+          "registrationDate": "2026-05-15"
+        },
+        {
+          "name": "Owen Murphy",
+          "email": "omurphy@pathcominc.com",
+          "company": "Pathcom Inc.",
+          "vertical": "MSP",
+          "audience": "Unknown",
+          "registrationDate": "2026-05-15"
+        },
+        {
+          "name": "Sheryl Sweeney",
+          "email": "sheryl@pathcominc.com",
+          "company": "Pathcom Inc.",
+          "vertical": "MSP",
+          "audience": "Unknown",
+          "registrationDate": "2026-05-15"
+        },
+        {
+          "name": "Steve Valli",
+          "email": "stevev@pilothousecomm.com",
+          "company": "Pilothouse Communications",
+          "vertical": "MSP",
+          "audience": "Unknown",
+          "registrationDate": "2026-05-15"
+        },
+        {
+          "name": "Kenny Raissifar",
+          "email": "kraissifar@premiercomm.net",
+          "company": "Premier Communications",
+          "vertical": "Integrator",
+          "audience": "Unknown",
+          "registrationDate": "2026-05-15"
+        },
+        {
+          "name": "Brandon Kingsley",
+          "email": "brandon@profcom.com",
+          "company": "Professional Communication Solutions",
+          "vertical": "MSP",
+          "audience": "Unknown",
+          "registrationDate": "2026-05-15"
+        },
+        {
+          "name": "Matt Leonow",
+          "email": "mleonow@raytecsystems.com",
+          "company": "Raytec Systems",
+          "vertical": "MSP",
+          "audience": "Unknown",
+          "registrationDate": "2026-05-15"
+        },
+        {
+          "name": "Bill Burns",
+          "email": "bburns@tatecom.com",
+          "company": "Tate Communications, LLC",
+          "vertical": "Integrator",
+          "audience": "Unknown",
+          "registrationDate": "2026-05-15"
+        },
+        {
+          "name": "TJ McDonald",
+          "email": "tmcdonald@tdsnetworks.com",
+          "company": "TDS-Phone",
+          "vertical": "MSP",
+          "audience": "Unknown",
+          "registrationDate": "2026-05-15"
+        },
+        {
+          "name": "JOHN THOMAS",
+          "email": "rthomas@te-usa.com",
+          "company": "TEI Communications",
+          "vertical": "MSP",
+          "audience": "Migrate Later",
+          "registrationDate": "2026-05-15"
+        },
+        {
+          "name": "John Brogan",
+          "email": "john@telecomunlimited.com",
+          "company": "Telecom Unlimited",
+          "vertical": "MSP",
+          "audience": "Unknown",
+          "registrationDate": "2026-05-15"
+        },
+        {
+          "name": "Kendall Seidensticker",
+          "email": "kendall@telecomunlimited.com",
+          "company": "Telecom Unlimited",
+          "vertical": "MSP",
+          "audience": "Unknown",
+          "registrationDate": "2026-05-15"
+        },
+        {
+          "name": "Mike Nichols",
+          "email": "mike@telecomunlimited.com",
+          "company": "Telecom Unlimited",
+          "vertical": "MSP",
+          "audience": "Unknown",
+          "registrationDate": "2026-05-15"
+        },
+        {
+          "name": "Amanda Toews",
+          "email": "amanda.toews@phoneexperts.com",
+          "company": "The Phone Experts - Communications Ltd.",
+          "vertical": "MSP",
+          "audience": "Unknown",
+          "registrationDate": "2026-05-15"
+        },
+        {
+          "name": "Becky Barhorst",
+          "email": "bbarhorst@thesmsgroup.com",
+          "company": "The SMS Group",
+          "vertical": "MSP",
+          "audience": "Unknown",
+          "registrationDate": "2026-05-15"
+        },
+        {
+          "name": "JON THOMAS",
+          "email": "jmthomas@te-usa.com",
+          "company": "Thomas Electronics Inc",
+          "vertical": "MSP",
+          "audience": "Unknown",
+          "registrationDate": "2026-05-15"
+        },
+        {
+          "name": "Matthew LaCroix",
+          "email": "mlacroix@te-usa.com",
+          "company": "Thomas Electronics Inc",
+          "vertical": "MSP",
+          "audience": "Migrate Later",
+          "registrationDate": "2026-05-15"
+        },
+        {
+          "name": "Sonny Souder",
+          "email": "ssouder@te-usa.com",
+          "company": "Thomas Electronics Inc",
+          "vertical": "MSP",
+          "audience": "Unknown",
+          "registrationDate": "2026-05-15"
+        },
+        {
+          "name": "Lisa Ruston",
+          "email": "lruston@empire-pa.com",
+          "company": "Votacall Inc - 2nd Database",
+          "vertical": "MSP",
+          "audience": "Unknown",
+          "registrationDate": "2026-05-15"
+        },
+        {
+          "name": "Suzette Drew",
+          "email": "suzette.drew@telecomdesigns.com",
+          "company": "Telecommunications Designs",
+          "vertical": "MSP",
+          "audience": "Migrate Later",
+          "registrationDate": "2026-05-16"
+        },
+        {
+          "name": "Shane Gallagher",
+          "email": "shaneg@tri-tec.com",
+          "company": "Tri-Tec Communications",
+          "vertical": "MSP",
+          "audience": "Unknown",
+          "registrationDate": "2026-05-16"
+        },
+        {
+          "name": "Jim Hoyle",
+          "email": "jhoyle@audio-light.com",
+          "company": "Audio & Light, Inc.",
+          "vertical": "Integrator",
+          "audience": "Unknown",
+          "registrationDate": "2026-05-18"
+        },
+        {
+          "name": "Sheryl Smith",
+          "email": "ssmith@audio-light.com",
+          "company": "Audio & Light, Inc.",
+          "vertical": "Integrator",
+          "audience": "Unknown",
+          "registrationDate": "2026-05-18"
+        },
+        {
+          "name": "David Prairie",
+          "email": "dprairie@avsi.com",
+          "company": "AVSI",
+          "vertical": "MSP",
+          "audience": "Migrate Later",
+          "registrationDate": "2026-05-18"
+        },
+        {
+          "name": "Erik Lamp",
+          "email": "elamp@avsi.com",
+          "company": "AVSI",
+          "vertical": "MSP",
+          "audience": "Migrate Later",
+          "registrationDate": "2026-05-18"
+        },
+        {
+          "name": "Chad NesSmith",
+          "email": "cnessmith@chiefdatacom.com",
+          "company": "Chief Datacom",
+          "vertical": "Integrator",
+          "audience": "Unknown",
+          "registrationDate": "2026-05-18"
+        },
+        {
+          "name": "Debbie Harris",
+          "email": "debbie@thecrowleycompany.com",
+          "company": "Crowley",
+          "vertical": "MSP",
+          "audience": "Unknown",
+          "registrationDate": "2026-05-18"
+        },
+        {
+          "name": "Joseph Gough",
+          "email": "joseph@dominiontx.com",
+          "company": "Dominion Design & Integration",
+          "vertical": "Integrator",
+          "audience": "Unknown",
+          "registrationDate": "2026-05-18"
+        },
+        {
+          "name": "Brad Robinson",
+          "email": "brad@essg.com",
+          "company": "Environmental & Safety Support",
+          "vertical": "Integrator",
+          "audience": "Unknown",
+          "registrationDate": "2026-05-18"
+        },
+        {
+          "name": "Danny Akins",
+          "email": "dakins@greenelectronicsolutions.com",
+          "company": "Green Electronic Solutions",
+          "vertical": "Integrator",
+          "audience": "Unknown",
+          "registrationDate": "2026-05-18"
+        },
+        {
+          "name": "Aaron Hatcher",
+          "email": "ahatcher@htechus.com",
+          "company": "Herring Technology",
+          "vertical": "Integrator",
+          "audience": "Unknown",
+          "registrationDate": "2026-05-18"
+        },
+        {
+          "name": "ERIN MARTIN",
+          "email": "eprince@htechus.com",
+          "company": "Herring Technology",
+          "vertical": "Integrator",
+          "audience": "Unknown",
+          "registrationDate": "2026-05-18"
+        },
+        {
+          "name": "Nate Danielson",
+          "email": "ndanielson@htechus.com",
+          "company": "Herring Technology",
+          "vertical": "Integrator",
+          "audience": "Unknown",
+          "registrationDate": "2026-05-18"
+        },
+        {
+          "name": "Joseph Krebasch",
+          "email": "jkrebasch@4-ibc.com",
+          "company": "Illinois Business Communications, Inc.",
+          "vertical": "Integrator",
+          "audience": "Migrate Later",
+          "registrationDate": "2026-05-18"
+        },
+        {
+          "name": "JoAnn Geier",
+          "email": "joann.geier@jamsys.com",
+          "company": "J & M Systems LLC",
+          "vertical": "MSP",
+          "audience": "Migrate Later",
+          "registrationDate": "2026-05-18"
+        },
+        {
+          "name": "MARK GEIER",
+          "email": "mark.geier@jamsys.com",
+          "company": "J & M Systems LLC",
+          "vertical": "MSP",
+          "audience": "Unknown",
+          "registrationDate": "2026-05-18"
+        },
+        {
+          "name": "Patrick Keith",
+          "email": "pkeith@linkuscorp.com",
+          "company": "LinkUs Corporation",
+          "vertical": "Integrator",
+          "audience": "Unknown",
+          "registrationDate": "2026-05-18"
+        },
+        {
+          "name": "Matt Weaver",
+          "email": "matt.weaver@micromedllc.com",
+          "company": "MicroMed LLC",
+          "vertical": "MSP",
+          "audience": "Ready to Migrate",
+          "registrationDate": "2026-05-18"
+        },
+        {
+          "name": "Brad Ormsby",
+          "email": "brad@ormsbys.com",
+          "company": "Ormsbys Computer Store, Inc.",
+          "vertical": "MSP",
+          "audience": "Ready to Migrate",
+          "registrationDate": "2026-05-18"
+        },
+        {
+          "name": "Jared Fortna",
+          "email": "jfortna@earthsensitive.com",
+          "company": "Phoenix Energy Supply",
+          "vertical": "Integrator",
+          "audience": "Unknown",
+          "registrationDate": "2026-05-18"
+        },
+        {
+          "name": "Jessica Riley",
+          "email": "jriley@pilothousecomm.com",
+          "company": "Pilothouse Communications",
+          "vertical": "MSP",
+          "audience": "Unknown",
+          "registrationDate": "2026-05-18"
+        },
+        {
+          "name": "Kristine Dougherty",
+          "email": "kdougherty@solvdinc.com",
+          "company": "SOLVD Instrument Solutions",
+          "vertical": "Integrator",
+          "audience": "Ready to Migrate",
+          "registrationDate": "2026-05-18"
+        },
+        {
+          "name": "Jake Kellar",
+          "email": "jkellar@tatecom.com",
+          "company": "Tate Communications, LLC",
+          "vertical": "Integrator",
+          "audience": "Migrate Later",
+          "registrationDate": "2026-05-18"
+        },
+        {
+          "name": "shane Johnson",
+          "email": "shanej@tri-tec.com",
+          "company": "Tri-Tec Communications",
+          "vertical": "MSP",
+          "audience": "Migrate Later",
+          "registrationDate": "2026-05-18"
+        },
+        {
+          "name": "Don Rosa",
+          "email": "drosa@trminc.net",
+          "company": "TRM Inc",
+          "vertical": "MSP",
+          "audience": "Ready to Migrate",
+          "registrationDate": "2026-05-18"
+        },
+        {
+          "name": "Kevin Krosse",
+          "email": "kevin@usctelcom.com",
+          "company": "United Security Communications, Inc.",
+          "vertical": "Integrator",
+          "audience": "Unknown",
+          "registrationDate": "2026-05-18"
+        },
+        {
+          "name": "John Rivkees",
+          "email": "john.rivkees@advancedhospitality.com",
+          "company": "Advanced Hospitality Systems",
+          "vertical": "Integrator",
+          "audience": "Unknown",
+          "registrationDate": "2026-05-19"
+        },
+        {
+          "name": "Bob Moyer",
+          "email": "bobm@moyerradio.com",
+          "company": "B. Moyer Radio Communications LLC",
+          "vertical": "Integrator",
+          "audience": "Unknown",
+          "registrationDate": "2026-05-19"
+        },
+        {
+          "name": "Tammy Birrenkott",
+          "email": "tammyb@bektel.coop",
+          "company": "BEK Business Solutions",
+          "vertical": "MSP",
+          "audience": "Unknown",
+          "registrationDate": "2026-05-19"
+        },
+        {
+          "name": "Lorena Loza",
+          "email": "lorenaloza@cc-tek.net",
+          "company": "CC-Teknologies Inc.",
+          "vertical": "Integrator",
+          "audience": "Migrate Later",
+          "registrationDate": "2026-05-19"
+        },
+        {
+          "name": "Mary Ann Bachar",
+          "email": "mbachar@eadv.com",
+          "company": "Eastern American Data / Voice Inc.",
+          "vertical": "MSP",
+          "audience": "Unknown",
+          "registrationDate": "2026-05-19"
+        },
+        {
+          "name": "Jeff Stenger",
+          "email": "jeffs@excels.com",
+          "company": "Ex-Cel Solutions",
+          "vertical": "MSP",
+          "audience": "Unknown",
+          "registrationDate": "2026-05-19"
+        },
+        {
+          "name": "Scott Bloomer",
+          "email": "scottb@excels.com",
+          "company": "Ex-Cel Solutions",
+          "vertical": "MSP",
+          "audience": "Unknown",
+          "registrationDate": "2026-05-19"
+        },
+        {
+          "name": "Allen Costar",
+          "email": "alcostar@grennancommunications.com",
+          "company": "Grennan Communications",
+          "vertical": "Integrator",
+          "audience": "Unknown",
+          "registrationDate": "2026-05-19"
+        },
+        {
+          "name": "Skylor Williams",
+          "email": "skylor@infotelsystems.com",
+          "company": "Infotel Systems, Inc.",
+          "vertical": "MSP",
+          "audience": "Migrate Later",
+          "registrationDate": "2026-05-19"
+        },
+        {
+          "name": "Gabe Rainn",
+          "email": "gabe.rainn@memlane.ca",
+          "company": "Memory Lane Computers",
+          "vertical": "MSP",
+          "audience": "Unknown",
+          "registrationDate": "2026-05-19"
+        },
+        {
+          "name": "Erin Bohacek",
+          "email": "erin@mpsworks.com",
+          "company": "MPS Works",
+          "vertical": "MSP",
+          "audience": "Unknown",
+          "registrationDate": "2026-05-19"
+        },
+        {
+          "name": "Joel Bicknell",
+          "email": "jbicknell@necomm.com",
+          "company": "New England Communications",
+          "vertical": "MSP",
+          "audience": "Unknown",
+          "registrationDate": "2026-05-19"
+        },
+        {
+          "name": "Nolan Quinn",
+          "email": "nquinn@necomm.com",
+          "company": "New England Communications",
+          "vertical": "MSP",
+          "audience": "Migrate Later",
+          "registrationDate": "2026-05-19"
+        },
+        {
+          "name": "Nic Astleford",
+          "email": "nastleford@precom-inc.com",
+          "company": "PreCom",
+          "vertical": "MSP",
+          "audience": "Unknown",
+          "registrationDate": "2026-05-19"
+        },
+        {
+          "name": "Chelsea Perez",
+          "email": "accounting@profcom.com",
+          "company": "Professional Communication Solutions",
+          "vertical": "MSP",
+          "audience": "Unknown",
+          "registrationDate": "2026-05-19"
+        },
+        {
+          "name": "Greg Sandruck",
+          "email": "gsandruck@qccusa.com",
+          "company": "QCC, Inc",
+          "vertical": "MSP",
+          "audience": "Unknown",
+          "registrationDate": "2026-05-19"
+        },
+        {
+          "name": "Lee Barnes",
+          "email": "lbarnes@qccusa.com",
+          "company": "QCC, Inc",
+          "vertical": "MSP",
+          "audience": "Unknown",
+          "registrationDate": "2026-05-19"
+        },
+        {
+          "name": "Darrell Roy",
+          "email": "darrell@telecomunlimited.com",
+          "company": "Telecom Unlimited",
+          "vertical": "MSP",
+          "audience": "Unknown",
+          "registrationDate": "2026-05-19"
+        },
+        {
+          "name": "Nelson Guzman",
+          "email": "service@transcomla.com",
+          "company": "Transcom Telecommunications",
+          "vertical": "MSP",
+          "audience": "Unknown",
+          "registrationDate": "2026-05-19"
+        },
+        {
+          "name": "Amanda Shaw",
+          "email": "ashaw@usctelcom.com",
+          "company": "United Security Communications, Inc.",
+          "vertical": "Integrator",
+          "audience": "Unknown",
+          "registrationDate": "2026-05-19"
+        },
+        {
+          "name": "Margaret Toniny",
+          "email": "cameo25@aol.com",
+          "company": "United Security Communications, Inc.",
+          "vertical": "MSP",
+          "audience": "Migrate Later",
+          "registrationDate": "2026-05-19"
+        },
+        {
+          "name": "Michael Melton",
+          "email": "mmelton@4unitedsystems.com",
+          "company": "United Systems Inc",
+          "vertical": "MSP",
+          "audience": "Ready to Migrate",
+          "registrationDate": "2026-05-19"
+        },
+        {
+          "name": "Joshua Huff",
+          "email": "joshua@virtualguard.com",
+          "company": "Virtual Guard",
+          "vertical": "Integrator",
+          "audience": "Migrate Later",
+          "registrationDate": "2026-05-19"
+        },
+        {
+          "name": "Justin Scalzitti",
+          "email": "justin@virtualguard.com",
+          "company": "Virtual Guard",
+          "vertical": "Integrator",
+          "audience": "Unknown",
+          "registrationDate": "2026-05-19"
+        },
+        {
+          "name": "Andy Oliver",
+          "email": "aoliver@ameritelinc.com",
+          "company": "Ameritel Northridge",
+          "vertical": "MSP",
+          "audience": "Migrate Later",
+          "registrationDate": "2026-05-20"
+        },
+        {
+          "name": "Chaz Chahal",
+          "email": "cchahal@ameritelinc.com",
+          "company": "Ameritel Northridge",
+          "vertical": "MSP",
+          "audience": "Migrate Later",
+          "registrationDate": "2026-05-20"
+        },
+        {
+          "name": "Debbie Holbert",
+          "email": "dholbert@ameritelinc.com",
+          "company": "Ameritel Northridge",
+          "vertical": "MSP",
+          "audience": "Migrate Later",
+          "registrationDate": "2026-05-20"
+        },
+        {
+          "name": "Greg Souders",
+          "email": "gregs@thecrowleycompany.com",
+          "company": "Crowley",
+          "vertical": "MSP",
+          "audience": "Unknown",
+          "registrationDate": "2026-05-20"
+        },
+        {
+          "name": "Mark Hamilton",
+          "email": "markh@integratednet.com",
+          "company": "Integrated Systems",
+          "vertical": "Integrator",
+          "audience": "Ready to Migrate",
+          "registrationDate": "2026-05-20"
+        },
+        {
+          "name": "Sara Moseley",
+          "email": "saram@moseleyelectronics.com",
+          "company": "Moseley Electronics, LLC",
+          "vertical": "Integrator",
+          "audience": "Ready to Migrate",
+          "registrationDate": "2026-05-20"
+        },
+        {
+          "name": "Doug Halkett",
+          "email": "dhalkett@natgisit.ca",
+          "company": "NATGisIT",
+          "vertical": "MSP",
+          "audience": "Migrate Later",
+          "registrationDate": "2026-05-20"
+        },
+        {
+          "name": "Jeremy Vargas",
+          "email": "jeremyvargas@nes.cc",
+          "company": "Network Enhancement Systems",
+          "vertical": "MSP",
+          "audience": "Migrate Later",
+          "registrationDate": "2026-05-20"
+        },
+        {
+          "name": "Susan Kallman",
+          "email": "susank@tuiusa.com",
+          "company": "Technology Unlimited",
+          "vertical": "MSP",
+          "audience": "Ready to Migrate",
+          "registrationDate": "2026-05-20"
+        },
+        {
+          "name": "Brian White",
+          "email": "brianw@tri-tec.com",
+          "company": "Tri-Tec Communications",
+          "vertical": "MSP",
+          "audience": "Unknown",
+          "registrationDate": "2026-05-20"
+        },
+        {
+          "name": "Nicole Mitchell",
+          "email": "ncm.graphicdesign@gmail.com",
+          "company": "",
+          "vertical": "MSP",
+          "audience": "Migrate Later",
+          "registrationDate": "2026-05-21"
+        },
+        {
+          "name": "Rebecca Sell",
+          "email": "beccam@moyerradio.com",
+          "company": "B. Moyer Radio Communications LLC",
+          "vertical": "Integrator",
+          "audience": "Unknown",
+          "registrationDate": "2026-05-21"
+        },
+        {
+          "name": "Brent Schmitt",
+          "email": "brents@bektel.coop",
+          "company": "BEK Communications",
+          "vertical": "MSP",
+          "audience": "Migrate Later",
+          "registrationDate": "2026-05-21"
+        },
+        {
+          "name": "Dave Matthews",
+          "email": "dmatthews@digitel.ca",
+          "company": "Digitel Systems Inc.",
+          "vertical": "MSP",
+          "audience": "Unknown",
+          "registrationDate": "2026-05-21"
+        },
+        {
+          "name": "Adam Zettler",
+          "email": "adam@ecitech.ca",
+          "company": "ECI-Empire Communications",
+          "vertical": "MSP",
+          "audience": "Migrate Later",
+          "registrationDate": "2026-05-21"
+        },
+        {
+          "name": "Jason Harp",
+          "email": "jason@emibusiness.com",
+          "company": "Emi Business Communications",
+          "vertical": "MSP",
+          "audience": "Migrate Later",
+          "registrationDate": "2026-05-21"
+        },
+        {
+          "name": "Ted Fiess",
+          "email": "tfiess@empire-pa.com",
+          "company": "Empire Communication Systems Inc",
+          "vertical": "MSP",
+          "audience": "Ready to Migrate",
+          "registrationDate": "2026-05-21"
+        },
+        {
+          "name": "Randy Pritchard",
+          "email": "rpritchard@greenelectronicsolutions.com",
+          "company": "Green Electronic Solutions",
+          "vertical": "Integrator",
+          "audience": "Unknown",
+          "registrationDate": "2026-05-21"
+        },
+        {
+          "name": "Scott Richardson",
+          "email": "srichardson@i2itech.com",
+          "company": "I2I Technologies",
+          "vertical": "MSP",
+          "audience": "Migrate Later",
+          "registrationDate": "2026-05-21"
+        },
+        {
+          "name": "Ashly Price",
+          "email": "aprice@imcservice.com",
+          "company": "IMC Facility Management",
+          "vertical": "MSP",
+          "audience": "Ready to Migrate",
+          "registrationDate": "2026-05-21"
+        },
+        {
+          "name": "James Michael",
+          "email": "jwm@imcservice.com",
+          "company": "IMC Facility Management",
+          "vertical": "MSP",
+          "audience": "Migrate Later",
+          "registrationDate": "2026-05-21"
+        },
+        {
+          "name": "Logan Michael",
+          "email": "logan@imcservice.com",
+          "company": "IMC Facility Management",
+          "vertical": "MSP",
+          "audience": "Ready to Migrate",
+          "registrationDate": "2026-05-21"
+        },
+        {
+          "name": "Brian Moseley",
+          "email": "brianm@moseleyelectronics.com",
+          "company": "Moseley Electronics, LLC",
+          "vertical": "Integrator",
+          "audience": "Ready to Migrate",
+          "registrationDate": "2026-05-21"
+        },
+        {
+          "name": "Bruce Moseley",
+          "email": "brucem@moseleyelectronics.com",
+          "company": "Moseley Electronics, LLC",
+          "vertical": "Integrator",
+          "audience": "Ready to Migrate",
+          "registrationDate": "2026-05-21"
+        },
+        {
+          "name": "Robert Bohacek",
+          "email": "robert@mpsworks.com",
+          "company": "MPS Works",
+          "vertical": "MSP",
+          "audience": "Unknown",
+          "registrationDate": "2026-05-21"
+        },
+        {
+          "name": "Eddie Silkey",
+          "email": "eddiesilkey@nes.cc",
+          "company": "Network Enhancement Systems",
+          "vertical": "MSP",
+          "audience": "Unknown",
+          "registrationDate": "2026-05-21"
+        },
+        {
+          "name": "Ken Leaderman",
+          "email": "kleaderman@optelbcs.com",
+          "company": "Optel BCS, Inc",
+          "vertical": "MSP",
+          "audience": "Migrate Later",
+          "registrationDate": "2026-05-21"
+        },
+        {
+          "name": "Ben Shilling",
+          "email": "ben.shilling@optivor.com",
+          "company": "Optivor",
+          "vertical": "MSP",
+          "audience": "Migrate Later",
+          "registrationDate": "2026-05-21"
+        },
+        {
+          "name": "Dustin Warne",
+          "email": "dustin.warne@optivor.com",
+          "company": "Optivor Technologies - Florida",
+          "vertical": "MSP",
+          "audience": "Migrate Later",
+          "registrationDate": "2026-05-21"
+        },
+        {
+          "name": "Frankie Gagliardi",
+          "email": "fgagliardi@pathcominc.com",
+          "company": "Pathcom Inc.",
+          "vertical": "MSP",
+          "audience": "Migrate Later",
+          "registrationDate": "2026-05-21"
+        },
+        {
+          "name": "Brandon Clifford",
+          "email": "bclifford@phoenixenergysupply.com",
+          "company": "Phoenix Energy Supply",
+          "vertical": "Integrator",
+          "audience": "Migrate Later",
+          "registrationDate": "2026-05-21"
+        },
+        {
+          "name": "Charlie Rice",
+          "email": "crice@phoenixenergysupply.com",
+          "company": "Phoenix Energy Supply",
+          "vertical": "Integrator",
+          "audience": "Unknown",
+          "registrationDate": "2026-05-21"
+        },
+        {
+          "name": "Lee Griffin",
+          "email": "lee.pilothouse@gmail.com",
+          "company": "Pilothouse Communications ",
+          "vertical": "MSP",
+          "audience": "Migrate Later",
+          "registrationDate": "2026-05-21"
+        },
+        {
+          "name": "Lou Zellin",
+          "email": "lzellin@solvdinc.com",
+          "company": "SOLVD Instrument Solutions",
+          "vertical": "Integrator",
+          "audience": "Ready to Migrate",
+          "registrationDate": "2026-05-21"
+        },
+        {
+          "name": "Isaac Martinez",
+          "email": "isaac@virtualguard.com",
+          "company": "Virtual Guard",
+          "vertical": "Integrator",
+          "audience": "Migrate Later",
+          "registrationDate": "2026-05-21"
+        },
+        {
+          "name": "Juan Francisco Castaneda",
+          "email": "jfransisco@virtualguard.com",
+          "company": "Virtual Guard",
+          "vertical": "Integrator",
+          "audience": "Migrate Later",
+          "registrationDate": "2026-05-21"
+        },
+        {
+          "name": "juan vargas",
+          "email": "jtrujillo@virtualguard.com",
+          "company": "Virtual Guard",
+          "vertical": "Integrator",
+          "audience": "Unknown",
+          "registrationDate": "2026-05-21"
+        },
+        {
+          "name": "Sam Bhatt",
+          "email": "sbhatt@xclutel.com",
+          "company": "Xclutel",
+          "vertical": "MSP",
+          "audience": "Migrate Later",
+          "registrationDate": "2026-05-21"
+        },
+        {
+          "name": "Sasha Fitzpatrick",
+          "email": "sfitzpatrick@beacontelecom.com",
+          "company": "Beacon Telecom Inc",
+          "vertical": "MSP",
+          "audience": "Unknown",
+          "registrationDate": "2026-05-22"
+        },
+        {
+          "name": "Steve Jende",
+          "email": "sjende@rch-com.com",
+          "company": "Chortek",
+          "vertical": "MSP",
+          "audience": "Migrate Later",
+          "registrationDate": "2026-05-22"
+        },
+        {
+          "name": "Joe Marinello",
+          "email": "jmarinello@jctnj.com",
+          "company": "JCT Solutions",
+          "vertical": "MSP",
+          "audience": "Migrate Later",
+          "registrationDate": "2026-05-22"
+        },
+        {
+          "name": "Arby Bautista",
+          "email": "ajrbautista11@gmail.com",
+          "company": "",
+          "vertical": "MSP",
+          "audience": "Migrate Later",
+          "registrationDate": "2026-05-26"
+        },
+        {
+          "name": "Alyse Ferranti",
+          "email": "aferranti@fusiondig.com",
+          "company": "Fusion Digital",
+          "vertical": "MSP",
+          "audience": "Migrate Later",
+          "registrationDate": "2026-05-26"
+        },
+        {
+          "name": "Gabe Garza",
+          "email": "ggarza@premiercomm.net",
+          "company": "Premier Communications",
+          "vertical": "Integrator",
+          "audience": "Unknown",
+          "registrationDate": "2026-05-26"
+        },
+        {
+          "name": "Scott Chaney",
+          "email": "schaney@rch-com.com",
+          "company": "Chortek",
+          "vertical": "MSP",
+          "audience": "Migrate Later",
+          "registrationDate": "2026-05-27"
+        },
+        {
+          "name": "Jack Green",
+          "email": "jgreen@greenelectronicsolutions.com",
+          "company": "Green Electronic Solutions",
+          "vertical": "Integrator",
+          "audience": "Unknown",
+          "registrationDate": "2026-05-27"
+        },
+        {
+          "name": "Jim MacLachlan",
+          "email": "jim@aalock.com",
+          "company": "AA LOCK AND ALARM",
+          "vertical": "Integrator",
+          "audience": "Migrate Later",
+          "registrationDate": "2026-05-29"
+        },
+        {
+          "name": "Brad Delmar",
+          "email": "bdelmar@bluewirecomm.com",
+          "company": "BlueWire Communications",
+          "vertical": "MSP",
+          "audience": "Migrate Later",
+          "registrationDate": "2026-05-29"
+        },
+        {
+          "name": "Deta Itaya",
+          "email": "ditaya@bluewirecomm.com",
+          "company": "BlueWire Communications",
+          "vertical": "MSP",
+          "audience": "Migrate Later",
+          "registrationDate": "2026-05-29"
+        },
+        {
+          "name": "Lincoln Higdon",
+          "email": "lincoln.higdon@centerpointit.com",
+          "company": "Centerpoint IT",
+          "vertical": "MSP",
+          "audience": "Migrate Later",
+          "registrationDate": "2026-05-29"
+        },
+        {
+          "name": "Amy Labianca",
+          "email": "amy.labianca@crinj.com",
+          "company": "Communication Resources",
+          "vertical": "MSP",
+          "audience": "Migrate Later",
+          "registrationDate": "2026-05-29"
+        },
+        {
+          "name": "Joe Sabatini",
+          "email": "joe.sabatini@crinj.com",
+          "company": "Communication Resources",
+          "vertical": "MSP",
+          "audience": "Migrate Later",
+          "registrationDate": "2026-05-29"
+        },
+        {
+          "name": "Loc Nguyen",
+          "email": "loc@dcrpos.com",
+          "company": "DCR-Nashville",
+          "vertical": "Integrator",
+          "audience": "Migrate Later",
+          "registrationDate": "2026-05-29"
+        },
+        {
+          "name": "Michelle Tomlin",
+          "email": "mtomlin@dcrpos.com",
+          "company": "DCR-Nashville",
+          "vertical": "Integrator",
+          "audience": "Migrate Later",
+          "registrationDate": "2026-05-29"
+        },
+        {
+          "name": "Donald Hilsenroth",
+          "email": "don@diversifieddigital.com",
+          "company": "Diversified Digital Group - Main",
+          "vertical": "MSP",
+          "audience": "Migrate Later",
+          "registrationDate": "2026-05-29"
+        },
+        {
+          "name": "Jeff Mortensen",
+          "email": "jeff@electronicspecialtiesinc.com",
+          "company": "Electronic Specialties, Inc",
+          "vertical": "MSP",
+          "audience": "Migrate Later",
+          "registrationDate": "2026-05-29"
+        },
+        {
+          "name": "Wendy Froehlich",
+          "email": "wendy@electronicspecialtiesinc.com",
+          "company": "Electronic Specialties, Inc",
+          "vertical": "MSP",
+          "audience": "Migrate Later",
+          "registrationDate": "2026-05-29"
+        },
+        {
+          "name": "Al Stewart",
+          "email": "als@glessner.net",
+          "company": "Glessner Alarm & Communication",
+          "vertical": "MSP",
+          "audience": "Migrate Later",
+          "registrationDate": "2026-05-29"
+        },
+        {
+          "name": "Charles Evans",
+          "email": "charlese@madronadigital.com",
+          "company": "Madrona Digital",
+          "vertical": "Integrator",
+          "audience": "Migrate Later",
+          "registrationDate": "2026-05-29"
+        },
+        {
+          "name": "Heather Frazier",
+          "email": "heatherf@mathias1901.com",
+          "company": "Mathias Lock and Key, Inc.",
+          "vertical": "Integrator",
+          "audience": "Migrate Later",
+          "registrationDate": "2026-05-29"
+        },
+        {
+          "name": "Eliza Lantz",
+          "email": "eliza@neuwavesystems.com",
+          "company": "Neuwave Systems Inc",
+          "vertical": "Integrator",
+          "audience": "Migrate Later",
+          "registrationDate": "2026-05-29"
+        },
+        {
+          "name": "Jay Hunt",
+          "email": "jhunt@neuwavesystems.com",
+          "company": "Neuwave Systems Inc",
+          "vertical": "Integrator",
+          "audience": "Migrate Later",
+          "registrationDate": "2026-05-29"
+        },
+        {
+          "name": "Myles Steeves",
+          "email": "myles.steeves@nutecelectrotel.com",
+          "company": "NUTEC ELECTRO TEL.",
+          "vertical": "MSP",
+          "audience": "Migrate Later",
+          "registrationDate": "2026-05-29"
+        },
+        {
+          "name": "Kelly Hile",
+          "email": "khile@pcnetsource.com",
+          "company": "PC Netsource",
+          "vertical": "MSP",
+          "audience": "Migrate Later",
+          "registrationDate": "2026-05-29"
+        },
+        {
+          "name": "brad reiber",
+          "email": "brad.reiber@protexcentral.net",
+          "company": "Protex Central",
+          "vertical": "Integrator",
+          "audience": "Migrate Later",
+          "registrationDate": "2026-05-29"
+        },
+        {
+          "name": "Jeremy Vogel",
+          "email": "jvogel@rogerstwoway.com",
+          "company": "Roger's Two Way Radio",
+          "vertical": "Integrator",
+          "audience": "Migrate Later",
+          "registrationDate": "2026-05-29"
+        }
+      ]
+    },
+    "june10": {
+      "externalTotal": 8,
+      "uniqueAccounts": 8,
+      "byAudience": {
+        "Migrate Later": 8
+      },
+      "byVertical": {
+        "MSP": 8
+      },
+      "registrants": [
+        {
+          "name": "Becca Armstrong",
+          "email": "beccaa@bektel.coop",
+          "company": "BEK Communications",
+          "vertical": "MSP",
+          "audience": "Migrate Later",
+          "registrationDate": "2026-06-01"
+        },
+        {
+          "name": "Russ Gutbrod",
+          "email": "gutbrodfamily@yahoo.com",
+          "company": "RCH",
+          "vertical": "MSP",
+          "audience": "Migrate Later",
+          "registrationDate": "2026-06-01"
+        },
+        {
+          "name": "Chris Chao",
+          "email": "chris.chao@centerpointit.com",
+          "company": "Centerpoint IT",
+          "vertical": "MSP",
+          "audience": "Migrate Later",
+          "registrationDate": "2026-06-01"
+        },
+        {
+          "name": "Anna Capozzi",
+          "email": "anna.capozzi@crinj.com",
+          "company": "Communication Resources",
+          "vertical": "MSP",
+          "audience": "Migrate Later",
+          "registrationDate": "2026-06-01"
+        },
+        {
+          "name": "Emily Guyer",
+          "email": "msemilyrae@yahoo.com",
+          "company": "Computer Consultants & Merchants Inc",
+          "vertical": "MSP",
+          "audience": "Migrate Later",
+          "registrationDate": "2026-06-01"
+        },
+        {
+          "name": "Kevin Crowley",
+          "email": "kevin@thecrowleycompany.com",
+          "company": "Crowley",
+          "vertical": "MSP",
+          "audience": "Migrate Later",
+          "registrationDate": "2026-06-01"
+        },
+        {
+          "name": "Shahram Amerian",
+          "email": "samerian@netagen.com",
+          "company": "Netagen Communication Technologies",
+          "vertical": "MSP",
+          "audience": "Migrate Later",
+          "registrationDate": "2026-06-01"
+        },
+        {
+          "name": "Shannon Slater",
+          "email": "shannons@tdaniels.com",
+          "company": "T. Daniels Consulting, Inc.",
+          "vertical": "MSP",
+          "audience": "Migrate Later",
+          "registrationDate": "2026-06-01"
+        }
+      ]
+    }
+  },
   "events": {
     "may21": {
       "key": "may21",
       "title": "May 21 Webinar",
       "eventDate": "2026-05-21T18:00:00Z",
-      "rawTotal": 211,
-      "externalTotal": 192,
+      "rawTotal": 210,
+      "externalTotal": 191,
       "internalExcluded": 19,
       "uniqueAccounts": 114,
       "byAudience": {
-        "Migrate Later": 64,
+        "Migrate Later": 63,
         "Unknown": 102,
         "Ready to Migrate": 26
       },
       "byVertical": {
-        "MSP": 139,
+        "MSP": 138,
         "Integrator": 53
       },
       "lastWeek": {
@@ -1061,14 +2828,6 @@
           "registrationDate": "2026-05-19"
         },
         {
-          "name": "Kevin Crowley",
-          "email": "kevin@thecrowleycompany.com",
-          "company": "Crowley",
-          "vertical": "MSP",
-          "audience": "Migrate Later",
-          "registrationDate": "2026-05-19"
-        },
-        {
           "name": "Mary Ann Bachar",
           "email": "mbachar@eadv.com",
           "company": "Eastern American Data / Voice Inc.",
@@ -1618,16 +3377,16 @@
       "key": "june10",
       "title": "June 10 Webinar",
       "eventDate": "2026-06-10T19:00:00Z",
-      "rawTotal": 25,
-      "externalTotal": 24,
+      "rawTotal": 27,
+      "externalTotal": 26,
       "internalExcluded": 1,
-      "uniqueAccounts": 18,
+      "uniqueAccounts": 19,
       "byAudience": {
-        "Migrate Later": 24
+        "Migrate Later": 26
       },
       "byVertical": {
         "Integrator": 9,
-        "MSP": 15
+        "MSP": 17
       },
       "lastWeek": {
         "start": "2026-05-25",
@@ -1966,6 +3725,14 @@
           "registrationDate": "2026-05-29"
         },
         {
+          "name": "Chris Chao",
+          "email": "chris.chao@centerpointit.com",
+          "company": "Centerpoint IT",
+          "vertical": "MSP",
+          "audience": "Migrate Later",
+          "registrationDate": "2026-06-01"
+        },
+        {
           "name": "Anna Capozzi",
           "email": "anna.capozzi@crinj.com",
           "company": "Communication Resources",
@@ -1977,6 +3744,14 @@
           "name": "Emily Guyer",
           "email": "msemilyrae@yahoo.com",
           "company": "Computer Consultants & Merchants Inc",
+          "vertical": "MSP",
+          "audience": "Migrate Later",
+          "registrationDate": "2026-06-01"
+        },
+        {
+          "name": "Kevin Crowley",
+          "email": "kevin@thecrowleycompany.com",
+          "company": "Crowley",
           "vertical": "MSP",
           "audience": "Migrate Later",
           "registrationDate": "2026-06-01"

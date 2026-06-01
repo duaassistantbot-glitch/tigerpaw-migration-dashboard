@@ -2,16 +2,16 @@
   "key": "june10",
   "title": "June 10 Webinar",
   "eventDate": "2026-06-10T19:00:00Z",
-  "rawTotal": 25,
-  "externalTotal": 24,
+  "rawTotal": 27,
+  "externalTotal": 26,
   "internalExcluded": 1,
-  "uniqueAccounts": 18,
+  "uniqueAccounts": 19,
   "byAudience": {
-    "Migrate Later": 24
+    "Migrate Later": 26
   },
   "byVertical": {
     "Integrator": 9,
-    "MSP": 15
+    "MSP": 17
   },
   "lastWeek": {
     "start": "2026-05-25",
@@ -350,6 +350,14 @@
       "registrationDate": "2026-05-29"
     },
     {
+      "name": "Chris Chao",
+      "email": "chris.chao@centerpointit.com",
+      "company": "Centerpoint IT",
+      "vertical": "MSP",
+      "audience": "Migrate Later",
+      "registrationDate": "2026-06-01"
+    },
+    {
       "name": "Anna Capozzi",
       "email": "anna.capozzi@crinj.com",
       "company": "Communication Resources",
@@ -361,6 +369,14 @@
       "name": "Emily Guyer",
       "email": "msemilyrae@yahoo.com",
       "company": "Computer Consultants & Merchants Inc",
+      "vertical": "MSP",
+      "audience": "Migrate Later",
+      "registrationDate": "2026-06-01"
+    },
+    {
+      "name": "Kevin Crowley",
+      "email": "kevin@thecrowleycompany.com",
+      "company": "Crowley",
       "vertical": "MSP",
       "audience": "Migrate Later",
       "registrationDate": "2026-06-01"
