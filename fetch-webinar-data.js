@@ -13,7 +13,13 @@ const HS_TOKEN = process.env.HS_ACCESS_TOKEN;
 const WEBINAR_NAME = 'Webinar: See it for yourself. Introducing Rev.io PSA.';
 const EVENTS = [
   { key: 'may21', title: 'May 21 Webinar', eventDate: '2026-05-21T18:00:00Z' },
-  { key: 'june10', title: 'June 10 Webinar', eventDate: '2026-06-10T19:00:00Z' }
+  {
+    key: 'june10',
+    title: 'June 10 Webinar',
+    eventDate: '2026-06-10T19:00:00Z',
+    startDate: '2026-06-10T00:00:00Z',
+    endDate: '2026-06-11T00:00:00Z'
+  }
 ];
 const LAST_WEEK = { start: '2026-05-25', end: '2026-05-31' };
 const CAMPAIGN_AUDIENCE = {
@@ -119,6 +125,40 @@ async function getRegistrants(eventDate) {
   return results;
 }
 
+async function getRegistrantsForEvent(eventConfig) {
+  if (!eventConfig.startDate || !eventConfig.endDate) {
+    return getRegistrants(eventConfig.eventDate);
+  }
+
+  const results = [];
+  let after = null;
+  do {
+    const result = await requestJson('POST', '/crm/v3/objects/contacts/search', {
+      filterGroups: [{
+        filters: [
+          { propertyName: 'contrast_last_event_date', operator: 'GTE', value: eventConfig.startDate },
+          { propertyName: 'contrast_last_event_date', operator: 'LT', value: eventConfig.endDate }
+        ]
+      }],
+      properties: [
+        'email',
+        'firstname',
+        'lastname',
+        'company',
+        'associatedcompanyid',
+        'contrast_last_registration_date',
+        'contrast_last_event_date'
+      ],
+      limit: 100,
+      ...(after ? { after } : {})
+    });
+    results.push(...(result.results || []));
+    after = result.paging?.next?.after || null;
+    if (after) await sleep(150);
+  } while (after);
+  return results;
+}
+
 async function getCompanyMap(companyIds) {
   const companyMap = {};
   const uniqueIds = [...new Set(companyIds.filter(Boolean))];
@@ -165,7 +205,7 @@ function summarizeRows(rows) {
 }
 
 async function buildEvent(eventConfig, emailAudience) {
-  const contacts = await getRegistrants(eventConfig.eventDate);
+  const contacts = await getRegistrantsForEvent(eventConfig);
   const externalContacts = contacts.filter(contact => !(contact.properties.email || '').toLowerCase().endsWith('@rev.io'));
   const companyMap = await getCompanyMap(externalContacts.map(contact => contact.properties.associatedcompanyid));
 
