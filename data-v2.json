@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-02T12:02:32.752Z",
+  "generatedAt": "2026-06-03T12:01:57.965Z",
   "audienceStats": {
     "Ready to Migrate": {
       "sent": 1638,
@@ -36,8 +36,8 @@
       "clicks": 64,
       "openRate": "12.4%",
       "clickRate": "2.7%",
-      "webinarReg": 157,
-      "webinarRegAccts": 94
+      "webinarReg": 181,
+      "webinarRegAccts": 104
     },
     "Integrator": {
       "emailedContacts": 864,
@@ -48,7 +48,7 @@
       "clicks": 36,
       "openRate": "12.6%",
       "clickRate": "3.3%",
-      "webinarReg": 63,
+      "webinarReg": 64,
       "webinarRegAccts": 37
     }
   },
@@ -2491,7 +2491,7 @@
     ]
   },
   "sfOpps": {
-    "generatedAt": "2026-06-02T12:02:08.018Z",
+    "generatedAt": "2026-06-03T12:01:35.890Z",
     "wmrContactCount": 8,
     "oppsByAudience": {
       "Ready to Migrate": {
@@ -2562,7 +2562,7 @@
             "id": "006PX00000bB2kLYAS",
             "name": "Intelligent Power Solutions Web Migration",
             "account": "Intelligent Power Solutions",
-            "stage": "1- Discovery Scheduled",
+            "stage": "3 - Initial Product Demo",
             "amount": 1209,
             "createdDate": "2026-05-26T12:48:50.000+0000"
           }
@@ -2583,8 +2583,8 @@
     "clickRate": "2.9%",
     "uniqueContacts": 2432,
     "uniqueAccts": 375,
-    "webinarReg": 220,
-    "webinarRegAccts": 131,
+    "webinarReg": 245,
+    "webinarRegAccts": 141,
     "internalExcluded": 21
   },
   "regBreakdown": {
@@ -2597,8 +2597,8 @@
       "Integrator": 35
     },
     "Other": {
-      "MSP": 73,
-      "Integrator": 18
+      "MSP": 97,
+      "Integrator": 19
     }
   }
 }

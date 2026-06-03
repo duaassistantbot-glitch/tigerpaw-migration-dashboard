@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-02T12:02:08.018Z",
+  "generatedAt": "2026-06-03T12:01:35.890Z",
   "wmrContactCount": 8,
   "oppsByAudience": {
     "Ready to Migrate": {
@@ -70,7 +70,7 @@
           "id": "006PX00000bB2kLYAS",
           "name": "Intelligent Power Solutions Web Migration",
           "account": "Intelligent Power Solutions",
-          "stage": "1- Discovery Scheduled",
+          "stage": "3 - Initial Product Demo",
           "amount": 1209,
           "createdDate": "2026-05-26T12:48:50.000+0000"
         }
