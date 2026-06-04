@@ -215,8 +215,7 @@
 <script>
 let MASTER = null;
 let DRILLDOWN = { type: 'accounts', rows: [], title: '' };
-const DATA_SYNC_COMMAND = 'Run the Tigerpaw Migration Dashboard full refresh and push to GitHub Pages now.';
-const CONTROL_UI_URL = 'https://dua-revio.msappproxy.net/';
+const DATA_SYNC_URL = 'https://dua-revio.msappproxy.net/tigerpaw-data-sync';
 
 const fmt = new Intl.NumberFormat('en-US');
 const money = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 });
@@ -229,16 +228,16 @@ function esc(value) {
 
 async function requestDataSync() {
   const status = document.getElementById('sync-status');
-  status.textContent = 'Opening Control UI with sync command copied...';
+  status.textContent = 'Starting data sync...';
 
   try {
-    await navigator.clipboard.writeText(DATA_SYNC_COMMAND);
-    status.textContent = 'Sync command copied. Paste/send it in Control UI.';
+    const res = await fetch(DATA_SYNC_URL, { method: 'POST', cache: 'no-store' });
+    if (!res.ok) throw new Error(`Sync request failed (${res.status})`);
+    status.textContent = 'Data sync started.';
   } catch (err) {
-    status.textContent = 'Control UI opening. Command: ' + DATA_SYNC_COMMAND;
+    status.textContent = 'Opening sync trigger...';
+    window.open(DATA_SYNC_URL, '_blank', 'noopener,noreferrer');
   }
-
-  window.open(CONTROL_UI_URL, '_blank', 'noopener,noreferrer');
 }
 
 function wantMigrateAccounts() {
