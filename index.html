@@ -16,6 +16,9 @@
   .nav { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; justify-content: flex-end; }
   .nav a { color: #FFFFFF; border: 1px solid rgba(255,255,255,0.45); text-decoration: none; padding: 7px 12px; border-radius: 6px; font-size: 12px; font-weight: 700; }
   .nav a.active { background: #2399B5; border-color: #2399B5; }
+  .sync-btn { color: #FFFFFF; border: 1px solid #6EBE4F; background: #6EBE4F; padding: 7px 12px; border-radius: 6px; font-size: 12px; line-height: 1.2; font-weight: 800; font-family: inherit; cursor: pointer; }
+  .sync-btn:hover { background: #2399B5; border-color: #2399B5; }
+  .sync-status { flex-basis: 100%; color: #FFFFFF; font-size: 11px; text-align: right; min-height: 14px; }
   .main { max-width: 1200px; margin: 0 auto; padding: 26px 24px 44px; }
   .section-title { margin: 24px 0 12px; color: #2399B5; font-size: 12px; font-weight: 800; letter-spacing: .8px; text-transform: uppercase; display: flex; align-items: center; gap: 10px; }
   .section-title::after { content: ""; height: 1px; background: #DDE2E8; flex: 1; }
@@ -117,6 +120,8 @@
     <nav class="nav">
       <a class="active" href="./">Master Overview</a>
       <a href="./webinar.html">TP Webinar Deep Dive</a>
+      <button class="sync-btn" type="button" onclick="requestDataSync()">Data Sync</button>
+      <span class="sync-status" id="sync-status" aria-live="polite"></span>
     </nav>
   </div>
 </header>
@@ -210,6 +215,8 @@
 <script>
 let MASTER = null;
 let DRILLDOWN = { type: 'accounts', rows: [], title: '' };
+const DATA_SYNC_COMMAND = 'Run the Tigerpaw Migration Dashboard full refresh and push to GitHub Pages now.';
+const CONTROL_UI_URL = 'https://dua-revio.msappproxy.net/';
 
 const fmt = new Intl.NumberFormat('en-US');
 const money = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 });
@@ -218,6 +225,20 @@ function esc(value) {
   return String(value ?? '').replace(/[&<>"']/g, char => ({
     '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
   }[char]));
+}
+
+async function requestDataSync() {
+  const status = document.getElementById('sync-status');
+  status.textContent = 'Opening Control UI with sync command copied...';
+
+  try {
+    await navigator.clipboard.writeText(DATA_SYNC_COMMAND);
+    status.textContent = 'Sync command copied. Paste/send it in Control UI.';
+  } catch (err) {
+    status.textContent = 'Control UI opening. Command: ' + DATA_SYNC_COMMAND;
+  }
+
+  window.open(CONTROL_UI_URL, '_blank', 'noopener,noreferrer');
 }
 
 function wantMigrateAccounts() {
