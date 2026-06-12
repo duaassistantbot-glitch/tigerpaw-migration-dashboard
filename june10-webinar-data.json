@@ -4,18 +4,18 @@
   "eventDate": "2026-06-10T19:00:00Z",
   "startDate": "2026-06-10T00:00:00Z",
   "endDate": "2026-06-11T00:00:00Z",
-  "rawTotal": 131,
-  "externalTotal": 124,
-  "internalExcluded": 7,
-  "uniqueAccounts": 80,
+  "rawTotal": 140,
+  "externalTotal": 132,
+  "internalExcluded": 8,
+  "uniqueAccounts": 82,
   "byAudience": {
-    "Migrate Later": 89,
-    "Ready to Migrate": 9,
-    "Unknown": 26
+    "Migrate Later": 95,
+    "Ready to Migrate": 10,
+    "Unknown": 27
   },
   "byVertical": {
-    "Integrator": 19,
-    "MSP": 105
+    "Integrator": 21,
+    "MSP": 111
   },
   "lastWeek": {
     "start": "2026-05-25",
@@ -394,14 +394,6 @@
       "registrationDate": "2026-06-01"
     },
     {
-      "name": "Erik Peterson",
-      "email": "erik@intecsocal.com",
-      "company": "Intec - CA",
-      "vertical": "Integrator",
-      "audience": "Ready to Migrate",
-      "registrationDate": "2026-06-01"
-    },
-    {
       "name": "Shahram Amerian",
       "email": "samerian@netagen.com",
       "company": "Netagen Communication Technologies",
@@ -453,14 +445,6 @@
       "name": "Bill Lenherr",
       "email": "blenherr@grcs.com",
       "company": "Greenbrier Communications",
-      "vertical": "MSP",
-      "audience": "Migrate Later",
-      "registrationDate": "2026-06-02"
-    },
-    {
-      "name": "Linda Wheeler",
-      "email": "linda.wheeler@onlineaplus.com",
-      "company": "HyVee, Inc. dba A+ Communications & Security",
       "vertical": "MSP",
       "audience": "Migrate Later",
       "registrationDate": "2026-06-02"
@@ -602,14 +586,6 @@
       "registrationDate": "2026-06-03"
     },
     {
-      "name": "Louis Nickerson",
-      "email": "louis.nickerson@advancedprocomm.com",
-      "company": "Advanced Procomm, Inc.",
-      "vertical": "MSP",
-      "audience": "Ready to Migrate",
-      "registrationDate": "2026-06-03"
-    },
-    {
       "name": "Steve Jackson",
       "email": "steve.jackson@chesapeakecom.com",
       "company": "Chesapeake Communications, Inc.",
@@ -623,14 +599,6 @@
       "company": "Communications Technologies",
       "vertical": "MSP",
       "audience": "Migrate Later",
-      "registrationDate": "2026-06-03"
-    },
-    {
-      "name": "Matt Hillis",
-      "email": "mbone@ctsservices.com",
-      "company": "CTS Services Inc.",
-      "vertical": "MSP",
-      "audience": "Ready to Migrate",
       "registrationDate": "2026-06-03"
     },
     {
@@ -853,14 +821,6 @@
       "name": "Kevin Durham",
       "email": "kevin.durham@centerpointit.com",
       "company": "Centerpoint IT",
-      "vertical": "MSP",
-      "audience": "Migrate Later",
-      "registrationDate": "2026-06-08"
-    },
-    {
-      "name": "Gary Ball",
-      "email": "gball@crccommunications.com",
-      "company": "CRC Communications Limited",
       "vertical": "MSP",
       "audience": "Migrate Later",
       "registrationDate": "2026-06-08"
@@ -1122,6 +1082,14 @@
       "registrationDate": "2026-06-09"
     },
     {
+      "name": "Louis Nickerson",
+      "email": "louis.nickerson@advancedprocomm.com",
+      "company": "Advanced Procomm, Inc.",
+      "vertical": "MSP",
+      "audience": "Ready to Migrate",
+      "registrationDate": "2026-06-10"
+    },
+    {
       "name": "Michael Hogan",
       "email": "mhogan@andersonpump.com",
       "company": "Anderson Pump Service",
@@ -1130,11 +1098,91 @@
       "registrationDate": "2026-06-10"
     },
     {
+      "name": "Conference Conference",
+      "email": "conferenceroom@arcomm1.com",
+      "company": "Arcomm Communications",
+      "vertical": "MSP",
+      "audience": "Migrate Later",
+      "registrationDate": "2026-06-10"
+    },
+    {
       "name": "Glen Glanville",
       "email": "glen.glanville@arcomm1.com",
       "company": "Arcomm Communications",
       "vertical": "MSP",
       "audience": "Migrate Later",
+      "registrationDate": "2026-06-10"
+    },
+    {
+      "name": "Dan Trimmer",
+      "email": "trimmer@chesapeakecom.com",
+      "company": "Chesapeake Communications, Inc.",
+      "vertical": "MSP",
+      "audience": "Migrate Later",
+      "registrationDate": "2026-06-10"
+    },
+    {
+      "name": "Gary Ball",
+      "email": "gball@crccommunications.com",
+      "company": "CRC Communications Limited",
+      "vertical": "MSP",
+      "audience": "Migrate Later",
+      "registrationDate": "2026-06-10"
+    },
+    {
+      "name": "Matt Hillis",
+      "email": "mbone@ctsservices.com",
+      "company": "CTS Services Inc.",
+      "vertical": "MSP",
+      "audience": "Ready to Migrate",
+      "registrationDate": "2026-06-10"
+    },
+    {
+      "name": "Samuel  Tiili",
+      "email": "samuel@electronicspecialtiesinc.com",
+      "company": "Electronic Specialties, Inc",
+      "vertical": "MSP",
+      "audience": "Migrate Later",
+      "registrationDate": "2026-06-10"
+    },
+    {
+      "name": "Chris Quick",
+      "email": "cquick@grcs.com",
+      "company": "Greenbrier Communications",
+      "vertical": "MSP",
+      "audience": "Migrate Later",
+      "registrationDate": "2026-06-10"
+    },
+    {
+      "name": "Linda Wheeler",
+      "email": "linda.wheeler@onlineaplus.com",
+      "company": "HyVee, Inc. dba A+ Communications & Security",
+      "vertical": "MSP",
+      "audience": "Migrate Later",
+      "registrationDate": "2026-06-10"
+    },
+    {
+      "name": "Erik Peterson",
+      "email": "erik@intecsocal.com",
+      "company": "Intec - CA",
+      "vertical": "Integrator",
+      "audience": "Ready to Migrate",
+      "registrationDate": "2026-06-10"
+    },
+    {
+      "name": "Brittany DeBoer",
+      "email": "brittanyd@mathias1901.com",
+      "company": "Mathias Lock and Key, Inc.",
+      "vertical": "Integrator",
+      "audience": "Migrate Later",
+      "registrationDate": "2026-06-10"
+    },
+    {
+      "name": "Sara Moseley",
+      "email": "saram@moseleyelectronics.com",
+      "company": "Moseley Electronics, LLC",
+      "vertical": "Integrator",
+      "audience": "Ready to Migrate",
       "registrationDate": "2026-06-10"
     },
     {
@@ -1170,6 +1218,14 @@
       "registrationDate": "2026-06-10"
     },
     {
+      "name": "Stacey Wilson",
+      "email": "staceyw@tdaniels.com",
+      "company": "T. Daniels Consulting, Inc.",
+      "vertical": "MSP",
+      "audience": "Migrate Later",
+      "registrationDate": "2026-06-10"
+    },
+    {
       "name": "Bryan Murfree",
       "email": "bryan@telewire-inc.com",
       "company": "Telewire Inc.",
@@ -1184,6 +1240,14 @@
       "vertical": "MSP",
       "audience": "Migrate Later",
       "registrationDate": "2026-06-10"
+    },
+    {
+      "name": "Tom Wilson",
+      "email": "twilson@ustele.com",
+      "company": "Ustele Inc.",
+      "vertical": "MSP",
+      "audience": "Unknown",
+      "registrationDate": "2026-06-11"
     }
   ]
 }

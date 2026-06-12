@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-03T12:01:57.965Z",
+  "generatedAt": "2026-06-12T10:01:57.916Z",
   "audienceStats": {
     "Ready to Migrate": {
       "sent": 1638,
@@ -9,9 +9,9 @@
       "openRate": "11.6%",
       "clickRate": "1.2%",
       "uniqueContacts": 558,
-      "uniqueAccts": 83,
-      "webinarReg": 27,
-      "webinarRegAccts": 20
+      "uniqueAccts": 84,
+      "webinarReg": 37,
+      "webinarRegAccts": 28
     },
     "Unknown": {
       "sent": 1855,
@@ -22,22 +22,22 @@
       "clickRate": "4.4%",
       "uniqueContacts": 1874,
       "uniqueAccts": 292,
-      "webinarReg": 102,
-      "webinarRegAccts": 67
+      "webinarReg": 121,
+      "webinarRegAccts": 79
     }
   },
   "verticalStats": {
     "MSP": {
       "emailedContacts": 1568,
-      "emailedAccts": 269,
+      "emailedAccts": 270,
       "sent": 2388,
       "delivered": 2361,
       "opens": 292,
       "clicks": 64,
       "openRate": "12.4%",
       "clickRate": "2.7%",
-      "webinarReg": 181,
-      "webinarRegAccts": 104
+      "webinarReg": 246,
+      "webinarRegAccts": 133
     },
     "Integrator": {
       "emailedContacts": 864,
@@ -48,8 +48,8 @@
       "clicks": 36,
       "openRate": "12.6%",
       "clickRate": "3.3%",
-      "webinarReg": 64,
-      "webinarRegAccts": 37
+      "webinarReg": 73,
+      "webinarRegAccts": 45
     }
   },
   "audienceEmails": {
@@ -2491,20 +2491,28 @@
     ]
   },
   "sfOpps": {
-    "generatedAt": "2026-06-03T12:01:35.890Z",
-    "wmrContactCount": 8,
+    "generatedAt": "2026-06-12T10:01:35.200Z",
+    "wmrContactCount": 9,
     "oppsByAudience": {
       "Ready to Migrate": {
-        "count": 1,
+        "count": 2,
         "amount": 549.24,
         "opps": [
           {
             "id": "006PX00000bB2cIYAS",
             "name": "SOLVD Instrument Solutions Web Migration",
             "account": "SOLVD Instrument Solutions",
-            "stage": "3 - Initial Product Demo",
+            "stage": "Closed Lost",
             "amount": 549.24,
             "createdDate": "2026-05-26T12:57:52.000+0000"
+          },
+          {
+            "id": "006PX00000c2qxVYAQ",
+            "name": "Intec - CA Web Migration",
+            "account": "Intec - CA",
+            "stage": "1- Discovery Scheduled",
+            "amount": 0,
+            "createdDate": "2026-06-11T17:14:08.000+0000"
           }
         ]
       },
@@ -2524,7 +2532,7 @@
             "id": "006PX00000bJPyIYAW",
             "name": "Phoenix Energy Supply - Web Migration",
             "account": "Phoenix Energy Supply",
-            "stage": "1- Discovery Scheduled",
+            "stage": "4 - Proposal Sent",
             "amount": 770,
             "createdDate": "2026-05-28T18:29:14.000+0000"
           },
@@ -2562,7 +2570,7 @@
             "id": "006PX00000bB2kLYAS",
             "name": "Intelligent Power Solutions Web Migration",
             "account": "Intelligent Power Solutions",
-            "stage": "3 - Initial Product Demo",
+            "stage": "5 - Product / Contract Validated",
             "amount": 1209,
             "createdDate": "2026-05-26T12:48:50.000+0000"
           }
@@ -2570,7 +2578,7 @@
       }
     },
     "grandTotal": {
-      "count": 7,
+      "count": 8,
       "amount": 4953.24
     }
   },
@@ -2582,23 +2590,23 @@
     "openRate": "12.4%",
     "clickRate": "2.9%",
     "uniqueContacts": 2432,
-    "uniqueAccts": 375,
-    "webinarReg": 245,
-    "webinarRegAccts": 141,
-    "internalExcluded": 21
+    "uniqueAccts": 376,
+    "webinarReg": 319,
+    "webinarRegAccts": 178,
+    "internalExcluded": 23
   },
   "regBreakdown": {
     "Ready to Migrate": {
-      "MSP": 17,
-      "Integrator": 10
+      "MSP": 25,
+      "Integrator": 12
     },
     "Unknown": {
-      "MSP": 67,
-      "Integrator": 35
+      "MSP": 83,
+      "Integrator": 38
     },
     "Other": {
-      "MSP": 97,
-      "Integrator": 19
+      "MSP": 138,
+      "Integrator": 23
     }
   }
 }

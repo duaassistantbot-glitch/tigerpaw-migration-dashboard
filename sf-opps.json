@@ -1,18 +1,26 @@
 {
-  "generatedAt": "2026-06-03T12:01:35.890Z",
-  "wmrContactCount": 8,
+  "generatedAt": "2026-06-12T10:01:35.200Z",
+  "wmrContactCount": 9,
   "oppsByAudience": {
     "Ready to Migrate": {
-      "count": 1,
+      "count": 2,
       "amount": 549.24,
       "opps": [
         {
           "id": "006PX00000bB2cIYAS",
           "name": "SOLVD Instrument Solutions Web Migration",
           "account": "SOLVD Instrument Solutions",
-          "stage": "3 - Initial Product Demo",
+          "stage": "Closed Lost",
           "amount": 549.24,
           "createdDate": "2026-05-26T12:57:52.000+0000"
+        },
+        {
+          "id": "006PX00000c2qxVYAQ",
+          "name": "Intec - CA Web Migration",
+          "account": "Intec - CA",
+          "stage": "1- Discovery Scheduled",
+          "amount": 0,
+          "createdDate": "2026-06-11T17:14:08.000+0000"
         }
       ]
     },
@@ -32,7 +40,7 @@
           "id": "006PX00000bJPyIYAW",
           "name": "Phoenix Energy Supply - Web Migration",
           "account": "Phoenix Energy Supply",
-          "stage": "1- Discovery Scheduled",
+          "stage": "4 - Proposal Sent",
           "amount": 770,
           "createdDate": "2026-05-28T18:29:14.000+0000"
         },
@@ -70,7 +78,7 @@
           "id": "006PX00000bB2kLYAS",
           "name": "Intelligent Power Solutions Web Migration",
           "account": "Intelligent Power Solutions",
-          "stage": "3 - Initial Product Demo",
+          "stage": "5 - Product / Contract Validated",
           "amount": 1209,
           "createdDate": "2026-05-26T12:48:50.000+0000"
         }
@@ -78,7 +86,7 @@
     }
   },
   "grandTotal": {
-    "count": 7,
+    "count": 8,
     "amount": 4953.24
   }
 }
