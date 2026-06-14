@@ -4,18 +4,18 @@
   "eventDate": "2026-06-10T19:00:00Z",
   "startDate": "2026-06-10T00:00:00Z",
   "endDate": "2026-06-11T00:00:00Z",
-  "rawTotal": 140,
-  "externalTotal": 132,
+  "rawTotal": 141,
+  "externalTotal": 133,
   "internalExcluded": 8,
   "uniqueAccounts": 82,
   "byAudience": {
     "Migrate Later": 95,
     "Ready to Migrate": 10,
-    "Unknown": 27
+    "Unknown": 28
   },
   "byVertical": {
     "Integrator": 21,
-    "MSP": 111
+    "MSP": 112
   },
   "lastWeek": {
     "start": "2026-05-25",
@@ -1248,6 +1248,14 @@
       "vertical": "MSP",
       "audience": "Unknown",
       "registrationDate": "2026-06-11"
+    },
+    {
+      "name": "TJ McDonald",
+      "email": "tmcdonald@tdsnetworks.com",
+      "company": "TDS-Phone",
+      "vertical": "MSP",
+      "audience": "Unknown",
+      "registrationDate": "2026-06-13"
     }
   ]
 }

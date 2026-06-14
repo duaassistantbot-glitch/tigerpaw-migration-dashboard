@@ -1,19 +1,19 @@
 {
-  "generatedAt": "2026-06-12T10:06:02.771Z",
+  "generatedAt": "2026-06-14T10:03:48.388Z",
   "webinarName": "Webinar: See it for yourself. Introducing Rev.io PSA.",
   "registrationDateSplit": {
     "firstWebinarThrough": "2026-05-31",
     "june10From": "2026-06-01",
     "firstWebinar": {
-      "externalTotal": 196,
-      "uniqueAccounts": 120,
+      "externalTotal": 195,
+      "uniqueAccounts": 119,
       "byAudience": {
         "Migrate Later": 78,
-        "Unknown": 94,
+        "Unknown": 93,
         "Ready to Migrate": 24
       },
       "byVertical": {
-        "MSP": 135,
+        "MSP": 134,
         "Integrator": 61
       },
       "registrants": [
@@ -606,14 +606,6 @@
           "email": "bburns@tatecom.com",
           "company": "Tate Communications, LLC",
           "vertical": "Integrator",
-          "audience": "Unknown",
-          "registrationDate": "2026-05-15"
-        },
-        {
-          "name": "TJ McDonald",
-          "email": "tmcdonald@tdsnetworks.com",
-          "company": "TDS-Phone",
-          "vertical": "MSP",
           "audience": "Unknown",
           "registrationDate": "2026-05-15"
         },
@@ -1588,15 +1580,15 @@
       ]
     },
     "june10": {
-      "externalTotal": 120,
+      "externalTotal": 121,
       "uniqueAccounts": 77,
       "byAudience": {
         "Migrate Later": 83,
         "Ready to Migrate": 10,
-        "Unknown": 27
+        "Unknown": 28
       },
       "byVertical": {
-        "MSP": 108,
+        "MSP": 109,
         "Integrator": 12
       },
       "registrants": [
@@ -2559,6 +2551,14 @@
           "vertical": "MSP",
           "audience": "Unknown",
           "registrationDate": "2026-06-11"
+        },
+        {
+          "name": "TJ McDonald",
+          "email": "tmcdonald@tdsnetworks.com",
+          "company": "TDS-Phone",
+          "vertical": "MSP",
+          "audience": "Unknown",
+          "registrationDate": "2026-06-13"
         }
       ]
     }
@@ -2568,17 +2568,17 @@
       "key": "may21",
       "title": "May 21 Webinar",
       "eventDate": "2026-05-21T18:00:00Z",
-      "rawTotal": 197,
-      "externalTotal": 184,
+      "rawTotal": 196,
+      "externalTotal": 183,
       "internalExcluded": 13,
-      "uniqueAccounts": 107,
+      "uniqueAccounts": 106,
       "byAudience": {
         "Migrate Later": 66,
-        "Unknown": 94,
+        "Unknown": 93,
         "Ready to Migrate": 24
       },
       "byVertical": {
-        "MSP": 132,
+        "MSP": 131,
         "Integrator": 52
       },
       "lastWeek": {
@@ -3227,14 +3227,6 @@
           "email": "bburns@tatecom.com",
           "company": "Tate Communications, LLC",
           "vertical": "Integrator",
-          "audience": "Unknown",
-          "registrationDate": "2026-05-15"
-        },
-        {
-          "name": "TJ McDonald",
-          "email": "tmcdonald@tdsnetworks.com",
-          "company": "TDS-Phone",
-          "vertical": "MSP",
           "audience": "Unknown",
           "registrationDate": "2026-05-15"
         },
@@ -4118,18 +4110,18 @@
       "eventDate": "2026-06-10T19:00:00Z",
       "startDate": "2026-06-10T00:00:00Z",
       "endDate": "2026-06-11T00:00:00Z",
-      "rawTotal": 140,
-      "externalTotal": 132,
+      "rawTotal": 141,
+      "externalTotal": 133,
       "internalExcluded": 8,
       "uniqueAccounts": 82,
       "byAudience": {
         "Migrate Later": 95,
         "Ready to Migrate": 10,
-        "Unknown": 27
+        "Unknown": 28
       },
       "byVertical": {
         "Integrator": 21,
-        "MSP": 111
+        "MSP": 112
       },
       "lastWeek": {
         "start": "2026-05-25",
@@ -5362,6 +5354,14 @@
           "vertical": "MSP",
           "audience": "Unknown",
           "registrationDate": "2026-06-11"
+        },
+        {
+          "name": "TJ McDonald",
+          "email": "tmcdonald@tdsnetworks.com",
+          "company": "TDS-Phone",
+          "vertical": "MSP",
+          "audience": "Unknown",
+          "registrationDate": "2026-06-13"
         }
       ]
     }
