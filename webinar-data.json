@@ -1,20 +1,20 @@
 {
-  "generatedAt": "2026-06-14T10:03:48.388Z",
+  "generatedAt": "2026-06-16T14:20:57.255Z",
   "webinarName": "Webinar: See it for yourself. Introducing Rev.io PSA.",
   "registrationDateSplit": {
     "firstWebinarThrough": "2026-05-31",
     "june10From": "2026-06-01",
     "firstWebinar": {
-      "externalTotal": 195,
+      "externalTotal": 193,
       "uniqueAccounts": 119,
       "byAudience": {
-        "Migrate Later": 78,
-        "Unknown": 93,
+        "Migrate Later": 77,
+        "Unknown": 92,
         "Ready to Migrate": 24
       },
       "byVertical": {
         "MSP": 134,
-        "Integrator": 61
+        "Integrator": 59
       },
       "registrants": [
         {
@@ -598,14 +598,6 @@
           "email": "brandon@profcom.com",
           "company": "Professional Communication Solutions",
           "vertical": "MSP",
-          "audience": "Unknown",
-          "registrationDate": "2026-05-15"
-        },
-        {
-          "name": "Bill Burns",
-          "email": "bburns@tatecom.com",
-          "company": "Tate Communications, LLC",
-          "vertical": "Integrator",
           "audience": "Unknown",
           "registrationDate": "2026-05-15"
         },
@@ -1538,14 +1530,6 @@
           "registrationDate": "2026-05-29"
         },
         {
-          "name": "Jay Hunt",
-          "email": "jhunt@neuwavesystems.com",
-          "company": "Neuwave Systems Inc",
-          "vertical": "Integrator",
-          "audience": "Migrate Later",
-          "registrationDate": "2026-05-29"
-        },
-        {
           "name": "Myles Steeves",
           "email": "myles.steeves@nutecelectrotel.com",
           "company": "NUTEC ELECTRO TEL.",
@@ -1580,16 +1564,16 @@
       ]
     },
     "june10": {
-      "externalTotal": 121,
-      "uniqueAccounts": 77,
+      "externalTotal": 122,
+      "uniqueAccounts": 78,
       "byAudience": {
-        "Migrate Later": 83,
+        "Migrate Later": 84,
         "Ready to Migrate": 10,
         "Unknown": 28
       },
       "byVertical": {
         "MSP": 109,
-        "Integrator": 12
+        "Integrator": 13
       },
       "registrants": [
         {
@@ -2559,6 +2543,14 @@
           "vertical": "MSP",
           "audience": "Unknown",
           "registrationDate": "2026-06-13"
+        },
+        {
+          "name": "Jay Hunt",
+          "email": "jhunt@neuwavesystems.com",
+          "company": "Neuwave Systems Inc",
+          "vertical": "Integrator",
+          "audience": "Migrate Later",
+          "registrationDate": "2026-06-15"
         }
       ]
     }
@@ -2568,18 +2560,18 @@
       "key": "may21",
       "title": "May 21 Webinar",
       "eventDate": "2026-05-21T18:00:00Z",
-      "rawTotal": 196,
-      "externalTotal": 183,
+      "rawTotal": 195,
+      "externalTotal": 182,
       "internalExcluded": 13,
       "uniqueAccounts": 106,
       "byAudience": {
         "Migrate Later": 66,
-        "Unknown": 93,
+        "Unknown": 92,
         "Ready to Migrate": 24
       },
       "byVertical": {
         "MSP": 131,
-        "Integrator": 52
+        "Integrator": 51
       },
       "lastWeek": {
         "start": "2026-05-25",
@@ -3219,14 +3211,6 @@
           "email": "brandon@profcom.com",
           "company": "Professional Communication Solutions",
           "vertical": "MSP",
-          "audience": "Unknown",
-          "registrationDate": "2026-05-15"
-        },
-        {
-          "name": "Bill Burns",
-          "email": "bburns@tatecom.com",
-          "company": "Tate Communications, LLC",
-          "vertical": "Integrator",
           "audience": "Unknown",
           "registrationDate": "2026-05-15"
         },
@@ -4126,13 +4110,13 @@
       "lastWeek": {
         "start": "2026-05-25",
         "end": "2026-05-31",
-        "externalTotal": 20,
+        "externalTotal": 19,
         "uniqueAccounts": 15,
         "byAudience": {
-          "Migrate Later": 20
+          "Migrate Later": 19
         },
         "byVertical": {
-          "Integrator": 9,
+          "Integrator": 8,
           "MSP": 11
         },
         "registrants": [
@@ -4251,14 +4235,6 @@
           {
             "name": "Eliza Lantz",
             "email": "eliza@neuwavesystems.com",
-            "company": "Neuwave Systems Inc",
-            "vertical": "Integrator",
-            "audience": "Migrate Later",
-            "registrationDate": "2026-05-29"
-          },
-          {
-            "name": "Jay Hunt",
-            "email": "jhunt@neuwavesystems.com",
             "company": "Neuwave Systems Inc",
             "vertical": "Integrator",
             "audience": "Migrate Later",
@@ -4414,14 +4390,6 @@
         {
           "name": "Eliza Lantz",
           "email": "eliza@neuwavesystems.com",
-          "company": "Neuwave Systems Inc",
-          "vertical": "Integrator",
-          "audience": "Migrate Later",
-          "registrationDate": "2026-05-29"
-        },
-        {
-          "name": "Jay Hunt",
-          "email": "jhunt@neuwavesystems.com",
           "company": "Neuwave Systems Inc",
           "vertical": "Integrator",
           "audience": "Migrate Later",
@@ -5362,6 +5330,14 @@
           "vertical": "MSP",
           "audience": "Unknown",
           "registrationDate": "2026-06-13"
+        },
+        {
+          "name": "Jay Hunt",
+          "email": "jhunt@neuwavesystems.com",
+          "company": "Neuwave Systems Inc",
+          "vertical": "Integrator",
+          "audience": "Migrate Later",
+          "registrationDate": "2026-06-15"
         }
       ]
     }

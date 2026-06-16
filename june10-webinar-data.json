@@ -20,13 +20,13 @@
   "lastWeek": {
     "start": "2026-05-25",
     "end": "2026-05-31",
-    "externalTotal": 20,
+    "externalTotal": 19,
     "uniqueAccounts": 15,
     "byAudience": {
-      "Migrate Later": 20
+      "Migrate Later": 19
     },
     "byVertical": {
-      "Integrator": 9,
+      "Integrator": 8,
       "MSP": 11
     },
     "registrants": [
@@ -145,14 +145,6 @@
       {
         "name": "Eliza Lantz",
         "email": "eliza@neuwavesystems.com",
-        "company": "Neuwave Systems Inc",
-        "vertical": "Integrator",
-        "audience": "Migrate Later",
-        "registrationDate": "2026-05-29"
-      },
-      {
-        "name": "Jay Hunt",
-        "email": "jhunt@neuwavesystems.com",
         "company": "Neuwave Systems Inc",
         "vertical": "Integrator",
         "audience": "Migrate Later",
@@ -308,14 +300,6 @@
     {
       "name": "Eliza Lantz",
       "email": "eliza@neuwavesystems.com",
-      "company": "Neuwave Systems Inc",
-      "vertical": "Integrator",
-      "audience": "Migrate Later",
-      "registrationDate": "2026-05-29"
-    },
-    {
-      "name": "Jay Hunt",
-      "email": "jhunt@neuwavesystems.com",
       "company": "Neuwave Systems Inc",
       "vertical": "Integrator",
       "audience": "Migrate Later",
@@ -1256,6 +1240,14 @@
       "vertical": "MSP",
       "audience": "Unknown",
       "registrationDate": "2026-06-13"
+    },
+    {
+      "name": "Jay Hunt",
+      "email": "jhunt@neuwavesystems.com",
+      "company": "Neuwave Systems Inc",
+      "vertical": "Integrator",
+      "audience": "Migrate Later",
+      "registrationDate": "2026-06-15"
     }
   ]
 }
