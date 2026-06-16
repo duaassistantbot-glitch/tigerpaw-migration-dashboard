@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-06-15T10:01:41.542Z",
-  "wmrContactCount": 9,
+  "generatedAt": "2026-06-16T10:01:35.391Z",
+  "wmrContactCount": 10,
   "oppsByAudience": {
     "Ready to Migrate": {
       "count": 2,
@@ -63,14 +63,14 @@
       ]
     },
     "Other": {
-      "count": 2,
+      "count": 3,
       "amount": 2559,
       "opps": [
         {
           "id": "006PX00000aztdzYAA",
           "name": "Hosted America - Web Migration",
           "account": "Hosted America",
-          "stage": "1- Discovery Scheduled",
+          "stage": "Closed Lost",
           "amount": 1350,
           "createdDate": "2026-05-21T19:02:48.000+0000"
         },
@@ -81,12 +81,20 @@
           "stage": "5 - Product / Contract Validated",
           "amount": 1209,
           "createdDate": "2026-05-26T12:48:50.000+0000"
+        },
+        {
+          "id": "006PX00000cDuZZYA0",
+          "name": "Network Enhancement Systems Web Migration",
+          "account": "Network Enhancement Systems",
+          "stage": "1- Discovery Scheduled",
+          "amount": 0,
+          "createdDate": "2026-06-15T18:56:25.000+0000"
         }
       ]
     }
   },
   "grandTotal": {
-    "count": 8,
+    "count": 9,
     "amount": 4953.24
   }
 }
