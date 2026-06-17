@@ -318,18 +318,6 @@ function accountRowsByStatus(status) {
   return MASTER.accounts.filter(account => (account.webMigrationStatus || 'Blank') === status);
 }
 
-function migratedUnknownAccounts() {
-  if (!MASTER) return [];
-  const wonUnknownAccountIds = new Set(
-    MASTER.opportunities
-      .filter(opp => opp.stage === 'Closed Won' && opp.accountId)
-      .map(opp => opp.accountId)
-  );
-  return MASTER.accounts.filter(account =>
-    account.webMigrationStatus === 'Unknown' && wonUnknownAccountIds.has(account.id)
-  );
-}
-
 function oppRowsByStage(stage) {
   return MASTER.opportunities.filter(opp => opp.stage === stage);
 }
@@ -583,25 +571,6 @@ function oppDetailRow(opp) {
 
 function barRows(groups, total, kind) {
   return groups.map((group, idx) => {
-    if (kind === 'status' && group.label === 'Unknown') {
-      const migratedAccounts = migratedUnknownAccounts();
-      const migrated = migratedAccounts.length;
-      const target = group.count;
-      const pct = target ? Math.round((migrated / target) * 1000) / 10 : 0;
-      const fillPct = target ? Math.max(0, Math.min(100, (migrated / target) * 100)) : 0;
-      return `
-        <div class="bar-row">
-          <div class="name"><span class="dot gray"></span><span>${esc(group.label)}</span></div>
-          <div class="bar goal-bar" title="${fmt.format(migrated)} of ${fmt.format(target)} Unknown accounts migrated">
-            <div class="fill" style="width:${fillPct}%"></div>
-          </div>
-          <div class="num">
-            <button class="num-btn" onclick="openAccounts('Migrated Unknown Accounts', migratedUnknownAccounts())">${fmt.format(migrated)}</button>
-            <small>of ${fmt.format(target)} migrated (${pct}%)</small>
-          </div>
-        </div>`;
-    }
-
     const pct = total ? Math.max(2, Math.round((group.count / total) * 100)) : 0;
     const dotClass = idx % 4 === 0 ? '' : idx % 4 === 1 ? 'green' : idx % 4 === 2 ? 'navy' : 'gray';
     const sub = kind === 'stage' ? `${money.format(group.amount || 0)} Renewal` : `${group.pct || Math.round((group.count / total) * 1000) / 10}% of accounts`;
