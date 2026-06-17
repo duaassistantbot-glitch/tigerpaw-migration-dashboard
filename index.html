@@ -216,6 +216,9 @@
     <select class="select" id="loss-filter">
       <option value="all">All loss reasons</option>
     </select>
+    <select class="select" id="web-status-filter">
+      <option value="all">All web migration statuses</option>
+    </select>
   </div>
   <section class="card">
     <div class="card-head">
@@ -229,6 +232,7 @@
           <th class="num-h"><button class="sort-btn" type="button" onclick="setSort('opp','amount')">Renewal Amount <span class="sort-indicator" data-sort-table="opp" data-sort-key="amount"></span></button></th>
           <th><button class="sort-btn" type="button" onclick="setSort('opp','owner')">Opportunity Owner <span class="sort-indicator" data-sort-table="opp" data-sort-key="owner"></span></button></th>
           <th><button class="sort-btn" type="button" onclick="setSort('opp','nextStep')">Next Step <span class="sort-indicator" data-sort-table="opp" data-sort-key="nextStep"></span></button></th>
+          <th><button class="sort-btn" type="button" onclick="setSort('opp','stage')">Stage <span class="sort-indicator" data-sort-table="opp" data-sort-key="stage"></span></button></th>
           <th><button class="sort-btn" type="button" onclick="setSort('opp','lossReason')">Loss Reason <span class="sort-indicator" data-sort-table="opp" data-sort-key="lossReason"></span></button></th>
           <th><button class="sort-btn" type="button" onclick="setSort('opp','lossDetail')">Loss Reason Detail <span class="sort-indicator" data-sort-table="opp" data-sort-key="lossDetail"></span></button></th>
           <th><button class="sort-btn" type="button" onclick="setSort('opp','vikingRelease')">Viking One Release <span class="sort-indicator" data-sort-table="opp" data-sort-key="vikingRelease"></span></button></th>
@@ -293,6 +297,18 @@ function oppRowsByLossReason(reason) {
   return MASTER.opportunities.filter(opp => opp.stage === 'Closed Lost' && (opp.lossReason || 'Unspecified') === reason);
 }
 
+function accountForOpp(opp) {
+  if (!MASTER) return null;
+  return MASTER.accounts.find(account =>
+    (opp.accountId && account.id === opp.accountId) ||
+    account.name === opp.account
+  );
+}
+
+function webMigrationStatusForOpp(opp) {
+  return accountForOpp(opp)?.webMigrationStatus || 'Blank';
+}
+
 function roadmapMatchText(opp) {
   const matches = Array.isArray(opp.vikingOneUnlock?.matches)
     ? opp.vikingOneUnlock.matches.filter(match => match.feature)
@@ -308,6 +324,7 @@ function sortValue(table, key, row) {
   if (table === 'opp') {
     if (key === 'owner') return row.owner || '';
     if (key === 'nextStep') return row.nextStep || '';
+    if (key === 'stage') return row.stage || '';
     if (key === 'lossReason') return row.stage === 'Closed Lost' ? (row.lossReason || 'Unspecified') : '';
     if (key === 'lossDetail') return row.stage === 'Closed Lost' ? (row.lossDetail || '') : '';
     if (key === 'vikingRelease') return `${vikingReleaseStatus(row)} ${row.vikingOneUnlock?.summary || ''} ${roadmapMatchText(row)}`;
@@ -407,6 +424,7 @@ function openOpps(title, rows) {
       <th class="num-h">Renewal Amount</th>
       <th>Opportunity Owner</th>
       <th>Next Step</th>
+      <th>Stage</th>
       <th>Loss Reason</th>
       <th>Loss Reason Detail</th>
       <th>Viking One Release</th>
@@ -468,6 +486,7 @@ function oppDetailRow(opp) {
       <td class="num-c">${money.format(opp.amount || 0)}</td>
       <td>${esc(opp.owner || '')}</td>
       <td class="detail">${esc(opp.nextStep || '')}</td>
+      <td>${esc(opp.stage || '')}</td>
       <td>${esc(opp.stage === 'Closed Lost' ? (opp.lossReason || 'Unspecified') : '')}</td>
       <td class="detail">${esc(opp.stage === 'Closed Lost' ? (opp.lossDetail || '') : '')}</td>
       <td>${renderVikingOneUnlock(opp)}</td>
@@ -499,6 +518,7 @@ function renderOppTable() {
   const viking = document.getElementById('viking-filter').value;
   const owner = document.getElementById('owner-filter').value;
   const loss = document.getElementById('loss-filter').value;
+  const webStatus = document.getElementById('web-status-filter').value;
 
   const rows = MASTER.opportunities.filter(opp => {
     const matchesStage = stage === 'all' || opp.stage === stage;
@@ -506,10 +526,12 @@ function renderOppTable() {
     const matchesOwner = owner === 'all' || (opp.owner || '') === owner;
     const oppLossReason = opp.stage === 'Closed Lost' ? (opp.lossReason || 'Unspecified') : '';
     const matchesLoss = loss === 'all' || (loss === 'none' ? !oppLossReason : oppLossReason === loss);
+    const oppWebStatus = webMigrationStatusForOpp(opp);
+    const matchesWebStatus = webStatus === 'all' || (webStatus === 'none' ? !oppWebStatus || oppWebStatus === 'Blank' : oppWebStatus === webStatus);
     const unlock = opp.vikingOneUnlock || {};
     const unlockMatches = Array.isArray(unlock.matches) ? unlock.matches.map(match => match.feature).join(' ') : '';
-    const haystack = [opp.account, opp.stage, opp.amount, opp.owner, opp.nextStep, opp.lossReason, opp.lossDetail, unlock.status, unlock.summary, unlockMatches].join(' ').toLowerCase();
-    return matchesStage && matchesViking && matchesOwner && matchesLoss && (!search || haystack.includes(search));
+    const haystack = [opp.account, opp.stage, opp.amount, opp.owner, opp.nextStep, opp.lossReason, opp.lossDetail, oppWebStatus, unlock.status, unlock.summary, unlockMatches].join(' ').toLowerCase();
+    return matchesStage && matchesViking && matchesOwner && matchesLoss && matchesWebStatus && (!search || haystack.includes(search));
   });
   const sorted = sortedRows('opp', rows);
 
@@ -548,6 +570,7 @@ function populateOpportunityFilters(opps) {
   populateSelect('viking-filter', uniqueValues(opps, vikingReleaseStatus), 'Not evaluated');
   populateSelect('owner-filter', uniqueValues(opps, opp => opp.owner || ''), 'No owner');
   populateSelect('loss-filter', uniqueValues(opps, opp => opp.stage === 'Closed Lost' ? (opp.lossReason || 'Unspecified') : ''), 'No loss reason');
+  populateSelect('web-status-filter', uniqueValues(opps, webMigrationStatusForOpp), 'No web migration status');
 }
 
 function render(data) {
@@ -581,6 +604,7 @@ document.getElementById('stage-filter').addEventListener('change', renderOppTabl
 document.getElementById('viking-filter').addEventListener('change', renderOppTable);
 document.getElementById('owner-filter').addEventListener('change', renderOppTable);
 document.getElementById('loss-filter').addEventListener('change', renderOppTable);
+document.getElementById('web-status-filter').addEventListener('change', renderOppTable);
 
 fetch('./master-data.json', { cache: 'no-store' })
   .then(res => {
