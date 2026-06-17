@@ -62,6 +62,10 @@
   table { width: 100%; border-collapse: collapse; }
   th { background: #F5F7FA; color: #1D3756; font-size: 11px; text-transform: uppercase; letter-spacing: .5px; text-align: left; padding: 11px 12px; border-bottom: 2px solid #DDE2E8; white-space: nowrap; }
   th.num-h, td.num-c { text-align: right; }
+  .sort-btn { width: 100%; border: 0; background: transparent; color: inherit; cursor: pointer; display: inline-flex; align-items: center; gap: 5px; justify-content: flex-start; padding: 0; font: inherit; letter-spacing: inherit; text-align: inherit; text-transform: inherit; }
+  .num-h .sort-btn { justify-content: flex-end; }
+  .sort-btn:hover { color: #2399B5; }
+  .sort-indicator { display: inline-block; min-width: 8px; color: #2399B5; font-size: 10px; line-height: 1; }
   td { padding: 12px; border-bottom: 1px solid #F0F2F5; font-size: 13px; vertical-align: top; }
   tr:last-child td { border-bottom: 0; }
   td.num-c { font-family: 'Montserrat', sans-serif; font-weight: 800; color: #1D3756; }
@@ -224,12 +228,12 @@
     <table>
       <thead>
         <tr>
-          <th>Account Name</th>
-          <th class="num-h">Renewal Amount</th>
-          <th>Missing Capability</th>
-          <th>Viking One Unlock</th>
-          <th>Matched Roadmap Items</th>
-          <th>SMC</th>
+          <th><button class="sort-btn" type="button" onclick="setSort('viking','account')">Account Name <span class="sort-indicator" data-sort-table="viking" data-sort-key="account"></span></button></th>
+          <th class="num-h"><button class="sort-btn" type="button" onclick="setSort('viking','amount')">Renewal Amount <span class="sort-indicator" data-sort-table="viking" data-sort-key="amount"></span></button></th>
+          <th><button class="sort-btn" type="button" onclick="setSort('viking','missingCapability')">Missing Capability <span class="sort-indicator" data-sort-table="viking" data-sort-key="missingCapability"></span></button></th>
+          <th><button class="sort-btn" type="button" onclick="setSort('viking','unlock')">Viking One Unlock <span class="sort-indicator" data-sort-table="viking" data-sort-key="unlock"></span></button></th>
+          <th><button class="sort-btn" type="button" onclick="setSort('viking','matchedItems')">Matched Roadmap Items <span class="sort-indicator" data-sort-table="viking" data-sort-key="matchedItems"></span></button></th>
+          <th><button class="sort-btn" type="button" onclick="setSort('viking','smc')">SMC <span class="sort-indicator" data-sort-table="viking" data-sort-key="smc"></span></button></th>
         </tr>
       </thead>
       <tbody id="viking-table"></tbody>
@@ -252,13 +256,13 @@
     <table>
       <thead>
         <tr>
-          <th>Account Name</th>
-          <th class="num-h">Renewal Amount</th>
-          <th>Opportunity Owner</th>
-          <th>Next Step</th>
-          <th>Loss Reason</th>
-          <th>Loss Reason Detail</th>
-          <th>SMC</th>
+          <th><button class="sort-btn" type="button" onclick="setSort('opp','account')">Account Name <span class="sort-indicator" data-sort-table="opp" data-sort-key="account"></span></button></th>
+          <th class="num-h"><button class="sort-btn" type="button" onclick="setSort('opp','amount')">Renewal Amount <span class="sort-indicator" data-sort-table="opp" data-sort-key="amount"></span></button></th>
+          <th><button class="sort-btn" type="button" onclick="setSort('opp','owner')">Opportunity Owner <span class="sort-indicator" data-sort-table="opp" data-sort-key="owner"></span></button></th>
+          <th><button class="sort-btn" type="button" onclick="setSort('opp','nextStep')">Next Step <span class="sort-indicator" data-sort-table="opp" data-sort-key="nextStep"></span></button></th>
+          <th><button class="sort-btn" type="button" onclick="setSort('opp','lossReason')">Loss Reason <span class="sort-indicator" data-sort-table="opp" data-sort-key="lossReason"></span></button></th>
+          <th><button class="sort-btn" type="button" onclick="setSort('opp','lossDetail')">Loss Reason Detail <span class="sort-indicator" data-sort-table="opp" data-sort-key="lossDetail"></span></button></th>
+          <th><button class="sort-btn" type="button" onclick="setSort('opp','smc')">SMC <span class="sort-indicator" data-sort-table="opp" data-sort-key="smc"></span></button></th>
         </tr>
       </thead>
       <tbody id="opp-table"></tbody>
@@ -272,6 +276,10 @@
 <script>
 let MASTER = null;
 let DRILLDOWN = { type: 'accounts', rows: [], title: '' };
+let TABLE_SORT = {
+  viking: { key: 'account', dir: 'asc' },
+  opp: { key: 'account', dir: 'asc' }
+};
 const DATA_SYNC_URL = 'https://dua-revio.msappproxy.net/tigerpaw-data-sync';
 
 const fmt = new Intl.NumberFormat('en-US');
@@ -327,6 +335,70 @@ function oppRowsByStage(stage) {
 
 function oppRowsByLossReason(reason) {
   return MASTER.opportunities.filter(opp => opp.stage === 'Closed Lost' && (opp.lossReason || 'Unspecified') === reason);
+}
+
+function roadmapMatchText(opp) {
+  const matches = Array.isArray(opp.vikingOneUnlock?.matches)
+    ? opp.vikingOneUnlock.matches.filter(match => match.feature)
+    : [];
+
+  return matches.map(match => `${match.feature || ''} ${match.status || ''}`).join(' ');
+}
+
+function sortValue(table, key, row) {
+  if (key === 'amount') return Number(row.amount || 0);
+  if (key === 'account') return row.account || '';
+  if (key === 'smc') return row.smc || '';
+
+  if (table === 'viking') {
+    if (key === 'missingCapability') return row.lossDetail || '';
+    if (key === 'unlock') return `${row.vikingOneUnlock?.status || 'Review'} ${row.vikingOneUnlock?.summary || ''}`;
+    if (key === 'matchedItems') return roadmapMatchText(row);
+  }
+
+  if (table === 'opp') {
+    if (key === 'owner') return row.owner || '';
+    if (key === 'nextStep') return row.nextStep || '';
+    if (key === 'lossReason') return row.stage === 'Closed Lost' ? (row.lossReason || 'Unspecified') : '';
+    if (key === 'lossDetail') return row.stage === 'Closed Lost' ? (row.lossDetail || '') : '';
+  }
+
+  return '';
+}
+
+function compareSortValues(a, b) {
+  if (typeof a === 'number' && typeof b === 'number') return a - b;
+  return String(a ?? '').localeCompare(String(b ?? ''), undefined, { numeric: true, sensitivity: 'base' });
+}
+
+function sortedRows(table, rows) {
+  const sort = TABLE_SORT[table];
+  if (!sort) return rows;
+
+  return [...rows].sort((a, b) => {
+    const result = compareSortValues(sortValue(table, sort.key, a), sortValue(table, sort.key, b));
+    return sort.dir === 'asc' ? result : -result;
+  });
+}
+
+function setSort(table, key) {
+  const current = TABLE_SORT[table] || { key, dir: 'asc' };
+  TABLE_SORT[table] = {
+    key,
+    dir: current.key === key && current.dir === 'asc' ? 'desc' : 'asc'
+  };
+
+  if (table === 'viking') renderVikingOneSection();
+  if (table === 'opp') renderOppTable();
+}
+
+function updateSortIndicators(table) {
+  const sort = TABLE_SORT[table];
+  document.querySelectorAll(`.sort-indicator[data-sort-table="${table}"]`).forEach(indicator => {
+    indicator.textContent = indicator.dataset.sortKey === sort.key
+      ? (sort.dir === 'asc' ? '▲' : '▼')
+      : '';
+  });
 }
 
 function openAllAccounts() {
@@ -454,6 +526,7 @@ function vikingMatchedItems(opp) {
 
 function renderVikingOneSection() {
   const rows = vikingOneRows();
+  const sorted = sortedRows('viking', rows);
   const tbody = document.getElementById('viking-table');
   const empty = document.getElementById('viking-empty');
   const counts = rows.reduce((acc, opp) => {
@@ -470,8 +543,9 @@ function renderVikingOneSection() {
   document.getElementById('viking-partial').textContent = fmt.format(counts.Partial || 0);
   document.getElementById('viking-review').textContent = fmt.format(reviewCount);
   empty.style.display = rows.length ? 'none' : 'block';
+  updateSortIndicators('viking');
 
-  tbody.innerHTML = rows.map(opp => `
+  tbody.innerHTML = sorted.map(opp => `
     <tr>
       <td><strong>${esc(opp.account)}</strong></td>
       <td class="num-c">${money.format(opp.amount || 0)}</td>
@@ -544,10 +618,12 @@ function renderOppTable() {
     const haystack = [opp.account, opp.stage, opp.amount, opp.owner, opp.nextStep, opp.lossReason, opp.lossDetail, unlock.status, unlock.summary, unlockMatches, opp.smc].join(' ').toLowerCase();
     return matchesStage && (!search || haystack.includes(search));
   });
+  const sorted = sortedRows('opp', rows);
 
   document.getElementById('opp-count-label').textContent = `${fmt.format(rows.length)} of ${fmt.format(MASTER.opportunities.length)} opportunities`;
   empty.style.display = rows.length ? 'none' : 'block';
-  tbody.innerHTML = rows.map(opp => oppDetailRow(opp)).join('');
+  updateSortIndicators('opp');
+  tbody.innerHTML = sorted.map(opp => oppDetailRow(opp)).join('');
 }
 
 function populateStageFilter(stages) {
