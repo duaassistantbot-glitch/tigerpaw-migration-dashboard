@@ -202,51 +202,23 @@
     </div>
   </section>
 
-  <div class="section-title">Viking One Release</div>
-  <section class="card">
-    <div class="card-head">
-      <h2>Closed Lost Opps Blocked by Missing Software Capabilities</h2>
-      <span id="viking-count-label">Loading...</span>
-    </div>
-    <div class="metric-strip">
-      <div class="metric">
-        <div class="metric-label">Total Blocked Opps</div>
-        <div class="metric-value" id="viking-total">--</div>
-      </div>
-      <div class="metric">
-        <div class="metric-label">Unlocked by Viking 1</div>
-        <div class="metric-value" id="viking-yes">--</div>
-      </div>
-      <div class="metric">
-        <div class="metric-label">Partial Match</div>
-        <div class="metric-value" id="viking-partial">--</div>
-      </div>
-      <div class="metric">
-        <div class="metric-label">Needs Review</div>
-        <div class="metric-value" id="viking-review">--</div>
-      </div>
-    </div>
-    <table>
-      <thead>
-        <tr>
-          <th><button class="sort-btn" type="button" onclick="setSort('viking','account')">Account Name <span class="sort-indicator" data-sort-table="viking" data-sort-key="account"></span></button></th>
-          <th class="num-h"><button class="sort-btn" type="button" onclick="setSort('viking','amount')">Renewal Amount <span class="sort-indicator" data-sort-table="viking" data-sort-key="amount"></span></button></th>
-          <th><button class="sort-btn" type="button" onclick="setSort('viking','missingCapability')">Missing Capability <span class="sort-indicator" data-sort-table="viking" data-sort-key="missingCapability"></span></button></th>
-          <th><button class="sort-btn" type="button" onclick="setSort('viking','unlock')">Viking One Unlock <span class="sort-indicator" data-sort-table="viking" data-sort-key="unlock"></span></button></th>
-          <th><button class="sort-btn" type="button" onclick="setSort('viking','matchedItems')">Matched Roadmap Items <span class="sort-indicator" data-sort-table="viking" data-sort-key="matchedItems"></span></button></th>
-          <th><button class="sort-btn" type="button" onclick="setSort('viking','smc')">SMC <span class="sort-indicator" data-sort-table="viking" data-sort-key="smc"></span></button></th>
-        </tr>
-      </thead>
-      <tbody id="viking-table"></tbody>
-    </table>
-    <div class="empty" id="viking-empty" style="display:none;">No closed-lost opportunities were lost due to software missing capabilities.</div>
-  </section>
-
   <div class="section-title">Opportunity Detail</div>
   <div class="controls">
     <input class="search" id="opp-search" type="search" placeholder="Search opportunity, account, stage, or reason">
     <select class="select" id="stage-filter">
       <option value="all">All stages</option>
+    </select>
+    <select class="select" id="viking-filter">
+      <option value="all">All Viking One</option>
+    </select>
+    <select class="select" id="owner-filter">
+      <option value="all">All owners</option>
+    </select>
+    <select class="select" id="loss-filter">
+      <option value="all">All loss reasons</option>
+    </select>
+    <select class="select" id="smc-filter">
+      <option value="all">All SMCs</option>
     </select>
   </div>
   <section class="card">
@@ -263,6 +235,7 @@
           <th><button class="sort-btn" type="button" onclick="setSort('opp','nextStep')">Next Step <span class="sort-indicator" data-sort-table="opp" data-sort-key="nextStep"></span></button></th>
           <th><button class="sort-btn" type="button" onclick="setSort('opp','lossReason')">Loss Reason <span class="sort-indicator" data-sort-table="opp" data-sort-key="lossReason"></span></button></th>
           <th><button class="sort-btn" type="button" onclick="setSort('opp','lossDetail')">Loss Reason Detail <span class="sort-indicator" data-sort-table="opp" data-sort-key="lossDetail"></span></button></th>
+          <th><button class="sort-btn" type="button" onclick="setSort('opp','vikingRelease')">Viking One Release <span class="sort-indicator" data-sort-table="opp" data-sort-key="vikingRelease"></span></button></th>
           <th><button class="sort-btn" type="button" onclick="setSort('opp','smc')">SMC <span class="sort-indicator" data-sort-table="opp" data-sort-key="smc"></span></button></th>
         </tr>
       </thead>
@@ -278,7 +251,6 @@
 let MASTER = null;
 let DRILLDOWN = { type: 'accounts', rows: [], title: '' };
 let TABLE_SORT = {
-  viking: { key: 'account', dir: 'asc' },
   opp: { key: 'account', dir: 'asc' }
 };
 const DATA_SYNC_URL = 'https://dua-revio.msappproxy.net/tigerpaw-data-sync';
@@ -339,17 +311,12 @@ function sortValue(table, key, row) {
   if (key === 'account') return row.account || '';
   if (key === 'smc') return row.smc || '';
 
-  if (table === 'viking') {
-    if (key === 'missingCapability') return row.lossDetail || '';
-    if (key === 'unlock') return `${row.vikingOneUnlock?.status || 'Review'} ${row.vikingOneUnlock?.summary || ''}`;
-    if (key === 'matchedItems') return roadmapMatchText(row);
-  }
-
   if (table === 'opp') {
     if (key === 'owner') return row.owner || '';
     if (key === 'nextStep') return row.nextStep || '';
     if (key === 'lossReason') return row.stage === 'Closed Lost' ? (row.lossReason || 'Unspecified') : '';
     if (key === 'lossDetail') return row.stage === 'Closed Lost' ? (row.lossDetail || '') : '';
+    if (key === 'vikingRelease') return `${vikingReleaseStatus(row)} ${row.vikingOneUnlock?.summary || ''} ${roadmapMatchText(row)}`;
   }
 
   return '';
@@ -377,7 +344,6 @@ function setSort(table, key) {
     dir: current.key === key && current.dir === 'asc' ? 'desc' : 'asc'
   };
 
-  if (table === 'viking') renderVikingOneSection();
   if (table === 'opp') renderOppTable();
 }
 
@@ -449,6 +415,7 @@ function openOpps(title, rows) {
       <th>Next Step</th>
       <th>Loss Reason</th>
       <th>Loss Reason Detail</th>
+      <th>Viking One Release</th>
       <th>SMC</th>
     </tr>`;
   document.getElementById('drill-modal').classList.add('open');
@@ -486,6 +453,10 @@ function normalizeForClass(value) {
   return String(value).toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 }
 
+function vikingReleaseStatus(opp) {
+  return opp.vikingOneUnlock?.status || '';
+}
+
 function renderVikingOneUnlock(opp) {
   const unlock = opp.vikingOneUnlock;
   if (!unlock || opp.stage !== 'Closed Lost') return '';
@@ -503,59 +474,6 @@ function renderVikingOneUnlock(opp) {
     </div>`;
 }
 
-function vikingOneRows() {
-  if (!MASTER) return [];
-  return MASTER.opportunities.filter(opp =>
-    opp.stage === 'Closed Lost' &&
-    opp.lossReason === 'Software Missing Capabilities'
-  );
-}
-
-function vikingMatchedItems(opp) {
-  const matches = Array.isArray(opp.vikingOneUnlock?.matches)
-    ? opp.vikingOneUnlock.matches.filter(match => match.feature)
-    : [];
-
-  if (!matches.length) return '<span class="unlock-match">No clear roadmap match</span>';
-
-  return matches.map(match => `
-    <div class="unlock-match">
-      <strong>${esc(match.feature)}</strong>${match.status ? ` (${esc(match.status)})` : ''}
-    </div>`).join('');
-}
-
-function renderVikingOneSection() {
-  const rows = vikingOneRows();
-  const sorted = sortedRows('viking', rows);
-  const tbody = document.getElementById('viking-table');
-  const empty = document.getElementById('viking-empty');
-  const counts = rows.reduce((acc, opp) => {
-    const status = opp.vikingOneUnlock?.status || 'Review';
-    acc[status] = (acc[status] || 0) + 1;
-    return acc;
-  }, {});
-  const reviewCount = rows.length - (counts.Yes || 0) - (counts.Partial || 0);
-
-  document.getElementById('viking-count-label').textContent =
-    `${fmt.format(rows.length)} closed-lost opportunities`;
-  document.getElementById('viking-total').textContent = fmt.format(rows.length);
-  document.getElementById('viking-yes').textContent = fmt.format(counts.Yes || 0);
-  document.getElementById('viking-partial').textContent = fmt.format(counts.Partial || 0);
-  document.getElementById('viking-review').textContent = fmt.format(reviewCount);
-  empty.style.display = rows.length ? 'none' : 'block';
-  updateSortIndicators('viking');
-
-  tbody.innerHTML = sorted.map(opp => `
-    <tr>
-      <td><strong>${esc(opp.account)}</strong></td>
-      <td class="num-c">${money.format(opp.amount || 0)}</td>
-      <td class="detail">${esc(opp.lossDetail || '')}</td>
-      <td>${renderVikingOneUnlock(opp)}</td>
-      <td class="detail">${vikingMatchedItems(opp)}</td>
-      <td>${esc(opp.smc || '')}</td>
-    </tr>`).join('');
-}
-
 function oppDetailRow(opp) {
   return `
     <tr>
@@ -565,6 +483,7 @@ function oppDetailRow(opp) {
       <td class="detail">${esc(opp.nextStep || '')}</td>
       <td>${esc(opp.stage === 'Closed Lost' ? (opp.lossReason || 'Unspecified') : '')}</td>
       <td class="detail">${esc(opp.stage === 'Closed Lost' ? (opp.lossDetail || '') : '')}</td>
+      <td>${renderVikingOneUnlock(opp)}</td>
       <td>${esc(opp.smc || '')}</td>
     </tr>`;
 }
@@ -591,13 +510,22 @@ function renderOppTable() {
   const empty = document.getElementById('opp-empty');
   const search = document.getElementById('opp-search').value.trim().toLowerCase();
   const stage = document.getElementById('stage-filter').value;
+  const viking = document.getElementById('viking-filter').value;
+  const owner = document.getElementById('owner-filter').value;
+  const loss = document.getElementById('loss-filter').value;
+  const smc = document.getElementById('smc-filter').value;
 
   const rows = MASTER.opportunities.filter(opp => {
     const matchesStage = stage === 'all' || opp.stage === stage;
+    const matchesViking = viking === 'all' || (viking === 'none' ? !vikingReleaseStatus(opp) : vikingReleaseStatus(opp) === viking);
+    const matchesOwner = owner === 'all' || (opp.owner || '') === owner;
+    const oppLossReason = opp.stage === 'Closed Lost' ? (opp.lossReason || 'Unspecified') : '';
+    const matchesLoss = loss === 'all' || (loss === 'none' ? !oppLossReason : oppLossReason === loss);
+    const matchesSmc = smc === 'all' || (smc === 'none' ? !(opp.smc || '') : (opp.smc || '') === smc);
     const unlock = opp.vikingOneUnlock || {};
     const unlockMatches = Array.isArray(unlock.matches) ? unlock.matches.map(match => match.feature).join(' ') : '';
     const haystack = [opp.account, opp.stage, opp.amount, opp.owner, opp.nextStep, opp.lossReason, opp.lossDetail, unlock.status, unlock.summary, unlockMatches, opp.smc].join(' ').toLowerCase();
-    return matchesStage && (!search || haystack.includes(search));
+    return matchesStage && matchesViking && matchesOwner && matchesLoss && matchesSmc && (!search || haystack.includes(search));
   });
   const sorted = sortedRows('opp', rows);
 
@@ -615,6 +543,28 @@ function populateStageFilter(stages) {
     option.textContent = stage.label;
     select.appendChild(option);
   });
+}
+
+function populateSelect(id, values, blankLabel = 'Blank') {
+  const select = document.getElementById(id);
+  values.forEach(value => {
+    const option = document.createElement('option');
+    option.value = value || 'none';
+    option.textContent = value || blankLabel;
+    select.appendChild(option);
+  });
+}
+
+function uniqueValues(rows, getter) {
+  return [...new Set(rows.map(getter).filter(value => value !== undefined && value !== null))]
+    .sort((a, b) => String(a).localeCompare(String(b), undefined, { numeric: true, sensitivity: 'base' }));
+}
+
+function populateOpportunityFilters(opps) {
+  populateSelect('viking-filter', uniqueValues(opps, vikingReleaseStatus), 'Not evaluated');
+  populateSelect('owner-filter', uniqueValues(opps, opp => opp.owner || ''), 'No owner');
+  populateSelect('loss-filter', uniqueValues(opps, opp => opp.stage === 'Closed Lost' ? (opp.lossReason || 'Unspecified') : ''), 'No loss reason');
+  populateSelect('smc-filter', uniqueValues(opps, opp => opp.smc || ''), 'No SMC');
 }
 
 function render(data) {
@@ -639,12 +589,16 @@ function render(data) {
     `Rev.io Marketing Ops - Tigerpaw Master Dashboard - Salesforce refresh ${generated.toLocaleString()}`;
 
   populateStageFilter(data.stageBreakdown);
-  renderVikingOneSection();
+  populateOpportunityFilters(data.opportunities);
   renderOppTable();
 }
 
 document.getElementById('opp-search').addEventListener('input', renderOppTable);
 document.getElementById('stage-filter').addEventListener('change', renderOppTable);
+document.getElementById('viking-filter').addEventListener('change', renderOppTable);
+document.getElementById('owner-filter').addEventListener('change', renderOppTable);
+document.getElementById('loss-filter').addEventListener('change', renderOppTable);
+document.getElementById('smc-filter').addEventListener('change', renderOppTable);
 
 fetch('./master-data.json', { cache: 'no-store' })
   .then(res => {
