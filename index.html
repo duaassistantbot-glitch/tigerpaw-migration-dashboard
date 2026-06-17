@@ -65,7 +65,8 @@
   .sort-btn { width: 100%; border: 0; background: transparent; color: inherit; cursor: pointer; display: inline-flex; align-items: center; gap: 5px; justify-content: flex-start; padding: 0; font: inherit; letter-spacing: inherit; text-align: inherit; text-transform: inherit; }
   .num-h .sort-btn { justify-content: flex-end; }
   .sort-btn:hover { color: #2399B5; }
-  .sort-indicator { display: inline-block; min-width: 8px; color: #2399B5; font-size: 10px; line-height: 1; }
+  .sort-indicator { display: inline-block; min-width: 10px; color: #2399B5; font-size: 10px; line-height: 1; }
+  .sort-indicator.inactive { color: #8b98a7; opacity: .7; }
   td { padding: 12px; border-bottom: 1px solid #F0F2F5; font-size: 13px; vertical-align: top; }
   tr:last-child td { border-bottom: 0; }
   td.num-c { font-family: 'Montserrat', sans-serif; font-weight: 800; color: #1D3756; }
@@ -395,9 +396,20 @@ function setSort(table, key) {
 function updateSortIndicators(table) {
   const sort = TABLE_SORT[table];
   document.querySelectorAll(`.sort-indicator[data-sort-table="${table}"]`).forEach(indicator => {
-    indicator.textContent = indicator.dataset.sortKey === sort.key
+    const isActive = indicator.dataset.sortKey === sort.key;
+    indicator.textContent = isActive
       ? (sort.dir === 'asc' ? '▲' : '▼')
-      : '';
+      : '↕';
+    indicator.classList.toggle('inactive', !isActive);
+    const button = indicator.closest('button');
+    if (button) {
+      button.setAttribute(
+        'aria-label',
+        isActive
+          ? `Sorted ${sort.dir === 'asc' ? 'ascending' : 'descending'}; click to sort ${sort.dir === 'asc' ? 'descending' : 'ascending'}`
+          : 'Click to sort this column'
+      );
+    }
   });
 }
 
