@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-16T10:01:59.460Z",
+  "generatedAt": "2026-06-17T10:02:03.575Z",
   "audienceStats": {
     "Ready to Migrate": {
       "sent": 1638,
@@ -10,7 +10,7 @@
       "clickRate": "1.2%",
       "uniqueContacts": 558,
       "uniqueAccts": 84,
-      "webinarReg": 37,
+      "webinarReg": 38,
       "webinarRegAccts": 28
     },
     "Unknown": {
@@ -22,8 +22,8 @@
       "clickRate": "4.4%",
       "uniqueContacts": 1874,
       "uniqueAccts": 292,
-      "webinarReg": 121,
-      "webinarRegAccts": 79
+      "webinarReg": 125,
+      "webinarRegAccts": 83
     }
   },
   "verticalStats": {
@@ -36,8 +36,8 @@
       "clicks": 64,
       "openRate": "12.4%",
       "clickRate": "2.7%",
-      "webinarReg": 246,
-      "webinarRegAccts": 133
+      "webinarReg": 257,
+      "webinarRegAccts": 138
     },
     "Integrator": {
       "emailedContacts": 864,
@@ -2491,12 +2491,12 @@
     ]
   },
   "sfOpps": {
-    "generatedAt": "2026-06-16T10:01:35.391Z",
+    "generatedAt": "2026-06-17T10:01:40.365Z",
     "wmrContactCount": 10,
     "oppsByAudience": {
       "Ready to Migrate": {
         "count": 2,
-        "amount": 549.24,
+        "amount": 1023.24,
         "opps": [
           {
             "id": "006PX00000bB2cIYAS",
@@ -2508,10 +2508,10 @@
           },
           {
             "id": "006PX00000c2qxVYAQ",
-            "name": "Intec - CA Web Migration",
+            "name": "Intec - CA - TP Migration",
             "account": "Intec - CA",
-            "stage": "1- Discovery Scheduled",
-            "amount": 0,
+            "stage": "6 - Verbal Commit",
+            "amount": 474,
             "createdDate": "2026-06-11T17:14:08.000+0000"
           }
         ]
@@ -2587,7 +2587,7 @@
     },
     "grandTotal": {
       "count": 9,
-      "amount": 4953.24
+      "amount": 5427.24
     }
   },
   "grandTotals": {
@@ -2599,21 +2599,21 @@
     "clickRate": "2.9%",
     "uniqueContacts": 2432,
     "uniqueAccts": 376,
-    "webinarReg": 319,
-    "webinarRegAccts": 178,
+    "webinarReg": 330,
+    "webinarRegAccts": 183,
     "internalExcluded": 23
   },
   "regBreakdown": {
     "Ready to Migrate": {
-      "MSP": 25,
+      "MSP": 26,
       "Integrator": 12
     },
     "Unknown": {
-      "MSP": 83,
+      "MSP": 87,
       "Integrator": 38
     },
     "Other": {
-      "MSP": 138,
+      "MSP": 144,
       "Integrator": 23
     }
   }

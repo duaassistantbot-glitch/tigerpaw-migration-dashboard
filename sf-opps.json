@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-06-16T10:01:35.391Z",
+  "generatedAt": "2026-06-17T10:01:40.365Z",
   "wmrContactCount": 10,
   "oppsByAudience": {
     "Ready to Migrate": {
       "count": 2,
-      "amount": 549.24,
+      "amount": 1023.24,
       "opps": [
         {
           "id": "006PX00000bB2cIYAS",
@@ -16,10 +16,10 @@
         },
         {
           "id": "006PX00000c2qxVYAQ",
-          "name": "Intec - CA Web Migration",
+          "name": "Intec - CA - TP Migration",
           "account": "Intec - CA",
-          "stage": "1- Discovery Scheduled",
-          "amount": 0,
+          "stage": "6 - Verbal Commit",
+          "amount": 474,
           "createdDate": "2026-06-11T17:14:08.000+0000"
         }
       ]
@@ -95,6 +95,6 @@
   },
   "grandTotal": {
     "count": 9,
-    "amount": 4953.24
+    "amount": 5427.24
   }
 }
