@@ -217,9 +217,6 @@
     <select class="select" id="loss-filter">
       <option value="all">All loss reasons</option>
     </select>
-    <select class="select" id="smc-filter">
-      <option value="all">All SMCs</option>
-    </select>
   </div>
   <section class="card">
     <div class="card-head">
@@ -513,7 +510,6 @@ function renderOppTable() {
   const viking = document.getElementById('viking-filter').value;
   const owner = document.getElementById('owner-filter').value;
   const loss = document.getElementById('loss-filter').value;
-  const smc = document.getElementById('smc-filter').value;
 
   const rows = MASTER.opportunities.filter(opp => {
     const matchesStage = stage === 'all' || opp.stage === stage;
@@ -521,11 +517,10 @@ function renderOppTable() {
     const matchesOwner = owner === 'all' || (opp.owner || '') === owner;
     const oppLossReason = opp.stage === 'Closed Lost' ? (opp.lossReason || 'Unspecified') : '';
     const matchesLoss = loss === 'all' || (loss === 'none' ? !oppLossReason : oppLossReason === loss);
-    const matchesSmc = smc === 'all' || (smc === 'none' ? !(opp.smc || '') : (opp.smc || '') === smc);
     const unlock = opp.vikingOneUnlock || {};
     const unlockMatches = Array.isArray(unlock.matches) ? unlock.matches.map(match => match.feature).join(' ') : '';
     const haystack = [opp.account, opp.stage, opp.amount, opp.owner, opp.nextStep, opp.lossReason, opp.lossDetail, unlock.status, unlock.summary, unlockMatches, opp.smc].join(' ').toLowerCase();
-    return matchesStage && matchesViking && matchesOwner && matchesLoss && matchesSmc && (!search || haystack.includes(search));
+    return matchesStage && matchesViking && matchesOwner && matchesLoss && (!search || haystack.includes(search));
   });
   const sorted = sortedRows('opp', rows);
 
@@ -564,7 +559,6 @@ function populateOpportunityFilters(opps) {
   populateSelect('viking-filter', uniqueValues(opps, vikingReleaseStatus), 'Not evaluated');
   populateSelect('owner-filter', uniqueValues(opps, opp => opp.owner || ''), 'No owner');
   populateSelect('loss-filter', uniqueValues(opps, opp => opp.stage === 'Closed Lost' ? (opp.lossReason || 'Unspecified') : ''), 'No loss reason');
-  populateSelect('smc-filter', uniqueValues(opps, opp => opp.smc || ''), 'No SMC');
 }
 
 function render(data) {
@@ -598,7 +592,6 @@ document.getElementById('stage-filter').addEventListener('change', renderOppTabl
 document.getElementById('viking-filter').addEventListener('change', renderOppTable);
 document.getElementById('owner-filter').addEventListener('change', renderOppTable);
 document.getElementById('loss-filter').addEventListener('change', renderOppTable);
-document.getElementById('smc-filter').addEventListener('change', renderOppTable);
 
 fetch('./master-data.json', { cache: 'no-store' })
   .then(res => {
