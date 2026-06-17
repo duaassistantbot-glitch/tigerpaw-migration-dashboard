@@ -12,6 +12,7 @@ envContent.split('\n').forEach(line => {
 const INSTANCE_URL = process.env.SF_INSTANCE_URL;
 const CLIENT_ID = process.env.SF_CLIENT_ID;
 const CLIENT_SECRET = process.env.SF_CLIENT_SECRET;
+const NOTION_DATABASE_ID = process.env.NOTION_ROADMAP_DATABASE_ID || '2a8a59b7-e7b2-8009-9371-f50bc2d4db48';
 
 function sfHost() {
   return new URL(INSTANCE_URL).hostname;
@@ -39,6 +40,33 @@ function requestJson(options, body) {
     if (body) req.write(body);
     req.end();
   });
+}
+
+function getNotionToken() {
+  if (process.env.NOTION_TOKEN) return process.env.NOTION_TOKEN;
+
+  try {
+    const configPath = '/home/openclaw/.openclaw/openclaw.json';
+    const config = JSON.parse(fs.readFileSync(configPath, 'utf8'));
+    return config.mcp?.servers?.notionApi?.env?.NOTION_TOKEN || '';
+  } catch (err) {
+    return '';
+  }
+}
+
+async function notionRequest(token, pathPart, body) {
+  const payload = body ? JSON.stringify(body) : '';
+  return requestJson({
+    hostname: 'api.notion.com',
+    path: pathPart,
+    method: body ? 'POST' : 'GET',
+    headers: {
+      Authorization: `Bearer ${token}`,
+      'Notion-Version': '2022-06-28',
+      'Content-Type': 'application/json',
+      'Content-Length': Buffer.byteLength(payload)
+    }
+  }, payload);
 }
 
 async function getToken() {
@@ -91,6 +119,50 @@ function clean(value, fallback = 'Unknown') {
   return String(value);
 }
 
+function notionText(prop) {
+  if (!prop) return '';
+  if (prop.type === 'title') return prop.title.map(part => part.plain_text).join('');
+  if (prop.type === 'rich_text') return prop.rich_text.map(part => part.plain_text).join('');
+  if (prop.type === 'select') return prop.select?.name || '';
+  if (prop.type === 'multi_select') return prop.multi_select.map(item => item.name).join(', ');
+  if (prop.type === 'status') return prop.status?.name || '';
+  if (prop.type === 'formula') return prop.formula?.string || String(prop.formula?.number ?? prop.formula?.boolean ?? '');
+  return '';
+}
+
+async function fetchRoadmapItems() {
+  const token = getNotionToken();
+  if (!token) {
+    console.warn('No Notion token found; skipping Viking One roadmap enrichment.');
+    return [];
+  }
+
+  const items = [];
+  let cursor = null;
+
+  do {
+    const body = { page_size: 100 };
+    if (cursor) body.start_cursor = cursor;
+
+    const result = await notionRequest(token, `/v1/databases/${NOTION_DATABASE_ID}/query`, body);
+    items.push(...(result.results || []));
+    cursor = result.has_more ? result.next_cursor : null;
+  } while (cursor);
+
+  return items.map(page => {
+    const props = page.properties || {};
+    return {
+      id: page.id,
+      url: page.url,
+      feature: notionText(props.Feature),
+      release: notionText(props.Release),
+      status: notionText(props['Feature Status']),
+      description: notionText(props.Description),
+      marketingDescription: notionText(props['Marketing Description'])
+    };
+  });
+}
+
 function currencyValue(opp) {
   return Number(opp.Renewal_Amount__c || opp.Amount || 0);
 }
@@ -127,6 +199,111 @@ function sortStageGroups(groups) {
 function pct(count, total) {
   if (!total) return 0;
   return Math.round((count / total) * 1000) / 10;
+}
+
+function normalize(value) {
+  return String(value || '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
+}
+
+function roadmapMatcher(roadmapItems) {
+  const vikingOneItems = roadmapItems.filter(item => /viking\s*(1|one)\b/i.test(item.release || ''));
+
+  function findFeatures(patterns) {
+    return vikingOneItems.map(item => {
+      const haystack = normalize([
+        item.feature,
+        item.description,
+        item.marketingDescription
+      ].join(' '));
+      const matchIndex = patterns.findIndex(pattern => pattern.test(haystack));
+      return { item, matchIndex };
+    })
+      .filter(match => match.matchIndex >= 0)
+      .sort((a, b) => a.matchIndex - b.matchIndex)
+      .map(match => match.item)
+      .slice(0, 4);
+  }
+
+  function formatMatch(item) {
+    return {
+      feature: item.feature,
+      release: item.release,
+      status: item.status,
+      detail: item.marketingDescription || item.description
+    };
+  }
+
+  return function classifyVikingOneUnlock(opp) {
+    if (opp.stage !== 'Closed Lost') return null;
+
+    const text = normalize([opp.lossReason, opp.lossDetail].join(' '));
+
+    function result(status, summary, patterns) {
+      return {
+        status,
+        summary,
+        matches: findFeatures(patterns).map(formatMatch)
+      };
+    }
+
+    if (/password|pw keeper|keeper|credential/.test(text)) {
+      return result('Yes', 'Credential vault/password management is in Viking 1.', [/credential vault/, /password/]);
+    }
+
+    if (/pricing rules|dispatch|payroll/.test(text)) {
+      return result('Partial', 'Dispatch and payroll-adjacent QBD time export work is in Viking 1; pricing rules are not a clear match.', [/dispatch board/, /time log export/]);
+    }
+
+    if (/data usage|contract expiration|contracts|agreements|notifications/.test(text)) {
+      return result('Partial', 'Agreement and notification work is in Viking 1, but data-usage-through-contracts is not an exact roadmap match.', [/agreement/, /notification/]);
+    }
+
+    if (/qbd|quickbooks|quick books|g l|gl code/.test(text)) {
+      return result('Yes', 'QuickBooks Desktop export and GL mapping work is in Viking 1.', [/qbd/, /quickbooks desktop/, /gl account/]);
+    }
+
+    if (/d tools|quote import/.test(text)) {
+      return result('Partial', 'Quote search improvements are in Viking 1; D-Tools quotes are listed for Viking 2.', [/product search by part number/]);
+    }
+
+    if (/meter billing|metered|qb desktop/.test(text)) {
+      return result('Partial', 'Metered usage rating and QBD work appear in Viking 1, but full meter billing plus QBD is broader than one item.', [/metered usage/, /qbd/, /quickbooks desktop/]);
+    }
+
+    if (/part number|p n|item id|customer facing doc/.test(text)) {
+      return result('Partial', 'Part-number quote search is in Viking 1; customer-facing document Item ID display is not an exact match.', [/product search by part number/, /proposal options/]);
+    }
+
+    if (/child billing|quote reports/.test(text)) {
+      return {
+        status: 'No clear match',
+        summary: 'No clear Viking 1 roadmap item found for child billing or quote reports.',
+        matches: []
+      };
+    }
+
+    if (/not ready|not the right time|october|jan|non responsive|stopped responding|decision maker|no show|duplicate/.test(text)) {
+      return {
+        status: 'No',
+        summary: 'Loss reason is timing, engagement, or duplicate rather than a Viking 1 feature blocker.',
+        matches: []
+      };
+    }
+
+    return {
+      status: 'Review',
+      summary: 'Needs manual review against the Viking 1 roadmap.',
+      matches: []
+    };
+  };
+}
+
+function enrichOppsWithRoadmap(opps, roadmapItems) {
+  const classify = roadmapMatcher(roadmapItems);
+  return opps.map(opp => ({
+    ...opp,
+    vikingOneUnlock: classify(opp)
+  }));
 }
 
 function publicAccount(account) {
@@ -169,6 +346,10 @@ async function main() {
   console.log('Authenticating with Salesforce...');
   const token = await getToken();
 
+  console.log('Fetching Notion roadmap for Viking One enrichment...');
+  const roadmapItems = await fetchRoadmapItems();
+  console.log(`  Found ${roadmapItems.length} roadmap items`);
+
   console.log('Fetching accounts with Web Migration Status populated...');
   const accounts = await sfQueryAll(token, `
     SELECT Id, Name, Type, Tigerpaw__c, Web_Migration__c, Web_Migration_Status_Details__c,
@@ -200,7 +381,7 @@ async function main() {
   }
 
   const publicAccounts = accounts.map(publicAccount);
-  const publicOpps = allOpps.map(publicOpp);
+  const publicOpps = enrichOppsWithRoadmap(allOpps.map(publicOpp), roadmapItems);
   const closedLostOpps = publicOpps.filter(opp => opp.stage === 'Closed Lost');
   const totalAmount = publicOpps.reduce((sum, opp) => sum + opp.amount, 0);
 

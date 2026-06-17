@@ -65,11 +65,19 @@
   .search { flex: 1; min-width: 220px; padding: 9px 11px; border: 1px solid #DDE2E8; border-radius: 6px; font: inherit; color: #1D3756; background: #FFFFFF; }
   .select { padding: 9px 11px; border: 1px solid #DDE2E8; border-radius: 6px; font: inherit; color: #1D3756; background: #FFFFFF; min-width: 190px; }
   .detail { color: #3d4d5c; line-height: 1.45; max-width: 520px; }
+  .unlock { min-width: 170px; max-width: 260px; }
+  .unlock-badge { display: inline-block; margin-bottom: 5px; padding: 3px 8px; border-radius: 999px; font-size: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: .4px; color: #1D3756; background: #EAF6F9; }
+  .unlock-badge.yes { color: #256D1B; background: #EAF7E6; }
+  .unlock-badge.partial { color: #1D3756; background: #EAF6F9; }
+  .unlock-badge.no, .unlock-badge.no-clear-match { color: #687789; background: #EEF2F6; }
+  .unlock-badge.review { color: #7A4A00; background: #FFF4DA; }
+  .unlock-summary { color: #3d4d5c; line-height: 1.4; }
+  .unlock-match { margin-top: 5px; color: #687789; line-height: 1.35; font-size: 11px; }
   .empty { padding: 28px; text-align: center; color: #687789; font-size: 13px; }
   .footer { margin-top: 24px; padding-top: 18px; border-top: 1px solid #DDE2E8; font-size: 11px; color: #687789; text-align: center; }
   .modal-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,.52); z-index: 1000; align-items: center; justify-content: center; padding: 18px; }
   .modal-overlay.open { display: flex; }
-  .modal { background: #FFFFFF; border-radius: 8px; width: min(940px, 96vw); max-height: 88vh; display: flex; flex-direction: column; overflow: hidden; box-shadow: 0 20px 60px rgba(0,0,0,.3); }
+  .modal { background: #FFFFFF; border-radius: 8px; width: min(1180px, 96vw); max-height: 88vh; display: flex; flex-direction: column; overflow: hidden; box-shadow: 0 20px 60px rgba(0,0,0,.3); }
   .modal-head { background: #1D3756; color: #FFFFFF; padding: 15px 18px; display: flex; align-items: center; justify-content: space-between; gap: 14px; position: relative; }
   .modal-head::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 3px; background: linear-gradient(90deg, #2399B5, #6EBE4F); }
   .modal-head h2 { margin: 0; font-size: 15px; line-height: 1.25; }
@@ -203,6 +211,7 @@
           <th>Next Step</th>
           <th>Loss Reason</th>
           <th>Loss Reason Detail</th>
+          <th>Viking One Unlock</th>
           <th>SMC</th>
         </tr>
       </thead>
@@ -322,6 +331,7 @@ function openOpps(title, rows) {
       <th>Next Step</th>
       <th>Loss Reason</th>
       <th>Loss Reason Detail</th>
+      <th>Viking One Unlock</th>
       <th>SMC</th>
     </tr>`;
   document.getElementById('drill-modal').classList.add('open');
@@ -351,6 +361,31 @@ function renderDrilldownRows() {
   body.innerHTML = rows.map(opp => oppDetailRow(opp)).join('');
 }
 
+function unlockStatusClass(status) {
+  return normalizeForClass(status || 'review');
+}
+
+function normalizeForClass(value) {
+  return String(value).toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+}
+
+function renderVikingOneUnlock(opp) {
+  const unlock = opp.vikingOneUnlock;
+  if (!unlock || opp.stage !== 'Closed Lost') return '';
+
+  const matches = Array.isArray(unlock.matches) ? unlock.matches.filter(match => match.feature) : [];
+  const matchText = matches.length
+    ? matches.map(match => `${match.feature}${match.status ? ` (${match.status})` : ''}`).join('; ')
+    : '';
+
+  return `
+    <div class="unlock">
+      <span class="unlock-badge ${esc(unlockStatusClass(unlock.status))}">${esc(unlock.status || 'Review')}</span>
+      <div class="unlock-summary">${esc(unlock.summary || '')}</div>
+      ${matchText ? `<div class="unlock-match">${esc(matchText)}</div>` : ''}
+    </div>`;
+}
+
 function oppDetailRow(opp) {
   return `
     <tr>
@@ -360,6 +395,7 @@ function oppDetailRow(opp) {
       <td class="detail">${esc(opp.nextStep || '')}</td>
       <td>${esc(opp.stage === 'Closed Lost' ? (opp.lossReason || 'Unspecified') : '')}</td>
       <td class="detail">${esc(opp.stage === 'Closed Lost' ? (opp.lossDetail || '') : '')}</td>
+      <td>${renderVikingOneUnlock(opp)}</td>
       <td>${esc(opp.smc || '')}</td>
     </tr>`;
 }
@@ -408,7 +444,9 @@ function renderOppTable() {
 
   const rows = MASTER.opportunities.filter(opp => {
     const matchesStage = stage === 'all' || opp.stage === stage;
-    const haystack = [opp.account, opp.stage, opp.amount, opp.owner, opp.nextStep, opp.lossReason, opp.lossDetail, opp.smc].join(' ').toLowerCase();
+    const unlock = opp.vikingOneUnlock || {};
+    const unlockMatches = Array.isArray(unlock.matches) ? unlock.matches.map(match => match.feature).join(' ') : '';
+    const haystack = [opp.account, opp.stage, opp.amount, opp.owner, opp.nextStep, opp.lossReason, opp.lossDetail, unlock.status, unlock.summary, unlockMatches, opp.smc].join(' ').toLowerCase();
     return matchesStage && (!search || haystack.includes(search));
   });
 
