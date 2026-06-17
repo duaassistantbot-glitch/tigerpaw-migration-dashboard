@@ -233,7 +233,6 @@
           <th><button class="sort-btn" type="button" onclick="setSort('opp','lossReason')">Loss Reason <span class="sort-indicator" data-sort-table="opp" data-sort-key="lossReason"></span></button></th>
           <th><button class="sort-btn" type="button" onclick="setSort('opp','lossDetail')">Loss Reason Detail <span class="sort-indicator" data-sort-table="opp" data-sort-key="lossDetail"></span></button></th>
           <th><button class="sort-btn" type="button" onclick="setSort('opp','vikingRelease')">Viking One Release <span class="sort-indicator" data-sort-table="opp" data-sort-key="vikingRelease"></span></button></th>
-          <th><button class="sort-btn" type="button" onclick="setSort('opp','smc')">SMC <span class="sort-indicator" data-sort-table="opp" data-sort-key="smc"></span></button></th>
         </tr>
       </thead>
       <tbody id="opp-table"></tbody>
@@ -306,7 +305,6 @@ function roadmapMatchText(opp) {
 function sortValue(table, key, row) {
   if (key === 'amount') return Number(row.amount || 0);
   if (key === 'account') return row.account || '';
-  if (key === 'smc') return row.smc || '';
 
   if (table === 'opp') {
     if (key === 'owner') return row.owner || '';
@@ -413,7 +411,6 @@ function openOpps(title, rows) {
       <th>Loss Reason</th>
       <th>Loss Reason Detail</th>
       <th>Viking One Release</th>
-      <th>SMC</th>
     </tr>`;
   document.getElementById('drill-modal').classList.add('open');
   renderDrilldownRows();
@@ -481,7 +478,6 @@ function oppDetailRow(opp) {
       <td>${esc(opp.stage === 'Closed Lost' ? (opp.lossReason || 'Unspecified') : '')}</td>
       <td class="detail">${esc(opp.stage === 'Closed Lost' ? (opp.lossDetail || '') : '')}</td>
       <td>${renderVikingOneUnlock(opp)}</td>
-      <td>${esc(opp.smc || '')}</td>
     </tr>`;
 }
 
@@ -519,7 +515,7 @@ function renderOppTable() {
     const matchesLoss = loss === 'all' || (loss === 'none' ? !oppLossReason : oppLossReason === loss);
     const unlock = opp.vikingOneUnlock || {};
     const unlockMatches = Array.isArray(unlock.matches) ? unlock.matches.map(match => match.feature).join(' ') : '';
-    const haystack = [opp.account, opp.stage, opp.amount, opp.owner, opp.nextStep, opp.lossReason, opp.lossDetail, unlock.status, unlock.summary, unlockMatches, opp.smc].join(' ').toLowerCase();
+    const haystack = [opp.account, opp.stage, opp.amount, opp.owner, opp.nextStep, opp.lossReason, opp.lossDetail, unlock.status, unlock.summary, unlockMatches].join(' ').toLowerCase();
     return matchesStage && matchesViking && matchesOwner && matchesLoss && (!search || haystack.includes(search));
   });
   const sorted = sortedRows('opp', rows);
