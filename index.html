@@ -54,6 +54,11 @@
   .num-btn:hover { color: #2399B5; }
   .num small { display: block; margin-top: 2px; font-family: 'Open Sans', Arial, sans-serif; color: #687789; font-size: 11px; font-weight: 700; }
   .summary-strip { background: #F5F7FA; border-top: 1px solid #DDE2E8; padding: 11px 16px; font-size: 12px; display: flex; justify-content: space-between; gap: 16px; }
+  .metric-strip { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border-bottom: 1px solid #DDE2E8; background: #F5F7FA; }
+  .metric { padding: 12px 16px; border-right: 1px solid #DDE2E8; }
+  .metric:last-child { border-right: 0; }
+  .metric-label { font-size: 10px; text-transform: uppercase; letter-spacing: .5px; font-weight: 800; color: #687789; }
+  .metric-value { margin-top: 4px; font-family: 'Montserrat', sans-serif; font-size: 20px; font-weight: 800; color: #1D3756; }
   table { width: 100%; border-collapse: collapse; }
   th { background: #F5F7FA; color: #1D3756; font-size: 11px; text-transform: uppercase; letter-spacing: .5px; text-align: left; padding: 11px 12px; border-bottom: 2px solid #DDE2E8; white-space: nowrap; }
   th.num-h, td.num-c { text-align: right; }
@@ -95,6 +100,8 @@
     .bar-row { grid-template-columns: 1fr; gap: 8px; }
     .num { text-align: left; }
     .summary-strip { flex-direction: column; }
+    .metric-strip { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .metric:nth-child(2) { border-right: 0; }
   }
 </style>
 </head>
@@ -190,6 +197,46 @@
     </div>
   </section>
 
+  <div class="section-title">Viking One Release</div>
+  <section class="card">
+    <div class="card-head">
+      <h2>Closed Lost Opps Blocked by Missing Software Capabilities</h2>
+      <span id="viking-count-label">Loading...</span>
+    </div>
+    <div class="metric-strip">
+      <div class="metric">
+        <div class="metric-label">Total Blocked Opps</div>
+        <div class="metric-value" id="viking-total">--</div>
+      </div>
+      <div class="metric">
+        <div class="metric-label">Unlocked by Viking 1</div>
+        <div class="metric-value" id="viking-yes">--</div>
+      </div>
+      <div class="metric">
+        <div class="metric-label">Partial Match</div>
+        <div class="metric-value" id="viking-partial">--</div>
+      </div>
+      <div class="metric">
+        <div class="metric-label">Needs Review</div>
+        <div class="metric-value" id="viking-review">--</div>
+      </div>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>Account Name</th>
+          <th class="num-h">Renewal Amount</th>
+          <th>Missing Capability</th>
+          <th>Viking One Unlock</th>
+          <th>Matched Roadmap Items</th>
+          <th>SMC</th>
+        </tr>
+      </thead>
+      <tbody id="viking-table"></tbody>
+    </table>
+    <div class="empty" id="viking-empty" style="display:none;">No closed-lost opportunities were lost due to software missing capabilities.</div>
+  </section>
+
   <div class="section-title">Opportunity Detail</div>
   <div class="controls">
     <input class="search" id="opp-search" type="search" placeholder="Search opportunity, account, stage, or reason">
@@ -211,7 +258,6 @@
           <th>Next Step</th>
           <th>Loss Reason</th>
           <th>Loss Reason Detail</th>
-          <th>Viking One Unlock</th>
           <th>SMC</th>
         </tr>
       </thead>
@@ -331,7 +377,6 @@ function openOpps(title, rows) {
       <th>Next Step</th>
       <th>Loss Reason</th>
       <th>Loss Reason Detail</th>
-      <th>Viking One Unlock</th>
       <th>SMC</th>
     </tr>`;
   document.getElementById('drill-modal').classList.add('open');
@@ -386,6 +431,57 @@ function renderVikingOneUnlock(opp) {
     </div>`;
 }
 
+function vikingOneRows() {
+  if (!MASTER) return [];
+  return MASTER.opportunities.filter(opp =>
+    opp.stage === 'Closed Lost' &&
+    opp.lossReason === 'Software Missing Capabilities'
+  );
+}
+
+function vikingMatchedItems(opp) {
+  const matches = Array.isArray(opp.vikingOneUnlock?.matches)
+    ? opp.vikingOneUnlock.matches.filter(match => match.feature)
+    : [];
+
+  if (!matches.length) return '<span class="unlock-match">No clear roadmap match</span>';
+
+  return matches.map(match => `
+    <div class="unlock-match">
+      <strong>${esc(match.feature)}</strong>${match.status ? ` (${esc(match.status)})` : ''}
+    </div>`).join('');
+}
+
+function renderVikingOneSection() {
+  const rows = vikingOneRows();
+  const tbody = document.getElementById('viking-table');
+  const empty = document.getElementById('viking-empty');
+  const counts = rows.reduce((acc, opp) => {
+    const status = opp.vikingOneUnlock?.status || 'Review';
+    acc[status] = (acc[status] || 0) + 1;
+    return acc;
+  }, {});
+  const reviewCount = rows.length - (counts.Yes || 0) - (counts.Partial || 0);
+
+  document.getElementById('viking-count-label').textContent =
+    `${fmt.format(rows.length)} closed-lost opportunities`;
+  document.getElementById('viking-total').textContent = fmt.format(rows.length);
+  document.getElementById('viking-yes').textContent = fmt.format(counts.Yes || 0);
+  document.getElementById('viking-partial').textContent = fmt.format(counts.Partial || 0);
+  document.getElementById('viking-review').textContent = fmt.format(reviewCount);
+  empty.style.display = rows.length ? 'none' : 'block';
+
+  tbody.innerHTML = rows.map(opp => `
+    <tr>
+      <td><strong>${esc(opp.account)}</strong></td>
+      <td class="num-c">${money.format(opp.amount || 0)}</td>
+      <td class="detail">${esc(opp.lossDetail || '')}</td>
+      <td>${renderVikingOneUnlock(opp)}</td>
+      <td class="detail">${vikingMatchedItems(opp)}</td>
+      <td>${esc(opp.smc || '')}</td>
+    </tr>`).join('');
+}
+
 function oppDetailRow(opp) {
   return `
     <tr>
@@ -395,7 +491,6 @@ function oppDetailRow(opp) {
       <td class="detail">${esc(opp.nextStep || '')}</td>
       <td>${esc(opp.stage === 'Closed Lost' ? (opp.lossReason || 'Unspecified') : '')}</td>
       <td class="detail">${esc(opp.stage === 'Closed Lost' ? (opp.lossDetail || '') : '')}</td>
-      <td>${renderVikingOneUnlock(opp)}</td>
       <td>${esc(opp.smc || '')}</td>
     </tr>`;
 }
@@ -487,6 +582,7 @@ function render(data) {
     `Rev.io Marketing Ops - Tigerpaw Master Dashboard - Salesforce refresh ${generated.toLocaleString()}`;
 
   populateStageFilter(data.stageBreakdown);
+  renderVikingOneSection();
   renderOppTable();
 }
 
