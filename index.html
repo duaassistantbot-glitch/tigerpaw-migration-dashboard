@@ -41,6 +41,13 @@
   .bar-row { display: grid; grid-template-columns: minmax(190px, 260px) 1fr minmax(110px, 150px); gap: 14px; align-items: center; padding: 13px 16px; border-bottom: 1px solid #F0F2F5; }
   .bar-row:last-child { border-bottom: 0; }
   .name { font-size: 13px; font-weight: 800; color: #1D3756; display: flex; align-items: center; gap: 8px; min-width: 0; }
+  .name-stack { min-width: 0; }
+  .status-toggle { border: 0; background: transparent; color: #1D3756; cursor: pointer; padding: 0; font: inherit; text-align: left; display: inline-flex; align-items: center; gap: 6px; }
+  .status-toggle:hover { color: #2399B5; }
+  .status-caret { color: #2399B5; font-size: 10px; width: 10px; display: inline-block; }
+  .status-breakdown { margin: 7px 0 0 17px; display: grid; gap: 3px; }
+  .status-breakdown button { border: 0; background: transparent; color: #3d4d5c; cursor: pointer; padding: 0; font: inherit; font-size: 12px; text-align: left; }
+  .status-breakdown button:hover { color: #2399B5; text-decoration: underline; text-underline-offset: 3px; }
   .dot { width: 9px; height: 9px; border-radius: 50%; background: #2399B5; flex: 0 0 auto; }
   .dot.green { background: #6EBE4F; }
   .dot.navy { background: #1D3756; }
@@ -249,6 +256,9 @@
 <script>
 let MASTER = null;
 let DRILLDOWN = { type: 'accounts', rows: [], title: '' };
+let ACCOUNT_BY_ID = new Map();
+let ACCOUNT_BY_NAME = new Map();
+const EXPANDED_STATUS_ROWS = new Set();
 let TABLE_SORT = {
   opp: { key: 'account', dir: 'asc' }
 };
@@ -297,16 +307,42 @@ function oppRowsByLossReason(reason) {
   return MASTER.opportunities.filter(opp => opp.stage === 'Closed Lost' && (opp.lossReason || 'Unspecified') === reason);
 }
 
+function opportunityBucket(opp) {
+  if (opp.isWon) return 'Closed Won';
+  if (opp.stage === 'Closed Lost') return 'Closed Lost';
+  return 'Open';
+}
+
 function accountForOpp(opp) {
   if (!MASTER) return null;
-  return MASTER.accounts.find(account =>
-    (opp.accountId && account.id === opp.accountId) ||
-    account.name === opp.account
-  );
+  return ACCOUNT_BY_ID.get(opp.accountId) || ACCOUNT_BY_NAME.get(opp.account) || null;
 }
 
 function webMigrationStatusForOpp(opp) {
   return accountForOpp(opp)?.webMigrationStatus || 'Blank';
+}
+
+function oppRowsByWebStatusAndBucket(status, bucket) {
+  return MASTER.opportunities.filter(opp =>
+    webMigrationStatusForOpp(opp) === status &&
+    opportunityBucket(opp) === bucket
+  );
+}
+
+function statusOpportunityCounts(status) {
+  return ['Open', 'Closed Lost', 'Closed Won'].map(bucket => ({
+    bucket,
+    rows: oppRowsByWebStatusAndBucket(status, bucket)
+  }));
+}
+
+function toggleStatusBreakdown(status) {
+  if (EXPANDED_STATUS_ROWS.has(status)) {
+    EXPANDED_STATUS_ROWS.delete(status);
+  } else {
+    EXPANDED_STATUS_ROWS.add(status);
+  }
+  renderStatusRows();
 }
 
 function roadmapMatchText(opp) {
@@ -501,13 +537,35 @@ function barRows(groups, total, kind) {
     const onclick = kind === 'stage'
       ? `openOpps('${esc(group.label)} Opportunities', oppRowsByStage('${esc(group.label)}'))`
       : `openAccounts('${esc(group.label)} Accounts', accountRowsByStatus('${esc(group.label)}'))`;
+    const statusName = kind === 'status'
+      ? `<div class="name-stack">
+          <div class="name">
+            <span class="dot ${dotClass}"></span>
+            <button class="status-toggle" type="button" onclick="toggleStatusBreakdown('${esc(group.label)}')" aria-expanded="${EXPANDED_STATUS_ROWS.has(group.label)}">
+              <span class="status-caret">${EXPANDED_STATUS_ROWS.has(group.label) ? '▼' : '▶'}</span>
+              <span>${esc(group.label)}</span>
+            </button>
+          </div>
+          ${EXPANDED_STATUS_ROWS.has(group.label) ? `
+            <div class="status-breakdown">
+              ${statusOpportunityCounts(group.label).map(item => `
+                <button type="button" onclick="openOpps('${esc(group.label)} - ${esc(item.bucket)} Opportunities', oppRowsByWebStatusAndBucket('${esc(group.label)}', '${esc(item.bucket)}'))">- ${fmt.format(item.rows.length)} ${esc(item.bucket)}</button>
+              `).join('')}
+            </div>
+          ` : ''}
+        </div>`
+      : `<div class="name"><span class="dot ${dotClass}"></span><span>${esc(group.label)}</span></div>`;
     return `
       <div class="bar-row">
-        <div class="name"><span class="dot ${dotClass}"></span><span>${esc(group.label)}</span></div>
+        ${statusName}
         <div class="bar"><div class="fill" style="width:${pct}%"></div></div>
         <div class="num"><button class="num-btn" onclick="${onclick}">${fmt.format(group.count)}</button><small>${esc(sub)}</small></div>
       </div>`;
   }).join('');
+}
+
+function renderStatusRows() {
+  document.getElementById('status-bars').innerHTML = barRows(MASTER.statusBreakdown, MASTER.totals.tigerpawAccounts, 'status');
 }
 
 function renderOppTable() {
@@ -575,6 +633,8 @@ function populateOpportunityFilters(opps) {
 
 function render(data) {
   MASTER = data;
+  ACCOUNT_BY_ID = new Map(data.accounts.map(account => [account.id, account]));
+  ACCOUNT_BY_NAME = new Map(data.accounts.map(account => [account.name, account]));
   const generated = new Date(data.generatedAt);
   const want = data.statusBreakdown
     .filter(s => s.label === 'Want to migrate asap' || s.label === 'Want to migrate / timeline unknown')
@@ -587,7 +647,7 @@ function render(data) {
   document.getElementById('total-opps').textContent = fmt.format(data.totals.legacyMigrationOpps);
   document.getElementById('closed-lost').textContent = fmt.format(data.totals.closedLostOpps);
 
-  document.getElementById('status-bars').innerHTML = barRows(data.statusBreakdown, data.totals.tigerpawAccounts, 'status');
+  renderStatusRows();
   document.getElementById('stage-bars').innerHTML = barRows(data.stageBreakdown, data.totals.legacyMigrationOpps, 'stage');
   document.getElementById('status-summary').innerHTML = `<strong>${fmt.format(want)}</strong> clients have an active migration interest signal`;
   document.getElementById('stage-summary').innerHTML = `<strong>${fmt.format(data.totals.legacyMigrationOpps)}</strong> opportunities totaling <strong>${money.format(data.totals.legacyMigrationAmount)}</strong>`;
