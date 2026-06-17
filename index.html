@@ -82,7 +82,6 @@
   .unlock-badge.no, .unlock-badge.no-clear-match { color: #687789; background: #EEF2F6; }
   .unlock-badge.review { color: #7A4A00; background: #FFF4DA; }
   .unlock-summary { color: #3d4d5c; line-height: 1.4; }
-  .unlock-match { margin-top: 5px; color: #687789; line-height: 1.35; font-size: 11px; }
   .empty { padding: 28px; text-align: center; color: #687789; font-size: 13px; }
   .footer { margin-top: 24px; padding-top: 18px; border-top: 1px solid #DDE2E8; font-size: 11px; color: #687789; text-align: center; }
   .modal-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,.52); z-index: 1000; align-items: center; justify-content: center; padding: 18px; }
@@ -455,16 +454,10 @@ function renderVikingOneUnlock(opp) {
   const unlock = opp.vikingOneUnlock;
   if (!unlock || opp.stage !== 'Closed Lost') return '';
 
-  const matches = Array.isArray(unlock.matches) ? unlock.matches.filter(match => match.feature) : [];
-  const matchText = matches.length
-    ? matches.map(match => `${match.feature}${match.status ? ` (${match.status})` : ''}`).join('; ')
-    : '';
-
   return `
     <div class="unlock">
       <span class="unlock-badge ${esc(unlockStatusClass(unlock.status))}">${esc(unlock.status || 'Review')}</span>
       <div class="unlock-summary">${esc(unlock.summary || '')}</div>
-      ${matchText ? `<div class="unlock-match">${esc(matchText)}</div>` : ''}
     </div>`;
 }
 
