@@ -240,6 +240,7 @@
           <th><button class="sort-btn" type="button" onclick="setSort('opp','owner')">Opportunity Owner <span class="sort-indicator" data-sort-table="opp" data-sort-key="owner"></span></button></th>
           <th><button class="sort-btn" type="button" onclick="setSort('opp','nextStep')">Next Step <span class="sort-indicator" data-sort-table="opp" data-sort-key="nextStep"></span></button></th>
           <th><button class="sort-btn" type="button" onclick="setSort('opp','stage')">Stage <span class="sort-indicator" data-sort-table="opp" data-sort-key="stage"></span></button></th>
+          <th><button class="sort-btn" type="button" onclick="setSort('opp','closeDate')">Close Date <span class="sort-indicator" data-sort-table="opp" data-sort-key="closeDate"></span></button></th>
           <th><button class="sort-btn" type="button" onclick="setSort('opp','lossReason')">Loss Reason <span class="sort-indicator" data-sort-table="opp" data-sort-key="lossReason"></span></button></th>
           <th><button class="sort-btn" type="button" onclick="setSort('opp','lossDetail')">Loss Reason Detail <span class="sort-indicator" data-sort-table="opp" data-sort-key="lossDetail"></span></button></th>
           <th><button class="sort-btn" type="button" onclick="setSort('opp','vikingRelease')">Viking One Release <span class="sort-indicator" data-sort-table="opp" data-sort-key="vikingRelease"></span></button></th>
@@ -266,6 +267,13 @@ const DATA_SYNC_URL = 'https://dua-revio.msappproxy.net/tigerpaw-data-sync';
 
 const fmt = new Intl.NumberFormat('en-US');
 const money = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 });
+
+function formatDate(value) {
+  if (!value) return '';
+  const [year, month, day] = String(value).slice(0, 10).split('-');
+  if (!year || !month || !day) return String(value);
+  return `${month}/${day}/${year}`;
+}
 
 function esc(value) {
   return String(value ?? '').replace(/[&<>"']/g, char => ({
@@ -361,6 +369,7 @@ function sortValue(table, key, row) {
     if (key === 'owner') return row.owner || '';
     if (key === 'nextStep') return row.nextStep || '';
     if (key === 'stage') return row.stage || '';
+    if (key === 'closeDate') return row.closeDate || '';
     if (key === 'lossReason') return row.stage === 'Closed Lost' ? (row.lossReason || 'Unspecified') : '';
     if (key === 'lossDetail') return row.stage === 'Closed Lost' ? (row.lossDetail || '') : '';
     if (key === 'vikingRelease') return `${vikingReleaseStatus(row)} ${row.vikingOneUnlock?.summary || ''} ${roadmapMatchText(row)}`;
@@ -461,6 +470,7 @@ function openOpps(title, rows) {
       <th>Opportunity Owner</th>
       <th>Next Step</th>
       <th>Stage</th>
+      <th>Close Date</th>
       <th>Loss Reason</th>
       <th>Loss Reason Detail</th>
       <th>Viking One Release</th>
@@ -523,6 +533,7 @@ function oppDetailRow(opp) {
       <td>${esc(opp.owner || '')}</td>
       <td class="detail">${esc(opp.nextStep || '')}</td>
       <td>${esc(opp.stage || '')}</td>
+      <td>${esc(formatDate(opp.closeDate))}</td>
       <td>${esc(opp.stage === 'Closed Lost' ? (opp.lossReason || 'Unspecified') : '')}</td>
       <td class="detail">${esc(opp.stage === 'Closed Lost' ? (opp.lossDetail || '') : '')}</td>
       <td>${renderVikingOneUnlock(opp)}</td>
