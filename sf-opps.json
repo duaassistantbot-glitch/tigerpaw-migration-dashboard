@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-17T10:01:40.365Z",
+  "generatedAt": "2026-06-18T10:02:00.620Z",
   "wmrContactCount": 10,
   "oppsByAudience": {
     "Ready to Migrate": {
@@ -18,7 +18,7 @@
           "id": "006PX00000c2qxVYAQ",
           "name": "Intec - CA - TP Migration",
           "account": "Intec - CA",
-          "stage": "6 - Verbal Commit",
+          "stage": "Closed Won",
           "amount": 474,
           "createdDate": "2026-06-11T17:14:08.000+0000"
         }
@@ -63,8 +63,8 @@
       ]
     },
     "Other": {
-      "count": 3,
-      "amount": 2559,
+      "count": 4,
+      "amount": 3984,
       "opps": [
         {
           "id": "006PX00000aztdzYAA",
@@ -73,6 +73,14 @@
           "stage": "Closed Lost",
           "amount": 1350,
           "createdDate": "2026-05-21T19:02:48.000+0000"
+        },
+        {
+          "id": "006PX00000cKWaXYAW",
+          "name": "Hosted America - Web Migration",
+          "account": "Hosted America",
+          "stage": "2 - Discovery Completed",
+          "amount": 1425,
+          "createdDate": "2026-06-17T17:12:45.000+0000"
         },
         {
           "id": "006PX00000bB2kLYAS",
@@ -86,7 +94,7 @@
           "id": "006PX00000cDuZZYA0",
           "name": "Network Enhancement Systems Web Migration",
           "account": "Network Enhancement Systems",
-          "stage": "1- Discovery Scheduled",
+          "stage": "Closed Won",
           "amount": 0,
           "createdDate": "2026-06-15T18:56:25.000+0000"
         }
@@ -94,7 +102,7 @@
     }
   },
   "grandTotal": {
-    "count": 9,
-    "amount": 5427.24
+    "count": 10,
+    "amount": 6852.24
   }
 }
