@@ -206,6 +206,8 @@ function normalize(value) {
 }
 
 const WEB_MIGRATION_STATUS_OVERRIDES = new Map([
+  ['All Secure Lock Service', 'Want to migrate / timeline unknown'],
+  ['American Security Devices', 'Want to migrate / timeline unknown'],
   ['Arcomm Communications', 'Want to migrate / timeline unknown'],
   ['Bank-Tec South', 'Want to migrate / timeline unknown'],
   ['Centerpoint IT', 'Want to migrate / timeline unknown'],

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-18T17:06:33.328Z",
+  "generatedAt": "2026-06-18T18:31:14.198Z",
   "filters": {
     "account": "Web_Migration__c != null",
     "opportunity": "Type = 'Legacy Migration'",
@@ -3970,8 +3970,8 @@
     },
     {
       "label": "Want to migrate / timeline unknown",
-      "count": 106,
-      "pct": 17.4,
+      "count": 108,
+      "pct": 17.7,
       "accounts": [
         {
           "id": "0016O00003dmuJPQAY",
@@ -4047,6 +4047,28 @@
           "webMigrationDetails": "",
           "accountStatus": "Active - Tigerpaw One",
           "owner": "Blaine Villafuerte",
+          "vertical": "",
+          "psaWeb": false
+        },
+        {
+          "id": "0016O00003dmuJuQAI",
+          "name": "All Secure Lock Service",
+          "type": "Rev.io PSA Client",
+          "webMigrationStatus": "Want to migrate / timeline unknown",
+          "webMigrationDetails": "Ongoing interest and multiple demos, on track to begin migration 4/1/26 based on recent fitting call with Tony M",
+          "accountStatus": "Active - Unleashed",
+          "owner": "Gavin Aylward",
+          "vertical": "",
+          "psaWeb": false
+        },
+        {
+          "id": "0016O00003ebjznQAA",
+          "name": "American Security Devices",
+          "type": "Rev.io PSA Client",
+          "webMigrationStatus": "Want to migrate / timeline unknown",
+          "webMigrationDetails": "In process as of 2/5/26, was at risk and then saved by migration to web",
+          "accountStatus": "",
+          "owner": "",
           "vertical": "",
           "psaWeb": false
         },
@@ -6734,35 +6756,6 @@
           "psaWeb": false
         }
       ]
-    },
-    {
-      "label": "Migration in progress",
-      "count": 2,
-      "pct": 0.3,
-      "accounts": [
-        {
-          "id": "0016O00003dmuJuQAI",
-          "name": "All Secure Lock Service",
-          "type": "Rev.io PSA Client",
-          "webMigrationStatus": "Migration in progress",
-          "webMigrationDetails": "Ongoing interest and multiple demos, on track to begin migration 4/1/26 based on recent fitting call with Tony M",
-          "accountStatus": "Active - Unleashed",
-          "owner": "Gavin Aylward",
-          "vertical": "",
-          "psaWeb": false
-        },
-        {
-          "id": "0016O00003ebjznQAA",
-          "name": "American Security Devices",
-          "type": "Rev.io PSA Client",
-          "webMigrationStatus": "Migration in progress",
-          "webMigrationDetails": "In process as of 2/5/26, was at risk and then saved by migration to web",
-          "accountStatus": "",
-          "owner": "",
-          "vertical": "",
-          "psaWeb": false
-        }
-      ]
     }
   ],
   "stageBreakdown": [
@@ -9204,7 +9197,7 @@
       "id": "0016O00003dmuJuQAI",
       "name": "All Secure Lock Service",
       "type": "Rev.io PSA Client",
-      "webMigrationStatus": "Migration in progress",
+      "webMigrationStatus": "Want to migrate / timeline unknown",
       "webMigrationDetails": "Ongoing interest and multiple demos, on track to begin migration 4/1/26 based on recent fitting call with Tony M",
       "accountStatus": "Active - Unleashed",
       "owner": "Gavin Aylward",
@@ -9248,7 +9241,7 @@
       "id": "0016O00003ebjznQAA",
       "name": "American Security Devices",
       "type": "Rev.io PSA Client",
-      "webMigrationStatus": "Migration in progress",
+      "webMigrationStatus": "Want to migrate / timeline unknown",
       "webMigrationDetails": "In process as of 2/5/26, was at risk and then saved by migration to web",
       "accountStatus": "",
       "owner": "",
