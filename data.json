@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-18T10:01:30.815Z",
+  "generatedAt": "2026-06-21T22:55:17.501Z",
   "audienceStats": {
     "Ready to Migrate": {
       "uniqueContactsEmailed": 558,
@@ -18,7 +18,7 @@
       "totalDelivered": 1821,
       "totalOpens": 235,
       "totalClicks": 78,
-      "webinarRegistrants": 126,
+      "webinarRegistrants": 127,
       "uniqueAccountsRegistered": 84
     },
     "Migrate Later": {
@@ -35,12 +35,12 @@
   "verticalSummary": [
     {
       "vertical": "Unknown",
-      "registeredContacts": 160,
-      "registeredCompanies": 65
+      "registeredContacts": 163,
+      "registeredCompanies": 67
     },
     {
       "vertical": "MSP",
-      "registeredContacts": 141,
+      "registeredContacts": 143,
       "registeredCompanies": 87
     },
     {
@@ -55,8 +55,8 @@
     }
   ],
   "webinarTotal": {
-    "totalContacts": 360,
-    "uniqueAccounts": 187
+    "totalContacts": 365,
+    "uniqueAccounts": 189
   },
   "emailDetails": [
     {

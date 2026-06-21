@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-18T10:02:00.620Z",
+  "generatedAt": "2026-06-21T22:55:49.329Z",
   "wmrContactCount": 10,
   "oppsByAudience": {
     "Ready to Migrate": {
@@ -64,7 +64,7 @@
     },
     "Other": {
       "count": 4,
-      "amount": 3984,
+      "amount": 4756,
       "opps": [
         {
           "id": "006PX00000aztdzYAA",
@@ -95,7 +95,7 @@
           "name": "Network Enhancement Systems Web Migration",
           "account": "Network Enhancement Systems",
           "stage": "Closed Won",
-          "amount": 0,
+          "amount": 772,
           "createdDate": "2026-06-15T18:56:25.000+0000"
         }
       ]
@@ -103,6 +103,6 @@
   },
   "grandTotal": {
     "count": 10,
-    "amount": 6852.24
+    "amount": 7624.24
   }
 }
