@@ -489,6 +489,66 @@
     </table>
   </div>
 
+  <!-- June 19 Webinar -->
+  <div class="section-title">June 19 Webinar</div>
+  <div class="webinar-bar upcoming">
+    <div class="wb-left">
+      <div class="wb-label">Third Webinar</div>
+      <div class="wb-title">See It for Yourself — Introducing Rev.io PSA · June 19</div>
+      <div class="wb-sub">Contrast Last Event Date falls on 06/19/2026 · internal @rev.io excluded</div>
+    </div>
+    <div class="wb-metrics">
+      <div class="wm"><button class="v green metric-link" id="j19-contacts" onclick="showRegistrants('all','all','june19')">0<span class="wb-search-icon"></span></button><div class="l">Contacts Registered</div></div>
+      <div class="wm"><button class="v teal metric-link" id="j19-accounts" onclick="showRegistrants('all','all','june19')">0<span class="wb-search-icon"></span></button><div class="l">Unique Accounts</div></div>
+      <div class="wm"><button class="v metric-link" id="j19-msp" style="color:#fff;" onclick="showRegistrants('MSP','all','june19')">0<span class="wb-search-icon"></span></button><div class="l">MSP Contacts</div></div>
+    </div>
+  </div>
+
+  <div class="mini-metric-row">
+    <div class="mini-metric" onclick="showRegistrants('all','all','june19')">
+      <div class="label">Date Split</div>
+      <div class="value">Jun 19</div>
+      <div class="sub">Contrast Last Event Date</div>
+    </div>
+    <div class="mini-metric" onclick="showRegistrants('MSP','all','june19')">
+      <div class="label">Vertical Mix</div>
+      <div class="value" id="j19-vertical-mix">0 / 0</div>
+      <div class="sub">MSP / Integrator</div>
+    </div>
+    <div class="mini-metric" onclick="showRegistrants('all','later','june19')">
+      <div class="label">Audience</div>
+      <div class="value" id="j19-audience-total">0</div>
+      <div class="sub">External June 19 event-date records</div>
+    </div>
+    <div class="mini-metric" onclick="showRegistrants('all','all','june19')">
+      <div class="label">Registration Date</div>
+      <div class="value" id="j19-event-total">0</div>
+      <div class="sub" id="j19-raw-sub">0 raw · 0 internal excluded</div>
+    </div>
+  </div>
+
+  <div class="card" style="margin-bottom:28px;">
+    <div class="card-header">
+      <h2>June 19 Webinar — Registrants by Event Date</h2>
+      <span>HubSpot Contrast Last Event Date · 06/19/2026</span>
+    </div>
+    <table class="compact-table interactive-table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Company</th>
+          <th>Email</th>
+          <th>Vertical</th>
+          <th>Audience</th>
+          <th>Registered</th>
+        </tr>
+      </thead>
+      <tbody id="j19-table-body">
+        <tr><td colspan="6" style="text-align:left;color:#94a3b8;">Loading June 19 registrants…</td></tr>
+      </tbody>
+    </table>
+  </div>
+
   <!-- SF Pipeline -->
   <div class="section-title">Salesforce Pipeline</div>
   <div class="sf-pipeline-bar">
@@ -1019,6 +1079,17 @@ function setFilter(f, btn) {
 let FIRST_WEBINAR_REGISTRANTS = [];
 let JUNE10_REGISTRANTS = [{"n":"Jim MacLachlan","e":"jim@aalock.com","c":"AA LOCK AND ALARM","v":"Integrator","a":"Migrate Later","d":"2026-05-29"},{"n":"Brad Delmar","e":"bdelmar@bluewirecomm.com","c":"BlueWire Communications","v":"MSP","a":"Migrate Later","d":"2026-05-29"},{"n":"Deta Itaya","e":"ditaya@bluewirecomm.com","c":"BlueWire Communications","v":"MSP","a":"Migrate Later","d":"2026-05-29"},{"n":"Lincoln Higdon","e":"lincoln.higdon@centerpointit.com","c":"Centerpoint IT","v":"MSP","a":"Migrate Later","d":"2026-05-29"},{"n":"Amy Labianca","e":"amy.labianca@crinj.com","c":"Communication Resources","v":"MSP","a":"Migrate Later","d":"2026-05-29"},{"n":"Joe Sabatini","e":"joe.sabatini@crinj.com","c":"Communication Resources","v":"MSP","a":"Migrate Later","d":"2026-05-29"},{"n":"Loc Nguyen","e":"loc@dcrpos.com","c":"DCR-Nashville","v":"Integrator","a":"Migrate Later","d":"2026-05-29"},{"n":"Michelle Tomlin","e":"mtomlin@dcrpos.com","c":"DCR-Nashville","v":"Integrator","a":"Migrate Later","d":"2026-05-29"},{"n":"Donald Hilsenroth","e":"don@diversifieddigital.com","c":"Diversified Digital Group - Main","v":"MSP","a":"Migrate Later","d":"2026-05-29"},{"n":"Jeff Mortensen","e":"jeff@electronicspecialtiesinc.com","c":"Electronic Specialties, Inc","v":"MSP","a":"Migrate Later","d":"2026-05-29"},{"n":"Wendy Froehlich","e":"wendy@electronicspecialtiesinc.com","c":"Electronic Specialties, Inc","v":"MSP","a":"Migrate Later","d":"2026-05-29"},{"n":"Al Stewart","e":"als@glessner.net","c":"Glessner Alarm & Communication","v":"MSP","a":"Migrate Later","d":"2026-05-29"},{"n":"Charles Evans","e":"charlese@madronadigital.com","c":"Madrona Digital","v":"Integrator","a":"Migrate Later","d":"2026-05-29"},{"n":"Heather Frazier","e":"heatherf@mathias1901.com","c":"Mathias Lock and Key, Inc.","v":"Integrator","a":"Migrate Later","d":"2026-05-29"},{"n":"Eliza Lantz","e":"eliza@neuwavesystems.com","c":"Neuwave Systems Inc","v":"Integrator","a":"Migrate Later","d":"2026-05-29"},{"n":"Jay Hunt","e":"jhunt@neuwavesystems.com","c":"Neuwave Systems Inc","v":"Integrator","a":"Migrate Later","d":"2026-05-29"},{"n":"Myles Steeves","e":"myles.steeves@nutecelectrotel.com","c":"NUTEC ELECTRO TEL.","v":"MSP","a":"Migrate Later","d":"2026-05-29"},{"n":"Kelly Hile","e":"khile@pcnetsource.com","c":"PC Netsource","v":"MSP","a":"Migrate Later","d":"2026-05-29"},{"n":"brad reiber","e":"brad.reiber@protexcentral.net","c":"Protex Central","v":"Integrator","a":"Migrate Later","d":"2026-05-29"},{"n":"Jeremy Vogel","e":"jvogel@rogerstwoway.com","c":"Roger's Two Way Radio","v":"Integrator","a":"Migrate Later","d":"2026-05-29"},{"n":"Chris Chao","e":"chris.chao@centerpointit.com","c":"Centerpoint IT","v":"MSP","a":"Migrate Later","d":"2026-06-01"},{"n":"Anna Capozzi","e":"anna.capozzi@crinj.com","c":"Communication Resources","v":"MSP","a":"Migrate Later","d":"2026-06-01"},{"n":"Emily Guyer","e":"msemilyrae@yahoo.com","c":"Computer Consultants & Merchants Inc","v":"MSP","a":"Migrate Later","d":"2026-06-01"},{"n":"Kevin Crowley","e":"kevin@thecrowleycompany.com","c":"Crowley","v":"MSP","a":"Migrate Later","d":"2026-06-01"},{"n":"Jay Knight","e":"jknight@g1c.net","c":"Grand Central Station Internet Services, Inc.","v":"MSP","a":"Migrate Later","d":"2026-06-01"},{"n":"Shahram Amerian","e":"samerian@netagen.com","c":"Netagen Communication Technologies","v":"MSP","a":"Migrate Later","d":"2026-06-01"},{"n":"Shannon Slater","e":"shannons@tdaniels.com","c":"T. Daniels Consulting, Inc.","v":"MSP","a":"Migrate Later","d":"2026-06-01"},{"n":"Douglas Smith","e":"doug@baystateoffice.com","c":"Baystate Office Solutions","v":"MSP","a":"Migrate Later","d":"2026-06-02"},{"n":"Fred Dekeyser","e":"fred.dekeyser@centerpointit.com","c":"Centerpoint IT","v":"MSP","a":"Migrate Later","d":"2026-06-02"},{"n":"Tyler Stone","e":"tyler.stone@centerpointit.com","c":"Centerpoint IT","v":"MSP","a":"Migrate Later","d":"2026-06-02"},{"n":"John Brenneis","e":"jlb@davidcarroll.com","c":"David Carroll Associates","v":"MSP","a":"Migrate Later","d":"2026-06-02"},{"n":"Bill Lenherr","e":"blenherr@grcs.com","c":"Greenbrier Communications","v":"MSP","a":"Migrate Later","d":"2026-06-02"},{"n":"Julie Neal","e":"julie@integratedpos.com","c":"Integrated POS","v":"MSP","a":"Migrate Later","d":"2026-06-02"},{"n":"Lucas Graham","e":"l.graham@integratedpos.com","c":"Integrated POS","v":"MSP","a":"Migrate Later","d":"2026-06-02"},{"n":"Chris Lujan","e":"chrisl@mathias1901.com","c":"Mathias Lock and Key, Inc.","v":"Integrator","a":"Migrate Later","d":"2026-06-02"},{"n":"Stacie Baack","e":"sbaack@hanover-microage.ca","c":"MicroAge Hanover","v":"MSP","a":"Migrate Later","d":"2026-06-02"},{"n":"Brian Courtney","e":"brian.courtney@onlineaplus.com","c":"Onlineaplus","v":"MSP","a":"Migrate Later","d":"2026-06-02"},{"n":"Chris Tabbert","e":"chris.tabbert@onlineaplus.com","c":"Onlineaplus","v":"MSP","a":"Migrate Later","d":"2026-06-02"},{"n":"Kyler Bemis","e":"kyler.bemis@onlineaplus.com","c":"Onlineaplus","v":"MSP","a":"Migrate Later","d":"2026-06-02"},{"n":"Matt Phipps","e":"matt.phipps@onlineaplus.com","c":"Onlineaplus","v":"MSP","a":"Migrate Later","d":"2026-06-02"},{"n":"Troy May","e":"troy.may@onlineaplus.com","c":"Onlineaplus","v":"MSP","a":"Migrate Later","d":"2026-06-02"},{"n":"Jim Cochran","e":"jcochran@premcom.com","c":"Prem Com","v":"MSP","a":"Migrate Later","d":"2026-06-02"},{"n":"Joe Griffo","e":"jgriffo@premcom.com","c":"Prem Com","v":"MSP","a":"Migrate Later","d":"2026-06-02"},{"n":"Joe Osika","e":"josika@premcom.com","c":"Prem Com","v":"MSP","a":"Migrate Later","d":"2026-06-02"},{"n":"Joel Proulx","e":"jproulx@premcom.com","c":"Prem Com","v":"MSP","a":"Migrate Later","d":"2026-06-02"},{"n":"Rick Andrews","e":"randrews@premcom.com","c":"Prem Com","v":"MSP","a":"Migrate Later","d":"2026-06-02"},{"n":"Steve Klose","e":"sklose@premcom.com","c":"Prem Com","v":"MSP","a":"Migrate Later","d":"2026-06-02"},{"n":"Tim Ricketts","e":"tim@tdaniels.com","c":"T. Daniels Consulting, Inc.","v":"MSP","a":"Migrate Later","d":"2026-06-02"},{"n":"Jordan Ray","e":"jordan.ray@4ditsolutions.com","c":"4D IT","v":"MSP","a":"Ready to Migrate","d":"2026-06-03"},{"n":"Steve Jackson","e":"steve.jackson@chesapeakecom.com","c":"Chesapeake Communications, Inc.","v":"MSP","a":"Migrate Later","d":"2026-06-03"},{"n":"Sonya Allen","e":"sallen@cti4u.com","c":"Communications Technologies","v":"MSP","a":"Migrate Later","d":"2026-06-03"},{"n":"Service Desk","e":"service@ctsservices.com","c":"CTS Services Inc.","v":"MSP","a":"Ready to Migrate","d":"2026-06-03"},{"n":"Alan Ritchie","e":"aritchie@easterndatacomm.com","c":"Eastern DataComm","v":"MSP","a":"Ready to Migrate","d":"2026-06-03"},{"n":"Daniela Gonzalez","e":"dgonzalez@easterndatacomm.com","c":"Eastern DataComm","v":"MSP","a":"Migrate Later","d":"2026-06-03"},{"n":"Thomas Cross","e":"tcross@enter-sys.com","c":"Enterprise Systems","v":"MSP","a":"Unknown","d":"2026-06-03"},{"n":"Chris Stassi","e":"cstassi@executonesystems.com","c":"Executone Systems Co Of LA","v":"MSP","a":"Unknown","d":"2026-06-03"},{"n":"Chuck Ellenberger","e":"chuck@favorite1.com","c":"Favorite Office Automation","v":"MSP","a":"Unknown","d":"2026-06-03"},{"n":"Jessica Colangelo","e":"jessica@favorite1.com","c":"Favorite Office Automation","v":"MSP","a":"Migrate Later","d":"2026-06-03"},{"n":"Mike Grady","e":"mgrady@gracon.com","c":"Gracon Services","v":"MSP","a":"Migrate Later","d":"2026-06-03"},{"n":"Aaron Costello","e":"aaronc@ibspos.com","c":"Interstate Business Systems","v":"MSP","a":"Unknown","d":"2026-06-03"},{"n":"Tim Fukui","e":"timf@lightning-technologies.com","c":"Lightning Technologies LLC","v":"Integrator","a":"Ready to Migrate","d":"2026-06-03"},{"n":"John Faria","e":"jfaria@md-com.com","c":"M D Communications","v":"MSP","a":"Unknown","d":"2026-06-03"},{"n":"Gabe Rainn","e":"gabe.rainn@memlane.ca","c":"Memory Lane Computers","v":"MSP","a":"Unknown","d":"2026-06-03"},{"n":"Lana Rainn","e":"lana.rainn@memlane.ca","c":"Memory Lane Computers","v":"MSP","a":"Unknown","d":"2026-06-03"},{"n":"Brian Hertzler","e":"brian.hertzler@onlineaplus.com","c":"Onlineaplus","v":"MSP","a":"Migrate Later","d":"2026-06-03"},{"n":"Lisa Ruston","e":"lruston@empire-pa.com","c":"Votacall Inc - 2nd Database","v":"MSP","a":"Unknown","d":"2026-06-03"},{"n":"Jacob Getzelman","e":"jacob@electronicspecialtiesinc.com","c":"Electronic Specialties, Inc","v":"MSP","a":"Migrate Later","d":"2026-06-04"},{"n":"Greg Roszkowski","e":"greg@sngpower.com.au","c":"Generex Systems","v":"MSP","a":"Unknown","d":"2026-06-04"},{"n":"Patrick Sullivan","e":"pat@hebusa.com","c":"Hoosier Equipment Brokers","v":"Integrator","a":"Migrate Later","d":"2026-06-04"},{"n":"Becky Hockman","e":"bhockman@hy-vee.com","c":"HyVee, Inc. dba A+ Communications & Security","v":"MSP","a":"Migrate Later","d":"2026-06-04"},{"n":"Nadine Lichty","e":"nlichty@ideanetworks.ca","c":"Idea Networks Inc.","v":"MSP","a":"Migrate Later","d":"2026-06-04"},{"n":"Robin Houston","e":"rhouston@tcial.com","c":"Telephone Communications Inc","v":"Integrator","a":"Unknown","d":"2026-06-04"},{"n":"Aaron Shrum","e":"aaron.shrum@arcomm1.com","c":"Arcomm Communications","v":"MSP","a":"Migrate Later","d":"2026-06-05"},{"n":"Greg Leblanc","e":"greg.leblanc@arcomm1.com","c":"Arcomm Communications","v":"MSP","a":"Migrate Later","d":"2026-06-05"},{"n":"Edgar Beltran","e":"edgar.beltran@aldeberan.com.ec","c":"Aldeberan","v":"MSP","a":"Migrate Later","d":"2026-06-08"},{"n":"George Schule","e":"george.schule@arcomm1.com","c":"Arcomm Communications","v":"MSP","a":"Migrate Later","d":"2026-06-08"},{"n":"Vincent Galante","e":"vinny.galante@arcomm1.com","c":"Arcomm Communications","v":"MSP","a":"Migrate Later","d":"2026-06-08"},{"n":"Cody Boynton","e":"cody@augustacommunications.com","c":"Augusta Communications","v":"Integrator","a":"Migrate Later","d":"2026-06-08"},{"n":"Kevin Durham","e":"kevin.durham@centerpointit.com","c":"Centerpoint IT","v":"MSP","a":"Migrate Later","d":"2026-06-08"},{"n":"Kimberly Bridge","e":"kimberly@dtsinc.ca","c":"Diversified Technology Systems","v":"Integrator","a":"Migrate Later","d":"2026-06-08"},{"n":"Lori Olteanu","e":"lori@empire-team.com","c":"ECI-Empire Communications","v":"MSP","a":"Migrate Later","d":"2026-06-08"},{"n":"Michael Castellano","e":"michaeljr@g1c.net","c":"Grand Central Station Internet Services, Inc.","v":"MSP","a":"Migrate Later","d":"2026-06-08"},{"n":"Joe Marinello","e":"jmarinello@jctnj.com","c":"JCT Solutions","v":"MSP","a":"Migrate Later","d":"2026-06-08"},{"n":"Jim Gerow","e":"j.gerow@positivetech.com","c":"Positive Technologies","v":"MSP","a":"Migrate Later","d":"2026-06-08"},{"n":"Tammy Barry","e":"tbarry@premcom.com","c":"Prem Com","v":"MSP","a":"Migrate Later","d":"2026-06-08"},{"n":"Mark Peterson","e":"markp@rssts.com","c":"RSS (Restaurant Service Solutions)","v":"MSP","a":"Migrate Later","d":"2026-06-08"},{"n":"Wes Watson","e":"wesw@rssts.com","c":"RSS (Restaurant Service Solutions)","v":"MSP","a":"Migrate Later","d":"2026-06-08"},{"n":"Ann-Marie Rowe-Whyte","e":"arowewhyte@access411.com","c":"Access 411","v":"MSP","a":"Unknown","d":"2026-06-09"},{"n":"Bret Hood","e":"brethood@argo-medical.com","c":"Argo Medical, Inc","v":"Integrator","a":"Unknown","d":"2026-06-09"},{"n":"Linda Dale","e":"linda@atlanticsts.com","c":"Atlantic Security & Telecom Solutions, Inc.","v":"Integrator","a":"Ready to Migrate","d":"2026-06-09"},{"n":"Emily Guyer","e":"eguyer@ccm2.com","c":"CC&M Inc.","v":"MSP","a":"Migrate Later","d":"2026-06-09"},{"n":"Jeff Drummond","e":"jeff.drummond@cpitelecom.net","c":"CPI Technologies, LLC","v":"MSP","a":"Ready to Migrate","d":"2026-06-09"},{"n":"Chase Kucker","e":"chasek@dscabling.biz","c":"Dakota Structured Cabling","v":"MSP","a":"Unknown","d":"2026-06-09"},{"n":"Julie Allen","e":"jallen@easterndatacomm.com","c":"Eastern DataComm","v":"MSP","a":"Migrate Later","d":"2026-06-09"},{"n":"Fusun Bubernack","e":"fbubernack@et-t.com","c":"ET&T Corporation","v":"MSP","a":"Unknown","d":"2026-06-09"},{"n":"Margaret Moss","e":"margaretmoss@integraserv.com","c":"IntegraServ","v":"MSP","a":"Unknown","d":"2026-06-09"},{"n":"Suzanne Yeager","e":"syeager@ipcmidwest.com","c":"IP Communications, Inc.","v":"MSP","a":"Unknown","d":"2026-06-09"},{"n":"Zachary Hughes","e":"zhughes@ipcmidwest.com","c":"IP Communications, Inc.","v":"MSP","a":"Unknown","d":"2026-06-09"},{"n":"Sue Shaver","e":"sue@mercsys.com","c":"Mercury Systems Corporation","v":"MSP","a":"Unknown","d":"2026-06-09"},{"n":"Marybeth Schultz","e":"mschultz@mettel.com","c":"Metropolitan Telephone","v":"MSP","a":"Migrate Later","d":"2026-06-09"},{"n":"Tony Barossi","e":"tbarossi@mettel.com","c":"Metropolitan Telephone","v":"MSP","a":"Migrate Later","d":"2026-06-09"},{"n":"Amy Polley","e":"amy@politoninc.com","c":"Politon","v":"MSP","a":"Unknown","d":"2026-06-09"},{"n":"Jordan Long","e":"jordan@southeastern.net","c":"Southeastern TeleCommunications","v":"MSP","a":"Migrate Later","d":"2026-06-09"},{"n":"Kathy Wray","e":"kathy@southeastern.net","c":"Southeastern TeleCommunications","v":"MSP","a":"Migrate Later","d":"2026-06-09"},{"n":"Josh Daisy","e":"jdaisy@tdsnetworks.com","c":"TDS-Phone","v":"MSP","a":"Unknown","d":"2026-06-09"},{"n":"Pamela Lindholdt","e":"pamela@logicaltechnologies.com","c":"Technical Solutions","v":"MSP","a":"Migrate Later","d":"2026-06-09"},{"n":"Becky Barhorst","e":"bbarhorst@thesmsgroup.com","c":"The SMS Group","v":"MSP","a":"Unknown","d":"2026-06-09"},{"n":"Nelson Guzman","e":"service@transcomla.com","c":"Transcom Telecommunications","v":"MSP","a":"Unknown","d":"2026-06-09"},{"n":"Dorenda Lohmer","e":"dorenda@uni-sys.com","c":"Universal Systems","v":"Integrator","a":"Unknown","d":"2026-06-09"},{"n":"Kenny Bertin","e":"kennyb@wsbcs.net","c":"WSB Computer Services, Inc.","v":"MSP","a":"Migrate Later","d":"2026-06-09"},{"n":"Rosemary  Bertin","e":"roseb@wsbcs.net","c":"WSB Computer Services, Inc.","v":"MSP","a":"Migrate Later","d":"2026-06-09"},{"n":"Louis Nickerson","e":"louis.nickerson@advancedprocomm.com","c":"Advanced Procomm, Inc.","v":"MSP","a":"Ready to Migrate","d":"2026-06-10"},{"n":"Michael Hogan","e":"mhogan@andersonpump.com","c":"Anderson Pump Service","v":"MSP","a":"Unknown","d":"2026-06-10"},{"n":"Conference Conference","e":"conferenceroom@arcomm1.com","c":"Arcomm Communications","v":"MSP","a":"Migrate Later","d":"2026-06-10"},{"n":"Glen Glanville","e":"glen.glanville@arcomm1.com","c":"Arcomm Communications","v":"MSP","a":"Migrate Later","d":"2026-06-10"},{"n":"Dan Trimmer","e":"trimmer@chesapeakecom.com","c":"Chesapeake Communications, Inc.","v":"MSP","a":"Migrate Later","d":"2026-06-10"},{"n":"Gary Ball","e":"gball@crccommunications.com","c":"CRC Communications Limited","v":"MSP","a":"Migrate Later","d":"2026-06-10"},{"n":"Matt Hillis","e":"mbone@ctsservices.com","c":"CTS Services Inc.","v":"MSP","a":"Ready to Migrate","d":"2026-06-10"},{"n":"Samuel  Tiili","e":"samuel@electronicspecialtiesinc.com","c":"Electronic Specialties, Inc","v":"MSP","a":"Migrate Later","d":"2026-06-10"},{"n":"Chris Quick","e":"cquick@grcs.com","c":"Greenbrier Communications","v":"MSP","a":"Migrate Later","d":"2026-06-10"},{"n":"Linda Wheeler","e":"linda.wheeler@onlineaplus.com","c":"HyVee, Inc. dba A+ Communications & Security","v":"MSP","a":"Migrate Later","d":"2026-06-10"},{"n":"Erik Peterson","e":"erik@intecsocal.com","c":"Intec - CA","v":"Integrator","a":"Ready to Migrate","d":"2026-06-10"},{"n":"Brittany DeBoer","e":"brittanyd@mathias1901.com","c":"Mathias Lock and Key, Inc.","v":"Integrator","a":"Migrate Later","d":"2026-06-10"},{"n":"Sara Moseley","e":"saram@moseleyelectronics.com","c":"Moseley Electronics, LLC","v":"Integrator","a":"Ready to Migrate","d":"2026-06-10"},{"n":"Matt Leonow","e":"mleonow@raytecsystems.com","c":"Raytec Systems","v":"MSP","a":"Unknown","d":"2026-06-10"},{"n":"Alicia Carnazzo","e":"acarnazzo@sentenia.net","c":"Sentenia Systems","v":"MSP","a":"Migrate Later","d":"2026-06-10"},{"n":"Pavlina Bellanti","e":"pbellanti@sentenia.net","c":"Sentenia Systems","v":"MSP","a":"Migrate Later","d":"2026-06-10"},{"n":"Steve Shea","e":"sshea@sentenia.net","c":"Sentenia Systems","v":"MSP","a":"Migrate Later","d":"2026-06-10"},{"n":"Stacey Wilson","e":"staceyw@tdaniels.com","c":"T. Daniels Consulting, Inc.","v":"MSP","a":"Migrate Later","d":"2026-06-10"},{"n":"Bryan Murfree","e":"bryan@telewire-inc.com","c":"Telewire Inc.","v":"MSP","a":"Unknown","d":"2026-06-10"},{"n":"John Manesiotis","e":"johnm@wsbcs.net","c":"WSB Computer Services, Inc.","v":"MSP","a":"Migrate Later","d":"2026-06-10"},{"n":"Tom Wilson","e":"twilson@ustele.com","c":"Ustele Inc.","v":"MSP","a":"Unknown","d":"2026-06-11"},{"n":"TJ McDonald","e":"tmcdonald@tdsnetworks.com","c":"TDS-Phone","v":"MSP","a":"Unknown","d":"2026-06-13"}];
 const REGISTRANTS = FIRST_WEBINAR_REGISTRANTS;
+let JUNE19_REGISTRANTS = [];
+const EVENT_TITLES = {
+  first: 'First Webinar',
+  june10: 'June 10 Webinar',
+  june19: 'June 19 Webinar'
+};
+const EVENT_REGISTRANTS = {
+  first: FIRST_WEBINAR_REGISTRANTS,
+  june10: JUNE10_REGISTRANTS,
+  june19: JUNE19_REGISTRANTS
+};
 
 // Normalize vertical / audience for matching
 function matchVert(r, vert) {
@@ -1046,7 +1117,7 @@ function showRegistrants(vert, aud, event = 'first') {
   const titleParts = [];
   if (vert !== 'all') titleParts.push(vertLabel);
   if (aud  !== 'all') titleParts.push(audLabel);
-  const baseTitle = event === 'june10' ? 'June 10 Webinar Registrants' : 'First Webinar Registrants';
+  const baseTitle = `${EVENT_TITLES[event] || 'Webinar'} Registrants`;
   document.getElementById('modal-title').textContent = baseTitle + (titleParts.length ? ' — ' + titleParts.join(' · ') : '');
   renderModal('');
   document.getElementById('reg-modal').classList.add('open');
@@ -1073,7 +1144,7 @@ function audBadge(a) {
 
 function renderModal(search) {
   const { vert, aud, event } = _modalFilter;
-  const source = event === 'june10' ? JUNE10_REGISTRANTS : FIRST_WEBINAR_REGISTRANTS;
+  const source = EVENT_REGISTRANTS[event] || FIRST_WEBINAR_REGISTRANTS;
   const filtered = source.filter(r =>
     matchVert(r, vert) && matchAud(r, aud) &&
     (!search || r.n.toLowerCase().includes(search) || r.c.toLowerCase().includes(search) || r.e.toLowerCase().includes(search))
@@ -1159,11 +1230,16 @@ function updateAudienceData(key, rows) {
   };
 }
 
-function renderJune10Table(rows) {
-  const tbody = document.getElementById('j10-table-body');
+function renderEventTable(event, rows) {
+  const prefix = event === 'june19' ? 'j19' : 'j10';
+  const tbody = document.getElementById(`${prefix}-table-body`);
   if (!tbody) return;
+  if (!rows.length) {
+    tbody.innerHTML = `<tr><td colspan="6" style="text-align:left;color:#94a3b8;">No external registrants found for this event date.</td></tr>`;
+    return;
+  }
   tbody.innerHTML = rows.map(row => `
-    <tr onclick="showRegistrants('all','all','june10')">
+    <tr onclick="showRegistrants('all','all','${event}')">
       <td><strong>${escapeHtml(row.n)}</strong></td>
       <td>${escapeHtml(row.c)}</td>
       <td>${escapeHtml(row.e)}</td>
@@ -1173,13 +1249,38 @@ function renderJune10Table(rows) {
     </tr>`).join('');
 }
 
+function updateEventSummary(event, source) {
+  const prefix = event === 'june19' ? 'j19' : 'j10';
+  const rows = (source.registrants || []).map(compactRegistrant);
+  const msp = rows.filter(row => row.v === 'MSP').length;
+  const integrator = rows.filter(row => row.v === 'Integrator').length;
+  setMetric(`${prefix}-contacts`, source.externalTotal || rows.length);
+  setMetric(`${prefix}-accounts`, source.uniqueAccounts || uniqueAccounts(rows));
+  setMetric(`${prefix}-msp`, msp);
+  const verticalMix = document.getElementById(`${prefix}-vertical-mix`);
+  if (verticalMix) verticalMix.textContent = `${msp} / ${integrator}`;
+  const audienceTotal = document.getElementById(`${prefix}-audience-total`);
+  if (audienceTotal) audienceTotal.textContent = source.externalTotal || rows.length;
+  const eventTotal = document.getElementById(`${prefix}-event-total`);
+  if (eventTotal) eventTotal.textContent = source.externalTotal || rows.length;
+  const rawSub = document.getElementById(`${prefix}-raw-sub`);
+  if (rawSub) rawSub.textContent = `${source.rawTotal || 0} raw · ${source.internalExcluded || 0} internal excluded`;
+  renderEventTable(event, rows);
+  return rows;
+}
+
 function applyWebinarData(payload) {
   const first = payload.registrationDateSplit?.firstWebinar;
   const june10 = payload.events?.june10;
+  const june19 = payload.events?.june19;
   if (!first || !june10) return;
 
   FIRST_WEBINAR_REGISTRANTS = (first.registrants || []).map(compactRegistrant);
-  JUNE10_REGISTRANTS = (june10.registrants || []).map(compactRegistrant);
+  JUNE10_REGISTRANTS = updateEventSummary('june10', june10);
+  JUNE19_REGISTRANTS = june19 ? updateEventSummary('june19', june19) : [];
+  EVENT_REGISTRANTS.first = FIRST_WEBINAR_REGISTRANTS;
+  EVENT_REGISTRANTS.june10 = JUNE10_REGISTRANTS;
+  EVENT_REGISTRANTS.june19 = JUNE19_REGISTRANTS;
 }
 
 fetch('./webinar-data.json', { cache: 'no-store' })

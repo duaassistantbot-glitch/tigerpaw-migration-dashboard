@@ -19,6 +19,13 @@ const EVENTS = [
     eventDate: '2026-06-10T19:00:00Z',
     startDate: '2026-06-10T00:00:00Z',
     endDate: '2026-06-11T00:00:00Z'
+  },
+  {
+    key: 'june19',
+    title: 'June 19 Webinar',
+    eventDate: '2026-06-19T19:00:00Z',
+    startDate: '2026-06-19T00:00:00Z',
+    endDate: '2026-06-20T00:00:00Z'
   }
 ];
 const LAST_WEEK = { start: '2026-05-25', end: '2026-05-31' };
@@ -276,6 +283,7 @@ async function main() {
 
   fs.writeFileSync(path.join(__dirname, 'webinar-data.json'), JSON.stringify(output, null, 2));
   fs.writeFileSync(path.join(__dirname, 'june10-webinar-data.json'), JSON.stringify(events.june10, null, 2));
+  fs.writeFileSync(path.join(__dirname, 'june19-webinar-data.json'), JSON.stringify(events.june19, null, 2));
   console.log(JSON.stringify(events.june10, null, 2));
 }
 
