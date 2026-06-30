@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-21T22:56:10.747Z",
+  "generatedAt": "2026-06-30T10:02:00.862Z",
   "audienceStats": {
     "Ready to Migrate": {
       "sent": 1638,
@@ -10,8 +10,8 @@
       "clickRate": "1.2%",
       "uniqueContacts": 558,
       "uniqueAccts": 84,
-      "webinarReg": 38,
-      "webinarRegAccts": 28
+      "webinarReg": 41,
+      "webinarRegAccts": 30
     },
     "Unknown": {
       "sent": 1855,
@@ -21,35 +21,35 @@
       "openRate": "13.2%",
       "clickRate": "4.4%",
       "uniqueContacts": 1874,
-      "uniqueAccts": 292,
-      "webinarReg": 127,
-      "webinarRegAccts": 84
+      "uniqueAccts": 294,
+      "webinarReg": 142,
+      "webinarRegAccts": 93
     }
   },
   "verticalStats": {
     "MSP": {
       "emailedContacts": 1568,
-      "emailedAccts": 270,
+      "emailedAccts": 271,
       "sent": 2388,
       "delivered": 2361,
       "opens": 292,
       "clicks": 64,
       "openRate": "12.4%",
       "clickRate": "2.7%",
-      "webinarReg": 269,
-      "webinarRegAccts": 141
+      "webinarReg": 297,
+      "webinarRegAccts": 153
     },
     "Integrator": {
       "emailedContacts": 864,
-      "emailedAccts": 106,
+      "emailedAccts": 107,
       "sent": 1105,
       "delivered": 1088,
       "opens": 137,
       "clicks": 36,
       "openRate": "12.6%",
       "clickRate": "3.3%",
-      "webinarReg": 73,
-      "webinarRegAccts": 45
+      "webinarReg": 88,
+      "webinarRegAccts": 56
     }
   },
   "audienceEmails": {
@@ -2491,8 +2491,8 @@
     ]
   },
   "sfOpps": {
-    "generatedAt": "2026-06-21T22:55:49.329Z",
-    "wmrContactCount": 10,
+    "generatedAt": "2026-06-30T10:01:37.181Z",
+    "wmrContactCount": 12,
     "oppsByAudience": {
       "Ready to Migrate": {
         "count": 2,
@@ -2517,8 +2517,8 @@
         ]
       },
       "Unknown": {
-        "count": 4,
-        "amount": 1845,
+        "count": 6,
+        "amount": 3110,
         "opps": [
           {
             "id": "006PX00000b3crTYAQ",
@@ -2543,6 +2543,22 @@
             "stage": "Closed Won",
             "amount": 575,
             "createdDate": "2026-05-21T19:01:48.000+0000"
+          },
+          {
+            "id": "006PX00000cb74hYAA",
+            "name": "TDS-Phone Web Migration",
+            "account": "TDS-Phone",
+            "stage": "4 - Proposal Sent",
+            "amount": 1265,
+            "createdDate": "2026-06-23T19:44:49.000+0000"
+          },
+          {
+            "id": "006PX00000crU26YAE",
+            "name": "Telstar Networks Web Migration",
+            "account": "Telstar Networks",
+            "stage": "2 - Discovery Completed",
+            "amount": 0,
+            "createdDate": "2026-06-29T20:38:28.000+0000"
           },
           {
             "id": "006PX00000bF31tYAC",
@@ -2578,7 +2594,7 @@
             "id": "006PX00000bB2kLYAS",
             "name": "Intelligent Power Solutions Web Migration",
             "account": "Intelligent Power Solutions",
-            "stage": "5 - Product / Contract Validated",
+            "stage": "Closed Lost",
             "amount": 1209,
             "createdDate": "2026-05-26T12:48:50.000+0000"
           },
@@ -2594,8 +2610,8 @@
       }
     },
     "grandTotal": {
-      "count": 10,
-      "amount": 7624.24
+      "count": 12,
+      "amount": 8889.24
     }
   },
   "grandTotals": {
@@ -2606,23 +2622,23 @@
     "openRate": "12.4%",
     "clickRate": "2.9%",
     "uniqueContacts": 2432,
-    "uniqueAccts": 376,
-    "webinarReg": 342,
-    "webinarRegAccts": 186,
-    "internalExcluded": 23
+    "uniqueAccts": 378,
+    "webinarReg": 385,
+    "webinarRegAccts": 209,
+    "internalExcluded": 25
   },
   "regBreakdown": {
     "Ready to Migrate": {
-      "MSP": 26,
-      "Integrator": 12
+      "MSP": 28,
+      "Integrator": 13
     },
     "Unknown": {
-      "MSP": 89,
-      "Integrator": 38
+      "MSP": 99,
+      "Integrator": 43
     },
     "Other": {
-      "MSP": 154,
-      "Integrator": 23
+      "MSP": 170,
+      "Integrator": 32
     }
   }
 }
