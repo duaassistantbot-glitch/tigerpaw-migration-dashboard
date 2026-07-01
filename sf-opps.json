@@ -1,11 +1,19 @@
 {
-  "generatedAt": "2026-06-30T10:01:37.181Z",
-  "wmrContactCount": 12,
+  "generatedAt": "2026-07-01T10:01:37.037Z",
+  "wmrContactCount": 13,
   "oppsByAudience": {
     "Ready to Migrate": {
-      "count": 2,
+      "count": 3,
       "amount": 1023.24,
       "opps": [
+        {
+          "id": "006PX00000ctLAnYAM",
+          "name": "All-Mode Communications Inc Web Migration",
+          "account": "All-Mode Communications Inc",
+          "stage": "1- Discovery Scheduled",
+          "amount": 0,
+          "createdDate": "2026-06-30T11:29:34.000+0000"
+        },
         {
           "id": "006PX00000bB2cIYAS",
           "name": "SOLVD Instrument Solutions Web Migration",
@@ -26,7 +34,7 @@
     },
     "Unknown": {
       "count": 6,
-      "amount": 3110,
+      "amount": 3763,
       "opps": [
         {
           "id": "006PX00000b3crTYAQ",
@@ -65,7 +73,7 @@
           "name": "Telstar Networks Web Migration",
           "account": "Telstar Networks",
           "stage": "2 - Discovery Completed",
-          "amount": 0,
+          "amount": 653,
           "createdDate": "2026-06-29T20:38:28.000+0000"
         },
         {
@@ -80,7 +88,7 @@
     },
     "Other": {
       "count": 4,
-      "amount": 4756,
+      "amount": 4511,
       "opps": [
         {
           "id": "006PX00000aztdzYAA",
@@ -94,8 +102,8 @@
           "id": "006PX00000cKWaXYAW",
           "name": "Hosted America - Web Migration",
           "account": "Hosted America",
-          "stage": "2 - Discovery Completed",
-          "amount": 1425,
+          "stage": "Closed Won",
+          "amount": 1180,
           "createdDate": "2026-06-17T17:12:45.000+0000"
         },
         {
@@ -118,7 +126,7 @@
     }
   },
   "grandTotal": {
-    "count": 12,
-    "amount": 8889.24
+    "count": 13,
+    "amount": 9297.24
   }
 }
