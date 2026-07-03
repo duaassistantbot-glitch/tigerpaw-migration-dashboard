@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-02T10:01:58.652Z",
+  "generatedAt": "2026-07-03T10:02:20.962Z",
   "audienceStats": {
     "Ready to Migrate": {
       "sent": 1638,
@@ -2491,12 +2491,12 @@
     ]
   },
   "sfOpps": {
-    "generatedAt": "2026-07-02T10:01:35.213Z",
-    "wmrContactCount": 13,
+    "generatedAt": "2026-07-03T10:01:58.252Z",
+    "wmrContactCount": 14,
     "oppsByAudience": {
       "Ready to Migrate": {
-        "count": 3,
-        "amount": 1023.24,
+        "count": 5,
+        "amount": 2250.8900000000003,
         "opps": [
           {
             "id": "006PX00000ctLAnYAM",
@@ -2505,6 +2505,22 @@
             "stage": "1- Discovery Scheduled",
             "amount": 0,
             "createdDate": "2026-06-30T11:29:34.000+0000"
+          },
+          {
+            "id": "006PX00000bC9WrYAK",
+            "name": "United Systems - TP Web Migration",
+            "account": "United Systems Inc",
+            "stage": "4 - Proposal Sent",
+            "amount": 1227.65,
+            "createdDate": "2026-05-26T17:18:24.000+0000"
+          },
+          {
+            "id": "006PX00000d19nZYAQ",
+            "name": "United Systems Inc Web Migration",
+            "account": "United Systems Inc",
+            "stage": "1- Discovery Scheduled",
+            "amount": 0,
+            "createdDate": "2026-07-02T20:27:07.000+0000"
           },
           {
             "id": "006PX00000bB2cIYAS",
@@ -2618,8 +2634,8 @@
       }
     },
     "grandTotal": {
-      "count": 13,
-      "amount": 9297.24
+      "count": 15,
+      "amount": 10524.89
     }
   },
   "grandTotals": {
