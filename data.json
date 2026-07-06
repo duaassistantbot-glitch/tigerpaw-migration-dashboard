@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-07-05T10:00:53.593Z",
+  "generatedAt": "2026-07-06T10:01:11.511Z",
   "audienceStats": {
     "Ready to Migrate": {
       "uniqueContactsEmailed": 558,
-      "uniqueAccountsEmailed": 84,
+      "uniqueAccountsEmailed": 85,
       "totalSent": 1638,
       "totalDelivered": 1628,
       "totalOpens": 185,
@@ -13,7 +13,7 @@
     },
     "Unknown": {
       "uniqueContactsEmailed": 1874,
-      "uniqueAccountsEmailed": 294,
+      "uniqueAccountsEmailed": 293,
       "totalSent": 1856,
       "totalDelivered": 1821,
       "totalOpens": 235,
@@ -35,13 +35,13 @@
   "verticalSummary": [
     {
       "vertical": "Unknown",
-      "registeredContacts": 168,
-      "registeredCompanies": 78
+      "registeredContacts": 171,
+      "registeredCompanies": 79
     },
     {
       "vertical": "MSP",
-      "registeredContacts": 161,
-      "registeredCompanies": 94
+      "registeredContacts": 158,
+      "registeredCompanies": 93
     },
     {
       "vertical": "Integrator",
