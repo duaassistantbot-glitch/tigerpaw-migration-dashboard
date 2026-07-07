@@ -1,17 +1,17 @@
 {
-  "generatedAt": "2026-07-06T10:01:40.763Z",
+  "generatedAt": "2026-07-07T10:01:29.109Z",
   "wmrContactCount": 14,
   "oppsByAudience": {
     "Ready to Migrate": {
       "count": 5,
-      "amount": 2250.8900000000003,
+      "amount": 3991.21,
       "opps": [
         {
           "id": "006PX00000ctLAnYAM",
           "name": "All-Mode Communications Inc Web Migration",
           "account": "All-Mode Communications Inc",
           "stage": "1- Discovery Scheduled",
-          "amount": 0,
+          "amount": 1740.32,
           "createdDate": "2026-06-30T11:29:34.000+0000"
         },
         {
@@ -95,7 +95,7 @@
         {
           "id": "006PX00000bF31tYAC",
           "name": "Crowley Web Migration",
-          "account": "Crowley",
+          "account": "The Crowley Company",
           "stage": "Closed Lost",
           "amount": 0,
           "createdDate": "2026-05-27T13:58:01.000+0000"
@@ -143,6 +143,6 @@
   },
   "grandTotal": {
     "count": 15,
-    "amount": 10524.89
+    "amount": 12265.21
   }
 }
