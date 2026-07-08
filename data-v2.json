@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-07T10:01:54.060Z",
+  "generatedAt": "2026-07-08T10:02:00.776Z",
   "audienceStats": {
     "Ready to Migrate": {
       "sent": 1638,
@@ -2491,11 +2491,11 @@
     ]
   },
   "sfOpps": {
-    "generatedAt": "2026-07-07T10:01:29.109Z",
+    "generatedAt": "2026-07-08T10:01:35.617Z",
     "wmrContactCount": 14,
     "oppsByAudience": {
       "Ready to Migrate": {
-        "count": 5,
+        "count": 4,
         "amount": 3991.21,
         "opps": [
           {
@@ -2513,14 +2513,6 @@
             "stage": "4 - Proposal Sent",
             "amount": 1227.65,
             "createdDate": "2026-05-26T17:18:24.000+0000"
-          },
-          {
-            "id": "006PX00000d19nZYAQ",
-            "name": "United Systems Inc Web Migration",
-            "account": "United Systems Inc",
-            "stage": "1- Discovery Scheduled",
-            "amount": 0,
-            "createdDate": "2026-07-02T20:27:07.000+0000"
           },
           {
             "id": "006PX00000bB2cIYAS",
@@ -2556,7 +2548,7 @@
             "id": "006PX00000bJPyIYAW",
             "name": "Phoenix Energy Supply - Web Migration",
             "account": "Phoenix Energy Supply",
-            "stage": "4 - Proposal Sent",
+            "stage": "Closed Lost",
             "amount": 770,
             "createdDate": "2026-05-28T18:29:14.000+0000"
           },
@@ -2634,7 +2626,7 @@
       }
     },
     "grandTotal": {
-      "count": 15,
+      "count": 14,
       "amount": 12265.21
     }
   },
