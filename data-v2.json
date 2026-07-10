@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-09T10:01:51.621Z",
+  "generatedAt": "2026-07-10T10:02:33.564Z",
   "audienceStats": {
     "Ready to Migrate": {
       "sent": 1638,
@@ -28,23 +28,23 @@
   },
   "verticalStats": {
     "MSP": {
-      "emailedContacts": 1567,
+      "emailedContacts": 1568,
       "emailedAccts": 270,
-      "sent": 2385,
-      "delivered": 2358,
-      "opens": 291,
+      "sent": 2388,
+      "delivered": 2361,
+      "opens": 292,
       "clicks": 64,
-      "openRate": "12.3%",
+      "openRate": "12.4%",
       "clickRate": "2.7%",
       "webinarReg": 303,
       "webinarRegAccts": 155
     },
     "Integrator": {
-      "emailedContacts": 865,
+      "emailedContacts": 864,
       "emailedAccts": 106,
-      "sent": 1108,
-      "delivered": 1091,
-      "opens": 138,
+      "sent": 1105,
+      "delivered": 1088,
+      "opens": 137,
       "clicks": 36,
       "openRate": "12.6%",
       "clickRate": "3.3%",
@@ -2491,7 +2491,7 @@
     ]
   },
   "sfOpps": {
-    "generatedAt": "2026-07-09T10:01:29.543Z",
+    "generatedAt": "2026-07-10T10:02:13.133Z",
     "wmrContactCount": 14,
     "oppsByAudience": {
       "Ready to Migrate": {
