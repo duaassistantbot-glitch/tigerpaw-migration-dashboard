@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-13T10:01:23.462Z",
+  "generatedAt": "2026-07-14T10:00:57.715Z",
   "audienceStats": {
     "Ready to Migrate": {
       "uniqueContactsEmailed": 558,
@@ -13,7 +13,7 @@
     },
     "Unknown": {
       "uniqueContactsEmailed": 1874,
-      "uniqueAccountsEmailed": 292,
+      "uniqueAccountsEmailed": 293,
       "totalSent": 1856,
       "totalDelivered": 1821,
       "totalOpens": 235,
@@ -35,18 +35,23 @@
   "verticalSummary": [
     {
       "vertical": "Unknown",
-      "registeredContacts": 171,
-      "registeredCompanies": 79
+      "registeredContacts": 169,
+      "registeredCompanies": 77
     },
     {
       "vertical": "MSP",
-      "registeredContacts": 159,
-      "registeredCompanies": 94
+      "registeredContacts": 158,
+      "registeredCompanies": 93
     },
     {
       "vertical": "Integrator",
-      "registeredContacts": 68,
+      "registeredContacts": 69,
       "registeredCompanies": 41
+    },
+    {
+      "vertical": "Legacy Telecom",
+      "registeredContacts": 2,
+      "registeredCompanies": 1
     },
     {
       "vertical": "AV / Home Automation",
@@ -56,7 +61,7 @@
   ],
   "webinarTotal": {
     "totalContacts": 399,
-    "uniqueAccounts": 215
+    "uniqueAccounts": 213
   },
   "emailDetails": [
     {
