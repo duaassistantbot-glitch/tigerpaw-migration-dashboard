@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-17T10:00:57.989Z",
+  "generatedAt": "2026-07-18T10:01:11.052Z",
   "audienceStats": {
     "Ready to Migrate": {
       "uniqueContactsEmailed": 558,
@@ -40,13 +40,13 @@
     },
     {
       "vertical": "MSP",
-      "registeredContacts": 158,
-      "registeredCompanies": 93
+      "registeredContacts": 157,
+      "registeredCompanies": 92
     },
     {
       "vertical": "Integrator",
-      "registeredContacts": 69,
-      "registeredCompanies": 41
+      "registeredContacts": 70,
+      "registeredCompanies": 42
     },
     {
       "vertical": "Legacy Telecom",
