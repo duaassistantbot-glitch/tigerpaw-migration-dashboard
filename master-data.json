@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-18T10:03:56.140Z",
+  "generatedAt": "2026-07-19T10:04:00.531Z",
   "filters": {
     "account": "Web_Migration__c != null",
     "opportunity": "Type = 'Legacy Migration'",
