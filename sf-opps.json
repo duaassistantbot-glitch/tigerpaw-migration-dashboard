@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-07-19T10:01:37.841Z",
-  "wmrContactCount": 14,
+  "generatedAt": "2026-07-21T10:02:28.219Z",
+  "wmrContactCount": 15,
   "oppsByAudience": {
     "Ready to Migrate": {
       "count": 4,
@@ -41,8 +41,8 @@
       ]
     },
     "Unknown": {
-      "count": 6,
-      "amount": 3763,
+      "count": 7,
+      "amount": 4237,
       "opps": [
         {
           "id": "006PX00000b3crTYAQ",
@@ -51,6 +51,14 @@
           "stage": "Closed Lost",
           "amount": 500,
           "createdDate": "2026-05-22T20:41:35.000+0000"
+        },
+        {
+          "id": "006PX00000dhQaHYAU",
+          "name": "MPS Works - Web Migration",
+          "account": "MPS Works",
+          "stage": "2 - Discovery Completed",
+          "amount": 474,
+          "createdDate": "2026-07-20T17:12:02.000+0000"
         },
         {
           "id": "006PX00000bJPyIYAW",
@@ -95,7 +103,7 @@
       ]
     },
     "Other": {
-      "count": 4,
+      "count": 5,
       "amount": 4511,
       "opps": [
         {
@@ -129,12 +137,20 @@
           "stage": "Closed Won",
           "amount": 772,
           "createdDate": "2026-06-15T18:56:25.000+0000"
+        },
+        {
+          "id": "006PX00000dhFGfYAM",
+          "name": "PremCom Web Migration",
+          "account": "PremCom",
+          "stage": "1- Discovery Scheduled",
+          "amount": 0,
+          "createdDate": "2026-07-20T16:10:14.000+0000"
         }
       ]
     }
   },
   "grandTotal": {
-    "count": 14,
-    "amount": 12265.21
+    "count": 16,
+    "amount": 12739.21
   }
 }
