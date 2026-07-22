@@ -1,20 +1,20 @@
 {
-  "generatedAt": "2026-07-19T10:04:00.531Z",
+  "generatedAt": "2026-07-22T10:04:09.221Z",
   "filters": {
     "account": "Web_Migration__c != null",
     "opportunity": "Type = 'Legacy Migration'",
     "closedLost": "StageName = 'Closed Lost'"
   },
   "totals": {
-    "tigerpawAccounts": 615,
-    "legacyMigrationOpps": 85,
-    "legacyMigrationAmount": 95079.31,
-    "closedLostOpps": 32
+    "tigerpawAccounts": 617,
+    "legacyMigrationOpps": 89,
+    "legacyMigrationAmount": 98974.31,
+    "closedLostOpps": 33
   },
   "statusBreakdown": [
     {
       "label": "Unknown",
-      "count": 337,
+      "count": 338,
       "pct": 54.8,
       "accounts": [
         {
@@ -3109,6 +3109,17 @@
           "psaWeb": false
         },
         {
+          "id": "0011500001e8gQQAAY",
+          "name": "Techmode",
+          "type": "Rev.io Billing Client",
+          "webMigrationStatus": "Unknown",
+          "webMigrationDetails": "",
+          "accountStatus": "Active - Tigerpaw One",
+          "owner": "Gavin Aylward",
+          "vertical": "",
+          "psaWeb": false
+        },
+        {
           "id": "0016O00003dmuZLQAY",
           "name": "Technesis Greenwood",
           "type": "Rev.io PSA Client",
@@ -3728,8 +3739,8 @@
     },
     {
       "label": "Want to migrate / timeline unknown",
-      "count": 104,
-      "pct": 16.9,
+      "count": 103,
+      "pct": 16.7,
       "accounts": [
         {
           "id": "0016O00003dmuJPQAY",
@@ -3780,7 +3791,7 @@
           "name": "Advanced Hospitality Systems",
           "type": "Rev.io PSA Client",
           "webMigrationStatus": "Want to migrate / timeline unknown",
-          "webMigrationDetails": "Interested in migrating in Summer/Fall. Client thinks functionality looks ok for his needs, and pending pricing plans to move forward.",
+          "webMigrationDetails": "Client is unable to migrate until inventory can handle exchanges and return assets to inventory workflows, and a password manager is implemented. Both items are on the roadmap but do not have an expected available date. Will continue to monitor the roadmap and let customer know when requested features will be available.",
           "accountStatus": "Active - Tigerpaw One",
           "owner": "Blaine Villafuerte",
           "vertical": "",
@@ -4372,7 +4383,7 @@
         {
           "id": "0011500001HNQIWAA5",
           "name": "ICS Communications",
-          "type": "Rev.io PSA Client",
+          "type": "TigerPaw Client",
           "webMigrationStatus": "Want to migrate / timeline unknown",
           "webMigrationDetails": "Jason is interested but not in a rush",
           "accountStatus": "Active - Tigerpaw One",
@@ -4649,7 +4660,7 @@
           "name": "PremCom",
           "type": "Rev.io PSA Client",
           "webMigrationStatus": "Want to migrate / timeline unknown",
-          "webMigrationDetails": "",
+          "webMigrationDetails": "07/15/2026 - LVM to Don, followed up with an email.",
           "accountStatus": "Active - Tigerpaw One",
           "owner": "Blaine Villafuerte",
           "vertical": "",
@@ -4755,17 +4766,6 @@
           "psaWeb": false
         },
         {
-          "id": "0011500001HNPwtAAH",
-          "name": "Sunrise Solutions Inc",
-          "type": "Rev.io PSA Client",
-          "webMigrationStatus": "Want to migrate / timeline unknown",
-          "webMigrationDetails": "in onboarding now",
-          "accountStatus": "Active - Tigerpaw One",
-          "owner": "Gavin Aylward",
-          "vertical": "",
-          "psaWeb": false
-        },
-        {
           "id": "0016O00003dmuZDQAY",
           "name": "T. Daniels Consulting, Inc.",
           "type": "Rev.io PSA Client",
@@ -4858,7 +4858,7 @@
           "name": "WSB Computer Services, Inc.",
           "type": "Rev.io PSA Client",
           "webMigrationStatus": "Want to migrate / timeline unknown",
-          "webMigrationDetails": "had a demo Q4 2025\r\n07/07/2026 - Talked with Rose (does not know yet), sent an email to Kenny for more information. They want to migrate after a year, followed up with asking why do they need to wait for another year.",
+          "webMigrationDetails": "had a demo Q4 2025\r\n07/07/2026 - Talked with Rose (does not know yet), sent an email to Kenny for more information. They want to migrate after a year, followed up with asking why do they need to wait for another year. 07/15/2026 - Demo.",
           "accountStatus": "Active - Unleashed",
           "owner": "Gavin Aylward",
           "vertical": "",
@@ -4879,8 +4879,8 @@
     },
     {
       "label": "Want to migrate asap",
-      "count": 100,
-      "pct": 16.3,
+      "count": 99,
+      "pct": 16,
       "accounts": [
         {
           "id": "0016O00003dmuJQQAY",
@@ -4942,7 +4942,7 @@
           "name": "All-Mode Communications Inc",
           "type": "Rev.io PSA Client",
           "webMigrationStatus": "Want to migrate asap",
-          "webMigrationDetails": "Feels ready to move but wants to make sure they have a plan in place for any missing functionality. Follow up call set for 7/28.",
+          "webMigrationDetails": "Missing functionality - requested feedback from client.",
           "accountStatus": "Active - Unleashed",
           "owner": "Ingrid Beard",
           "vertical": "",
@@ -5613,7 +5613,7 @@
           "name": "MPS Works",
           "type": "TigerPaw Client",
           "webMigrationStatus": "Want to migrate asap",
-          "webMigrationDetails": "7/9/2026 - Spoke with Robert - wants to migrate ASAP but waiting on Managed Print Services feature to be available before they can migrate.",
+          "webMigrationDetails": "Wants to migrate but waiting on Managed Print Services feature to be available before they can migrate.",
           "accountStatus": "Active - Tigerpaw One",
           "owner": "Blaine Villafuerte",
           "vertical": "",
@@ -5770,17 +5770,6 @@
           "webMigrationDetails": "On track to begin 4/1",
           "accountStatus": "Active - Tigerpaw One",
           "owner": "Ingrid Beard",
-          "vertical": "",
-          "psaWeb": false
-        },
-        {
-          "id": "0016O00003dmuVoQAI",
-          "name": "Rel Comm Inc",
-          "type": "Rev.io PSA Client",
-          "webMigrationStatus": "Want to migrate asap",
-          "webMigrationDetails": "",
-          "accountStatus": "Active - Unleashed",
-          "owner": "Blaine Villafuerte",
           "vertical": "",
           "psaWeb": false
         },
@@ -6474,7 +6463,7 @@
           "name": "Agility Integration",
           "type": "Rev.io PSA Client",
           "webMigrationStatus": "Inactive",
-          "webMigrationDetails": "Client has been unresponsive and we have not yet had a conversation about web",
+          "webMigrationDetails": "Client has been unresponsive and we have not yet had a conversation about web\r\n07/20/2026 - Talked to Brian about PSA Web, trying to set up a meeting with them.",
           "accountStatus": "Active - Tigerpaw One",
           "owner": "Gavin Aylward",
           "vertical": "",
@@ -6737,8 +6726,8 @@
     },
     {
       "label": "Migration in progress",
-      "count": 7,
-      "pct": 1.1,
+      "count": 10,
+      "pct": 1.6,
       "accounts": [
         {
           "id": "0011C00001sb1uDQAQ",
@@ -6796,6 +6785,39 @@
           "psaWeb": true
         },
         {
+          "id": "0016O00003dmuVoQAI",
+          "name": "Rel Comm",
+          "type": "Rev.io PSA Client",
+          "webMigrationStatus": "Migration in progress",
+          "webMigrationDetails": "",
+          "accountStatus": "Active - Unleashed",
+          "owner": "Blaine Villafuerte",
+          "vertical": "",
+          "psaWeb": false
+        },
+        {
+          "id": "0016O00003ebjkxQAA",
+          "name": "Roadrunner Lock & Safe",
+          "type": "TigerPaw Client",
+          "webMigrationStatus": "Migration in progress",
+          "webMigrationDetails": "",
+          "accountStatus": "",
+          "owner": "",
+          "vertical": "",
+          "psaWeb": false
+        },
+        {
+          "id": "0011500001HNPwtAAH",
+          "name": "Sunrise Solutions",
+          "type": "Rev.io PSA Client",
+          "webMigrationStatus": "Migration in progress",
+          "webMigrationDetails": "in onboarding now",
+          "accountStatus": "Active - Tigerpaw One",
+          "owner": "Gavin Aylward",
+          "vertical": "",
+          "psaWeb": false
+        },
+        {
           "id": "0016O00003dmuaOQAQ",
           "name": "UT Networks",
           "type": "TigerPaw Client",
@@ -6823,61 +6845,41 @@
   "stageBreakdown": [
     {
       "label": "1- Discovery Scheduled",
-      "count": 5,
-      "amount": 7295,
-      "pct": 5.9,
+      "count": 4,
+      "amount": 3717,
+      "pct": 4.5,
       "opportunities": [
-        {
-          "id": "006PX00000dBr2XYAS",
-          "name": "BCS Voice & Data - PSA Web Migration",
-          "accountId": "0016O00003dmuKdQAI",
-          "account": "BCS Voice and Data",
-          "stage": "1- Discovery Scheduled",
-          "amount": 1380,
-          "owner": "Jakob Champion",
-          "nextStep": "Call scheduled on 7/16 to go over features of PSA Web",
-          "createdDate": "2026-07-07T20:19:24.000+0000",
-          "closeDate": "2026-07-31",
-          "isClosed": false,
-          "isWon": false,
-          "lossReason": "Unspecified",
-          "lossDetail": "",
-          "competitor": "",
-          "stageLoss": "",
-          "smc": "",
-          "vikingOneUnlock": null
-        },
-        {
-          "id": "006PX00000dAaQLYA0",
-          "name": "Area Wide Web Migration",
-          "accountId": "0016O00003dmuK7QAI",
-          "account": "Area Wide Communications, LLC",
-          "stage": "1- Discovery Scheduled",
-          "amount": 2182,
-          "owner": "Jacob Williams",
-          "nextStep": "Client saw demo, schedule a discovery call for 7/22 to look into current platform functionality.",
-          "createdDate": "2026-07-07T13:44:03.000+0000",
-          "closeDate": "2026-07-31",
-          "isClosed": false,
-          "isWon": false,
-          "lossReason": "Unspecified",
-          "lossDetail": "",
-          "competitor": "",
-          "stageLoss": "",
-          "smc": "",
-          "vikingOneUnlock": null
-        },
         {
           "id": "006PX00000dQ5qPYAS",
           "name": "Infotel - PSA Migration",
           "accountId": "0016O00003dmuQSQAY",
           "account": "Infotel Systems",
           "stage": "1- Discovery Scheduled",
-          "amount": 711,
+          "amount": 695,
           "owner": "Ingrid Beard",
-          "nextStep": "7/16 follow up for next meeting to review Q&A",
+          "nextStep": "7/21 to follow up on info for demo",
           "createdDate": "2026-07-13T19:20:59.000+0000",
           "closeDate": "2026-07-31",
+          "isClosed": false,
+          "isWon": false,
+          "lossReason": "Unspecified",
+          "lossDetail": "",
+          "competitor": "",
+          "stageLoss": "",
+          "smc": "",
+          "vikingOneUnlock": null
+        },
+        {
+          "id": "006PX00000dhFGfYAM",
+          "name": "PremCom Web Migration",
+          "accountId": "0016O00003dmuVKQAY",
+          "account": "PremCom",
+          "stage": "1- Discovery Scheduled",
+          "amount": 0,
+          "owner": "Rinor Berisha",
+          "nextStep": "07/20/2026 - Send an email to set up a meeting. (Waiting on their response)",
+          "createdDate": "2026-07-20T16:10:14.000+0000",
+          "closeDate": "2026-08-31",
           "isClosed": false,
           "isWon": false,
           "lossReason": "Unspecified",
@@ -6915,7 +6917,7 @@
           "stage": "1- Discovery Scheduled",
           "amount": 3022,
           "owner": "Jakob Champion",
-          "nextStep": "Discovery call scheduled for 7/15",
+          "nextStep": "Reach out mid August to discuss merging instances and scheduling a follow up demo.",
           "createdDate": "2026-07-14T15:13:57.000+0000",
           "closeDate": "2026-08-31",
           "isClosed": false,
@@ -6931,30 +6933,10 @@
     },
     {
       "label": "2 - Discovery Completed",
-      "count": 12,
-      "amount": 18057.7,
-      "pct": 14.1,
+      "count": 14,
+      "amount": 20786.7,
+      "pct": 15.7,
       "opportunities": [
-        {
-          "id": "006PX00000dW6ztYAC",
-          "name": "Beacon - PSA Migration",
-          "accountId": "0016O00003dmuKeQAI",
-          "account": "Beacon Telecom",
-          "stage": "2 - Discovery Completed",
-          "amount": 1337,
-          "owner": "Ingrid Beard",
-          "nextStep": "Initial Demo on 7/20",
-          "createdDate": "2026-07-15T18:15:23.000+0000",
-          "closeDate": "2026-07-31",
-          "isClosed": false,
-          "isWon": false,
-          "lossReason": "Unspecified",
-          "lossDetail": "",
-          "competitor": "",
-          "stageLoss": "",
-          "smc": "",
-          "vikingOneUnlock": null
-        },
         {
           "id": "006PX00000dT2eHYAS",
           "name": "Datapro-Tigerpaw Migration",
@@ -6963,9 +6945,9 @@
           "stage": "2 - Discovery Completed",
           "amount": 783,
           "owner": "Katerra Stephenson Greenwood",
-          "nextStep": "Waiting on Contracts to be released to setup a demo. Follow up 7/21",
+          "nextStep": "contracts should be up by mid August, pushing this out until Aug 31",
           "createdDate": "2026-07-14T18:06:01.000+0000",
-          "closeDate": "2026-07-31",
+          "closeDate": "2026-08-31",
           "isClosed": false,
           "isWon": false,
           "lossReason": "Unspecified",
@@ -6996,6 +6978,26 @@
           "vikingOneUnlock": null
         },
         {
+          "id": "006PX00000dBr2XYAS",
+          "name": "BCS Voice & Data - PSA Web Migration",
+          "accountId": "0016O00003dmuKdQAI",
+          "account": "BCS Voice and Data",
+          "stage": "2 - Discovery Completed",
+          "amount": 1380,
+          "owner": "Jakob Champion",
+          "nextStep": "Schedule follow up for quote creation → service order conversion → time logging → billing → QuickBooks sync, plus migration process",
+          "createdDate": "2026-07-07T20:19:24.000+0000",
+          "closeDate": "2026-07-31",
+          "isClosed": false,
+          "isWon": false,
+          "lossReason": "Unspecified",
+          "lossDetail": "",
+          "competitor": "",
+          "stageLoss": "",
+          "smc": "",
+          "vikingOneUnlock": null
+        },
+        {
           "id": "006PX00000d8gwUYAQ",
           "name": "CRC - TP Migration",
           "accountId": "0016O00003dmucxQAA",
@@ -7003,7 +7005,7 @@
           "stage": "2 - Discovery Completed",
           "amount": 1327,
           "owner": "Ingrid Beard",
-          "nextStep": "follow up 7/20 to reschedule- currently dealing with a forest fire situation",
+          "nextStep": "follow up 7/21 to reschedule- currently dealing with a forest fire situation",
           "createdDate": "2026-07-06T22:00:26.000+0000",
           "closeDate": "2026-07-31",
           "isClosed": false,
@@ -7023,9 +7025,29 @@
           "stage": "2 - Discovery Completed",
           "amount": 954,
           "owner": "Ingrid Beard",
-          "nextStep": "7/16 demo",
+          "nextStep": "7/21 continue to reschedule demo",
           "createdDate": "2026-07-02T18:11:58.000+0000",
           "closeDate": "2026-07-31",
+          "isClosed": false,
+          "isWon": false,
+          "lossReason": "Unspecified",
+          "lossDetail": "",
+          "competitor": "",
+          "stageLoss": "",
+          "smc": "",
+          "vikingOneUnlock": null
+        },
+        {
+          "id": "006PX00000dhQaHYAU",
+          "name": "MPS Works - Web Migration",
+          "accountId": "0016O00003dmuUMQAY",
+          "account": "MPS Works",
+          "stage": "2 - Discovery Completed",
+          "amount": 474,
+          "owner": "Sarah McGovern",
+          "nextStep": "7/21: Client waiting on Managed Print functionality.  Working with CLSams on a workaround that may work for MPS Works. Meeting scheduled for 7/30 to review.",
+          "createdDate": "2026-07-20T17:12:02.000+0000",
+          "closeDate": "2026-08-31",
           "isClosed": false,
           "isWon": false,
           "lossReason": "Unspecified",
@@ -7043,9 +7065,9 @@
           "stage": "2 - Discovery Completed",
           "amount": 562,
           "owner": "Katerra Stephenson Greenwood",
-          "nextStep": "7/21 Scheduling follow-up demo with Tony once Contract function goes live",
+          "nextStep": "contracts should be up by mid August, pushing this out until Aug 31",
           "createdDate": "2026-07-07T19:53:20.000+0000",
-          "closeDate": "2026-07-31",
+          "closeDate": "2026-08-31",
           "isClosed": false,
           "isWon": false,
           "lossReason": "Unspecified",
@@ -7063,8 +7085,28 @@
           "stage": "2 - Discovery Completed",
           "amount": 866.7,
           "owner": "Ryan Burton",
-          "nextStep": "Reach back out on 7/20: Josh is helping his oldest daughter move and is out this week. Also, checking on the company buying his billing portion of the business and seeing if that will effect PSA migration timeline.",
+          "nextStep": "Reach back out on 7/23: Josh is helping his oldest daughter move and is out this week. Also, checking on the company buying his billing portion of the business and seeing if that will effect PSA migration timeline.",
           "createdDate": "2026-07-06T17:09:54.000+0000",
+          "closeDate": "2026-07-31",
+          "isClosed": false,
+          "isWon": false,
+          "lossReason": "Unspecified",
+          "lossDetail": "",
+          "competitor": "",
+          "stageLoss": "",
+          "smc": "",
+          "vikingOneUnlock": null
+        },
+        {
+          "id": "006PX00000djzDlYAI",
+          "name": "Richmond- TP to PSA Web",
+          "accountId": "0016O00003dmuYMQAY",
+          "account": "Richmond Security",
+          "stage": "2 - Discovery Completed",
+          "amount": 2212,
+          "owner": "Katerra Stephenson Greenwood",
+          "nextStep": "Demo Scheduled for 7/23 w/ Michael",
+          "createdDate": "2026-07-21T13:40:16.000+0000",
           "closeDate": "2026-07-31",
           "isClosed": false,
           "isWon": false,
@@ -7103,7 +7145,7 @@
           "stage": "2 - Discovery Completed",
           "amount": 1591,
           "owner": "Ingrid Beard",
-          "nextStep": "7/16 follow up from next step meeting options",
+          "nextStep": "7/22 follow up on internal conversations",
           "createdDate": "2026-07-10T13:06:09.000+0000",
           "closeDate": "2026-07-31",
           "isClosed": false,
@@ -7123,7 +7165,7 @@
           "stage": "2 - Discovery Completed",
           "amount": 653,
           "owner": "Ingrid Beard",
-          "nextStep": "follow to schedule overview upon Jodie's return 7/16",
+          "nextStep": "7/21 continue to try and connect",
           "createdDate": "2026-06-29T20:38:28.000+0000",
           "closeDate": "2026-07-29",
           "isClosed": false,
@@ -7143,7 +7185,7 @@
           "stage": "2 - Discovery Completed",
           "amount": 2580,
           "owner": "Ingrid Beard",
-          "nextStep": "sent over updated dates for demo and follow up on 7/16",
+          "nextStep": "7/21 follow up for demo reschedule",
           "createdDate": "2026-06-23T09:54:00.000+0000",
           "closeDate": "2026-08-31",
           "isClosed": false,
@@ -7179,10 +7221,30 @@
     },
     {
       "label": "3 - Initial Product Demo",
-      "count": 1,
-      "amount": 1240,
-      "pct": 1.2,
+      "count": 2,
+      "amount": 2577,
+      "pct": 2.2,
       "opportunities": [
+        {
+          "id": "006PX00000dW6ztYAC",
+          "name": "Beacon - PSA Migration",
+          "accountId": "0016O00003dmuKeQAI",
+          "account": "Beacon Telecom",
+          "stage": "3 - Initial Product Demo",
+          "amount": 1337,
+          "owner": "Ingrid Beard",
+          "nextStep": "7/22 follow up on post demo internal meeting",
+          "createdDate": "2026-07-15T18:15:23.000+0000",
+          "closeDate": "2026-07-31",
+          "isClosed": false,
+          "isWon": false,
+          "lossReason": "Unspecified",
+          "lossDetail": "",
+          "competitor": "",
+          "stageLoss": "",
+          "smc": "",
+          "vikingOneUnlock": null
+        },
         {
           "id": "006PX00000azz3SYAQ",
           "name": "Chortek/RCH - PSA Migration",
@@ -7191,7 +7253,7 @@
           "stage": "3 - Initial Product Demo",
           "amount": 1240,
           "owner": "Ingrid Beard",
-          "nextStep": "7/16 email response",
+          "nextStep": "7/21 follow up on hubspot reference request (check with team in meeting)",
           "createdDate": "2026-05-21T17:16:24.000+0000",
           "closeDate": "2026-07-31",
           "isClosed": false,
@@ -7207,30 +7269,10 @@
     },
     {
       "label": "4 - Proposal Sent",
-      "count": 5,
-      "amount": 8120.0199999999995,
-      "pct": 5.9,
+      "count": 3,
+      "amount": 4196.02,
+      "pct": 3.4,
       "opportunities": [
-        {
-          "id": "006PX00000d0VbdYAE",
-          "name": "Advanced Hospitality Web Migration",
-          "accountId": "0016O00003dmuJlQAI",
-          "account": "Advanced Hospitality Systems",
-          "stage": "4 - Proposal Sent",
-          "amount": 2054,
-          "owner": "Jacob Williams",
-          "nextStep": "Client currently testing in PSA Sales Demo, will call on 7/17 to get feedback on demo.",
-          "createdDate": "2026-07-02T16:22:50.000+0000",
-          "closeDate": "2026-08-31",
-          "isClosed": false,
-          "isWon": false,
-          "lossReason": "Unspecified",
-          "lossDetail": "",
-          "competitor": "",
-          "stageLoss": "",
-          "smc": "",
-          "vikingOneUnlock": null
-        },
         {
           "id": "006PX00000ctLAnYAM",
           "name": "All-Mode Communications Inc Web Migration",
@@ -7239,29 +7281,9 @@
           "stage": "4 - Proposal Sent",
           "amount": 1740.32,
           "owner": "Sarah McGovern",
-          "nextStep": "Client requested temporary demo access for team to poke around.  Followed up 7/16 for list of users wanting access and provided answers to questions around inventory fields. Follow up call set for 7/28.",
+          "nextStep": "7/21: Client requested temporary demo access for team.  Follow up call set for 7/28.",
           "createdDate": "2026-06-30T11:29:34.000+0000",
           "closeDate": "2026-07-30",
-          "isClosed": false,
-          "isWon": false,
-          "lossReason": "Unspecified",
-          "lossDetail": "",
-          "competitor": "",
-          "stageLoss": "",
-          "smc": "",
-          "vikingOneUnlock": null
-        },
-        {
-          "id": "006PX00000bYkBBYA0",
-          "name": "Integrated Systems - Web Migration",
-          "accountId": "0016O00003dmuQeQAI",
-          "account": "Integrated Systems",
-          "stage": "4 - Proposal Sent",
-          "amount": 1870,
-          "owner": "Justin Lee",
-          "nextStep": "Follow up PSA contracts demo scheduled for 7/17 at 9am - Confirmed contracts (Agreements) were released in dev, not production- Tony ready to demo",
-          "createdDate": "2026-06-02T19:18:31.000+0000",
-          "closeDate": "2026-07-31",
           "isClosed": false,
           "isWon": false,
           "lossReason": "Unspecified",
@@ -7279,7 +7301,7 @@
           "stage": "4 - Proposal Sent",
           "amount": 1190.7,
           "owner": "Olivia Sandefur",
-          "nextStep": "7/14: Stephen asked to schedule license/pricing discussion week of 8/2",
+          "nextStep": "Stephen asked to schedule license/pricing discussion week of 8/2 when he returns from PTO",
           "createdDate": "2026-05-26T16:27:38.000+0000",
           "closeDate": "2026-08-31",
           "isClosed": false,
@@ -7299,7 +7321,7 @@
           "stage": "4 - Proposal Sent",
           "amount": 1265,
           "owner": "Katerra Stephenson Greenwood",
-          "nextStep": "waiting to get users a demo account 7/17",
+          "nextStep": "Users demo account sent and follow up scheduled to discuss 7/27",
           "createdDate": "2026-06-23T19:44:49.000+0000",
           "closeDate": "2026-07-31",
           "isClosed": false,
@@ -7315,10 +7337,30 @@
     },
     {
       "label": "5 - Product / Contract Validated",
-      "count": 3,
-      "amount": 6951.2,
-      "pct": 3.5,
+      "count": 4,
+      "amount": 8758.2,
+      "pct": 4.5,
       "opportunities": [
+        {
+          "id": "006PX00000dAaQLYA0",
+          "name": "Area Wide Web Migration",
+          "accountId": "0016O00003dmuK7QAI",
+          "account": "Area Wide Communications, LLC",
+          "stage": "5 - Product / Contract Validated",
+          "amount": 2182,
+          "owner": "Jacob Williams",
+          "nextStep": "Client saw demo, schedule a discovery call for 7/22 to look into current platform functionality.",
+          "createdDate": "2026-07-07T13:44:03.000+0000",
+          "closeDate": "2026-07-31",
+          "isClosed": false,
+          "isWon": false,
+          "lossReason": "Unspecified",
+          "lossDetail": "",
+          "competitor": "",
+          "stageLoss": "",
+          "smc": "",
+          "vikingOneUnlock": null
+        },
         {
           "id": "006PX00000cE7wbYAC",
           "name": "Centerpoint IT Tigerpaw Web Migration",
@@ -7327,7 +7369,7 @@
           "stage": "5 - Product / Contract Validated",
           "amount": 3091.2,
           "owner": "Rinor Berisha",
-          "nextStep": "07/29 Check in | Beta Version of Contacts & Agreements",
+          "nextStep": "07/29 Check in Meeting | Beta Version of Contacts & Agreements",
           "createdDate": "2026-06-15T20:03:02.000+0000",
           "closeDate": "2026-08-31",
           "isClosed": false,
@@ -7345,9 +7387,9 @@
           "accountId": "0011C00002iU7CcQAK",
           "account": "Digital Telecommunications",
           "stage": "5 - Product / Contract Validated",
-          "amount": 2200,
+          "amount": 1825,
           "owner": "Ingrid Beard",
-          "nextStep": "follow up on 7/16 to make sure that there are no questions on the updated quote",
+          "nextStep": "follow up on 7/21 follow up on implementation questions",
           "createdDate": "2026-06-11T21:58:03.000+0000",
           "closeDate": "2026-07-31",
           "isClosed": false,
@@ -7383,10 +7425,30 @@
     },
     {
       "label": "6 - Verbal Commit",
-      "count": 1,
-      "amount": 770,
-      "pct": 1.2,
+      "count": 2,
+      "amount": 2640,
+      "pct": 2.2,
       "opportunities": [
+        {
+          "id": "006PX00000bYkBBYA0",
+          "name": "Integrated Systems - Web Migration",
+          "accountId": "0016O00003dmuQeQAI",
+          "account": "Integrated Systems",
+          "stage": "6 - Verbal Commit",
+          "amount": 1870,
+          "owner": "Justin Lee",
+          "nextStep": "Mark will sign DocuSign - Confirm signature before EOD (7/21)",
+          "createdDate": "2026-06-02T19:18:31.000+0000",
+          "closeDate": "2026-07-21",
+          "isClosed": false,
+          "isWon": false,
+          "lossReason": "Unspecified",
+          "lossDetail": "",
+          "competitor": "",
+          "stageLoss": "",
+          "smc": "",
+          "vikingOneUnlock": null
+        },
         {
           "id": "006PX00000dc5WVYAY",
           "name": "Omidi TP Migration",
@@ -7395,7 +7457,7 @@
           "stage": "6 - Verbal Commit",
           "amount": 770,
           "owner": "Ingrid Beard",
-          "nextStep": "follow up on 7/20 if we have not received signed docusign",
+          "nextStep": "follow up on 7/22 deep dive with Tony",
           "createdDate": "2026-07-17T19:00:15.000+0000",
           "closeDate": "2026-07-31",
           "isClosed": false,
@@ -7411,10 +7473,41 @@
     },
     {
       "label": "Closed Lost",
-      "count": 32,
-      "amount": 36942.39000000001,
-      "pct": 37.6,
+      "count": 33,
+      "amount": 38996.39,
+      "pct": 37.1,
       "opportunities": [
+        {
+          "id": "006PX00000d0VbdYAE",
+          "name": "Advanced Hospitality Web Migration",
+          "accountId": "0016O00003dmuJlQAI",
+          "account": "Advanced Hospitality Systems",
+          "stage": "Closed Lost",
+          "amount": 2054,
+          "owner": "Jacob Williams",
+          "nextStep": "Continue to monitor roadmap for upcoming functionality, and inform client of availability date.",
+          "createdDate": "2026-07-02T16:22:50.000+0000",
+          "closeDate": "2026-07-20",
+          "isClosed": true,
+          "isWon": false,
+          "lossReason": "Software Missing Capabilities",
+          "lossDetail": "Client is unable to migrate until inventory can handle exchanges and return assets to inventory workflows, and a password manager is implemented.",
+          "competitor": "",
+          "stageLoss": "4 - Proposal Sent",
+          "smc": "",
+          "vikingOneUnlock": {
+            "status": "Yes",
+            "summary": "Credential vault/password management is in Viking 1.",
+            "matches": [
+              {
+                "feature": "Credential Vault - 3rd Party Integration",
+                "release": "Viking 1",
+                "status": "Not Started",
+                "detail": "Add a secure, permission-based credential vault for storing and managing client passwords, API keys, and sensitive access information."
+              }
+            ]
+          }
+        },
         {
           "id": "006PX00000czqa5YAA",
           "name": "A-Z Printers TP Migration",
@@ -7464,7 +7557,7 @@
               {
                 "feature": "Dispatch board - support multiple boards",
                 "release": "Viking 1",
-                "status": "Not Started",
+                "status": "In Dev",
                 "detail": "Improve dispatch flexibility with multiple board views based on rep groups or ticket types, helping teams organize work and focus on the tickets most relevant to them."
               },
               {
@@ -7538,7 +7631,7 @@
               {
                 "feature": "Add one-time charge component to agreement",
                 "release": "Viking 1",
-                "status": "Not Started",
+                "status": "In Dev",
                 "detail": "Add onetime charges to an agreement directly based on the product catalog. able to edit amount, cost, description, quantity. Not tied to a service. Charged when Agreement goes \"live\" -> directly to unposted. Re-charged on renewal?"
               },
               {
@@ -7550,13 +7643,13 @@
               {
                 "feature": "Agreement Time Entry Rates",
                 "release": "Viking 1",
-                "status": "In Dev",
+                "status": "Dev Complete",
                 "detail": "Make time billing clearer and easier to manage. The enhanced Time Entry Rates tab ensures agreement-specific rates are fully populated and presented in a streamlined experience, helping your team apply the right rates consistently and reduce billing errors."
               },
               {
                 "feature": "Agreement Overage Templates",
                 "release": "Viking 1",
-                "status": "In Dev",
+                "status": "Dev Complete",
                 "detail": "Set up overage billing faster and with more confidence. Overage Templates streamline configuration by pre-populating common tier structures, improving how changes propagate, and adding history so your team can track updates over time and keep billing rules consistent."
               }
             ]
@@ -8088,7 +8181,7 @@
               {
                 "feature": "Add one-time charge component to agreement",
                 "release": "Viking 1",
-                "status": "Not Started",
+                "status": "In Dev",
                 "detail": "Add onetime charges to an agreement directly based on the product catalog. able to edit amount, cost, description, quantity. Not tied to a service. Charged when Agreement goes \"live\" -> directly to unposted. Re-charged on renewal?"
               },
               {
@@ -8100,13 +8193,13 @@
               {
                 "feature": "Agreement Time Entry Rates",
                 "release": "Viking 1",
-                "status": "In Dev",
+                "status": "Dev Complete",
                 "detail": "Make time billing clearer and easier to manage. The enhanced Time Entry Rates tab ensures agreement-specific rates are fully populated and presented in a streamlined experience, helping your team apply the right rates consistently and reduce billing errors."
               },
               {
                 "feature": "Agreement Overage Templates",
                 "release": "Viking 1",
-                "status": "In Dev",
+                "status": "Dev Complete",
                 "detail": "Set up overage billing faster and with more confidence. Overage Templates streamline configuration by pre-populating common tier structures, improving how changes propagate, and adding history so your team can track updates over time and keep billing rules consistent."
               }
             ]
@@ -8456,7 +8549,7 @@
               {
                 "feature": "Dispatch board - support multiple boards",
                 "release": "Viking 1",
-                "status": "Not Started",
+                "status": "In Dev",
                 "detail": "Improve dispatch flexibility with multiple board views based on rep groups or ticket types, helping teams organize work and focus on the tickets most relevant to them."
               },
               {
@@ -8478,9 +8571,9 @@
     },
     {
       "label": "Closed Won",
-      "count": 26,
-      "amount": 15703,
-      "pct": 30.6,
+      "count": 27,
+      "amount": 17303,
+      "pct": 30.3,
       "opportunities": [
         {
           "id": "006PX00000dJXrRYAW",
@@ -8843,6 +8936,26 @@
           "vikingOneUnlock": null
         },
         {
+          "id": "006PX00000bXFe5YAG",
+          "name": "Roadrunner - TP Migration",
+          "accountId": "0016O00003ebjkxQAA",
+          "account": "Roadrunner Lock & Safe",
+          "stage": "Closed Won",
+          "amount": 1600,
+          "owner": "Ingrid Beard",
+          "nextStep": "contract to be signed and move forward with implementation as soon as possible, to be signed by EOW",
+          "createdDate": "2026-06-02T12:56:35.000+0000",
+          "closeDate": "2026-06-24",
+          "isClosed": true,
+          "isWon": true,
+          "lossReason": "Unspecified",
+          "lossDetail": "",
+          "competitor": "",
+          "stageLoss": "",
+          "smc": "",
+          "vikingOneUnlock": null
+        },
+        {
           "id": "006PX00000bBxp3YAC",
           "name": "Virtual Guard - TP Web Migration",
           "accountId": "0016O00003eao1eQAA",
@@ -8906,7 +9019,7 @@
           "id": "006PX00000aPACLYA4",
           "name": "Tigerpaw to Web Migration",
           "accountId": "0011500001HNPwtAAH",
-          "account": "Sunrise Solutions Inc",
+          "account": "Sunrise Solutions",
           "stage": "Closed Won",
           "amount": 0,
           "owner": "Blaine Villafuerte",
@@ -8946,7 +9059,7 @@
           "id": "006PX00000Z8YtBYAV",
           "name": "Tigerpaw Web Conversion",
           "accountId": "0016O00003dmuVoQAI",
-          "account": "Rel Comm Inc",
+          "account": "Rel Comm",
           "stage": "Closed Won",
           "amount": 0,
           "owner": "Olivia Sandefur",
@@ -9008,9 +9121,40 @@
   "lossBreakdown": [
     {
       "label": "Software Missing Capabilities",
-      "count": 18,
-      "amount": 21205.410000000003,
+      "count": 19,
+      "amount": 23259.410000000003,
       "opportunities": [
+        {
+          "id": "006PX00000d0VbdYAE",
+          "name": "Advanced Hospitality Web Migration",
+          "accountId": "0016O00003dmuJlQAI",
+          "account": "Advanced Hospitality Systems",
+          "stage": "Closed Lost",
+          "amount": 2054,
+          "owner": "Jacob Williams",
+          "nextStep": "Continue to monitor roadmap for upcoming functionality, and inform client of availability date.",
+          "createdDate": "2026-07-02T16:22:50.000+0000",
+          "closeDate": "2026-07-20",
+          "isClosed": true,
+          "isWon": false,
+          "lossReason": "Software Missing Capabilities",
+          "lossDetail": "Client is unable to migrate until inventory can handle exchanges and return assets to inventory workflows, and a password manager is implemented.",
+          "competitor": "",
+          "stageLoss": "4 - Proposal Sent",
+          "smc": "",
+          "vikingOneUnlock": {
+            "status": "Yes",
+            "summary": "Credential vault/password management is in Viking 1.",
+            "matches": [
+              {
+                "feature": "Credential Vault - 3rd Party Integration",
+                "release": "Viking 1",
+                "status": "Not Started",
+                "detail": "Add a secure, permission-based credential vault for storing and managing client passwords, API keys, and sensitive access information."
+              }
+            ]
+          }
+        },
         {
           "id": "006PX00000cqAdJYAU",
           "name": "ASAP Security Services - Web Migration",
@@ -9036,7 +9180,7 @@
               {
                 "feature": "Dispatch board - support multiple boards",
                 "release": "Viking 1",
-                "status": "Not Started",
+                "status": "In Dev",
                 "detail": "Improve dispatch flexibility with multiple board views based on rep groups or ticket types, helping teams organize work and focus on the tickets most relevant to them."
               },
               {
@@ -9110,7 +9254,7 @@
               {
                 "feature": "Add one-time charge component to agreement",
                 "release": "Viking 1",
-                "status": "Not Started",
+                "status": "In Dev",
                 "detail": "Add onetime charges to an agreement directly based on the product catalog. able to edit amount, cost, description, quantity. Not tied to a service. Charged when Agreement goes \"live\" -> directly to unposted. Re-charged on renewal?"
               },
               {
@@ -9122,13 +9266,13 @@
               {
                 "feature": "Agreement Time Entry Rates",
                 "release": "Viking 1",
-                "status": "In Dev",
+                "status": "Dev Complete",
                 "detail": "Make time billing clearer and easier to manage. The enhanced Time Entry Rates tab ensures agreement-specific rates are fully populated and presented in a streamlined experience, helping your team apply the right rates consistently and reduce billing errors."
               },
               {
                 "feature": "Agreement Overage Templates",
                 "release": "Viking 1",
-                "status": "In Dev",
+                "status": "Dev Complete",
                 "detail": "Set up overage billing faster and with more confidence. Overage Templates streamline configuration by pre-populating common tier structures, improving how changes propagate, and adding history so your team can track updates over time and keep billing rules consistent."
               }
             ]
@@ -9563,7 +9707,7 @@
               {
                 "feature": "Add one-time charge component to agreement",
                 "release": "Viking 1",
-                "status": "Not Started",
+                "status": "In Dev",
                 "detail": "Add onetime charges to an agreement directly based on the product catalog. able to edit amount, cost, description, quantity. Not tied to a service. Charged when Agreement goes \"live\" -> directly to unposted. Re-charged on renewal?"
               },
               {
@@ -9575,13 +9719,13 @@
               {
                 "feature": "Agreement Time Entry Rates",
                 "release": "Viking 1",
-                "status": "In Dev",
+                "status": "Dev Complete",
                 "detail": "Make time billing clearer and easier to manage. The enhanced Time Entry Rates tab ensures agreement-specific rates are fully populated and presented in a streamlined experience, helping your team apply the right rates consistently and reduce billing errors."
               },
               {
                 "feature": "Agreement Overage Templates",
                 "release": "Viking 1",
-                "status": "In Dev",
+                "status": "Dev Complete",
                 "detail": "Set up overage billing faster and with more confidence. Overage Templates streamline configuration by pre-populating common tier structures, improving how changes propagate, and adding history so your team can track updates over time and keep billing rules consistent."
               }
             ]
@@ -9691,7 +9835,7 @@
               {
                 "feature": "Dispatch board - support multiple boards",
                 "release": "Viking 1",
-                "status": "Not Started",
+                "status": "In Dev",
                 "detail": "Improve dispatch flexibility with multiple board views based on rep groups or ticket types, helping teams organize work and focus on the tickets most relevant to them."
               },
               {
@@ -10327,7 +10471,7 @@
       "name": "Advanced Hospitality Systems",
       "type": "Rev.io PSA Client",
       "webMigrationStatus": "Want to migrate / timeline unknown",
-      "webMigrationDetails": "Interested in migrating in Summer/Fall. Client thinks functionality looks ok for his needs, and pending pricing plans to move forward.",
+      "webMigrationDetails": "Client is unable to migrate until inventory can handle exchanges and return assets to inventory workflows, and a password manager is implemented. Both items are on the roadmap but do not have an expected available date. Will continue to monitor the roadmap and let customer know when requested features will be available.",
       "accountStatus": "Active - Tigerpaw One",
       "owner": "Blaine Villafuerte",
       "vertical": "",
@@ -10448,7 +10592,7 @@
       "name": "Agility Integration",
       "type": "Rev.io PSA Client",
       "webMigrationStatus": "Inactive",
-      "webMigrationDetails": "Client has been unresponsive and we have not yet had a conversation about web",
+      "webMigrationDetails": "Client has been unresponsive and we have not yet had a conversation about web\r\n07/20/2026 - Talked to Brian about PSA Web, trying to set up a meeting with them.",
       "accountStatus": "Active - Tigerpaw One",
       "owner": "Gavin Aylward",
       "vertical": "",
@@ -10503,7 +10647,7 @@
       "name": "All-Mode Communications Inc",
       "type": "Rev.io PSA Client",
       "webMigrationStatus": "Want to migrate asap",
-      "webMigrationDetails": "Feels ready to move but wants to make sure they have a plan in place for any missing functionality. Follow up call set for 7/28.",
+      "webMigrationDetails": "Missing functionality - requested feedback from client.",
       "accountStatus": "Active - Unleashed",
       "owner": "Ingrid Beard",
       "vertical": "",
@@ -13185,7 +13329,7 @@
     {
       "id": "0011500001HNQIWAA5",
       "name": "ICS Communications",
-      "type": "Rev.io PSA Client",
+      "type": "TigerPaw Client",
       "webMigrationStatus": "Want to migrate / timeline unknown",
       "webMigrationDetails": "Jason is interested but not in a rush",
       "accountStatus": "Active - Tigerpaw One",
@@ -14309,7 +14453,7 @@
       "name": "MPS Works",
       "type": "TigerPaw Client",
       "webMigrationStatus": "Want to migrate asap",
-      "webMigrationDetails": "7/9/2026 - Spoke with Robert - wants to migrate ASAP but waiting on Managed Print Services feature to be available before they can migrate.",
+      "webMigrationDetails": "Wants to migrate but waiting on Managed Print Services feature to be available before they can migrate.",
       "accountStatus": "Active - Tigerpaw One",
       "owner": "Blaine Villafuerte",
       "vertical": "",
@@ -14958,7 +15102,7 @@
       "name": "PremCom",
       "type": "Rev.io PSA Client",
       "webMigrationStatus": "Want to migrate / timeline unknown",
-      "webMigrationDetails": "",
+      "webMigrationDetails": "07/15/2026 - LVM to Don, followed up with an email.",
       "accountStatus": "Active - Tigerpaw One",
       "owner": "Blaine Villafuerte",
       "vertical": "",
@@ -15263,9 +15407,9 @@
     },
     {
       "id": "0016O00003dmuVoQAI",
-      "name": "Rel Comm Inc",
+      "name": "Rel Comm",
       "type": "Rev.io PSA Client",
-      "webMigrationStatus": "Want to migrate asap",
+      "webMigrationStatus": "Migration in progress",
       "webMigrationDetails": "",
       "accountStatus": "Active - Unleashed",
       "owner": "Blaine Villafuerte",
@@ -15368,6 +15512,17 @@
       "webMigrationDetails": "",
       "accountStatus": "Active - Tigerpaw One",
       "owner": "Gavin Aylward",
+      "vertical": "",
+      "psaWeb": false
+    },
+    {
+      "id": "0016O00003ebjkxQAA",
+      "name": "Roadrunner Lock & Safe",
+      "type": "TigerPaw Client",
+      "webMigrationStatus": "Migration in progress",
+      "webMigrationDetails": "",
+      "accountStatus": "",
+      "owner": "",
       "vertical": "",
       "psaWeb": false
     },
@@ -15758,9 +15913,9 @@
     },
     {
       "id": "0011500001HNPwtAAH",
-      "name": "Sunrise Solutions Inc",
+      "name": "Sunrise Solutions",
       "type": "Rev.io PSA Client",
-      "webMigrationStatus": "Want to migrate / timeline unknown",
+      "webMigrationStatus": "Migration in progress",
       "webMigrationDetails": "in onboarding now",
       "accountStatus": "Active - Tigerpaw One",
       "owner": "Gavin Aylward",
@@ -15881,6 +16036,17 @@
       "id": "0016O00003dmuZJQAY",
       "name": "TDS-Phone",
       "type": "Rev.io PSA Client",
+      "webMigrationStatus": "Unknown",
+      "webMigrationDetails": "",
+      "accountStatus": "Active - Tigerpaw One",
+      "owner": "Gavin Aylward",
+      "vertical": "",
+      "psaWeb": false
+    },
+    {
+      "id": "0011500001e8gQQAAY",
+      "name": "Techmode",
+      "type": "Rev.io Billing Client",
       "webMigrationStatus": "Unknown",
       "webMigrationDetails": "",
       "accountStatus": "Active - Tigerpaw One",
@@ -16153,10 +16319,10 @@
       "psaWeb": false
     },
     {
-      "id": "001PX00000Abt4dYAB",
+      "id": "001PX000004hVRqYAM",
       "name": "The Phone Experts - Communications Ltd.",
       "type": "Rev.io PSA Client",
-      "webMigrationStatus": "Want to migrate / timeline unknown",
+      "webMigrationStatus": "Unknown",
       "webMigrationDetails": "",
       "accountStatus": "Active - Unleashed",
       "owner": "Ingrid Beard",
@@ -16164,10 +16330,10 @@
       "psaWeb": false
     },
     {
-      "id": "001PX000004hVRqYAM",
+      "id": "001PX00000Abt4dYAB",
       "name": "The Phone Experts - Communications Ltd.",
       "type": "Rev.io PSA Client",
-      "webMigrationStatus": "Unknown",
+      "webMigrationStatus": "Want to migrate / timeline unknown",
       "webMigrationDetails": "",
       "accountStatus": "Active - Unleashed",
       "owner": "Ingrid Beard",
@@ -16784,7 +16950,7 @@
       "name": "WSB Computer Services, Inc.",
       "type": "Rev.io PSA Client",
       "webMigrationStatus": "Want to migrate / timeline unknown",
-      "webMigrationDetails": "had a demo Q4 2025\r\n07/07/2026 - Talked with Rose (does not know yet), sent an email to Kenny for more information. They want to migrate after a year, followed up with asking why do they need to wait for another year.",
+      "webMigrationDetails": "had a demo Q4 2025\r\n07/07/2026 - Talked with Rose (does not know yet), sent an email to Kenny for more information. They want to migrate after a year, followed up with asking why do they need to wait for another year. 07/15/2026 - Demo.",
       "accountStatus": "Active - Unleashed",
       "owner": "Gavin Aylward",
       "vertical": "",
@@ -16874,10 +17040,10 @@
       "name": "Beacon - PSA Migration",
       "accountId": "0016O00003dmuKeQAI",
       "account": "Beacon Telecom",
-      "stage": "2 - Discovery Completed",
+      "stage": "3 - Initial Product Demo",
       "amount": 1337,
       "owner": "Ingrid Beard",
-      "nextStep": "Initial Demo on 7/20",
+      "nextStep": "7/22 follow up on post demo internal meeting",
       "createdDate": "2026-07-15T18:15:23.000+0000",
       "closeDate": "2026-07-31",
       "isClosed": false,
@@ -16897,9 +17063,9 @@
       "stage": "2 - Discovery Completed",
       "amount": 783,
       "owner": "Katerra Stephenson Greenwood",
-      "nextStep": "Waiting on Contracts to be released to setup a demo. Follow up 7/21",
+      "nextStep": "contracts should be up by mid August, pushing this out until Aug 31",
       "createdDate": "2026-07-14T18:06:01.000+0000",
-      "closeDate": "2026-07-31",
+      "closeDate": "2026-08-31",
       "isClosed": false,
       "isWon": false,
       "lossReason": "Unspecified",
@@ -16954,10 +17120,10 @@
       "name": "BCS Voice & Data - PSA Web Migration",
       "accountId": "0016O00003dmuKdQAI",
       "account": "BCS Voice and Data",
-      "stage": "1- Discovery Scheduled",
+      "stage": "2 - Discovery Completed",
       "amount": 1380,
       "owner": "Jakob Champion",
-      "nextStep": "Call scheduled on 7/16 to go over features of PSA Web",
+      "nextStep": "Schedule follow up for quote creation → service order conversion → time logging → billing → QuickBooks sync, plus migration process",
       "createdDate": "2026-07-07T20:19:24.000+0000",
       "closeDate": "2026-07-31",
       "isClosed": false,
@@ -16974,7 +17140,7 @@
       "name": "Area Wide Web Migration",
       "accountId": "0016O00003dmuK7QAI",
       "account": "Area Wide Communications, LLC",
-      "stage": "1- Discovery Scheduled",
+      "stage": "5 - Product / Contract Validated",
       "amount": 2182,
       "owner": "Jacob Williams",
       "nextStep": "Client saw demo, schedule a discovery call for 7/22 to look into current platform functionality.",
@@ -16997,7 +17163,7 @@
       "stage": "2 - Discovery Completed",
       "amount": 1327,
       "owner": "Ingrid Beard",
-      "nextStep": "follow up 7/20 to reschedule- currently dealing with a forest fire situation",
+      "nextStep": "follow up 7/21 to reschedule- currently dealing with a forest fire situation",
       "createdDate": "2026-07-06T22:00:26.000+0000",
       "closeDate": "2026-07-31",
       "isClosed": false,
@@ -17017,7 +17183,7 @@
       "stage": "2 - Discovery Completed",
       "amount": 954,
       "owner": "Ingrid Beard",
-      "nextStep": "7/16 demo",
+      "nextStep": "7/21 continue to reschedule demo",
       "createdDate": "2026-07-02T18:11:58.000+0000",
       "closeDate": "2026-07-31",
       "isClosed": false,
@@ -17034,20 +17200,31 @@
       "name": "Advanced Hospitality Web Migration",
       "accountId": "0016O00003dmuJlQAI",
       "account": "Advanced Hospitality Systems",
-      "stage": "4 - Proposal Sent",
+      "stage": "Closed Lost",
       "amount": 2054,
       "owner": "Jacob Williams",
-      "nextStep": "Client currently testing in PSA Sales Demo, will call on 7/17 to get feedback on demo.",
+      "nextStep": "Continue to monitor roadmap for upcoming functionality, and inform client of availability date.",
       "createdDate": "2026-07-02T16:22:50.000+0000",
-      "closeDate": "2026-08-31",
-      "isClosed": false,
+      "closeDate": "2026-07-20",
+      "isClosed": true,
       "isWon": false,
-      "lossReason": "Unspecified",
-      "lossDetail": "",
+      "lossReason": "Software Missing Capabilities",
+      "lossDetail": "Client is unable to migrate until inventory can handle exchanges and return assets to inventory workflows, and a password manager is implemented.",
       "competitor": "",
-      "stageLoss": "",
+      "stageLoss": "4 - Proposal Sent",
       "smc": "",
-      "vikingOneUnlock": null
+      "vikingOneUnlock": {
+        "status": "Yes",
+        "summary": "Credential vault/password management is in Viking 1.",
+        "matches": [
+          {
+            "feature": "Credential Vault - 3rd Party Integration",
+            "release": "Viking 1",
+            "status": "Not Started",
+            "detail": "Add a secure, permission-based credential vault for storing and managing client passwords, API keys, and sensitive access information."
+          }
+        ]
+      }
     },
     {
       "id": "006PX00000czqa5YAA",
@@ -17081,7 +17258,7 @@
       "stage": "4 - Proposal Sent",
       "amount": 1740.32,
       "owner": "Sarah McGovern",
-      "nextStep": "Client requested temporary demo access for team to poke around.  Followed up 7/16 for list of users wanting access and provided answers to questions around inventory fields. Follow up call set for 7/28.",
+      "nextStep": "7/21: Client requested temporary demo access for team.  Follow up call set for 7/28.",
       "createdDate": "2026-06-30T11:29:34.000+0000",
       "closeDate": "2026-07-30",
       "isClosed": false,
@@ -17118,7 +17295,7 @@
           {
             "feature": "Dispatch board - support multiple boards",
             "release": "Viking 1",
-            "status": "Not Started",
+            "status": "In Dev",
             "detail": "Improve dispatch flexibility with multiple board views based on rep groups or ticket types, helping teams organize work and focus on the tickets most relevant to them."
           },
           {
@@ -17144,7 +17321,7 @@
       "stage": "5 - Product / Contract Validated",
       "amount": 3091.2,
       "owner": "Rinor Berisha",
-      "nextStep": "07/29 Check in | Beta Version of Contacts & Agreements",
+      "nextStep": "07/29 Check in Meeting | Beta Version of Contacts & Agreements",
       "createdDate": "2026-06-15T20:03:02.000+0000",
       "closeDate": "2026-08-31",
       "isClosed": false,
@@ -17162,9 +17339,9 @@
       "accountId": "0011C00002iU7CcQAK",
       "account": "Digital Telecommunications",
       "stage": "5 - Product / Contract Validated",
-      "amount": 2200,
+      "amount": 1825,
       "owner": "Ingrid Beard",
-      "nextStep": "follow up on 7/16 to make sure that there are no questions on the updated quote",
+      "nextStep": "follow up on 7/21 follow up on implementation questions",
       "createdDate": "2026-06-11T21:58:03.000+0000",
       "closeDate": "2026-07-31",
       "isClosed": false,
@@ -17232,7 +17409,7 @@
           {
             "feature": "Add one-time charge component to agreement",
             "release": "Viking 1",
-            "status": "Not Started",
+            "status": "In Dev",
             "detail": "Add onetime charges to an agreement directly based on the product catalog. able to edit amount, cost, description, quantity. Not tied to a service. Charged when Agreement goes \"live\" -> directly to unposted. Re-charged on renewal?"
           },
           {
@@ -17244,13 +17421,13 @@
           {
             "feature": "Agreement Time Entry Rates",
             "release": "Viking 1",
-            "status": "In Dev",
+            "status": "Dev Complete",
             "detail": "Make time billing clearer and easier to manage. The enhanced Time Entry Rates tab ensures agreement-specific rates are fully populated and presented in a streamlined experience, helping your team apply the right rates consistently and reduce billing errors."
           },
           {
             "feature": "Agreement Overage Templates",
             "release": "Viking 1",
-            "status": "In Dev",
+            "status": "Dev Complete",
             "detail": "Set up overage billing faster and with more confidence. Overage Templates streamline configuration by pre-populating common tier structures, improving how changes propagate, and adding history so your team can track updates over time and keep billing rules consistent."
           }
         ]
@@ -17337,7 +17514,7 @@
       "stage": "3 - Initial Product Demo",
       "amount": 1240,
       "owner": "Ingrid Beard",
-      "nextStep": "7/16 email response",
+      "nextStep": "7/21 follow up on hubspot reference request (check with team in meeting)",
       "createdDate": "2026-05-21T17:16:24.000+0000",
       "closeDate": "2026-07-31",
       "isClosed": false,
@@ -17521,6 +17698,26 @@
       "vikingOneUnlock": null
     },
     {
+      "id": "006PX00000dhQaHYAU",
+      "name": "MPS Works - Web Migration",
+      "accountId": "0016O00003dmuUMQAY",
+      "account": "MPS Works",
+      "stage": "2 - Discovery Completed",
+      "amount": 474,
+      "owner": "Sarah McGovern",
+      "nextStep": "7/21: Client waiting on Managed Print functionality.  Working with CLSams on a workaround that may work for MPS Works. Meeting scheduled for 7/30 to review.",
+      "createdDate": "2026-07-20T17:12:02.000+0000",
+      "closeDate": "2026-08-31",
+      "isClosed": false,
+      "isWon": false,
+      "lossReason": "Unspecified",
+      "lossDetail": "",
+      "competitor": "",
+      "stageLoss": "",
+      "smc": "",
+      "vikingOneUnlock": null
+    },
+    {
       "id": "006PX00000dY4ynYAC",
       "name": "Integraserv PSA Migration",
       "accountId": "0016O00003dmuQYQAY",
@@ -17575,9 +17772,9 @@
       "accountId": "0016O00003dmuQSQAY",
       "account": "Infotel Systems",
       "stage": "1- Discovery Scheduled",
-      "amount": 711,
+      "amount": 695,
       "owner": "Ingrid Beard",
-      "nextStep": "7/16 follow up for next meeting to review Q&A",
+      "nextStep": "7/21 to follow up on info for demo",
       "createdDate": "2026-07-13T19:20:59.000+0000",
       "closeDate": "2026-07-31",
       "isClosed": false,
@@ -17597,9 +17794,9 @@
       "stage": "2 - Discovery Completed",
       "amount": 562,
       "owner": "Katerra Stephenson Greenwood",
-      "nextStep": "7/21 Scheduling follow-up demo with Tony once Contract function goes live",
+      "nextStep": "contracts should be up by mid August, pushing this out until Aug 31",
       "createdDate": "2026-07-07T19:53:20.000+0000",
-      "closeDate": "2026-07-31",
+      "closeDate": "2026-08-31",
       "isClosed": false,
       "isWon": false,
       "lossReason": "Unspecified",
@@ -17617,7 +17814,7 @@
       "stage": "2 - Discovery Completed",
       "amount": 866.7,
       "owner": "Ryan Burton",
-      "nextStep": "Reach back out on 7/20: Josh is helping his oldest daughter move and is out this week. Also, checking on the company buying his billing portion of the business and seeing if that will effect PSA migration timeline.",
+      "nextStep": "Reach back out on 7/23: Josh is helping his oldest daughter move and is out this week. Also, checking on the company buying his billing portion of the business and seeing if that will effect PSA migration timeline.",
       "createdDate": "2026-07-06T17:09:54.000+0000",
       "closeDate": "2026-07-31",
       "isClosed": false,
@@ -17812,12 +18009,12 @@
       "name": "Integrated Systems - Web Migration",
       "accountId": "0016O00003dmuQeQAI",
       "account": "Integrated Systems",
-      "stage": "4 - Proposal Sent",
+      "stage": "6 - Verbal Commit",
       "amount": 1870,
       "owner": "Justin Lee",
-      "nextStep": "Follow up PSA contracts demo scheduled for 7/17 at 9am - Confirmed contracts (Agreements) were released in dev, not production- Tony ready to demo",
+      "nextStep": "Mark will sign DocuSign - Confirm signature before EOD (7/21)",
       "createdDate": "2026-06-02T19:18:31.000+0000",
-      "closeDate": "2026-07-31",
+      "closeDate": "2026-07-21",
       "isClosed": false,
       "isWon": false,
       "lossReason": "Unspecified",
@@ -17859,7 +18056,7 @@
       "stage": "4 - Proposal Sent",
       "amount": 1190.7,
       "owner": "Olivia Sandefur",
-      "nextStep": "7/14: Stephen asked to schedule license/pricing discussion week of 8/2",
+      "nextStep": "Stephen asked to schedule license/pricing discussion week of 8/2 when he returns from PTO",
       "createdDate": "2026-05-26T16:27:38.000+0000",
       "closeDate": "2026-08-31",
       "isClosed": false,
@@ -18122,7 +18319,7 @@
           {
             "feature": "Add one-time charge component to agreement",
             "release": "Viking 1",
-            "status": "Not Started",
+            "status": "In Dev",
             "detail": "Add onetime charges to an agreement directly based on the product catalog. able to edit amount, cost, description, quantity. Not tied to a service. Charged when Agreement goes \"live\" -> directly to unposted. Re-charged on renewal?"
           },
           {
@@ -18134,13 +18331,13 @@
           {
             "feature": "Agreement Time Entry Rates",
             "release": "Viking 1",
-            "status": "In Dev",
+            "status": "Dev Complete",
             "detail": "Make time billing clearer and easier to manage. The enhanced Time Entry Rates tab ensures agreement-specific rates are fully populated and presented in a streamlined experience, helping your team apply the right rates consistently and reduce billing errors."
           },
           {
             "feature": "Agreement Overage Templates",
             "release": "Viking 1",
-            "status": "In Dev",
+            "status": "Dev Complete",
             "detail": "Set up overage billing faster and with more confidence. Overage Templates streamline configuration by pre-populating common tier structures, improving how changes propagate, and adding history so your team can track updates over time and keep billing rules consistent."
           }
         ]
@@ -18207,6 +18404,46 @@
       "vikingOneUnlock": null
     },
     {
+      "id": "006PX00000djzDlYAI",
+      "name": "Richmond- TP to PSA Web",
+      "accountId": "0016O00003dmuYMQAY",
+      "account": "Richmond Security",
+      "stage": "2 - Discovery Completed",
+      "amount": 2212,
+      "owner": "Katerra Stephenson Greenwood",
+      "nextStep": "Demo Scheduled for 7/23 w/ Michael",
+      "createdDate": "2026-07-21T13:40:16.000+0000",
+      "closeDate": "2026-07-31",
+      "isClosed": false,
+      "isWon": false,
+      "lossReason": "Unspecified",
+      "lossDetail": "",
+      "competitor": "",
+      "stageLoss": "",
+      "smc": "",
+      "vikingOneUnlock": null
+    },
+    {
+      "id": "006PX00000dhFGfYAM",
+      "name": "PremCom Web Migration",
+      "accountId": "0016O00003dmuVKQAY",
+      "account": "PremCom",
+      "stage": "1- Discovery Scheduled",
+      "amount": 0,
+      "owner": "Rinor Berisha",
+      "nextStep": "07/20/2026 - Send an email to set up a meeting. (Waiting on their response)",
+      "createdDate": "2026-07-20T16:10:14.000+0000",
+      "closeDate": "2026-08-31",
+      "isClosed": false,
+      "isWon": false,
+      "lossReason": "Unspecified",
+      "lossDetail": "",
+      "competitor": "",
+      "stageLoss": "",
+      "smc": "",
+      "vikingOneUnlock": null
+    },
+    {
       "id": "006PX00000dc5WVYAY",
       "name": "Omidi TP Migration",
       "accountId": "0016O00003dmuUjQAI",
@@ -18214,7 +18451,7 @@
       "stage": "6 - Verbal Commit",
       "amount": 770,
       "owner": "Ingrid Beard",
-      "nextStep": "follow up on 7/20 if we have not received signed docusign",
+      "nextStep": "follow up on 7/22 deep dive with Tony",
       "createdDate": "2026-07-17T19:00:15.000+0000",
       "closeDate": "2026-07-31",
       "isClosed": false,
@@ -18254,7 +18491,7 @@
       "stage": "1- Discovery Scheduled",
       "amount": 3022,
       "owner": "Jakob Champion",
-      "nextStep": "Discovery call scheduled for 7/15",
+      "nextStep": "Reach out mid August to discuss merging instances and scheduling a follow up demo.",
       "createdDate": "2026-07-14T15:13:57.000+0000",
       "closeDate": "2026-08-31",
       "isClosed": false,
@@ -18314,7 +18551,7 @@
       "stage": "2 - Discovery Completed",
       "amount": 1591,
       "owner": "Ingrid Beard",
-      "nextStep": "7/16 follow up from next step meeting options",
+      "nextStep": "7/22 follow up on internal conversations",
       "createdDate": "2026-07-10T13:06:09.000+0000",
       "closeDate": "2026-07-31",
       "isClosed": false,
@@ -18374,7 +18611,7 @@
       "stage": "2 - Discovery Completed",
       "amount": 653,
       "owner": "Ingrid Beard",
-      "nextStep": "follow to schedule overview upon Jodie's return 7/16",
+      "nextStep": "7/21 continue to try and connect",
       "createdDate": "2026-06-29T20:38:28.000+0000",
       "closeDate": "2026-07-29",
       "isClosed": false,
@@ -18394,7 +18631,7 @@
       "stage": "4 - Proposal Sent",
       "amount": 1265,
       "owner": "Katerra Stephenson Greenwood",
-      "nextStep": "waiting to get users a demo account 7/17",
+      "nextStep": "Users demo account sent and follow up scheduled to discuss 7/27",
       "createdDate": "2026-06-23T19:44:49.000+0000",
       "closeDate": "2026-07-31",
       "isClosed": false,
@@ -18414,7 +18651,7 @@
       "stage": "2 - Discovery Completed",
       "amount": 2580,
       "owner": "Ingrid Beard",
-      "nextStep": "sent over updated dates for demo and follow up on 7/16",
+      "nextStep": "7/21 follow up for demo reschedule",
       "createdDate": "2026-06-23T09:54:00.000+0000",
       "closeDate": "2026-08-31",
       "isClosed": false,
@@ -18461,6 +18698,26 @@
       "nextStep": "emailing on available times to meet on Friday 7/3 - IT has approved",
       "createdDate": "2026-06-08T18:38:18.000+0000",
       "closeDate": "2026-07-03",
+      "isClosed": true,
+      "isWon": true,
+      "lossReason": "Unspecified",
+      "lossDetail": "",
+      "competitor": "",
+      "stageLoss": "",
+      "smc": "",
+      "vikingOneUnlock": null
+    },
+    {
+      "id": "006PX00000bXFe5YAG",
+      "name": "Roadrunner - TP Migration",
+      "accountId": "0016O00003ebjkxQAA",
+      "account": "Roadrunner Lock & Safe",
+      "stage": "Closed Won",
+      "amount": 1600,
+      "owner": "Ingrid Beard",
+      "nextStep": "contract to be signed and move forward with implementation as soon as possible, to be signed by EOW",
+      "createdDate": "2026-06-02T12:56:35.000+0000",
+      "closeDate": "2026-06-24",
       "isClosed": true,
       "isWon": true,
       "lossReason": "Unspecified",
@@ -18757,7 +19014,7 @@
       "id": "006PX00000aPACLYA4",
       "name": "Tigerpaw to Web Migration",
       "accountId": "0011500001HNPwtAAH",
-      "account": "Sunrise Solutions Inc",
+      "account": "Sunrise Solutions",
       "stage": "Closed Won",
       "amount": 0,
       "owner": "Blaine Villafuerte",
@@ -18821,7 +19078,7 @@
       "id": "006PX00000Z8YtBYAV",
       "name": "Tigerpaw Web Conversion",
       "accountId": "0016O00003dmuVoQAI",
-      "account": "Rel Comm Inc",
+      "account": "Rel Comm",
       "stage": "Closed Won",
       "amount": 0,
       "owner": "Olivia Sandefur",
@@ -18930,7 +19187,7 @@
           {
             "feature": "Dispatch board - support multiple boards",
             "release": "Viking 1",
-            "status": "Not Started",
+            "status": "In Dev",
             "detail": "Improve dispatch flexibility with multiple board views based on rep groups or ticket types, helping teams organize work and focus on the tickets most relevant to them."
           },
           {
