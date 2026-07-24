@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-23T10:06:14.460Z",
+  "generatedAt": "2026-07-24T10:04:00.505Z",
   "filters": {
     "account": "Web_Migration__c != null",
     "opportunity": "Type = 'Legacy Migration'",
@@ -7,15 +7,15 @@
   },
   "totals": {
     "tigerpawAccounts": 617,
-    "legacyMigrationOpps": 89,
-    "legacyMigrationAmount": 98990.31,
+    "legacyMigrationOpps": 90,
+    "legacyMigrationAmount": 101090.31,
     "closedLostOpps": 33
   },
   "statusBreakdown": [
     {
       "label": "Unknown",
-      "count": 337,
-      "pct": 54.6,
+      "count": 336,
+      "pct": 54.5,
       "accounts": [
         {
           "id": "0016O00003dmuJSQAY",
@@ -97,17 +97,6 @@
         {
           "id": "0016O00003dmuJbQAI",
           "name": "Access 411",
-          "type": "Rev.io PSA Client",
-          "webMigrationStatus": "Unknown",
-          "webMigrationDetails": "",
-          "accountStatus": "Active - Tigerpaw One",
-          "owner": "Ingrid Beard",
-          "vertical": "",
-          "psaWeb": false
-        },
-        {
-          "id": "0016O00003dmuJdQAI",
-          "name": "Accurate Security Pros, Inc.",
           "type": "Rev.io PSA Client",
           "webMigrationStatus": "Unknown",
           "webMigrationDetails": "",
@@ -5964,8 +5953,8 @@
     },
     {
       "label": "Do not want to migrate",
-      "count": 44,
-      "pct": 7.1,
+      "count": 45,
+      "pct": 7.3,
       "accounts": [
         {
           "id": "0016O00003ee5MMQAY",
@@ -5975,6 +5964,17 @@
           "webMigrationDetails": "",
           "accountStatus": "Active - Unleashed",
           "owner": "",
+          "vertical": "",
+          "psaWeb": false
+        },
+        {
+          "id": "0016O00003dmuJdQAI",
+          "name": "Accurate Security Pros, Inc.",
+          "type": "Rev.io PSA Client",
+          "webMigrationStatus": "Do not want to migrate",
+          "webMigrationDetails": "Spoke with Richard who said he is \"leary\" of Web and said the owner is not interested in switching.",
+          "accountStatus": "Active - Tigerpaw One",
+          "owner": "Ingrid Beard",
           "vertical": "",
           "psaWeb": false
         },
@@ -6847,7 +6847,7 @@
       "label": "1- Discovery Scheduled",
       "count": 3,
       "amount": 3022,
-      "pct": 3.4,
+      "pct": 3.3,
       "opportunities": [
         {
           "id": "006PX00000dhFGfYAM",
@@ -6914,8 +6914,8 @@
     {
       "label": "2 - Discovery Completed",
       "count": 15,
-      "amount": 21497.7,
-      "pct": 16.9,
+      "amount": 21385.7,
+      "pct": 16.7,
       "opportunities": [
         {
           "id": "006PX00000dT2eHYAS",
@@ -6925,7 +6925,7 @@
           "stage": "2 - Discovery Completed",
           "amount": 783,
           "owner": "Katerra Stephenson Greenwood",
-          "nextStep": "contracts should be up by mid August, pushing this out until Aug 31",
+          "nextStep": "8/14  follow up...contracts should be up by mid August,",
           "createdDate": "2026-07-14T18:06:01.000+0000",
           "closeDate": "2026-08-31",
           "isClosed": false,
@@ -6965,7 +6965,7 @@
           "stage": "2 - Discovery Completed",
           "amount": 1380,
           "owner": "Jakob Champion",
-          "nextStep": "Schedule follow up for quote creation → service order conversion → time logging → billing → QuickBooks sync, plus migration process",
+          "nextStep": "7/24 Follow up Demo with Tony to discuss Inventory management in PSA.",
           "createdDate": "2026-07-07T20:19:24.000+0000",
           "closeDate": "2026-07-31",
           "isClosed": false,
@@ -6985,7 +6985,7 @@
           "stage": "2 - Discovery Completed",
           "amount": 1327,
           "owner": "Ingrid Beard",
-          "nextStep": "follow up 7/21 to reschedule- currently dealing with a forest fire situation",
+          "nextStep": "follow up 7/23 to confirm update demo time",
           "createdDate": "2026-07-06T22:00:26.000+0000",
           "closeDate": "2026-07-31",
           "isClosed": false,
@@ -7005,7 +7005,7 @@
           "stage": "2 - Discovery Completed",
           "amount": 954,
           "owner": "Ingrid Beard",
-          "nextStep": "7/21 continue to reschedule demo",
+          "nextStep": "7/23 continue to reschedule demo",
           "createdDate": "2026-07-02T18:11:58.000+0000",
           "closeDate": "2026-07-31",
           "isClosed": false,
@@ -7065,7 +7065,7 @@
           "stage": "2 - Discovery Completed",
           "amount": 562,
           "owner": "Katerra Stephenson Greenwood",
-          "nextStep": "contracts should be up by mid August, pushing this out until Aug 31",
+          "nextStep": "8/14  follow up...contracts should be up by mid August,",
           "createdDate": "2026-07-07T19:53:20.000+0000",
           "closeDate": "2026-08-31",
           "isClosed": false,
@@ -7098,16 +7098,16 @@
           "vikingOneUnlock": null
         },
         {
-          "id": "006PX00000djzDlYAI",
-          "name": "Richmond- TP to PSA Web",
-          "accountId": "0016O00003dmuYMQAY",
-          "account": "Richmond Security",
+          "id": "006PX00000dqbEkYAI",
+          "name": "The Rhino Group PSA Migration",
+          "accountId": "0016O00003dmuZsQAI",
+          "account": "The RHINO Group",
           "stage": "2 - Discovery Completed",
-          "amount": 2212,
-          "owner": "Katerra Stephenson Greenwood",
-          "nextStep": "Demo Scheduled for 7/23 w/ Michael",
-          "createdDate": "2026-07-21T13:40:16.000+0000",
-          "closeDate": "2026-07-31",
+          "amount": 2100,
+          "owner": "Ingrid Beard",
+          "nextStep": "7/27 initial demo",
+          "createdDate": "2026-07-23T16:54:59.000+0000",
+          "closeDate": "2026-08-31",
           "isClosed": false,
           "isWon": false,
           "lossReason": "Unspecified",
@@ -7145,9 +7145,9 @@
           "stage": "2 - Discovery Completed",
           "amount": 1591,
           "owner": "Ingrid Beard",
-          "nextStep": "7/22 follow up on internal conversations",
+          "nextStep": "7/23 follow up on internal conversations",
           "createdDate": "2026-07-10T13:06:09.000+0000",
-          "closeDate": "2026-07-31",
+          "closeDate": "2026-08-31",
           "isClosed": false,
           "isWon": false,
           "lossReason": "Unspecified",
@@ -7165,7 +7165,7 @@
           "stage": "2 - Discovery Completed",
           "amount": 653,
           "owner": "Ingrid Beard",
-          "nextStep": "7/21 continue to try and connect",
+          "nextStep": "7/23 continue to try to connect (OOT alot)",
           "createdDate": "2026-06-29T20:38:28.000+0000",
           "closeDate": "2026-07-29",
           "isClosed": false,
@@ -7221,9 +7221,9 @@
     },
     {
       "label": "3 - Initial Product Demo",
-      "count": 2,
-      "amount": 2577,
-      "pct": 2.2,
+      "count": 3,
+      "amount": 4789,
+      "pct": 3.3,
       "opportunities": [
         {
           "id": "006PX00000dW6ztYAC",
@@ -7233,7 +7233,7 @@
           "stage": "3 - Initial Product Demo",
           "amount": 1337,
           "owner": "Ingrid Beard",
-          "nextStep": "7/22 follow up on post demo internal meeting",
+          "nextStep": "7/23 follow up on post demo internal meeting",
           "createdDate": "2026-07-15T18:15:23.000+0000",
           "closeDate": "2026-07-31",
           "isClosed": false,
@@ -7253,9 +7253,29 @@
           "stage": "3 - Initial Product Demo",
           "amount": 1240,
           "owner": "Ingrid Beard",
-          "nextStep": "7/21 follow up on hubspot reference request (check with team in meeting)",
+          "nextStep": "7/23 follow up in Hubspot and set follow up meeting",
           "createdDate": "2026-05-21T17:16:24.000+0000",
           "closeDate": "2026-07-31",
+          "isClosed": false,
+          "isWon": false,
+          "lossReason": "Unspecified",
+          "lossDetail": "",
+          "competitor": "",
+          "stageLoss": "",
+          "smc": "",
+          "vikingOneUnlock": null
+        },
+        {
+          "id": "006PX00000djzDlYAI",
+          "name": "Richmond- TP to PSA Web",
+          "accountId": "0016O00003dmuYMQAY",
+          "account": "Richmond Security",
+          "stage": "3 - Initial Product Demo",
+          "amount": 2212,
+          "owner": "Katerra Stephenson Greenwood",
+          "nextStep": "7/23 Demo Scheduled  w/ Michael",
+          "createdDate": "2026-07-21T13:40:16.000+0000",
+          "closeDate": "2026-07-28",
           "isClosed": false,
           "isWon": false,
           "lossReason": "Unspecified",
@@ -7271,7 +7291,7 @@
       "label": "4 - Proposal Sent",
       "count": 3,
       "amount": 4196.02,
-      "pct": 3.4,
+      "pct": 3.3,
       "opportunities": [
         {
           "id": "006PX00000ctLAnYAM",
@@ -7321,7 +7341,7 @@
           "stage": "4 - Proposal Sent",
           "amount": 1265,
           "owner": "Katerra Stephenson Greenwood",
-          "nextStep": "Users demo account sent and follow up scheduled to discuss 7/27",
+          "nextStep": "7/27- call to setup closing appointment",
           "createdDate": "2026-06-23T19:44:49.000+0000",
           "closeDate": "2026-07-31",
           "isClosed": false,
@@ -7339,7 +7359,7 @@
       "label": "5 - Product / Contract Validated",
       "count": 4,
       "amount": 8758.2,
-      "pct": 4.5,
+      "pct": 4.4,
       "opportunities": [
         {
           "id": "006PX00000dAaQLYA0",
@@ -7389,7 +7409,7 @@
           "stage": "5 - Product / Contract Validated",
           "amount": 1825,
           "owner": "Ingrid Beard",
-          "nextStep": "follow up on 7/21 follow up on implementation questions",
+          "nextStep": "follow up on 7/23 follow up on implementation questions",
           "createdDate": "2026-06-11T21:58:03.000+0000",
           "closeDate": "2026-07-31",
           "isClosed": false,
@@ -7425,9 +7445,9 @@
     },
     {
       "label": "6 - Verbal Commit",
-      "count": 2,
-      "amount": 2640,
-      "pct": 2.2,
+      "count": 1,
+      "amount": 1870,
+      "pct": 1.1,
       "opportunities": [
         {
           "id": "006PX00000bYkBBYA0",
@@ -7437,29 +7457,9 @@
           "stage": "6 - Verbal Commit",
           "amount": 1870,
           "owner": "Justin Lee",
-          "nextStep": "Mark will sign DocuSign - Confirm signature before EOD (7/22)",
+          "nextStep": "Mark will sign DocuSign - Connect & confirm signature before EOW (7/24)",
           "createdDate": "2026-06-02T19:18:31.000+0000",
           "closeDate": "2026-07-24",
-          "isClosed": false,
-          "isWon": false,
-          "lossReason": "Unspecified",
-          "lossDetail": "",
-          "competitor": "",
-          "stageLoss": "",
-          "smc": "",
-          "vikingOneUnlock": null
-        },
-        {
-          "id": "006PX00000dc5WVYAY",
-          "name": "Omidi TP Migration",
-          "accountId": "0016O00003dmuUjQAI",
-          "account": "Omidi Enterprises",
-          "stage": "6 - Verbal Commit",
-          "amount": 770,
-          "owner": "Ingrid Beard",
-          "nextStep": "follow up on 7/22 deep dive with Tony",
-          "createdDate": "2026-07-17T19:00:15.000+0000",
-          "closeDate": "2026-07-31",
           "isClosed": false,
           "isWon": false,
           "lossReason": "Unspecified",
@@ -7475,7 +7475,7 @@
       "label": "Closed Lost",
       "count": 33,
       "amount": 38996.39,
-      "pct": 37.1,
+      "pct": 36.7,
       "opportunities": [
         {
           "id": "006PX00000d0VbdYAE",
@@ -7716,7 +7716,7 @@
               {
                 "feature": "QBD - Read live QBD data",
                 "release": "Viking 1",
-                "status": "Not Started",
+                "status": "In Progress",
                 "detail": "Rev.io reads your QuickBooks chart of accounts and item list automatically. No manual exports, no file uploads, no stale data. Your QBD setup is always in sync."
               },
               {
@@ -7796,7 +7796,7 @@
               {
                 "feature": "QBD - Read live QBD data",
                 "release": "Viking 1",
-                "status": "Not Started",
+                "status": "In Progress",
                 "detail": "Rev.io reads your QuickBooks chart of accounts and item list automatically. No manual exports, no file uploads, no stale data. Your QBD setup is always in sync."
               },
               {
@@ -7845,7 +7845,7 @@
               {
                 "feature": "QBD - Read live QBD data",
                 "release": "Viking 1",
-                "status": "Not Started",
+                "status": "In Progress",
                 "detail": "Rev.io reads your QuickBooks chart of accounts and item list automatically. No manual exports, no file uploads, no stale data. Your QBD setup is always in sync."
               },
               {
@@ -7894,7 +7894,7 @@
               {
                 "feature": "QBD - Read live QBD data",
                 "release": "Viking 1",
-                "status": "Not Started",
+                "status": "In Progress",
                 "detail": "Rev.io reads your QuickBooks chart of accounts and item list automatically. No manual exports, no file uploads, no stale data. Your QBD setup is always in sync."
               },
               {
@@ -8015,7 +8015,7 @@
               {
                 "feature": "QBD - Read live QBD data",
                 "release": "Viking 1",
-                "status": "Not Started",
+                "status": "In Progress",
                 "detail": "Rev.io reads your QuickBooks chart of accounts and item list automatically. No manual exports, no file uploads, no stale data. Your QBD setup is always in sync."
               },
               {
@@ -8095,7 +8095,7 @@
               {
                 "feature": "QBD - Read live QBD data",
                 "release": "Viking 1",
-                "status": "Not Started",
+                "status": "In Progress",
                 "detail": "Rev.io reads your QuickBooks chart of accounts and item list automatically. No manual exports, no file uploads, no stale data. Your QBD setup is always in sync."
               },
               {
@@ -8144,7 +8144,7 @@
               {
                 "feature": "QBD - Read live QBD data",
                 "release": "Viking 1",
-                "status": "Not Started",
+                "status": "In Progress",
                 "detail": "Rev.io reads your QuickBooks chart of accounts and item list automatically. No manual exports, no file uploads, no stale data. Your QBD setup is always in sync."
               },
               {
@@ -8571,9 +8571,9 @@
     },
     {
       "label": "Closed Won",
-      "count": 27,
-      "amount": 17303,
-      "pct": 30.3,
+      "count": 28,
+      "amount": 18073,
+      "pct": 31.1,
       "opportunities": [
         {
           "id": "006PX00000dJXrRYAW",
@@ -8866,6 +8866,26 @@
           "nextStep": "",
           "createdDate": "2026-02-09T18:28:26.000+0000",
           "closeDate": "2026-02-05",
+          "isClosed": true,
+          "isWon": true,
+          "lossReason": "Unspecified",
+          "lossDetail": "",
+          "competitor": "",
+          "stageLoss": "",
+          "smc": "",
+          "vikingOneUnlock": null
+        },
+        {
+          "id": "006PX00000dc5WVYAY",
+          "name": "Omidi TP Migration",
+          "accountId": "0016O00003dmuUjQAI",
+          "account": "Omidi Enterprises",
+          "stage": "Closed Won",
+          "amount": 770,
+          "owner": "Ingrid Beard",
+          "nextStep": "7/23 Jay to tell Ryan to sign DocuSign",
+          "createdDate": "2026-07-17T19:00:15.000+0000",
+          "closeDate": "2026-07-23",
           "isClosed": true,
           "isWon": true,
           "lossReason": "Unspecified",
@@ -9315,7 +9335,7 @@
               {
                 "feature": "QBD - Read live QBD data",
                 "release": "Viking 1",
-                "status": "Not Started",
+                "status": "In Progress",
                 "detail": "Rev.io reads your QuickBooks chart of accounts and item list automatically. No manual exports, no file uploads, no stale data. Your QBD setup is always in sync."
               },
               {
@@ -9395,7 +9415,7 @@
               {
                 "feature": "QBD - Read live QBD data",
                 "release": "Viking 1",
-                "status": "Not Started",
+                "status": "In Progress",
                 "detail": "Rev.io reads your QuickBooks chart of accounts and item list automatically. No manual exports, no file uploads, no stale data. Your QBD setup is always in sync."
               },
               {
@@ -9444,7 +9464,7 @@
               {
                 "feature": "QBD - Read live QBD data",
                 "release": "Viking 1",
-                "status": "Not Started",
+                "status": "In Progress",
                 "detail": "Rev.io reads your QuickBooks chart of accounts and item list automatically. No manual exports, no file uploads, no stale data. Your QBD setup is always in sync."
               },
               {
@@ -9541,7 +9561,7 @@
               {
                 "feature": "QBD - Read live QBD data",
                 "release": "Viking 1",
-                "status": "Not Started",
+                "status": "In Progress",
                 "detail": "Rev.io reads your QuickBooks chart of accounts and item list automatically. No manual exports, no file uploads, no stale data. Your QBD setup is always in sync."
               },
               {
@@ -9621,7 +9641,7 @@
               {
                 "feature": "QBD - Read live QBD data",
                 "release": "Viking 1",
-                "status": "Not Started",
+                "status": "In Progress",
                 "detail": "Rev.io reads your QuickBooks chart of accounts and item list automatically. No manual exports, no file uploads, no stale data. Your QBD setup is always in sync."
               },
               {
@@ -9670,7 +9690,7 @@
               {
                 "feature": "QBD - Read live QBD data",
                 "release": "Viking 1",
-                "status": "Not Started",
+                "status": "In Progress",
                 "detail": "Rev.io reads your QuickBooks chart of accounts and item list automatically. No manual exports, no file uploads, no stale data. Your QBD setup is always in sync."
               },
               {
@@ -10230,7 +10250,7 @@
               {
                 "feature": "QBD - Read live QBD data",
                 "release": "Viking 1",
-                "status": "Not Started",
+                "status": "In Progress",
                 "detail": "Rev.io reads your QuickBooks chart of accounts and item list automatically. No manual exports, no file uploads, no stale data. Your QBD setup is always in sync."
               },
               {
@@ -10382,8 +10402,8 @@
       "id": "0016O00003dmuJdQAI",
       "name": "Accurate Security Pros, Inc.",
       "type": "Rev.io PSA Client",
-      "webMigrationStatus": "Unknown",
-      "webMigrationDetails": "",
+      "webMigrationStatus": "Do not want to migrate",
+      "webMigrationDetails": "Spoke with Richard who said he is \"leary\" of Web and said the owner is not interested in switching.",
       "accountStatus": "Active - Tigerpaw One",
       "owner": "Ingrid Beard",
       "vertical": "",
@@ -17043,7 +17063,7 @@
       "stage": "3 - Initial Product Demo",
       "amount": 1337,
       "owner": "Ingrid Beard",
-      "nextStep": "7/22 follow up on post demo internal meeting",
+      "nextStep": "7/23 follow up on post demo internal meeting",
       "createdDate": "2026-07-15T18:15:23.000+0000",
       "closeDate": "2026-07-31",
       "isClosed": false,
@@ -17063,7 +17083,7 @@
       "stage": "2 - Discovery Completed",
       "amount": 783,
       "owner": "Katerra Stephenson Greenwood",
-      "nextStep": "contracts should be up by mid August, pushing this out until Aug 31",
+      "nextStep": "8/14  follow up...contracts should be up by mid August,",
       "createdDate": "2026-07-14T18:06:01.000+0000",
       "closeDate": "2026-08-31",
       "isClosed": false,
@@ -17123,7 +17143,7 @@
       "stage": "2 - Discovery Completed",
       "amount": 1380,
       "owner": "Jakob Champion",
-      "nextStep": "Schedule follow up for quote creation → service order conversion → time logging → billing → QuickBooks sync, plus migration process",
+      "nextStep": "7/24 Follow up Demo with Tony to discuss Inventory management in PSA.",
       "createdDate": "2026-07-07T20:19:24.000+0000",
       "closeDate": "2026-07-31",
       "isClosed": false,
@@ -17163,7 +17183,7 @@
       "stage": "2 - Discovery Completed",
       "amount": 1327,
       "owner": "Ingrid Beard",
-      "nextStep": "follow up 7/21 to reschedule- currently dealing with a forest fire situation",
+      "nextStep": "follow up 7/23 to confirm update demo time",
       "createdDate": "2026-07-06T22:00:26.000+0000",
       "closeDate": "2026-07-31",
       "isClosed": false,
@@ -17183,7 +17203,7 @@
       "stage": "2 - Discovery Completed",
       "amount": 954,
       "owner": "Ingrid Beard",
-      "nextStep": "7/21 continue to reschedule demo",
+      "nextStep": "7/23 continue to reschedule demo",
       "createdDate": "2026-07-02T18:11:58.000+0000",
       "closeDate": "2026-07-31",
       "isClosed": false,
@@ -17341,7 +17361,7 @@
       "stage": "5 - Product / Contract Validated",
       "amount": 1825,
       "owner": "Ingrid Beard",
-      "nextStep": "follow up on 7/21 follow up on implementation questions",
+      "nextStep": "follow up on 7/23 follow up on implementation questions",
       "createdDate": "2026-06-11T21:58:03.000+0000",
       "closeDate": "2026-07-31",
       "isClosed": false,
@@ -17494,7 +17514,7 @@
           {
             "feature": "QBD - Read live QBD data",
             "release": "Viking 1",
-            "status": "Not Started",
+            "status": "In Progress",
             "detail": "Rev.io reads your QuickBooks chart of accounts and item list automatically. No manual exports, no file uploads, no stale data. Your QBD setup is always in sync."
           },
           {
@@ -17514,7 +17534,7 @@
       "stage": "3 - Initial Product Demo",
       "amount": 1240,
       "owner": "Ingrid Beard",
-      "nextStep": "7/21 follow up on hubspot reference request (check with team in meeting)",
+      "nextStep": "7/23 follow up in Hubspot and set follow up meeting",
       "createdDate": "2026-05-21T17:16:24.000+0000",
       "closeDate": "2026-07-31",
       "isClosed": false,
@@ -17754,7 +17774,7 @@
           {
             "feature": "QBD - Read live QBD data",
             "release": "Viking 1",
-            "status": "Not Started",
+            "status": "In Progress",
             "detail": "Rev.io reads your QuickBooks chart of accounts and item list automatically. No manual exports, no file uploads, no stale data. Your QBD setup is always in sync."
           },
           {
@@ -17794,7 +17814,7 @@
       "stage": "2 - Discovery Completed",
       "amount": 562,
       "owner": "Katerra Stephenson Greenwood",
-      "nextStep": "contracts should be up by mid August, pushing this out until Aug 31",
+      "nextStep": "8/14  follow up...contracts should be up by mid August,",
       "createdDate": "2026-07-07T19:53:20.000+0000",
       "closeDate": "2026-08-31",
       "isClosed": false,
@@ -17863,7 +17883,7 @@
           {
             "feature": "QBD - Read live QBD data",
             "release": "Viking 1",
-            "status": "Not Started",
+            "status": "In Progress",
             "detail": "Rev.io reads your QuickBooks chart of accounts and item list automatically. No manual exports, no file uploads, no stale data. Your QBD setup is always in sync."
           },
           {
@@ -17972,7 +17992,7 @@
           {
             "feature": "QBD - Read live QBD data",
             "release": "Viking 1",
-            "status": "Not Started",
+            "status": "In Progress",
             "detail": "Rev.io reads your QuickBooks chart of accounts and item list automatically. No manual exports, no file uploads, no stale data. Your QBD setup is always in sync."
           },
           {
@@ -18012,7 +18032,7 @@
       "stage": "6 - Verbal Commit",
       "amount": 1870,
       "owner": "Justin Lee",
-      "nextStep": "Mark will sign DocuSign - Confirm signature before EOD (7/22)",
+      "nextStep": "Mark will sign DocuSign - Connect & confirm signature before EOW (7/24)",
       "createdDate": "2026-06-02T19:18:31.000+0000",
       "closeDate": "2026-07-24",
       "isClosed": false,
@@ -18153,7 +18173,7 @@
           {
             "feature": "QBD - Read live QBD data",
             "release": "Viking 1",
-            "status": "Not Started",
+            "status": "In Progress",
             "detail": "Rev.io reads your QuickBooks chart of accounts and item list automatically. No manual exports, no file uploads, no stale data. Your QBD setup is always in sync."
           },
           {
@@ -18233,7 +18253,7 @@
           {
             "feature": "QBD - Read live QBD data",
             "release": "Viking 1",
-            "status": "Not Started",
+            "status": "In Progress",
             "detail": "Rev.io reads your QuickBooks chart of accounts and item list automatically. No manual exports, no file uploads, no stale data. Your QBD setup is always in sync."
           },
           {
@@ -18282,7 +18302,7 @@
           {
             "feature": "QBD - Read live QBD data",
             "release": "Viking 1",
-            "status": "Not Started",
+            "status": "In Progress",
             "detail": "Rev.io reads your QuickBooks chart of accounts and item list automatically. No manual exports, no file uploads, no stale data. Your QBD setup is always in sync."
           },
           {
@@ -18404,16 +18424,36 @@
       "vikingOneUnlock": null
     },
     {
+      "id": "006PX00000dqbEkYAI",
+      "name": "The Rhino Group PSA Migration",
+      "accountId": "0016O00003dmuZsQAI",
+      "account": "The RHINO Group",
+      "stage": "2 - Discovery Completed",
+      "amount": 2100,
+      "owner": "Ingrid Beard",
+      "nextStep": "7/27 initial demo",
+      "createdDate": "2026-07-23T16:54:59.000+0000",
+      "closeDate": "2026-08-31",
+      "isClosed": false,
+      "isWon": false,
+      "lossReason": "Unspecified",
+      "lossDetail": "",
+      "competitor": "",
+      "stageLoss": "",
+      "smc": "",
+      "vikingOneUnlock": null
+    },
+    {
       "id": "006PX00000djzDlYAI",
       "name": "Richmond- TP to PSA Web",
       "accountId": "0016O00003dmuYMQAY",
       "account": "Richmond Security",
-      "stage": "2 - Discovery Completed",
+      "stage": "3 - Initial Product Demo",
       "amount": 2212,
       "owner": "Katerra Stephenson Greenwood",
-      "nextStep": "Demo Scheduled for 7/23 w/ Michael",
+      "nextStep": "7/23 Demo Scheduled  w/ Michael",
       "createdDate": "2026-07-21T13:40:16.000+0000",
-      "closeDate": "2026-07-31",
+      "closeDate": "2026-07-28",
       "isClosed": false,
       "isWon": false,
       "lossReason": "Unspecified",
@@ -18448,14 +18488,14 @@
       "name": "Omidi TP Migration",
       "accountId": "0016O00003dmuUjQAI",
       "account": "Omidi Enterprises",
-      "stage": "6 - Verbal Commit",
+      "stage": "Closed Won",
       "amount": 770,
       "owner": "Ingrid Beard",
-      "nextStep": "follow up on 7/22 deep dive with Tony",
+      "nextStep": "7/23 Jay to tell Ryan to sign DocuSign",
       "createdDate": "2026-07-17T19:00:15.000+0000",
-      "closeDate": "2026-07-31",
-      "isClosed": false,
-      "isWon": false,
+      "closeDate": "2026-07-23",
+      "isClosed": true,
+      "isWon": true,
       "lossReason": "Unspecified",
       "lossDetail": "",
       "competitor": "",
@@ -18551,9 +18591,9 @@
       "stage": "2 - Discovery Completed",
       "amount": 1591,
       "owner": "Ingrid Beard",
-      "nextStep": "7/22 follow up on internal conversations",
+      "nextStep": "7/23 follow up on internal conversations",
       "createdDate": "2026-07-10T13:06:09.000+0000",
-      "closeDate": "2026-07-31",
+      "closeDate": "2026-08-31",
       "isClosed": false,
       "isWon": false,
       "lossReason": "Unspecified",
@@ -18611,7 +18651,7 @@
       "stage": "2 - Discovery Completed",
       "amount": 653,
       "owner": "Ingrid Beard",
-      "nextStep": "7/21 continue to try and connect",
+      "nextStep": "7/23 continue to try to connect (OOT alot)",
       "createdDate": "2026-06-29T20:38:28.000+0000",
       "closeDate": "2026-07-29",
       "isClosed": false,
@@ -18631,7 +18671,7 @@
       "stage": "4 - Proposal Sent",
       "amount": 1265,
       "owner": "Katerra Stephenson Greenwood",
-      "nextStep": "Users demo account sent and follow up scheduled to discuss 7/27",
+      "nextStep": "7/27- call to setup closing appointment",
       "createdDate": "2026-06-23T19:44:49.000+0000",
       "closeDate": "2026-07-31",
       "isClosed": false,

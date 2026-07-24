@@ -238,7 +238,7 @@
   <div class="header-inner">
     <div class="header-left">
       <h1>🔄 Tigerpaw Migration Campaign Dashboard</h1>
-      <p id="data-as-of">Data as of July 23, 2026 · Rev.io Marketing Ops · Internal registrants excluded</p>
+      <p id="data-as-of">Data as of July 24, 2026 · Rev.io Marketing Ops · Internal registrants excluded</p>
     </div>
     <nav class="nav">
       <a href="./">Master Overview</a>
@@ -291,9 +291,9 @@
       <div class="wb-sub">Through June 2 · first webinar bucket · external registrants only</div>
     </div>
     <div class="wb-metrics">
-      <div class="wm"><div class="v" id="wb-contacts" style="cursor:pointer;text-decoration:underline;text-decoration-style:dotted;text-underline-offset:3px" onclick="showRegistrants('all','all','first')" title="Click to see registrant list">406<span class="wb-search-icon"></span></div><div class="l">Contacts Registered</div></div>
-      <div class="wm"><div class="v teal" id="wb-accounts">216</div><div class="l">Unique Accounts</div></div>
-      <div class="wm"><div class="v" id="wb-rate" style="color:#fff;font-size:20px;margin-top:4px;">43+146+217</div><div class="l">RTM + Unknown + Other</div></div>
+      <div class="wm"><div class="v" id="wb-contacts" style="cursor:pointer;text-decoration:underline;text-decoration-style:dotted;text-underline-offset:3px" onclick="showRegistrants('all','all','first')" title="Click to see registrant list">409<span class="wb-search-icon"></span></div><div class="l">Contacts Registered</div></div>
+      <div class="wm"><div class="v teal" id="wb-accounts">218</div><div class="l">Unique Accounts</div></div>
+      <div class="wm"><div class="v" id="wb-rate" style="color:#fff;font-size:20px;margin-top:4px;">44+147+218</div><div class="l">RTM + Unknown + Other</div></div>
     </div>
   </div>
 
@@ -641,7 +641,7 @@
           <td>63</td><td>430</td><td>1,262</td>
           <td>146 <span class="rate">11.6%</span></td>
           <td>15 <span class="rate">1.2%</span></td>
-          <td><button class="reg-link" onclick="showRegistrants('MSP','ready')">28</button></td>
+          <td><button class="reg-link" onclick="showRegistrants('MSP','ready')">30</button></td>
           <td>—</td>
         </tr>
         <tr data-aud="unknown" data-vert="msp">
@@ -649,13 +649,13 @@
           <td>207</td><td>1,139</td><td>1,127</td>
           <td>146 <span class="rate">13.2%</span></td>
           <td>49 <span class="rate">4.4%</span></td>
-          <td><button class="reg-link" onclick="showRegistrants('MSP','unknown')">98</button></td>
+          <td><button class="reg-link" onclick="showRegistrants('MSP','unknown')">102</button></td>
           <td>—</td>
         </tr>
         <tr data-aud="later" data-vert="msp">
           <td style="padding-left:28px;"><div class="pill"><span class="dot d-gray" style="opacity:0.5"></span>Migrate Later</div></td>
           <td>—</td><td>—</td><td>—</td><td>—</td><td>—</td>
-          <td><button class="reg-link" onclick="showRegistrants('MSP','later')">178</button></td>
+          <td><button class="reg-link" onclick="showRegistrants('MSP','later')">185</button></td>
           <td>—</td>
         </tr>
         <tr class="subtotal-row" data-vert="msp" style="background:#f8fafc;font-weight:700;">
@@ -663,8 +663,8 @@
           <td>270</td><td>1,566</td><td>2,384</td>
           <td>291 <span class="rate">12.3%</span></td>
           <td>64 <span class="rate">2.7%</span></td>
-          <td><button class="reg-link" onclick="showRegistrants('MSP','all')">314</button></td>
-          <td>158</td>
+          <td><button class="reg-link" onclick="showRegistrants('MSP','all')">317</button></td>
+          <td>160</td>
         </tr>
 
         <!-- Integrator header -->
@@ -678,7 +678,7 @@
           <td>19</td><td>128</td><td>376</td>
           <td>43 <span class="rate">11.5%</span></td>
           <td>5 <span class="rate">1.3%</span></td>
-          <td><button class="reg-link" onclick="showRegistrants('Integrator','ready')">13</button></td>
+          <td><button class="reg-link" onclick="showRegistrants('Integrator','ready')">14</button></td>
           <td>—</td>
         </tr>
         <tr data-aud="unknown" data-vert="integrator">
@@ -712,8 +712,8 @@
           <td id="ft-sent">3,493</td>
           <td id="ft-opens">429 <span id="ft-openrate" style="font-size:11px;color:#6EBE4F;font-weight:600">12.4%</span></td>
           <td id="ft-clicks">100 <span id="ft-clickrate" style="font-size:11px;color:#6EBE4F;font-weight:600">2.9%</span></td>
-          <td><button class="reg-link" id="ft-reg" onclick="showRegistrants('all','all','first')" style="font-size:13px;">406</button></td>
-          <td id="ft-regaccts">216</td>
+          <td><button class="reg-link" id="ft-reg" onclick="showRegistrants('all','all','first')" style="font-size:13px;">409</button></td>
+          <td id="ft-regaccts">218</td>
         </tr>
       </tfoot>
     </table>
@@ -731,23 +731,23 @@
           <div class="card-header"><h2>Registration Breakdown</h2></div>
           <div class="vbar-row">
             <div class="vbar-name"><span class="dot d-teal"></span>MSP</div>
-            <div class="vbar-wrap"><div class="vbar-bg"><div class="vbar-fill" id="vb-msp-bar" style="width:77%"></div></div></div>
+            <div class="vbar-wrap"><div class="vbar-bg"><div class="vbar-fill" id="vb-msp-bar" style="width:78%"></div></div></div>
             <div class="vbar-nums">
-              <div class="big"><button class="bar-reg-link" onclick="showRegistrants('MSP','all')" id="vb-msp-count">314</button></div>
-              <div class="sm" id="vb-msp-accts">158 accounts</div>
+              <div class="big"><button class="bar-reg-link" onclick="showRegistrants('MSP','all')" id="vb-msp-count">317</button></div>
+              <div class="sm" id="vb-msp-accts">160 accounts</div>
             </div>
           </div>
           <div class="vbar-row">
             <div class="vbar-name"><span class="dot d-navy"></span>Integrator</div>
-            <div class="vbar-wrap"><div class="vbar-bg"><div class="vbar-fill" id="vb-int-bar" style="width:23%"></div></div></div>
+            <div class="vbar-wrap"><div class="vbar-bg"><div class="vbar-fill" id="vb-int-bar" style="width:22%"></div></div></div>
             <div class="vbar-nums">
               <div class="big"><button class="bar-reg-link" onclick="showRegistrants('Integrator','all')" id="vb-int-count">92</button></div>
               <div class="sm" id="vb-int-accts">58 accounts</div>
             </div>
           </div>
           <div style="padding:11px 20px;background:#F5F7FA;border-top:1px solid #DDE2E8;display:flex;justify-content:space-between;font-size:12px;color:#3d4d5c;" id="vb-summary">
-            <span><strong>MSP</strong> makes up <strong style="color:#2399B5">77%</strong> of all registrations</span>
-            <span>406 total · 216 accounts</span>
+            <span><strong>MSP</strong> makes up <strong style="color:#2399B5">78%</strong> of all registrations</span>
+            <span>409 total · 218 accounts</span>
           </div>
         </div>
       </div>
@@ -761,15 +761,15 @@
             <div class="vbar-name"><span class="dot d-teal"></span>Ready to Migrate</div>
             <div class="vbar-wrap"><div class="vbar-bg"><div class="vbar-fill" id="ab-rtm-bar" style="width:11%;background:linear-gradient(90deg,#2399B5,#6EBE4F)"></div></div></div>
             <div class="vbar-nums">
-              <div class="big"><button class="bar-reg-link" onclick="showRegistrants('all','ready')" id="ab-rtm-count">43</button></div>
-              <div class="sm" id="ab-rtm-accts">30 accounts</div>
+              <div class="big"><button class="bar-reg-link" onclick="showRegistrants('all','ready')" id="ab-rtm-count">44</button></div>
+              <div class="sm" id="ab-rtm-accts">31 accounts</div>
             </div>
           </div>
           <div class="vbar-row">
             <div class="vbar-name"><span class="dot d-orange"></span>Unknown</div>
             <div class="vbar-wrap"><div class="vbar-bg"><div class="vbar-fill" id="ab-unk-bar" style="width:36%;background:linear-gradient(90deg,#f59e0b,#f59e0b)"></div></div></div>
             <div class="vbar-nums">
-              <div class="big"><button class="bar-reg-link" onclick="showRegistrants('all','unknown')" id="ab-unk-count">146</button></div>
+              <div class="big"><button class="bar-reg-link" onclick="showRegistrants('all','unknown')" id="ab-unk-count">147</button></div>
               <div class="sm" id="ab-unk-accts">96 accounts</div>
             </div>
           </div>
@@ -777,13 +777,13 @@
             <div class="vbar-name"><span class="dot d-gray"></span>Migrate Later</div>
             <div class="vbar-wrap"><div class="vbar-bg"><div class="vbar-fill" id="ab-ml-bar" style="width:53%;background:linear-gradient(90deg,#94a3b8,#64748b)"></div></div></div>
             <div class="vbar-nums">
-              <div class="big"><button class="bar-reg-link" onclick="showRegistrants('all','later')" id="ab-ml-count">217</button></div>
-              <div class="sm" id="ab-ml-accts">90 accounts</div>
+              <div class="big"><button class="bar-reg-link" onclick="showRegistrants('all','later')" id="ab-ml-count">218</button></div>
+              <div class="sm" id="ab-ml-accts">91 accounts</div>
             </div>
           </div>
           <div style="padding:11px 20px;background:#F5F7FA;border-top:1px solid #DDE2E8;display:flex;justify-content:space-between;font-size:12px;color:#3d4d5c;" id="ab-summary">
             <span><strong>Migrate Later</strong> makes up <strong style="color:#2399B5">53%</strong> of all registrations</span>
-            <span>406 total · 216 accounts</span>
+            <span>409 total · 218 accounts</span>
           </div>
         </div>
       </div>
@@ -800,20 +800,20 @@
         </div>
         <div class="insight-card">
           <div class="eyebrow">🎯 Webinar</div>
-          <h3>216 Accounts Registered</h3>
-          <p>43+146 from emailed audiences, +217 organic / direct. <strong>Internal @rev.io contacts excluded.</strong></p>
+          <h3>218 Accounts Registered</h3>
+          <p>44+147 from emailed audiences, +218 organic / direct. <strong>Internal @rev.io contacts excluded.</strong></p>
         </div>
         <div class="insight-card">
           <div class="eyebrow">⏳ Next Step</div>
           <h3>Migrate Later — No Campaign Sent</h3>
-          <p>217 contacts from this group registered for the webinar organically / direct. A dedicated sequence is the logical next step.</p>
+          <p>218 contacts from this group registered for the webinar organically / direct. A dedicated sequence is the logical next step.</p>
         </div>
       </div>
     </div>
   </div><!-- end two-col -->
 
   <div class="footer-note">
-    Rev.io Marketing Ops · Tigerpaw Migration Campaign · HubSpot API · July 23, 2026 · Internal @rev.io contacts excluded from registration counts
+    Rev.io Marketing Ops · Tigerpaw Migration Campaign · HubSpot API · July 24, 2026 · Internal @rev.io contacts excluded from registration counts
   </div>
 
 </div><!-- end main -->
@@ -830,9 +830,9 @@ const DATA = {
     "openSub": "429 opens · of delivered",
     "clickRate": "2.9%",
     "clickSub": "100 clicks · of delivered",
-    "wbContacts": "406",
-    "wbAccts": "216",
-    "wbBreak": "43 + 146 + 217",
+    "wbContacts": "409",
+    "wbAccts": "218",
+    "wbBreak": "44 + 147 + 218",
     "totals": {
       "accts": "377",
       "contacts": "2,432",
@@ -841,26 +841,26 @@ const DATA = {
       "openRate": "12.4%",
       "clicks": "100",
       "clickRate": "2.9%",
-      "reg": "406",
-      "regAccts": "216"
+      "reg": "409",
+      "regAccts": "218"
     },
     "vbars": {
-      "mspReg": 314,
-      "mspAccts": 158,
+      "mspReg": 317,
+      "mspAccts": 160,
       "intReg": 92,
       "intAccts": 58,
-      "total": 406,
-      "totalAccts": 216
+      "total": 409,
+      "totalAccts": 218
     },
     "abars": {
-      "rtmReg": 43,
-      "rtmAccts": 30,
-      "unkReg": 146,
+      "rtmReg": 44,
+      "rtmAccts": 31,
+      "unkReg": 147,
       "unkAccts": 96,
-      "mlReg": 217,
-      "mlAccts": 90,
-      "total": 406,
-      "totalAccts": 216
+      "mlReg": 218,
+      "mlAccts": 91,
+      "total": 409,
+      "totalAccts": 218
     }
   },
   "ready": {
@@ -872,8 +872,8 @@ const DATA = {
     "openSub": "189 opens · of delivered",
     "clickRate": "1.2%",
     "clickSub": "20 clicks · of delivered",
-    "wbContacts": "43",
-    "wbAccts": "30",
+    "wbContacts": "44",
+    "wbAccts": "31",
     "wbBreak": "Ready to Migrate only",
     "totals": {
       "accts": "84",
@@ -883,26 +883,26 @@ const DATA = {
       "openRate": "11.6%",
       "clicks": "20",
       "clickRate": "1.2%",
-      "reg": "43",
-      "regAccts": "30"
+      "reg": "44",
+      "regAccts": "31"
     },
     "vbars": {
-      "mspReg": 29,
+      "mspReg": 30,
       "mspAccts": 0,
       "intReg": 14,
       "intAccts": 0,
-      "total": 43,
-      "totalAccts": 30
+      "total": 44,
+      "totalAccts": 31
     },
     "abars": {
-      "rtmReg": 43,
-      "rtmAccts": 30,
+      "rtmReg": 44,
+      "rtmAccts": 31,
       "unkReg": 0,
       "unkAccts": 0,
       "mlReg": 0,
       "mlAccts": 0,
-      "total": 43,
-      "totalAccts": 30
+      "total": 44,
+      "totalAccts": 31
     }
   },
   "unknown": {
@@ -914,7 +914,7 @@ const DATA = {
     "openSub": "240 opens · of delivered",
     "clickRate": "4.4%",
     "clickSub": "80 clicks · of delivered",
-    "wbContacts": "146",
+    "wbContacts": "147",
     "wbAccts": "96",
     "wbBreak": "Unknown only",
     "totals": {
@@ -925,25 +925,25 @@ const DATA = {
       "openRate": "13.2%",
       "clicks": "80",
       "clickRate": "4.4%",
-      "reg": "146",
+      "reg": "147",
       "regAccts": "96"
     },
     "vbars": {
-      "mspReg": 101,
+      "mspReg": 102,
       "mspAccts": 0,
       "intReg": 45,
       "intAccts": 0,
-      "total": 146,
+      "total": 147,
       "totalAccts": 96
     },
     "abars": {
       "rtmReg": 0,
       "rtmAccts": 0,
-      "unkReg": 146,
+      "unkReg": 147,
       "unkAccts": 96,
       "mlReg": 0,
       "mlAccts": 0,
-      "total": 146,
+      "total": 147,
       "totalAccts": 96
     }
   },
@@ -956,8 +956,8 @@ const DATA = {
     "openSub": "No campaign sent",
     "clickRate": "—",
     "clickSub": "—",
-    "wbContacts": "217",
-    "wbAccts": "90",
+    "wbContacts": "218",
+    "wbAccts": "91",
     "wbBreak": "Organic / direct",
     "totals": {
       "accts": "—",
@@ -967,26 +967,26 @@ const DATA = {
       "openRate": "",
       "clicks": "—",
       "clickRate": "",
-      "reg": "217",
-      "regAccts": "90"
+      "reg": "218",
+      "regAccts": "91"
     },
     "vbars": {
-      "mspReg": 184,
+      "mspReg": 185,
       "mspAccts": 0,
       "intReg": 33,
       "intAccts": 0,
-      "total": 217,
-      "totalAccts": 90
+      "total": 218,
+      "totalAccts": 91
     },
     "abars": {
       "rtmReg": 0,
       "rtmAccts": 0,
       "unkReg": 0,
       "unkAccts": 0,
-      "mlReg": 217,
-      "mlAccts": 90,
-      "total": 217,
-      "totalAccts": 90
+      "mlReg": 218,
+      "mlAccts": 91,
+      "total": 218,
+      "totalAccts": 91
     }
   }
 };
