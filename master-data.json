@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-07-24T10:04:00.505Z",
+  "generatedAt": "2026-07-25T10:05:54.184Z",
   "filters": {
     "account": "Web_Migration__c != null",
     "opportunity": "Type = 'Legacy Migration'",
     "closedLost": "StageName = 'Closed Lost'"
   },
   "totals": {
-    "tigerpawAccounts": 617,
+    "tigerpawAccounts": 618,
     "legacyMigrationOpps": 90,
     "legacyMigrationAmount": 101090.31,
     "closedLostOpps": 33
@@ -14,7 +14,7 @@
   "statusBreakdown": [
     {
       "label": "Unknown",
-      "count": 336,
+      "count": 337,
       "pct": 54.5,
       "accounts": [
         {
@@ -3329,6 +3329,17 @@
           "psaWeb": false
         },
         {
+          "id": "001PX000001GQijYAG",
+          "name": "TIPS Resources",
+          "type": "Rev.io PSA Client",
+          "webMigrationStatus": "Unknown",
+          "webMigrationDetails": "",
+          "accountStatus": "Active - Unleashed",
+          "owner": "",
+          "vertical": "",
+          "psaWeb": false
+        },
+        {
           "id": "0016O00003dmuZyQAI",
           "name": "Total Comfort Weatherization",
           "type": "Rev.io PSA Client",
@@ -6342,17 +6353,6 @@
           "psaWeb": false
         },
         {
-          "id": "0016O00003dmuZBQAY",
-          "name": "Synergy",
-          "type": "Rev.io PSA Client",
-          "webMigrationStatus": "Do not want to migrate",
-          "webMigrationDetails": "",
-          "accountStatus": "Active - Tigerpaw One",
-          "owner": "Ingrid Beard",
-          "vertical": "",
-          "psaWeb": false
-        },
-        {
           "id": "0016O00003ebkKXQAY",
           "name": "Synergy",
           "type": "TigerPaw Client",
@@ -6360,6 +6360,17 @@
           "webMigrationDetails": "",
           "accountStatus": "Active - Tigerpaw One",
           "owner": "",
+          "vertical": "",
+          "psaWeb": false
+        },
+        {
+          "id": "0016O00003dmuZBQAY",
+          "name": "Synergy",
+          "type": "Rev.io PSA Client",
+          "webMigrationStatus": "Do not want to migrate",
+          "webMigrationDetails": "",
+          "accountStatus": "Active - Tigerpaw One",
+          "owner": "Ingrid Beard",
           "vertical": "",
           "psaWeb": false
         },
@@ -7025,7 +7036,7 @@
           "stage": "2 - Discovery Completed",
           "amount": 474,
           "owner": "Sarah McGovern",
-          "nextStep": "7/21: Client waiting on Managed Print functionality.  Working with CLSams on a workaround that may work for MPS Works. Meeting scheduled for 7/30 to review.",
+          "nextStep": "7/28: Client waiting on Managed Print functionality.  Working with CLSams on a workaround that may work for MPS Works. Meeting scheduled for 7/30 to review.",
           "createdDate": "2026-07-20T17:12:02.000+0000",
           "closeDate": "2026-08-31",
           "isClosed": false,
@@ -7301,9 +7312,9 @@
           "stage": "4 - Proposal Sent",
           "amount": 1740.32,
           "owner": "Sarah McGovern",
-          "nextStep": "7/21: Client requested temporary demo access for team.  Follow up call set for 7/28.",
+          "nextStep": "7/28: Follow up call scheduled for this afternoon to discuss demo access and questions on additional functionality.",
           "createdDate": "2026-06-30T11:29:34.000+0000",
-          "closeDate": "2026-07-30",
+          "closeDate": "2026-07-31",
           "isClosed": false,
           "isWon": false,
           "lossReason": "Unspecified",
@@ -7457,9 +7468,9 @@
           "stage": "6 - Verbal Commit",
           "amount": 1870,
           "owner": "Justin Lee",
-          "nextStep": "Mark will sign DocuSign - Connect & confirm signature before EOW (7/24)",
+          "nextStep": "7/24: Traveling to the cape on PTO, but will look at contract when he gets to his hotel room - Get app signed before Monday",
           "createdDate": "2026-06-02T19:18:31.000+0000",
-          "closeDate": "2026-07-24",
+          "closeDate": "2026-07-27",
           "isClosed": false,
           "isWon": false,
           "lossReason": "Unspecified",
@@ -7704,19 +7715,19 @@
               {
                 "feature": "QBD - Reliability + go/no-go",
                 "release": "Viking 1",
-                "status": "In Progress",
+                "status": "Dev Complete",
                 "detail": "Built-in sync status dashboard so you always know what transferred and what needs attention. The integration recovers gracefully from interruptions, so your data stays safe even if your connection drops."
               },
               {
                 "feature": "QBD - Customer + invoice sync",
                 "release": "Viking 1",
-                "status": "In Progress",
+                "status": "Dev Complete",
                 "detail": "Push customers and invoices from Rev.io directly into QuickBooks Desktop. Invoices land in the correct GL accounts with sales tax applied automatically. No copy-paste, no import files, no third-party tools."
               },
               {
                 "feature": "QBD - Read live QBD data",
                 "release": "Viking 1",
-                "status": "In Progress",
+                "status": "Dev Complete",
                 "detail": "Rev.io reads your QuickBooks chart of accounts and item list automatically. No manual exports, no file uploads, no stale data. Your QBD setup is always in sync."
               },
               {
@@ -7784,19 +7795,19 @@
               {
                 "feature": "QBD - Reliability + go/no-go",
                 "release": "Viking 1",
-                "status": "In Progress",
+                "status": "Dev Complete",
                 "detail": "Built-in sync status dashboard so you always know what transferred and what needs attention. The integration recovers gracefully from interruptions, so your data stays safe even if your connection drops."
               },
               {
                 "feature": "QBD - Customer + invoice sync",
                 "release": "Viking 1",
-                "status": "In Progress",
+                "status": "Dev Complete",
                 "detail": "Push customers and invoices from Rev.io directly into QuickBooks Desktop. Invoices land in the correct GL accounts with sales tax applied automatically. No copy-paste, no import files, no third-party tools."
               },
               {
                 "feature": "QBD - Read live QBD data",
                 "release": "Viking 1",
-                "status": "In Progress",
+                "status": "Dev Complete",
                 "detail": "Rev.io reads your QuickBooks chart of accounts and item list automatically. No manual exports, no file uploads, no stale data. Your QBD setup is always in sync."
               },
               {
@@ -7833,19 +7844,19 @@
               {
                 "feature": "QBD - Reliability + go/no-go",
                 "release": "Viking 1",
-                "status": "In Progress",
+                "status": "Dev Complete",
                 "detail": "Built-in sync status dashboard so you always know what transferred and what needs attention. The integration recovers gracefully from interruptions, so your data stays safe even if your connection drops."
               },
               {
                 "feature": "QBD - Customer + invoice sync",
                 "release": "Viking 1",
-                "status": "In Progress",
+                "status": "Dev Complete",
                 "detail": "Push customers and invoices from Rev.io directly into QuickBooks Desktop. Invoices land in the correct GL accounts with sales tax applied automatically. No copy-paste, no import files, no third-party tools."
               },
               {
                 "feature": "QBD - Read live QBD data",
                 "release": "Viking 1",
-                "status": "In Progress",
+                "status": "Dev Complete",
                 "detail": "Rev.io reads your QuickBooks chart of accounts and item list automatically. No manual exports, no file uploads, no stale data. Your QBD setup is always in sync."
               },
               {
@@ -7882,19 +7893,19 @@
               {
                 "feature": "QBD - Reliability + go/no-go",
                 "release": "Viking 1",
-                "status": "In Progress",
+                "status": "Dev Complete",
                 "detail": "Built-in sync status dashboard so you always know what transferred and what needs attention. The integration recovers gracefully from interruptions, so your data stays safe even if your connection drops."
               },
               {
                 "feature": "QBD - Customer + invoice sync",
                 "release": "Viking 1",
-                "status": "In Progress",
+                "status": "Dev Complete",
                 "detail": "Push customers and invoices from Rev.io directly into QuickBooks Desktop. Invoices land in the correct GL accounts with sales tax applied automatically. No copy-paste, no import files, no third-party tools."
               },
               {
                 "feature": "QBD - Read live QBD data",
                 "release": "Viking 1",
-                "status": "In Progress",
+                "status": "Dev Complete",
                 "detail": "Rev.io reads your QuickBooks chart of accounts and item list automatically. No manual exports, no file uploads, no stale data. Your QBD setup is always in sync."
               },
               {
@@ -8003,19 +8014,19 @@
               {
                 "feature": "QBD - Reliability + go/no-go",
                 "release": "Viking 1",
-                "status": "In Progress",
+                "status": "Dev Complete",
                 "detail": "Built-in sync status dashboard so you always know what transferred and what needs attention. The integration recovers gracefully from interruptions, so your data stays safe even if your connection drops."
               },
               {
                 "feature": "QBD - Customer + invoice sync",
                 "release": "Viking 1",
-                "status": "In Progress",
+                "status": "Dev Complete",
                 "detail": "Push customers and invoices from Rev.io directly into QuickBooks Desktop. Invoices land in the correct GL accounts with sales tax applied automatically. No copy-paste, no import files, no third-party tools."
               },
               {
                 "feature": "QBD - Read live QBD data",
                 "release": "Viking 1",
-                "status": "In Progress",
+                "status": "Dev Complete",
                 "detail": "Rev.io reads your QuickBooks chart of accounts and item list automatically. No manual exports, no file uploads, no stale data. Your QBD setup is always in sync."
               },
               {
@@ -8083,19 +8094,19 @@
               {
                 "feature": "QBD - Reliability + go/no-go",
                 "release": "Viking 1",
-                "status": "In Progress",
+                "status": "Dev Complete",
                 "detail": "Built-in sync status dashboard so you always know what transferred and what needs attention. The integration recovers gracefully from interruptions, so your data stays safe even if your connection drops."
               },
               {
                 "feature": "QBD - Customer + invoice sync",
                 "release": "Viking 1",
-                "status": "In Progress",
+                "status": "Dev Complete",
                 "detail": "Push customers and invoices from Rev.io directly into QuickBooks Desktop. Invoices land in the correct GL accounts with sales tax applied automatically. No copy-paste, no import files, no third-party tools."
               },
               {
                 "feature": "QBD - Read live QBD data",
                 "release": "Viking 1",
-                "status": "In Progress",
+                "status": "Dev Complete",
                 "detail": "Rev.io reads your QuickBooks chart of accounts and item list automatically. No manual exports, no file uploads, no stale data. Your QBD setup is always in sync."
               },
               {
@@ -8132,19 +8143,19 @@
               {
                 "feature": "QBD - Reliability + go/no-go",
                 "release": "Viking 1",
-                "status": "In Progress",
+                "status": "Dev Complete",
                 "detail": "Built-in sync status dashboard so you always know what transferred and what needs attention. The integration recovers gracefully from interruptions, so your data stays safe even if your connection drops."
               },
               {
                 "feature": "QBD - Customer + invoice sync",
                 "release": "Viking 1",
-                "status": "In Progress",
+                "status": "Dev Complete",
                 "detail": "Push customers and invoices from Rev.io directly into QuickBooks Desktop. Invoices land in the correct GL accounts with sales tax applied automatically. No copy-paste, no import files, no third-party tools."
               },
               {
                 "feature": "QBD - Read live QBD data",
                 "release": "Viking 1",
-                "status": "In Progress",
+                "status": "Dev Complete",
                 "detail": "Rev.io reads your QuickBooks chart of accounts and item list automatically. No manual exports, no file uploads, no stale data. Your QBD setup is always in sync."
               },
               {
@@ -9323,19 +9334,19 @@
               {
                 "feature": "QBD - Reliability + go/no-go",
                 "release": "Viking 1",
-                "status": "In Progress",
+                "status": "Dev Complete",
                 "detail": "Built-in sync status dashboard so you always know what transferred and what needs attention. The integration recovers gracefully from interruptions, so your data stays safe even if your connection drops."
               },
               {
                 "feature": "QBD - Customer + invoice sync",
                 "release": "Viking 1",
-                "status": "In Progress",
+                "status": "Dev Complete",
                 "detail": "Push customers and invoices from Rev.io directly into QuickBooks Desktop. Invoices land in the correct GL accounts with sales tax applied automatically. No copy-paste, no import files, no third-party tools."
               },
               {
                 "feature": "QBD - Read live QBD data",
                 "release": "Viking 1",
-                "status": "In Progress",
+                "status": "Dev Complete",
                 "detail": "Rev.io reads your QuickBooks chart of accounts and item list automatically. No manual exports, no file uploads, no stale data. Your QBD setup is always in sync."
               },
               {
@@ -9403,19 +9414,19 @@
               {
                 "feature": "QBD - Reliability + go/no-go",
                 "release": "Viking 1",
-                "status": "In Progress",
+                "status": "Dev Complete",
                 "detail": "Built-in sync status dashboard so you always know what transferred and what needs attention. The integration recovers gracefully from interruptions, so your data stays safe even if your connection drops."
               },
               {
                 "feature": "QBD - Customer + invoice sync",
                 "release": "Viking 1",
-                "status": "In Progress",
+                "status": "Dev Complete",
                 "detail": "Push customers and invoices from Rev.io directly into QuickBooks Desktop. Invoices land in the correct GL accounts with sales tax applied automatically. No copy-paste, no import files, no third-party tools."
               },
               {
                 "feature": "QBD - Read live QBD data",
                 "release": "Viking 1",
-                "status": "In Progress",
+                "status": "Dev Complete",
                 "detail": "Rev.io reads your QuickBooks chart of accounts and item list automatically. No manual exports, no file uploads, no stale data. Your QBD setup is always in sync."
               },
               {
@@ -9452,19 +9463,19 @@
               {
                 "feature": "QBD - Reliability + go/no-go",
                 "release": "Viking 1",
-                "status": "In Progress",
+                "status": "Dev Complete",
                 "detail": "Built-in sync status dashboard so you always know what transferred and what needs attention. The integration recovers gracefully from interruptions, so your data stays safe even if your connection drops."
               },
               {
                 "feature": "QBD - Customer + invoice sync",
                 "release": "Viking 1",
-                "status": "In Progress",
+                "status": "Dev Complete",
                 "detail": "Push customers and invoices from Rev.io directly into QuickBooks Desktop. Invoices land in the correct GL accounts with sales tax applied automatically. No copy-paste, no import files, no third-party tools."
               },
               {
                 "feature": "QBD - Read live QBD data",
                 "release": "Viking 1",
-                "status": "In Progress",
+                "status": "Dev Complete",
                 "detail": "Rev.io reads your QuickBooks chart of accounts and item list automatically. No manual exports, no file uploads, no stale data. Your QBD setup is always in sync."
               },
               {
@@ -9549,19 +9560,19 @@
               {
                 "feature": "QBD - Reliability + go/no-go",
                 "release": "Viking 1",
-                "status": "In Progress",
+                "status": "Dev Complete",
                 "detail": "Built-in sync status dashboard so you always know what transferred and what needs attention. The integration recovers gracefully from interruptions, so your data stays safe even if your connection drops."
               },
               {
                 "feature": "QBD - Customer + invoice sync",
                 "release": "Viking 1",
-                "status": "In Progress",
+                "status": "Dev Complete",
                 "detail": "Push customers and invoices from Rev.io directly into QuickBooks Desktop. Invoices land in the correct GL accounts with sales tax applied automatically. No copy-paste, no import files, no third-party tools."
               },
               {
                 "feature": "QBD - Read live QBD data",
                 "release": "Viking 1",
-                "status": "In Progress",
+                "status": "Dev Complete",
                 "detail": "Rev.io reads your QuickBooks chart of accounts and item list automatically. No manual exports, no file uploads, no stale data. Your QBD setup is always in sync."
               },
               {
@@ -9629,19 +9640,19 @@
               {
                 "feature": "QBD - Reliability + go/no-go",
                 "release": "Viking 1",
-                "status": "In Progress",
+                "status": "Dev Complete",
                 "detail": "Built-in sync status dashboard so you always know what transferred and what needs attention. The integration recovers gracefully from interruptions, so your data stays safe even if your connection drops."
               },
               {
                 "feature": "QBD - Customer + invoice sync",
                 "release": "Viking 1",
-                "status": "In Progress",
+                "status": "Dev Complete",
                 "detail": "Push customers and invoices from Rev.io directly into QuickBooks Desktop. Invoices land in the correct GL accounts with sales tax applied automatically. No copy-paste, no import files, no third-party tools."
               },
               {
                 "feature": "QBD - Read live QBD data",
                 "release": "Viking 1",
-                "status": "In Progress",
+                "status": "Dev Complete",
                 "detail": "Rev.io reads your QuickBooks chart of accounts and item list automatically. No manual exports, no file uploads, no stale data. Your QBD setup is always in sync."
               },
               {
@@ -9678,19 +9689,19 @@
               {
                 "feature": "QBD - Reliability + go/no-go",
                 "release": "Viking 1",
-                "status": "In Progress",
+                "status": "Dev Complete",
                 "detail": "Built-in sync status dashboard so you always know what transferred and what needs attention. The integration recovers gracefully from interruptions, so your data stays safe even if your connection drops."
               },
               {
                 "feature": "QBD - Customer + invoice sync",
                 "release": "Viking 1",
-                "status": "In Progress",
+                "status": "Dev Complete",
                 "detail": "Push customers and invoices from Rev.io directly into QuickBooks Desktop. Invoices land in the correct GL accounts with sales tax applied automatically. No copy-paste, no import files, no third-party tools."
               },
               {
                 "feature": "QBD - Read live QBD data",
                 "release": "Viking 1",
-                "status": "In Progress",
+                "status": "Dev Complete",
                 "detail": "Rev.io reads your QuickBooks chart of accounts and item list automatically. No manual exports, no file uploads, no stale data. Your QBD setup is always in sync."
               },
               {
@@ -10238,19 +10249,19 @@
               {
                 "feature": "QBD - Reliability + go/no-go",
                 "release": "Viking 1",
-                "status": "In Progress",
+                "status": "Dev Complete",
                 "detail": "Built-in sync status dashboard so you always know what transferred and what needs attention. The integration recovers gracefully from interruptions, so your data stays safe even if your connection drops."
               },
               {
                 "feature": "QBD - Customer + invoice sync",
                 "release": "Viking 1",
-                "status": "In Progress",
+                "status": "Dev Complete",
                 "detail": "Push customers and invoices from Rev.io directly into QuickBooks Desktop. Invoices land in the correct GL accounts with sales tax applied automatically. No copy-paste, no import files, no third-party tools."
               },
               {
                 "feature": "QBD - Read live QBD data",
                 "release": "Viking 1",
-                "status": "In Progress",
+                "status": "Dev Complete",
                 "detail": "Rev.io reads your QuickBooks chart of accounts and item list automatically. No manual exports, no file uploads, no stale data. Your QBD setup is always in sync."
               },
               {
@@ -15976,17 +15987,6 @@
       "psaWeb": false
     },
     {
-      "id": "0016O00003dmuZBQAY",
-      "name": "Synergy",
-      "type": "Rev.io PSA Client",
-      "webMigrationStatus": "Do not want to migrate",
-      "webMigrationDetails": "",
-      "accountStatus": "Active - Tigerpaw One",
-      "owner": "Ingrid Beard",
-      "vertical": "",
-      "psaWeb": false
-    },
-    {
       "id": "0016O00003ebkKXQAY",
       "name": "Synergy",
       "type": "TigerPaw Client",
@@ -15994,6 +15994,17 @@
       "webMigrationDetails": "",
       "accountStatus": "Active - Tigerpaw One",
       "owner": "",
+      "vertical": "",
+      "psaWeb": false
+    },
+    {
+      "id": "0016O00003dmuZBQAY",
+      "name": "Synergy",
+      "type": "Rev.io PSA Client",
+      "webMigrationStatus": "Do not want to migrate",
+      "webMigrationDetails": "",
+      "accountStatus": "Active - Tigerpaw One",
+      "owner": "Ingrid Beard",
       "vertical": "",
       "psaWeb": false
     },
@@ -16423,6 +16434,17 @@
       "webMigrationDetails": "",
       "accountStatus": "Active - Tigerpaw One",
       "owner": "Gavin Aylward",
+      "vertical": "",
+      "psaWeb": false
+    },
+    {
+      "id": "001PX000001GQijYAG",
+      "name": "TIPS Resources",
+      "type": "Rev.io PSA Client",
+      "webMigrationStatus": "Unknown",
+      "webMigrationDetails": "",
+      "accountStatus": "Active - Unleashed",
+      "owner": "",
       "vertical": "",
       "psaWeb": false
     },
@@ -17278,9 +17300,9 @@
       "stage": "4 - Proposal Sent",
       "amount": 1740.32,
       "owner": "Sarah McGovern",
-      "nextStep": "7/21: Client requested temporary demo access for team.  Follow up call set for 7/28.",
+      "nextStep": "7/28: Follow up call scheduled for this afternoon to discuss demo access and questions on additional functionality.",
       "createdDate": "2026-06-30T11:29:34.000+0000",
-      "closeDate": "2026-07-30",
+      "closeDate": "2026-07-31",
       "isClosed": false,
       "isWon": false,
       "lossReason": "Unspecified",
@@ -17502,19 +17524,19 @@
           {
             "feature": "QBD - Reliability + go/no-go",
             "release": "Viking 1",
-            "status": "In Progress",
+            "status": "Dev Complete",
             "detail": "Built-in sync status dashboard so you always know what transferred and what needs attention. The integration recovers gracefully from interruptions, so your data stays safe even if your connection drops."
           },
           {
             "feature": "QBD - Customer + invoice sync",
             "release": "Viking 1",
-            "status": "In Progress",
+            "status": "Dev Complete",
             "detail": "Push customers and invoices from Rev.io directly into QuickBooks Desktop. Invoices land in the correct GL accounts with sales tax applied automatically. No copy-paste, no import files, no third-party tools."
           },
           {
             "feature": "QBD - Read live QBD data",
             "release": "Viking 1",
-            "status": "In Progress",
+            "status": "Dev Complete",
             "detail": "Rev.io reads your QuickBooks chart of accounts and item list automatically. No manual exports, no file uploads, no stale data. Your QBD setup is always in sync."
           },
           {
@@ -17725,7 +17747,7 @@
       "stage": "2 - Discovery Completed",
       "amount": 474,
       "owner": "Sarah McGovern",
-      "nextStep": "7/21: Client waiting on Managed Print functionality.  Working with CLSams on a workaround that may work for MPS Works. Meeting scheduled for 7/30 to review.",
+      "nextStep": "7/28: Client waiting on Managed Print functionality.  Working with CLSams on a workaround that may work for MPS Works. Meeting scheduled for 7/30 to review.",
       "createdDate": "2026-07-20T17:12:02.000+0000",
       "closeDate": "2026-08-31",
       "isClosed": false,
@@ -17762,19 +17784,19 @@
           {
             "feature": "QBD - Reliability + go/no-go",
             "release": "Viking 1",
-            "status": "In Progress",
+            "status": "Dev Complete",
             "detail": "Built-in sync status dashboard so you always know what transferred and what needs attention. The integration recovers gracefully from interruptions, so your data stays safe even if your connection drops."
           },
           {
             "feature": "QBD - Customer + invoice sync",
             "release": "Viking 1",
-            "status": "In Progress",
+            "status": "Dev Complete",
             "detail": "Push customers and invoices from Rev.io directly into QuickBooks Desktop. Invoices land in the correct GL accounts with sales tax applied automatically. No copy-paste, no import files, no third-party tools."
           },
           {
             "feature": "QBD - Read live QBD data",
             "release": "Viking 1",
-            "status": "In Progress",
+            "status": "Dev Complete",
             "detail": "Rev.io reads your QuickBooks chart of accounts and item list automatically. No manual exports, no file uploads, no stale data. Your QBD setup is always in sync."
           },
           {
@@ -17871,19 +17893,19 @@
           {
             "feature": "QBD - Reliability + go/no-go",
             "release": "Viking 1",
-            "status": "In Progress",
+            "status": "Dev Complete",
             "detail": "Built-in sync status dashboard so you always know what transferred and what needs attention. The integration recovers gracefully from interruptions, so your data stays safe even if your connection drops."
           },
           {
             "feature": "QBD - Customer + invoice sync",
             "release": "Viking 1",
-            "status": "In Progress",
+            "status": "Dev Complete",
             "detail": "Push customers and invoices from Rev.io directly into QuickBooks Desktop. Invoices land in the correct GL accounts with sales tax applied automatically. No copy-paste, no import files, no third-party tools."
           },
           {
             "feature": "QBD - Read live QBD data",
             "release": "Viking 1",
-            "status": "In Progress",
+            "status": "Dev Complete",
             "detail": "Rev.io reads your QuickBooks chart of accounts and item list automatically. No manual exports, no file uploads, no stale data. Your QBD setup is always in sync."
           },
           {
@@ -17980,19 +18002,19 @@
           {
             "feature": "QBD - Reliability + go/no-go",
             "release": "Viking 1",
-            "status": "In Progress",
+            "status": "Dev Complete",
             "detail": "Built-in sync status dashboard so you always know what transferred and what needs attention. The integration recovers gracefully from interruptions, so your data stays safe even if your connection drops."
           },
           {
             "feature": "QBD - Customer + invoice sync",
             "release": "Viking 1",
-            "status": "In Progress",
+            "status": "Dev Complete",
             "detail": "Push customers and invoices from Rev.io directly into QuickBooks Desktop. Invoices land in the correct GL accounts with sales tax applied automatically. No copy-paste, no import files, no third-party tools."
           },
           {
             "feature": "QBD - Read live QBD data",
             "release": "Viking 1",
-            "status": "In Progress",
+            "status": "Dev Complete",
             "detail": "Rev.io reads your QuickBooks chart of accounts and item list automatically. No manual exports, no file uploads, no stale data. Your QBD setup is always in sync."
           },
           {
@@ -18032,9 +18054,9 @@
       "stage": "6 - Verbal Commit",
       "amount": 1870,
       "owner": "Justin Lee",
-      "nextStep": "Mark will sign DocuSign - Connect & confirm signature before EOW (7/24)",
+      "nextStep": "7/24: Traveling to the cape on PTO, but will look at contract when he gets to his hotel room - Get app signed before Monday",
       "createdDate": "2026-06-02T19:18:31.000+0000",
-      "closeDate": "2026-07-24",
+      "closeDate": "2026-07-27",
       "isClosed": false,
       "isWon": false,
       "lossReason": "Unspecified",
@@ -18161,19 +18183,19 @@
           {
             "feature": "QBD - Reliability + go/no-go",
             "release": "Viking 1",
-            "status": "In Progress",
+            "status": "Dev Complete",
             "detail": "Built-in sync status dashboard so you always know what transferred and what needs attention. The integration recovers gracefully from interruptions, so your data stays safe even if your connection drops."
           },
           {
             "feature": "QBD - Customer + invoice sync",
             "release": "Viking 1",
-            "status": "In Progress",
+            "status": "Dev Complete",
             "detail": "Push customers and invoices from Rev.io directly into QuickBooks Desktop. Invoices land in the correct GL accounts with sales tax applied automatically. No copy-paste, no import files, no third-party tools."
           },
           {
             "feature": "QBD - Read live QBD data",
             "release": "Viking 1",
-            "status": "In Progress",
+            "status": "Dev Complete",
             "detail": "Rev.io reads your QuickBooks chart of accounts and item list automatically. No manual exports, no file uploads, no stale data. Your QBD setup is always in sync."
           },
           {
@@ -18241,19 +18263,19 @@
           {
             "feature": "QBD - Reliability + go/no-go",
             "release": "Viking 1",
-            "status": "In Progress",
+            "status": "Dev Complete",
             "detail": "Built-in sync status dashboard so you always know what transferred and what needs attention. The integration recovers gracefully from interruptions, so your data stays safe even if your connection drops."
           },
           {
             "feature": "QBD - Customer + invoice sync",
             "release": "Viking 1",
-            "status": "In Progress",
+            "status": "Dev Complete",
             "detail": "Push customers and invoices from Rev.io directly into QuickBooks Desktop. Invoices land in the correct GL accounts with sales tax applied automatically. No copy-paste, no import files, no third-party tools."
           },
           {
             "feature": "QBD - Read live QBD data",
             "release": "Viking 1",
-            "status": "In Progress",
+            "status": "Dev Complete",
             "detail": "Rev.io reads your QuickBooks chart of accounts and item list automatically. No manual exports, no file uploads, no stale data. Your QBD setup is always in sync."
           },
           {
@@ -18290,19 +18312,19 @@
           {
             "feature": "QBD - Reliability + go/no-go",
             "release": "Viking 1",
-            "status": "In Progress",
+            "status": "Dev Complete",
             "detail": "Built-in sync status dashboard so you always know what transferred and what needs attention. The integration recovers gracefully from interruptions, so your data stays safe even if your connection drops."
           },
           {
             "feature": "QBD - Customer + invoice sync",
             "release": "Viking 1",
-            "status": "In Progress",
+            "status": "Dev Complete",
             "detail": "Push customers and invoices from Rev.io directly into QuickBooks Desktop. Invoices land in the correct GL accounts with sales tax applied automatically. No copy-paste, no import files, no third-party tools."
           },
           {
             "feature": "QBD - Read live QBD data",
             "release": "Viking 1",
-            "status": "In Progress",
+            "status": "Dev Complete",
             "detail": "Rev.io reads your QuickBooks chart of accounts and item list automatically. No manual exports, no file uploads, no stale data. Your QBD setup is always in sync."
           },
           {
