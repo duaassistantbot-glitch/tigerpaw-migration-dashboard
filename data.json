@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-29T10:03:04.927Z",
+  "generatedAt": "2026-07-30T10:01:09.443Z",
   "audienceStats": {
     "Ready to Migrate": {
       "uniqueContactsEmailed": 558,
@@ -18,8 +18,8 @@
       "totalDelivered": 1821,
       "totalOpens": 235,
       "totalClicks": 78,
-      "webinarRegistrants": 147,
-      "uniqueAccountsRegistered": 96
+      "webinarRegistrants": 152,
+      "uniqueAccountsRegistered": 98
     },
     "Migrate Later": {
       "uniqueContactsEmailed": 0,
@@ -35,18 +35,18 @@
   "verticalSummary": [
     {
       "vertical": "Unknown",
-      "registeredContacts": 177,
-      "registeredCompanies": 82
+      "registeredContacts": 181,
+      "registeredCompanies": 83
     },
     {
       "vertical": "MSP",
-      "registeredContacts": 166,
-      "registeredCompanies": 95
+      "registeredContacts": 170,
+      "registeredCompanies": 96
     },
     {
       "vertical": "Integrator",
-      "registeredContacts": 71,
-      "registeredCompanies": 42
+      "registeredContacts": 72,
+      "registeredCompanies": 43
     },
     {
       "vertical": "Legacy Telecom",
@@ -60,8 +60,8 @@
     }
   ],
   "webinarTotal": {
-    "totalContacts": 417,
-    "uniqueAccounts": 221
+    "totalContacts": 426,
+    "uniqueAccounts": 224
   },
   "emailDetails": [
     {
