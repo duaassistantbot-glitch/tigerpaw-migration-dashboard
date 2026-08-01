@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-07-30T10:01:40.827Z",
+  "generatedAt": "2026-08-01T10:01:57.097Z",
   "wmrContactCount": 15,
   "oppsByAudience": {
     "Ready to Migrate": {
-      "count": 4,
-      "amount": 3991.21,
+      "count": 5,
+      "amount": 4586.21,
       "opps": [
         {
           "id": "006PX00000ctLAnYAM",
@@ -29,6 +29,14 @@
           "stage": "Closed Lost",
           "amount": 549.24,
           "createdDate": "2026-05-26T12:57:52.000+0000"
+        },
+        {
+          "id": "006PX00000e8YVJYA2",
+          "name": "SOLVD Instrument Solutions Web Migration",
+          "account": "SOLVD Instrument Solutions",
+          "stage": "5 - Product / Contract Validated",
+          "amount": 595,
+          "createdDate": "2026-07-30T12:57:41.000+0000"
         },
         {
           "id": "006PX00000c2qxVYAQ",
@@ -56,7 +64,7 @@
           "id": "006PX00000dhQaHYAU",
           "name": "MPS Works - Web Migration",
           "account": "MPS Works",
-          "stage": "2 - Discovery Completed",
+          "stage": "3 - Initial Product Demo",
           "amount": 474,
           "createdDate": "2026-07-20T17:12:02.000+0000"
         },
@@ -150,7 +158,7 @@
     }
   },
   "grandTotal": {
-    "count": 16,
-    "amount": 12739.21
+    "count": 17,
+    "amount": 13334.21
   }
 }
