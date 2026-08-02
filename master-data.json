@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-26T10:05:07.764Z",
+  "generatedAt": "2026-08-02T10:04:04.724Z",
   "filters": {
     "account": "Web_Migration__c != null",
     "opportunity": "Type = 'Legacy Migration'",
@@ -7,9 +7,9 @@
   },
   "totals": {
     "tigerpawAccounts": 618,
-    "legacyMigrationOpps": 90,
-    "legacyMigrationAmount": 101090.31,
-    "closedLostOpps": 33
+    "legacyMigrationOpps": 98,
+    "legacyMigrationAmount": 108064.31,
+    "closedLostOpps": 35
   },
   "statusBreakdown": [
     {
@@ -733,6 +733,17 @@
           "psaWeb": false
         },
         {
+          "id": "0016O00003dmuLdQAI",
+          "name": "Communication Technologies, Inc.",
+          "type": "Rev.io PSA Client",
+          "webMigrationStatus": "Unknown",
+          "webMigrationDetails": "",
+          "accountStatus": "Active - Tigerpaw One",
+          "owner": "Blaine Villafuerte",
+          "vertical": "",
+          "psaWeb": false
+        },
+        {
           "id": "0016O00003dmuLcQAI",
           "name": "Communications Diversified",
           "type": "Tigerpaw Churn",
@@ -740,17 +751,6 @@
           "webMigrationDetails": "",
           "accountStatus": "Active - Unleashed",
           "owner": "Gavin Aylward",
-          "vertical": "",
-          "psaWeb": false
-        },
-        {
-          "id": "0016O00003dmuLdQAI",
-          "name": "Communications Technologies",
-          "type": "Rev.io PSA Client",
-          "webMigrationStatus": "Unknown",
-          "webMigrationDetails": "",
-          "accountStatus": "Active - Tigerpaw One",
-          "owner": "Blaine Villafuerte",
           "vertical": "",
           "psaWeb": false
         },
@@ -1230,7 +1230,7 @@
         {
           "id": "0016O000035WCFlQAO",
           "name": "ET&T Corporation",
-          "type": "Tigerpaw Churn",
+          "type": "Client",
           "webMigrationStatus": "Unknown",
           "webMigrationDetails": "",
           "accountStatus": "Active - Tigerpaw One",
@@ -4697,7 +4697,7 @@
           "accountStatus": "Active - Tigerpaw One",
           "owner": "Blaine Villafuerte",
           "vertical": "",
-          "psaWeb": false
+          "psaWeb": true
         },
         {
           "id": "0016O00003ebbEGQAY",
@@ -5602,7 +5602,7 @@
           "name": "MPS Works",
           "type": "TigerPaw Client",
           "webMigrationStatus": "Want to migrate asap",
-          "webMigrationDetails": "Wants to migrate but waiting on Managed Print Services feature to be available before they can migrate.",
+          "webMigrationDetails": "Wants to migrate but waiting on Managed Print Services feature to be available.  Working through determining a workaround - awaiting testing from CLSams Importer workaround.",
           "accountStatus": "Active - Tigerpaw One",
           "owner": "Blaine Villafuerte",
           "vertical": "",
@@ -6505,7 +6505,7 @@
         {
           "id": "0016O00003dmuLmQAI",
           "name": "Comtel, S.A.",
-          "type": "TigerPaw Client",
+          "type": "Tigerpaw Churn",
           "webMigrationStatus": "Inactive",
           "webMigrationDetails": "Collections",
           "accountStatus": "Active - Tigerpaw One",
@@ -6856,10 +6856,50 @@
   "stageBreakdown": [
     {
       "label": "1- Discovery Scheduled",
-      "count": 3,
-      "amount": 3022,
-      "pct": 3.3,
+      "count": 5,
+      "amount": 4910,
+      "pct": 5.1,
       "opportunities": [
+        {
+          "id": "006PX00000e9Mv7YAE",
+          "name": "BTI Communications Group - Web Migration",
+          "accountId": "0011500001HNPjcAAH",
+          "account": "BTI Communications Group",
+          "stage": "1- Discovery Scheduled",
+          "amount": 2210,
+          "owner": "Justin Lee",
+          "nextStep": "8/3 - PSA demo scheduled with Dave",
+          "createdDate": "2026-07-30T17:01:53.000+0000",
+          "closeDate": "2026-08-31",
+          "isClosed": false,
+          "isWon": false,
+          "lossReason": "Unspecified",
+          "lossDetail": "",
+          "competitor": "",
+          "stageLoss": "",
+          "smc": "",
+          "vikingOneUnlock": null
+        },
+        {
+          "id": "006PX00000e6fO1YAI",
+          "name": "E & H Integrated Systems - Web Migration",
+          "accountId": "0016O00003dmuOwQAI",
+          "account": "E & H Integrated Systems",
+          "stage": "1- Discovery Scheduled",
+          "amount": 1100,
+          "owner": "Justin Lee",
+          "nextStep": "8/4 - PSA demo scheduled with Rudy",
+          "createdDate": "2026-07-29T19:18:36.000+0000",
+          "closeDate": "2026-08-31",
+          "isClosed": false,
+          "isWon": false,
+          "lossReason": "Unspecified",
+          "lossDetail": "",
+          "competitor": "",
+          "stageLoss": "",
+          "smc": "",
+          "vikingOneUnlock": null
+        },
         {
           "id": "006PX00000dhFGfYAM",
           "name": "PremCom Web Migration",
@@ -6868,7 +6908,7 @@
           "stage": "1- Discovery Scheduled",
           "amount": 0,
           "owner": "Rinor Berisha",
-          "nextStep": "07/20/2026 - Send an email to set up a meeting. (Waiting on their response)",
+          "nextStep": "07/28 - Send an email to set up a meeting. (Waiting on their response)",
           "createdDate": "2026-07-20T16:10:14.000+0000",
           "closeDate": "2026-08-31",
           "isClosed": false,
@@ -6881,15 +6921,15 @@
           "vikingOneUnlock": null
         },
         {
-          "id": "006PX00000dT2nzYAC",
-          "name": "Tri-Tec Communications (Tigerpaw to PSA)",
-          "accountId": "0011C00002lbOxLQAU",
-          "account": "Tri-Tec Communications",
+          "id": "006PX00000e55mRYAQ",
+          "name": "WCCR - TP to PSA Migration",
+          "accountId": "0016O00003dmuagQAA",
+          "account": "West Coast Cash Register Systems",
           "stage": "1- Discovery Scheduled",
-          "amount": 0,
-          "owner": "Jakob Champion",
-          "nextStep": "Discovery call booked 7/27 @ 11AM",
-          "createdDate": "2026-07-14T18:46:39.000+0000",
+          "amount": 720,
+          "owner": "Ingrid Beard",
+          "nextStep": "7/30 follow up for meeting times if you have not heard from Drew",
+          "createdDate": "2026-07-29T12:35:47.000+0000",
           "closeDate": "2026-08-31",
           "isClosed": false,
           "isWon": false,
@@ -6901,15 +6941,15 @@
           "vikingOneUnlock": null
         },
         {
-          "id": "006PX00000dSBbfYAG",
-          "name": "The Phone Experts - TP Migration",
-          "accountId": "001PX000004hVRqYAM",
-          "account": "The Phone Experts - Communications Ltd.",
+          "id": "006PX00000e271bYAA",
+          "name": "Watson Communications Corp. - Web Migration",
+          "accountId": "0016O00003dmuacQAA",
+          "account": "Watson Communications Corp.",
           "stage": "1- Discovery Scheduled",
-          "amount": 3022,
-          "owner": "Jakob Champion",
-          "nextStep": "Reach out mid August to discuss merging instances and scheduling a follow up demo.",
-          "createdDate": "2026-07-14T15:13:57.000+0000",
+          "amount": 880,
+          "owner": "Justin Lee",
+          "nextStep": "Schedule PSA demo with Leonard after webinar - Emailed on 7/28 links to videos and will schedule demo by 8/7",
+          "createdDate": "2026-07-28T12:59:09.000+0000",
           "closeDate": "2026-08-31",
           "isClosed": false,
           "isWon": false,
@@ -6924,10 +6964,30 @@
     },
     {
       "label": "2 - Discovery Completed",
-      "count": 15,
-      "amount": 21385.7,
-      "pct": 16.7,
+      "count": 13,
+      "amount": 18992.7,
+      "pct": 13.3,
       "opportunities": [
+        {
+          "id": "006PX00000e2AdnYAE",
+          "name": "American Business Phones - Tigerpaw Migration",
+          "accountId": "0016O00003dmuJzQAI",
+          "account": "American Business Phones",
+          "stage": "2 - Discovery Completed",
+          "amount": 902,
+          "owner": "Jakob Champion",
+          "nextStep": "8/11 Follow up call to confirm pricing is fine",
+          "createdDate": "2026-07-28T13:59:02.000+0000",
+          "closeDate": "2026-08-31",
+          "isClosed": false,
+          "isWon": false,
+          "lossReason": "Unspecified",
+          "lossDetail": "",
+          "competitor": "",
+          "stageLoss": "",
+          "smc": "",
+          "vikingOneUnlock": null
+        },
         {
           "id": "006PX00000dT2eHYAS",
           "name": "Datapro-Tigerpaw Migration",
@@ -6949,15 +7009,15 @@
           "vikingOneUnlock": null
         },
         {
-          "id": "006PX00000dEcrlYAC",
-          "name": "Carrier SI - PSA Migration",
-          "accountId": "001PX00000Ad0yoYAB",
-          "account": "Carrier SI",
+          "id": "006PX00000d0oG5YAI",
+          "name": "Brothers TP Migration",
+          "accountId": "0016O00003dmuKuQAI",
+          "account": "Brothers Lazer Svc",
           "stage": "2 - Discovery Completed",
-          "amount": 790,
+          "amount": 954,
           "owner": "Ingrid Beard",
-          "nextStep": "7/27 Deep dive demo with Tony, need for technical answers",
-          "createdDate": "2026-07-08T18:35:58.000+0000",
+          "nextStep": "7/30 confirm license count and schedule additional demo",
+          "createdDate": "2026-07-02T18:11:58.000+0000",
           "closeDate": "2026-08-31",
           "isClosed": false,
           "isWon": false,
@@ -6969,75 +7029,15 @@
           "vikingOneUnlock": null
         },
         {
-          "id": "006PX00000dBr2XYAS",
-          "name": "BCS Voice & Data - PSA Web Migration",
-          "accountId": "0016O00003dmuKdQAI",
-          "account": "BCS Voice and Data",
+          "id": "006PX00000e2SnaYAE",
+          "name": "Network Datacom Solutions - TP Migration",
+          "accountId": "0016O00003dmuUVQAY",
+          "account": "Network Datacom Solutions",
           "stage": "2 - Discovery Completed",
-          "amount": 1380,
+          "amount": 1345,
           "owner": "Jakob Champion",
-          "nextStep": "7/24 Follow up Demo with Tony to discuss Inventory management in PSA.",
-          "createdDate": "2026-07-07T20:19:24.000+0000",
-          "closeDate": "2026-07-31",
-          "isClosed": false,
-          "isWon": false,
-          "lossReason": "Unspecified",
-          "lossDetail": "",
-          "competitor": "",
-          "stageLoss": "",
-          "smc": "",
-          "vikingOneUnlock": null
-        },
-        {
-          "id": "006PX00000d8gwUYAQ",
-          "name": "CRC - TP Migration",
-          "accountId": "0016O00003dmucxQAA",
-          "account": "CRC Communications Limited",
-          "stage": "2 - Discovery Completed",
-          "amount": 1327,
-          "owner": "Ingrid Beard",
-          "nextStep": "follow up 7/23 to confirm update demo time",
-          "createdDate": "2026-07-06T22:00:26.000+0000",
-          "closeDate": "2026-07-31",
-          "isClosed": false,
-          "isWon": false,
-          "lossReason": "Unspecified",
-          "lossDetail": "",
-          "competitor": "",
-          "stageLoss": "",
-          "smc": "",
-          "vikingOneUnlock": null
-        },
-        {
-          "id": "006PX00000d0oG5YAI",
-          "name": "Brothers TP Migration",
-          "accountId": "0016O00003dmuKuQAI",
-          "account": "Brothers Lazer Svc",
-          "stage": "2 - Discovery Completed",
-          "amount": 954,
-          "owner": "Ingrid Beard",
-          "nextStep": "7/23 continue to reschedule demo",
-          "createdDate": "2026-07-02T18:11:58.000+0000",
-          "closeDate": "2026-07-31",
-          "isClosed": false,
-          "isWon": false,
-          "lossReason": "Unspecified",
-          "lossDetail": "",
-          "competitor": "",
-          "stageLoss": "",
-          "smc": "",
-          "vikingOneUnlock": null
-        },
-        {
-          "id": "006PX00000dhQaHYAU",
-          "name": "MPS Works - Web Migration",
-          "accountId": "0016O00003dmuUMQAY",
-          "account": "MPS Works",
-          "stage": "2 - Discovery Completed",
-          "amount": 474,
-          "owner": "Sarah McGovern",
-          "nextStep": "7/28: Client waiting on Managed Print functionality.  Working with CLSams on a workaround that may work for MPS Works. Meeting scheduled for 7/30 to review.",
-          "createdDate": "2026-07-20T17:12:02.000+0000",
+          "nextStep": "8/3 Follow up meeting to discuss quote & additional questions",
+          "createdDate": "2026-07-28T15:26:35.000+0000",
           "closeDate": "2026-08-31",
           "isClosed": false,
           "isWon": false,
@@ -7056,7 +7056,7 @@
           "stage": "2 - Discovery Completed",
           "amount": 711,
           "owner": "Ingrid Beard",
-          "nextStep": "7/23 call Dorothye to schedule a time to review answers to her questions",
+          "nextStep": "7/30 follow up with integration answers",
           "createdDate": "2026-07-13T19:20:59.000+0000",
           "closeDate": "2026-08-31",
           "isClosed": false,
@@ -7096,9 +7096,9 @@
           "stage": "2 - Discovery Completed",
           "amount": 866.7,
           "owner": "Ryan Burton",
-          "nextStep": "Reach back out on 7/23: Josh is helping his oldest daughter move and is out this week. Also, checking on the company buying his billing portion of the business and seeing if that will effect PSA migration timeline.",
+          "nextStep": "Connecting Josh with CCR to conduct a traffic study to get his FUSF taxes in order. Getting more answers for Josh around some of the Quickbooks integration questions. Once both items are checked then he should be ready to migrate.",
           "createdDate": "2026-07-06T17:09:54.000+0000",
-          "closeDate": "2026-07-31",
+          "closeDate": "2026-08-31",
           "isClosed": false,
           "isWon": false,
           "lossReason": "Unspecified",
@@ -7109,15 +7109,35 @@
           "vikingOneUnlock": null
         },
         {
-          "id": "006PX00000dqbEkYAI",
-          "name": "The Rhino Group PSA Migration",
-          "accountId": "0016O00003dmuZsQAI",
-          "account": "The RHINO Group",
+          "id": "006PX00000dT2nzYAC",
+          "name": "Tri-Tec Communications (Tigerpaw to PSA)",
+          "accountId": "0011C00002lbOxLQAU",
+          "account": "Tri-Tec Communications",
           "stage": "2 - Discovery Completed",
-          "amount": 2100,
-          "owner": "Ingrid Beard",
-          "nextStep": "7/27 initial demo",
-          "createdDate": "2026-07-23T16:54:59.000+0000",
+          "amount": 0,
+          "owner": "Jakob Champion",
+          "nextStep": "7/30 Follow up to schedule meeting to discuss migration process & pricing",
+          "createdDate": "2026-07-14T18:46:39.000+0000",
+          "closeDate": "2026-08-31",
+          "isClosed": false,
+          "isWon": false,
+          "lossReason": "Unspecified",
+          "lossDetail": "",
+          "competitor": "",
+          "stageLoss": "",
+          "smc": "",
+          "vikingOneUnlock": null
+        },
+        {
+          "id": "006PX00000dSBbfYAG",
+          "name": "The Phone Experts - TP Migration",
+          "accountId": "001PX000004hVRqYAM",
+          "account": "The Phone Experts - Communications Ltd.",
+          "stage": "2 - Discovery Completed",
+          "amount": 3022,
+          "owner": "Jakob Champion",
+          "nextStep": "7/31 Follow up to get 2nd meeting time",
+          "createdDate": "2026-07-14T15:13:57.000+0000",
           "closeDate": "2026-08-31",
           "isClosed": false,
           "isWon": false,
@@ -7136,28 +7156,8 @@
           "stage": "2 - Discovery Completed",
           "amount": 4414,
           "owner": "Jakob Champion",
-          "nextStep": "Follow up with Demo site access, along with demo of the mobile app once we get the users for demo site",
+          "nextStep": "8/3 Follow up Demo with Tony",
           "createdDate": "2026-07-14T15:11:01.000+0000",
-          "closeDate": "2026-08-31",
-          "isClosed": false,
-          "isWon": false,
-          "lossReason": "Unspecified",
-          "lossDetail": "",
-          "competitor": "",
-          "stageLoss": "",
-          "smc": "",
-          "vikingOneUnlock": null
-        },
-        {
-          "id": "006PX00000dJYHFYA4",
-          "name": "PSI - PSA Migration",
-          "accountId": "0016O00003dmuVQQAY",
-          "account": "Professional Security Innovations",
-          "stage": "2 - Discovery Completed",
-          "amount": 1591,
-          "owner": "Ingrid Beard",
-          "nextStep": "7/23 follow up on internal conversations",
-          "createdDate": "2026-07-10T13:06:09.000+0000",
           "closeDate": "2026-08-31",
           "isClosed": false,
           "isWon": false,
@@ -7176,9 +7176,9 @@
           "stage": "2 - Discovery Completed",
           "amount": 653,
           "owner": "Ingrid Beard",
-          "nextStep": "7/23 continue to try to connect (OOT alot)",
+          "nextStep": "7/30 reconnect with Jodie to schedule demo",
           "createdDate": "2026-06-29T20:38:28.000+0000",
-          "closeDate": "2026-07-29",
+          "closeDate": "2026-08-31",
           "isClosed": false,
           "isWon": false,
           "lossReason": "Unspecified",
@@ -7196,7 +7196,7 @@
           "stage": "2 - Discovery Completed",
           "amount": 2580,
           "owner": "Ingrid Beard",
-          "nextStep": "7/21 follow up for demo reschedule",
+          "nextStep": "8/3 follow up for demo reschedule (after he returns from vacation)",
           "createdDate": "2026-06-23T09:54:00.000+0000",
           "closeDate": "2026-08-31",
           "isClosed": false,
@@ -7216,9 +7216,9 @@
           "stage": "2 - Discovery Completed",
           "amount": 2200,
           "owner": "Ingrid Beard",
-          "nextStep": "7/24 PSA demo",
+          "nextStep": "7/30 work rescheduling demo",
           "createdDate": "2026-06-11T23:06:32.000+0000",
-          "closeDate": "2026-07-31",
+          "closeDate": "2026-08-31",
           "isClosed": false,
           "isWon": false,
           "lossReason": "Unspecified",
@@ -7232,9 +7232,9 @@
     },
     {
       "label": "3 - Initial Product Demo",
-      "count": 3,
-      "amount": 4789,
-      "pct": 3.3,
+      "count": 5,
+      "amount": 6388,
+      "pct": 5.1,
       "opportunities": [
         {
           "id": "006PX00000dW6ztYAC",
@@ -7244,9 +7244,117 @@
           "stage": "3 - Initial Product Demo",
           "amount": 1337,
           "owner": "Ingrid Beard",
-          "nextStep": "7/23 follow up on post demo internal meeting",
+          "nextStep": "8/6 Deep Dive with Tony",
           "createdDate": "2026-07-15T18:15:23.000+0000",
-          "closeDate": "2026-07-31",
+          "closeDate": "2026-08-31",
+          "isClosed": false,
+          "isWon": false,
+          "lossReason": "Unspecified",
+          "lossDetail": "",
+          "competitor": "",
+          "stageLoss": "",
+          "smc": "",
+          "vikingOneUnlock": null
+        },
+        {
+          "id": "006PX00000d8gwUYAQ",
+          "name": "CRC - TP Migration",
+          "accountId": "0016O00003dmucxQAA",
+          "account": "CRC Communications Limited",
+          "stage": "3 - Initial Product Demo",
+          "amount": 1327,
+          "owner": "Ingrid Beard",
+          "nextStep": "8/3 follow up if no deep dive time was chosen",
+          "createdDate": "2026-07-06T22:00:26.000+0000",
+          "closeDate": "2026-08-31",
+          "isClosed": false,
+          "isWon": false,
+          "lossReason": "Unspecified",
+          "lossDetail": "",
+          "competitor": "",
+          "stageLoss": "",
+          "smc": "",
+          "vikingOneUnlock": null
+        },
+        {
+          "id": "006PX00000dhQaHYAU",
+          "name": "MPS Works - Web Migration",
+          "accountId": "0016O00003dmuUMQAY",
+          "account": "MPS Works",
+          "stage": "3 - Initial Product Demo",
+          "amount": 474,
+          "owner": "Sarah McGovern",
+          "nextStep": "8/6 - Demo scheduled for 8/6 with Tony to review system and dig into managed print workaround/print meter billing/contract review and discuss payments.",
+          "createdDate": "2026-07-20T17:12:02.000+0000",
+          "closeDate": "2026-08-31",
+          "isClosed": false,
+          "isWon": false,
+          "lossReason": "Unspecified",
+          "lossDetail": "",
+          "competitor": "",
+          "stageLoss": "",
+          "smc": "",
+          "vikingOneUnlock": null
+        },
+        {
+          "id": "006PX00000dqbEkYAI",
+          "name": "The Rhino Group PSA Migration",
+          "accountId": "0016O00003dmuZsQAI",
+          "account": "The RHINO Group",
+          "stage": "3 - Initial Product Demo",
+          "amount": 1659,
+          "owner": "Ingrid Beard",
+          "nextStep": "8/7 Deep dive with Tony",
+          "createdDate": "2026-07-23T16:54:59.000+0000",
+          "closeDate": "2026-08-31",
+          "isClosed": false,
+          "isWon": false,
+          "lossReason": "Unspecified",
+          "lossDetail": "",
+          "competitor": "",
+          "stageLoss": "",
+          "smc": "",
+          "vikingOneUnlock": null
+        },
+        {
+          "id": "006PX00000dJYHFYA4",
+          "name": "PSI - PSA Migration",
+          "accountId": "0016O00003dmuVQQAY",
+          "account": "Professional Security Innovations",
+          "stage": "3 - Initial Product Demo",
+          "amount": 1591,
+          "owner": "Ingrid Beard",
+          "nextStep": "7/30 scheduling follow up meeting",
+          "createdDate": "2026-07-10T13:06:09.000+0000",
+          "closeDate": "2026-08-31",
+          "isClosed": false,
+          "isWon": false,
+          "lossReason": "Unspecified",
+          "lossDetail": "",
+          "competitor": "",
+          "stageLoss": "",
+          "smc": "",
+          "vikingOneUnlock": null
+        }
+      ]
+    },
+    {
+      "label": "4 - Proposal Sent",
+      "count": 4,
+      "amount": 4485.7,
+      "pct": 4.1,
+      "opportunities": [
+        {
+          "id": "006PX00000dEcrlYAC",
+          "name": "Carrier SI - PSA Migration",
+          "accountId": "001PX00000Ad0yoYAB",
+          "account": "Carrier SI",
+          "stage": "4 - Proposal Sent",
+          "amount": 790,
+          "owner": "Ingrid Beard",
+          "nextStep": "7/30 schedule quote review",
+          "createdDate": "2026-07-08T18:35:58.000+0000",
+          "closeDate": "2026-08-31",
           "isClosed": false,
           "isWon": false,
           "lossReason": "Unspecified",
@@ -7261,60 +7369,12 @@
           "name": "Chortek/RCH - PSA Migration",
           "accountId": "0016O00003dmuViQAI",
           "account": "Chortek",
-          "stage": "3 - Initial Product Demo",
+          "stage": "4 - Proposal Sent",
           "amount": 1240,
           "owner": "Ingrid Beard",
-          "nextStep": "7/23 follow up in Hubspot and set follow up meeting",
+          "nextStep": "8/4 follow up and confirm reference conversation",
           "createdDate": "2026-05-21T17:16:24.000+0000",
-          "closeDate": "2026-07-31",
-          "isClosed": false,
-          "isWon": false,
-          "lossReason": "Unspecified",
-          "lossDetail": "",
-          "competitor": "",
-          "stageLoss": "",
-          "smc": "",
-          "vikingOneUnlock": null
-        },
-        {
-          "id": "006PX00000djzDlYAI",
-          "name": "Richmond- TP to PSA Web",
-          "accountId": "0016O00003dmuYMQAY",
-          "account": "Richmond Security",
-          "stage": "3 - Initial Product Demo",
-          "amount": 2212,
-          "owner": "Katerra Stephenson Greenwood",
-          "nextStep": "7/23 Demo Scheduled  w/ Michael",
-          "createdDate": "2026-07-21T13:40:16.000+0000",
-          "closeDate": "2026-07-28",
-          "isClosed": false,
-          "isWon": false,
-          "lossReason": "Unspecified",
-          "lossDetail": "",
-          "competitor": "",
-          "stageLoss": "",
-          "smc": "",
-          "vikingOneUnlock": null
-        }
-      ]
-    },
-    {
-      "label": "4 - Proposal Sent",
-      "count": 3,
-      "amount": 4196.02,
-      "pct": 3.3,
-      "opportunities": [
-        {
-          "id": "006PX00000ctLAnYAM",
-          "name": "All-Mode Communications Inc Web Migration",
-          "accountId": "0011C00002jC8JtQAK",
-          "account": "All-Mode Communications Inc",
-          "stage": "4 - Proposal Sent",
-          "amount": 1740.32,
-          "owner": "Sarah McGovern",
-          "nextStep": "7/28: Follow up call scheduled for this afternoon to discuss demo access and questions on additional functionality.",
-          "createdDate": "2026-06-30T11:29:34.000+0000",
-          "closeDate": "2026-07-31",
+          "closeDate": "2026-08-31",
           "isClosed": false,
           "isWon": false,
           "lossReason": "Unspecified",
@@ -7352,9 +7412,9 @@
           "stage": "4 - Proposal Sent",
           "amount": 1265,
           "owner": "Katerra Stephenson Greenwood",
-          "nextStep": "7/27- call to setup closing appointment",
+          "nextStep": "8/4- Follow up meeting scheduled to answer final questions after demo site",
           "createdDate": "2026-06-23T19:44:49.000+0000",
-          "closeDate": "2026-07-31",
+          "closeDate": "2026-08-31",
           "isClosed": false,
           "isWon": false,
           "lossReason": "Unspecified",
@@ -7369,8 +7429,8 @@
     {
       "label": "5 - Product / Contract Validated",
       "count": 4,
-      "amount": 8758.2,
-      "pct": 4.4,
+      "amount": 7693.2,
+      "pct": 4.1,
       "opportunities": [
         {
           "id": "006PX00000dAaQLYA0",
@@ -7380,9 +7440,9 @@
           "stage": "5 - Product / Contract Validated",
           "amount": 2182,
           "owner": "Jacob Williams",
-          "nextStep": "Client saw demo, schedule a discovery call for 7/22 to look into current platform functionality.",
+          "nextStep": "Client was unable to attend demo, rescheduling for week of August 10th.",
           "createdDate": "2026-07-07T13:44:03.000+0000",
-          "closeDate": "2026-07-31",
+          "closeDate": "2026-08-31",
           "isClosed": false,
           "isWon": false,
           "lossReason": "Unspecified",
@@ -7420,9 +7480,9 @@
           "stage": "5 - Product / Contract Validated",
           "amount": 1825,
           "owner": "Ingrid Beard",
-          "nextStep": "follow up on 7/23 follow up on implementation questions",
+          "nextStep": "7/30 connect and follow up with Mike verify if any questions stopping him from signing the docusign",
           "createdDate": "2026-06-11T21:58:03.000+0000",
-          "closeDate": "2026-07-31",
+          "closeDate": "2026-08-31",
           "isClosed": false,
           "isWon": false,
           "lossReason": "Unspecified",
@@ -7433,16 +7493,16 @@
           "vikingOneUnlock": null
         },
         {
-          "id": "006PX00000dDvlGYAS",
-          "name": "TRM - PSA Migration",
-          "accountId": "0016O00003dmua7QAA",
-          "account": "TRM",
+          "id": "006PX00000e8YVJYA2",
+          "name": "SOLVD Instrument Solutions Web Migration",
+          "accountId": "0016O00003dmuabQAA",
+          "account": "SOLVD Instrument Solutions",
           "stage": "5 - Product / Contract Validated",
-          "amount": 1660,
-          "owner": "Ingrid Beard",
-          "nextStep": "final meeting scheduled for 7/27 upon return from Punta Cana",
-          "createdDate": "2026-07-08T16:09:23.000+0000",
-          "closeDate": "2026-07-31",
+          "amount": 595,
+          "owner": "Sarah McGovern",
+          "nextStep": "8/4: Client returns from PTO this week. Contract was sent over and will request a call to discuss once he is back.",
+          "createdDate": "2026-07-30T12:57:41.000+0000",
+          "closeDate": "2026-08-31",
           "isClosed": false,
           "isWon": false,
           "lossReason": "Unspecified",
@@ -7458,7 +7518,7 @@
       "label": "6 - Verbal Commit",
       "count": 1,
       "amount": 1870,
-      "pct": 1.1,
+      "pct": 1,
       "opportunities": [
         {
           "id": "006PX00000bYkBBYA0",
@@ -7468,9 +7528,9 @@
           "stage": "6 - Verbal Commit",
           "amount": 1870,
           "owner": "Justin Lee",
-          "nextStep": "7/24: Traveling to the cape on PTO, but will look at contract when he gets to his hotel room - Get app signed before Monday",
+          "nextStep": "Emailed on 7/30 - Connect with Mark & get app signed before EOW (8/7)",
           "createdDate": "2026-06-02T19:18:31.000+0000",
-          "closeDate": "2026-07-27",
+          "closeDate": "2026-08-31",
           "isClosed": false,
           "isWon": false,
           "lossReason": "Unspecified",
@@ -7484,10 +7544,59 @@
     },
     {
       "label": "Closed Lost",
-      "count": 33,
-      "amount": 38996.39,
-      "pct": 36.7,
+      "count": 35,
+      "amount": 42116.71,
+      "pct": 35.7,
       "opportunities": [
+        {
+          "id": "006PX00000dBr2XYAS",
+          "name": "BCS Voice & Data - PSA Web Migration",
+          "accountId": "0016O00003dmuKdQAI",
+          "account": "BCS Voice and Data",
+          "stage": "Closed Lost",
+          "amount": 1380,
+          "owner": "Jakob Champion",
+          "nextStep": "8/4 Follow up to schedule pricing call",
+          "createdDate": "2026-07-07T20:19:24.000+0000",
+          "closeDate": "2026-07-30",
+          "isClosed": true,
+          "isWon": false,
+          "lossReason": "Software Missing Capabilities",
+          "lossDetail": "Need GL Code Detail in QBD Integration",
+          "competitor": "",
+          "stageLoss": "2 - Discovery Completed",
+          "smc": "",
+          "vikingOneUnlock": {
+            "status": "Yes",
+            "summary": "QuickBooks Desktop export and GL mapping work is in Viking 1.",
+            "matches": [
+              {
+                "feature": "QBD - Reliability + go/no-go",
+                "release": "Viking 1",
+                "status": "Available",
+                "detail": "Built-in sync status dashboard so you always know what transferred and what needs attention. The integration recovers gracefully from interruptions, so your data stays safe even if your connection drops."
+              },
+              {
+                "feature": "QBD - Customer + invoice sync",
+                "release": "Viking 1",
+                "status": "Available",
+                "detail": "Push customers and invoices from Rev.io directly into QuickBooks Desktop. Invoices land in the correct GL accounts with sales tax applied automatically. No copy-paste, no import files, no third-party tools."
+              },
+              {
+                "feature": "QBD - Read live QBD data",
+                "release": "Viking 1",
+                "status": "Available",
+                "detail": "Rev.io reads your QuickBooks chart of accounts and item list automatically. No manual exports, no file uploads, no stale data. Your QBD setup is always in sync."
+              },
+              {
+                "feature": "QBD - SOAP endpoint + Web Connector handshake",
+                "release": "Viking 1",
+                "status": "Available",
+                "detail": "Establish a secure, direct connection between Rev.io PSA and QuickBooks Desktop, enabling real-time communication between your cloud workspace and on-premises accounting software."
+              }
+            ]
+          }
+        },
         {
           "id": "006PX00000d0VbdYAE",
           "name": "Advanced Hospitality Web Migration",
@@ -7544,6 +7653,49 @@
           }
         },
         {
+          "id": "006PX00000ctLAnYAM",
+          "name": "All-Mode Communications Inc Web Migration",
+          "accountId": "0011C00002jC8JtQAK",
+          "account": "All-Mode Communications Inc",
+          "stage": "Closed Lost",
+          "amount": 1740.32,
+          "owner": "Sarah McGovern",
+          "nextStep": "7/28: Client emailed on 7/27 stating they do not have time for their team to do a test drive and want to back-burner until the Spring.",
+          "createdDate": "2026-06-30T11:29:34.000+0000",
+          "closeDate": "2026-07-27",
+          "isClosed": true,
+          "isWon": false,
+          "lossReason": "Not the Right Time",
+          "lossDetail": "Per Ben: \"We do not currently have time in the staff schedules for anyone to do more of a test-drive than this so I think we are going to end up back-burnering the move until at least the spring.\"  They provided feedback on the following: System Speed, Product Catalog, Service Orders / Tickets, Dispatch Board, PW Vault, and Knowledge Base.  Meeting on 7/28 to discuss further.",
+          "competitor": "",
+          "stageLoss": "4 - Proposal Sent",
+          "smc": "",
+          "vikingOneUnlock": {
+            "status": "Partial",
+            "summary": "Dispatch and payroll-adjacent QBD time export work is in Viking 1; pricing rules are not a clear match.",
+            "matches": [
+              {
+                "feature": "Dispatch board - support multiple boards",
+                "release": "Viking 1",
+                "status": "Dev Complete",
+                "detail": "Improve dispatch flexibility with multiple board views based on rep groups or ticket types, helping teams organize work and focus on the tickets most relevant to them."
+              },
+              {
+                "feature": "Add user work hours and time off",
+                "release": "Viking 1",
+                "status": "Available",
+                "detail": "Give dispatchers a clearer view of employee availability by displaying work hours and time off directly on the calendar and dispatch board. With scheduling information visible where work is assigned, teams can make informed dispatch decisions and avoid conflicts before they happen"
+              },
+              {
+                "feature": "Dispatch Board Rebuild",
+                "release": "Viking 1",
+                "status": "Dev Complete",
+                "detail": "Optimize dispatch operations with an enhanced dispatch board that uses rules and filters to surface tickets ready for assignment, supports direct ticket assignment, and improves date selection."
+              }
+            ]
+          }
+        },
+        {
           "id": "006PX00000cqAdJYAU",
           "name": "ASAP Security Services - Web Migration",
           "accountId": "0016O00003dmuKBQAY",
@@ -7568,7 +7720,7 @@
               {
                 "feature": "Dispatch board - support multiple boards",
                 "release": "Viking 1",
-                "status": "In Dev",
+                "status": "Dev Complete",
                 "detail": "Improve dispatch flexibility with multiple board views based on rep groups or ticket types, helping teams organize work and focus on the tickets most relevant to them."
               },
               {
@@ -7580,7 +7732,7 @@
               {
                 "feature": "Dispatch Board Rebuild",
                 "release": "Viking 1",
-                "status": "In Dev",
+                "status": "Dev Complete",
                 "detail": "Optimize dispatch operations with an enhanced dispatch board that uses rules and filters to surface tickets ready for assignment, supports direct ticket assignment, and improves date selection."
               }
             ]
@@ -7642,25 +7794,25 @@
               {
                 "feature": "Add one-time charge component to agreement",
                 "release": "Viking 1",
-                "status": "In Dev",
+                "status": "Staged for Release",
                 "detail": "Add onetime charges to an agreement directly based on the product catalog. able to edit amount, cost, description, quantity. Not tied to a service. Charged when Agreement goes \"live\" -> directly to unposted. Re-charged on renewal?"
               },
               {
                 "feature": "Agreement List",
                 "release": "Viking 1",
-                "status": "Dev Complete",
+                "status": "Staged for Release",
                 "detail": "Manage customer agreements faster and with less effort. The Agreements List gives you a centralized, searchable view of all agreements—so you can quickly find what you need, track status, and keep agreement details organized for day-to-day operations."
               },
               {
                 "feature": "Agreement Time Entry Rates",
                 "release": "Viking 1",
-                "status": "Dev Complete",
+                "status": "Staged for Release",
                 "detail": "Make time billing clearer and easier to manage. The enhanced Time Entry Rates tab ensures agreement-specific rates are fully populated and presented in a streamlined experience, helping your team apply the right rates consistently and reduce billing errors."
               },
               {
                 "feature": "Agreement Overage Templates",
                 "release": "Viking 1",
-                "status": "Dev Complete",
+                "status": "Staged for Release",
                 "detail": "Set up overage billing faster and with more confidence. Overage Templates streamline configuration by pre-populating common tier structures, improving how changes propagate, and adding history so your team can track updates over time and keep billing rules consistent."
               }
             ]
@@ -7715,25 +7867,25 @@
               {
                 "feature": "QBD - Reliability + go/no-go",
                 "release": "Viking 1",
-                "status": "Dev Complete",
+                "status": "Available",
                 "detail": "Built-in sync status dashboard so you always know what transferred and what needs attention. The integration recovers gracefully from interruptions, so your data stays safe even if your connection drops."
               },
               {
                 "feature": "QBD - Customer + invoice sync",
                 "release": "Viking 1",
-                "status": "Dev Complete",
+                "status": "Available",
                 "detail": "Push customers and invoices from Rev.io directly into QuickBooks Desktop. Invoices land in the correct GL accounts with sales tax applied automatically. No copy-paste, no import files, no third-party tools."
               },
               {
                 "feature": "QBD - Read live QBD data",
                 "release": "Viking 1",
-                "status": "Dev Complete",
+                "status": "Available",
                 "detail": "Rev.io reads your QuickBooks chart of accounts and item list automatically. No manual exports, no file uploads, no stale data. Your QBD setup is always in sync."
               },
               {
                 "feature": "QBD - SOAP endpoint + Web Connector handshake",
                 "release": "Viking 1",
-                "status": "Dev Complete",
+                "status": "Available",
                 "detail": "Establish a secure, direct connection between Rev.io PSA and QuickBooks Desktop, enabling real-time communication between your cloud workspace and on-premises accounting software."
               }
             ]
@@ -7795,25 +7947,25 @@
               {
                 "feature": "QBD - Reliability + go/no-go",
                 "release": "Viking 1",
-                "status": "Dev Complete",
+                "status": "Available",
                 "detail": "Built-in sync status dashboard so you always know what transferred and what needs attention. The integration recovers gracefully from interruptions, so your data stays safe even if your connection drops."
               },
               {
                 "feature": "QBD - Customer + invoice sync",
                 "release": "Viking 1",
-                "status": "Dev Complete",
+                "status": "Available",
                 "detail": "Push customers and invoices from Rev.io directly into QuickBooks Desktop. Invoices land in the correct GL accounts with sales tax applied automatically. No copy-paste, no import files, no third-party tools."
               },
               {
                 "feature": "QBD - Read live QBD data",
                 "release": "Viking 1",
-                "status": "Dev Complete",
+                "status": "Available",
                 "detail": "Rev.io reads your QuickBooks chart of accounts and item list automatically. No manual exports, no file uploads, no stale data. Your QBD setup is always in sync."
               },
               {
                 "feature": "QBD - SOAP endpoint + Web Connector handshake",
                 "release": "Viking 1",
-                "status": "Dev Complete",
+                "status": "Available",
                 "detail": "Establish a secure, direct connection between Rev.io PSA and QuickBooks Desktop, enabling real-time communication between your cloud workspace and on-premises accounting software."
               }
             ]
@@ -7844,25 +7996,25 @@
               {
                 "feature": "QBD - Reliability + go/no-go",
                 "release": "Viking 1",
-                "status": "Dev Complete",
+                "status": "Available",
                 "detail": "Built-in sync status dashboard so you always know what transferred and what needs attention. The integration recovers gracefully from interruptions, so your data stays safe even if your connection drops."
               },
               {
                 "feature": "QBD - Customer + invoice sync",
                 "release": "Viking 1",
-                "status": "Dev Complete",
+                "status": "Available",
                 "detail": "Push customers and invoices from Rev.io directly into QuickBooks Desktop. Invoices land in the correct GL accounts with sales tax applied automatically. No copy-paste, no import files, no third-party tools."
               },
               {
                 "feature": "QBD - Read live QBD data",
                 "release": "Viking 1",
-                "status": "Dev Complete",
+                "status": "Available",
                 "detail": "Rev.io reads your QuickBooks chart of accounts and item list automatically. No manual exports, no file uploads, no stale data. Your QBD setup is always in sync."
               },
               {
                 "feature": "QBD - SOAP endpoint + Web Connector handshake",
                 "release": "Viking 1",
-                "status": "Dev Complete",
+                "status": "Available",
                 "detail": "Establish a secure, direct connection between Rev.io PSA and QuickBooks Desktop, enabling real-time communication between your cloud workspace and on-premises accounting software."
               }
             ]
@@ -7893,25 +8045,25 @@
               {
                 "feature": "QBD - Reliability + go/no-go",
                 "release": "Viking 1",
-                "status": "Dev Complete",
+                "status": "Available",
                 "detail": "Built-in sync status dashboard so you always know what transferred and what needs attention. The integration recovers gracefully from interruptions, so your data stays safe even if your connection drops."
               },
               {
                 "feature": "QBD - Customer + invoice sync",
                 "release": "Viking 1",
-                "status": "Dev Complete",
+                "status": "Available",
                 "detail": "Push customers and invoices from Rev.io directly into QuickBooks Desktop. Invoices land in the correct GL accounts with sales tax applied automatically. No copy-paste, no import files, no third-party tools."
               },
               {
                 "feature": "QBD - Read live QBD data",
                 "release": "Viking 1",
-                "status": "Dev Complete",
+                "status": "Available",
                 "detail": "Rev.io reads your QuickBooks chart of accounts and item list automatically. No manual exports, no file uploads, no stale data. Your QBD setup is always in sync."
               },
               {
                 "feature": "QBD - SOAP endpoint + Web Connector handshake",
                 "release": "Viking 1",
-                "status": "Dev Complete",
+                "status": "Available",
                 "detail": "Establish a secure, direct connection between Rev.io PSA and QuickBooks Desktop, enabling real-time communication between your cloud workspace and on-premises accounting software."
               }
             ]
@@ -8014,25 +8166,25 @@
               {
                 "feature": "QBD - Reliability + go/no-go",
                 "release": "Viking 1",
-                "status": "Dev Complete",
+                "status": "Available",
                 "detail": "Built-in sync status dashboard so you always know what transferred and what needs attention. The integration recovers gracefully from interruptions, so your data stays safe even if your connection drops."
               },
               {
                 "feature": "QBD - Customer + invoice sync",
                 "release": "Viking 1",
-                "status": "Dev Complete",
+                "status": "Available",
                 "detail": "Push customers and invoices from Rev.io directly into QuickBooks Desktop. Invoices land in the correct GL accounts with sales tax applied automatically. No copy-paste, no import files, no third-party tools."
               },
               {
                 "feature": "QBD - Read live QBD data",
                 "release": "Viking 1",
-                "status": "Dev Complete",
+                "status": "Available",
                 "detail": "Rev.io reads your QuickBooks chart of accounts and item list automatically. No manual exports, no file uploads, no stale data. Your QBD setup is always in sync."
               },
               {
                 "feature": "QBD - SOAP endpoint + Web Connector handshake",
                 "release": "Viking 1",
-                "status": "Dev Complete",
+                "status": "Available",
                 "detail": "Establish a secure, direct connection between Rev.io PSA and QuickBooks Desktop, enabling real-time communication between your cloud workspace and on-premises accounting software."
               }
             ]
@@ -8094,25 +8246,25 @@
               {
                 "feature": "QBD - Reliability + go/no-go",
                 "release": "Viking 1",
-                "status": "Dev Complete",
+                "status": "Available",
                 "detail": "Built-in sync status dashboard so you always know what transferred and what needs attention. The integration recovers gracefully from interruptions, so your data stays safe even if your connection drops."
               },
               {
                 "feature": "QBD - Customer + invoice sync",
                 "release": "Viking 1",
-                "status": "Dev Complete",
+                "status": "Available",
                 "detail": "Push customers and invoices from Rev.io directly into QuickBooks Desktop. Invoices land in the correct GL accounts with sales tax applied automatically. No copy-paste, no import files, no third-party tools."
               },
               {
                 "feature": "QBD - Read live QBD data",
                 "release": "Viking 1",
-                "status": "Dev Complete",
+                "status": "Available",
                 "detail": "Rev.io reads your QuickBooks chart of accounts and item list automatically. No manual exports, no file uploads, no stale data. Your QBD setup is always in sync."
               },
               {
                 "feature": "QBD - SOAP endpoint + Web Connector handshake",
                 "release": "Viking 1",
-                "status": "Dev Complete",
+                "status": "Available",
                 "detail": "Establish a secure, direct connection between Rev.io PSA and QuickBooks Desktop, enabling real-time communication between your cloud workspace and on-premises accounting software."
               }
             ]
@@ -8143,25 +8295,25 @@
               {
                 "feature": "QBD - Reliability + go/no-go",
                 "release": "Viking 1",
-                "status": "Dev Complete",
+                "status": "Available",
                 "detail": "Built-in sync status dashboard so you always know what transferred and what needs attention. The integration recovers gracefully from interruptions, so your data stays safe even if your connection drops."
               },
               {
                 "feature": "QBD - Customer + invoice sync",
                 "release": "Viking 1",
-                "status": "Dev Complete",
+                "status": "Available",
                 "detail": "Push customers and invoices from Rev.io directly into QuickBooks Desktop. Invoices land in the correct GL accounts with sales tax applied automatically. No copy-paste, no import files, no third-party tools."
               },
               {
                 "feature": "QBD - Read live QBD data",
                 "release": "Viking 1",
-                "status": "Dev Complete",
+                "status": "Available",
                 "detail": "Rev.io reads your QuickBooks chart of accounts and item list automatically. No manual exports, no file uploads, no stale data. Your QBD setup is always in sync."
               },
               {
                 "feature": "QBD - SOAP endpoint + Web Connector handshake",
                 "release": "Viking 1",
-                "status": "Dev Complete",
+                "status": "Available",
                 "detail": "Establish a secure, direct connection between Rev.io PSA and QuickBooks Desktop, enabling real-time communication between your cloud workspace and on-premises accounting software."
               }
             ]
@@ -8192,25 +8344,25 @@
               {
                 "feature": "Add one-time charge component to agreement",
                 "release": "Viking 1",
-                "status": "In Dev",
+                "status": "Staged for Release",
                 "detail": "Add onetime charges to an agreement directly based on the product catalog. able to edit amount, cost, description, quantity. Not tied to a service. Charged when Agreement goes \"live\" -> directly to unposted. Re-charged on renewal?"
               },
               {
                 "feature": "Agreement List",
                 "release": "Viking 1",
-                "status": "Dev Complete",
+                "status": "Staged for Release",
                 "detail": "Manage customer agreements faster and with less effort. The Agreements List gives you a centralized, searchable view of all agreements—so you can quickly find what you need, track status, and keep agreement details organized for day-to-day operations."
               },
               {
                 "feature": "Agreement Time Entry Rates",
                 "release": "Viking 1",
-                "status": "Dev Complete",
+                "status": "Staged for Release",
                 "detail": "Make time billing clearer and easier to manage. The enhanced Time Entry Rates tab ensures agreement-specific rates are fully populated and presented in a streamlined experience, helping your team apply the right rates consistently and reduce billing errors."
               },
               {
                 "feature": "Agreement Overage Templates",
                 "release": "Viking 1",
-                "status": "Dev Complete",
+                "status": "Staged for Release",
                 "detail": "Set up overage billing faster and with more confidence. Overage Templates streamline configuration by pre-populating common tier structures, improving how changes propagate, and adding history so your team can track updates over time and keep billing rules consistent."
               }
             ]
@@ -8560,7 +8712,7 @@
               {
                 "feature": "Dispatch board - support multiple boards",
                 "release": "Viking 1",
-                "status": "In Dev",
+                "status": "Dev Complete",
                 "detail": "Improve dispatch flexibility with multiple board views based on rep groups or ticket types, helping teams organize work and focus on the tickets most relevant to them."
               },
               {
@@ -8572,7 +8724,7 @@
               {
                 "feature": "Dispatch Board Rebuild",
                 "release": "Viking 1",
-                "status": "In Dev",
+                "status": "Dev Complete",
                 "detail": "Optimize dispatch operations with an enhanced dispatch board that uses rules and filters to surface tickets ready for assignment, supports direct ticket assignment, and improves date selection."
               }
             ]
@@ -8582,9 +8734,9 @@
     },
     {
       "label": "Closed Won",
-      "count": 28,
-      "amount": 18073,
-      "pct": 31.1,
+      "count": 31,
+      "amount": 21608,
+      "pct": 31.6,
       "opportunities": [
         {
           "id": "006PX00000dJXrRYAW",
@@ -8887,6 +9039,46 @@
           "vikingOneUnlock": null
         },
         {
+          "id": "006PX00000e2IjNYAU",
+          "name": "Telecom Unlimited",
+          "accountId": "0016O00003a9uJlQAI",
+          "account": "Telecom Unlimited",
+          "stage": "Closed Won",
+          "amount": 635,
+          "owner": "Ingrid Beard",
+          "nextStep": "7/28 docusign cosign",
+          "createdDate": "2026-07-28T13:04:41.000+0000",
+          "closeDate": "2026-07-28",
+          "isClosed": true,
+          "isWon": true,
+          "lossReason": "Unspecified",
+          "lossDetail": "",
+          "competitor": "",
+          "stageLoss": "",
+          "smc": "",
+          "vikingOneUnlock": null
+        },
+        {
+          "id": "006PX00000djzDlYAI",
+          "name": "Richmond- TP to PSA Web",
+          "accountId": "0016O00003dmuYMQAY",
+          "account": "Richmond Security",
+          "stage": "Closed Won",
+          "amount": 1680,
+          "owner": "Katerra Stephenson Greenwood",
+          "nextStep": "7/28 Cst has signed document, waiting on Rev.io signature",
+          "createdDate": "2026-07-21T13:40:16.000+0000",
+          "closeDate": "2026-07-28",
+          "isClosed": true,
+          "isWon": true,
+          "lossReason": "Unspecified",
+          "lossDetail": "",
+          "competitor": "",
+          "stageLoss": "",
+          "smc": "",
+          "vikingOneUnlock": null
+        },
+        {
           "id": "006PX00000dc5WVYAY",
           "name": "Omidi TP Migration",
           "accountId": "0016O00003dmuUjQAI",
@@ -8917,6 +9109,26 @@
           "nextStep": "schedule kickoff with KT",
           "createdDate": "2026-07-10T17:23:16.000+0000",
           "closeDate": "2026-07-10",
+          "isClosed": true,
+          "isWon": true,
+          "lossReason": "Unspecified",
+          "lossDetail": "",
+          "competitor": "",
+          "stageLoss": "",
+          "smc": "",
+          "vikingOneUnlock": null
+        },
+        {
+          "id": "006PX00000dDvlGYAS",
+          "name": "TRM - PSA Migration",
+          "accountId": "0016O00003dmua7QAA",
+          "account": "TRM",
+          "stage": "Closed Won",
+          "amount": 1220,
+          "owner": "Ingrid Beard",
+          "nextStep": "7/28 need countersignature",
+          "createdDate": "2026-07-08T16:09:23.000+0000",
+          "closeDate": "2026-07-28",
           "isClosed": true,
           "isWon": true,
           "lossReason": "Unspecified",
@@ -9152,9 +9364,58 @@
   "lossBreakdown": [
     {
       "label": "Software Missing Capabilities",
-      "count": 19,
-      "amount": 23259.410000000003,
+      "count": 20,
+      "amount": 24639.410000000003,
       "opportunities": [
+        {
+          "id": "006PX00000dBr2XYAS",
+          "name": "BCS Voice & Data - PSA Web Migration",
+          "accountId": "0016O00003dmuKdQAI",
+          "account": "BCS Voice and Data",
+          "stage": "Closed Lost",
+          "amount": 1380,
+          "owner": "Jakob Champion",
+          "nextStep": "8/4 Follow up to schedule pricing call",
+          "createdDate": "2026-07-07T20:19:24.000+0000",
+          "closeDate": "2026-07-30",
+          "isClosed": true,
+          "isWon": false,
+          "lossReason": "Software Missing Capabilities",
+          "lossDetail": "Need GL Code Detail in QBD Integration",
+          "competitor": "",
+          "stageLoss": "2 - Discovery Completed",
+          "smc": "",
+          "vikingOneUnlock": {
+            "status": "Yes",
+            "summary": "QuickBooks Desktop export and GL mapping work is in Viking 1.",
+            "matches": [
+              {
+                "feature": "QBD - Reliability + go/no-go",
+                "release": "Viking 1",
+                "status": "Available",
+                "detail": "Built-in sync status dashboard so you always know what transferred and what needs attention. The integration recovers gracefully from interruptions, so your data stays safe even if your connection drops."
+              },
+              {
+                "feature": "QBD - Customer + invoice sync",
+                "release": "Viking 1",
+                "status": "Available",
+                "detail": "Push customers and invoices from Rev.io directly into QuickBooks Desktop. Invoices land in the correct GL accounts with sales tax applied automatically. No copy-paste, no import files, no third-party tools."
+              },
+              {
+                "feature": "QBD - Read live QBD data",
+                "release": "Viking 1",
+                "status": "Available",
+                "detail": "Rev.io reads your QuickBooks chart of accounts and item list automatically. No manual exports, no file uploads, no stale data. Your QBD setup is always in sync."
+              },
+              {
+                "feature": "QBD - SOAP endpoint + Web Connector handshake",
+                "release": "Viking 1",
+                "status": "Available",
+                "detail": "Establish a secure, direct connection between Rev.io PSA and QuickBooks Desktop, enabling real-time communication between your cloud workspace and on-premises accounting software."
+              }
+            ]
+          }
+        },
         {
           "id": "006PX00000d0VbdYAE",
           "name": "Advanced Hospitality Web Migration",
@@ -9211,7 +9472,7 @@
               {
                 "feature": "Dispatch board - support multiple boards",
                 "release": "Viking 1",
-                "status": "In Dev",
+                "status": "Dev Complete",
                 "detail": "Improve dispatch flexibility with multiple board views based on rep groups or ticket types, helping teams organize work and focus on the tickets most relevant to them."
               },
               {
@@ -9223,7 +9484,7 @@
               {
                 "feature": "Dispatch Board Rebuild",
                 "release": "Viking 1",
-                "status": "In Dev",
+                "status": "Dev Complete",
                 "detail": "Optimize dispatch operations with an enhanced dispatch board that uses rules and filters to surface tickets ready for assignment, supports direct ticket assignment, and improves date selection."
               }
             ]
@@ -9285,25 +9546,25 @@
               {
                 "feature": "Add one-time charge component to agreement",
                 "release": "Viking 1",
-                "status": "In Dev",
+                "status": "Staged for Release",
                 "detail": "Add onetime charges to an agreement directly based on the product catalog. able to edit amount, cost, description, quantity. Not tied to a service. Charged when Agreement goes \"live\" -> directly to unposted. Re-charged on renewal?"
               },
               {
                 "feature": "Agreement List",
                 "release": "Viking 1",
-                "status": "Dev Complete",
+                "status": "Staged for Release",
                 "detail": "Manage customer agreements faster and with less effort. The Agreements List gives you a centralized, searchable view of all agreements—so you can quickly find what you need, track status, and keep agreement details organized for day-to-day operations."
               },
               {
                 "feature": "Agreement Time Entry Rates",
                 "release": "Viking 1",
-                "status": "Dev Complete",
+                "status": "Staged for Release",
                 "detail": "Make time billing clearer and easier to manage. The enhanced Time Entry Rates tab ensures agreement-specific rates are fully populated and presented in a streamlined experience, helping your team apply the right rates consistently and reduce billing errors."
               },
               {
                 "feature": "Agreement Overage Templates",
                 "release": "Viking 1",
-                "status": "Dev Complete",
+                "status": "Staged for Release",
                 "detail": "Set up overage billing faster and with more confidence. Overage Templates streamline configuration by pre-populating common tier structures, improving how changes propagate, and adding history so your team can track updates over time and keep billing rules consistent."
               }
             ]
@@ -9334,25 +9595,25 @@
               {
                 "feature": "QBD - Reliability + go/no-go",
                 "release": "Viking 1",
-                "status": "Dev Complete",
+                "status": "Available",
                 "detail": "Built-in sync status dashboard so you always know what transferred and what needs attention. The integration recovers gracefully from interruptions, so your data stays safe even if your connection drops."
               },
               {
                 "feature": "QBD - Customer + invoice sync",
                 "release": "Viking 1",
-                "status": "Dev Complete",
+                "status": "Available",
                 "detail": "Push customers and invoices from Rev.io directly into QuickBooks Desktop. Invoices land in the correct GL accounts with sales tax applied automatically. No copy-paste, no import files, no third-party tools."
               },
               {
                 "feature": "QBD - Read live QBD data",
                 "release": "Viking 1",
-                "status": "Dev Complete",
+                "status": "Available",
                 "detail": "Rev.io reads your QuickBooks chart of accounts and item list automatically. No manual exports, no file uploads, no stale data. Your QBD setup is always in sync."
               },
               {
                 "feature": "QBD - SOAP endpoint + Web Connector handshake",
                 "release": "Viking 1",
-                "status": "Dev Complete",
+                "status": "Available",
                 "detail": "Establish a secure, direct connection between Rev.io PSA and QuickBooks Desktop, enabling real-time communication between your cloud workspace and on-premises accounting software."
               }
             ]
@@ -9414,25 +9675,25 @@
               {
                 "feature": "QBD - Reliability + go/no-go",
                 "release": "Viking 1",
-                "status": "Dev Complete",
+                "status": "Available",
                 "detail": "Built-in sync status dashboard so you always know what transferred and what needs attention. The integration recovers gracefully from interruptions, so your data stays safe even if your connection drops."
               },
               {
                 "feature": "QBD - Customer + invoice sync",
                 "release": "Viking 1",
-                "status": "Dev Complete",
+                "status": "Available",
                 "detail": "Push customers and invoices from Rev.io directly into QuickBooks Desktop. Invoices land in the correct GL accounts with sales tax applied automatically. No copy-paste, no import files, no third-party tools."
               },
               {
                 "feature": "QBD - Read live QBD data",
                 "release": "Viking 1",
-                "status": "Dev Complete",
+                "status": "Available",
                 "detail": "Rev.io reads your QuickBooks chart of accounts and item list automatically. No manual exports, no file uploads, no stale data. Your QBD setup is always in sync."
               },
               {
                 "feature": "QBD - SOAP endpoint + Web Connector handshake",
                 "release": "Viking 1",
-                "status": "Dev Complete",
+                "status": "Available",
                 "detail": "Establish a secure, direct connection between Rev.io PSA and QuickBooks Desktop, enabling real-time communication between your cloud workspace and on-premises accounting software."
               }
             ]
@@ -9463,25 +9724,25 @@
               {
                 "feature": "QBD - Reliability + go/no-go",
                 "release": "Viking 1",
-                "status": "Dev Complete",
+                "status": "Available",
                 "detail": "Built-in sync status dashboard so you always know what transferred and what needs attention. The integration recovers gracefully from interruptions, so your data stays safe even if your connection drops."
               },
               {
                 "feature": "QBD - Customer + invoice sync",
                 "release": "Viking 1",
-                "status": "Dev Complete",
+                "status": "Available",
                 "detail": "Push customers and invoices from Rev.io directly into QuickBooks Desktop. Invoices land in the correct GL accounts with sales tax applied automatically. No copy-paste, no import files, no third-party tools."
               },
               {
                 "feature": "QBD - Read live QBD data",
                 "release": "Viking 1",
-                "status": "Dev Complete",
+                "status": "Available",
                 "detail": "Rev.io reads your QuickBooks chart of accounts and item list automatically. No manual exports, no file uploads, no stale data. Your QBD setup is always in sync."
               },
               {
                 "feature": "QBD - SOAP endpoint + Web Connector handshake",
                 "release": "Viking 1",
-                "status": "Dev Complete",
+                "status": "Available",
                 "detail": "Establish a secure, direct connection between Rev.io PSA and QuickBooks Desktop, enabling real-time communication between your cloud workspace and on-premises accounting software."
               }
             ]
@@ -9560,25 +9821,25 @@
               {
                 "feature": "QBD - Reliability + go/no-go",
                 "release": "Viking 1",
-                "status": "Dev Complete",
+                "status": "Available",
                 "detail": "Built-in sync status dashboard so you always know what transferred and what needs attention. The integration recovers gracefully from interruptions, so your data stays safe even if your connection drops."
               },
               {
                 "feature": "QBD - Customer + invoice sync",
                 "release": "Viking 1",
-                "status": "Dev Complete",
+                "status": "Available",
                 "detail": "Push customers and invoices from Rev.io directly into QuickBooks Desktop. Invoices land in the correct GL accounts with sales tax applied automatically. No copy-paste, no import files, no third-party tools."
               },
               {
                 "feature": "QBD - Read live QBD data",
                 "release": "Viking 1",
-                "status": "Dev Complete",
+                "status": "Available",
                 "detail": "Rev.io reads your QuickBooks chart of accounts and item list automatically. No manual exports, no file uploads, no stale data. Your QBD setup is always in sync."
               },
               {
                 "feature": "QBD - SOAP endpoint + Web Connector handshake",
                 "release": "Viking 1",
-                "status": "Dev Complete",
+                "status": "Available",
                 "detail": "Establish a secure, direct connection between Rev.io PSA and QuickBooks Desktop, enabling real-time communication between your cloud workspace and on-premises accounting software."
               }
             ]
@@ -9640,25 +9901,25 @@
               {
                 "feature": "QBD - Reliability + go/no-go",
                 "release": "Viking 1",
-                "status": "Dev Complete",
+                "status": "Available",
                 "detail": "Built-in sync status dashboard so you always know what transferred and what needs attention. The integration recovers gracefully from interruptions, so your data stays safe even if your connection drops."
               },
               {
                 "feature": "QBD - Customer + invoice sync",
                 "release": "Viking 1",
-                "status": "Dev Complete",
+                "status": "Available",
                 "detail": "Push customers and invoices from Rev.io directly into QuickBooks Desktop. Invoices land in the correct GL accounts with sales tax applied automatically. No copy-paste, no import files, no third-party tools."
               },
               {
                 "feature": "QBD - Read live QBD data",
                 "release": "Viking 1",
-                "status": "Dev Complete",
+                "status": "Available",
                 "detail": "Rev.io reads your QuickBooks chart of accounts and item list automatically. No manual exports, no file uploads, no stale data. Your QBD setup is always in sync."
               },
               {
                 "feature": "QBD - SOAP endpoint + Web Connector handshake",
                 "release": "Viking 1",
-                "status": "Dev Complete",
+                "status": "Available",
                 "detail": "Establish a secure, direct connection between Rev.io PSA and QuickBooks Desktop, enabling real-time communication between your cloud workspace and on-premises accounting software."
               }
             ]
@@ -9689,25 +9950,25 @@
               {
                 "feature": "QBD - Reliability + go/no-go",
                 "release": "Viking 1",
-                "status": "Dev Complete",
+                "status": "Available",
                 "detail": "Built-in sync status dashboard so you always know what transferred and what needs attention. The integration recovers gracefully from interruptions, so your data stays safe even if your connection drops."
               },
               {
                 "feature": "QBD - Customer + invoice sync",
                 "release": "Viking 1",
-                "status": "Dev Complete",
+                "status": "Available",
                 "detail": "Push customers and invoices from Rev.io directly into QuickBooks Desktop. Invoices land in the correct GL accounts with sales tax applied automatically. No copy-paste, no import files, no third-party tools."
               },
               {
                 "feature": "QBD - Read live QBD data",
                 "release": "Viking 1",
-                "status": "Dev Complete",
+                "status": "Available",
                 "detail": "Rev.io reads your QuickBooks chart of accounts and item list automatically. No manual exports, no file uploads, no stale data. Your QBD setup is always in sync."
               },
               {
                 "feature": "QBD - SOAP endpoint + Web Connector handshake",
                 "release": "Viking 1",
-                "status": "Dev Complete",
+                "status": "Available",
                 "detail": "Establish a secure, direct connection between Rev.io PSA and QuickBooks Desktop, enabling real-time communication between your cloud workspace and on-premises accounting software."
               }
             ]
@@ -9738,25 +9999,25 @@
               {
                 "feature": "Add one-time charge component to agreement",
                 "release": "Viking 1",
-                "status": "In Dev",
+                "status": "Staged for Release",
                 "detail": "Add onetime charges to an agreement directly based on the product catalog. able to edit amount, cost, description, quantity. Not tied to a service. Charged when Agreement goes \"live\" -> directly to unposted. Re-charged on renewal?"
               },
               {
                 "feature": "Agreement List",
                 "release": "Viking 1",
-                "status": "Dev Complete",
+                "status": "Staged for Release",
                 "detail": "Manage customer agreements faster and with less effort. The Agreements List gives you a centralized, searchable view of all agreements—so you can quickly find what you need, track status, and keep agreement details organized for day-to-day operations."
               },
               {
                 "feature": "Agreement Time Entry Rates",
                 "release": "Viking 1",
-                "status": "Dev Complete",
+                "status": "Staged for Release",
                 "detail": "Make time billing clearer and easier to manage. The enhanced Time Entry Rates tab ensures agreement-specific rates are fully populated and presented in a streamlined experience, helping your team apply the right rates consistently and reduce billing errors."
               },
               {
                 "feature": "Agreement Overage Templates",
                 "release": "Viking 1",
-                "status": "Dev Complete",
+                "status": "Staged for Release",
                 "detail": "Set up overage billing faster and with more confidence. Overage Templates streamline configuration by pre-populating common tier structures, improving how changes propagate, and adding history so your team can track updates over time and keep billing rules consistent."
               }
             ]
@@ -9866,7 +10127,7 @@
               {
                 "feature": "Dispatch board - support multiple boards",
                 "release": "Viking 1",
-                "status": "In Dev",
+                "status": "Dev Complete",
                 "detail": "Improve dispatch flexibility with multiple board views based on rep groups or ticket types, helping teams organize work and focus on the tickets most relevant to them."
               },
               {
@@ -9878,7 +10139,7 @@
               {
                 "feature": "Dispatch Board Rebuild",
                 "release": "Viking 1",
-                "status": "In Dev",
+                "status": "Dev Complete",
                 "detail": "Optimize dispatch operations with an enhanced dispatch board that uses rules and filters to surface tickets ready for assignment, supports direct ticket assignment, and improves date selection."
               }
             ]
@@ -9888,8 +10149,8 @@
     },
     {
       "label": "Not the Right Time",
-      "count": 8,
-      "amount": 12316.73,
+      "count": 9,
+      "amount": 14057.05,
       "opportunities": [
         {
           "id": "006PX00000czqa5YAA",
@@ -9913,6 +10174,49 @@
             "status": "No",
             "summary": "Loss reason is timing, engagement, or duplicate rather than a Viking 1 feature blocker.",
             "matches": []
+          }
+        },
+        {
+          "id": "006PX00000ctLAnYAM",
+          "name": "All-Mode Communications Inc Web Migration",
+          "accountId": "0011C00002jC8JtQAK",
+          "account": "All-Mode Communications Inc",
+          "stage": "Closed Lost",
+          "amount": 1740.32,
+          "owner": "Sarah McGovern",
+          "nextStep": "7/28: Client emailed on 7/27 stating they do not have time for their team to do a test drive and want to back-burner until the Spring.",
+          "createdDate": "2026-06-30T11:29:34.000+0000",
+          "closeDate": "2026-07-27",
+          "isClosed": true,
+          "isWon": false,
+          "lossReason": "Not the Right Time",
+          "lossDetail": "Per Ben: \"We do not currently have time in the staff schedules for anyone to do more of a test-drive than this so I think we are going to end up back-burnering the move until at least the spring.\"  They provided feedback on the following: System Speed, Product Catalog, Service Orders / Tickets, Dispatch Board, PW Vault, and Knowledge Base.  Meeting on 7/28 to discuss further.",
+          "competitor": "",
+          "stageLoss": "4 - Proposal Sent",
+          "smc": "",
+          "vikingOneUnlock": {
+            "status": "Partial",
+            "summary": "Dispatch and payroll-adjacent QBD time export work is in Viking 1; pricing rules are not a clear match.",
+            "matches": [
+              {
+                "feature": "Dispatch board - support multiple boards",
+                "release": "Viking 1",
+                "status": "Dev Complete",
+                "detail": "Improve dispatch flexibility with multiple board views based on rep groups or ticket types, helping teams organize work and focus on the tickets most relevant to them."
+              },
+              {
+                "feature": "Add user work hours and time off",
+                "release": "Viking 1",
+                "status": "Available",
+                "detail": "Give dispatchers a clearer view of employee availability by displaying work hours and time off directly on the calendar and dispatch board. With scheduling information visible where work is assigned, teams can make informed dispatch decisions and avoid conflicts before they happen"
+              },
+              {
+                "feature": "Dispatch Board Rebuild",
+                "release": "Viking 1",
+                "status": "Dev Complete",
+                "detail": "Optimize dispatch operations with an enhanced dispatch board that uses rules and filters to surface tickets ready for assignment, supports direct ticket assignment, and improves date selection."
+              }
+            ]
           }
         },
         {
@@ -10249,25 +10553,25 @@
               {
                 "feature": "QBD - Reliability + go/no-go",
                 "release": "Viking 1",
-                "status": "Dev Complete",
+                "status": "Available",
                 "detail": "Built-in sync status dashboard so you always know what transferred and what needs attention. The integration recovers gracefully from interruptions, so your data stays safe even if your connection drops."
               },
               {
                 "feature": "QBD - Customer + invoice sync",
                 "release": "Viking 1",
-                "status": "Dev Complete",
+                "status": "Available",
                 "detail": "Push customers and invoices from Rev.io directly into QuickBooks Desktop. Invoices land in the correct GL accounts with sales tax applied automatically. No copy-paste, no import files, no third-party tools."
               },
               {
                 "feature": "QBD - Read live QBD data",
                 "release": "Viking 1",
-                "status": "Dev Complete",
+                "status": "Available",
                 "detail": "Rev.io reads your QuickBooks chart of accounts and item list automatically. No manual exports, no file uploads, no stale data. Your QBD setup is always in sync."
               },
               {
                 "feature": "QBD - SOAP endpoint + Web Connector handshake",
                 "release": "Viking 1",
-                "status": "Dev Complete",
+                "status": "Available",
                 "detail": "Establish a secure, direct connection between Rev.io PSA and QuickBooks Desktop, enabling real-time communication between your cloud workspace and on-premises accounting software."
               }
             ]
@@ -11752,6 +12056,17 @@
       "psaWeb": false
     },
     {
+      "id": "0016O00003dmuLdQAI",
+      "name": "Communication Technologies, Inc.",
+      "type": "Rev.io PSA Client",
+      "webMigrationStatus": "Unknown",
+      "webMigrationDetails": "",
+      "accountStatus": "Active - Tigerpaw One",
+      "owner": "Blaine Villafuerte",
+      "vertical": "",
+      "psaWeb": false
+    },
+    {
       "id": "0016O00003dmuLcQAI",
       "name": "Communications Diversified",
       "type": "Tigerpaw Churn",
@@ -11759,17 +12074,6 @@
       "webMigrationDetails": "",
       "accountStatus": "Active - Unleashed",
       "owner": "Gavin Aylward",
-      "vertical": "",
-      "psaWeb": false
-    },
-    {
-      "id": "0016O00003dmuLdQAI",
-      "name": "Communications Technologies",
-      "type": "Rev.io PSA Client",
-      "webMigrationStatus": "Unknown",
-      "webMigrationDetails": "",
-      "accountStatus": "Active - Tigerpaw One",
-      "owner": "Blaine Villafuerte",
       "vertical": "",
       "psaWeb": false
     },
@@ -11886,7 +12190,7 @@
     {
       "id": "0016O00003dmuLmQAI",
       "name": "Comtel, S.A.",
-      "type": "TigerPaw Client",
+      "type": "Tigerpaw Churn",
       "webMigrationStatus": "Inactive",
       "webMigrationDetails": "Collections",
       "accountStatus": "Active - Tigerpaw One",
@@ -12645,7 +12949,7 @@
     {
       "id": "0016O000035WCFlQAO",
       "name": "ET&T Corporation",
-      "type": "Tigerpaw Churn",
+      "type": "Client",
       "webMigrationStatus": "Unknown",
       "webMigrationDetails": "",
       "accountStatus": "Active - Tigerpaw One",
@@ -14484,7 +14788,7 @@
       "name": "MPS Works",
       "type": "TigerPaw Client",
       "webMigrationStatus": "Want to migrate asap",
-      "webMigrationDetails": "Wants to migrate but waiting on Managed Print Services feature to be available before they can migrate.",
+      "webMigrationDetails": "Wants to migrate but waiting on Managed Print Services feature to be available.  Working through determining a workaround - awaiting testing from CLSams Importer workaround.",
       "accountStatus": "Active - Tigerpaw One",
       "owner": "Blaine Villafuerte",
       "vertical": "",
@@ -15489,7 +15793,7 @@
       "accountStatus": "Active - Tigerpaw One",
       "owner": "Blaine Villafuerte",
       "vertical": "",
-      "psaWeb": false
+      "psaWeb": true
     },
     {
       "id": "0016O00003ebbEGQAY",
@@ -17078,6 +17382,66 @@
   ],
   "opportunities": [
     {
+      "id": "006PX00000e9Mv7YAE",
+      "name": "BTI Communications Group - Web Migration",
+      "accountId": "0011500001HNPjcAAH",
+      "account": "BTI Communications Group",
+      "stage": "1- Discovery Scheduled",
+      "amount": 2210,
+      "owner": "Justin Lee",
+      "nextStep": "8/3 - PSA demo scheduled with Dave",
+      "createdDate": "2026-07-30T17:01:53.000+0000",
+      "closeDate": "2026-08-31",
+      "isClosed": false,
+      "isWon": false,
+      "lossReason": "Unspecified",
+      "lossDetail": "",
+      "competitor": "",
+      "stageLoss": "",
+      "smc": "",
+      "vikingOneUnlock": null
+    },
+    {
+      "id": "006PX00000e6fO1YAI",
+      "name": "E & H Integrated Systems - Web Migration",
+      "accountId": "0016O00003dmuOwQAI",
+      "account": "E & H Integrated Systems",
+      "stage": "1- Discovery Scheduled",
+      "amount": 1100,
+      "owner": "Justin Lee",
+      "nextStep": "8/4 - PSA demo scheduled with Rudy",
+      "createdDate": "2026-07-29T19:18:36.000+0000",
+      "closeDate": "2026-08-31",
+      "isClosed": false,
+      "isWon": false,
+      "lossReason": "Unspecified",
+      "lossDetail": "",
+      "competitor": "",
+      "stageLoss": "",
+      "smc": "",
+      "vikingOneUnlock": null
+    },
+    {
+      "id": "006PX00000e2AdnYAE",
+      "name": "American Business Phones - Tigerpaw Migration",
+      "accountId": "0016O00003dmuJzQAI",
+      "account": "American Business Phones",
+      "stage": "2 - Discovery Completed",
+      "amount": 902,
+      "owner": "Jakob Champion",
+      "nextStep": "8/11 Follow up call to confirm pricing is fine",
+      "createdDate": "2026-07-28T13:59:02.000+0000",
+      "closeDate": "2026-08-31",
+      "isClosed": false,
+      "isWon": false,
+      "lossReason": "Unspecified",
+      "lossDetail": "",
+      "competitor": "",
+      "stageLoss": "",
+      "smc": "",
+      "vikingOneUnlock": null
+    },
+    {
       "id": "006PX00000dW6ztYAC",
       "name": "Beacon - PSA Migration",
       "accountId": "0016O00003dmuKeQAI",
@@ -17085,9 +17449,9 @@
       "stage": "3 - Initial Product Demo",
       "amount": 1337,
       "owner": "Ingrid Beard",
-      "nextStep": "7/23 follow up on post demo internal meeting",
+      "nextStep": "8/6 Deep Dive with Tony",
       "createdDate": "2026-07-15T18:15:23.000+0000",
-      "closeDate": "2026-07-31",
+      "closeDate": "2026-08-31",
       "isClosed": false,
       "isWon": false,
       "lossReason": "Unspecified",
@@ -17142,10 +17506,10 @@
       "name": "Carrier SI - PSA Migration",
       "accountId": "001PX00000Ad0yoYAB",
       "account": "Carrier SI",
-      "stage": "2 - Discovery Completed",
+      "stage": "4 - Proposal Sent",
       "amount": 790,
       "owner": "Ingrid Beard",
-      "nextStep": "7/27 Deep dive demo with Tony, need for technical answers",
+      "nextStep": "7/30 schedule quote review",
       "createdDate": "2026-07-08T18:35:58.000+0000",
       "closeDate": "2026-08-31",
       "isClosed": false,
@@ -17162,20 +17526,49 @@
       "name": "BCS Voice & Data - PSA Web Migration",
       "accountId": "0016O00003dmuKdQAI",
       "account": "BCS Voice and Data",
-      "stage": "2 - Discovery Completed",
+      "stage": "Closed Lost",
       "amount": 1380,
       "owner": "Jakob Champion",
-      "nextStep": "7/24 Follow up Demo with Tony to discuss Inventory management in PSA.",
+      "nextStep": "8/4 Follow up to schedule pricing call",
       "createdDate": "2026-07-07T20:19:24.000+0000",
-      "closeDate": "2026-07-31",
-      "isClosed": false,
+      "closeDate": "2026-07-30",
+      "isClosed": true,
       "isWon": false,
-      "lossReason": "Unspecified",
-      "lossDetail": "",
+      "lossReason": "Software Missing Capabilities",
+      "lossDetail": "Need GL Code Detail in QBD Integration",
       "competitor": "",
-      "stageLoss": "",
+      "stageLoss": "2 - Discovery Completed",
       "smc": "",
-      "vikingOneUnlock": null
+      "vikingOneUnlock": {
+        "status": "Yes",
+        "summary": "QuickBooks Desktop export and GL mapping work is in Viking 1.",
+        "matches": [
+          {
+            "feature": "QBD - Reliability + go/no-go",
+            "release": "Viking 1",
+            "status": "Available",
+            "detail": "Built-in sync status dashboard so you always know what transferred and what needs attention. The integration recovers gracefully from interruptions, so your data stays safe even if your connection drops."
+          },
+          {
+            "feature": "QBD - Customer + invoice sync",
+            "release": "Viking 1",
+            "status": "Available",
+            "detail": "Push customers and invoices from Rev.io directly into QuickBooks Desktop. Invoices land in the correct GL accounts with sales tax applied automatically. No copy-paste, no import files, no third-party tools."
+          },
+          {
+            "feature": "QBD - Read live QBD data",
+            "release": "Viking 1",
+            "status": "Available",
+            "detail": "Rev.io reads your QuickBooks chart of accounts and item list automatically. No manual exports, no file uploads, no stale data. Your QBD setup is always in sync."
+          },
+          {
+            "feature": "QBD - SOAP endpoint + Web Connector handshake",
+            "release": "Viking 1",
+            "status": "Available",
+            "detail": "Establish a secure, direct connection between Rev.io PSA and QuickBooks Desktop, enabling real-time communication between your cloud workspace and on-premises accounting software."
+          }
+        ]
+      }
     },
     {
       "id": "006PX00000dAaQLYA0",
@@ -17185,9 +17578,9 @@
       "stage": "5 - Product / Contract Validated",
       "amount": 2182,
       "owner": "Jacob Williams",
-      "nextStep": "Client saw demo, schedule a discovery call for 7/22 to look into current platform functionality.",
+      "nextStep": "Client was unable to attend demo, rescheduling for week of August 10th.",
       "createdDate": "2026-07-07T13:44:03.000+0000",
-      "closeDate": "2026-07-31",
+      "closeDate": "2026-08-31",
       "isClosed": false,
       "isWon": false,
       "lossReason": "Unspecified",
@@ -17202,12 +17595,12 @@
       "name": "CRC - TP Migration",
       "accountId": "0016O00003dmucxQAA",
       "account": "CRC Communications Limited",
-      "stage": "2 - Discovery Completed",
+      "stage": "3 - Initial Product Demo",
       "amount": 1327,
       "owner": "Ingrid Beard",
-      "nextStep": "follow up 7/23 to confirm update demo time",
+      "nextStep": "8/3 follow up if no deep dive time was chosen",
       "createdDate": "2026-07-06T22:00:26.000+0000",
-      "closeDate": "2026-07-31",
+      "closeDate": "2026-08-31",
       "isClosed": false,
       "isWon": false,
       "lossReason": "Unspecified",
@@ -17225,9 +17618,9 @@
       "stage": "2 - Discovery Completed",
       "amount": 954,
       "owner": "Ingrid Beard",
-      "nextStep": "7/23 continue to reschedule demo",
+      "nextStep": "7/30 confirm license count and schedule additional demo",
       "createdDate": "2026-07-02T18:11:58.000+0000",
-      "closeDate": "2026-07-31",
+      "closeDate": "2026-08-31",
       "isClosed": false,
       "isWon": false,
       "lossReason": "Unspecified",
@@ -17297,20 +17690,43 @@
       "name": "All-Mode Communications Inc Web Migration",
       "accountId": "0011C00002jC8JtQAK",
       "account": "All-Mode Communications Inc",
-      "stage": "4 - Proposal Sent",
+      "stage": "Closed Lost",
       "amount": 1740.32,
       "owner": "Sarah McGovern",
-      "nextStep": "7/28: Follow up call scheduled for this afternoon to discuss demo access and questions on additional functionality.",
+      "nextStep": "7/28: Client emailed on 7/27 stating they do not have time for their team to do a test drive and want to back-burner until the Spring.",
       "createdDate": "2026-06-30T11:29:34.000+0000",
-      "closeDate": "2026-07-31",
-      "isClosed": false,
+      "closeDate": "2026-07-27",
+      "isClosed": true,
       "isWon": false,
-      "lossReason": "Unspecified",
-      "lossDetail": "",
+      "lossReason": "Not the Right Time",
+      "lossDetail": "Per Ben: \"We do not currently have time in the staff schedules for anyone to do more of a test-drive than this so I think we are going to end up back-burnering the move until at least the spring.\"  They provided feedback on the following: System Speed, Product Catalog, Service Orders / Tickets, Dispatch Board, PW Vault, and Knowledge Base.  Meeting on 7/28 to discuss further.",
       "competitor": "",
-      "stageLoss": "",
+      "stageLoss": "4 - Proposal Sent",
       "smc": "",
-      "vikingOneUnlock": null
+      "vikingOneUnlock": {
+        "status": "Partial",
+        "summary": "Dispatch and payroll-adjacent QBD time export work is in Viking 1; pricing rules are not a clear match.",
+        "matches": [
+          {
+            "feature": "Dispatch board - support multiple boards",
+            "release": "Viking 1",
+            "status": "Dev Complete",
+            "detail": "Improve dispatch flexibility with multiple board views based on rep groups or ticket types, helping teams organize work and focus on the tickets most relevant to them."
+          },
+          {
+            "feature": "Add user work hours and time off",
+            "release": "Viking 1",
+            "status": "Available",
+            "detail": "Give dispatchers a clearer view of employee availability by displaying work hours and time off directly on the calendar and dispatch board. With scheduling information visible where work is assigned, teams can make informed dispatch decisions and avoid conflicts before they happen"
+          },
+          {
+            "feature": "Dispatch Board Rebuild",
+            "release": "Viking 1",
+            "status": "Dev Complete",
+            "detail": "Optimize dispatch operations with an enhanced dispatch board that uses rules and filters to surface tickets ready for assignment, supports direct ticket assignment, and improves date selection."
+          }
+        ]
+      }
     },
     {
       "id": "006PX00000cqAdJYAU",
@@ -17337,7 +17753,7 @@
           {
             "feature": "Dispatch board - support multiple boards",
             "release": "Viking 1",
-            "status": "In Dev",
+            "status": "Dev Complete",
             "detail": "Improve dispatch flexibility with multiple board views based on rep groups or ticket types, helping teams organize work and focus on the tickets most relevant to them."
           },
           {
@@ -17349,7 +17765,7 @@
           {
             "feature": "Dispatch Board Rebuild",
             "release": "Viking 1",
-            "status": "In Dev",
+            "status": "Dev Complete",
             "detail": "Optimize dispatch operations with an enhanced dispatch board that uses rules and filters to surface tickets ready for assignment, supports direct ticket assignment, and improves date selection."
           }
         ]
@@ -17383,9 +17799,9 @@
       "stage": "5 - Product / Contract Validated",
       "amount": 1825,
       "owner": "Ingrid Beard",
-      "nextStep": "follow up on 7/23 follow up on implementation questions",
+      "nextStep": "7/30 connect and follow up with Mike verify if any questions stopping him from signing the docusign",
       "createdDate": "2026-06-11T21:58:03.000+0000",
-      "closeDate": "2026-07-31",
+      "closeDate": "2026-08-31",
       "isClosed": false,
       "isWon": false,
       "lossReason": "Unspecified",
@@ -17451,25 +17867,25 @@
           {
             "feature": "Add one-time charge component to agreement",
             "release": "Viking 1",
-            "status": "In Dev",
+            "status": "Staged for Release",
             "detail": "Add onetime charges to an agreement directly based on the product catalog. able to edit amount, cost, description, quantity. Not tied to a service. Charged when Agreement goes \"live\" -> directly to unposted. Re-charged on renewal?"
           },
           {
             "feature": "Agreement List",
             "release": "Viking 1",
-            "status": "Dev Complete",
+            "status": "Staged for Release",
             "detail": "Manage customer agreements faster and with less effort. The Agreements List gives you a centralized, searchable view of all agreements—so you can quickly find what you need, track status, and keep agreement details organized for day-to-day operations."
           },
           {
             "feature": "Agreement Time Entry Rates",
             "release": "Viking 1",
-            "status": "Dev Complete",
+            "status": "Staged for Release",
             "detail": "Make time billing clearer and easier to manage. The enhanced Time Entry Rates tab ensures agreement-specific rates are fully populated and presented in a streamlined experience, helping your team apply the right rates consistently and reduce billing errors."
           },
           {
             "feature": "Agreement Overage Templates",
             "release": "Viking 1",
-            "status": "Dev Complete",
+            "status": "Staged for Release",
             "detail": "Set up overage billing faster and with more confidence. Overage Templates streamline configuration by pre-populating common tier structures, improving how changes propagate, and adding history so your team can track updates over time and keep billing rules consistent."
           }
         ]
@@ -17524,25 +17940,25 @@
           {
             "feature": "QBD - Reliability + go/no-go",
             "release": "Viking 1",
-            "status": "Dev Complete",
+            "status": "Available",
             "detail": "Built-in sync status dashboard so you always know what transferred and what needs attention. The integration recovers gracefully from interruptions, so your data stays safe even if your connection drops."
           },
           {
             "feature": "QBD - Customer + invoice sync",
             "release": "Viking 1",
-            "status": "Dev Complete",
+            "status": "Available",
             "detail": "Push customers and invoices from Rev.io directly into QuickBooks Desktop. Invoices land in the correct GL accounts with sales tax applied automatically. No copy-paste, no import files, no third-party tools."
           },
           {
             "feature": "QBD - Read live QBD data",
             "release": "Viking 1",
-            "status": "Dev Complete",
+            "status": "Available",
             "detail": "Rev.io reads your QuickBooks chart of accounts and item list automatically. No manual exports, no file uploads, no stale data. Your QBD setup is always in sync."
           },
           {
             "feature": "QBD - SOAP endpoint + Web Connector handshake",
             "release": "Viking 1",
-            "status": "Dev Complete",
+            "status": "Available",
             "detail": "Establish a secure, direct connection between Rev.io PSA and QuickBooks Desktop, enabling real-time communication between your cloud workspace and on-premises accounting software."
           }
         ]
@@ -17553,12 +17969,12 @@
       "name": "Chortek/RCH - PSA Migration",
       "accountId": "0016O00003dmuViQAI",
       "account": "Chortek",
-      "stage": "3 - Initial Product Demo",
+      "stage": "4 - Proposal Sent",
       "amount": 1240,
       "owner": "Ingrid Beard",
-      "nextStep": "7/23 follow up in Hubspot and set follow up meeting",
+      "nextStep": "8/4 follow up and confirm reference conversation",
       "createdDate": "2026-05-21T17:16:24.000+0000",
-      "closeDate": "2026-07-31",
+      "closeDate": "2026-08-31",
       "isClosed": false,
       "isWon": false,
       "lossReason": "Unspecified",
@@ -17740,14 +18156,34 @@
       "vikingOneUnlock": null
     },
     {
+      "id": "006PX00000e2SnaYAE",
+      "name": "Network Datacom Solutions - TP Migration",
+      "accountId": "0016O00003dmuUVQAY",
+      "account": "Network Datacom Solutions",
+      "stage": "2 - Discovery Completed",
+      "amount": 1345,
+      "owner": "Jakob Champion",
+      "nextStep": "8/3 Follow up meeting to discuss quote & additional questions",
+      "createdDate": "2026-07-28T15:26:35.000+0000",
+      "closeDate": "2026-08-31",
+      "isClosed": false,
+      "isWon": false,
+      "lossReason": "Unspecified",
+      "lossDetail": "",
+      "competitor": "",
+      "stageLoss": "",
+      "smc": "",
+      "vikingOneUnlock": null
+    },
+    {
       "id": "006PX00000dhQaHYAU",
       "name": "MPS Works - Web Migration",
       "accountId": "0016O00003dmuUMQAY",
       "account": "MPS Works",
-      "stage": "2 - Discovery Completed",
+      "stage": "3 - Initial Product Demo",
       "amount": 474,
       "owner": "Sarah McGovern",
-      "nextStep": "7/28: Client waiting on Managed Print functionality.  Working with CLSams on a workaround that may work for MPS Works. Meeting scheduled for 7/30 to review.",
+      "nextStep": "8/6 - Demo scheduled for 8/6 with Tony to review system and dig into managed print workaround/print meter billing/contract review and discuss payments.",
       "createdDate": "2026-07-20T17:12:02.000+0000",
       "closeDate": "2026-08-31",
       "isClosed": false,
@@ -17784,25 +18220,25 @@
           {
             "feature": "QBD - Reliability + go/no-go",
             "release": "Viking 1",
-            "status": "Dev Complete",
+            "status": "Available",
             "detail": "Built-in sync status dashboard so you always know what transferred and what needs attention. The integration recovers gracefully from interruptions, so your data stays safe even if your connection drops."
           },
           {
             "feature": "QBD - Customer + invoice sync",
             "release": "Viking 1",
-            "status": "Dev Complete",
+            "status": "Available",
             "detail": "Push customers and invoices from Rev.io directly into QuickBooks Desktop. Invoices land in the correct GL accounts with sales tax applied automatically. No copy-paste, no import files, no third-party tools."
           },
           {
             "feature": "QBD - Read live QBD data",
             "release": "Viking 1",
-            "status": "Dev Complete",
+            "status": "Available",
             "detail": "Rev.io reads your QuickBooks chart of accounts and item list automatically. No manual exports, no file uploads, no stale data. Your QBD setup is always in sync."
           },
           {
             "feature": "QBD - SOAP endpoint + Web Connector handshake",
             "release": "Viking 1",
-            "status": "Dev Complete",
+            "status": "Available",
             "detail": "Establish a secure, direct connection between Rev.io PSA and QuickBooks Desktop, enabling real-time communication between your cloud workspace and on-premises accounting software."
           }
         ]
@@ -17816,7 +18252,7 @@
       "stage": "2 - Discovery Completed",
       "amount": 711,
       "owner": "Ingrid Beard",
-      "nextStep": "7/23 call Dorothye to schedule a time to review answers to her questions",
+      "nextStep": "7/30 follow up with integration answers",
       "createdDate": "2026-07-13T19:20:59.000+0000",
       "closeDate": "2026-08-31",
       "isClosed": false,
@@ -17856,9 +18292,9 @@
       "stage": "2 - Discovery Completed",
       "amount": 866.7,
       "owner": "Ryan Burton",
-      "nextStep": "Reach back out on 7/23: Josh is helping his oldest daughter move and is out this week. Also, checking on the company buying his billing portion of the business and seeing if that will effect PSA migration timeline.",
+      "nextStep": "Connecting Josh with CCR to conduct a traffic study to get his FUSF taxes in order. Getting more answers for Josh around some of the Quickbooks integration questions. Once both items are checked then he should be ready to migrate.",
       "createdDate": "2026-07-06T17:09:54.000+0000",
-      "closeDate": "2026-07-31",
+      "closeDate": "2026-08-31",
       "isClosed": false,
       "isWon": false,
       "lossReason": "Unspecified",
@@ -17893,25 +18329,25 @@
           {
             "feature": "QBD - Reliability + go/no-go",
             "release": "Viking 1",
-            "status": "Dev Complete",
+            "status": "Available",
             "detail": "Built-in sync status dashboard so you always know what transferred and what needs attention. The integration recovers gracefully from interruptions, so your data stays safe even if your connection drops."
           },
           {
             "feature": "QBD - Customer + invoice sync",
             "release": "Viking 1",
-            "status": "Dev Complete",
+            "status": "Available",
             "detail": "Push customers and invoices from Rev.io directly into QuickBooks Desktop. Invoices land in the correct GL accounts with sales tax applied automatically. No copy-paste, no import files, no third-party tools."
           },
           {
             "feature": "QBD - Read live QBD data",
             "release": "Viking 1",
-            "status": "Dev Complete",
+            "status": "Available",
             "detail": "Rev.io reads your QuickBooks chart of accounts and item list automatically. No manual exports, no file uploads, no stale data. Your QBD setup is always in sync."
           },
           {
             "feature": "QBD - SOAP endpoint + Web Connector handshake",
             "release": "Viking 1",
-            "status": "Dev Complete",
+            "status": "Available",
             "detail": "Establish a secure, direct connection between Rev.io PSA and QuickBooks Desktop, enabling real-time communication between your cloud workspace and on-premises accounting software."
           }
         ]
@@ -18002,25 +18438,25 @@
           {
             "feature": "QBD - Reliability + go/no-go",
             "release": "Viking 1",
-            "status": "Dev Complete",
+            "status": "Available",
             "detail": "Built-in sync status dashboard so you always know what transferred and what needs attention. The integration recovers gracefully from interruptions, so your data stays safe even if your connection drops."
           },
           {
             "feature": "QBD - Customer + invoice sync",
             "release": "Viking 1",
-            "status": "Dev Complete",
+            "status": "Available",
             "detail": "Push customers and invoices from Rev.io directly into QuickBooks Desktop. Invoices land in the correct GL accounts with sales tax applied automatically. No copy-paste, no import files, no third-party tools."
           },
           {
             "feature": "QBD - Read live QBD data",
             "release": "Viking 1",
-            "status": "Dev Complete",
+            "status": "Available",
             "detail": "Rev.io reads your QuickBooks chart of accounts and item list automatically. No manual exports, no file uploads, no stale data. Your QBD setup is always in sync."
           },
           {
             "feature": "QBD - SOAP endpoint + Web Connector handshake",
             "release": "Viking 1",
-            "status": "Dev Complete",
+            "status": "Available",
             "detail": "Establish a secure, direct connection between Rev.io PSA and QuickBooks Desktop, enabling real-time communication between your cloud workspace and on-premises accounting software."
           }
         ]
@@ -18054,9 +18490,9 @@
       "stage": "6 - Verbal Commit",
       "amount": 1870,
       "owner": "Justin Lee",
-      "nextStep": "7/24: Traveling to the cape on PTO, but will look at contract when he gets to his hotel room - Get app signed before Monday",
+      "nextStep": "Emailed on 7/30 - Connect with Mark & get app signed before EOW (8/7)",
       "createdDate": "2026-06-02T19:18:31.000+0000",
-      "closeDate": "2026-07-27",
+      "closeDate": "2026-08-31",
       "isClosed": false,
       "isWon": false,
       "lossReason": "Unspecified",
@@ -18183,25 +18619,25 @@
           {
             "feature": "QBD - Reliability + go/no-go",
             "release": "Viking 1",
-            "status": "Dev Complete",
+            "status": "Available",
             "detail": "Built-in sync status dashboard so you always know what transferred and what needs attention. The integration recovers gracefully from interruptions, so your data stays safe even if your connection drops."
           },
           {
             "feature": "QBD - Customer + invoice sync",
             "release": "Viking 1",
-            "status": "Dev Complete",
+            "status": "Available",
             "detail": "Push customers and invoices from Rev.io directly into QuickBooks Desktop. Invoices land in the correct GL accounts with sales tax applied automatically. No copy-paste, no import files, no third-party tools."
           },
           {
             "feature": "QBD - Read live QBD data",
             "release": "Viking 1",
-            "status": "Dev Complete",
+            "status": "Available",
             "detail": "Rev.io reads your QuickBooks chart of accounts and item list automatically. No manual exports, no file uploads, no stale data. Your QBD setup is always in sync."
           },
           {
             "feature": "QBD - SOAP endpoint + Web Connector handshake",
             "release": "Viking 1",
-            "status": "Dev Complete",
+            "status": "Available",
             "detail": "Establish a secure, direct connection between Rev.io PSA and QuickBooks Desktop, enabling real-time communication between your cloud workspace and on-premises accounting software."
           }
         ]
@@ -18263,25 +18699,25 @@
           {
             "feature": "QBD - Reliability + go/no-go",
             "release": "Viking 1",
-            "status": "Dev Complete",
+            "status": "Available",
             "detail": "Built-in sync status dashboard so you always know what transferred and what needs attention. The integration recovers gracefully from interruptions, so your data stays safe even if your connection drops."
           },
           {
             "feature": "QBD - Customer + invoice sync",
             "release": "Viking 1",
-            "status": "Dev Complete",
+            "status": "Available",
             "detail": "Push customers and invoices from Rev.io directly into QuickBooks Desktop. Invoices land in the correct GL accounts with sales tax applied automatically. No copy-paste, no import files, no third-party tools."
           },
           {
             "feature": "QBD - Read live QBD data",
             "release": "Viking 1",
-            "status": "Dev Complete",
+            "status": "Available",
             "detail": "Rev.io reads your QuickBooks chart of accounts and item list automatically. No manual exports, no file uploads, no stale data. Your QBD setup is always in sync."
           },
           {
             "feature": "QBD - SOAP endpoint + Web Connector handshake",
             "release": "Viking 1",
-            "status": "Dev Complete",
+            "status": "Available",
             "detail": "Establish a secure, direct connection between Rev.io PSA and QuickBooks Desktop, enabling real-time communication between your cloud workspace and on-premises accounting software."
           }
         ]
@@ -18312,25 +18748,25 @@
           {
             "feature": "QBD - Reliability + go/no-go",
             "release": "Viking 1",
-            "status": "Dev Complete",
+            "status": "Available",
             "detail": "Built-in sync status dashboard so you always know what transferred and what needs attention. The integration recovers gracefully from interruptions, so your data stays safe even if your connection drops."
           },
           {
             "feature": "QBD - Customer + invoice sync",
             "release": "Viking 1",
-            "status": "Dev Complete",
+            "status": "Available",
             "detail": "Push customers and invoices from Rev.io directly into QuickBooks Desktop. Invoices land in the correct GL accounts with sales tax applied automatically. No copy-paste, no import files, no third-party tools."
           },
           {
             "feature": "QBD - Read live QBD data",
             "release": "Viking 1",
-            "status": "Dev Complete",
+            "status": "Available",
             "detail": "Rev.io reads your QuickBooks chart of accounts and item list automatically. No manual exports, no file uploads, no stale data. Your QBD setup is always in sync."
           },
           {
             "feature": "QBD - SOAP endpoint + Web Connector handshake",
             "release": "Viking 1",
-            "status": "Dev Complete",
+            "status": "Available",
             "detail": "Establish a secure, direct connection between Rev.io PSA and QuickBooks Desktop, enabling real-time communication between your cloud workspace and on-premises accounting software."
           }
         ]
@@ -18361,25 +18797,25 @@
           {
             "feature": "Add one-time charge component to agreement",
             "release": "Viking 1",
-            "status": "In Dev",
+            "status": "Staged for Release",
             "detail": "Add onetime charges to an agreement directly based on the product catalog. able to edit amount, cost, description, quantity. Not tied to a service. Charged when Agreement goes \"live\" -> directly to unposted. Re-charged on renewal?"
           },
           {
             "feature": "Agreement List",
             "release": "Viking 1",
-            "status": "Dev Complete",
+            "status": "Staged for Release",
             "detail": "Manage customer agreements faster and with less effort. The Agreements List gives you a centralized, searchable view of all agreements—so you can quickly find what you need, track status, and keep agreement details organized for day-to-day operations."
           },
           {
             "feature": "Agreement Time Entry Rates",
             "release": "Viking 1",
-            "status": "Dev Complete",
+            "status": "Staged for Release",
             "detail": "Make time billing clearer and easier to manage. The enhanced Time Entry Rates tab ensures agreement-specific rates are fully populated and presented in a streamlined experience, helping your team apply the right rates consistently and reduce billing errors."
           },
           {
             "feature": "Agreement Overage Templates",
             "release": "Viking 1",
-            "status": "Dev Complete",
+            "status": "Staged for Release",
             "detail": "Set up overage billing faster and with more confidence. Overage Templates streamline configuration by pre-populating common tier structures, improving how changes propagate, and adding history so your team can track updates over time and keep billing rules consistent."
           }
         ]
@@ -18446,14 +18882,54 @@
       "vikingOneUnlock": null
     },
     {
+      "id": "006PX00000e8YVJYA2",
+      "name": "SOLVD Instrument Solutions Web Migration",
+      "accountId": "0016O00003dmuabQAA",
+      "account": "SOLVD Instrument Solutions",
+      "stage": "5 - Product / Contract Validated",
+      "amount": 595,
+      "owner": "Sarah McGovern",
+      "nextStep": "8/4: Client returns from PTO this week. Contract was sent over and will request a call to discuss once he is back.",
+      "createdDate": "2026-07-30T12:57:41.000+0000",
+      "closeDate": "2026-08-31",
+      "isClosed": false,
+      "isWon": false,
+      "lossReason": "Unspecified",
+      "lossDetail": "",
+      "competitor": "",
+      "stageLoss": "",
+      "smc": "",
+      "vikingOneUnlock": null
+    },
+    {
+      "id": "006PX00000e2IjNYAU",
+      "name": "Telecom Unlimited",
+      "accountId": "0016O00003a9uJlQAI",
+      "account": "Telecom Unlimited",
+      "stage": "Closed Won",
+      "amount": 635,
+      "owner": "Ingrid Beard",
+      "nextStep": "7/28 docusign cosign",
+      "createdDate": "2026-07-28T13:04:41.000+0000",
+      "closeDate": "2026-07-28",
+      "isClosed": true,
+      "isWon": true,
+      "lossReason": "Unspecified",
+      "lossDetail": "",
+      "competitor": "",
+      "stageLoss": "",
+      "smc": "",
+      "vikingOneUnlock": null
+    },
+    {
       "id": "006PX00000dqbEkYAI",
       "name": "The Rhino Group PSA Migration",
       "accountId": "0016O00003dmuZsQAI",
       "account": "The RHINO Group",
-      "stage": "2 - Discovery Completed",
-      "amount": 2100,
+      "stage": "3 - Initial Product Demo",
+      "amount": 1659,
       "owner": "Ingrid Beard",
-      "nextStep": "7/27 initial demo",
+      "nextStep": "8/7 Deep dive with Tony",
       "createdDate": "2026-07-23T16:54:59.000+0000",
       "closeDate": "2026-08-31",
       "isClosed": false,
@@ -18470,14 +18946,14 @@
       "name": "Richmond- TP to PSA Web",
       "accountId": "0016O00003dmuYMQAY",
       "account": "Richmond Security",
-      "stage": "3 - Initial Product Demo",
-      "amount": 2212,
+      "stage": "Closed Won",
+      "amount": 1680,
       "owner": "Katerra Stephenson Greenwood",
-      "nextStep": "7/23 Demo Scheduled  w/ Michael",
+      "nextStep": "7/28 Cst has signed document, waiting on Rev.io signature",
       "createdDate": "2026-07-21T13:40:16.000+0000",
       "closeDate": "2026-07-28",
-      "isClosed": false,
-      "isWon": false,
+      "isClosed": true,
+      "isWon": true,
       "lossReason": "Unspecified",
       "lossDetail": "",
       "competitor": "",
@@ -18493,7 +18969,7 @@
       "stage": "1- Discovery Scheduled",
       "amount": 0,
       "owner": "Rinor Berisha",
-      "nextStep": "07/20/2026 - Send an email to set up a meeting. (Waiting on their response)",
+      "nextStep": "07/28 - Send an email to set up a meeting. (Waiting on their response)",
       "createdDate": "2026-07-20T16:10:14.000+0000",
       "closeDate": "2026-08-31",
       "isClosed": false,
@@ -18530,10 +19006,10 @@
       "name": "Tri-Tec Communications (Tigerpaw to PSA)",
       "accountId": "0011C00002lbOxLQAU",
       "account": "Tri-Tec Communications",
-      "stage": "1- Discovery Scheduled",
+      "stage": "2 - Discovery Completed",
       "amount": 0,
       "owner": "Jakob Champion",
-      "nextStep": "Discovery call booked 7/27 @ 11AM",
+      "nextStep": "7/30 Follow up to schedule meeting to discuss migration process & pricing",
       "createdDate": "2026-07-14T18:46:39.000+0000",
       "closeDate": "2026-08-31",
       "isClosed": false,
@@ -18550,10 +19026,10 @@
       "name": "The Phone Experts - TP Migration",
       "accountId": "001PX000004hVRqYAM",
       "account": "The Phone Experts - Communications Ltd.",
-      "stage": "1- Discovery Scheduled",
+      "stage": "2 - Discovery Completed",
       "amount": 3022,
       "owner": "Jakob Champion",
-      "nextStep": "Reach out mid August to discuss merging instances and scheduling a follow up demo.",
+      "nextStep": "7/31 Follow up to get 2nd meeting time",
       "createdDate": "2026-07-14T15:13:57.000+0000",
       "closeDate": "2026-08-31",
       "isClosed": false,
@@ -18573,7 +19049,7 @@
       "stage": "2 - Discovery Completed",
       "amount": 4414,
       "owner": "Jakob Champion",
-      "nextStep": "Follow up with Demo site access, along with demo of the mobile app once we get the users for demo site",
+      "nextStep": "8/3 Follow up Demo with Tony",
       "createdDate": "2026-07-14T15:11:01.000+0000",
       "closeDate": "2026-08-31",
       "isClosed": false,
@@ -18610,10 +19086,10 @@
       "name": "PSI - PSA Migration",
       "accountId": "0016O00003dmuVQQAY",
       "account": "Professional Security Innovations",
-      "stage": "2 - Discovery Completed",
+      "stage": "3 - Initial Product Demo",
       "amount": 1591,
       "owner": "Ingrid Beard",
-      "nextStep": "7/23 follow up on internal conversations",
+      "nextStep": "7/30 scheduling follow up meeting",
       "createdDate": "2026-07-10T13:06:09.000+0000",
       "closeDate": "2026-08-31",
       "isClosed": false,
@@ -18630,14 +19106,14 @@
       "name": "TRM - PSA Migration",
       "accountId": "0016O00003dmua7QAA",
       "account": "TRM",
-      "stage": "5 - Product / Contract Validated",
-      "amount": 1660,
+      "stage": "Closed Won",
+      "amount": 1220,
       "owner": "Ingrid Beard",
-      "nextStep": "final meeting scheduled for 7/27 upon return from Punta Cana",
+      "nextStep": "7/28 need countersignature",
       "createdDate": "2026-07-08T16:09:23.000+0000",
-      "closeDate": "2026-07-31",
-      "isClosed": false,
-      "isWon": false,
+      "closeDate": "2026-07-28",
+      "isClosed": true,
+      "isWon": true,
       "lossReason": "Unspecified",
       "lossDetail": "",
       "competitor": "",
@@ -18673,9 +19149,9 @@
       "stage": "2 - Discovery Completed",
       "amount": 653,
       "owner": "Ingrid Beard",
-      "nextStep": "7/23 continue to try to connect (OOT alot)",
+      "nextStep": "7/30 reconnect with Jodie to schedule demo",
       "createdDate": "2026-06-29T20:38:28.000+0000",
-      "closeDate": "2026-07-29",
+      "closeDate": "2026-08-31",
       "isClosed": false,
       "isWon": false,
       "lossReason": "Unspecified",
@@ -18693,9 +19169,9 @@
       "stage": "4 - Proposal Sent",
       "amount": 1265,
       "owner": "Katerra Stephenson Greenwood",
-      "nextStep": "7/27- call to setup closing appointment",
+      "nextStep": "8/4- Follow up meeting scheduled to answer final questions after demo site",
       "createdDate": "2026-06-23T19:44:49.000+0000",
-      "closeDate": "2026-07-31",
+      "closeDate": "2026-08-31",
       "isClosed": false,
       "isWon": false,
       "lossReason": "Unspecified",
@@ -18713,7 +19189,7 @@
       "stage": "2 - Discovery Completed",
       "amount": 2580,
       "owner": "Ingrid Beard",
-      "nextStep": "7/21 follow up for demo reschedule",
+      "nextStep": "8/3 follow up for demo reschedule (after he returns from vacation)",
       "createdDate": "2026-06-23T09:54:00.000+0000",
       "closeDate": "2026-08-31",
       "isClosed": false,
@@ -19181,6 +19657,46 @@
       }
     },
     {
+      "id": "006PX00000e55mRYAQ",
+      "name": "WCCR - TP to PSA Migration",
+      "accountId": "0016O00003dmuagQAA",
+      "account": "West Coast Cash Register Systems",
+      "stage": "1- Discovery Scheduled",
+      "amount": 720,
+      "owner": "Ingrid Beard",
+      "nextStep": "7/30 follow up for meeting times if you have not heard from Drew",
+      "createdDate": "2026-07-29T12:35:47.000+0000",
+      "closeDate": "2026-08-31",
+      "isClosed": false,
+      "isWon": false,
+      "lossReason": "Unspecified",
+      "lossDetail": "",
+      "competitor": "",
+      "stageLoss": "",
+      "smc": "",
+      "vikingOneUnlock": null
+    },
+    {
+      "id": "006PX00000e271bYAA",
+      "name": "Watson Communications Corp. - Web Migration",
+      "accountId": "0016O00003dmuacQAA",
+      "account": "Watson Communications Corp.",
+      "stage": "1- Discovery Scheduled",
+      "amount": 880,
+      "owner": "Justin Lee",
+      "nextStep": "Schedule PSA demo with Leonard after webinar - Emailed on 7/28 links to videos and will schedule demo by 8/7",
+      "createdDate": "2026-07-28T12:59:09.000+0000",
+      "closeDate": "2026-08-31",
+      "isClosed": false,
+      "isWon": false,
+      "lossReason": "Unspecified",
+      "lossDetail": "",
+      "competitor": "",
+      "stageLoss": "",
+      "smc": "",
+      "vikingOneUnlock": null
+    },
+    {
       "id": "006PX00000cMwh0YAC",
       "name": "WCCR - TP Migration",
       "accountId": "0016O00003dmuagQAA",
@@ -19212,9 +19728,9 @@
       "stage": "2 - Discovery Completed",
       "amount": 2200,
       "owner": "Ingrid Beard",
-      "nextStep": "7/24 PSA demo",
+      "nextStep": "7/30 work rescheduling demo",
       "createdDate": "2026-06-11T23:06:32.000+0000",
-      "closeDate": "2026-07-31",
+      "closeDate": "2026-08-31",
       "isClosed": false,
       "isWon": false,
       "lossReason": "Unspecified",
@@ -19249,7 +19765,7 @@
           {
             "feature": "Dispatch board - support multiple boards",
             "release": "Viking 1",
-            "status": "In Dev",
+            "status": "Dev Complete",
             "detail": "Improve dispatch flexibility with multiple board views based on rep groups or ticket types, helping teams organize work and focus on the tickets most relevant to them."
           },
           {
@@ -19261,7 +19777,7 @@
           {
             "feature": "Dispatch Board Rebuild",
             "release": "Viking 1",
-            "status": "In Dev",
+            "status": "Dev Complete",
             "detail": "Optimize dispatch operations with an enhanced dispatch board that uses rules and filters to surface tickets ready for assignment, supports direct ticket assignment, and improves date selection."
           }
         ]
