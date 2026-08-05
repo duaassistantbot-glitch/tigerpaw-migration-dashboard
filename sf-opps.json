@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-04T10:00:59.271Z",
+  "generatedAt": "2026-08-05T10:00:51.643Z",
   "wmrContactCount": 15,
   "oppsByAudience": {
     "Ready to Migrate": {
@@ -88,7 +88,7 @@
           "id": "006PX00000cb74hYAA",
           "name": "TDS-Phone Web Migration",
           "account": "TDS-Phone",
-          "stage": "4 - Proposal Sent",
+          "stage": "Closed Lost",
           "amount": 1265,
           "createdDate": "2026-06-23T19:44:49.000+0000"
         },

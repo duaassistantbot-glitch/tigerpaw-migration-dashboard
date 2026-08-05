@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-08-04T10:00:39.141Z",
+  "generatedAt": "2026-08-05T10:00:35.479Z",
   "audienceStats": {
     "Ready to Migrate": {
       "uniqueContactsEmailed": 558,
-      "uniqueAccountsEmailed": 84,
+      "uniqueAccountsEmailed": 85,
       "totalSent": 1638,
       "totalDelivered": 1628,
       "totalOpens": 185,
