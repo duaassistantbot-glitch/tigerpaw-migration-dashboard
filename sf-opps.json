@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-10T10:00:46.498Z",
+  "generatedAt": "2026-08-11T10:00:44.858Z",
   "wmrContactCount": 15,
   "oppsByAudience": {
     "Ready to Migrate": {
@@ -112,7 +112,7 @@
     },
     "Other": {
       "count": 5,
-      "amount": 4511,
+      "amount": 7421.88,
       "opps": [
         {
           "id": "006PX00000aztdzYAA",
@@ -151,7 +151,7 @@
           "name": "PremCom Web Migration",
           "account": "PremCom",
           "stage": "1- Discovery Scheduled",
-          "amount": 0,
+          "amount": 2910.88,
           "createdDate": "2026-07-20T16:10:14.000+0000"
         }
       ]
@@ -159,6 +159,6 @@
   },
   "grandTotal": {
     "count": 17,
-    "amount": 13334.21
+    "amount": 16245.09
   }
 }
