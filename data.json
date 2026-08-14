@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-12T10:00:31.521Z",
+  "generatedAt": "2026-08-14T10:00:29.943Z",
   "audienceStats": {
     "Ready to Migrate": {
       "uniqueContactsEmailed": 558,
@@ -35,7 +35,7 @@
   "verticalSummary": [
     {
       "vertical": "Unknown",
-      "registeredContacts": 183,
+      "registeredContacts": 184,
       "registeredCompanies": 83
     },
     {
@@ -60,7 +60,7 @@
     }
   ],
   "webinarTotal": {
-    "totalContacts": 434,
+    "totalContacts": 435,
     "uniqueAccounts": 225
   },
   "emailDetails": [
