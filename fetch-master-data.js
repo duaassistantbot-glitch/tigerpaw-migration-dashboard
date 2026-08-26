@@ -328,13 +328,16 @@ function enrichOppsWithRoadmap(opps, roadmapItems) {
 }
 
 function publicAccount(account) {
+  const psaAccountStatus = account.TigerPaw_Account_Status__c || '';
   return {
     id: account.Id,
     name: account.Name,
     type: clean(account.Type, 'Blank'),
     webMigrationStatus: webMigrationStatus(account),
     webMigrationDetails: account.Web_Migration_Status_Details__c || '',
-    accountStatus: account.TigerPaw_Account_Status__c || '',
+    psaAccountStatus,
+    // Backward-compatible alias for older dashboard/data consumers.
+    accountStatus: psaAccountStatus,
     owner: account.Tigerpaw_Owner__c || '',
     vertical: account.Tigerpaw_Vertical__c || '',
     psaWeb: !!account.PSA_Web__c

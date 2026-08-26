@@ -226,6 +226,9 @@
     <select class="select" id="web-status-filter">
       <option value="all">All web migration statuses</option>
     </select>
+    <select class="select" id="psa-account-status-filter">
+      <option value="all">All PSA account statuses</option>
+    </select>
   </div>
   <section class="card">
     <div class="card-head">
@@ -236,6 +239,7 @@
       <thead>
         <tr>
           <th><button class="sort-btn" type="button" onclick="setSort('opp','account')">Account Name <span class="sort-indicator" data-sort-table="opp" data-sort-key="account"></span></button></th>
+          <th><button class="sort-btn" type="button" onclick="setSort('opp','psaAccountStatus')">PSA Account Status <span class="sort-indicator" data-sort-table="opp" data-sort-key="psaAccountStatus"></span></button></th>
           <th class="num-h"><button class="sort-btn" type="button" onclick="setSort('opp','amount')">Renewal Amount <span class="sort-indicator" data-sort-table="opp" data-sort-key="amount"></span></button></th>
           <th><button class="sort-btn" type="button" onclick="setSort('opp','owner')">Opportunity Owner <span class="sort-indicator" data-sort-table="opp" data-sort-key="owner"></span></button></th>
           <th><button class="sort-btn" type="button" onclick="setSort('opp','nextStep')">Next Step <span class="sort-indicator" data-sort-table="opp" data-sort-key="nextStep"></span></button></th>
@@ -330,6 +334,14 @@ function webMigrationStatusForOpp(opp) {
   return accountForOpp(opp)?.webMigrationStatus || 'Blank';
 }
 
+function psaAccountStatus(account) {
+  return account?.psaAccountStatus || account?.accountStatus || 'Blank';
+}
+
+function psaAccountStatusForOpp(opp) {
+  return psaAccountStatus(accountForOpp(opp));
+}
+
 function oppRowsByWebStatusAndBucket(status, bucket) {
   return MASTER.opportunities.filter(opp =>
     webMigrationStatusForOpp(opp) === status &&
@@ -370,6 +382,7 @@ function sortValue(table, key, row) {
     if (key === 'nextStep') return row.nextStep || '';
     if (key === 'stage') return row.stage || '';
     if (key === 'closeDate') return row.closeDate || '';
+    if (key === 'psaAccountStatus') return psaAccountStatusForOpp(row);
     if (key === 'lossReason') return row.stage === 'Closed Lost' ? (row.lossReason || 'Unspecified') : '';
     if (key === 'lossDetail') return row.stage === 'Closed Lost' ? (row.lossDetail || '') : '';
     if (key === 'vikingRelease') return `${vikingReleaseStatus(row)} ${row.vikingOneUnlock?.summary || ''} ${roadmapMatchText(row)}`;
@@ -451,6 +464,7 @@ function openAccounts(title, rows) {
     <tr>
       <th>Account</th>
       <th>Web Migration Status</th>
+      <th>PSA Account Status</th>
       <th>Type</th>
       <th>Owner</th>
     </tr>`;
@@ -466,6 +480,7 @@ function openOpps(title, rows) {
   document.getElementById('drill-head').innerHTML = `
     <tr>
       <th>Account Name</th>
+      <th>PSA Account Status</th>
       <th class="num-h">Renewal Amount</th>
       <th>Opportunity Owner</th>
       <th>Next Step</th>
@@ -493,6 +508,7 @@ function renderDrilldownRows() {
       <tr>
         <td><strong>${esc(account.name)}</strong></td>
         <td><span class="pill">${esc(account.webMigrationStatus || 'Blank')}</span></td>
+        <td><span class="pill">${esc(psaAccountStatus(account))}</span></td>
         <td>${esc(account.type || '')}</td>
         <td>${esc(account.owner || '')}</td>
       </tr>`).join('');
@@ -529,6 +545,7 @@ function oppDetailRow(opp) {
   return `
     <tr>
       <td><strong>${esc(opp.account)}</strong></td>
+      <td><span class="pill">${esc(psaAccountStatusForOpp(opp))}</span></td>
       <td class="num-c">${money.format(opp.amount || 0)}</td>
       <td>${esc(opp.owner || '')}</td>
       <td class="detail">${esc(opp.nextStep || '')}</td>
@@ -588,6 +605,7 @@ function renderOppTable() {
   const owner = document.getElementById('owner-filter').value;
   const loss = document.getElementById('loss-filter').value;
   const webStatus = document.getElementById('web-status-filter').value;
+  const psaStatus = document.getElementById('psa-account-status-filter').value;
 
   const rows = MASTER.opportunities.filter(opp => {
     const matchesStage = stage === 'all' || opp.stage === stage;
@@ -597,10 +615,12 @@ function renderOppTable() {
     const matchesLoss = loss === 'all' || (loss === 'none' ? !oppLossReason : oppLossReason === loss);
     const oppWebStatus = webMigrationStatusForOpp(opp);
     const matchesWebStatus = webStatus === 'all' || (webStatus === 'none' ? !oppWebStatus || oppWebStatus === 'Blank' : oppWebStatus === webStatus);
+    const oppPsaStatus = psaAccountStatusForOpp(opp);
+    const matchesPsaStatus = psaStatus === 'all' || (psaStatus === 'none' ? !oppPsaStatus || oppPsaStatus === 'Blank' : oppPsaStatus === psaStatus);
     const unlock = opp.vikingOneUnlock || {};
     const unlockMatches = Array.isArray(unlock.matches) ? unlock.matches.map(match => match.feature).join(' ') : '';
-    const haystack = [opp.account, opp.stage, opp.amount, opp.owner, opp.nextStep, opp.lossReason, opp.lossDetail, oppWebStatus, unlock.status, unlock.summary, unlockMatches].join(' ').toLowerCase();
-    return matchesStage && matchesViking && matchesOwner && matchesLoss && matchesWebStatus && (!search || haystack.includes(search));
+    const haystack = [opp.account, opp.stage, opp.amount, opp.owner, opp.nextStep, opp.lossReason, opp.lossDetail, oppWebStatus, oppPsaStatus, unlock.status, unlock.summary, unlockMatches].join(' ').toLowerCase();
+    return matchesStage && matchesViking && matchesOwner && matchesLoss && matchesWebStatus && matchesPsaStatus && (!search || haystack.includes(search));
   });
   const sorted = sortedRows('opp', rows);
 
@@ -640,6 +660,7 @@ function populateOpportunityFilters(opps) {
   populateSelect('owner-filter', uniqueValues(opps, opp => opp.owner || ''), 'No owner');
   populateSelect('loss-filter', uniqueValues(opps, opp => opp.stage === 'Closed Lost' ? (opp.lossReason || 'Unspecified') : ''), 'No loss reason');
   populateSelect('web-status-filter', uniqueValues(opps, webMigrationStatusForOpp), 'No web migration status');
+  populateSelect('psa-account-status-filter', uniqueValues(opps, psaAccountStatusForOpp), 'No PSA account status');
 }
 
 function render(data) {
@@ -676,6 +697,7 @@ document.getElementById('viking-filter').addEventListener('change', renderOppTab
 document.getElementById('owner-filter').addEventListener('change', renderOppTable);
 document.getElementById('loss-filter').addEventListener('change', renderOppTable);
 document.getElementById('web-status-filter').addEventListener('change', renderOppTable);
+document.getElementById('psa-account-status-filter').addEventListener('change', renderOppTable);
 
 fetch('./master-data.json', { cache: 'no-store' })
   .then(res => {
