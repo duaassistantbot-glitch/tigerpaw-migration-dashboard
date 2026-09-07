@@ -27,6 +27,13 @@
   .hero-card.green { border-top-color: #6EBE4F; }
   .population-note { margin: 12px 0 18px; padding: 10px 12px; background: #FFFFFF; border: 1px solid #DDE2E8; border-left: 3px solid #2399B5; border-radius: 6px; color: #687789; font-size: 12px; line-height: 1.45; }
   .population-note strong { color: #1D3756; }
+  .key-stat-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; margin-bottom: 18px; }
+  .key-stat-card { background: #FFFFFF; border: 1px solid #DDE2E8; border-radius: 8px; padding: 16px; border-top: 4px solid #2399B5; }
+  .key-stat-card.green { border-top-color: #6EBE4F; }
+  .key-stat-label { font-size: 10px; text-transform: uppercase; letter-spacing: .55px; font-weight: 800; color: #687789; }
+  .key-stat-value { margin-top: 7px; font-family: 'Montserrat', sans-serif; font-size: 26px; line-height: 1; font-weight: 800; color: #1D3756; }
+  .key-stat-sub { margin-top: 7px; color: #687789; font-size: 11px; line-height: 1.35; }
+  .caveat { margin: 10px 0 18px; padding: 10px 12px; background: #FFF9E8; border: 1px solid #F3DEAA; border-left: 3px solid #6EBE4F; border-radius: 6px; color: #3d4d5c; font-size: 12px; line-height: 1.45; }
   .label { font-size: 11px; text-transform: uppercase; letter-spacing: .6px; font-weight: 800; color: #FFFFFF; }
   .value { font-family: 'Montserrat', sans-serif; font-size: 32px; line-height: 1; margin-top: 10px; font-weight: 800; color: #FFFFFF; }
   .value-btn { cursor: pointer; color: #FFFFFF; text-decoration: underline; text-decoration-style: dotted; text-underline-offset: 4px; background: none; border: 0; padding: 0; font: inherit; }
@@ -107,7 +114,7 @@
   .modal-table td { font-size: 12px; }
   @media (max-width: 900px) {
     .header-inner { align-items: flex-start; flex-direction: column; }
-    .hero-grid, .grid-2 { grid-template-columns: 1fr; }
+    .hero-grid, .grid-2, .key-stat-grid { grid-template-columns: 1fr; }
     .bar-row { grid-template-columns: 1fr; gap: 8px; }
     .num { text-align: left; }
     .summary-strip { flex-direction: column; }
@@ -177,6 +184,31 @@
   <div class="population-note" aria-label="Dashboard population legend">
     <strong>Dashboard scope:</strong> Salesforce accounts where Web Migration Status is populated. Blank Web Migration Status accounts are excluded from all Master Overview account counts.
   </div>
+
+  <div class="section-title">Executive Key Statistics</div>
+  <section class="key-stat-grid" aria-label="Tigerpaw migration key statistics">
+    <div class="key-stat-card">
+      <div class="key-stat-label">Companies contacted</div>
+      <div class="key-stat-value" id="ks-contacted">--</div>
+      <div class="key-stat-sub" id="ks-contacted-sub">Loading touchpoints...</div>
+    </div>
+    <div class="key-stat-card green">
+      <div class="key-stat-label">Unreached companies</div>
+      <div class="key-stat-value" id="ks-unreached">--</div>
+      <div class="key-stat-sub">No Salesforce email/phone or matched webinar touchpoint</div>
+    </div>
+    <div class="key-stat-card">
+      <div class="key-stat-label">Conversions sold</div>
+      <div class="key-stat-value" id="ks-sold">--</div>
+      <div class="key-stat-sub" id="ks-sold-sub">Closed Won Legacy Migration opps</div>
+    </div>
+    <div class="key-stat-card green">
+      <div class="key-stat-label">Graduated to CS</div>
+      <div class="key-stat-value" id="ks-cs">Needs Notion</div>
+      <div class="key-stat-sub">Requires PSA Onboarding Dashboard access</div>
+    </div>
+  </section>
+  <div class="caveat" id="ks-caveat" style="display:none;"></div>
 
   <section class="grid-2">
     <div>
@@ -260,6 +292,7 @@
 
 <script>
 let MASTER = null;
+let KEY_STATS = null;
 let DRILLDOWN = { type: 'accounts', rows: [], title: '' };
 let ACCOUNT_BY_ID = new Map();
 let ACCOUNT_BY_NAME = new Map();
@@ -663,6 +696,25 @@ function populateOpportunityFilters(opps) {
   populateSelect('psa-account-status-filter', uniqueValues(opps, psaAccountStatusForOpp), 'No PSA account status');
 }
 
+function renderKeyStats(stats) {
+  KEY_STATS = stats;
+  if (!stats) return;
+  const c = stats.contactStats || {};
+  const v = stats.conversionStats || {};
+  document.getElementById('ks-contacted').textContent = fmt.format(c.accountsContactedEmailOrPhone || 0);
+  document.getElementById('ks-contacted-sub').textContent = `${fmt.format(c.emailTouchpoints || 0)} email + ${fmt.format(c.phoneTouchpoints || 0)} phone touchpoints`;
+  document.getElementById('ks-unreached').textContent = fmt.format(c.accountsUnreached || 0);
+  document.getElementById('ks-sold').textContent = fmt.format(v.soldConversions || 0);
+  document.getElementById('ks-sold-sub').textContent = `${money.format(v.soldConversionMrr || 0)} sold migration MRR tracked in SF opps`;
+  document.getElementById('ks-cs').textContent = v.graduatedToCs == null ? 'Needs Notion' : fmt.format(v.graduatedToCs);
+  const caveats = stats.caveats || [];
+  if (caveats.length) {
+    const caveat = document.getElementById('ks-caveat');
+    caveat.style.display = 'block';
+    caveat.innerHTML = `<strong>Data note:</strong> ${esc(caveats.join(' '))}`;
+  }
+}
+
 function render(data) {
   MASTER = data;
   ACCOUNT_BY_ID = new Map(data.accounts.map(account => [account.id, account]));
@@ -699,12 +751,14 @@ document.getElementById('loss-filter').addEventListener('change', renderOppTable
 document.getElementById('web-status-filter').addEventListener('change', renderOppTable);
 document.getElementById('psa-account-status-filter').addEventListener('change', renderOppTable);
 
-fetch('./master-data.json', { cache: 'no-store' })
-  .then(res => {
+Promise.all([
+  fetch('./master-data.json', { cache: 'no-store' }).then(res => {
     if (!res.ok) throw new Error(`Unable to load master-data.json (${res.status})`);
     return res.json();
-  })
-  .then(render)
+  }),
+  fetch('./key-stats.json', { cache: 'no-store' }).then(res => res.ok ? res.json() : null).catch(() => null)
+])
+  .then(([master, stats]) => { render(master); renderKeyStats(stats); })
   .catch(err => {
     document.getElementById('generated-subtitle').textContent = err.message;
     document.querySelector('.main').insertAdjacentHTML('afterbegin', `<div class="card"><div class="empty">${esc(err.message)}</div></div>`);

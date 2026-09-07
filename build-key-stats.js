@@ -1,0 +1,183 @@
+const https = require('https');
+const fs = require('fs');
+const path = require('path');
+
+const envPath = path.join(__dirname, '..', '.env');
+const envContent = fs.readFileSync(envPath, 'utf8');
+envContent.split('\n').forEach(line => {
+  const idx = line.indexOf('=');
+  if (idx > 0) process.env[line.slice(0, idx).trim()] = line.slice(idx + 1).trim();
+});
+
+const INSTANCE_URL = process.env.SF_INSTANCE_URL;
+const CLIENT_ID = process.env.SF_CLIENT_ID;
+const CLIENT_SECRET = process.env.SF_CLIENT_SECRET;
+
+const ACTIVE_CONVERSIONS = [
+  'Bridge Communications',
+  'Bank-Tec South',
+  'All Secure Lock',
+  'Fire Team Security',
+  'Xclutel',
+  'Sunrise Solutions',
+  'Pilothouse Communications',
+  'IMC Facility Management',
+  'Vanran Communications Services'
+];
+
+function sfHost() { return new URL(INSTANCE_URL).hostname; }
+function requestJson(options, body) {
+  return new Promise((resolve, reject) => {
+    const req = https.request(options, res => {
+      let data = '';
+      res.on('data', chunk => data += chunk);
+      res.on('end', () => {
+        try {
+          const parsed = JSON.parse(data);
+          if (res.statusCode >= 400 || parsed.error || parsed[0]?.errorCode) reject(new Error(JSON.stringify(parsed).slice(0, 1000)));
+          else resolve(parsed);
+        } catch (err) { reject(new Error(`Parse error: ${data.slice(0, 1000)}`)); }
+      });
+    });
+    req.on('error', reject);
+    if (body) req.write(body);
+    req.end();
+  });
+}
+async function getToken() {
+  const body = new URLSearchParams({ grant_type: 'client_credentials', client_id: CLIENT_ID, client_secret: CLIENT_SECRET }).toString();
+  const result = await requestJson({ hostname: sfHost(), path: '/services/oauth2/token', method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded', 'Content-Length': Buffer.byteLength(body) } }, body);
+  return result.access_token;
+}
+async function sfQuery(token, soqlOrPath) {
+  const pathPart = soqlOrPath.startsWith('/services/') ? soqlOrPath : '/services/data/v59.0/query?q=' + encodeURIComponent(soqlOrPath);
+  return requestJson({ hostname: sfHost(), path: pathPart, headers: { Authorization: `Bearer ${token}` } });
+}
+async function sfQueryAll(token, soql) {
+  const records = [];
+  let result = await sfQuery(token, soql);
+  records.push(...(result.records || []));
+  while (!result.done && result.nextRecordsUrl) {
+    result = await sfQuery(token, result.nextRecordsUrl);
+    records.push(...(result.records || []));
+  }
+  return records;
+}
+const chunk = (arr, size) => Array.from({length: Math.ceil(arr.length/size)}, (_,i)=>arr.slice(i*size, i*size+size));
+const q = s => `'${String(s).replace(/'/g, "\\'")}'`;
+const norm = s => String(s || '').toLowerCase().replace(/&/g,'and').replace(/[^a-z0-9]+/g,' ').trim();
+const money = n => Math.round((Number(n)||0)*100)/100;
+function classifyTask(t) {
+  const hay = [t.Subject, t.Type, t.TaskSubtype, t.CallType, t.CallDisposition, t.Call_Disposition2__c, t.SalesLoft_Email_Template_Title__c].filter(Boolean).join(' ').toLowerCase();
+  if (hay.includes('email')) return 'email';
+  if (hay.includes('call') || hay.includes('phone') || t.CallDurationInSeconds || t.Call_Duration_seconds__c) return 'phone';
+  return 'other';
+}
+
+async function main() {
+  const token = await getToken();
+  const master = JSON.parse(fs.readFileSync(path.join(__dirname, 'master-data.json'), 'utf8'));
+  const webinar = JSON.parse(fs.readFileSync(path.join(__dirname, 'webinar-data.json'), 'utf8'));
+  const accounts = master.accounts || [];
+  const accountIds = accounts.map(a => a.id);
+  const accountById = Object.fromEntries(accounts.map(a => [a.id, a]));
+
+  console.log(`Querying contacts for ${accountIds.length} migration accounts...`);
+  let contacts = [];
+  for (const ids of chunk(accountIds, 200)) {
+    contacts.push(...await sfQueryAll(token, `SELECT Id, AccountId, Email, LastActivityDate FROM Contact WHERE AccountId IN (${ids.map(q).join(',')})`));
+  }
+  const contactAccount = Object.fromEntries(contacts.map(c => [c.Id, c.AccountId]));
+  const contactIds = contacts.map(c => c.Id);
+
+  console.log('Querying account/contact tasks...');
+  let tasks = [];
+  for (const ids of chunk(accountIds, 200)) {
+    tasks.push(...await sfQueryAll(token, `SELECT Id, WhatId, WhoId, Subject, Type, TaskSubtype, ActivityDate, Status, CreatedDate, CallType, CallDisposition, CallDurationInSeconds, Call_Disposition2__c, Call_Duration_seconds__c, SalesLoft_Email_Template_Title__c FROM Task WHERE WhatId IN (${ids.map(q).join(',')})`));
+  }
+  for (const ids of chunk(contactIds, 200)) {
+    tasks.push(...await sfQueryAll(token, `SELECT Id, WhatId, WhoId, Subject, Type, TaskSubtype, ActivityDate, Status, CreatedDate, CallType, CallDisposition, CallDurationInSeconds, Call_Disposition2__c, Call_Duration_seconds__c, SalesLoft_Email_Template_Title__c FROM Task WHERE WhoId IN (${ids.map(q).join(',')})`));
+  }
+  const seenTask = new Set();
+  tasks = tasks.filter(t => !seenTask.has(t.Id) && seenTask.add(t.Id));
+
+  const touchByAccount = {};
+  for (const a of accounts) touchByAccount[a.id] = { accountId: a.id, account: a.name, mrr: null, email: 0, phone: 0, other: 0, total: 0, webinarRegistrants: 0, lastTouch: null };
+  for (const t of tasks) {
+    const aid = accountById[t.WhatId] ? t.WhatId : contactAccount[t.WhoId];
+    if (!aid || !touchByAccount[aid]) continue;
+    const kind = classifyTask(t);
+    touchByAccount[aid][kind]++;
+    touchByAccount[aid].total++;
+    const dt = t.ActivityDate || (t.CreatedDate || '').slice(0,10);
+    if (dt && (!touchByAccount[aid].lastTouch || dt > touchByAccount[aid].lastTouch)) touchByAccount[aid].lastTouch = dt;
+  }
+
+  const webinarCompanyNames = new Set();
+  for (const event of Object.values(webinar.events || {})) {
+    for (const r of event.registrants || []) if (r.company) webinarCompanyNames.add(norm(r.company));
+  }
+  for (const a of accounts) {
+    if (webinarCompanyNames.has(norm(a.name))) {
+      touchByAccount[a.id].webinarRegistrants += 1;
+      touchByAccount[a.id].total += 1;
+      touchByAccount[a.id].email += 1;
+    }
+  }
+
+  const contacted = Object.values(touchByAccount).filter(x => x.email > 0 || x.phone > 0);
+  const unreached = Object.values(touchByAccount).filter(x => x.email === 0 && x.phone === 0);
+  const soldOpps = (master.opportunities || []).filter(o => o.isWon || o.stage === 'Closed Won');
+  const activeNorm = new Set(ACTIVE_CONVERSIONS.map(norm));
+  const fuzzyMatch = (source, target) => {
+    const s = norm(source), t = norm(target);
+    if (!s || !t) return false;
+    if (s === t) return true;
+    return (s.length >= 6 && t.includes(s)) || (t.length >= 6 && s.includes(t));
+  };
+  const activeAccounts = accounts.filter(a => [...activeNorm].some(n => fuzzyMatch(a.name, n)));
+  const activeOpps = (master.opportunities || []).filter(o => [...activeNorm].some(n => fuzzyMatch(o.account, n)));
+
+  const activeConversionRows = ACTIVE_CONVERSIONS.map(name => {
+    const n=norm(name);
+    const account = accounts.find(a => fuzzyMatch(a.name, n));
+    const opps = (master.opportunities || []).filter(o => fuzzyMatch(o.account, n));
+    const touch = account ? touchByAccount[account.id] : null;
+    return { name, sfAccount: account?.name || null, status: account?.webMigrationStatus || null, psaAccountStatus: account?.psaAccountStatus || null, touchpoints: touch ? { email: touch.email, phone: touch.phone, other: touch.other, total: touch.total, lastTouch: touch.lastTouch } : null, opportunities: opps.map(o => ({ name: o.name, stage: o.stage, amount: o.amount, closeDate: o.closeDate })) };
+  });
+
+  const output = {
+    generatedAt: new Date().toISOString(),
+    sourceGeneratedAt: master.generatedAt,
+    caveats: [
+      'Notion PSA Onboarding Dashboard and Client Master/MRR databases were not accessible to the current integration at build time; CS graduation and account MRR are left as Notion-dependent until shared.',
+      'Account contacted = Salesforce Task classified as email/phone on the Account or related Contacts, plus matched webinar registrant company as email-confirmed.'
+    ],
+    contactStats: {
+      migrationAccounts: accounts.length,
+      accountsContactedEmailOrPhone: contacted.length,
+      accountsUnreached: unreached.length,
+      totalTouchpoints: Object.values(touchByAccount).reduce((s,x)=>s+x.total,0),
+      emailTouchpoints: Object.values(touchByAccount).reduce((s,x)=>s+x.email,0),
+      phoneTouchpoints: Object.values(touchByAccount).reduce((s,x)=>s+x.phone,0),
+      otherTouchpoints: Object.values(touchByAccount).reduce((s,x)=>s+x.other,0),
+      webinarExternalRegistrants: Object.values(webinar.events || {}).reduce((s,e)=>s+(e.externalTotal||0),0),
+      relatedMrr: null
+    },
+    conversionStats: {
+      soldConversions: soldOpps.length,
+      soldConversionMrr: money(soldOpps.reduce((s,o)=>s+(o.amount||0),0)),
+      activeConversionsProvided: ACTIVE_CONVERSIONS.length,
+      activeConversionsMatchedToSfAccounts: activeConversionRows.filter(row => row.sfAccount).length,
+      activeConversionsMatchedToSfOpps: activeOpps.length,
+      graduatedToCs: null
+    },
+    soldConversions: soldOpps.map(o => ({ account: o.account, opportunity: o.name, amount: o.amount, stage: o.stage, closeDate: o.closeDate, owner: o.owner })),
+    activeConversions: activeConversionRows,
+    topUnreached: unreached.slice(0, 50).map(x => ({ account: x.account, status: accountById[x.accountId]?.webMigrationStatus, owner: accountById[x.accountId]?.owner })),
+    touchpointsByAccount: Object.values(touchByAccount)
+  };
+  fs.writeFileSync(path.join(__dirname, 'key-stats.json'), JSON.stringify(output, null, 2));
+  console.log(JSON.stringify({contactStats: output.contactStats, conversionStats: output.conversionStats}, null, 2));
+}
+main().catch(err => { console.error(err); process.exit(1); });
