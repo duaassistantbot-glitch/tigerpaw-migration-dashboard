@@ -34,6 +34,8 @@
   .key-stat-value { margin-top: 7px; font-family: 'Montserrat', sans-serif; font-size: 26px; line-height: 1; font-weight: 800; color: #1D3756; }
   .key-stat-sub { margin-top: 7px; color: #687789; font-size: 11px; line-height: 1.35; }
   .caveat { margin: 10px 0 18px; padding: 10px 12px; background: #FFF9E8; border: 1px solid #F3DEAA; border-left: 3px solid #6EBE4F; border-radius: 6px; color: #3d4d5c; font-size: 12px; line-height: 1.45; }
+  .active-list { margin: 0 0 18px; }
+  .active-list table td, .active-list table th { font-size: 12px; }
   .label { font-size: 11px; text-transform: uppercase; letter-spacing: .6px; font-weight: 800; color: #FFFFFF; }
   .value { font-family: 'Montserrat', sans-serif; font-size: 32px; line-height: 1; margin-top: 10px; font-weight: 800; color: #FFFFFF; }
   .value-btn { cursor: pointer; color: #FFFFFF; text-decoration: underline; text-decoration-style: dotted; text-underline-offset: 4px; background: none; border: 0; padding: 0; font: inherit; }
@@ -193,9 +195,9 @@
       <div class="key-stat-sub" id="ks-contacted-sub">Loading touchpoints...</div>
     </div>
     <div class="key-stat-card green">
-      <div class="key-stat-label">Unreached companies</div>
-      <div class="key-stat-value" id="ks-unreached">--</div>
-      <div class="key-stat-sub">No Salesforce email/phone or matched webinar touchpoint</div>
+      <div class="key-stat-label">Active conversions</div>
+      <div class="key-stat-value" id="ks-active">9</div>
+      <div class="key-stat-sub">Hardcoded from Ardit's active list</div>
     </div>
     <div class="key-stat-card">
       <div class="key-stat-label">Conversions sold</div>
@@ -207,6 +209,27 @@
       <div class="key-stat-value" id="ks-cs">Needs Notion</div>
       <div class="key-stat-sub">Requires PSA Onboarding Dashboard access</div>
     </div>
+  </section>
+  <section class="card active-list" aria-label="Active conversions provided by Ardit">
+    <div class="card-head">
+      <h2>Active Conversions</h2>
+      <span>Hardcoded list from Ardit; enriched with Salesforce opportunity/touchpoint data when matched</span>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>Company</th>
+          <th>Salesforce Account</th>
+          <th>Migration Status</th>
+          <th>Opportunity</th>
+          <th class="num-h">MRR</th>
+          <th class="num-h">Touchpoints</th>
+        </tr>
+      </thead>
+      <tbody id="active-conversions-table">
+        <tr><td colspan="6" class="empty">Loading active conversions...</td></tr>
+      </tbody>
+    </table>
   </section>
   <div class="caveat" id="ks-caveat" style="display:none;"></div>
 
@@ -703,10 +726,25 @@ function renderKeyStats(stats) {
   const v = stats.conversionStats || {};
   document.getElementById('ks-contacted').textContent = fmt.format(c.accountsContactedEmailOrPhone || 0);
   document.getElementById('ks-contacted-sub').textContent = `${fmt.format(c.emailTouchpoints || 0)} email + ${fmt.format(c.phoneTouchpoints || 0)} phone touchpoints`;
-  document.getElementById('ks-unreached').textContent = fmt.format(c.accountsUnreached || 0);
+  document.getElementById('ks-active').textContent = fmt.format(v.activeConversionsProvided || 9);
   document.getElementById('ks-sold').textContent = fmt.format(v.soldConversions || 0);
   document.getElementById('ks-sold-sub').textContent = `${money.format(v.soldConversionMrr || 0)} sold migration MRR tracked in SF opps`;
   document.getElementById('ks-cs').textContent = v.graduatedToCs == null ? 'Needs Notion' : fmt.format(v.graduatedToCs);
+  const activeRows = stats.activeConversions || [];
+  document.getElementById('active-conversions-table').innerHTML = activeRows.map(row => {
+    const opp = (row.opportunities || [])[0] || {};
+    const touches = row.touchpoints;
+    return `
+      <tr>
+        <td><strong>${esc(row.name)}</strong></td>
+        <td>${esc(row.sfAccount || 'Not matched')}</td>
+        <td><span class="pill">${esc(row.status || 'Unknown')}</span></td>
+        <td>${esc(opp.name || '')}<br><span class="key-stat-sub">${esc(opp.stage || '')} ${opp.closeDate ? '• ' + esc(formatDate(opp.closeDate)) : ''}</span></td>
+        <td class="num-c">${money.format(opp.amount || 0)}</td>
+        <td class="num-c">${touches ? fmt.format(touches.total || 0) : '--'}<br><span class="key-stat-sub">${touches ? `${fmt.format(touches.email || 0)} email / ${fmt.format(touches.phone || 0)} phone` : ''}</span></td>
+      </tr>`;
+  }).join('') || '<tr><td colspan="6" class="empty">No active conversions loaded.</td></tr>';
+
   const caveats = stats.caveats || [];
   if (caveats.length) {
     const caveat = document.getElementById('ks-caveat');
