@@ -34,6 +34,11 @@
   .key-stat-value { margin-top: 7px; font-family: 'Montserrat', sans-serif; font-size: 26px; line-height: 1; font-weight: 800; color: #1D3756; }
   .key-stat-sub { margin-top: 7px; color: #687789; font-size: 11px; line-height: 1.35; }
   .caveat { margin: 10px 0 18px; padding: 10px 12px; background: #FFF9E8; border: 1px solid #F3DEAA; border-left: 3px solid #6EBE4F; border-radius: 6px; color: #3d4d5c; font-size: 12px; line-height: 1.45; }
+  .recency-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; margin: -4px 0 18px; }
+  .recency-card { background: #EAF6F9; border: 1px solid #DDE2E8; border-left: 4px solid #2399B5; border-radius: 8px; padding: 13px 14px; }
+  .recency-card.green { background: #EAF7E6; border-left-color: #6EBE4F; }
+  .recency-value { font-family: 'Montserrat', sans-serif; font-size: 22px; font-weight: 800; color: #1D3756; }
+  .recency-label { margin-top: 4px; font-size: 11px; font-weight: 800; color: #3d4d5c; text-transform: uppercase; letter-spacing: .4px; }
   .active-list { margin: 0 0 18px; }
   .active-list table td, .active-list table th { font-size: 12px; }
   .label { font-size: 11px; text-transform: uppercase; letter-spacing: .6px; font-weight: 800; color: #FFFFFF; }
@@ -116,7 +121,7 @@
   .modal-table td { font-size: 12px; }
   @media (max-width: 900px) {
     .header-inner { align-items: flex-start; flex-direction: column; }
-    .hero-grid, .grid-2, .key-stat-grid { grid-template-columns: 1fr; }
+    .hero-grid, .grid-2, .key-stat-grid, .recency-grid { grid-template-columns: 1fr; }
     .bar-row { grid-template-columns: 1fr; gap: 8px; }
     .num { text-align: left; }
     .summary-strip { flex-direction: column; }
@@ -210,6 +215,24 @@
       <div class="key-stat-sub">Requires PSA Onboarding Dashboard access</div>
     </div>
   </section>
+  <section class="recency-grid" aria-label="Contact recency summary">
+    <div class="recency-card green">
+      <div class="recency-value" id="ks-last-touch">--</div>
+      <div class="recency-label">Most recent outreach</div>
+    </div>
+    <div class="recency-card">
+      <div class="recency-value" id="ks-touch-30">--</div>
+      <div class="recency-label">Accounts touched last 30 days</div>
+    </div>
+    <div class="recency-card">
+      <div class="recency-value" id="ks-touch-60">--</div>
+      <div class="recency-label">Accounts touched last 60 days</div>
+    </div>
+    <div class="recency-card">
+      <div class="recency-value" id="ks-median-touch">--</div>
+      <div class="recency-label">Median last-touch date</div>
+    </div>
+  </section>
   <section class="card active-list" aria-label="Active conversions provided by Ardit">
     <div class="card-head">
       <h2>Active Conversions</h2>
@@ -224,10 +247,11 @@
           <th>Opportunity</th>
           <th class="num-h">MRR</th>
           <th class="num-h">Touchpoints</th>
+          <th>Last Touch</th>
         </tr>
       </thead>
       <tbody id="active-conversions-table">
-        <tr><td colspan="6" class="empty">Loading active conversions...</td></tr>
+        <tr><td colspan="7" class="empty">Loading active conversions...</td></tr>
       </tbody>
     </table>
   </section>
@@ -727,6 +751,10 @@ function renderKeyStats(stats) {
   document.getElementById('ks-contacted').textContent = fmt.format(c.accountsContactedEmailOrPhone || 0);
   document.getElementById('ks-contacted-sub').textContent = `${fmt.format(c.emailTouchpoints || 0)} email + ${fmt.format(c.phoneTouchpoints || 0)} phone touchpoints`;
   document.getElementById('ks-active').textContent = fmt.format(v.activeConversionsProvided || 9);
+  document.getElementById('ks-last-touch').textContent = c.latestTouchDate ? formatDate(c.latestTouchDate) : '--';
+  document.getElementById('ks-touch-30').textContent = fmt.format(c.accountsTouchedLast30Days || 0);
+  document.getElementById('ks-touch-60').textContent = fmt.format(c.accountsTouchedLast60Days || 0);
+  document.getElementById('ks-median-touch').textContent = c.medianLastTouchDate ? formatDate(c.medianLastTouchDate) : '--';
   document.getElementById('ks-sold').textContent = fmt.format(v.soldConversions || 0);
   document.getElementById('ks-sold-sub').textContent = `${money.format(v.soldConversionMrr || 0)} sold migration MRR tracked in SF opps`;
   document.getElementById('ks-cs').textContent = v.graduatedToCs == null ? 'Needs Notion' : fmt.format(v.graduatedToCs);
@@ -742,8 +770,9 @@ function renderKeyStats(stats) {
         <td>${esc(opp.name || '')}<br><span class="key-stat-sub">${esc(opp.stage || '')} ${opp.closeDate ? '• ' + esc(formatDate(opp.closeDate)) : ''}</span></td>
         <td class="num-c">${money.format(opp.amount || 0)}</td>
         <td class="num-c">${touches ? fmt.format(touches.total || 0) : '--'}<br><span class="key-stat-sub">${touches ? `${fmt.format(touches.email || 0)} email / ${fmt.format(touches.phone || 0)} phone` : ''}</span></td>
+        <td>${touches?.lastTouch ? formatDate(touches.lastTouch) : '--'}</td>
       </tr>`;
-  }).join('') || '<tr><td colspan="6" class="empty">No active conversions loaded.</td></tr>';
+  }).join('') || '<tr><td colspan="7" class="empty">No active conversions loaded.</td></tr>';
 
   const caveats = stats.caveats || [];
   if (caveats.length) {

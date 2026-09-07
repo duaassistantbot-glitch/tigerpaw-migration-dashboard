@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-07T22:56:06.048Z",
+  "generatedAt": "2026-09-07T23:51:48.251Z",
   "sourceGeneratedAt": "2026-09-07T22:27:09.402Z",
   "caveats": [
     "Notion PSA Onboarding Dashboard and Client Master/MRR databases were not accessible to the current integration at build time; CS graduation and account MRR are left as Notion-dependent until shared.",
@@ -14,6 +14,11 @@
     "phoneTouchpoints": 16362,
     "otherTouchpoints": 2149,
     "webinarExternalRegistrants": 377,
+    "latestTouchDate": "2026-09-07",
+    "medianLastTouchDate": "2026-08-14",
+    "accountsTouchedLast30Days": 367,
+    "accountsTouchedLast60Days": 518,
+    "accountsTouchedLast90Days": 539,
     "relatedMrr": null
   },
   "conversionStats": {
@@ -3943,7 +3948,7 @@
       "other": 7,
       "total": 92,
       "webinarRegistrants": 0,
-      "lastTouch": "2027-01-04"
+      "lastTouch": "2026-08-21"
     },
     {
       "accountId": "0016O00003dmuQLQAY",
@@ -6704,7 +6709,7 @@
       "other": 13,
       "total": 850,
       "webinarRegistrants": 0,
-      "lastTouch": "2026-09-14"
+      "lastTouch": "2026-09-03"
     },
     {
       "accountId": "0016O00003dmuZLQAY",

@@ -67,6 +67,7 @@ const chunk = (arr, size) => Array.from({length: Math.ceil(arr.length/size)}, (_
 const q = s => `'${String(s).replace(/'/g, "\\'")}'`;
 const norm = s => String(s || '').toLowerCase().replace(/&/g,'and').replace(/[^a-z0-9]+/g,' ').trim();
 const money = n => Math.round((Number(n)||0)*100)/100;
+const daysBetween = (a, b) => Math.floor((a - b) / 86400000);
 function classifyTask(t) {
   const hay = [t.Subject, t.Type, t.TaskSubtype, t.CallType, t.CallDisposition, t.Call_Disposition2__c, t.SalesLoft_Email_Template_Title__c].filter(Boolean).join(' ').toLowerCase();
   if (hay.includes('email')) return 'email';
@@ -103,6 +104,7 @@ async function main() {
 
   const touchByAccount = {};
   for (const a of accounts) touchByAccount[a.id] = { accountId: a.id, account: a.name, mrr: null, email: 0, phone: 0, other: 0, total: 0, webinarRegistrants: 0, lastTouch: null };
+  const todayIso = new Date().toISOString().slice(0, 10);
   for (const t of tasks) {
     const aid = accountById[t.WhatId] ? t.WhatId : contactAccount[t.WhoId];
     if (!aid || !touchByAccount[aid]) continue;
@@ -110,7 +112,7 @@ async function main() {
     touchByAccount[aid][kind]++;
     touchByAccount[aid].total++;
     const dt = t.ActivityDate || (t.CreatedDate || '').slice(0,10);
-    if (dt && (!touchByAccount[aid].lastTouch || dt > touchByAccount[aid].lastTouch)) touchByAccount[aid].lastTouch = dt;
+    if (dt && dt <= todayIso && (!touchByAccount[aid].lastTouch || dt > touchByAccount[aid].lastTouch)) touchByAccount[aid].lastTouch = dt;
   }
 
   const webinarCompanyNames = new Set();
@@ -125,8 +127,16 @@ async function main() {
     }
   }
 
+  const asOf = new Date();
   const contacted = Object.values(touchByAccount).filter(x => x.email > 0 || x.phone > 0);
   const unreached = Object.values(touchByAccount).filter(x => x.email === 0 && x.phone === 0);
+  const contactedWithDates = contacted
+    .filter(x => x.lastTouch)
+    .map(x => ({ ...x, lastTouchDate: new Date(`${x.lastTouch}T00:00:00Z`) }));
+  const latestTouchDate = contactedWithDates.reduce((latest, x) => !latest || x.lastTouch > latest ? x.lastTouch : latest, null);
+  const touchedWithin = days => contactedWithDates.filter(x => { const diff = daysBetween(asOf, x.lastTouchDate); return diff >= 0 && diff <= days; }).length;
+  const sortedTouchDates = contactedWithDates.map(x => x.lastTouch).sort();
+  const medianLastTouchDate = sortedTouchDates.length ? sortedTouchDates[Math.floor(sortedTouchDates.length / 2)] : null;
   const soldOpps = (master.opportunities || []).filter(o => o.isWon || o.stage === 'Closed Won');
   const activeNorm = new Set(ACTIVE_CONVERSIONS.map(norm));
   const fuzzyMatch = (source, target) => {
@@ -162,6 +172,11 @@ async function main() {
       phoneTouchpoints: Object.values(touchByAccount).reduce((s,x)=>s+x.phone,0),
       otherTouchpoints: Object.values(touchByAccount).reduce((s,x)=>s+x.other,0),
       webinarExternalRegistrants: Object.values(webinar.events || {}).reduce((s,e)=>s+(e.externalTotal||0),0),
+      latestTouchDate,
+      medianLastTouchDate,
+      accountsTouchedLast30Days: touchedWithin(30),
+      accountsTouchedLast60Days: touchedWithin(60),
+      accountsTouchedLast90Days: touchedWithin(90),
       relatedMrr: null
     },
     conversionStats: {
