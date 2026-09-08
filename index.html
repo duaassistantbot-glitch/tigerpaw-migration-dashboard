@@ -44,6 +44,8 @@
   .impact-metric { border: 1px solid #DDE2E8; border-radius: 8px; padding: 13px; background: #F5F7FA; }
   .impact-metric.highlight { background: #EAF7E6; border-color: #CFE8C6; }
   .impact-value { font-family: 'Montserrat', sans-serif; font-size: 24px; line-height: 1; font-weight: 800; color: #1D3756; }
+  .impact-value button { cursor: pointer; color: #1D3756; text-decoration: underline; text-decoration-style: dotted; text-underline-offset: 4px; background: none; border: 0; padding: 0; font: inherit; }
+  .impact-value button:hover { color: #2399B5; }
   .impact-label { margin-top: 6px; color: #687789; font-size: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: .45px; line-height: 1.25; }
   .impact-sub { margin-top: 6px; color: #3d4d5c; font-size: 11px; line-height: 1.35; }
   .timeline-strip { border-top: 1px solid #DDE2E8; padding: 11px 14px; display: flex; flex-wrap: wrap; gap: 8px; background: #FFFFFF; }
@@ -251,32 +253,32 @@
     </div>
     <div class="impact-grid">
       <div class="impact-metric highlight">
-        <div class="impact-value" id="fl-engaged">--</div>
+        <div class="impact-value"><button id="fl-engaged" type="button" onclick="openAccounts('Contacted Migration Accounts', contactedAccountRows())">--</button></div>
         <div class="impact-label">Webinars / CBRs / outreach</div>
         <div class="impact-sub" id="fl-engaged-sub">Loading engagement...</div>
       </div>
       <div class="impact-metric">
-        <div class="impact-value" id="fl-opps-created">--</div>
+        <div class="impact-value"><button id="fl-opps-created" type="button" onclick="openOpps('Legacy Migration Opportunities', MASTER.opportunities)">--</button></div>
         <div class="impact-label">Opps created</div>
         <div class="impact-sub" id="fl-opp-accounts">Migration opp accounts</div>
       </div>
       <div class="impact-metric highlight">
-        <div class="impact-value" id="fl-open">--</div>
+        <div class="impact-value"><button id="fl-open" type="button" onclick="openOpps('Open Legacy Migration Opportunities', openMigrationOppRows())">--</button></div>
         <div class="impact-label">Open opps</div>
         <div class="impact-sub">Currently in pipeline</div>
       </div>
       <div class="impact-metric">
-        <div class="impact-value" id="fl-won">--</div>
+        <div class="impact-value"><button id="fl-won" type="button" onclick="openOpps('Won Legacy Migration Opportunities', wonMigrationOppRows())">--</button></div>
         <div class="impact-label">Won</div>
         <div class="impact-sub" id="fl-won-sub">Closed Won migrations</div>
       </div>
       <div class="impact-metric highlight">
-        <div class="impact-value" id="fl-active">9</div>
+        <div class="impact-value"><button id="fl-active" type="button" onclick="openAccounts('Active Conversion Accounts', activeConversionAccountRows())">9</button></div>
         <div class="impact-label">Active</div>
         <div class="impact-sub">Hardcoded active conversion list</div>
       </div>
       <div class="impact-metric">
-        <div class="impact-value" id="fl-no-opp">--</div>
+        <div class="impact-value"><button id="fl-no-opp" type="button" onclick="openAccounts('Contacted Accounts Without Migration Opps', contactedNoOppAccountRows())">--</button></div>
         <div class="impact-label">Engaged, no opp yet</div>
         <div class="impact-sub">Gameplan pool</div>
       </div>
@@ -816,6 +818,47 @@ function populateOpportunityFilters(opps) {
   populateSelect('psa-account-status-filter', uniqueValues(opps, psaAccountStatusForOpp), 'No PSA account status');
 }
 
+
+function accountRowsFromTouchpoints(predicate) {
+  if (!MASTER || !KEY_STATS) return [];
+  const touches = KEY_STATS.touchpointsByAccount || [];
+  return touches
+    .filter(predicate)
+    .map(row => ACCOUNT_BY_ID.get(row.accountId))
+    .filter(Boolean);
+}
+
+function contactedAccountRows() {
+  return accountRowsFromTouchpoints(row => (row.email || 0) > 0 || (row.phone || 0) > 0);
+}
+
+function openMigrationOppRows() {
+  if (!MASTER) return [];
+  return MASTER.opportunities.filter(opp => !opp.isClosed && opp.stage !== 'Closed Lost' && !(opp.isWon || opp.stage === 'Closed Won'));
+}
+
+function wonMigrationOppRows() {
+  if (!MASTER) return [];
+  return MASTER.opportunities.filter(opp => opp.isWon || opp.stage === 'Closed Won');
+}
+
+function activeConversionAccountRows() {
+  if (!MASTER || !KEY_STATS) return [];
+  return (KEY_STATS.activeConversions || [])
+    .map(row => row.sfAccount ? ACCOUNT_BY_NAME.get(row.sfAccount) : null)
+    .filter(Boolean);
+}
+
+function contactedNoOppAccountRows(status = null) {
+  if (!MASTER || !KEY_STATS) return [];
+  const oppAccountIds = new Set(MASTER.opportunities.map(opp => opp.accountId).filter(Boolean));
+  return accountRowsFromTouchpoints(row => {
+    const account = ACCOUNT_BY_ID.get(row.accountId);
+    const contacted = (row.email || 0) > 0 || (row.phone || 0) > 0;
+    return contacted && !oppAccountIds.has(row.accountId) && (!status || (account?.webMigrationStatus || 'Unknown') === status);
+  });
+}
+
 function renderKeyStats(stats) {
   KEY_STATS = stats;
   if (!stats) return;
@@ -843,15 +886,16 @@ function renderKeyStats(stats) {
   document.getElementById('fl-active').textContent = fmt.format(f.activeConversions || v.activeConversionsProvided || 9);
   document.getElementById('fl-no-opp').textContent = fmt.format(f.contactedNoOppAccounts || gp.accounts || 0);
   document.getElementById('fl-detail').innerHTML = [
-    `${fmt.format(c.emailTouchpoints || 0)} emails`,
-    `${fmt.format(c.phoneTouchpoints || 0)} calls`,
+    `${fmt.format(f.webinarsRun || 0)} webinars run`,
+    `${fmt.format(f.cbrsSinceFirstWebinar || 0)} CBRs since first webinar`,
     `${fmt.format(f.accountsWithCbrSinceFirstWebinar || 0)} accounts with CBRs`,
-    `${fmt.format(c.accountsTouchedLast30Days || 0)} touched in last 30 days`
+    `${fmt.format(c.accountsTouchedLast30Days || 0)} accounts touched in last 30 days`,
+    `most recent outreach ${f.latestTouchDate ? formatDate(f.latestTouchDate) : '--'}`
   ].map(x => `<span class="event-pill">${esc(x)}</span>`).join('');
   document.getElementById('no-opp-status-table').innerHTML = (gp.statusBreakdown || []).map(row => `
     <tr>
       <td>${esc(row.status)}</td>
-      <td class="num-c">${fmt.format(row.accounts || 0)}</td>
+      <td class="num-c"><button class="num-btn" type="button" onclick="openAccounts('Contacted ${esc(row.status)} Accounts Without Migration Opps', contactedNoOppAccountRows('${esc(row.status)}'))">${fmt.format(row.accounts || 0)}</button></td>
       <td class="num-c">${fmt.format(row.touchpoints || 0)}</td>
       <td class="num-c">${fmt.format(row.emailTouchpoints || 0)}</td>
       <td class="num-c">${fmt.format(row.phoneTouchpoints || 0)}</td>
