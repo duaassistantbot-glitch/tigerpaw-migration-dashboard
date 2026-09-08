@@ -239,6 +239,23 @@ async function main() {
     acc[status].rows.push(row);
     return acc;
   }, {})).sort((a,b) => b.count - a.count || a.status.localeCompare(b.status));
+  const tigerpawGraduatedClients = onboardingDashboard ? (onboardingDashboard.graduatedClients || [])
+    .filter(client => ['yes', 'true', '1'].includes(String(client.existingTigerpaw || '').trim().toLowerCase()))
+    .map(client => ({
+      account: client.name,
+      opportunity: '',
+      amount: client.mrru || 0,
+      closeDate: client.dateSold || null,
+      owner: '',
+      onboardingName: client.name,
+      onboardingStatus: client.status || 'Graduated',
+      onboardingBucket: 'Graduated',
+      onboardingOwner: client.owner || client.projectManager || client.solutionsAnalyst || '',
+      salesRep: client.salesRep || '',
+      forecastedGraduationDate: client.actualGraduationDate || client.currentGraduationDate || client.forecastedGraduationDate || null,
+      startKoDate: client.startKoDate || null,
+      notionUrl: client.notionUrl || ''
+    })) : [];
 
   const activeNorm = new Set(ACTIVE_CONVERSIONS.map(norm));
   const fuzzyMatch = (source, target) => {
@@ -298,7 +315,7 @@ async function main() {
       openOpps: openOpps.length,
       wonOpps: soldOpps.length,
       currentlyOnboardingWonOpps: wonCurrentlyOnboarding.length,
-      activeConversions: ACTIVE_CONVERSIONS.length,
+      activeConversions: tigerpawGraduatedClients.length || ACTIVE_CONVERSIONS.length,
       contactedNoOppAccounts: contactedNoOppAccounts.length,
       latestTouchDate,
       firstWebinarDate
@@ -307,6 +324,10 @@ async function main() {
       count: wonCurrentlyOnboarding.length,
       statusBreakdown: onboardingStatusBreakdown,
       rows: wonCurrentlyOnboarding
+    },
+    graduatedTigerpawStats: {
+      count: tigerpawGraduatedClients.length,
+      rows: tigerpawGraduatedClients
     },
     noOppGameplan: {
       accounts: contactedNoOppAccounts.length,

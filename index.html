@@ -212,7 +212,7 @@
     </div>
     <div class="key-stat-card green no-accent">
       <div class="key-stat-label">Graduated</div>
-      <div class="key-stat-value" id="ks-active">9</div>
+      <div class="key-stat-value" id="ks-active">--</div>
     </div>
     <div class="key-stat-card">
       <div class="key-stat-label">Conversions sold</div>
@@ -276,7 +276,7 @@
         <div class="impact-sub">Closed Won currently onboarding</div>
       </div>
       <div class="impact-metric highlight">
-        <div class="impact-value"><button id="fl-active" type="button" onclick="openAccounts('Graduated Accounts', activeConversionAccountRows())">9</button></div>
+        <div class="impact-value"><button id="fl-active" type="button" onclick="openGraduatedTigerpawRows()">--</button></div>
         <div class="impact-label">Graduated</div>
         <div class="impact-sub">Graduated conversion list</div>
       </div>
@@ -313,22 +313,22 @@
   <section class="card active-list" aria-label="Graduated conversions">
     <div class="card-head">
       <h2>Graduated</h2>
-      <span>Graduated list enriched with Salesforce opportunity/touchpoint data when matched</span>
+      <span>From onboarding dashboard: Graduated clients where Existing Tigerpaw = Yes</span>
     </div>
     <table>
       <thead>
         <tr>
           <th>Company</th>
-          <th>Salesforce Account</th>
-          <th>Migration Status</th>
-          <th>Opportunity</th>
+          <th>Onboarding Status</th>
+          <th>Onboarding Owner</th>
+          <th>Sales Rep</th>
+          <th>Graduated Date</th>
           <th class="num-h">MRR</th>
-          <th class="num-h">Touchpoints</th>
-          <th>Last Touch</th>
+          <th>Notion</th>
         </tr>
       </thead>
       <tbody id="active-conversions-table">
-        <tr><td colspan="7" class="empty">Loading active conversions...</td></tr>
+        <tr><td colspan="7" class="empty">Loading graduated accounts...</td></tr>
       </tbody>
     </table>
   </section>
@@ -676,6 +676,11 @@ function openWonOnboardingRows(status = null) {
   openOnboardingRows(status ? `Closed Won Currently Onboarding - ${status}` : 'Closed Won Currently Onboarding', rows);
 }
 
+function openGraduatedTigerpawRows() {
+  if (!KEY_STATS) return;
+  openOnboardingRows('Graduated Tigerpaw Accounts', KEY_STATS.graduatedTigerpawStats?.rows || []);
+}
+
 function renderDrilldownRows() {
   const search = document.getElementById('drill-search').value.trim().toLowerCase();
   const rows = DRILLDOWN.rows.filter(row => Object.values(row).join(' ').toLowerCase().includes(search));
@@ -909,7 +914,7 @@ function renderKeyStats(stats) {
   const f = stats.funnelStats || {};
   const gp = stats.noOppGameplan || {};
   document.getElementById('ks-contacted').textContent = fmt.format(c.accountsContactedEmailOrPhone || 0);
-  document.getElementById('ks-active').textContent = fmt.format(v.activeConversionsProvided || 9);
+  document.getElementById('ks-active').textContent = fmt.format(stats.graduatedTigerpawStats?.count || f.activeConversions || v.activeConversionsProvided || 0);
   document.getElementById('ks-last-touch').textContent = c.latestTouchDate ? formatDate(c.latestTouchDate) : '--';
   document.getElementById('ks-touch-30').textContent = fmt.format(c.accountsTouchedLast30Days || 0);
   document.getElementById('ks-touch-60').textContent = fmt.format(c.accountsTouchedLast60Days || 0);
@@ -925,7 +930,7 @@ function renderKeyStats(stats) {
   document.getElementById('fl-won').textContent = fmt.format(f.wonOpps || 0);
   document.getElementById('fl-won-sub').textContent = `${money.format(v.soldConversionMrr || 0)} sold migration MRR tracked in SF`;
   document.getElementById('fl-onboarding').textContent = fmt.format(f.currentlyOnboardingWonOpps || stats.wonOnboardingStats?.count || 0);
-  document.getElementById('fl-active').textContent = fmt.format(f.activeConversions || v.activeConversionsProvided || 9);
+  document.getElementById('fl-active').textContent = fmt.format(stats.graduatedTigerpawStats?.count || f.activeConversions || v.activeConversionsProvided || 0);
   document.getElementById('fl-no-opp').textContent = fmt.format(f.contactedNoOppAccounts || gp.accounts || 0);
   document.getElementById('fl-detail').innerHTML = [
     `${fmt.format(f.webinarsRun || 0)} webinars run`,
@@ -942,21 +947,17 @@ function renderKeyStats(stats) {
       <td>${row.latestContactType ? esc(row.latestContactType[0].toUpperCase() + row.latestContactType.slice(1)) : '--'}</td>
       <td>${row.latestCbrDate ? formatDate(row.latestCbrDate) : '--'}</td>
     </tr>`).join('') || '<tr><td colspan="5" class="empty">No contacted/no-opp accounts found.</td></tr>';
-  const activeRows = stats.activeConversions || [];
-  document.getElementById('active-conversions-table').innerHTML = activeRows.map(row => {
-    const opp = (row.opportunities || [])[0] || {};
-    const touches = row.touchpoints;
-    return `
+  const graduatedRows = stats.graduatedTigerpawStats?.rows || [];
+  document.getElementById('active-conversions-table').innerHTML = graduatedRows.map(row => `
       <tr>
-        <td><strong>${esc(row.name)}</strong></td>
-        <td>${esc(row.sfAccount || 'Not matched')}</td>
-        <td><span class="pill">${esc(row.status || 'Unknown')}</span></td>
-        <td>${esc(opp.name || '')}<br><span class="key-stat-sub">${esc(opp.stage || '')} ${opp.closeDate ? '• ' + esc(formatDate(opp.closeDate)) : ''}</span></td>
-        <td class="num-c">${money.format(opp.amount || 0)}</td>
-        <td class="num-c">${touches ? fmt.format(touches.total || 0) : '--'}<br><span class="key-stat-sub">${touches ? `${fmt.format(touches.email || 0)} email / ${fmt.format(touches.phone || 0)} phone` : ''}</span></td>
-        <td>${touches?.lastTouch ? formatDate(touches.lastTouch) : '--'}</td>
-      </tr>`;
-  }).join('') || '<tr><td colspan="7" class="empty">No active conversions loaded.</td></tr>';
+        <td><strong>${esc(row.account)}</strong></td>
+        <td><span class="pill">${esc(row.onboardingStatus || 'Graduated')}</span></td>
+        <td>${esc(row.onboardingOwner || '')}</td>
+        <td>${esc(row.salesRep || '')}</td>
+        <td>${row.forecastedGraduationDate ? formatDate(row.forecastedGraduationDate) : '--'}</td>
+        <td class="num-c">${money.format(row.amount || 0)}</td>
+        <td>${row.notionUrl ? `<a href="${esc(row.notionUrl)}" target="_blank" rel="noopener">Open</a>` : ''}</td>
+      </tr>`).join('') || '<tr><td colspan="7" class="empty">No graduated Tigerpaw accounts loaded.</td></tr>';
 
   const caveats = stats.caveats || [];
   if (caveats.length) {
