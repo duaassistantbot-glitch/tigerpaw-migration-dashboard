@@ -68,6 +68,11 @@ const q = s => `'${String(s).replace(/'/g, "\\'")}'`;
 const norm = s => String(s || '').toLowerCase().replace(/&/g,'and').replace(/[^a-z0-9]+/g,' ').trim();
 const money = n => Math.round((Number(n)||0)*100)/100;
 const daysBetween = (a, b) => Math.floor((a - b) / 86400000);
+function isCbrTask(t) {
+  const hay = [t.Subject, t.Type, t.TaskSubtype, t.CallDisposition, t.Call_Disposition2__c, t.Description].filter(Boolean).join(' ').toLowerCase();
+  return /\bcbr\b|client business review|business review/.test(hay);
+}
+
 function classifyTask(t) {
   const hay = [t.Subject, t.Type, t.TaskSubtype, t.CallType, t.CallDisposition, t.Call_Disposition2__c, t.SalesLoft_Email_Template_Title__c].filter(Boolean).join(' ').toLowerCase();
   if (hay.includes('email')) return 'email';
@@ -94,10 +99,10 @@ async function main() {
   console.log('Querying account/contact tasks...');
   let tasks = [];
   for (const ids of chunk(accountIds, 200)) {
-    tasks.push(...await sfQueryAll(token, `SELECT Id, WhatId, WhoId, Subject, Type, TaskSubtype, ActivityDate, Status, CreatedDate, CallType, CallDisposition, CallDurationInSeconds, Call_Disposition2__c, Call_Duration_seconds__c, SalesLoft_Email_Template_Title__c FROM Task WHERE WhatId IN (${ids.map(q).join(',')})`));
+    tasks.push(...await sfQueryAll(token, `SELECT Id, WhatId, WhoId, Subject, Type, TaskSubtype, ActivityDate, Status, CreatedDate, CallType, CallDisposition, CallDurationInSeconds, Call_Disposition2__c, Call_Duration_seconds__c, SalesLoft_Email_Template_Title__c, Description FROM Task WHERE WhatId IN (${ids.map(q).join(',')})`));
   }
   for (const ids of chunk(contactIds, 200)) {
-    tasks.push(...await sfQueryAll(token, `SELECT Id, WhatId, WhoId, Subject, Type, TaskSubtype, ActivityDate, Status, CreatedDate, CallType, CallDisposition, CallDurationInSeconds, Call_Disposition2__c, Call_Duration_seconds__c, SalesLoft_Email_Template_Title__c FROM Task WHERE WhoId IN (${ids.map(q).join(',')})`));
+    tasks.push(...await sfQueryAll(token, `SELECT Id, WhatId, WhoId, Subject, Type, TaskSubtype, ActivityDate, Status, CreatedDate, CallType, CallDisposition, CallDurationInSeconds, Call_Disposition2__c, Call_Duration_seconds__c, SalesLoft_Email_Template_Title__c, Description FROM Task WHERE WhoId IN (${ids.map(q).join(',')})`));
   }
   const seenTask = new Set();
   tasks = tasks.filter(t => !seenTask.has(t.Id) && seenTask.add(t.Id));
@@ -116,15 +121,33 @@ async function main() {
   }
 
   const webinarCompanyNames = new Set();
-  for (const event of Object.values(webinar.events || {})) {
+  const webinarEvents = Object.values(webinar.events || {});
+  const firstWebinarDate = webinarEvents.map(e => e.eventDate || e.startDate).filter(Boolean).sort()[0] || null;
+  for (const event of webinarEvents) {
     for (const r of event.registrants || []) if (r.company) webinarCompanyNames.add(norm(r.company));
   }
+  const webinarAccountIds = new Set();
   for (const a of accounts) {
     if (webinarCompanyNames.has(norm(a.name))) {
+      webinarAccountIds.add(a.id);
       touchByAccount[a.id].webinarRegistrants += 1;
       touchByAccount[a.id].total += 1;
       touchByAccount[a.id].email += 1;
     }
+  }
+
+  const webinarOpps = (master.opportunities || []).filter(o => webinarAccountIds.has(o.accountId));
+  const cbrTaskIds = new Set();
+  const cbrAccountIds = new Set();
+  let latestCbrDate = null;
+  for (const t of tasks) {
+    const aid = accountById[t.WhatId] ? t.WhatId : contactAccount[t.WhoId];
+    if (!aid || !webinarAccountIds.has(aid) || !isCbrTask(t)) continue;
+    const dt = t.ActivityDate || (t.CreatedDate || '').slice(0, 10);
+    if (firstWebinarDate && dt && dt < firstWebinarDate) continue;
+    cbrTaskIds.add(t.Id);
+    cbrAccountIds.add(aid);
+    if (dt && dt <= todayIso && (!latestCbrDate || dt > latestCbrDate)) latestCbrDate = dt;
   }
 
   const asOf = new Date();
@@ -161,8 +184,31 @@ async function main() {
     sourceGeneratedAt: master.generatedAt,
     caveats: [
       'Notion PSA Onboarding Dashboard and Client Master/MRR databases were not accessible to the current integration at build time; CS graduation and account MRR are left as Notion-dependent until shared.',
-      'Account contacted = Salesforce Task classified as email/phone on the Account or related Contacts, plus matched webinar registrant company as email-confirmed.'
+      'Account contacted = Salesforce Task classified as email/phone on the Account or related Contacts, plus matched webinar registrant company as email-confirmed.',
+      'Webinar attendance is not in the current webinar export; attendance remains null until an attendance/join-duration export is available.'
     ],
+    webinarStats: {
+      webinarsRun: webinarEvents.length,
+      firstWebinarDate,
+      totalExternalRegistrants: webinarEvents.reduce((s,e)=>s+(e.externalTotal||0),0),
+      uniqueRegisteredCompaniesRaw: webinarCompanyNames.size,
+      registeredAccountsMatchedToMigrationAccounts: webinarAccountIds.size,
+      registeredAccountsPreviouslyContacted: [...webinarAccountIds].filter(id => touchByAccount[id] && (touchByAccount[id].email > 0 || touchByAccount[id].phone > 0)).length,
+      attendedAccounts: null,
+      attendanceSource: null,
+      oppsFromRegisteredAccounts: webinarOpps.length,
+      wonOppsFromRegisteredAccounts: webinarOpps.filter(o => o.isWon || o.stage === 'Closed Won').length,
+      cbrsSinceFirstWebinar: cbrTaskIds.size,
+      accountsWithCbrSinceFirstWebinar: cbrAccountIds.size,
+      latestCbrDate,
+      byEvent: webinarEvents.map(event => ({
+        key: event.key,
+        title: event.title,
+        eventDate: event.eventDate || event.startDate || null,
+        externalRegistrants: event.externalTotal || 0,
+        uniqueAccounts: event.uniqueAccounts || 0
+      }))
+    },
     contactStats: {
       migrationAccounts: accounts.length,
       accountsContactedEmailOrPhone: contacted.length,

@@ -1,10 +1,49 @@
 {
-  "generatedAt": "2026-09-07T23:51:48.251Z",
+  "generatedAt": "2026-09-08T01:41:04.623Z",
   "sourceGeneratedAt": "2026-09-07T22:27:09.402Z",
   "caveats": [
     "Notion PSA Onboarding Dashboard and Client Master/MRR databases were not accessible to the current integration at build time; CS graduation and account MRR are left as Notion-dependent until shared.",
-    "Account contacted = Salesforce Task classified as email/phone on the Account or related Contacts, plus matched webinar registrant company as email-confirmed."
+    "Account contacted = Salesforce Task classified as email/phone on the Account or related Contacts, plus matched webinar registrant company as email-confirmed.",
+    "Webinar attendance is not in the current webinar export; attendance remains null until an attendance/join-duration export is available."
   ],
+  "webinarStats": {
+    "webinarsRun": 3,
+    "firstWebinarDate": "2026-05-21T18:00:00Z",
+    "totalExternalRegistrants": 377,
+    "uniqueRegisteredCompaniesRaw": 203,
+    "registeredAccountsMatchedToMigrationAccounts": 179,
+    "registeredAccountsPreviouslyContacted": 179,
+    "attendedAccounts": null,
+    "attendanceSource": null,
+    "oppsFromRegisteredAccounts": 69,
+    "wonOppsFromRegisteredAccounts": 21,
+    "cbrsSinceFirstWebinar": 193,
+    "accountsWithCbrSinceFirstWebinar": 64,
+    "latestCbrDate": "2026-09-04",
+    "byEvent": [
+      {
+        "key": "may21",
+        "title": "May 21 Webinar",
+        "eventDate": "2026-05-21T18:00:00Z",
+        "externalRegistrants": 182,
+        "uniqueAccounts": 107
+      },
+      {
+        "key": "june10",
+        "title": "June 10 Webinar",
+        "eventDate": "2026-06-10T19:00:00Z",
+        "externalRegistrants": 128,
+        "uniqueAccounts": 81
+      },
+      {
+        "key": "june29",
+        "title": "June 29 Webinar",
+        "eventDate": "2026-06-29T19:00:00Z",
+        "externalRegistrants": 67,
+        "uniqueAccounts": 49
+      }
+    ]
+  },
   "contactStats": {
     "migrationAccounts": 649,
     "accountsContactedEmailOrPhone": 647,
@@ -18,7 +57,7 @@
     "medianLastTouchDate": "2026-08-14",
     "accountsTouchedLast30Days": 367,
     "accountsTouchedLast60Days": 518,
-    "accountsTouchedLast90Days": 539,
+    "accountsTouchedLast90Days": 538,
     "relatedMrr": null
   },
   "conversionStats": {

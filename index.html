@@ -40,6 +40,14 @@
   .recency-card.green { background: #EAF7E6; border-left-color: #6EBE4F; }
   .recency-value { font-family: 'Montserrat', sans-serif; font-size: 22px; font-weight: 800; color: #1D3756; }
   .recency-label { margin-top: 4px; font-size: 11px; font-weight: 800; color: #3d4d5c; text-transform: uppercase; letter-spacing: .4px; }
+  .impact-grid { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 12px; padding: 14px; background: #FFFFFF; }
+  .impact-metric { border: 1px solid #DDE2E8; border-radius: 8px; padding: 13px; background: #F5F7FA; }
+  .impact-metric.highlight { background: #EAF7E6; border-color: #CFE8C6; }
+  .impact-value { font-family: 'Montserrat', sans-serif; font-size: 24px; line-height: 1; font-weight: 800; color: #1D3756; }
+  .impact-label { margin-top: 6px; color: #687789; font-size: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: .45px; line-height: 1.25; }
+  .impact-sub { margin-top: 6px; color: #3d4d5c; font-size: 11px; line-height: 1.35; }
+  .webinar-events { border-top: 1px solid #DDE2E8; padding: 11px 14px; display: flex; flex-wrap: wrap; gap: 8px; background: #FFFFFF; }
+  .event-pill { border: 1px solid #DDE2E8; border-radius: 999px; padding: 5px 9px; color: #1D3756; background: #EAF6F9; font-size: 11px; font-weight: 800; }
   .active-list { margin: 0 0 18px; }
   .active-list table td, .active-list table th { font-size: 12px; }
   .label { font-size: 11px; text-transform: uppercase; letter-spacing: .6px; font-weight: 800; color: #FFFFFF; }
@@ -122,7 +130,7 @@
   .modal-table td { font-size: 12px; }
   @media (max-width: 900px) {
     .header-inner { align-items: flex-start; flex-direction: column; }
-    .hero-grid, .grid-2, .key-stat-grid, .recency-grid { grid-template-columns: 1fr; }
+    .hero-grid, .grid-2, .key-stat-grid, .recency-grid, .impact-grid { grid-template-columns: 1fr; }
     .bar-row { grid-template-columns: 1fr; gap: 8px; }
     .num { text-align: left; }
     .summary-strip { flex-direction: column; }
@@ -234,6 +242,47 @@
       <div class="recency-label">Median last-touch date</div>
     </div>
   </section>
+
+  <section class="card active-list" aria-label="Webinar impact summary">
+    <div class="card-head">
+      <h2>Webinar Impact</h2>
+      <span>Registrants matched to migration accounts, then tied to SF outreach, opps, and CBR activity</span>
+    </div>
+    <div class="impact-grid">
+      <div class="impact-metric highlight">
+        <div class="impact-value" id="wi-webinars">--</div>
+        <div class="impact-label">Webinars run</div>
+        <div class="impact-sub" id="wi-registrants">Loading registrants...</div>
+      </div>
+      <div class="impact-metric">
+        <div class="impact-value" id="wi-accounts">--</div>
+        <div class="impact-label">Registered accounts</div>
+        <div class="impact-sub">Matched to migration account list</div>
+      </div>
+      <div class="impact-metric highlight">
+        <div class="impact-value" id="wi-contacted">--</div>
+        <div class="impact-label">Already contacted</div>
+        <div class="impact-sub" id="wi-contacted-sub">SF task/webinar touchpoints</div>
+      </div>
+      <div class="impact-metric">
+        <div class="impact-value" id="wi-attended">Needs export</div>
+        <div class="impact-label">Attended</div>
+        <div class="impact-sub">Current export has registrants only</div>
+      </div>
+      <div class="impact-metric highlight">
+        <div class="impact-value" id="wi-opps">--</div>
+        <div class="impact-label">Got into opps</div>
+        <div class="impact-sub" id="wi-won-opps">Loading won opps...</div>
+      </div>
+      <div class="impact-metric">
+        <div class="impact-value" id="wi-cbrs">--</div>
+        <div class="impact-label">CBRs since first webinar</div>
+        <div class="impact-sub" id="wi-cbr-accounts">Loading accounts...</div>
+      </div>
+    </div>
+    <div class="webinar-events" id="wi-events"></div>
+  </section>
+
   <section class="card active-list" aria-label="Active conversions provided by Ardit">
     <div class="card-head">
       <h2>Active Conversions</h2>
@@ -749,6 +798,7 @@ function renderKeyStats(stats) {
   if (!stats) return;
   const c = stats.contactStats || {};
   const v = stats.conversionStats || {};
+  const w = stats.webinarStats || {};
   document.getElementById('ks-contacted').textContent = fmt.format(c.accountsContactedEmailOrPhone || 0);
   document.getElementById('ks-contacted-sub').textContent = `${fmt.format(c.emailTouchpoints || 0)} email + ${fmt.format(c.phoneTouchpoints || 0)} phone touchpoints`;
   document.getElementById('ks-active').textContent = fmt.format(v.activeConversionsProvided || 9);
@@ -759,6 +809,17 @@ function renderKeyStats(stats) {
   document.getElementById('ks-sold').textContent = fmt.format(v.soldConversions || 0);
   document.getElementById('ks-sold-sub').textContent = `${money.format(v.soldConversionMrr || 0)} sold migration MRR tracked in SF opps`;
   document.getElementById('ks-cs').textContent = v.graduatedToCs == null ? 'Needs Notion' : fmt.format(v.graduatedToCs);
+  document.getElementById('wi-webinars').textContent = fmt.format(w.webinarsRun || 0);
+  document.getElementById('wi-registrants').textContent = `${fmt.format(w.totalExternalRegistrants || 0)} external registrants`;
+  document.getElementById('wi-accounts').textContent = fmt.format(w.registeredAccountsMatchedToMigrationAccounts || 0);
+  document.getElementById('wi-contacted').textContent = fmt.format(w.registeredAccountsPreviouslyContacted || 0);
+  document.getElementById('wi-contacted-sub').textContent = `of ${fmt.format(w.registeredAccountsMatchedToMigrationAccounts || 0)} matched registered accounts`;
+  document.getElementById('wi-attended').textContent = w.attendedAccounts == null ? 'Needs export' : fmt.format(w.attendedAccounts);
+  document.getElementById('wi-opps').textContent = fmt.format(w.oppsFromRegisteredAccounts || 0);
+  document.getElementById('wi-won-opps').textContent = `${fmt.format(w.wonOppsFromRegisteredAccounts || 0)} won from registered accounts`;
+  document.getElementById('wi-cbrs').textContent = fmt.format(w.cbrsSinceFirstWebinar || 0);
+  document.getElementById('wi-cbr-accounts').textContent = `${fmt.format(w.accountsWithCbrSinceFirstWebinar || 0)} accounts • latest ${w.latestCbrDate ? formatDate(w.latestCbrDate) : '--'}`;
+  document.getElementById('wi-events').innerHTML = (w.byEvent || []).map(event => `<span class="event-pill">${esc(event.title || event.key)}: ${fmt.format(event.externalRegistrants || 0)} regs / ${fmt.format(event.uniqueAccounts || 0)} accounts</span>`).join('');
   const activeRows = stats.activeConversions || [];
   document.getElementById('active-conversions-table').innerHTML = activeRows.map(row => {
     const opp = (row.opportunities || [])[0] || {};
