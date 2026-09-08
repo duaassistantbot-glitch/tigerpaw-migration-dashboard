@@ -294,14 +294,13 @@
         <tr>
           <th>Web Migration Status</th>
           <th class="num-h">Accounts</th>
-          <th class="num-h">Touchpoints</th>
-          <th class="num-h">Email</th>
-          <th class="num-h">Phone</th>
-          <th>Latest Touch</th>
+          <th>Last Contact</th>
+          <th>Type</th>
+          <th>Last CBR</th>
         </tr>
       </thead>
       <tbody id="no-opp-status-table">
-        <tr><td colspan="6" class="empty">Loading gameplan breakdown...</td></tr>
+        <tr><td colspan="5" class="empty">Loading gameplan breakdown...</td></tr>
       </tbody>
     </table>
   </section>
@@ -893,11 +892,10 @@ function renderKeyStats(stats) {
     <tr>
       <td>${esc(row.status)}</td>
       <td class="num-c"><button class="num-btn" type="button" onclick="openAccounts('Contacted ${esc(row.status)} Accounts Without Migration Opps', contactedNoOppAccountRows('${esc(row.status)}'))">${fmt.format(row.accounts || 0)}</button></td>
-      <td class="num-c">${fmt.format(row.touchpoints || 0)}</td>
-      <td class="num-c">${fmt.format(row.emailTouchpoints || 0)}</td>
-      <td class="num-c">${fmt.format(row.phoneTouchpoints || 0)}</td>
-      <td>${row.latestTouchDate ? formatDate(row.latestTouchDate) : '--'}</td>
-    </tr>`).join('') || '<tr><td colspan="6" class="empty">No contacted/no-opp accounts found.</td></tr>';
+      <td>${row.latestContactDate ? formatDate(row.latestContactDate) : '--'}</td>
+      <td>${row.latestContactType ? esc(row.latestContactType[0].toUpperCase() + row.latestContactType.slice(1)) : '--'}</td>
+      <td>${row.latestCbrDate ? formatDate(row.latestCbrDate) : '--'}</td>
+    </tr>`).join('') || '<tr><td colspan="5" class="empty">No contacted/no-opp accounts found.</td></tr>';
   const activeRows = stats.activeConversions || [];
   document.getElementById('active-conversions-table').innerHTML = activeRows.map(row => {
     const opp = (row.opportunities || [])[0] || {};

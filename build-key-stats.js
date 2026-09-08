@@ -108,7 +108,7 @@ async function main() {
   tasks = tasks.filter(t => !seenTask.has(t.Id) && seenTask.add(t.Id));
 
   const touchByAccount = {};
-  for (const a of accounts) touchByAccount[a.id] = { accountId: a.id, account: a.name, mrr: null, email: 0, phone: 0, other: 0, total: 0, webinarRegistrants: 0, lastTouch: null };
+  for (const a of accounts) touchByAccount[a.id] = { accountId: a.id, account: a.name, mrr: null, email: 0, phone: 0, other: 0, total: 0, webinarRegistrants: 0, lastTouch: null, lastContact: null, lastContactKind: null, lastCbr: null };
   const todayIso = new Date().toISOString().slice(0, 10);
   for (const t of tasks) {
     const aid = accountById[t.WhatId] ? t.WhatId : contactAccount[t.WhoId];
@@ -118,6 +118,11 @@ async function main() {
     touchByAccount[aid].total++;
     const dt = t.ActivityDate || (t.CreatedDate || '').slice(0,10);
     if (dt && dt <= todayIso && (!touchByAccount[aid].lastTouch || dt > touchByAccount[aid].lastTouch)) touchByAccount[aid].lastTouch = dt;
+    if (dt && dt <= todayIso && (kind === 'email' || kind === 'phone') && (!touchByAccount[aid].lastContact || dt > touchByAccount[aid].lastContact || (dt === touchByAccount[aid].lastContact && kind === 'phone'))) {
+      touchByAccount[aid].lastContact = dt;
+      touchByAccount[aid].lastContactKind = kind;
+    }
+    if (dt && dt <= todayIso && isCbrTask(t) && (!touchByAccount[aid].lastCbr || dt > touchByAccount[aid].lastCbr)) touchByAccount[aid].lastCbr = dt;
   }
 
   const webinarCompanyNames = new Set();
@@ -187,12 +192,17 @@ async function main() {
     .sort((a,b) => String(b.lastTouch || '').localeCompare(String(a.lastTouch || '')) || b.total - a.total);
   const contactedNoOppStatusBreakdown = Object.values(contactedNoOppAccounts.reduce((acc, x) => {
     const status = x.accountRecord?.webMigrationStatus || 'Unknown';
-    if (!acc[status]) acc[status] = { status, accounts: 0, touchpoints: 0, emailTouchpoints: 0, phoneTouchpoints: 0, latestTouchDate: null };
+    if (!acc[status]) acc[status] = { status, accounts: 0, touchpoints: 0, emailTouchpoints: 0, phoneTouchpoints: 0, latestTouchDate: null, latestContactDate: null, latestContactType: null, latestCbrDate: null };
     acc[status].accounts++;
     acc[status].touchpoints += x.total || 0;
     acc[status].emailTouchpoints += x.email || 0;
     acc[status].phoneTouchpoints += x.phone || 0;
     if (x.lastTouch && (!acc[status].latestTouchDate || x.lastTouch > acc[status].latestTouchDate)) acc[status].latestTouchDate = x.lastTouch;
+    if (x.lastContact && (!acc[status].latestContactDate || x.lastContact > acc[status].latestContactDate || (x.lastContact === acc[status].latestContactDate && x.lastContactKind === 'phone'))) {
+      acc[status].latestContactDate = x.lastContact;
+      acc[status].latestContactType = x.lastContactKind;
+    }
+    if (x.lastCbr && (!acc[status].latestCbrDate || x.lastCbr > acc[status].latestCbrDate)) acc[status].latestCbrDate = x.lastCbr;
     return acc;
   }, {})).sort((a,b) => b.accounts - a.accounts);
 
@@ -228,7 +238,10 @@ async function main() {
         touchpoints: x.total,
         emailTouchpoints: x.email,
         phoneTouchpoints: x.phone,
-        lastTouch: x.lastTouch
+        lastTouch: x.lastTouch,
+        lastContact: x.lastContact,
+        lastContactType: x.lastContactKind,
+        lastCbr: x.lastCbr
       }))
     },
     webinarStats: {
