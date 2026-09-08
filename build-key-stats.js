@@ -24,6 +24,7 @@ const ACTIVE_CONVERSIONS = [
   'IMC Facility Management',
   'Vanran Communications Services'
 ];
+const GRADUATED_EXCLUDE = new Set(['trilogy', 'midwest technology specialists']);
 
 function sfHost() { return new URL(INSTANCE_URL).hostname; }
 function requestJson(options, body) {
@@ -241,6 +242,7 @@ async function main() {
   }, {})).sort((a,b) => b.count - a.count || a.status.localeCompare(b.status));
   const tigerpawGraduatedClients = onboardingDashboard ? (onboardingDashboard.graduatedClients || [])
     .filter(client => ['yes', 'true', '1'].includes(String(client.existingTigerpaw || '').trim().toLowerCase()))
+    .filter(client => !GRADUATED_EXCLUDE.has(norm(client.name)))
     .map(client => ({
       account: client.name,
       opportunity: '',

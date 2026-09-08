@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-08T13:57:52.083Z",
+  "generatedAt": "2026-09-08T14:05:24.982Z",
   "sourceGeneratedAt": "2026-09-08T12:56:10.669Z",
   "caveats": [
     "Notion PSA Onboarding Dashboard and Client Master/MRR databases were not accessible to the current integration at build time; CS graduation and account MRR are left as Notion-dependent until shared.",
@@ -16,7 +16,7 @@
     "openOpps": 30,
     "wonOpps": 45,
     "currentlyOnboardingWonOpps": 23,
-    "activeConversions": 13,
+    "activeConversions": 11,
     "contactedNoOppAccounts": 551,
     "latestTouchDate": "2026-09-08",
     "firstWebinarDate": "2026-05-21T18:00:00Z"
@@ -767,7 +767,7 @@
     ]
   },
   "graduatedTigerpawStats": {
-    "count": 13,
+    "count": 11,
     "rows": [
       {
         "account": "All Secure",
@@ -875,21 +875,6 @@
         "notionUrl": "https://app.notion.com/p/IMC-Facility-Management-38fa59b7e7b2817295d8d6f0fb807923"
       },
       {
-        "account": "Midwest Technology Specialists",
-        "opportunity": "",
-        "amount": 500,
-        "closeDate": "2025-04-30",
-        "owner": "",
-        "onboardingName": "Midwest Technology Specialists",
-        "onboardingStatus": "Graduated",
-        "onboardingBucket": "Graduated",
-        "onboardingOwner": "Kegan Ehlers",
-        "salesRep": "Andy Whisenant",
-        "forecastedGraduationDate": "2026-04-13",
-        "startKoDate": "2025-10-13",
-        "notionUrl": "https://app.notion.com/p/Midwest-Technology-Specialists-d50065ecdcee4850add32d1ce24a4121"
-      },
-      {
         "account": "QuickCopper",
         "opportunity": "",
         "amount": 2200,
@@ -935,21 +920,6 @@
         "notionUrl": "https://app.notion.com/p/Sunrise-Solutions-Inc-366a59b7e7b28172bea3c85da23a7649"
       },
       {
-        "account": "Trilogy",
-        "opportunity": "",
-        "amount": 400,
-        "closeDate": "2025-06-03",
-        "owner": "",
-        "onboardingName": "Trilogy",
-        "onboardingStatus": "Graduated",
-        "onboardingBucket": "Graduated",
-        "onboardingOwner": "Kegan Ehlers",
-        "salesRep": "Matt Salin",
-        "forecastedGraduationDate": "2025-10-30",
-        "startKoDate": "2025-08-29",
-        "notionUrl": "https://app.notion.com/p/Trilogy-15fefe89b1084291b104d2f589c11a24"
-      },
-      {
         "account": "VanRan Communications Services",
         "opportunity": "",
         "amount": 2184,
@@ -972,19 +942,19 @@
       {
         "status": "Unknown",
         "accounts": 286,
-        "touchpoints": 19656,
-        "emailTouchpoints": 13135,
+        "touchpoints": 19657,
+        "emailTouchpoints": 13136,
         "phoneTouchpoints": 5913,
         "latestTouchDate": "2026-09-08",
         "latestContactDate": "2026-09-08",
         "latestContactType": "phone",
-        "latestCbrDate": "2026-09-05"
+        "latestCbrDate": "2026-09-08"
       },
       {
         "status": "Want to migrate / timeline unknown",
         "accounts": 95,
-        "touchpoints": 13554,
-        "emailTouchpoints": 10390,
+        "touchpoints": 13555,
+        "emailTouchpoints": 10391,
         "phoneTouchpoints": 2793,
         "latestTouchDate": "2026-09-08",
         "latestContactDate": "2026-09-08",
@@ -1099,13 +1069,25 @@
         "account": "Tidal Communications LLC",
         "status": "Unknown",
         "owner": "Ingrid Beard",
-        "touchpoints": 99,
-        "emailTouchpoints": 78,
+        "touchpoints": 100,
+        "emailTouchpoints": 79,
         "phoneTouchpoints": 20,
         "lastTouch": "2026-09-08",
         "lastContact": "2026-09-08",
         "lastContactType": "phone",
-        "lastCbr": "2026-06-30"
+        "lastCbr": "2026-09-08"
+      },
+      {
+        "account": "PC Netsource",
+        "status": "Want to migrate / timeline unknown",
+        "owner": "Blaine Villafuerte",
+        "touchpoints": 66,
+        "emailTouchpoints": 51,
+        "phoneTouchpoints": 13,
+        "lastTouch": "2026-09-08",
+        "lastContact": "2026-09-08",
+        "lastContactType": "email",
+        "lastCbr": "2026-08-06"
       },
       {
         "account": "Voxcom Solutions Inc",
@@ -1646,18 +1628,6 @@
         "lastContact": "2026-09-03",
         "lastContactType": "phone",
         "lastCbr": "2026-09-03"
-      },
-      {
-        "account": "ClearBearing",
-        "status": "Unknown",
-        "owner": "Gavin Aylward",
-        "touchpoints": 29,
-        "emailTouchpoints": 12,
-        "phoneTouchpoints": 16,
-        "lastTouch": "2026-09-03",
-        "lastContact": "2026-09-03",
-        "lastContactType": "email",
-        "lastCbr": "2026-06-29"
       }
     ]
   },
@@ -1703,14 +1673,14 @@
     "migrationAccounts": 674,
     "accountsContactedEmailOrPhone": 672,
     "accountsUnreached": 2,
-    "totalTouchpoints": 71677,
-    "emailTouchpoints": 52505,
+    "totalTouchpoints": 71679,
+    "emailTouchpoints": 52507,
     "phoneTouchpoints": 16973,
     "otherTouchpoints": 2199,
     "webinarExternalRegistrants": 377,
     "latestTouchDate": "2026-09-08",
     "medianLastTouchDate": "2026-08-14",
-    "accountsTouchedLast30Days": 378,
+    "accountsTouchedLast30Days": 379,
     "accountsTouchedLast60Days": 540,
     "accountsTouchedLast90Days": 562,
     "relatedMrr": null
@@ -8789,14 +8759,14 @@
       "accountId": "0016O00003dmuV1QAI",
       "account": "PC Netsource",
       "mrr": null,
-      "email": 50,
+      "email": 51,
       "phone": 13,
       "other": 2,
-      "total": 65,
+      "total": 66,
       "webinarRegistrants": 1,
-      "lastTouch": "2026-08-06",
-      "lastContact": "2026-08-06",
-      "lastContactKind": "phone",
+      "lastTouch": "2026-09-08",
+      "lastContact": "2026-09-08",
+      "lastContactKind": "email",
       "lastCbr": "2026-08-06"
     },
     {
@@ -10805,15 +10775,15 @@
       "accountId": "0011500001n8agGAAQ",
       "account": "Tidal Communications LLC",
       "mrr": null,
-      "email": 78,
+      "email": 79,
       "phone": 20,
       "other": 1,
-      "total": 99,
+      "total": 100,
       "webinarRegistrants": 0,
       "lastTouch": "2026-09-08",
       "lastContact": "2026-09-08",
       "lastContactKind": "phone",
-      "lastCbr": "2026-06-30"
+      "lastCbr": "2026-09-08"
     },
     {
       "accountId": "0016O00003ebbEJQAY",
