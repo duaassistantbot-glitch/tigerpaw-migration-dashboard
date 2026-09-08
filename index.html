@@ -209,12 +209,10 @@
     <div class="key-stat-card no-accent">
       <div class="key-stat-label">Companies contacted</div>
       <div class="key-stat-value" id="ks-contacted">--</div>
-      <div class="key-stat-sub" id="ks-contacted-sub">Loading touchpoints...</div>
     </div>
     <div class="key-stat-card green no-accent">
       <div class="key-stat-label">Active conversions</div>
       <div class="key-stat-value" id="ks-active">9</div>
-      <div class="key-stat-sub">Hardcoded from Ardit's active list</div>
     </div>
     <div class="key-stat-card">
       <div class="key-stat-label">Conversions sold</div>
@@ -867,7 +865,6 @@ function renderKeyStats(stats) {
   const f = stats.funnelStats || {};
   const gp = stats.noOppGameplan || {};
   document.getElementById('ks-contacted').textContent = fmt.format(c.accountsContactedEmailOrPhone || 0);
-  document.getElementById('ks-contacted-sub').textContent = `${fmt.format(c.emailTouchpoints || 0)} email + ${fmt.format(c.phoneTouchpoints || 0)} phone touchpoints`;
   document.getElementById('ks-active').textContent = fmt.format(v.activeConversionsProvided || 9);
   document.getElementById('ks-last-touch').textContent = c.latestTouchDate ? formatDate(c.latestTouchDate) : '--';
   document.getElementById('ks-touch-30').textContent = fmt.format(c.accountsTouchedLast30Days || 0);
