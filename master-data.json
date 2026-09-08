@@ -1,22 +1,34 @@
 {
-  "generatedAt": "2026-09-07T22:27:09.402Z",
+  "generatedAt": "2026-09-08T12:56:10.669Z",
   "filters": {
     "account": "Web_Migration__c != null",
     "opportunity": "Type = 'Legacy Migration'",
     "closedLost": "StageName = 'Closed Lost'"
   },
   "totals": {
-    "tigerpawAccounts": 649,
-    "legacyMigrationOpps": 136,
-    "legacyMigrationAmount": 152661.64999999997,
-    "closedLostOpps": 61
+    "tigerpawAccounts": 674,
+    "legacyMigrationOpps": 137,
+    "legacyMigrationAmount": 154534.64999999997,
+    "closedLostOpps": 62
   },
   "statusBreakdown": [
     {
       "label": "Unknown",
-      "count": 277,
-      "pct": 42.7,
+      "count": 287,
+      "pct": 42.6,
       "accounts": [
+        {
+          "id": "001PX00000LTJGBYA5",
+          "name": "210 Solutions",
+          "type": "Rev.io PSA Client",
+          "webMigrationStatus": "Unknown",
+          "webMigrationDetails": "",
+          "psaAccountStatus": "",
+          "accountStatus": "",
+          "owner": "",
+          "vertical": "",
+          "psaWeb": false
+        },
         {
           "id": "0016O00003dmuJRQAY",
           "name": "A&A Technology Group",
@@ -66,6 +78,18 @@
           "psaWeb": false
         },
         {
+          "id": "001PX0000071NPzYAM",
+          "name": "Advanced Audio",
+          "type": "Rev.io PSA Client",
+          "webMigrationStatus": "Unknown",
+          "webMigrationDetails": "",
+          "psaAccountStatus": "",
+          "accountStatus": "",
+          "owner": "",
+          "vertical": "",
+          "psaWeb": false
+        },
+        {
           "id": "0016O00003dmuJkQAI",
           "name": "Advanced Concepts",
           "type": "Rev.io PSA Client",
@@ -98,6 +122,18 @@
           "psaAccountStatus": "Active - Unleashed",
           "accountStatus": "Active - Unleashed",
           "owner": "Blaine Villafuerte",
+          "vertical": "",
+          "psaWeb": false
+        },
+        {
+          "id": "001PX000003tpoKYAQ",
+          "name": "Advanosys",
+          "type": "Rev.io PSA Client",
+          "webMigrationStatus": "Unknown",
+          "webMigrationDetails": "",
+          "psaAccountStatus": "",
+          "accountStatus": "",
+          "owner": "",
           "vertical": "",
           "psaWeb": false
         },
@@ -186,6 +222,18 @@
           "psaWeb": false
         },
         {
+          "id": "001PX00000Syv4xYAB",
+          "name": "Ataraxis Solutions",
+          "type": "Rev.io PSA Client",
+          "webMigrationStatus": "Unknown",
+          "webMigrationDetails": "",
+          "psaAccountStatus": "Active - Web",
+          "accountStatus": "Active - Web",
+          "owner": "",
+          "vertical": "",
+          "psaWeb": true
+        },
+        {
           "id": "0016O00003ebhO3QAI",
           "name": "ATI",
           "type": "TigerPaw Client",
@@ -218,6 +266,18 @@
           "psaAccountStatus": "Active - Unleashed",
           "accountStatus": "Active - Unleashed",
           "owner": "Ingrid Beard",
+          "vertical": "",
+          "psaWeb": false
+        },
+        {
+          "id": "001PX00000RlHkDYAV",
+          "name": "Audio Video Experts",
+          "type": "Rev.io PSA Client",
+          "webMigrationStatus": "Unknown",
+          "webMigrationDetails": "",
+          "psaAccountStatus": "",
+          "accountStatus": "",
+          "owner": "",
           "vertical": "",
           "psaWeb": false
         },
@@ -314,18 +374,6 @@
           "psaAccountStatus": "Active - Tigerpaw One",
           "accountStatus": "Active - Tigerpaw One",
           "owner": "Gavin Aylward",
-          "vertical": "",
-          "psaWeb": false
-        },
-        {
-          "id": "0016O00003dmuciQAA",
-          "name": "Bahamas Information Access Systems Limited",
-          "type": "Cold Prospect",
-          "webMigrationStatus": "Unknown",
-          "webMigrationDetails": "08/2026 owner is not showing interest",
-          "psaAccountStatus": "",
-          "accountStatus": "",
-          "owner": "",
           "vertical": "",
           "psaWeb": false
         },
@@ -474,18 +522,6 @@
           "psaWeb": false
         },
         {
-          "id": "0016O00003dmuL9QAI",
-          "name": "CC-Teknologies Inc.",
-          "type": "Rev.io PSA Client",
-          "webMigrationStatus": "Unknown",
-          "webMigrationDetails": "",
-          "psaAccountStatus": "Active - Unleashed",
-          "accountStatus": "Active - Unleashed",
-          "owner": "Gavin Aylward",
-          "vertical": "",
-          "psaWeb": false
-        },
-        {
           "id": "0016O00003dmuLGQAY",
           "name": "Chief Datacom",
           "type": "Rev.io PSA Client",
@@ -498,18 +534,6 @@
           "psaWeb": false
         },
         {
-          "id": "0016O00003dmuViQAI",
-          "name": "Chortek",
-          "type": "TigerPaw Client",
-          "webMigrationStatus": "Unknown",
-          "webMigrationDetails": "",
-          "psaAccountStatus": "Active - Unleashed",
-          "accountStatus": "Active - Unleashed",
-          "owner": "Gavin Aylward",
-          "vertical": "",
-          "psaWeb": false
-        },
-        {
           "id": "0016O00003dmuLHQAY",
           "name": "Circle Industries, Inc.",
           "type": "Rev.io PSA Client",
@@ -518,6 +542,18 @@
           "psaAccountStatus": "Active - Tigerpaw One",
           "accountStatus": "Active - Tigerpaw One",
           "owner": "Blaine Villafuerte",
+          "vertical": "",
+          "psaWeb": false
+        },
+        {
+          "id": "0016O0000370KGaQAM",
+          "name": "Citi-Telecom Voice & Data Inc",
+          "type": "Rev.io PSA Client",
+          "webMigrationStatus": "Unknown",
+          "webMigrationDetails": "",
+          "psaAccountStatus": "",
+          "accountStatus": "",
+          "owner": "",
           "vertical": "",
           "psaWeb": false
         },
@@ -858,6 +894,18 @@
           "psaWeb": false
         },
         {
+          "id": "001PX00000NIlzJYAT",
+          "name": "DeTel Communications",
+          "type": "Rev.io PSA Client",
+          "webMigrationStatus": "Unknown",
+          "webMigrationDetails": "",
+          "psaAccountStatus": "",
+          "accountStatus": "",
+          "owner": "",
+          "vertical": "",
+          "psaWeb": false
+        },
+        {
           "id": "0016O00003dmuOlQAI",
           "name": "Digital Provisions, Inc.",
           "type": "Tigerpaw Churn",
@@ -1098,6 +1146,18 @@
           "psaWeb": false
         },
         {
+          "id": "001PX00000NZjt8YAD",
+          "name": "Evotech",
+          "type": "Rev.io PSA Client",
+          "webMigrationStatus": "Unknown",
+          "webMigrationDetails": "",
+          "psaAccountStatus": "",
+          "accountStatus": "",
+          "owner": "",
+          "vertical": "",
+          "psaWeb": false
+        },
+        {
           "id": "0016O00003dmuPGQAY",
           "name": "Ex-Cel Solutions",
           "type": "Warm Prospect",
@@ -1230,6 +1290,18 @@
           "psaWeb": false
         },
         {
+          "id": "001PX00000FgqYeYAJ",
+          "name": "Generex Systems",
+          "type": "TigerPaw Client",
+          "webMigrationStatus": "Unknown",
+          "webMigrationDetails": "",
+          "psaAccountStatus": "",
+          "accountStatus": "",
+          "owner": "",
+          "vertical": "",
+          "psaWeb": false
+        },
+        {
           "id": "0016O00003dmuPiQAI",
           "name": "Genie Innovations, Inc.",
           "type": "TigerPaw Client",
@@ -1314,6 +1386,18 @@
           "psaWeb": false
         },
         {
+          "id": "001PX00000CbOBHYA3",
+          "name": "Heartland Steel Doors Ltd.",
+          "type": "Rev.io PSA Client",
+          "webMigrationStatus": "Unknown",
+          "webMigrationDetails": "",
+          "psaAccountStatus": "",
+          "accountStatus": "",
+          "owner": "Ingrid Beard",
+          "vertical": "",
+          "psaWeb": false
+        },
+        {
           "id": "0016O00003dmoxJQAQ",
           "name": "Helios TFB",
           "type": "Rev.io PSA Client",
@@ -1326,33 +1410,9 @@
           "psaWeb": false
         },
         {
-          "id": "0016O00003doC5KQAU",
-          "name": "Herring Technology",
-          "type": "Rev.io PSA Client",
-          "webMigrationStatus": "Unknown",
-          "webMigrationDetails": "Meeting with them 9/10/26 to discuss",
-          "psaAccountStatus": "Active - Unleashed",
-          "accountStatus": "Active - Unleashed",
-          "owner": "Ingrid Beard",
-          "vertical": "Physical Security / Building Access",
-          "psaWeb": false
-        },
-        {
           "id": "0016O00003dmuQ2QAI",
           "name": "Hi Tech Enterprises, Inc",
           "type": "Tigerpaw Churn",
-          "webMigrationStatus": "Unknown",
-          "webMigrationDetails": "",
-          "psaAccountStatus": "Active - Tigerpaw One",
-          "accountStatus": "Active - Tigerpaw One",
-          "owner": "Blaine Villafuerte",
-          "vertical": "",
-          "psaWeb": false
-        },
-        {
-          "id": "0016O00003dmuQ0QAI",
-          "name": "High Country Workplace Technologies",
-          "type": "Rev.io PSA Client",
           "webMigrationStatus": "Unknown",
           "webMigrationDetails": "",
           "psaAccountStatus": "Active - Tigerpaw One",
@@ -1389,6 +1449,18 @@
           "id": "0011500001HNQBTAA5",
           "name": "Huntleigh Telecommunications Group",
           "type": "TigerPaw Client",
+          "webMigrationStatus": "Unknown",
+          "webMigrationDetails": "",
+          "psaAccountStatus": "Active - Tigerpaw One",
+          "accountStatus": "Active - Tigerpaw One",
+          "owner": "",
+          "vertical": "",
+          "psaWeb": false
+        },
+        {
+          "id": "001PX000006dndYYAQ",
+          "name": "i-2-i Technology",
+          "type": "Rev.io PSA Client",
           "webMigrationStatus": "Unknown",
           "webMigrationDetails": "",
           "psaAccountStatus": "Active - Tigerpaw One",
@@ -1638,6 +1710,18 @@
           "psaWeb": false
         },
         {
+          "id": "001PX00000RENwaYAH",
+          "name": "Jeffery Forrester",
+          "type": "TigerPaw Client",
+          "webMigrationStatus": "Unknown",
+          "webMigrationDetails": "",
+          "psaAccountStatus": "",
+          "accountStatus": "",
+          "owner": "",
+          "vertical": "",
+          "psaWeb": false
+        },
+        {
           "id": "0016O00003dmuTSQAY",
           "name": "KCG Communications",
           "type": "Rev.io PSA Client",
@@ -1698,6 +1782,18 @@
           "psaWeb": false
         },
         {
+          "id": "001PX0000078JhVYAU",
+          "name": "Life Safety Integrated Systems, Inc",
+          "type": "Rev.io PSA Client",
+          "webMigrationStatus": "Unknown",
+          "webMigrationDetails": "",
+          "psaAccountStatus": "",
+          "accountStatus": "",
+          "owner": "",
+          "vertical": "",
+          "psaWeb": false
+        },
+        {
           "id": "0016O00003dmuTcQAI",
           "name": "LinkUs Corporation",
           "type": "Rev.io PSA Client",
@@ -1706,6 +1802,18 @@
           "psaAccountStatus": "Active - Tigerpaw One",
           "accountStatus": "Active - Tigerpaw One",
           "owner": "Blaine Villafuerte",
+          "vertical": "",
+          "psaWeb": false
+        },
+        {
+          "id": "001PX000005WpiwYAC",
+          "name": "Low Voltage Integrators",
+          "type": "Rev.io PSA Client",
+          "webMigrationStatus": "Unknown",
+          "webMigrationDetails": "",
+          "psaAccountStatus": "",
+          "accountStatus": "",
+          "owner": "",
           "vertical": "",
           "psaWeb": false
         },
@@ -1898,6 +2006,18 @@
           "psaAccountStatus": "Active - Tigerpaw One",
           "accountStatus": "Active - Tigerpaw One",
           "owner": "Gavin Aylward",
+          "vertical": "",
+          "psaWeb": false
+        },
+        {
+          "id": "0016O00003edXLeQAM",
+          "name": "Midwest Technology Specialists",
+          "type": "Rev.io PSA Client",
+          "webMigrationStatus": "Unknown",
+          "webMigrationDetails": "",
+          "psaAccountStatus": "",
+          "accountStatus": "",
+          "owner": "",
           "vertical": "",
           "psaWeb": false
         },
@@ -2214,18 +2334,6 @@
           "psaWeb": false
         },
         {
-          "id": "0016O00003dmuV5QAI",
-          "name": "Peerless Energy Systems",
-          "type": "Rev.io PSA Client",
-          "webMigrationStatus": "Unknown",
-          "webMigrationDetails": "08/2026 - not the right time",
-          "psaAccountStatus": "Active - Tigerpaw One",
-          "accountStatus": "Active - Tigerpaw One",
-          "owner": "Blaine Villafuerte",
-          "vertical": "",
-          "psaWeb": false
-        },
-        {
           "id": "0011500001HNPqnAAH",
           "name": "Peerless Network",
           "type": "TigerPaw Client",
@@ -2246,6 +2354,18 @@
           "psaAccountStatus": "Active - Unleashed",
           "accountStatus": "Active - Unleashed",
           "owner": "Drew Acorn",
+          "vertical": "",
+          "psaWeb": false
+        },
+        {
+          "id": "001PX000004hVS4YAM",
+          "name": "Plan B Technology",
+          "type": "Rev.io PSA Client",
+          "webMigrationStatus": "Unknown",
+          "webMigrationDetails": "",
+          "psaAccountStatus": "",
+          "accountStatus": "",
+          "owner": "",
           "vertical": "",
           "psaWeb": false
         },
@@ -2502,6 +2622,18 @@
           "psaWeb": false
         },
         {
+          "id": "0016O00003ebjMyQAI",
+          "name": "Romeo Computer",
+          "type": "Rev.io PSA Client",
+          "webMigrationStatus": "Unknown",
+          "webMigrationDetails": "",
+          "psaAccountStatus": "",
+          "accountStatus": "",
+          "owner": "",
+          "vertical": "",
+          "psaWeb": false
+        },
+        {
           "id": "001PX000001jnr6YAA",
           "name": "Romeo Computer Company",
           "type": "TigerPaw Client",
@@ -2541,6 +2673,18 @@
           "id": "0016O00003dmudpQAA",
           "name": "Russell's Telecom Solutions",
           "type": "TigerPaw Client",
+          "webMigrationStatus": "Unknown",
+          "webMigrationDetails": "",
+          "psaAccountStatus": "",
+          "accountStatus": "",
+          "owner": "",
+          "vertical": "",
+          "psaWeb": false
+        },
+        {
+          "id": "0016O00003ebjR2QAI",
+          "name": "Sabre Integrated Security Systems",
+          "type": "Rev.io PSA Client",
           "webMigrationStatus": "Unknown",
           "webMigrationDetails": "",
           "psaAccountStatus": "",
@@ -2934,30 +3078,6 @@
           "psaWeb": false
         },
         {
-          "id": "0016O00003dmuZfQAI",
-          "name": "Telephone Communications Inc",
-          "type": "Rev.io PSA Client",
-          "webMigrationStatus": "Unknown",
-          "webMigrationDetails": "07/06/2026 - they want to start migrating between August to end of September. Followed up with an email. Need Sage50 (accounting) integration with PSA web.",
-          "psaAccountStatus": "Active - Tigerpaw One",
-          "accountStatus": "Active - Tigerpaw One",
-          "owner": "Gavin Aylward",
-          "vertical": "",
-          "psaWeb": false
-        },
-        {
-          "id": "0016O00003dmuZmQAI",
-          "name": "Telstar Networks",
-          "type": "Rev.io PSA Client",
-          "webMigrationStatus": "Unknown",
-          "webMigrationDetails": "08/2026 they do not have time right now",
-          "psaAccountStatus": "Active - Unleashed",
-          "accountStatus": "Active - Unleashed",
-          "owner": "Blaine Villafuerte",
-          "vertical": "",
-          "psaWeb": false
-        },
-        {
           "id": "0016O00003dmuZpQAI",
           "name": "The Computer Store",
           "type": "Rev.io PSA Client",
@@ -3066,6 +3186,18 @@
           "psaWeb": false
         },
         {
+          "id": "0016O00003dmudKQAQ",
+          "name": "TRC Networks",
+          "type": "TigerPaw Client",
+          "webMigrationStatus": "Unknown",
+          "webMigrationDetails": "",
+          "psaAccountStatus": "",
+          "accountStatus": "",
+          "owner": "",
+          "vertical": "",
+          "psaWeb": false
+        },
+        {
           "id": "0016O00003dmua3QAA",
           "name": "TRG Networking",
           "type": "Rev.io PSA Client",
@@ -3134,18 +3266,6 @@
           "psaAccountStatus": "",
           "accountStatus": "",
           "owner": "",
-          "vertical": "",
-          "psaWeb": false
-        },
-        {
-          "id": "0011500001HNQIoAAP",
-          "name": "Unique Communications",
-          "type": "Rev.io PSA Client",
-          "webMigrationStatus": "Unknown",
-          "webMigrationDetails": "Do not have the time right now as of 06/2026",
-          "psaAccountStatus": "Active - Tigerpaw One",
-          "accountStatus": "Active - Tigerpaw One",
-          "owner": "Blaine Villafuerte",
           "vertical": "",
           "psaWeb": false
         },
@@ -3222,6 +3342,18 @@
           "psaWeb": false
         },
         {
+          "id": "001PX000001rdZdYAI",
+          "name": "VITEC Solutions",
+          "type": "Rev.io PSA Client",
+          "webMigrationStatus": "Unknown",
+          "webMigrationDetails": "",
+          "psaAccountStatus": "",
+          "accountStatus": "",
+          "owner": "",
+          "vertical": "",
+          "psaWeb": false
+        },
+        {
           "id": "0011500001bh7enAAA",
           "name": "Votacall Inc - 2nd Database",
           "type": "Rev.io PSA Client",
@@ -3258,14 +3390,14 @@
           "psaWeb": false
         },
         {
-          "id": "0011500001IIF86AAH",
-          "name": "Wolf Technology Group",
-          "type": "TigerPaw Client",
+          "id": "001PX00000D4yfdYAB",
+          "name": "Wired Media Solutions",
+          "type": "Rev.io PSA Client",
           "webMigrationStatus": "Unknown",
-          "webMigrationDetails": "TP One- need to follow up with client",
-          "psaAccountStatus": "Active - Tigerpaw One",
-          "accountStatus": "Active - Tigerpaw One",
-          "owner": "Blaine Villafuerte",
+          "webMigrationDetails": "",
+          "psaAccountStatus": "",
+          "accountStatus": "",
+          "owner": "",
           "vertical": "",
           "psaWeb": false
         },
@@ -3306,18 +3438,6 @@
           "psaWeb": false
         },
         {
-          "id": "0016O00003dmuakQAA",
-          "name": "Xpedient Communications",
-          "type": "Rev.io PSA Client",
-          "webMigrationStatus": "Unknown",
-          "webMigrationDetails": "as of 07/2026 there was a lack of DM involvement",
-          "psaAccountStatus": "Active - Tigerpaw One",
-          "accountStatus": "Active - Tigerpaw One",
-          "owner": "Ingrid Beard",
-          "vertical": "",
-          "psaWeb": false
-        },
-        {
           "id": "0016O00003dmuamQAA",
           "name": "Young Scale",
           "type": "Rev.io PSA Client",
@@ -3345,8 +3465,8 @@
     },
     {
       "label": "Want to migrate / timeline unknown",
-      "count": 115,
-      "pct": 17.7,
+      "count": 122,
+      "pct": 18.1,
       "accounts": [
         {
           "id": "0016O00003dmuJPQAY",
@@ -3601,6 +3721,18 @@
           "psaWeb": false
         },
         {
+          "id": "0016O00003dmuKtQAI",
+          "name": "Bri-Tech Inc.",
+          "type": "Rev.io PSA Client",
+          "webMigrationStatus": "Want to migrate / timeline unknown",
+          "webMigrationDetails": "Demo scheduled for 9/7",
+          "psaAccountStatus": "Active - Tigerpaw One",
+          "accountStatus": "Active - Tigerpaw One",
+          "owner": "Blaine Villafuerte",
+          "vertical": "",
+          "psaWeb": false
+        },
+        {
           "id": "0016O00003dmuKvQAI",
           "name": "Brown Security Solutions",
           "type": "Rev.io PSA Client",
@@ -3632,6 +3764,18 @@
           "webMigrationDetails": "08/14 - Planning to make a decision if they want to leave or migrate to Web by October 15, 2026.",
           "psaAccountStatus": "Active - Tigerpaw One",
           "accountStatus": "Active - Tigerpaw One",
+          "owner": "Gavin Aylward",
+          "vertical": "",
+          "psaWeb": false
+        },
+        {
+          "id": "0016O00003dmuL9QAI",
+          "name": "CC-Teknologies Inc.",
+          "type": "Rev.io PSA Client",
+          "webMigrationStatus": "Want to migrate / timeline unknown",
+          "webMigrationDetails": "",
+          "psaAccountStatus": "Active - Unleashed",
+          "accountStatus": "Active - Unleashed",
           "owner": "Gavin Aylward",
           "vertical": "",
           "psaWeb": false
@@ -3765,6 +3909,18 @@
           "psaAccountStatus": "Active - Unleashed",
           "accountStatus": "Active - Unleashed",
           "owner": "Gavin Aylward",
+          "vertical": "",
+          "psaWeb": false
+        },
+        {
+          "id": "001PX000004hS22YAE",
+          "name": "crosscountrycomm.com",
+          "type": "Rev.io PSA Client",
+          "webMigrationStatus": "Want to migrate / timeline unknown",
+          "webMigrationDetails": "",
+          "psaAccountStatus": "",
+          "accountStatus": "",
+          "owner": "",
           "vertical": "",
           "psaWeb": false
         },
@@ -3949,18 +4105,6 @@
           "psaWeb": false
         },
         {
-          "id": "0016O00003ebi5PQAQ",
-          "name": "Franklin Electric Co Inc",
-          "type": "Rev.io PSA Client",
-          "webMigrationStatus": "Want to migrate / timeline unknown",
-          "webMigrationDetails": "half migrated to another platform but now they may want to stay. Still working on this with Tony",
-          "psaAccountStatus": "Active - Tigerpaw One",
-          "accountStatus": "Active - Tigerpaw One",
-          "owner": "",
-          "vertical": "",
-          "psaWeb": false
-        },
-        {
           "id": "0016O00003dmuPcQAI",
           "name": "Fusion Digital",
           "type": "Rev.io PSA Client",
@@ -4105,18 +4249,6 @@
           "psaWeb": false
         },
         {
-          "id": "0011500001HNQIWAA5",
-          "name": "ICS Communications",
-          "type": "TigerPaw Client",
-          "webMigrationStatus": "Want to migrate / timeline unknown",
-          "webMigrationDetails": "Jason is interested but not in a rush",
-          "psaAccountStatus": "Active - Tigerpaw One",
-          "accountStatus": "Active - Tigerpaw One",
-          "owner": "Gavin Aylward",
-          "vertical": "",
-          "psaWeb": false
-        },
-        {
           "id": "0016O00003dmudNQAQ",
           "name": "Idea Networks Inc.",
           "type": "Rev.io PSA Client",
@@ -4217,7 +4349,7 @@
           "name": "JES and Sons 2-Way LLC",
           "type": "Rev.io PSA Client",
           "webMigrationStatus": "Want to migrate / timeline unknown",
-          "webMigrationDetails": "",
+          "webMigrationDetails": "Working to schedule a demo with Roselyn by EOW (9/11)",
           "psaAccountStatus": "",
           "accountStatus": "",
           "owner": "",
@@ -4621,11 +4753,47 @@
           "psaWeb": false
         },
         {
+          "id": "0016O00003dmuZfQAI",
+          "name": "Telephone Communications Inc",
+          "type": "Rev.io PSA Client",
+          "webMigrationStatus": "Want to migrate / timeline unknown",
+          "webMigrationDetails": "07/06/2026 - they want to start migrating between August to end of September. Followed up with an email. Need Sage50 (accounting) integration with PSA web.",
+          "psaAccountStatus": "Active - Tigerpaw One",
+          "accountStatus": "Active - Tigerpaw One",
+          "owner": "Gavin Aylward",
+          "vertical": "",
+          "psaWeb": false
+        },
+        {
+          "id": "0016O00003dmuZmQAI",
+          "name": "Telstar Networks",
+          "type": "Rev.io PSA Client",
+          "webMigrationStatus": "Want to migrate / timeline unknown",
+          "webMigrationDetails": "08/2026 they do not have time right now",
+          "psaAccountStatus": "Active - Unleashed",
+          "accountStatus": "Active - Unleashed",
+          "owner": "Blaine Villafuerte",
+          "vertical": "",
+          "psaWeb": false
+        },
+        {
           "id": "001PX00000Abt4dYAB",
           "name": "The Phone Experts - Communications Ltd.",
           "type": "Rev.io PSA Client",
           "webMigrationStatus": "Want to migrate / timeline unknown",
           "webMigrationDetails": "",
+          "psaAccountStatus": "Active - Unleashed",
+          "accountStatus": "Active - Unleashed",
+          "owner": "Ingrid Beard",
+          "vertical": "",
+          "psaWeb": false
+        },
+        {
+          "id": "001PX000004hVRqYAM",
+          "name": "The Phone Experts - Communications Ltd.",
+          "type": "Rev.io PSA Client",
+          "webMigrationStatus": "Want to migrate / timeline unknown",
+          "webMigrationDetails": "Had meeting with Amanda, interested in migrating but have not gotten back in contact, sent over pricing",
           "psaAccountStatus": "Active - Unleashed",
           "accountStatus": "Active - Unleashed",
           "owner": "Ingrid Beard",
@@ -4669,6 +4837,18 @@
           "psaWeb": false
         },
         {
+          "id": "0011500001HNQIoAAP",
+          "name": "Unique Communications",
+          "type": "Rev.io PSA Client",
+          "webMigrationStatus": "Want to migrate / timeline unknown",
+          "webMigrationDetails": "Do not have the time right now as of 06/2026",
+          "psaAccountStatus": "Active - Tigerpaw One",
+          "accountStatus": "Active - Tigerpaw One",
+          "owner": "Blaine Villafuerte",
+          "vertical": "",
+          "psaWeb": false
+        },
+        {
           "id": "0016O00003dmuaIQAQ",
           "name": "Universal Security and Fire",
           "type": "Rev.io PSA Client",
@@ -4693,6 +4873,18 @@
           "psaWeb": false
         },
         {
+          "id": "0016O00003dmuagQAA",
+          "name": "West Coast Cash Register Systems",
+          "type": "Rev.io PSA Client",
+          "webMigrationStatus": "Want to migrate / timeline unknown",
+          "webMigrationDetails": "08/2026 - actively working with CSA targeting 09/2026 close",
+          "psaAccountStatus": "Active - Unleashed",
+          "accountStatus": "Active - Unleashed",
+          "owner": "Gavin Aylward",
+          "vertical": "",
+          "psaWeb": false
+        },
+        {
           "id": "0011500001HNQK5AAP",
           "name": "WSB Computer Services, Inc.",
           "type": "Rev.io PSA Client",
@@ -4701,6 +4893,18 @@
           "psaAccountStatus": "Active - Unleashed",
           "accountStatus": "Active - Unleashed",
           "owner": "Gavin Aylward",
+          "vertical": "",
+          "psaWeb": false
+        },
+        {
+          "id": "0011500001HNPlFAAX",
+          "name": "Xclutel",
+          "type": "Client",
+          "webMigrationStatus": "Want to migrate / timeline unknown",
+          "webMigrationDetails": "Dual Client - should be able to move in April",
+          "psaAccountStatus": "Active - Tigerpaw One",
+          "accountStatus": "Active - Tigerpaw One",
+          "owner": "Ingrid Beard",
           "vertical": "",
           "psaWeb": false
         },
@@ -4717,11 +4921,11 @@
           "psaWeb": false
         },
         {
-          "id": "0011500001HNPlFAAX",
-          "name": "Xclutel",
-          "type": "Client",
+          "id": "0016O00003dmuakQAA",
+          "name": "Xpedient Communications",
+          "type": "Rev.io PSA Client",
           "webMigrationStatus": "Want to migrate / timeline unknown",
-          "webMigrationDetails": "Dual Client - should be able to move in April",
+          "webMigrationDetails": "as of 07/2026 there was a lack of DM involvement",
           "psaAccountStatus": "Active - Tigerpaw One",
           "accountStatus": "Active - Tigerpaw One",
           "owner": "Ingrid Beard",
@@ -4732,8 +4936,8 @@
     },
     {
       "label": "Want to migrate asap",
-      "count": 94,
-      "pct": 14.5,
+      "count": 85,
+      "pct": 12.6,
       "accounts": [
         {
           "id": "0016O00003dmuJQQAY",
@@ -4808,18 +5012,6 @@
           "psaWeb": false
         },
         {
-          "id": "0011C00002jC8JtQAK",
-          "name": "All-Mode Communications Inc",
-          "type": "Rev.io PSA Client",
-          "webMigrationStatus": "Want to migrate asap",
-          "webMigrationDetails": "Missing functionality - requested feedback from client.",
-          "psaAccountStatus": "Active - Unleashed",
-          "accountStatus": "Active - Unleashed",
-          "owner": "Ingrid Beard",
-          "vertical": "",
-          "psaWeb": false
-        },
-        {
           "id": "0016O00003dmuK0QAI",
           "name": "Americom",
           "type": "Tigerpaw Churn",
@@ -4853,18 +5045,6 @@
           "accountStatus": "Active - Unleashed",
           "owner": "Blaine Villafuerte",
           "vertical": "2-Way Radio",
-          "psaWeb": false
-        },
-        {
-          "id": "0016O00003dmuKIQAY",
-          "name": "Atlantic Security & Telecom Solutions, Inc.",
-          "type": "TigerPaw Client",
-          "webMigrationStatus": "Want to migrate asap",
-          "webMigrationDetails": "on track to migrate 4/1 or 6/1 based on released functionality; has been engaged and received multiple demos",
-          "psaAccountStatus": "Active - Unleashed",
-          "accountStatus": "Active - Unleashed",
-          "owner": "Blaine Villafuerte",
-          "vertical": "",
           "psaWeb": false
         },
         {
@@ -4976,30 +5156,6 @@
           "psaWeb": false
         },
         {
-          "id": "0016O00003dmuKtQAI",
-          "name": "Bri-Tech Inc.",
-          "type": "Rev.io PSA Client",
-          "webMigrationStatus": "Want to migrate asap",
-          "webMigrationDetails": "Demo scheduled for 9/7",
-          "psaAccountStatus": "Active - Tigerpaw One",
-          "accountStatus": "Active - Tigerpaw One",
-          "owner": "Blaine Villafuerte",
-          "vertical": "",
-          "psaWeb": false
-        },
-        {
-          "id": "0011500001eNpDxAAK",
-          "name": "Bridge Communications",
-          "type": "Rev.io PSA Client",
-          "webMigrationStatus": "Want to migrate asap",
-          "webMigrationDetails": "Migration in process as of 2/1/26 - waiting on intake information from the client",
-          "psaAccountStatus": "",
-          "accountStatus": "",
-          "owner": "",
-          "vertical": "",
-          "psaWeb": true
-        },
-        {
           "id": "001PX000006omEjYAI",
           "name": "Challenger2",
           "type": "Tigerpaw Churn",
@@ -5044,18 +5200,6 @@
           "psaAccountStatus": "Active - Tigerpaw One",
           "accountStatus": "Active - Tigerpaw One",
           "owner": "Ingrid Beard",
-          "vertical": "",
-          "psaWeb": false
-        },
-        {
-          "id": "0016O00003dmos9QAA",
-          "name": "Compu-Tech, Inc.",
-          "type": "TigerPaw Client",
-          "webMigrationStatus": "Want to migrate asap",
-          "webMigrationDetails": "wanted to move over ASAP but went dark once I sent him the contract",
-          "psaAccountStatus": "Active - Unleashed",
-          "accountStatus": "Active - Unleashed",
-          "owner": "Blaine Villafuerte",
           "vertical": "",
           "psaWeb": false
         },
@@ -5129,18 +5273,6 @@
           "accountStatus": "Active - Tigerpaw One",
           "owner": "Blaine Villafuerte",
           "vertical": "",
-          "psaWeb": false
-        },
-        {
-          "id": "0011C00002iU7CcQAK",
-          "name": "Digital Telecommunications",
-          "type": "TigerPaw Client",
-          "webMigrationStatus": "Want to migrate asap",
-          "webMigrationDetails": "",
-          "psaAccountStatus": "Active - Tigerpaw One",
-          "accountStatus": "Active - Tigerpaw One",
-          "owner": "Ingrid Beard",
-          "vertical": "Voice / Unified Communications",
           "psaWeb": false
         },
         {
@@ -5273,6 +5405,18 @@
           "accountStatus": "Active - Tigerpaw One",
           "owner": "Gavin Aylward",
           "vertical": "",
+          "psaWeb": false
+        },
+        {
+          "id": "0016O00003doC5KQAU",
+          "name": "Herring Technology",
+          "type": "Rev.io PSA Client",
+          "webMigrationStatus": "Want to migrate asap",
+          "webMigrationDetails": "Meeting with them 9/10/26 to discuss",
+          "psaAccountStatus": "Active - Unleashed",
+          "accountStatus": "Active - Unleashed",
+          "owner": "Ingrid Beard",
+          "vertical": "Physical Security / Building Access",
           "psaWeb": false
         },
         {
@@ -5744,30 +5888,6 @@
           "psaWeb": false
         },
         {
-          "id": "001PX000004hVRqYAM",
-          "name": "The Phone Experts - Communications Ltd.",
-          "type": "Rev.io PSA Client",
-          "webMigrationStatus": "Want to migrate asap",
-          "webMigrationDetails": "Had meeting with Amanda, interested in migrating but have not gotten back in contact, sent over pricing",
-          "psaAccountStatus": "Active - Unleashed",
-          "accountStatus": "Active - Unleashed",
-          "owner": "Ingrid Beard",
-          "vertical": "",
-          "psaWeb": false
-        },
-        {
-          "id": "0016O00003dmuZsQAI",
-          "name": "The RHINO Group",
-          "type": "Rev.io PSA Client",
-          "webMigrationStatus": "Want to migrate asap",
-          "webMigrationDetails": "answering migration questions",
-          "psaAccountStatus": "Active - Tigerpaw One",
-          "accountStatus": "Active - Tigerpaw One",
-          "owner": "Ingrid Beard",
-          "vertical": "",
-          "psaWeb": false
-        },
-        {
           "id": "0016O00003eaZDPQA2",
           "name": "Tolleson Inc",
           "type": "Rev.io PSA Client",
@@ -5838,37 +5958,13 @@
           "owner": "Drew Acorn",
           "vertical": "",
           "psaWeb": false
-        },
-        {
-          "id": "0016O00003dmuafQAA",
-          "name": "West Coast Cabling, Inc.",
-          "type": "TigerPaw Client",
-          "webMigrationStatus": "Want to migrate asap",
-          "webMigrationDetails": "",
-          "psaAccountStatus": "Active - Tigerpaw One",
-          "accountStatus": "Active - Tigerpaw One",
-          "owner": "Gavin Aylward",
-          "vertical": "",
-          "psaWeb": false
-        },
-        {
-          "id": "0016O00003dmuagQAA",
-          "name": "West Coast Cash Register Systems",
-          "type": "Rev.io PSA Client",
-          "webMigrationStatus": "Want to migrate asap",
-          "webMigrationDetails": "08/2026 - actively working with CSA targeting 09/2026 close",
-          "psaAccountStatus": "Active - Unleashed",
-          "accountStatus": "Active - Unleashed",
-          "owner": "Gavin Aylward",
-          "vertical": "",
-          "psaWeb": false
         }
       ]
     },
     {
       "label": "Do not want to migrate",
-      "count": 71,
-      "pct": 10.9,
+      "count": 75,
+      "pct": 11.1,
       "accounts": [
         {
           "id": "0016O00003dmuJSQAY",
@@ -6024,6 +6120,18 @@
           "accountStatus": "Active - Tigerpaw One",
           "owner": "Blaine Villafuerte",
           "vertical": "AV / Home Automation",
+          "psaWeb": false
+        },
+        {
+          "id": "0016O00003dmuciQAA",
+          "name": "Bahamas Information Access Systems Limited",
+          "type": "Cold Prospect",
+          "webMigrationStatus": "Do not want to migrate",
+          "webMigrationDetails": "08/2026 owner is not showing interest",
+          "psaAccountStatus": "",
+          "accountStatus": "",
+          "owner": "",
+          "vertical": "",
           "psaWeb": false
         },
         {
@@ -6219,6 +6327,18 @@
           "psaWeb": false
         },
         {
+          "id": "0016O00003ebleOQAQ",
+          "name": "Galaxy Integrated Technologies",
+          "type": "Rev.io PSA Client",
+          "webMigrationStatus": "Do not want to migrate",
+          "webMigrationDetails": "",
+          "psaAccountStatus": "",
+          "accountStatus": "",
+          "owner": "",
+          "vertical": "",
+          "psaWeb": false
+        },
+        {
           "id": "0016O00003dmuPfQAI",
           "name": "Gemba Security",
           "type": "Rev.io PSA Client",
@@ -6311,6 +6431,18 @@
           "psaAccountStatus": "Active - Tigerpaw One",
           "accountStatus": "Active - Tigerpaw One",
           "owner": "Ingrid Beard",
+          "vertical": "",
+          "psaWeb": false
+        },
+        {
+          "id": "0011C00002H73UsQAJ",
+          "name": "Intermax Networks",
+          "type": "TigerPaw Client",
+          "webMigrationStatus": "Do not want to migrate",
+          "webMigrationDetails": "",
+          "psaAccountStatus": "Active - Tigerpaw One",
+          "accountStatus": "Active - Tigerpaw One",
+          "owner": "Blaine Villafuerte",
           "vertical": "",
           "psaWeb": false
         },
@@ -6430,6 +6562,18 @@
           "webMigrationDetails": "TP Unleashed- not wanting to migrate currently 7/22 CBR",
           "psaAccountStatus": "Active - Unleashed",
           "accountStatus": "Active - Unleashed",
+          "owner": "Blaine Villafuerte",
+          "vertical": "",
+          "psaWeb": false
+        },
+        {
+          "id": "0016O00003dmuV5QAI",
+          "name": "Peerless Energy Systems",
+          "type": "Rev.io PSA Client",
+          "webMigrationStatus": "Do not want to migrate",
+          "webMigrationDetails": "08/2026 - not the right time",
+          "psaAccountStatus": "Active - Tigerpaw One",
+          "accountStatus": "Active - Tigerpaw One",
           "owner": "Blaine Villafuerte",
           "vertical": "",
           "psaWeb": false
@@ -6725,9 +6869,544 @@
       ]
     },
     {
+      "label": "Migration in progress",
+      "count": 44,
+      "pct": 6.5,
+      "accounts": [
+        {
+          "id": "0016O00003dmuJzQAI",
+          "name": "American Business Phones",
+          "type": "Rev.io PSA Client",
+          "webMigrationStatus": "Migration in progress",
+          "webMigrationDetails": "Migration in progress",
+          "psaAccountStatus": "Active - Tigerpaw One",
+          "accountStatus": "Active - Tigerpaw One",
+          "owner": "Gavin Aylward",
+          "vertical": "",
+          "psaWeb": false
+        },
+        {
+          "id": "0016O00003dmuKIQAY",
+          "name": "Atlantic Security & Telecom Solutions, Inc.",
+          "type": "TigerPaw Client",
+          "webMigrationStatus": "Migration in progress",
+          "webMigrationDetails": "on track to migrate 4/1 or 6/1 based on released functionality; has been engaged and received multiple demos",
+          "psaAccountStatus": "Active - Unleashed",
+          "accountStatus": "Active - Unleashed",
+          "owner": "Blaine Villafuerte",
+          "vertical": "",
+          "psaWeb": false
+        },
+        {
+          "id": "0016O00003dmuKYQAY",
+          "name": "B. Moyer Radio Communications LLC",
+          "type": "TigerPaw Client",
+          "webMigrationStatus": "Migration in progress",
+          "webMigrationDetails": "",
+          "psaAccountStatus": "Active - Unleashed",
+          "accountStatus": "Active - Unleashed",
+          "owner": "Gavin Aylward",
+          "vertical": "",
+          "psaWeb": false
+        },
+        {
+          "id": "0011500001eNpDxAAK",
+          "name": "Bridge Communications",
+          "type": "Rev.io PSA Client",
+          "webMigrationStatus": "Migration in progress",
+          "webMigrationDetails": "Migration in process as of 2/1/26 - waiting on intake information from the client",
+          "psaAccountStatus": "",
+          "accountStatus": "",
+          "owner": "",
+          "vertical": "",
+          "psaWeb": true
+        },
+        {
+          "id": "0011C00001sb1uDQAQ",
+          "name": "Centra IP Networks",
+          "type": "Client",
+          "webMigrationStatus": "Migration in progress",
+          "webMigrationDetails": "In process and graduating in 2/2026",
+          "psaAccountStatus": "",
+          "accountStatus": "",
+          "owner": "Bryan Bettiol",
+          "vertical": "",
+          "psaWeb": true
+        },
+        {
+          "id": "0016O00003dmuViQAI",
+          "name": "Chortek",
+          "type": "TigerPaw Client",
+          "webMigrationStatus": "Migration in progress",
+          "webMigrationDetails": "",
+          "psaAccountStatus": "Active - Unleashed",
+          "accountStatus": "Active - Unleashed",
+          "owner": "Gavin Aylward",
+          "vertical": "",
+          "psaWeb": false
+        },
+        {
+          "id": "001PX00000XEo0OYAT",
+          "name": "CL Sams",
+          "type": "Rev.io PSA Client",
+          "webMigrationStatus": "Migration in progress",
+          "webMigrationDetails": "",
+          "psaAccountStatus": "",
+          "accountStatus": "",
+          "owner": "",
+          "vertical": "",
+          "psaWeb": false
+        },
+        {
+          "id": "0016O00003dmuLaQAI",
+          "name": "Communication Service Solutions",
+          "type": "TigerPaw Client",
+          "webMigrationStatus": "Migration in progress",
+          "webMigrationDetails": "Contract to migrate signed on 8/28",
+          "psaAccountStatus": "Active - Unleashed",
+          "accountStatus": "Active - Unleashed",
+          "owner": "Ingrid Beard",
+          "vertical": "",
+          "psaWeb": false
+        },
+        {
+          "id": "0016O00003dmos9QAA",
+          "name": "Compu-Tech, Inc.",
+          "type": "TigerPaw Client",
+          "webMigrationStatus": "Migration in progress",
+          "webMigrationDetails": "wanted to move over ASAP but went dark once I sent him the contract",
+          "psaAccountStatus": "Active - Unleashed",
+          "accountStatus": "Active - Unleashed",
+          "owner": "Blaine Villafuerte",
+          "vertical": "",
+          "psaWeb": false
+        },
+        {
+          "id": "0011C00002iU7CcQAK",
+          "name": "Digital Telecommunications",
+          "type": "TigerPaw Client",
+          "webMigrationStatus": "Migration in progress",
+          "webMigrationDetails": "",
+          "psaAccountStatus": "Active - Tigerpaw One",
+          "accountStatus": "Active - Tigerpaw One",
+          "owner": "Ingrid Beard",
+          "vertical": "Voice / Unified Communications",
+          "psaWeb": false
+        },
+        {
+          "id": "0016O00003dmuOnQAI",
+          "name": "Dividia",
+          "type": "Rev.io PSA Client",
+          "webMigrationStatus": "Migration in progress",
+          "webMigrationDetails": "",
+          "psaAccountStatus": "Active - Tigerpaw One",
+          "accountStatus": "Active - Tigerpaw One",
+          "owner": "Gavin Aylward",
+          "vertical": "",
+          "psaWeb": true
+        },
+        {
+          "id": "0016O00003ebi5PQAQ",
+          "name": "Franklin Electric Co Inc",
+          "type": "Rev.io PSA Client",
+          "webMigrationStatus": "Migration in progress",
+          "webMigrationDetails": "half migrated to another platform but now they may want to stay. Still working on this with Tony",
+          "psaAccountStatus": "Active - Tigerpaw One",
+          "accountStatus": "Active - Tigerpaw One",
+          "owner": "",
+          "vertical": "",
+          "psaWeb": false
+        },
+        {
+          "id": "0016O00003dmuPrQAI",
+          "name": "Grennan Communications",
+          "type": "Rev.io PSA Client",
+          "webMigrationStatus": "Migration in progress",
+          "webMigrationDetails": "Migrating over to PSA 6/26",
+          "psaAccountStatus": "Active - Tigerpaw One",
+          "accountStatus": "Active - Tigerpaw One",
+          "owner": "Ingrid Beard",
+          "vertical": "",
+          "psaWeb": false
+        },
+        {
+          "id": "0016O00003dmuQ0QAI",
+          "name": "High Country Workplace Technologies",
+          "type": "Rev.io PSA Client",
+          "webMigrationStatus": "Migration in progress",
+          "webMigrationDetails": "",
+          "psaAccountStatus": "Active - Tigerpaw One",
+          "accountStatus": "Active - Tigerpaw One",
+          "owner": "Blaine Villafuerte",
+          "vertical": "",
+          "psaWeb": false
+        },
+        {
+          "id": "0011C00002KRBkAQAX",
+          "name": "Hosted America",
+          "type": "TigerPaw Client",
+          "webMigrationStatus": "Migration in progress",
+          "webMigrationDetails": "won in June 2026",
+          "psaAccountStatus": "",
+          "accountStatus": "",
+          "owner": "",
+          "vertical": "",
+          "psaWeb": false
+        },
+        {
+          "id": "0011500001HNQIWAA5",
+          "name": "ICS Communications",
+          "type": "TigerPaw Client",
+          "webMigrationStatus": "Migration in progress",
+          "webMigrationDetails": "Jason is interested but not in a rush",
+          "psaAccountStatus": "Active - Tigerpaw One",
+          "accountStatus": "Active - Tigerpaw One",
+          "owner": "Gavin Aylward",
+          "vertical": "",
+          "psaWeb": false
+        },
+        {
+          "id": "0016O00003dmuQLQAY",
+          "name": "IMC Facility Management",
+          "type": "TigerPaw Client",
+          "webMigrationStatus": "Migration in progress",
+          "webMigrationDetails": "",
+          "psaAccountStatus": "Active - Tigerpaw One",
+          "accountStatus": "Active - Tigerpaw One",
+          "owner": "Ingrid Beard",
+          "vertical": "",
+          "psaWeb": false
+        },
+        {
+          "id": "001PX000002MF4BYAW",
+          "name": "Intec - CA",
+          "type": "TigerPaw Client",
+          "webMigrationStatus": "Migration in progress",
+          "webMigrationDetails": "07/02/2026 - They want to migrate asap.",
+          "psaAccountStatus": "Active - Tigerpaw One",
+          "accountStatus": "Active - Tigerpaw One",
+          "owner": "Blaine Villafuerte",
+          "vertical": "Voice / Unified Communications",
+          "psaWeb": true
+        },
+        {
+          "id": "0016O00003dmuQeQAI",
+          "name": "Integrated Systems",
+          "type": "TigerPaw Client",
+          "webMigrationStatus": "Migration in progress",
+          "webMigrationDetails": "",
+          "psaAccountStatus": "Active - Tigerpaw One",
+          "accountStatus": "Active - Tigerpaw One",
+          "owner": "Ingrid Beard",
+          "vertical": "",
+          "psaWeb": false
+        },
+        {
+          "id": "0016O00003dmuUVQAY",
+          "name": "Network Datacom Solutions",
+          "type": "TigerPaw Client",
+          "webMigrationStatus": "Migration in progress",
+          "webMigrationDetails": "Currently in onboarding",
+          "psaAccountStatus": "Active - Tigerpaw One",
+          "accountStatus": "Active - Tigerpaw One",
+          "owner": "Gavin Aylward",
+          "vertical": "",
+          "psaWeb": true
+        },
+        {
+          "id": "0016O00003dmuUXQAY",
+          "name": "Network Enhancement Systems",
+          "type": "TigerPaw Client",
+          "webMigrationStatus": "Migration in progress",
+          "webMigrationDetails": "07/06/2026 - LVM to Eddie, introduced myself and talked about the Summit. Followed up with an email.",
+          "psaAccountStatus": "Active - Unleashed",
+          "accountStatus": "Active - Unleashed",
+          "owner": "Gavin Aylward",
+          "vertical": "",
+          "psaWeb": false
+        },
+        {
+          "id": "0016O00003ebbEEQAY",
+          "name": "North American Telecommunications Group",
+          "type": "TigerPaw Client",
+          "webMigrationStatus": "Migration in progress",
+          "webMigrationDetails": "",
+          "psaAccountStatus": "Active - Tigerpaw One",
+          "accountStatus": "Active - Tigerpaw One",
+          "owner": "Blaine Villafuerte",
+          "vertical": "",
+          "psaWeb": false
+        },
+        {
+          "id": "0016O00003dmuUjQAI",
+          "name": "Omidi Enterprises",
+          "type": "Rev.io PSA Client",
+          "webMigrationStatus": "Migration in progress",
+          "webMigrationDetails": "Won in July 2026",
+          "psaAccountStatus": "Active - Unleashed",
+          "accountStatus": "Active - Unleashed",
+          "owner": "Blaine Villafuerte",
+          "vertical": "",
+          "psaWeb": true
+        },
+        {
+          "id": "0016O00003dmuVBQAY",
+          "name": "Phone & Data Works",
+          "type": "Rev.io PSA Client",
+          "webMigrationStatus": "Migration in progress",
+          "webMigrationDetails": "Interested in migrating, but is worried about cost & implementation",
+          "psaAccountStatus": "Active - Tigerpaw One",
+          "accountStatus": "Active - Tigerpaw One",
+          "owner": "Blaine Villafuerte",
+          "vertical": "",
+          "psaWeb": true
+        },
+        {
+          "id": "0016O00003dmuVCQAY",
+          "name": "Pilothouse Communications",
+          "type": "TigerPaw Client",
+          "webMigrationStatus": "Migration in progress",
+          "webMigrationDetails": "",
+          "psaAccountStatus": "Active - Unleashed",
+          "accountStatus": "Active - Unleashed",
+          "owner": "Gavin Aylward",
+          "vertical": "",
+          "psaWeb": false
+        },
+        {
+          "id": "0016O00003dmuVQQAY",
+          "name": "Professional Security Innovations",
+          "type": "Rev.io PSA Client",
+          "webMigrationStatus": "Migration in progress",
+          "webMigrationDetails": "very eager but cannot move until we have a way to batch to QB desktop - client is not willing to move to QBO",
+          "psaAccountStatus": "Active - Unleashed",
+          "accountStatus": "Active - Unleashed",
+          "owner": "Ingrid Beard",
+          "vertical": "",
+          "psaWeb": true
+        },
+        {
+          "id": "0011C00002cDMhqQAG",
+          "name": "Quick Copper Communications",
+          "type": "Rev.io PSA Client",
+          "webMigrationStatus": "Migration in progress",
+          "webMigrationDetails": "",
+          "psaAccountStatus": "",
+          "accountStatus": "",
+          "owner": "",
+          "vertical": "",
+          "psaWeb": false
+        },
+        {
+          "id": "0016O00003dmuVnQAI",
+          "name": "Rave Systems, LLC dba Reference Audio Video & Security (now known as Reference Smart)",
+          "type": "Rev.io PSA Client",
+          "webMigrationStatus": "Migration in progress",
+          "webMigrationDetails": "On track to begin 4/1",
+          "psaAccountStatus": "Active - Tigerpaw One",
+          "accountStatus": "Active - Tigerpaw One",
+          "owner": "Ingrid Beard",
+          "vertical": "",
+          "psaWeb": true
+        },
+        {
+          "id": "001PX00000H25JbYAJ",
+          "name": "Raven Tech LLC",
+          "type": "Rev.io PSA Client",
+          "webMigrationStatus": "Migration in progress",
+          "webMigrationDetails": "Client is on PSA but not using it to full potential. Meeting scheduled in the next few weeks with Account manager 9/4 update",
+          "psaAccountStatus": "",
+          "accountStatus": "",
+          "owner": "",
+          "vertical": "",
+          "psaWeb": true
+        },
+        {
+          "id": "0016O00003dmuVhQAI",
+          "name": "Raytec Systems",
+          "type": "Rev.io PSA Client",
+          "webMigrationStatus": "Migration in progress",
+          "webMigrationDetails": "Currently in onboarding",
+          "psaAccountStatus": "Active - Unleashed",
+          "accountStatus": "Active - Unleashed",
+          "owner": "Blaine Villafuerte",
+          "vertical": "",
+          "psaWeb": true
+        },
+        {
+          "id": "001PX00000D4NYNYA3",
+          "name": "RCH Communications",
+          "type": "Warm Prospect",
+          "webMigrationStatus": "Migration in progress",
+          "webMigrationDetails": "",
+          "psaAccountStatus": "",
+          "accountStatus": "",
+          "owner": "",
+          "vertical": "",
+          "psaWeb": false
+        },
+        {
+          "id": "0016O00003dmuVoQAI",
+          "name": "Rel Comm",
+          "type": "Rev.io PSA Client",
+          "webMigrationStatus": "Migration in progress",
+          "webMigrationDetails": "Migration in progress to PSA",
+          "psaAccountStatus": "Active - Unleashed",
+          "accountStatus": "Active - Unleashed",
+          "owner": "Blaine Villafuerte",
+          "vertical": "",
+          "psaWeb": false
+        },
+        {
+          "id": "0016O00003dmuYMQAY",
+          "name": "Richmond Security",
+          "type": "Rev.io PSA Client",
+          "webMigrationStatus": "Migration in progress",
+          "webMigrationDetails": "Currently migrating to PSA",
+          "psaAccountStatus": "Active - Tigerpaw One",
+          "accountStatus": "Active - Tigerpaw One",
+          "owner": "Blaine Villafuerte",
+          "vertical": "",
+          "psaWeb": true
+        },
+        {
+          "id": "0011C00002uinPDQAY",
+          "name": "RingStreet",
+          "type": "Rev.io PSA Client",
+          "webMigrationStatus": "Migration in progress",
+          "webMigrationDetails": "migration in progress",
+          "psaAccountStatus": "Active - Tigerpaw One",
+          "accountStatus": "Active - Tigerpaw One",
+          "owner": "Ingrid Beard",
+          "vertical": "",
+          "psaWeb": false
+        },
+        {
+          "id": "0016O00003ebjkxQAA",
+          "name": "Roadrunner Lock & Safe",
+          "type": "TigerPaw Client",
+          "webMigrationStatus": "Migration in progress",
+          "webMigrationDetails": "",
+          "psaAccountStatus": "",
+          "accountStatus": "",
+          "owner": "",
+          "vertical": "",
+          "psaWeb": false
+        },
+        {
+          "id": "0016O00003dmuYoQAI",
+          "name": "SmartCom Home Technologies, Inc.",
+          "type": "Rev.io PSA Client",
+          "webMigrationStatus": "Migration in progress",
+          "webMigrationDetails": "On hold and RTA'd as of 06/09 due to bundle functionality",
+          "psaAccountStatus": "Active - Unleashed",
+          "accountStatus": "Active - Unleashed",
+          "owner": "Ingrid Beard",
+          "vertical": "",
+          "psaWeb": false
+        },
+        {
+          "id": "0016O00003dmuZsQAI",
+          "name": "The RHINO Group",
+          "type": "Rev.io PSA Client",
+          "webMigrationStatus": "Migration in progress",
+          "webMigrationDetails": "answering migration questions",
+          "psaAccountStatus": "Active - Tigerpaw One",
+          "accountStatus": "Active - Tigerpaw One",
+          "owner": "Ingrid Beard",
+          "vertical": "",
+          "psaWeb": false
+        },
+        {
+          "id": "0016O00003dmua7QAA",
+          "name": "TRM",
+          "type": "Rev.io PSA Client",
+          "webMigrationStatus": "Migration in progress",
+          "webMigrationDetails": "7/9 - Called Don, no answer. Following up with email.",
+          "psaAccountStatus": "Active - Unleashed",
+          "accountStatus": "Active - Unleashed",
+          "owner": "Blaine Villafuerte",
+          "vertical": "",
+          "psaWeb": false
+        },
+        {
+          "id": "0016O00003dmuaOQAQ",
+          "name": "UT Networks",
+          "type": "TigerPaw Client",
+          "webMigrationStatus": "Migration in progress",
+          "webMigrationDetails": "",
+          "psaAccountStatus": "Active - Tigerpaw One",
+          "accountStatus": "Active - Tigerpaw One",
+          "owner": "Ingrid Beard",
+          "vertical": "",
+          "psaWeb": false
+        },
+        {
+          "id": "0011C000021EV9PQAW",
+          "name": "VanRan Communications Services, Inc.",
+          "type": "Client",
+          "webMigrationStatus": "Migration in progress",
+          "webMigrationDetails": "",
+          "psaAccountStatus": "Active - Unleashed",
+          "accountStatus": "Active - Unleashed",
+          "owner": "",
+          "vertical": "",
+          "psaWeb": false
+        },
+        {
+          "id": "0016O00003dmuaWQAQ",
+          "name": "Veterans Communications Corp",
+          "type": "TigerPaw Client",
+          "webMigrationStatus": "Migration in progress",
+          "webMigrationDetails": "",
+          "psaAccountStatus": "Active - Tigerpaw One",
+          "accountStatus": "Active - Tigerpaw One",
+          "owner": "Ingrid Beard",
+          "vertical": "",
+          "psaWeb": false
+        },
+        {
+          "id": "0016O00003eao1eQAA",
+          "name": "Virtual Guard",
+          "type": "Rev.io PSA Client",
+          "webMigrationStatus": "Migration in progress",
+          "webMigrationDetails": "",
+          "psaAccountStatus": "Active - Unleashed",
+          "accountStatus": "Active - Unleashed",
+          "owner": "Ingrid Beard",
+          "vertical": "Physical Security / Building Access",
+          "psaWeb": false
+        },
+        {
+          "id": "0016O00003dmuafQAA",
+          "name": "West Coast Cabling, Inc.",
+          "type": "TigerPaw Client",
+          "webMigrationStatus": "Migration in progress",
+          "webMigrationDetails": "",
+          "psaAccountStatus": "Active - Tigerpaw One",
+          "accountStatus": "Active - Tigerpaw One",
+          "owner": "Gavin Aylward",
+          "vertical": "",
+          "psaWeb": false
+        },
+        {
+          "id": "0011500001IIF86AAH",
+          "name": "Wolf Technology Group",
+          "type": "TigerPaw Client",
+          "webMigrationStatus": "Migration in progress",
+          "webMigrationDetails": "TP One- need to follow up with client",
+          "psaAccountStatus": "Active - Tigerpaw One",
+          "accountStatus": "Active - Tigerpaw One",
+          "owner": "Blaine Villafuerte",
+          "vertical": "",
+          "psaWeb": false
+        }
+      ]
+    },
+    {
       "label": "Opent to Migrate - Missing features",
       "count": 32,
-      "pct": 4.9,
+      "pct": 4.7,
       "accounts": [
         {
           "id": "0016O00003dmuJaQAI",
@@ -6762,6 +7441,18 @@
           "psaAccountStatus": "Active - Tigerpaw One",
           "accountStatus": "Active - Tigerpaw One",
           "owner": "Blaine Villafuerte",
+          "vertical": "",
+          "psaWeb": false
+        },
+        {
+          "id": "0011C00002jC8JtQAK",
+          "name": "All-Mode Communications Inc",
+          "type": "Rev.io PSA Client",
+          "webMigrationStatus": "Opent to Migrate - Missing features",
+          "webMigrationDetails": "Missing functionality - requested feedback from client.",
+          "psaAccountStatus": "Active - Unleashed",
+          "accountStatus": "Active - Unleashed",
+          "owner": "Ingrid Beard",
           "vertical": "",
           "psaWeb": false
         },
@@ -6946,18 +7637,6 @@
           "psaWeb": false
         },
         {
-          "id": "001PX000002MF4BYAW",
-          "name": "Intec - CA",
-          "type": "TigerPaw Client",
-          "webMigrationStatus": "Opent to Migrate - Missing features",
-          "webMigrationDetails": "07/02/2026 - They want to migrate asap.",
-          "psaAccountStatus": "Active - Tigerpaw One",
-          "accountStatus": "Active - Tigerpaw One",
-          "owner": "Blaine Villafuerte",
-          "vertical": "Voice / Unified Communications",
-          "psaWeb": true
-        },
-        {
           "id": "0016O00003dmuQtQAI",
           "name": "J&M Systems LLC",
           "type": "Rev.io PSA Client",
@@ -7116,388 +7795,9 @@
       ]
     },
     {
-      "label": "Migration in progress",
-      "count": 31,
-      "pct": 4.8,
-      "accounts": [
-        {
-          "id": "0016O00003dmuJzQAI",
-          "name": "American Business Phones",
-          "type": "Rev.io PSA Client",
-          "webMigrationStatus": "Migration in progress",
-          "webMigrationDetails": "Migration in progress",
-          "psaAccountStatus": "Active - Tigerpaw One",
-          "accountStatus": "Active - Tigerpaw One",
-          "owner": "Gavin Aylward",
-          "vertical": "",
-          "psaWeb": false
-        },
-        {
-          "id": "0016O00003dmuKYQAY",
-          "name": "B. Moyer Radio Communications LLC",
-          "type": "TigerPaw Client",
-          "webMigrationStatus": "Migration in progress",
-          "webMigrationDetails": "",
-          "psaAccountStatus": "Active - Unleashed",
-          "accountStatus": "Active - Unleashed",
-          "owner": "Gavin Aylward",
-          "vertical": "",
-          "psaWeb": false
-        },
-        {
-          "id": "0011C00001sb1uDQAQ",
-          "name": "Centra IP Networks",
-          "type": "Client",
-          "webMigrationStatus": "Migration in progress",
-          "webMigrationDetails": "In process and graduating in 2/2026",
-          "psaAccountStatus": "",
-          "accountStatus": "",
-          "owner": "Bryan Bettiol",
-          "vertical": "",
-          "psaWeb": true
-        },
-        {
-          "id": "001PX00000XEo0OYAT",
-          "name": "CL Sams",
-          "type": "Rev.io PSA Client",
-          "webMigrationStatus": "Migration in progress",
-          "webMigrationDetails": "",
-          "psaAccountStatus": "",
-          "accountStatus": "",
-          "owner": "",
-          "vertical": "",
-          "psaWeb": false
-        },
-        {
-          "id": "0016O00003dmuLaQAI",
-          "name": "Communication Service Solutions",
-          "type": "TigerPaw Client",
-          "webMigrationStatus": "Migration in progress",
-          "webMigrationDetails": "Contract to migrate signed on 8/28",
-          "psaAccountStatus": "Active - Unleashed",
-          "accountStatus": "Active - Unleashed",
-          "owner": "Ingrid Beard",
-          "vertical": "",
-          "psaWeb": false
-        },
-        {
-          "id": "0016O00003dmuOnQAI",
-          "name": "Dividia",
-          "type": "Rev.io PSA Client",
-          "webMigrationStatus": "Migration in progress",
-          "webMigrationDetails": "",
-          "psaAccountStatus": "Active - Tigerpaw One",
-          "accountStatus": "Active - Tigerpaw One",
-          "owner": "Gavin Aylward",
-          "vertical": "",
-          "psaWeb": true
-        },
-        {
-          "id": "0016O00003dmuPrQAI",
-          "name": "Grennan Communications",
-          "type": "Rev.io PSA Client",
-          "webMigrationStatus": "Migration in progress",
-          "webMigrationDetails": "Migrating over to PSA 6/26",
-          "psaAccountStatus": "Active - Tigerpaw One",
-          "accountStatus": "Active - Tigerpaw One",
-          "owner": "Ingrid Beard",
-          "vertical": "",
-          "psaWeb": false
-        },
-        {
-          "id": "0011C00002KRBkAQAX",
-          "name": "Hosted America",
-          "type": "TigerPaw Client",
-          "webMigrationStatus": "Migration in progress",
-          "webMigrationDetails": "won in June 2026",
-          "psaAccountStatus": "",
-          "accountStatus": "",
-          "owner": "",
-          "vertical": "",
-          "psaWeb": false
-        },
-        {
-          "id": "0016O00003dmuQLQAY",
-          "name": "IMC Facility Management",
-          "type": "TigerPaw Client",
-          "webMigrationStatus": "Migration in progress",
-          "webMigrationDetails": "",
-          "psaAccountStatus": "Active - Tigerpaw One",
-          "accountStatus": "Active - Tigerpaw One",
-          "owner": "Ingrid Beard",
-          "vertical": "",
-          "psaWeb": false
-        },
-        {
-          "id": "0016O00003dmuQeQAI",
-          "name": "Integrated Systems",
-          "type": "TigerPaw Client",
-          "webMigrationStatus": "Migration in progress",
-          "webMigrationDetails": "",
-          "psaAccountStatus": "Active - Tigerpaw One",
-          "accountStatus": "Active - Tigerpaw One",
-          "owner": "Ingrid Beard",
-          "vertical": "",
-          "psaWeb": false
-        },
-        {
-          "id": "0016O00003dmuUVQAY",
-          "name": "Network Datacom Solutions",
-          "type": "TigerPaw Client",
-          "webMigrationStatus": "Migration in progress",
-          "webMigrationDetails": "Currently in onboarding",
-          "psaAccountStatus": "Active - Tigerpaw One",
-          "accountStatus": "Active - Tigerpaw One",
-          "owner": "Gavin Aylward",
-          "vertical": "",
-          "psaWeb": true
-        },
-        {
-          "id": "0016O00003dmuUXQAY",
-          "name": "Network Enhancement Systems",
-          "type": "TigerPaw Client",
-          "webMigrationStatus": "Migration in progress",
-          "webMigrationDetails": "07/06/2026 - LVM to Eddie, introduced myself and talked about the Summit. Followed up with an email.",
-          "psaAccountStatus": "Active - Unleashed",
-          "accountStatus": "Active - Unleashed",
-          "owner": "Gavin Aylward",
-          "vertical": "",
-          "psaWeb": false
-        },
-        {
-          "id": "0016O00003ebbEEQAY",
-          "name": "North American Telecommunications Group",
-          "type": "TigerPaw Client",
-          "webMigrationStatus": "Migration in progress",
-          "webMigrationDetails": "",
-          "psaAccountStatus": "Active - Tigerpaw One",
-          "accountStatus": "Active - Tigerpaw One",
-          "owner": "Blaine Villafuerte",
-          "vertical": "",
-          "psaWeb": false
-        },
-        {
-          "id": "0016O00003dmuUjQAI",
-          "name": "Omidi Enterprises",
-          "type": "Rev.io PSA Client",
-          "webMigrationStatus": "Migration in progress",
-          "webMigrationDetails": "Won in July 2026",
-          "psaAccountStatus": "Active - Unleashed",
-          "accountStatus": "Active - Unleashed",
-          "owner": "Blaine Villafuerte",
-          "vertical": "",
-          "psaWeb": true
-        },
-        {
-          "id": "0016O00003dmuVBQAY",
-          "name": "Phone & Data Works",
-          "type": "Rev.io PSA Client",
-          "webMigrationStatus": "Migration in progress",
-          "webMigrationDetails": "Interested in migrating, but is worried about cost & implementation",
-          "psaAccountStatus": "Active - Tigerpaw One",
-          "accountStatus": "Active - Tigerpaw One",
-          "owner": "Blaine Villafuerte",
-          "vertical": "",
-          "psaWeb": true
-        },
-        {
-          "id": "0016O00003dmuVCQAY",
-          "name": "Pilothouse Communications",
-          "type": "TigerPaw Client",
-          "webMigrationStatus": "Migration in progress",
-          "webMigrationDetails": "",
-          "psaAccountStatus": "Active - Unleashed",
-          "accountStatus": "Active - Unleashed",
-          "owner": "Gavin Aylward",
-          "vertical": "",
-          "psaWeb": false
-        },
-        {
-          "id": "0016O00003dmuVQQAY",
-          "name": "Professional Security Innovations",
-          "type": "Rev.io PSA Client",
-          "webMigrationStatus": "Migration in progress",
-          "webMigrationDetails": "very eager but cannot move until we have a way to batch to QB desktop - client is not willing to move to QBO",
-          "psaAccountStatus": "Active - Unleashed",
-          "accountStatus": "Active - Unleashed",
-          "owner": "Ingrid Beard",
-          "vertical": "",
-          "psaWeb": true
-        },
-        {
-          "id": "0016O00003dmuVnQAI",
-          "name": "Rave Systems, LLC dba Reference Audio Video & Security (now known as Reference Smart)",
-          "type": "Rev.io PSA Client",
-          "webMigrationStatus": "Migration in progress",
-          "webMigrationDetails": "On track to begin 4/1",
-          "psaAccountStatus": "Active - Tigerpaw One",
-          "accountStatus": "Active - Tigerpaw One",
-          "owner": "Ingrid Beard",
-          "vertical": "",
-          "psaWeb": true
-        },
-        {
-          "id": "001PX00000H25JbYAJ",
-          "name": "Raven Tech LLC",
-          "type": "Rev.io PSA Client",
-          "webMigrationStatus": "Migration in progress",
-          "webMigrationDetails": "Client is on PSA but not using it to full potential. Meeting scheduled in the next few weeks with Account manager 9/4 update",
-          "psaAccountStatus": "",
-          "accountStatus": "",
-          "owner": "",
-          "vertical": "",
-          "psaWeb": true
-        },
-        {
-          "id": "0016O00003dmuVhQAI",
-          "name": "Raytec Systems",
-          "type": "Rev.io PSA Client",
-          "webMigrationStatus": "Migration in progress",
-          "webMigrationDetails": "Currently in onboarding",
-          "psaAccountStatus": "Active - Unleashed",
-          "accountStatus": "Active - Unleashed",
-          "owner": "Blaine Villafuerte",
-          "vertical": "",
-          "psaWeb": true
-        },
-        {
-          "id": "001PX00000D4NYNYA3",
-          "name": "RCH Communications",
-          "type": "Warm Prospect",
-          "webMigrationStatus": "Migration in progress",
-          "webMigrationDetails": "",
-          "psaAccountStatus": "",
-          "accountStatus": "",
-          "owner": "",
-          "vertical": "",
-          "psaWeb": false
-        },
-        {
-          "id": "0016O00003dmuVoQAI",
-          "name": "Rel Comm",
-          "type": "Rev.io PSA Client",
-          "webMigrationStatus": "Migration in progress",
-          "webMigrationDetails": "Migration in progress to PSA",
-          "psaAccountStatus": "Active - Unleashed",
-          "accountStatus": "Active - Unleashed",
-          "owner": "Blaine Villafuerte",
-          "vertical": "",
-          "psaWeb": false
-        },
-        {
-          "id": "0016O00003dmuYMQAY",
-          "name": "Richmond Security",
-          "type": "Rev.io PSA Client",
-          "webMigrationStatus": "Migration in progress",
-          "webMigrationDetails": "Currently migrating to PSA",
-          "psaAccountStatus": "Active - Tigerpaw One",
-          "accountStatus": "Active - Tigerpaw One",
-          "owner": "Blaine Villafuerte",
-          "vertical": "",
-          "psaWeb": true
-        },
-        {
-          "id": "0011C00002uinPDQAY",
-          "name": "RingStreet",
-          "type": "Rev.io PSA Client",
-          "webMigrationStatus": "Migration in progress",
-          "webMigrationDetails": "migration in progress",
-          "psaAccountStatus": "Active - Tigerpaw One",
-          "accountStatus": "Active - Tigerpaw One",
-          "owner": "Ingrid Beard",
-          "vertical": "",
-          "psaWeb": false
-        },
-        {
-          "id": "0016O00003ebjkxQAA",
-          "name": "Roadrunner Lock & Safe",
-          "type": "TigerPaw Client",
-          "webMigrationStatus": "Migration in progress",
-          "webMigrationDetails": "",
-          "psaAccountStatus": "",
-          "accountStatus": "",
-          "owner": "",
-          "vertical": "",
-          "psaWeb": false
-        },
-        {
-          "id": "0016O00003dmuYoQAI",
-          "name": "SmartCom Home Technologies, Inc.",
-          "type": "Rev.io PSA Client",
-          "webMigrationStatus": "Migration in progress",
-          "webMigrationDetails": "On hold and RTA'd as of 06/09 due to bundle functionality",
-          "psaAccountStatus": "Active - Unleashed",
-          "accountStatus": "Active - Unleashed",
-          "owner": "Ingrid Beard",
-          "vertical": "",
-          "psaWeb": false
-        },
-        {
-          "id": "0016O00003dmua7QAA",
-          "name": "TRM",
-          "type": "Rev.io PSA Client",
-          "webMigrationStatus": "Migration in progress",
-          "webMigrationDetails": "7/9 - Called Don, no answer. Following up with email.",
-          "psaAccountStatus": "Active - Unleashed",
-          "accountStatus": "Active - Unleashed",
-          "owner": "Blaine Villafuerte",
-          "vertical": "",
-          "psaWeb": false
-        },
-        {
-          "id": "0016O00003dmuaOQAQ",
-          "name": "UT Networks",
-          "type": "TigerPaw Client",
-          "webMigrationStatus": "Migration in progress",
-          "webMigrationDetails": "",
-          "psaAccountStatus": "Active - Tigerpaw One",
-          "accountStatus": "Active - Tigerpaw One",
-          "owner": "Ingrid Beard",
-          "vertical": "",
-          "psaWeb": false
-        },
-        {
-          "id": "0011C000021EV9PQAW",
-          "name": "VanRan Communications Services, Inc.",
-          "type": "Client",
-          "webMigrationStatus": "Migration in progress",
-          "webMigrationDetails": "",
-          "psaAccountStatus": "Active - Unleashed",
-          "accountStatus": "Active - Unleashed",
-          "owner": "",
-          "vertical": "",
-          "psaWeb": false
-        },
-        {
-          "id": "0016O00003dmuaWQAQ",
-          "name": "Veterans Communications Corp",
-          "type": "TigerPaw Client",
-          "webMigrationStatus": "Migration in progress",
-          "webMigrationDetails": "",
-          "psaAccountStatus": "Active - Tigerpaw One",
-          "accountStatus": "Active - Tigerpaw One",
-          "owner": "Ingrid Beard",
-          "vertical": "",
-          "psaWeb": false
-        },
-        {
-          "id": "0016O00003eao1eQAA",
-          "name": "Virtual Guard",
-          "type": "Rev.io PSA Client",
-          "webMigrationStatus": "Migration in progress",
-          "webMigrationDetails": "",
-          "psaAccountStatus": "Active - Unleashed",
-          "accountStatus": "Active - Unleashed",
-          "owner": "Ingrid Beard",
-          "vertical": "Physical Security / Building Access",
-          "psaWeb": false
-        }
-      ]
-    },
-    {
       "label": "Inactive",
       "count": 28,
-      "pct": 4.3,
+      "pct": 4.2,
       "accounts": [
         {
           "id": "001PX00000CkbNwYAJ",
@@ -7840,7 +8140,7 @@
     {
       "label": "Migration Pending",
       "count": 1,
-      "pct": 0.2,
+      "pct": 0.1,
       "accounts": [
         {
           "id": "001PX00000SADTiYAP",
@@ -7861,19 +8161,19 @@
     {
       "label": "1- Discovery Scheduled",
       "count": 3,
-      "amount": 4676.88,
+      "amount": 4783.88,
       "pct": 2.2,
       "opportunities": [
         {
-          "id": "006PX00000ejVF7YAM",
-          "name": "Innovative Telephone & Data Solutions - Web Migration",
-          "accountId": "0016O00003dmuQVQAY",
-          "account": "Innovative Telephone & Data Solutions, LLC",
+          "id": "006PX00000fmBsoYAE",
+          "name": "JES and Sons 2-Way LLC - Web Migration",
+          "accountId": "0016O00003dmudoQAA",
+          "account": "JES and Sons 2-Way LLC",
           "stage": "1- Discovery Scheduled",
-          "amount": 1766,
+          "amount": 1873,
           "owner": "Justin Lee",
-          "nextStep": "8/31 - PSA demo scheduled with Lara & team",
-          "createdDate": "2026-08-13T20:55:35.000+0000",
+          "nextStep": "9/3 - Met and Summit and will schedule demo of PSA with her team before EOW (9/11)",
+          "createdDate": "2026-09-08T10:19:48.000+0000",
           "closeDate": "2026-09-30",
           "isClosed": false,
           "isWon": false,
@@ -8040,7 +8340,7 @@
           "stage": "2 - Discovery Completed",
           "amount": 1477,
           "owner": "Justin Lee",
-          "nextStep": "9/1 - Last email - Get follow up demo scheduled with Brandon & Richard before EOW (9/4)",
+          "nextStep": "9/1 - Last email - Get follow up demo scheduled with Brandon & Richard before EOW (9/11)",
           "createdDate": "2026-08-04T17:22:05.000+0000",
           "closeDate": "2026-09-30",
           "isClosed": false,
@@ -8226,7 +8526,7 @@
       "label": "4 - Proposal Sent",
       "count": 5,
       "amount": 7392,
-      "pct": 3.7,
+      "pct": 3.6,
       "opportunities": [
         {
           "id": "006PX00000e9Mv7YAE",
@@ -8236,7 +8536,7 @@
           "stage": "4 - Proposal Sent",
           "amount": 1896,
           "owner": "Justin Lee",
-          "nextStep": "9/1 - Spoke to Dave -Get Sara & Daniel time scheduled with Tony & Yuri to see how they envision using Sentinel-1, Cove, & Datto BCDR integrations in order to scope potential builds - Set follow up before EOW (9/4)",
+          "nextStep": "9/1 - Spoke to Dave -Get Sara & Daniel time scheduled with Tony & Yuri to see how they envision using Sentinel-1, Cove, & Datto BCDR integrations in order to scope potential builds - Set follow up before EOW (9/11)",
           "createdDate": "2026-07-30T17:01:53.000+0000",
           "closeDate": "2026-09-30",
           "isClosed": false,
@@ -8332,9 +8632,9 @@
     },
     {
       "label": "5 - Product / Contract Validated",
-      "count": 7,
-      "amount": 8476.2,
-      "pct": 5.1,
+      "count": 6,
+      "amount": 7844.2,
+      "pct": 4.4,
       "opportunities": [
         {
           "id": "006PX00000dShd4YAC",
@@ -8455,34 +8755,14 @@
           "stageLoss": "",
           "smc": "",
           "vikingOneUnlock": null
-        },
-        {
-          "id": "006PX00000e271bYAA",
-          "name": "Watson Communications Corp. - Web Migration",
-          "accountId": "0016O00003dmuacQAA",
-          "account": "Watson Communications Corp.",
-          "stage": "5 - Product / Contract Validated",
-          "amount": 632,
-          "owner": "Justin Lee",
-          "nextStep": "9/1 - Share updated user counts with Doug & Leonard - Push to get contract signed before EOW (9/4)",
-          "createdDate": "2026-07-28T12:59:09.000+0000",
-          "closeDate": "2026-09-30",
-          "isClosed": false,
-          "isWon": false,
-          "lossReason": "Unspecified",
-          "lossDetail": "",
-          "competitor": "",
-          "stageLoss": "",
-          "smc": "",
-          "vikingOneUnlock": null
         }
       ]
     },
     {
       "label": "6 - Verbal Commit",
-      "count": 1,
-      "amount": 1327,
-      "pct": 0.7,
+      "count": 2,
+      "amount": 1959,
+      "pct": 1.5,
       "opportunities": [
         {
           "id": "006PX00000d8gwUYAQ",
@@ -8503,14 +8783,34 @@
           "stageLoss": "",
           "smc": "",
           "vikingOneUnlock": null
+        },
+        {
+          "id": "006PX00000e271bYAA",
+          "name": "Watson Communications Corp. - Web Migration",
+          "accountId": "0016O00003dmuacQAA",
+          "account": "Watson Communications Corp.",
+          "stage": "6 - Verbal Commit",
+          "amount": 632,
+          "owner": "Justin Lee",
+          "nextStep": "9/8 - Sent DocuSign to Doug for review & Leonard for signature by EOW (9/11)",
+          "createdDate": "2026-07-28T12:59:09.000+0000",
+          "closeDate": "2026-09-30",
+          "isClosed": false,
+          "isWon": false,
+          "lossReason": "Unspecified",
+          "lossDetail": "",
+          "competitor": "",
+          "stageLoss": "",
+          "smc": "",
+          "vikingOneUnlock": null
         }
       ]
     },
     {
       "label": "Closed Lost",
-      "count": 61,
-      "amount": 73462.49,
-      "pct": 44.9,
+      "count": 62,
+      "amount": 75228.49,
+      "pct": 45.3,
       "opportunities": [
         {
           "id": "006PX00000eipqzYAA",
@@ -9030,34 +9330,27 @@
           }
         },
         {
-          "id": "006PX00000fIYbVYAW",
-          "name": "Minnesota Telephone TP Migration",
-          "accountId": "0011C000028ISCLQA4",
-          "account": "Minnesota Telephone Networks",
+          "id": "006PX00000ejVF7YAM",
+          "name": "Innovative Telephone & Data Solutions - Web Migration",
+          "accountId": "0016O00003dmuQVQAY",
+          "account": "Innovative Telephone & Data Solutions, LLC",
           "stage": "Closed Lost",
-          "amount": 474,
-          "owner": "Ingrid Beard",
-          "nextStep": "8/27 initial overview",
-          "createdDate": "2026-08-27T10:17:01.000+0000",
-          "closeDate": "2026-08-27",
+          "amount": 1766,
+          "owner": "Justin Lee",
+          "nextStep": "8/31 - PSA demo scheduled with Lara & team",
+          "createdDate": "2026-08-13T20:55:35.000+0000",
+          "closeDate": "2026-09-08",
           "isClosed": true,
           "isWon": false,
           "lossReason": "Software Missing Capabilities",
-          "lossDetail": "they heavily use the password keeper and need this to move forward",
+          "lossDetail": "Schedule follow-up call with Tony Maynor to do a deep dive on subcontractor functionality and requirements",
           "competitor": "",
-          "stageLoss": "2 - Discovery Completed",
+          "stageLoss": "1- Discovery Scheduled",
           "smc": "",
           "vikingOneUnlock": {
-            "status": "Yes",
-            "summary": "Credential vault/password management is in Viking 1.",
-            "matches": [
-              {
-                "feature": "Credential Vault - 3rd Party Integration",
-                "release": "Viking 1",
-                "status": "Available",
-                "detail": "Add a secure, permission-based credential vault for storing and managing client passwords, API keys, and sensitive access information."
-              }
-            ]
+            "status": "Review",
+            "summary": "Needs manual review against the Viking 1 roadmap.",
+            "matches": []
           }
         },
         {
@@ -9105,30 +9398,6 @@
           "vikingOneUnlock": {
             "status": "Review",
             "summary": "Needs manual review against the Viking 1 roadmap.",
-            "matches": []
-          }
-        },
-        {
-          "id": "006PX00000eKiykYAC",
-          "name": "Micromed TP migration",
-          "accountId": "0016O00003dmuU1QAI",
-          "account": "MicroMed",
-          "stage": "Closed Lost",
-          "amount": 920,
-          "owner": "Ingrid Beard",
-          "nextStep": "9/2 follow up with Matt & Rob to see if there are any additional questions/ready for demo",
-          "createdDate": "2026-08-04T16:57:59.000+0000",
-          "closeDate": "2026-09-01",
-          "isClosed": true,
-          "isWon": false,
-          "lossReason": "Lack of Decision Maker Involvement",
-          "lossDetail": "after waiting for weeks for their internal conversation, I have a follow call scheduled to get them back on track",
-          "competitor": "",
-          "stageLoss": "2 - Discovery Completed",
-          "smc": "",
-          "vikingOneUnlock": {
-            "status": "No",
-            "summary": "Loss reason is timing, engagement, or duplicate rather than a Viking 1 feature blocker.",
             "matches": []
           }
         },
@@ -9314,55 +9583,6 @@
           "lossDetail": "Tigerpaw customer MMR $2,158\r\n \r\nHad an initial demo of the web platform, however they cannot move to web until there's a quickbooks desktop batching solution that includes GL codes, or until there is the functionality to pull a robust P/L statement from rev.io by class and service zone. Client stated that if this is something we can't accomplish they will have to migrate somewhere else.\r\n \r\nClient requested a deep dive with an expert on reporting in Web, and will also be attending Summit.",
           "competitor": "",
           "stageLoss": "Closed Lost",
-          "smc": "",
-          "vikingOneUnlock": {
-            "status": "Yes",
-            "summary": "QuickBooks Desktop export and GL mapping work is in Viking 1.",
-            "matches": [
-              {
-                "feature": "QBD - Reliability + go/no-go",
-                "release": "Viking 1",
-                "status": "Available",
-                "detail": "Built-in sync status dashboard so you always know what transferred and what needs attention. The integration recovers gracefully from interruptions, so your data stays safe even if your connection drops."
-              },
-              {
-                "feature": "QBD - Customer + invoice sync",
-                "release": "Viking 1",
-                "status": "Available",
-                "detail": "Push customers and invoices from Rev.io directly into QuickBooks Desktop. Invoices land in the correct GL accounts with sales tax applied automatically. No copy-paste, no import files, no third-party tools."
-              },
-              {
-                "feature": "QBD - Read live QBD data",
-                "release": "Viking 1",
-                "status": "Available",
-                "detail": "Rev.io reads your QuickBooks chart of accounts and item list automatically. No manual exports, no file uploads, no stale data. Your QBD setup is always in sync."
-              },
-              {
-                "feature": "QBD - SOAP endpoint + Web Connector handshake",
-                "release": "Viking 1",
-                "status": "Available",
-                "detail": "Establish a secure, direct connection between Rev.io PSA and QuickBooks Desktop, enabling real-time communication between your cloud workspace and on-premises accounting software."
-              }
-            ]
-          }
-        },
-        {
-          "id": "006PX00000c1tHWYAY",
-          "name": "Moseley Electronics - Web Migration",
-          "accountId": "0016O00003dmuUCQAY",
-          "account": "Moseley Electronics, LLC",
-          "stage": "Closed Lost",
-          "amount": 630,
-          "owner": "Justin Lee",
-          "nextStep": "PSA demo scheduled with Sara on 6/22 at 11am",
-          "createdDate": "2026-06-11T12:42:16.000+0000",
-          "closeDate": "2026-06-23",
-          "isClosed": true,
-          "isWon": false,
-          "lossReason": "No Business Issue",
-          "lossDetail": "Sarah is targeting fall for migration — currently focused on a showroom demo project and still settling after the QuickBooks migration- Follow up in September",
-          "competitor": "",
-          "stageLoss": "1- Discovery Scheduled",
           "smc": "",
           "vikingOneUnlock": {
             "status": "Yes",
@@ -9726,6 +9946,37 @@
           }
         },
         {
+          "id": "006PX00000fIYbVYAW",
+          "name": "Minnesota Telephone TP Migration",
+          "accountId": "0011C000028ISCLQA4",
+          "account": "Minnesota Telephone Networks",
+          "stage": "Closed Lost",
+          "amount": 474,
+          "owner": "Ingrid Beard",
+          "nextStep": "8/27 initial overview",
+          "createdDate": "2026-08-27T10:17:01.000+0000",
+          "closeDate": "2026-08-27",
+          "isClosed": true,
+          "isWon": false,
+          "lossReason": "Software Missing Capabilities",
+          "lossDetail": "they heavily use the password keeper and need this to move forward",
+          "competitor": "",
+          "stageLoss": "2 - Discovery Completed",
+          "smc": "",
+          "vikingOneUnlock": {
+            "status": "Yes",
+            "summary": "Credential vault/password management is in Viking 1.",
+            "matches": [
+              {
+                "feature": "Credential Vault - 3rd Party Integration",
+                "release": "Viking 1",
+                "status": "Available",
+                "detail": "Add a secure, permission-based credential vault for storing and managing client passwords, API keys, and sensitive access information."
+              }
+            ]
+          }
+        },
+        {
           "id": "006PX00000eSMkwYAG",
           "name": "Protector Security - TP Migration",
           "accountId": "0016O00003dmucoQAA",
@@ -9740,6 +9991,30 @@
           "isWon": false,
           "lossReason": "Discovery No Show",
           "lossDetail": "Duplicate opportunity",
+          "competitor": "",
+          "stageLoss": "2 - Discovery Completed",
+          "smc": "",
+          "vikingOneUnlock": {
+            "status": "No",
+            "summary": "Loss reason is timing, engagement, or duplicate rather than a Viking 1 feature blocker.",
+            "matches": []
+          }
+        },
+        {
+          "id": "006PX00000eKiykYAC",
+          "name": "Micromed TP migration",
+          "accountId": "0016O00003dmuU1QAI",
+          "account": "MicroMed",
+          "stage": "Closed Lost",
+          "amount": 920,
+          "owner": "Ingrid Beard",
+          "nextStep": "9/2 follow up with Matt & Rob to see if there are any additional questions/ready for demo",
+          "createdDate": "2026-08-04T16:57:59.000+0000",
+          "closeDate": "2026-09-01",
+          "isClosed": true,
+          "isWon": false,
+          "lossReason": "Lack of Decision Maker Involvement",
+          "lossDetail": "after waiting for weeks for their internal conversation, I have a follow call scheduled to get them back on track",
           "competitor": "",
           "stageLoss": "2 - Discovery Completed",
           "smc": "",
@@ -9796,61 +10071,6 @@
                 "detail": "Establish a secure, direct connection between Rev.io PSA and QuickBooks Desktop, enabling real-time communication between your cloud workspace and on-premises accounting software."
               }
             ]
-          }
-        },
-        {
-          "id": "006PX00000dT2nzYAC",
-          "name": "Tri-Tec Communications (Tigerpaw to PSA)",
-          "accountId": "0011C00002lbOxLQAU",
-          "account": "Tri-Tec Communications",
-          "stage": "Closed Lost",
-          "amount": 2060,
-          "owner": "Jakob Champion",
-          "nextStep": "8/4 Follow up meeting to discuss migration & pricing.",
-          "createdDate": "2026-07-14T18:46:39.000+0000",
-          "closeDate": "2026-08-04",
-          "isClosed": true,
-          "isWon": false,
-          "lossReason": "Software Missing Capabilities",
-          "lossDetail": "Password Keeper & Quote Migration",
-          "competitor": "",
-          "stageLoss": "3 - Initial Product Demo",
-          "smc": "",
-          "vikingOneUnlock": {
-            "status": "Yes",
-            "summary": "Credential vault/password management is in Viking 1.",
-            "matches": [
-              {
-                "feature": "Credential Vault - 3rd Party Integration",
-                "release": "Viking 1",
-                "status": "Available",
-                "detail": "Add a secure, permission-based credential vault for storing and managing client passwords, API keys, and sensitive access information."
-              }
-            ]
-          }
-        },
-        {
-          "id": "006PX00000dSBbfYAG",
-          "name": "The Phone Experts - TP Migration",
-          "accountId": "001PX000004hVRqYAM",
-          "account": "The Phone Experts - Communications Ltd.",
-          "stage": "Closed Lost",
-          "amount": 3022,
-          "owner": "Jakob Champion",
-          "nextStep": "9/1 Follow up to schedule meeting next week",
-          "createdDate": "2026-07-14T15:13:57.000+0000",
-          "closeDate": "2026-09-01",
-          "isClosed": true,
-          "isWon": false,
-          "lossReason": "Not the Right Time",
-          "lossDetail": "Customer stated they are interested in migrating but don't want to continue the conversation until mid to late November.",
-          "competitor": "",
-          "stageLoss": "3 - Initial Product Demo",
-          "smc": "",
-          "vikingOneUnlock": {
-            "status": "No",
-            "summary": "Loss reason is timing, engagement, or duplicate rather than a Viking 1 feature blocker.",
-            "matches": []
           }
         },
         {
@@ -9999,6 +10219,55 @@
           }
         },
         {
+          "id": "006PX00000c1tHWYAY",
+          "name": "Moseley Electronics - Web Migration",
+          "accountId": "0016O00003dmuUCQAY",
+          "account": "Moseley Electronics, LLC",
+          "stage": "Closed Lost",
+          "amount": 630,
+          "owner": "Justin Lee",
+          "nextStep": "PSA demo scheduled with Sara on 6/22 at 11am",
+          "createdDate": "2026-06-11T12:42:16.000+0000",
+          "closeDate": "2026-06-23",
+          "isClosed": true,
+          "isWon": false,
+          "lossReason": "No Business Issue",
+          "lossDetail": "Sarah is targeting fall for migration — currently focused on a showroom demo project and still settling after the QuickBooks migration- Follow up in September",
+          "competitor": "",
+          "stageLoss": "1- Discovery Scheduled",
+          "smc": "",
+          "vikingOneUnlock": {
+            "status": "Yes",
+            "summary": "QuickBooks Desktop export and GL mapping work is in Viking 1.",
+            "matches": [
+              {
+                "feature": "QBD - Reliability + go/no-go",
+                "release": "Viking 1",
+                "status": "Available",
+                "detail": "Built-in sync status dashboard so you always know what transferred and what needs attention. The integration recovers gracefully from interruptions, so your data stays safe even if your connection drops."
+              },
+              {
+                "feature": "QBD - Customer + invoice sync",
+                "release": "Viking 1",
+                "status": "Available",
+                "detail": "Push customers and invoices from Rev.io directly into QuickBooks Desktop. Invoices land in the correct GL accounts with sales tax applied automatically. No copy-paste, no import files, no third-party tools."
+              },
+              {
+                "feature": "QBD - Read live QBD data",
+                "release": "Viking 1",
+                "status": "Available",
+                "detail": "Rev.io reads your QuickBooks chart of accounts and item list automatically. No manual exports, no file uploads, no stale data. Your QBD setup is always in sync."
+              },
+              {
+                "feature": "QBD - SOAP endpoint + Web Connector handshake",
+                "release": "Viking 1",
+                "status": "Available",
+                "detail": "Establish a secure, direct connection between Rev.io PSA and QuickBooks Desktop, enabling real-time communication between your cloud workspace and on-premises accounting software."
+              }
+            ]
+          }
+        },
+        {
           "id": "006PX00000bJPyIYAW",
           "name": "Phoenix Energy Supply - Web Migration",
           "accountId": "0016O00003dmuV7QAI",
@@ -10051,30 +10320,6 @@
                 "detail": "Find the right products faster when building quotes. Search and add items by part number—ideal for catalog-heavy workflows and repeat quoting—so sales teams can create accurate quotes in fewer clicks and with less back-and-forth."
               }
             ]
-          }
-        },
-        {
-          "id": "006PX00000bF31tYAC",
-          "name": "Crowley Web Migration",
-          "accountId": "0016O00003dmuZqQAI",
-          "account": "The Crowley Company",
-          "stage": "Closed Lost",
-          "amount": 0,
-          "owner": "Justin Lee",
-          "nextStep": "Left VM for Debbie on 5/27 - Set meeting by EOW",
-          "createdDate": "2026-05-27T13:58:01.000+0000",
-          "closeDate": "2026-05-28",
-          "isClosed": true,
-          "isWon": false,
-          "lossReason": "Not the Right Time",
-          "lossDetail": "Spoke to Debbie on 5/28- She shared she wants to \"clean up their data\" before moving over to the new platform. The webinar answered most of her questions. Target date to begin migrating over would be Jan. 1st, 2027.",
-          "competitor": "",
-          "stageLoss": "1- Discovery Scheduled",
-          "smc": "",
-          "vikingOneUnlock": {
-            "status": "No",
-            "summary": "Loss reason is timing, engagement, or duplicate rather than a Viking 1 feature blocker.",
-            "matches": []
           }
         },
         {
@@ -10295,6 +10540,61 @@
           }
         },
         {
+          "id": "006PX00000dT2nzYAC",
+          "name": "Tri-Tec Communications (Tigerpaw to PSA)",
+          "accountId": "0011C00002lbOxLQAU",
+          "account": "Tri-Tec Communications",
+          "stage": "Closed Lost",
+          "amount": 2060,
+          "owner": "Jakob Champion",
+          "nextStep": "8/4 Follow up meeting to discuss migration & pricing.",
+          "createdDate": "2026-07-14T18:46:39.000+0000",
+          "closeDate": "2026-08-04",
+          "isClosed": true,
+          "isWon": false,
+          "lossReason": "Software Missing Capabilities",
+          "lossDetail": "Password Keeper & Quote Migration",
+          "competitor": "",
+          "stageLoss": "3 - Initial Product Demo",
+          "smc": "",
+          "vikingOneUnlock": {
+            "status": "Yes",
+            "summary": "Credential vault/password management is in Viking 1.",
+            "matches": [
+              {
+                "feature": "Credential Vault - 3rd Party Integration",
+                "release": "Viking 1",
+                "status": "Available",
+                "detail": "Add a secure, permission-based credential vault for storing and managing client passwords, API keys, and sensitive access information."
+              }
+            ]
+          }
+        },
+        {
+          "id": "006PX00000dSBbfYAG",
+          "name": "The Phone Experts - TP Migration",
+          "accountId": "001PX000004hVRqYAM",
+          "account": "The Phone Experts - Communications Ltd.",
+          "stage": "Closed Lost",
+          "amount": 3022,
+          "owner": "Jakob Champion",
+          "nextStep": "9/1 Follow up to schedule meeting next week",
+          "createdDate": "2026-07-14T15:13:57.000+0000",
+          "closeDate": "2026-09-01",
+          "isClosed": true,
+          "isWon": false,
+          "lossReason": "Not the Right Time",
+          "lossDetail": "Customer stated they are interested in migrating but don't want to continue the conversation until mid to late November.",
+          "competitor": "",
+          "stageLoss": "3 - Initial Product Demo",
+          "smc": "",
+          "vikingOneUnlock": {
+            "status": "No",
+            "summary": "Loss reason is timing, engagement, or duplicate rather than a Viking 1 feature blocker.",
+            "matches": []
+          }
+        },
+        {
           "id": "006PX00000cMwh0YAC",
           "name": "WCCR - TP Migration",
           "accountId": "0016O00003dmuagQAA",
@@ -10359,6 +10659,30 @@
           "lossDetail": "Spoke to Nikki on 6/15  - still no connection to DM (Pat) & with as much as she has on her plate- no move will be made at this time.",
           "competitor": "",
           "stageLoss": "2 - Discovery Completed",
+          "smc": "",
+          "vikingOneUnlock": {
+            "status": "No",
+            "summary": "Loss reason is timing, engagement, or duplicate rather than a Viking 1 feature blocker.",
+            "matches": []
+          }
+        },
+        {
+          "id": "006PX00000bF31tYAC",
+          "name": "Crowley Web Migration",
+          "accountId": "0016O00003dmuZqQAI",
+          "account": "The Crowley Company",
+          "stage": "Closed Lost",
+          "amount": 0,
+          "owner": "Justin Lee",
+          "nextStep": "Left VM for Debbie on 5/27 - Set meeting by EOW",
+          "createdDate": "2026-05-27T13:58:01.000+0000",
+          "closeDate": "2026-05-28",
+          "isClosed": true,
+          "isWon": false,
+          "lossReason": "Not the Right Time",
+          "lossDetail": "Spoke to Debbie on 5/28- She shared she wants to \"clean up their data\" before moving over to the new platform. The webinar answered most of her questions. Target date to begin migrating over would be Jan. 1st, 2027.",
+          "competitor": "",
+          "stageLoss": "1- Discovery Scheduled",
           "smc": "",
           "vikingOneUnlock": {
             "status": "No",
@@ -10439,7 +10763,7 @@
       "label": "Closed Won",
       "count": 45,
       "amount": 37527,
-      "pct": 33.1,
+      "pct": 32.8,
       "opportunities": [
         {
           "id": "006PX00000eOY6LYAW",
@@ -10472,26 +10796,6 @@
           "nextStep": "8/28 Follow up to make sure docusign is good & no questions",
           "createdDate": "2026-07-28T13:59:02.000+0000",
           "closeDate": "2026-08-27",
-          "isClosed": true,
-          "isWon": true,
-          "lossReason": "Unspecified",
-          "lossDetail": "",
-          "competitor": "",
-          "stageLoss": "",
-          "smc": "",
-          "vikingOneUnlock": null
-        },
-        {
-          "id": "006PX00000dJXrRYAW",
-          "name": "Dividia - PSA Migration",
-          "accountId": "0016O00003dmuOnQAI",
-          "account": "Dividia",
-          "stage": "Closed Won",
-          "amount": 1180,
-          "owner": "Ingrid Beard",
-          "nextStep": "7/17 follow up for verification that there are no additional questions",
-          "createdDate": "2026-07-10T13:02:58.000+0000",
-          "closeDate": "2026-07-16",
           "isClosed": true,
           "isWon": true,
           "lossReason": "Unspecified",
@@ -10652,6 +10956,26 @@
           "nextStep": "",
           "createdDate": "2026-01-15T15:33:06.000+0000",
           "closeDate": "2026-01-15",
+          "isClosed": true,
+          "isWon": true,
+          "lossReason": "Unspecified",
+          "lossDetail": "",
+          "competitor": "",
+          "stageLoss": "",
+          "smc": "",
+          "vikingOneUnlock": null
+        },
+        {
+          "id": "006PX00000dJXrRYAW",
+          "name": "Dividia - PSA Migration",
+          "accountId": "0016O00003dmuOnQAI",
+          "account": "Dividia",
+          "stage": "Closed Won",
+          "amount": 1180,
+          "owner": "Ingrid Beard",
+          "nextStep": "7/17 follow up for verification that there are no additional questions",
+          "createdDate": "2026-07-10T13:02:58.000+0000",
+          "closeDate": "2026-07-16",
           "isClosed": true,
           "isWon": true,
           "lossReason": "Unspecified",
@@ -10942,26 +11266,6 @@
           "vikingOneUnlock": null
         },
         {
-          "id": "006PX00000dqbEkYAI",
-          "name": "The Rhino Group PSA Migration",
-          "accountId": "0016O00003dmuZsQAI",
-          "account": "The RHINO Group",
-          "stage": "Closed Won",
-          "amount": 1890,
-          "owner": "Ingrid Beard",
-          "nextStep": "8/26 follow up on questions on database and migration",
-          "createdDate": "2026-07-23T16:54:59.000+0000",
-          "closeDate": "2026-08-25",
-          "isClosed": true,
-          "isWon": true,
-          "lossReason": "Unspecified",
-          "lossDetail": "",
-          "competitor": "",
-          "stageLoss": "",
-          "smc": "",
-          "vikingOneUnlock": null
-        },
-        {
           "id": "006PX00000djzDlYAI",
           "name": "Richmond- TP to PSA Web",
           "accountId": "0016O00003dmuYMQAY",
@@ -11202,6 +11506,26 @@
           "vikingOneUnlock": null
         },
         {
+          "id": "006PX00000dqbEkYAI",
+          "name": "The Rhino Group PSA Migration",
+          "accountId": "0016O00003dmuZsQAI",
+          "account": "The RHINO Group",
+          "stage": "Closed Won",
+          "amount": 1890,
+          "owner": "Ingrid Beard",
+          "nextStep": "8/26 follow up on questions on database and migration",
+          "createdDate": "2026-07-23T16:54:59.000+0000",
+          "closeDate": "2026-08-25",
+          "isClosed": true,
+          "isWon": true,
+          "lossReason": "Unspecified",
+          "lossDetail": "",
+          "competitor": "",
+          "stageLoss": "",
+          "smc": "",
+          "vikingOneUnlock": null
+        },
+        {
           "id": "006PX00000dDvlGYAS",
           "name": "TRM - PSA Migration",
           "accountId": "0016O00003dmua7QAA",
@@ -11347,8 +11671,8 @@
   "lossBreakdown": [
     {
       "label": "Software Missing Capabilities",
-      "count": 32,
-      "amount": 40345.270000000004,
+      "count": 33,
+      "amount": 42111.270000000004,
       "opportunities": [
         {
           "id": "006PX00000eOF27YAG",
@@ -11657,34 +11981,27 @@
           }
         },
         {
-          "id": "006PX00000fIYbVYAW",
-          "name": "Minnesota Telephone TP Migration",
-          "accountId": "0011C000028ISCLQA4",
-          "account": "Minnesota Telephone Networks",
+          "id": "006PX00000ejVF7YAM",
+          "name": "Innovative Telephone & Data Solutions - Web Migration",
+          "accountId": "0016O00003dmuQVQAY",
+          "account": "Innovative Telephone & Data Solutions, LLC",
           "stage": "Closed Lost",
-          "amount": 474,
-          "owner": "Ingrid Beard",
-          "nextStep": "8/27 initial overview",
-          "createdDate": "2026-08-27T10:17:01.000+0000",
-          "closeDate": "2026-08-27",
+          "amount": 1766,
+          "owner": "Justin Lee",
+          "nextStep": "8/31 - PSA demo scheduled with Lara & team",
+          "createdDate": "2026-08-13T20:55:35.000+0000",
+          "closeDate": "2026-09-08",
           "isClosed": true,
           "isWon": false,
           "lossReason": "Software Missing Capabilities",
-          "lossDetail": "they heavily use the password keeper and need this to move forward",
+          "lossDetail": "Schedule follow-up call with Tony Maynor to do a deep dive on subcontractor functionality and requirements",
           "competitor": "",
-          "stageLoss": "2 - Discovery Completed",
+          "stageLoss": "1- Discovery Scheduled",
           "smc": "",
           "vikingOneUnlock": {
-            "status": "Yes",
-            "summary": "Credential vault/password management is in Viking 1.",
-            "matches": [
-              {
-                "feature": "Credential Vault - 3rd Party Integration",
-                "release": "Viking 1",
-                "status": "Available",
-                "detail": "Add a secure, permission-based credential vault for storing and managing client passwords, API keys, and sensitive access information."
-              }
-            ]
+            "status": "Review",
+            "summary": "Needs manual review against the Viking 1 roadmap.",
+            "matches": []
           }
         },
         {
@@ -12201,6 +12518,37 @@
           }
         },
         {
+          "id": "006PX00000fIYbVYAW",
+          "name": "Minnesota Telephone TP Migration",
+          "accountId": "0011C000028ISCLQA4",
+          "account": "Minnesota Telephone Networks",
+          "stage": "Closed Lost",
+          "amount": 474,
+          "owner": "Ingrid Beard",
+          "nextStep": "8/27 initial overview",
+          "createdDate": "2026-08-27T10:17:01.000+0000",
+          "closeDate": "2026-08-27",
+          "isClosed": true,
+          "isWon": false,
+          "lossReason": "Software Missing Capabilities",
+          "lossDetail": "they heavily use the password keeper and need this to move forward",
+          "competitor": "",
+          "stageLoss": "2 - Discovery Completed",
+          "smc": "",
+          "vikingOneUnlock": {
+            "status": "Yes",
+            "summary": "Credential vault/password management is in Viking 1.",
+            "matches": [
+              {
+                "feature": "Credential Vault - 3rd Party Integration",
+                "release": "Viking 1",
+                "status": "Available",
+                "detail": "Add a secure, permission-based credential vault for storing and managing client passwords, API keys, and sensitive access information."
+              }
+            ]
+          }
+        },
+        {
           "id": "006PX00000dhQaHYAU",
           "name": "MPS Works - Web Migration",
           "accountId": "0016O00003dmuUMQAY",
@@ -12245,37 +12593,6 @@
                 "release": "Viking 1",
                 "status": "Available",
                 "detail": "Establish a secure, direct connection between Rev.io PSA and QuickBooks Desktop, enabling real-time communication between your cloud workspace and on-premises accounting software."
-              }
-            ]
-          }
-        },
-        {
-          "id": "006PX00000dT2nzYAC",
-          "name": "Tri-Tec Communications (Tigerpaw to PSA)",
-          "accountId": "0011C00002lbOxLQAU",
-          "account": "Tri-Tec Communications",
-          "stage": "Closed Lost",
-          "amount": 2060,
-          "owner": "Jakob Champion",
-          "nextStep": "8/4 Follow up meeting to discuss migration & pricing.",
-          "createdDate": "2026-07-14T18:46:39.000+0000",
-          "closeDate": "2026-08-04",
-          "isClosed": true,
-          "isWon": false,
-          "lossReason": "Software Missing Capabilities",
-          "lossDetail": "Password Keeper & Quote Migration",
-          "competitor": "",
-          "stageLoss": "3 - Initial Product Demo",
-          "smc": "",
-          "vikingOneUnlock": {
-            "status": "Yes",
-            "summary": "Credential vault/password management is in Viking 1.",
-            "matches": [
-              {
-                "feature": "Credential Vault - 3rd Party Integration",
-                "release": "Viking 1",
-                "status": "Available",
-                "detail": "Add a secure, permission-based credential vault for storing and managing client passwords, API keys, and sensitive access information."
               }
             ]
           }
@@ -12453,6 +12770,37 @@
                 "release": "Viking 1",
                 "status": "Available",
                 "detail": "Establish a secure, direct connection between Rev.io PSA and QuickBooks Desktop, enabling real-time communication between your cloud workspace and on-premises accounting software."
+              }
+            ]
+          }
+        },
+        {
+          "id": "006PX00000dT2nzYAC",
+          "name": "Tri-Tec Communications (Tigerpaw to PSA)",
+          "accountId": "0011C00002lbOxLQAU",
+          "account": "Tri-Tec Communications",
+          "stage": "Closed Lost",
+          "amount": 2060,
+          "owner": "Jakob Champion",
+          "nextStep": "8/4 Follow up meeting to discuss migration & pricing.",
+          "createdDate": "2026-07-14T18:46:39.000+0000",
+          "closeDate": "2026-08-04",
+          "isClosed": true,
+          "isWon": false,
+          "lossReason": "Software Missing Capabilities",
+          "lossDetail": "Password Keeper & Quote Migration",
+          "competitor": "",
+          "stageLoss": "3 - Initial Product Demo",
+          "smc": "",
+          "vikingOneUnlock": {
+            "status": "Yes",
+            "summary": "Credential vault/password management is in Viking 1.",
+            "matches": [
+              {
+                "feature": "Credential Vault - 3rd Party Integration",
+                "release": "Viking 1",
+                "status": "Available",
+                "detail": "Add a secure, permission-based credential vault for storing and managing client passwords, API keys, and sensitive access information."
               }
             ]
           }
@@ -12702,30 +13050,6 @@
           }
         },
         {
-          "id": "006PX00000dSBbfYAG",
-          "name": "The Phone Experts - TP Migration",
-          "accountId": "001PX000004hVRqYAM",
-          "account": "The Phone Experts - Communications Ltd.",
-          "stage": "Closed Lost",
-          "amount": 3022,
-          "owner": "Jakob Champion",
-          "nextStep": "9/1 Follow up to schedule meeting next week",
-          "createdDate": "2026-07-14T15:13:57.000+0000",
-          "closeDate": "2026-09-01",
-          "isClosed": true,
-          "isWon": false,
-          "lossReason": "Not the Right Time",
-          "lossDetail": "Customer stated they are interested in migrating but don't want to continue the conversation until mid to late November.",
-          "competitor": "",
-          "stageLoss": "3 - Initial Product Demo",
-          "smc": "",
-          "vikingOneUnlock": {
-            "status": "No",
-            "summary": "Loss reason is timing, engagement, or duplicate rather than a Viking 1 feature blocker.",
-            "matches": []
-          }
-        },
-        {
           "id": "006PX00000cEBvNYAW",
           "name": "Technology Unlimited - TP Migration",
           "accountId": "0016O00003dmuZUQAY",
@@ -12742,30 +13066,6 @@
           "lossDetail": "Sylvia feels that they need to get their internal situation handled before moving forward and define their internal processes and extremely busy and will need a few months to get this all together",
           "competitor": "",
           "stageLoss": "5 - Product / Contract Validated",
-          "smc": "",
-          "vikingOneUnlock": {
-            "status": "No",
-            "summary": "Loss reason is timing, engagement, or duplicate rather than a Viking 1 feature blocker.",
-            "matches": []
-          }
-        },
-        {
-          "id": "006PX00000bF31tYAC",
-          "name": "Crowley Web Migration",
-          "accountId": "0016O00003dmuZqQAI",
-          "account": "The Crowley Company",
-          "stage": "Closed Lost",
-          "amount": 0,
-          "owner": "Justin Lee",
-          "nextStep": "Left VM for Debbie on 5/27 - Set meeting by EOW",
-          "createdDate": "2026-05-27T13:58:01.000+0000",
-          "closeDate": "2026-05-28",
-          "isClosed": true,
-          "isWon": false,
-          "lossReason": "Not the Right Time",
-          "lossDetail": "Spoke to Debbie on 5/28- She shared she wants to \"clean up their data\" before moving over to the new platform. The webinar answered most of her questions. Target date to begin migrating over would be Jan. 1st, 2027.",
-          "competitor": "",
-          "stageLoss": "1- Discovery Scheduled",
           "smc": "",
           "vikingOneUnlock": {
             "status": "No",
@@ -12846,6 +13146,30 @@
           }
         },
         {
+          "id": "006PX00000dSBbfYAG",
+          "name": "The Phone Experts - TP Migration",
+          "accountId": "001PX000004hVRqYAM",
+          "account": "The Phone Experts - Communications Ltd.",
+          "stage": "Closed Lost",
+          "amount": 3022,
+          "owner": "Jakob Champion",
+          "nextStep": "9/1 Follow up to schedule meeting next week",
+          "createdDate": "2026-07-14T15:13:57.000+0000",
+          "closeDate": "2026-09-01",
+          "isClosed": true,
+          "isWon": false,
+          "lossReason": "Not the Right Time",
+          "lossDetail": "Customer stated they are interested in migrating but don't want to continue the conversation until mid to late November.",
+          "competitor": "",
+          "stageLoss": "3 - Initial Product Demo",
+          "smc": "",
+          "vikingOneUnlock": {
+            "status": "No",
+            "summary": "Loss reason is timing, engagement, or duplicate rather than a Viking 1 feature blocker.",
+            "matches": []
+          }
+        },
+        {
           "id": "006PX00000cMwh0YAC",
           "name": "WCCR - TP Migration",
           "accountId": "0016O00003dmuagQAA",
@@ -12860,6 +13184,30 @@
           "isWon": false,
           "lossReason": "Not the Right Time",
           "lossDetail": "current ownership has asked for Drew to wait until he has completely taken over in May so they do not need to learn a new software right before their retirement, will discuss more if there are any pricing changes",
+          "competitor": "",
+          "stageLoss": "1- Discovery Scheduled",
+          "smc": "",
+          "vikingOneUnlock": {
+            "status": "No",
+            "summary": "Loss reason is timing, engagement, or duplicate rather than a Viking 1 feature blocker.",
+            "matches": []
+          }
+        },
+        {
+          "id": "006PX00000bF31tYAC",
+          "name": "Crowley Web Migration",
+          "accountId": "0016O00003dmuZqQAI",
+          "account": "The Crowley Company",
+          "stage": "Closed Lost",
+          "amount": 0,
+          "owner": "Justin Lee",
+          "nextStep": "Left VM for Debbie on 5/27 - Set meeting by EOW",
+          "createdDate": "2026-05-27T13:58:01.000+0000",
+          "closeDate": "2026-05-28",
+          "isClosed": true,
+          "isWon": false,
+          "lossReason": "Not the Right Time",
+          "lossDetail": "Spoke to Debbie on 5/28- She shared she wants to \"clean up their data\" before moving over to the new platform. The webinar answered most of her questions. Target date to begin migrating over would be Jan. 1st, 2027.",
           "competitor": "",
           "stageLoss": "1- Discovery Scheduled",
           "smc": "",
@@ -13316,6 +13664,18 @@
       "psaWeb": false
     },
     {
+      "id": "001PX00000LTJGBYA5",
+      "name": "210 Solutions",
+      "type": "Rev.io PSA Client",
+      "webMigrationStatus": "Unknown",
+      "webMigrationDetails": "",
+      "psaAccountStatus": "",
+      "accountStatus": "",
+      "owner": "",
+      "vertical": "",
+      "psaWeb": false
+    },
+    {
       "id": "0016O00003dmuJQQAY",
       "name": "4D IT",
       "type": "Rev.io PSA Client",
@@ -13544,6 +13904,18 @@
       "psaWeb": false
     },
     {
+      "id": "001PX0000071NPzYAM",
+      "name": "Advanced Audio",
+      "type": "Rev.io PSA Client",
+      "webMigrationStatus": "Unknown",
+      "webMigrationDetails": "",
+      "psaAccountStatus": "",
+      "accountStatus": "",
+      "owner": "",
+      "vertical": "",
+      "psaWeb": false
+    },
+    {
       "id": "0016O00003dmuJjQAI",
       "name": "Advanced Communication Technologies",
       "type": "Rev.io PSA Client",
@@ -13660,6 +14032,18 @@
       "psaAccountStatus": "Active - Unleashed",
       "accountStatus": "Active - Unleashed",
       "owner": "Blaine Villafuerte",
+      "vertical": "",
+      "psaWeb": false
+    },
+    {
+      "id": "001PX000003tpoKYAQ",
+      "name": "Advanosys",
+      "type": "Rev.io PSA Client",
+      "webMigrationStatus": "Unknown",
+      "webMigrationDetails": "",
+      "psaAccountStatus": "",
+      "accountStatus": "",
+      "owner": "",
       "vertical": "",
       "psaWeb": false
     },
@@ -13799,7 +14183,7 @@
       "id": "0011C00002jC8JtQAK",
       "name": "All-Mode Communications Inc",
       "type": "Rev.io PSA Client",
-      "webMigrationStatus": "Want to migrate asap",
+      "webMigrationStatus": "Opent to Migrate - Missing features",
       "webMigrationDetails": "Missing functionality - requested feedback from client.",
       "psaAccountStatus": "Active - Unleashed",
       "accountStatus": "Active - Unleashed",
@@ -14012,6 +14396,18 @@
       "psaWeb": false
     },
     {
+      "id": "001PX00000Syv4xYAB",
+      "name": "Ataraxis Solutions",
+      "type": "Rev.io PSA Client",
+      "webMigrationStatus": "Unknown",
+      "webMigrationDetails": "",
+      "psaAccountStatus": "Active - Web",
+      "accountStatus": "Active - Web",
+      "owner": "",
+      "vertical": "",
+      "psaWeb": true
+    },
+    {
       "id": "0016O00003dmuKEQAY",
       "name": "Atel Technologies",
       "type": "Churn",
@@ -14039,7 +14435,7 @@
       "id": "0016O00003dmuKIQAY",
       "name": "Atlantic Security & Telecom Solutions, Inc.",
       "type": "TigerPaw Client",
-      "webMigrationStatus": "Want to migrate asap",
+      "webMigrationStatus": "Migration in progress",
       "webMigrationDetails": "on track to migrate 4/1 or 6/1 based on released functionality; has been engaged and received multiple demos",
       "psaAccountStatus": "Active - Unleashed",
       "accountStatus": "Active - Unleashed",
@@ -14117,6 +14513,18 @@
       "accountStatus": "Active - Tigerpaw One",
       "owner": "Blaine Villafuerte",
       "vertical": "AV / Home Automation",
+      "psaWeb": false
+    },
+    {
+      "id": "001PX00000RlHkDYAV",
+      "name": "Audio Video Experts",
+      "type": "Rev.io PSA Client",
+      "webMigrationStatus": "Unknown",
+      "webMigrationDetails": "",
+      "psaAccountStatus": "",
+      "accountStatus": "",
+      "owner": "",
+      "vertical": "",
       "psaWeb": false
     },
     {
@@ -14279,7 +14687,7 @@
       "id": "0016O00003dmuciQAA",
       "name": "Bahamas Information Access Systems Limited",
       "type": "Cold Prospect",
-      "webMigrationStatus": "Unknown",
+      "webMigrationStatus": "Do not want to migrate",
       "webMigrationDetails": "08/2026 owner is not showing interest",
       "psaAccountStatus": "",
       "accountStatus": "",
@@ -14507,7 +14915,7 @@
       "id": "0016O00003dmuKtQAI",
       "name": "Bri-Tech Inc.",
       "type": "Rev.io PSA Client",
-      "webMigrationStatus": "Want to migrate asap",
+      "webMigrationStatus": "Want to migrate / timeline unknown",
       "webMigrationDetails": "Demo scheduled for 9/7",
       "psaAccountStatus": "Active - Tigerpaw One",
       "accountStatus": "Active - Tigerpaw One",
@@ -14519,7 +14927,7 @@
       "id": "0011500001eNpDxAAK",
       "name": "Bridge Communications",
       "type": "Rev.io PSA Client",
-      "webMigrationStatus": "Want to migrate asap",
+      "webMigrationStatus": "Migration in progress",
       "webMigrationDetails": "Migration in process as of 2/1/26 - waiting on intake information from the client",
       "psaAccountStatus": "",
       "accountStatus": "",
@@ -14675,7 +15083,7 @@
       "id": "0016O00003dmuL9QAI",
       "name": "CC-Teknologies Inc.",
       "type": "Rev.io PSA Client",
-      "webMigrationStatus": "Unknown",
+      "webMigrationStatus": "Want to migrate / timeline unknown",
       "webMigrationDetails": "",
       "psaAccountStatus": "Active - Unleashed",
       "accountStatus": "Active - Unleashed",
@@ -14795,7 +15203,7 @@
       "id": "0016O00003dmuViQAI",
       "name": "Chortek",
       "type": "TigerPaw Client",
-      "webMigrationStatus": "Unknown",
+      "webMigrationStatus": "Migration in progress",
       "webMigrationDetails": "",
       "psaAccountStatus": "Active - Unleashed",
       "accountStatus": "Active - Unleashed",
@@ -14825,6 +15233,18 @@
       "accountStatus": "Active - Unleashed",
       "owner": "Gavin Aylward",
       "vertical": "Structured Cabling",
+      "psaWeb": false
+    },
+    {
+      "id": "0016O0000370KGaQAM",
+      "name": "Citi-Telecom Voice & Data Inc",
+      "type": "Rev.io PSA Client",
+      "webMigrationStatus": "Unknown",
+      "webMigrationDetails": "",
+      "psaAccountStatus": "",
+      "accountStatus": "",
+      "owner": "",
+      "vertical": "",
       "psaWeb": false
     },
     {
@@ -15131,7 +15551,7 @@
       "id": "0016O00003dmos9QAA",
       "name": "Compu-Tech, Inc.",
       "type": "TigerPaw Client",
-      "webMigrationStatus": "Want to migrate asap",
+      "webMigrationStatus": "Migration in progress",
       "webMigrationDetails": "wanted to move over ASAP but went dark once I sent him the contract",
       "psaAccountStatus": "Active - Unleashed",
       "accountStatus": "Active - Unleashed",
@@ -15339,6 +15759,18 @@
       "webMigrationDetails": "scheduling a demo time (Jim is over the top busy and will get back around to this according to Susan)",
       "psaAccountStatus": "Active - Unleashed",
       "accountStatus": "Active - Unleashed",
+      "owner": "",
+      "vertical": "",
+      "psaWeb": false
+    },
+    {
+      "id": "001PX000004hS22YAE",
+      "name": "crosscountrycomm.com",
+      "type": "Rev.io PSA Client",
+      "webMigrationStatus": "Want to migrate / timeline unknown",
+      "webMigrationDetails": "",
+      "psaAccountStatus": "",
+      "accountStatus": "",
       "owner": "",
       "vertical": "",
       "psaWeb": false
@@ -15572,6 +16004,18 @@
       "psaWeb": false
     },
     {
+      "id": "001PX00000NIlzJYAT",
+      "name": "DeTel Communications",
+      "type": "Rev.io PSA Client",
+      "webMigrationStatus": "Unknown",
+      "webMigrationDetails": "",
+      "psaAccountStatus": "",
+      "accountStatus": "",
+      "owner": "",
+      "vertical": "",
+      "psaWeb": false
+    },
+    {
       "id": "0016O00003dmuOkQAI",
       "name": "Digicorp",
       "type": "TigerPaw Client",
@@ -15599,7 +16043,7 @@
       "id": "0011C00002iU7CcQAK",
       "name": "Digital Telecommunications",
       "type": "TigerPaw Client",
-      "webMigrationStatus": "Want to migrate asap",
+      "webMigrationStatus": "Migration in progress",
       "webMigrationDetails": "",
       "psaAccountStatus": "Active - Tigerpaw One",
       "accountStatus": "Active - Tigerpaw One",
@@ -16088,6 +16532,18 @@
       "psaWeb": false
     },
     {
+      "id": "001PX00000NZjt8YAD",
+      "name": "Evotech",
+      "type": "Rev.io PSA Client",
+      "webMigrationStatus": "Unknown",
+      "webMigrationDetails": "",
+      "psaAccountStatus": "",
+      "accountStatus": "",
+      "owner": "",
+      "vertical": "",
+      "psaWeb": false
+    },
+    {
       "id": "0016O00003dmuPGQAY",
       "name": "Ex-Cel Solutions",
       "type": "Warm Prospect",
@@ -16283,7 +16739,7 @@
       "id": "0016O00003ebi5PQAQ",
       "name": "Franklin Electric Co Inc",
       "type": "Rev.io PSA Client",
-      "webMigrationStatus": "Want to migrate / timeline unknown",
+      "webMigrationStatus": "Migration in progress",
       "webMigrationDetails": "half migrated to another platform but now they may want to stay. Still working on this with Tony",
       "psaAccountStatus": "Active - Tigerpaw One",
       "accountStatus": "Active - Tigerpaw One",
@@ -16352,6 +16808,18 @@
       "psaWeb": false
     },
     {
+      "id": "0016O00003ebleOQAQ",
+      "name": "Galaxy Integrated Technologies",
+      "type": "Rev.io PSA Client",
+      "webMigrationStatus": "Do not want to migrate",
+      "webMigrationDetails": "",
+      "psaAccountStatus": "",
+      "accountStatus": "",
+      "owner": "",
+      "vertical": "",
+      "psaWeb": false
+    },
+    {
       "id": "001PX00000S11uuYAB",
       "name": "Gamut",
       "type": "Rev.io PSA Client",
@@ -16372,6 +16840,18 @@
       "psaAccountStatus": "Active - Tigerpaw One",
       "accountStatus": "Active - Tigerpaw One",
       "owner": "Blaine Villafuerte",
+      "vertical": "",
+      "psaWeb": false
+    },
+    {
+      "id": "001PX00000FgqYeYAJ",
+      "name": "Generex Systems",
+      "type": "TigerPaw Client",
+      "webMigrationStatus": "Unknown",
+      "webMigrationDetails": "",
+      "psaAccountStatus": "",
+      "accountStatus": "",
+      "owner": "",
       "vertical": "",
       "psaWeb": false
     },
@@ -16640,6 +17120,18 @@
       "psaWeb": false
     },
     {
+      "id": "001PX00000CbOBHYA3",
+      "name": "Heartland Steel Doors Ltd.",
+      "type": "Rev.io PSA Client",
+      "webMigrationStatus": "Unknown",
+      "webMigrationDetails": "",
+      "psaAccountStatus": "",
+      "accountStatus": "",
+      "owner": "Ingrid Beard",
+      "vertical": "",
+      "psaWeb": false
+    },
+    {
       "id": "0016O00003dmoxJQAQ",
       "name": "Helios TFB",
       "type": "Rev.io PSA Client",
@@ -16667,7 +17159,7 @@
       "id": "0016O00003doC5KQAU",
       "name": "Herring Technology",
       "type": "Rev.io PSA Client",
-      "webMigrationStatus": "Unknown",
+      "webMigrationStatus": "Want to migrate asap",
       "webMigrationDetails": "Meeting with them 9/10/26 to discuss",
       "psaAccountStatus": "Active - Unleashed",
       "accountStatus": "Active - Unleashed",
@@ -16691,7 +17183,7 @@
       "id": "0016O00003dmuQ0QAI",
       "name": "High Country Workplace Technologies",
       "type": "Rev.io PSA Client",
-      "webMigrationStatus": "Unknown",
+      "webMigrationStatus": "Migration in progress",
       "webMigrationDetails": "",
       "psaAccountStatus": "Active - Tigerpaw One",
       "accountStatus": "Active - Tigerpaw One",
@@ -16856,6 +17348,18 @@
       "psaWeb": false
     },
     {
+      "id": "001PX000006dndYYAQ",
+      "name": "i-2-i Technology",
+      "type": "Rev.io PSA Client",
+      "webMigrationStatus": "Unknown",
+      "webMigrationDetails": "",
+      "psaAccountStatus": "Active - Tigerpaw One",
+      "accountStatus": "Active - Tigerpaw One",
+      "owner": "",
+      "vertical": "",
+      "psaWeb": false
+    },
+    {
       "id": "0016O00003dmuQCQAY",
       "name": "Ic2s",
       "type": "Rev.io PSA Client",
@@ -16871,7 +17375,7 @@
       "id": "0011500001HNQIWAA5",
       "name": "ICS Communications",
       "type": "TigerPaw Client",
-      "webMigrationStatus": "Want to migrate / timeline unknown",
+      "webMigrationStatus": "Migration in progress",
       "webMigrationDetails": "Jason is interested but not in a rush",
       "psaAccountStatus": "Active - Tigerpaw One",
       "accountStatus": "Active - Tigerpaw One",
@@ -17075,7 +17579,7 @@
       "id": "001PX000002MF4BYAW",
       "name": "Intec - CA",
       "type": "TigerPaw Client",
-      "webMigrationStatus": "Opent to Migrate - Missing features",
+      "webMigrationStatus": "Migration in progress",
       "webMigrationDetails": "07/02/2026 - They want to migrate asap.",
       "psaAccountStatus": "Active - Tigerpaw One",
       "accountStatus": "Active - Tigerpaw One",
@@ -17211,6 +17715,18 @@
       "webMigrationDetails": "",
       "psaAccountStatus": "Active - Unleashed",
       "accountStatus": "Active - Unleashed",
+      "owner": "Blaine Villafuerte",
+      "vertical": "",
+      "psaWeb": false
+    },
+    {
+      "id": "0011C00002H73UsQAJ",
+      "name": "Intermax Networks",
+      "type": "TigerPaw Client",
+      "webMigrationStatus": "Do not want to migrate",
+      "webMigrationDetails": "",
+      "psaAccountStatus": "Active - Tigerpaw One",
+      "accountStatus": "Active - Tigerpaw One",
       "owner": "Blaine Villafuerte",
       "vertical": "",
       "psaWeb": false
@@ -17396,11 +17912,23 @@
       "psaWeb": false
     },
     {
+      "id": "001PX00000RENwaYAH",
+      "name": "Jeffery Forrester",
+      "type": "TigerPaw Client",
+      "webMigrationStatus": "Unknown",
+      "webMigrationDetails": "",
+      "psaAccountStatus": "",
+      "accountStatus": "",
+      "owner": "",
+      "vertical": "",
+      "psaWeb": false
+    },
+    {
       "id": "0016O00003dmudoQAA",
       "name": "JES and Sons 2-Way LLC",
       "type": "Rev.io PSA Client",
       "webMigrationStatus": "Want to migrate / timeline unknown",
-      "webMigrationDetails": "",
+      "webMigrationDetails": "Working to schedule a demo with Roselyn by EOW (9/11)",
       "psaAccountStatus": "",
       "accountStatus": "",
       "owner": "",
@@ -17540,6 +18068,18 @@
       "psaWeb": false
     },
     {
+      "id": "001PX0000078JhVYAU",
+      "name": "Life Safety Integrated Systems, Inc",
+      "type": "Rev.io PSA Client",
+      "webMigrationStatus": "Unknown",
+      "webMigrationDetails": "",
+      "psaAccountStatus": "",
+      "accountStatus": "",
+      "owner": "",
+      "vertical": "",
+      "psaWeb": false
+    },
+    {
       "id": "0016O00003dmuTbQAI",
       "name": "Lightning Technologies LLC",
       "type": "Rev.io PSA Client",
@@ -17560,6 +18100,18 @@
       "psaAccountStatus": "Active - Tigerpaw One",
       "accountStatus": "Active - Tigerpaw One",
       "owner": "Blaine Villafuerte",
+      "vertical": "",
+      "psaWeb": false
+    },
+    {
+      "id": "001PX000005WpiwYAC",
+      "name": "Low Voltage Integrators",
+      "type": "Rev.io PSA Client",
+      "webMigrationStatus": "Unknown",
+      "webMigrationDetails": "",
+      "psaAccountStatus": "",
+      "accountStatus": "",
+      "owner": "",
       "vertical": "",
       "psaWeb": false
     },
@@ -17944,6 +18496,18 @@
       "psaAccountStatus": "Active - Unleashed",
       "accountStatus": "Active - Unleashed",
       "owner": "Drew Acorn",
+      "vertical": "",
+      "psaWeb": false
+    },
+    {
+      "id": "0016O00003edXLeQAM",
+      "name": "Midwest Technology Specialists",
+      "type": "Rev.io PSA Client",
+      "webMigrationStatus": "Unknown",
+      "webMigrationDetails": "",
+      "psaAccountStatus": "",
+      "accountStatus": "",
+      "owner": "",
       "vertical": "",
       "psaWeb": false
     },
@@ -18719,7 +19283,7 @@
       "id": "0016O00003dmuV5QAI",
       "name": "Peerless Energy Systems",
       "type": "Rev.io PSA Client",
-      "webMigrationStatus": "Unknown",
+      "webMigrationStatus": "Do not want to migrate",
       "webMigrationDetails": "08/2026 - not the right time",
       "psaAccountStatus": "Active - Tigerpaw One",
       "accountStatus": "Active - Tigerpaw One",
@@ -18820,6 +19384,18 @@
       "psaAccountStatus": "Active - Unleashed",
       "accountStatus": "Active - Unleashed",
       "owner": "Gavin Aylward",
+      "vertical": "",
+      "psaWeb": false
+    },
+    {
+      "id": "001PX000004hVS4YAM",
+      "name": "Plan B Technology",
+      "type": "Rev.io PSA Client",
+      "webMigrationStatus": "Unknown",
+      "webMigrationDetails": "",
+      "psaAccountStatus": "",
+      "accountStatus": "",
+      "owner": "",
       "vertical": "",
       "psaWeb": false
     },
@@ -19084,6 +19660,18 @@
       "psaAccountStatus": "Inactive",
       "accountStatus": "Inactive",
       "owner": "Ingrid Beard",
+      "vertical": "",
+      "psaWeb": false
+    },
+    {
+      "id": "0011C00002cDMhqQAG",
+      "name": "Quick Copper Communications",
+      "type": "Rev.io PSA Client",
+      "webMigrationStatus": "Migration in progress",
+      "webMigrationDetails": "",
+      "psaAccountStatus": "",
+      "accountStatus": "",
+      "owner": "",
       "vertical": "",
       "psaWeb": false
     },
@@ -19388,6 +19976,18 @@
       "psaWeb": false
     },
     {
+      "id": "0016O00003ebjMyQAI",
+      "name": "Romeo Computer",
+      "type": "Rev.io PSA Client",
+      "webMigrationStatus": "Unknown",
+      "webMigrationDetails": "",
+      "psaAccountStatus": "",
+      "accountStatus": "",
+      "owner": "",
+      "vertical": "",
+      "psaWeb": false
+    },
+    {
       "id": "001PX000001jnr6YAA",
       "name": "Romeo Computer Company",
       "type": "TigerPaw Client",
@@ -19439,6 +20039,18 @@
       "id": "0016O00003dmudpQAA",
       "name": "Russell's Telecom Solutions",
       "type": "TigerPaw Client",
+      "webMigrationStatus": "Unknown",
+      "webMigrationDetails": "",
+      "psaAccountStatus": "",
+      "accountStatus": "",
+      "owner": "",
+      "vertical": "",
+      "psaWeb": false
+    },
+    {
+      "id": "0016O00003ebjR2QAI",
+      "name": "Sabre Integrated Security Systems",
+      "type": "Rev.io PSA Client",
       "webMigrationStatus": "Unknown",
       "webMigrationDetails": "",
       "psaAccountStatus": "",
@@ -20183,7 +20795,7 @@
       "id": "0016O00003dmuZfQAI",
       "name": "Telephone Communications Inc",
       "type": "Rev.io PSA Client",
-      "webMigrationStatus": "Unknown",
+      "webMigrationStatus": "Want to migrate / timeline unknown",
       "webMigrationDetails": "07/06/2026 - they want to start migrating between August to end of September. Followed up with an email. Need Sage50 (accounting) integration with PSA web.",
       "psaAccountStatus": "Active - Tigerpaw One",
       "accountStatus": "Active - Tigerpaw One",
@@ -20207,7 +20819,7 @@
       "id": "0016O00003dmuZmQAI",
       "name": "Telstar Networks",
       "type": "Rev.io PSA Client",
-      "webMigrationStatus": "Unknown",
+      "webMigrationStatus": "Want to migrate / timeline unknown",
       "webMigrationDetails": "08/2026 they do not have time right now",
       "psaAccountStatus": "Active - Unleashed",
       "accountStatus": "Active - Unleashed",
@@ -20264,18 +20876,6 @@
       "psaWeb": false
     },
     {
-      "id": "001PX000004hVRqYAM",
-      "name": "The Phone Experts - Communications Ltd.",
-      "type": "Rev.io PSA Client",
-      "webMigrationStatus": "Want to migrate asap",
-      "webMigrationDetails": "Had meeting with Amanda, interested in migrating but have not gotten back in contact, sent over pricing",
-      "psaAccountStatus": "Active - Unleashed",
-      "accountStatus": "Active - Unleashed",
-      "owner": "Ingrid Beard",
-      "vertical": "",
-      "psaWeb": false
-    },
-    {
       "id": "001PX00000Abt4dYAB",
       "name": "The Phone Experts - Communications Ltd.",
       "type": "Rev.io PSA Client",
@@ -20288,10 +20888,22 @@
       "psaWeb": false
     },
     {
+      "id": "001PX000004hVRqYAM",
+      "name": "The Phone Experts - Communications Ltd.",
+      "type": "Rev.io PSA Client",
+      "webMigrationStatus": "Want to migrate / timeline unknown",
+      "webMigrationDetails": "Had meeting with Amanda, interested in migrating but have not gotten back in contact, sent over pricing",
+      "psaAccountStatus": "Active - Unleashed",
+      "accountStatus": "Active - Unleashed",
+      "owner": "Ingrid Beard",
+      "vertical": "",
+      "psaWeb": false
+    },
+    {
       "id": "0016O00003dmuZsQAI",
       "name": "The RHINO Group",
       "type": "Rev.io PSA Client",
-      "webMigrationStatus": "Want to migrate asap",
+      "webMigrationStatus": "Migration in progress",
       "webMigrationDetails": "answering migration questions",
       "psaAccountStatus": "Active - Tigerpaw One",
       "accountStatus": "Active - Tigerpaw One",
@@ -20456,6 +21068,18 @@
       "psaWeb": false
     },
     {
+      "id": "0016O00003dmudKQAQ",
+      "name": "TRC Networks",
+      "type": "TigerPaw Client",
+      "webMigrationStatus": "Unknown",
+      "webMigrationDetails": "",
+      "psaAccountStatus": "",
+      "accountStatus": "",
+      "owner": "",
+      "vertical": "",
+      "psaWeb": false
+    },
+    {
       "id": "0016O00003dmua3QAA",
       "name": "TRG Networking",
       "type": "Rev.io PSA Client",
@@ -20603,7 +21227,7 @@
       "id": "0011500001HNQIoAAP",
       "name": "Unique Communications",
       "type": "Rev.io PSA Client",
-      "webMigrationStatus": "Unknown",
+      "webMigrationStatus": "Want to migrate / timeline unknown",
       "webMigrationDetails": "Do not have the time right now as of 06/2026",
       "psaAccountStatus": "Active - Tigerpaw One",
       "accountStatus": "Active - Tigerpaw One",
@@ -20840,6 +21464,18 @@
       "psaWeb": false
     },
     {
+      "id": "001PX000001rdZdYAI",
+      "name": "VITEC Solutions",
+      "type": "Rev.io PSA Client",
+      "webMigrationStatus": "Unknown",
+      "webMigrationDetails": "",
+      "psaAccountStatus": "",
+      "accountStatus": "",
+      "owner": "",
+      "vertical": "",
+      "psaWeb": false
+    },
+    {
       "id": "0011500001bh7enAAA",
       "name": "Votacall Inc - 2nd Database",
       "type": "Rev.io PSA Client",
@@ -20915,7 +21551,7 @@
       "id": "0016O00003dmuafQAA",
       "name": "West Coast Cabling, Inc.",
       "type": "TigerPaw Client",
-      "webMigrationStatus": "Want to migrate asap",
+      "webMigrationStatus": "Migration in progress",
       "webMigrationDetails": "",
       "psaAccountStatus": "Active - Tigerpaw One",
       "accountStatus": "Active - Tigerpaw One",
@@ -20927,7 +21563,7 @@
       "id": "0016O00003dmuagQAA",
       "name": "West Coast Cash Register Systems",
       "type": "Rev.io PSA Client",
-      "webMigrationStatus": "Want to migrate asap",
+      "webMigrationStatus": "Want to migrate / timeline unknown",
       "webMigrationDetails": "08/2026 - actively working with CSA targeting 09/2026 close",
       "psaAccountStatus": "Active - Unleashed",
       "accountStatus": "Active - Unleashed",
@@ -20936,10 +21572,22 @@
       "psaWeb": false
     },
     {
+      "id": "001PX00000D4yfdYAB",
+      "name": "Wired Media Solutions",
+      "type": "Rev.io PSA Client",
+      "webMigrationStatus": "Unknown",
+      "webMigrationDetails": "",
+      "psaAccountStatus": "",
+      "accountStatus": "",
+      "owner": "",
+      "vertical": "",
+      "psaWeb": false
+    },
+    {
       "id": "0011500001IIF86AAH",
       "name": "Wolf Technology Group",
       "type": "TigerPaw Client",
-      "webMigrationStatus": "Unknown",
+      "webMigrationStatus": "Migration in progress",
       "webMigrationDetails": "TP One- need to follow up with client",
       "psaAccountStatus": "Active - Tigerpaw One",
       "accountStatus": "Active - Tigerpaw One",
@@ -21020,18 +21668,6 @@
       "psaWeb": false
     },
     {
-      "id": "001PX00000h1w4RYAQ",
-      "name": "Xclutel",
-      "type": "Rev.io PSA Client",
-      "webMigrationStatus": "Want to migrate / timeline unknown",
-      "webMigrationDetails": "",
-      "psaAccountStatus": "",
-      "accountStatus": "",
-      "owner": "",
-      "vertical": "",
-      "psaWeb": false
-    },
-    {
       "id": "0011500001HNPlFAAX",
       "name": "Xclutel",
       "type": "Client",
@@ -21044,10 +21680,22 @@
       "psaWeb": false
     },
     {
+      "id": "001PX00000h1w4RYAQ",
+      "name": "Xclutel",
+      "type": "Rev.io PSA Client",
+      "webMigrationStatus": "Want to migrate / timeline unknown",
+      "webMigrationDetails": "",
+      "psaAccountStatus": "",
+      "accountStatus": "",
+      "owner": "",
+      "vertical": "",
+      "psaWeb": false
+    },
+    {
       "id": "0016O00003dmuakQAA",
       "name": "Xpedient Communications",
       "type": "Rev.io PSA Client",
-      "webMigrationStatus": "Unknown",
+      "webMigrationStatus": "Want to migrate / timeline unknown",
       "webMigrationDetails": "as of 07/2026 there was a lack of DM involvement",
       "psaAccountStatus": "Active - Tigerpaw One",
       "accountStatus": "Active - Tigerpaw One",
@@ -21269,7 +21917,7 @@
       "stage": "4 - Proposal Sent",
       "amount": 1896,
       "owner": "Justin Lee",
-      "nextStep": "9/1 - Spoke to Dave -Get Sara & Daniel time scheduled with Tony & Yuri to see how they envision using Sentinel-1, Cove, & Datto BCDR integrations in order to scope potential builds - Set follow up before EOW (9/4)",
+      "nextStep": "9/1 - Spoke to Dave -Get Sara & Daniel time scheduled with Tony & Yuri to see how they envision using Sentinel-1, Cove, & Datto BCDR integrations in order to scope potential builds - Set follow up before EOW (9/11)",
       "createdDate": "2026-07-30T17:01:53.000+0000",
       "closeDate": "2026-09-30",
       "isClosed": false,
@@ -21402,26 +22050,6 @@
       "closeDate": "2026-09-30",
       "isClosed": false,
       "isWon": false,
-      "lossReason": "Unspecified",
-      "lossDetail": "",
-      "competitor": "",
-      "stageLoss": "",
-      "smc": "",
-      "vikingOneUnlock": null
-    },
-    {
-      "id": "006PX00000dJXrRYAW",
-      "name": "Dividia - PSA Migration",
-      "accountId": "0016O00003dmuOnQAI",
-      "account": "Dividia",
-      "stage": "Closed Won",
-      "amount": 1180,
-      "owner": "Ingrid Beard",
-      "nextStep": "7/17 follow up for verification that there are no additional questions",
-      "createdDate": "2026-07-10T13:02:58.000+0000",
-      "closeDate": "2026-07-16",
-      "isClosed": true,
-      "isWon": true,
       "lossReason": "Unspecified",
       "lossDetail": "",
       "competitor": "",
@@ -22091,6 +22719,26 @@
       "vikingOneUnlock": null
     },
     {
+      "id": "006PX00000fmBsoYAE",
+      "name": "JES and Sons 2-Way LLC - Web Migration",
+      "accountId": "0016O00003dmudoQAA",
+      "account": "JES and Sons 2-Way LLC",
+      "stage": "1- Discovery Scheduled",
+      "amount": 1873,
+      "owner": "Justin Lee",
+      "nextStep": "9/3 - Met and Summit and will schedule demo of PSA with her team before EOW (9/11)",
+      "createdDate": "2026-09-08T10:19:48.000+0000",
+      "closeDate": "2026-09-30",
+      "isClosed": false,
+      "isWon": false,
+      "lossReason": "Unspecified",
+      "lossDetail": "",
+      "competitor": "",
+      "stageLoss": "",
+      "smc": "",
+      "vikingOneUnlock": null
+    },
+    {
       "id": "006PX00000fg5EzYAI",
       "name": "HCI - TP Migration",
       "accountId": "0016O00003dmuPzQAI",
@@ -22171,37 +22819,6 @@
       "vikingOneUnlock": null
     },
     {
-      "id": "006PX00000fIYbVYAW",
-      "name": "Minnesota Telephone TP Migration",
-      "accountId": "0011C000028ISCLQA4",
-      "account": "Minnesota Telephone Networks",
-      "stage": "Closed Lost",
-      "amount": 474,
-      "owner": "Ingrid Beard",
-      "nextStep": "8/27 initial overview",
-      "createdDate": "2026-08-27T10:17:01.000+0000",
-      "closeDate": "2026-08-27",
-      "isClosed": true,
-      "isWon": false,
-      "lossReason": "Software Missing Capabilities",
-      "lossDetail": "they heavily use the password keeper and need this to move forward",
-      "competitor": "",
-      "stageLoss": "2 - Discovery Completed",
-      "smc": "",
-      "vikingOneUnlock": {
-        "status": "Yes",
-        "summary": "Credential vault/password management is in Viking 1.",
-        "matches": [
-          {
-            "feature": "Credential Vault - 3rd Party Integration",
-            "release": "Viking 1",
-            "status": "Available",
-            "detail": "Add a secure, permission-based credential vault for storing and managing client passwords, API keys, and sensitive access information."
-          }
-        ]
-      }
-    },
-    {
       "id": "006PX00000fDDCpYAO",
       "name": "Favorite Office Automation TP",
       "accountId": "0016O00003dmuPMQAY",
@@ -22246,20 +22863,24 @@
       "name": "Innovative Telephone & Data Solutions - Web Migration",
       "accountId": "0016O00003dmuQVQAY",
       "account": "Innovative Telephone & Data Solutions, LLC",
-      "stage": "1- Discovery Scheduled",
+      "stage": "Closed Lost",
       "amount": 1766,
       "owner": "Justin Lee",
       "nextStep": "8/31 - PSA demo scheduled with Lara & team",
       "createdDate": "2026-08-13T20:55:35.000+0000",
-      "closeDate": "2026-09-30",
-      "isClosed": false,
+      "closeDate": "2026-09-08",
+      "isClosed": true,
       "isWon": false,
-      "lossReason": "Unspecified",
-      "lossDetail": "",
+      "lossReason": "Software Missing Capabilities",
+      "lossDetail": "Schedule follow-up call with Tony Maynor to do a deep dive on subcontractor functionality and requirements",
       "competitor": "",
-      "stageLoss": "",
+      "stageLoss": "1- Discovery Scheduled",
       "smc": "",
-      "vikingOneUnlock": null
+      "vikingOneUnlock": {
+        "status": "Review",
+        "summary": "Needs manual review against the Viking 1 roadmap.",
+        "matches": []
+      }
     },
     {
       "id": "006PX00000eZdNdYAK",
@@ -22317,7 +22938,7 @@
       "stage": "2 - Discovery Completed",
       "amount": 1477,
       "owner": "Justin Lee",
-      "nextStep": "9/1 - Last email - Get follow up demo scheduled with Brandon & Richard before EOW (9/4)",
+      "nextStep": "9/1 - Last email - Get follow up demo scheduled with Brandon & Richard before EOW (9/11)",
       "createdDate": "2026-08-04T17:22:05.000+0000",
       "closeDate": "2026-09-30",
       "isClosed": false,
@@ -22328,30 +22949,6 @@
       "stageLoss": "",
       "smc": "",
       "vikingOneUnlock": null
-    },
-    {
-      "id": "006PX00000eKiykYAC",
-      "name": "Micromed TP migration",
-      "accountId": "0016O00003dmuU1QAI",
-      "account": "MicroMed",
-      "stage": "Closed Lost",
-      "amount": 920,
-      "owner": "Ingrid Beard",
-      "nextStep": "9/2 follow up with Matt & Rob to see if there are any additional questions/ready for demo",
-      "createdDate": "2026-08-04T16:57:59.000+0000",
-      "closeDate": "2026-09-01",
-      "isClosed": true,
-      "isWon": false,
-      "lossReason": "Lack of Decision Maker Involvement",
-      "lossDetail": "after waiting for weeks for their internal conversation, I have a follow call scheduled to get them back on track",
-      "competitor": "",
-      "stageLoss": "2 - Discovery Completed",
-      "smc": "",
-      "vikingOneUnlock": {
-        "status": "No",
-        "summary": "Loss reason is timing, engagement, or duplicate rather than a Viking 1 feature blocker.",
-        "matches": []
-      }
     },
     {
       "id": "006PX00000e6fO1YAI",
@@ -22458,6 +23055,26 @@
       "closeDate": "2026-09-30",
       "isClosed": false,
       "isWon": false,
+      "lossReason": "Unspecified",
+      "lossDetail": "",
+      "competitor": "",
+      "stageLoss": "",
+      "smc": "",
+      "vikingOneUnlock": null
+    },
+    {
+      "id": "006PX00000dJXrRYAW",
+      "name": "Dividia - PSA Migration",
+      "accountId": "0016O00003dmuOnQAI",
+      "account": "Dividia",
+      "stage": "Closed Won",
+      "amount": 1180,
+      "owner": "Ingrid Beard",
+      "nextStep": "7/17 follow up for verification that there are no additional questions",
+      "createdDate": "2026-07-10T13:02:58.000+0000",
+      "closeDate": "2026-07-16",
+      "isClosed": true,
+      "isWon": true,
       "lossReason": "Unspecified",
       "lossDetail": "",
       "competitor": "",
@@ -22666,55 +23283,6 @@
       "stageLoss": "",
       "smc": "",
       "vikingOneUnlock": null
-    },
-    {
-      "id": "006PX00000c1tHWYAY",
-      "name": "Moseley Electronics - Web Migration",
-      "accountId": "0016O00003dmuUCQAY",
-      "account": "Moseley Electronics, LLC",
-      "stage": "Closed Lost",
-      "amount": 630,
-      "owner": "Justin Lee",
-      "nextStep": "PSA demo scheduled with Sara on 6/22 at 11am",
-      "createdDate": "2026-06-11T12:42:16.000+0000",
-      "closeDate": "2026-06-23",
-      "isClosed": true,
-      "isWon": false,
-      "lossReason": "No Business Issue",
-      "lossDetail": "Sarah is targeting fall for migration — currently focused on a showroom demo project and still settling after the QuickBooks migration- Follow up in September",
-      "competitor": "",
-      "stageLoss": "1- Discovery Scheduled",
-      "smc": "",
-      "vikingOneUnlock": {
-        "status": "Yes",
-        "summary": "QuickBooks Desktop export and GL mapping work is in Viking 1.",
-        "matches": [
-          {
-            "feature": "QBD - Reliability + go/no-go",
-            "release": "Viking 1",
-            "status": "Available",
-            "detail": "Built-in sync status dashboard so you always know what transferred and what needs attention. The integration recovers gracefully from interruptions, so your data stays safe even if your connection drops."
-          },
-          {
-            "feature": "QBD - Customer + invoice sync",
-            "release": "Viking 1",
-            "status": "Available",
-            "detail": "Push customers and invoices from Rev.io directly into QuickBooks Desktop. Invoices land in the correct GL accounts with sales tax applied automatically. No copy-paste, no import files, no third-party tools."
-          },
-          {
-            "feature": "QBD - Read live QBD data",
-            "release": "Viking 1",
-            "status": "Available",
-            "detail": "Rev.io reads your QuickBooks chart of accounts and item list automatically. No manual exports, no file uploads, no stale data. Your QBD setup is always in sync."
-          },
-          {
-            "feature": "QBD - SOAP endpoint + Web Connector handshake",
-            "release": "Viking 1",
-            "status": "Available",
-            "detail": "Establish a secure, direct connection between Rev.io PSA and QuickBooks Desktop, enabling real-time communication between your cloud workspace and on-premises accounting software."
-          }
-        ]
-      }
     },
     {
       "id": "006PX00000buo01YAA",
@@ -23167,6 +23735,37 @@
       "vikingOneUnlock": null
     },
     {
+      "id": "006PX00000fIYbVYAW",
+      "name": "Minnesota Telephone TP Migration",
+      "accountId": "0011C000028ISCLQA4",
+      "account": "Minnesota Telephone Networks",
+      "stage": "Closed Lost",
+      "amount": 474,
+      "owner": "Ingrid Beard",
+      "nextStep": "8/27 initial overview",
+      "createdDate": "2026-08-27T10:17:01.000+0000",
+      "closeDate": "2026-08-27",
+      "isClosed": true,
+      "isWon": false,
+      "lossReason": "Software Missing Capabilities",
+      "lossDetail": "they heavily use the password keeper and need this to move forward",
+      "competitor": "",
+      "stageLoss": "2 - Discovery Completed",
+      "smc": "",
+      "vikingOneUnlock": {
+        "status": "Yes",
+        "summary": "Credential vault/password management is in Viking 1.",
+        "matches": [
+          {
+            "feature": "Credential Vault - 3rd Party Integration",
+            "release": "Viking 1",
+            "status": "Available",
+            "detail": "Add a secure, permission-based credential vault for storing and managing client passwords, API keys, and sensitive access information."
+          }
+        ]
+      }
+    },
+    {
       "id": "006PX00000f4m01YAA",
       "name": "RSS Tigerpaw Web Migration",
       "accountId": "0016O00003dmuYVQAY",
@@ -23251,6 +23850,30 @@
       "vikingOneUnlock": null
     },
     {
+      "id": "006PX00000eKiykYAC",
+      "name": "Micromed TP migration",
+      "accountId": "0016O00003dmuU1QAI",
+      "account": "MicroMed",
+      "stage": "Closed Lost",
+      "amount": 920,
+      "owner": "Ingrid Beard",
+      "nextStep": "9/2 follow up with Matt & Rob to see if there are any additional questions/ready for demo",
+      "createdDate": "2026-08-04T16:57:59.000+0000",
+      "closeDate": "2026-09-01",
+      "isClosed": true,
+      "isWon": false,
+      "lossReason": "Lack of Decision Maker Involvement",
+      "lossDetail": "after waiting for weeks for their internal conversation, I have a follow call scheduled to get them back on track",
+      "competitor": "",
+      "stageLoss": "2 - Discovery Completed",
+      "smc": "",
+      "vikingOneUnlock": {
+        "status": "No",
+        "summary": "Loss reason is timing, engagement, or duplicate rather than a Viking 1 feature blocker.",
+        "matches": []
+      }
+    },
+    {
       "id": "006PX00000eIELdYAO",
       "name": "Raytec Systems - Tigerpaw Migration",
       "accountId": "0016O00003dmuVhQAI",
@@ -23321,26 +23944,6 @@
       "nextStep": "7/28 docusign cosign",
       "createdDate": "2026-07-28T13:04:41.000+0000",
       "closeDate": "2026-07-28",
-      "isClosed": true,
-      "isWon": true,
-      "lossReason": "Unspecified",
-      "lossDetail": "",
-      "competitor": "",
-      "stageLoss": "",
-      "smc": "",
-      "vikingOneUnlock": null
-    },
-    {
-      "id": "006PX00000dqbEkYAI",
-      "name": "The Rhino Group PSA Migration",
-      "accountId": "0016O00003dmuZsQAI",
-      "account": "The RHINO Group",
-      "stage": "Closed Won",
-      "amount": 1890,
-      "owner": "Ingrid Beard",
-      "nextStep": "8/26 follow up on questions on database and migration",
-      "createdDate": "2026-07-23T16:54:59.000+0000",
-      "closeDate": "2026-08-25",
       "isClosed": true,
       "isWon": true,
       "lossReason": "Unspecified",
@@ -23458,61 +24061,6 @@
       "stageLoss": "",
       "smc": "",
       "vikingOneUnlock": null
-    },
-    {
-      "id": "006PX00000dT2nzYAC",
-      "name": "Tri-Tec Communications (Tigerpaw to PSA)",
-      "accountId": "0011C00002lbOxLQAU",
-      "account": "Tri-Tec Communications",
-      "stage": "Closed Lost",
-      "amount": 2060,
-      "owner": "Jakob Champion",
-      "nextStep": "8/4 Follow up meeting to discuss migration & pricing.",
-      "createdDate": "2026-07-14T18:46:39.000+0000",
-      "closeDate": "2026-08-04",
-      "isClosed": true,
-      "isWon": false,
-      "lossReason": "Software Missing Capabilities",
-      "lossDetail": "Password Keeper & Quote Migration",
-      "competitor": "",
-      "stageLoss": "3 - Initial Product Demo",
-      "smc": "",
-      "vikingOneUnlock": {
-        "status": "Yes",
-        "summary": "Credential vault/password management is in Viking 1.",
-        "matches": [
-          {
-            "feature": "Credential Vault - 3rd Party Integration",
-            "release": "Viking 1",
-            "status": "Available",
-            "detail": "Add a secure, permission-based credential vault for storing and managing client passwords, API keys, and sensitive access information."
-          }
-        ]
-      }
-    },
-    {
-      "id": "006PX00000dSBbfYAG",
-      "name": "The Phone Experts - TP Migration",
-      "accountId": "001PX000004hVRqYAM",
-      "account": "The Phone Experts - Communications Ltd.",
-      "stage": "Closed Lost",
-      "amount": 3022,
-      "owner": "Jakob Champion",
-      "nextStep": "9/1 Follow up to schedule meeting next week",
-      "createdDate": "2026-07-14T15:13:57.000+0000",
-      "closeDate": "2026-09-01",
-      "isClosed": true,
-      "isWon": false,
-      "lossReason": "Not the Right Time",
-      "lossDetail": "Customer stated they are interested in migrating but don't want to continue the conversation until mid to late November.",
-      "competitor": "",
-      "stageLoss": "3 - Initial Product Demo",
-      "smc": "",
-      "vikingOneUnlock": {
-        "status": "No",
-        "summary": "Loss reason is timing, engagement, or duplicate rather than a Viking 1 feature blocker.",
-        "matches": []
-      }
     },
     {
       "id": "006PX00000dSTYTYA4",
@@ -23740,6 +24288,55 @@
       "vikingOneUnlock": null
     },
     {
+      "id": "006PX00000c1tHWYAY",
+      "name": "Moseley Electronics - Web Migration",
+      "accountId": "0016O00003dmuUCQAY",
+      "account": "Moseley Electronics, LLC",
+      "stage": "Closed Lost",
+      "amount": 630,
+      "owner": "Justin Lee",
+      "nextStep": "PSA demo scheduled with Sara on 6/22 at 11am",
+      "createdDate": "2026-06-11T12:42:16.000+0000",
+      "closeDate": "2026-06-23",
+      "isClosed": true,
+      "isWon": false,
+      "lossReason": "No Business Issue",
+      "lossDetail": "Sarah is targeting fall for migration — currently focused on a showroom demo project and still settling after the QuickBooks migration- Follow up in September",
+      "competitor": "",
+      "stageLoss": "1- Discovery Scheduled",
+      "smc": "",
+      "vikingOneUnlock": {
+        "status": "Yes",
+        "summary": "QuickBooks Desktop export and GL mapping work is in Viking 1.",
+        "matches": [
+          {
+            "feature": "QBD - Reliability + go/no-go",
+            "release": "Viking 1",
+            "status": "Available",
+            "detail": "Built-in sync status dashboard so you always know what transferred and what needs attention. The integration recovers gracefully from interruptions, so your data stays safe even if your connection drops."
+          },
+          {
+            "feature": "QBD - Customer + invoice sync",
+            "release": "Viking 1",
+            "status": "Available",
+            "detail": "Push customers and invoices from Rev.io directly into QuickBooks Desktop. Invoices land in the correct GL accounts with sales tax applied automatically. No copy-paste, no import files, no third-party tools."
+          },
+          {
+            "feature": "QBD - Read live QBD data",
+            "release": "Viking 1",
+            "status": "Available",
+            "detail": "Rev.io reads your QuickBooks chart of accounts and item list automatically. No manual exports, no file uploads, no stale data. Your QBD setup is always in sync."
+          },
+          {
+            "feature": "QBD - SOAP endpoint + Web Connector handshake",
+            "release": "Viking 1",
+            "status": "Available",
+            "detail": "Establish a secure, direct connection between Rev.io PSA and QuickBooks Desktop, enabling real-time communication between your cloud workspace and on-premises accounting software."
+          }
+        ]
+      }
+    },
+    {
       "id": "006PX00000bXFe5YAG",
       "name": "Roadrunner - TP Migration",
       "accountId": "0016O00003ebjkxQAA",
@@ -23812,30 +24409,6 @@
             "detail": "Find the right products faster when building quotes. Search and add items by part number—ideal for catalog-heavy workflows and repeat quoting—so sales teams can create accurate quotes in fewer clicks and with less back-and-forth."
           }
         ]
-      }
-    },
-    {
-      "id": "006PX00000bF31tYAC",
-      "name": "Crowley Web Migration",
-      "accountId": "0016O00003dmuZqQAI",
-      "account": "The Crowley Company",
-      "stage": "Closed Lost",
-      "amount": 0,
-      "owner": "Justin Lee",
-      "nextStep": "Left VM for Debbie on 5/27 - Set meeting by EOW",
-      "createdDate": "2026-05-27T13:58:01.000+0000",
-      "closeDate": "2026-05-28",
-      "isClosed": true,
-      "isWon": false,
-      "lossReason": "Not the Right Time",
-      "lossDetail": "Spoke to Debbie on 5/28- She shared she wants to \"clean up their data\" before moving over to the new platform. The webinar answered most of her questions. Target date to begin migrating over would be Jan. 1st, 2027.",
-      "competitor": "",
-      "stageLoss": "1- Discovery Scheduled",
-      "smc": "",
-      "vikingOneUnlock": {
-        "status": "No",
-        "summary": "Loss reason is timing, engagement, or duplicate rather than a Viking 1 feature blocker.",
-        "matches": []
       }
     },
     {
@@ -24220,10 +24793,10 @@
       "name": "Watson Communications Corp. - Web Migration",
       "accountId": "0016O00003dmuacQAA",
       "account": "Watson Communications Corp.",
-      "stage": "5 - Product / Contract Validated",
+      "stage": "6 - Verbal Commit",
       "amount": 632,
       "owner": "Justin Lee",
-      "nextStep": "9/1 - Share updated user counts with Doug & Leonard - Push to get contract signed before EOW (9/4)",
+      "nextStep": "9/8 - Sent DocuSign to Doug for review & Leonard for signature by EOW (9/11)",
       "createdDate": "2026-07-28T12:59:09.000+0000",
       "closeDate": "2026-09-30",
       "isClosed": false,
@@ -24234,6 +24807,81 @@
       "stageLoss": "",
       "smc": "",
       "vikingOneUnlock": null
+    },
+    {
+      "id": "006PX00000dqbEkYAI",
+      "name": "The Rhino Group PSA Migration",
+      "accountId": "0016O00003dmuZsQAI",
+      "account": "The RHINO Group",
+      "stage": "Closed Won",
+      "amount": 1890,
+      "owner": "Ingrid Beard",
+      "nextStep": "8/26 follow up on questions on database and migration",
+      "createdDate": "2026-07-23T16:54:59.000+0000",
+      "closeDate": "2026-08-25",
+      "isClosed": true,
+      "isWon": true,
+      "lossReason": "Unspecified",
+      "lossDetail": "",
+      "competitor": "",
+      "stageLoss": "",
+      "smc": "",
+      "vikingOneUnlock": null
+    },
+    {
+      "id": "006PX00000dT2nzYAC",
+      "name": "Tri-Tec Communications (Tigerpaw to PSA)",
+      "accountId": "0011C00002lbOxLQAU",
+      "account": "Tri-Tec Communications",
+      "stage": "Closed Lost",
+      "amount": 2060,
+      "owner": "Jakob Champion",
+      "nextStep": "8/4 Follow up meeting to discuss migration & pricing.",
+      "createdDate": "2026-07-14T18:46:39.000+0000",
+      "closeDate": "2026-08-04",
+      "isClosed": true,
+      "isWon": false,
+      "lossReason": "Software Missing Capabilities",
+      "lossDetail": "Password Keeper & Quote Migration",
+      "competitor": "",
+      "stageLoss": "3 - Initial Product Demo",
+      "smc": "",
+      "vikingOneUnlock": {
+        "status": "Yes",
+        "summary": "Credential vault/password management is in Viking 1.",
+        "matches": [
+          {
+            "feature": "Credential Vault - 3rd Party Integration",
+            "release": "Viking 1",
+            "status": "Available",
+            "detail": "Add a secure, permission-based credential vault for storing and managing client passwords, API keys, and sensitive access information."
+          }
+        ]
+      }
+    },
+    {
+      "id": "006PX00000dSBbfYAG",
+      "name": "The Phone Experts - TP Migration",
+      "accountId": "001PX000004hVRqYAM",
+      "account": "The Phone Experts - Communications Ltd.",
+      "stage": "Closed Lost",
+      "amount": 3022,
+      "owner": "Jakob Champion",
+      "nextStep": "9/1 Follow up to schedule meeting next week",
+      "createdDate": "2026-07-14T15:13:57.000+0000",
+      "closeDate": "2026-09-01",
+      "isClosed": true,
+      "isWon": false,
+      "lossReason": "Not the Right Time",
+      "lossDetail": "Customer stated they are interested in migrating but don't want to continue the conversation until mid to late November.",
+      "competitor": "",
+      "stageLoss": "3 - Initial Product Demo",
+      "smc": "",
+      "vikingOneUnlock": {
+        "status": "No",
+        "summary": "Loss reason is timing, engagement, or duplicate rather than a Viking 1 feature blocker.",
+        "matches": []
+      }
     },
     {
       "id": "006PX00000dDvlGYAS",
@@ -24340,6 +24988,30 @@
       "lossDetail": "Spoke to Nikki on 6/15  - still no connection to DM (Pat) & with as much as she has on her plate- no move will be made at this time.",
       "competitor": "",
       "stageLoss": "2 - Discovery Completed",
+      "smc": "",
+      "vikingOneUnlock": {
+        "status": "No",
+        "summary": "Loss reason is timing, engagement, or duplicate rather than a Viking 1 feature blocker.",
+        "matches": []
+      }
+    },
+    {
+      "id": "006PX00000bF31tYAC",
+      "name": "Crowley Web Migration",
+      "accountId": "0016O00003dmuZqQAI",
+      "account": "The Crowley Company",
+      "stage": "Closed Lost",
+      "amount": 0,
+      "owner": "Justin Lee",
+      "nextStep": "Left VM for Debbie on 5/27 - Set meeting by EOW",
+      "createdDate": "2026-05-27T13:58:01.000+0000",
+      "closeDate": "2026-05-28",
+      "isClosed": true,
+      "isWon": false,
+      "lossReason": "Not the Right Time",
+      "lossDetail": "Spoke to Debbie on 5/28- She shared she wants to \"clean up their data\" before moving over to the new platform. The webinar answered most of her questions. Target date to begin migrating over would be Jan. 1st, 2027.",
+      "competitor": "",
+      "stageLoss": "1- Discovery Scheduled",
       "smc": "",
       "vikingOneUnlock": {
         "status": "No",

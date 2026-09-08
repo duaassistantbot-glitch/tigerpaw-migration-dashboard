@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-09-08T01:54:15.547Z",
-  "sourceGeneratedAt": "2026-09-07T22:27:09.402Z",
+  "generatedAt": "2026-09-08T12:57:08.672Z",
+  "sourceGeneratedAt": "2026-09-08T12:56:10.669Z",
   "caveats": [
     "Notion PSA Onboarding Dashboard and Client Master/MRR databases were not accessible to the current integration at build time; CS graduation and account MRR are left as Notion-dependent until shared.",
     "Account contacted = Salesforce Task classified as email/phone on the Account or related Contacts, plus matched webinar registrant company as email-confirmed.",
@@ -10,49 +10,49 @@
     "webinarsRun": 3,
     "cbrsSinceFirstWebinar": 193,
     "accountsWithCbrSinceFirstWebinar": 64,
-    "contactedAccounts": 647,
-    "accountsWithOpps": 120,
-    "oppsCreated": 136,
+    "contactedAccounts": 672,
+    "accountsWithOpps": 121,
+    "oppsCreated": 137,
     "openOpps": 30,
     "wonOpps": 45,
     "activeConversions": 9,
-    "contactedNoOppAccounts": 527,
-    "latestTouchDate": "2026-09-07",
+    "contactedNoOppAccounts": 551,
+    "latestTouchDate": "2026-09-08",
     "firstWebinarDate": "2026-05-21T18:00:00Z"
   },
   "noOppGameplan": {
-    "accounts": 527,
+    "accounts": 551,
     "statusBreakdown": [
       {
         "status": "Unknown",
-        "accounts": 269,
-        "touchpoints": 18448,
-        "emailTouchpoints": 12319,
-        "phoneTouchpoints": 5540,
+        "accounts": 286,
+        "touchpoints": 19652,
+        "emailTouchpoints": 13133,
+        "phoneTouchpoints": 5911,
         "latestTouchDate": "2026-09-07"
       },
       {
         "status": "Want to migrate / timeline unknown",
-        "accounts": 93,
-        "touchpoints": 13532,
-        "emailTouchpoints": 10372,
-        "phoneTouchpoints": 2794,
+        "accounts": 95,
+        "touchpoints": 13552,
+        "emailTouchpoints": 10388,
+        "phoneTouchpoints": 2793,
         "latestTouchDate": "2026-09-07"
       },
       {
         "status": "Do not want to migrate",
-        "accounts": 71,
-        "touchpoints": 5614,
-        "emailTouchpoints": 3914,
-        "phoneTouchpoints": 1469,
+        "accounts": 73,
+        "touchpoints": 5966,
+        "emailTouchpoints": 4145,
+        "phoneTouchpoints": 1581,
         "latestTouchDate": "2026-09-07"
       },
       {
         "status": "Want to migrate asap",
-        "accounts": 57,
-        "touchpoints": 5778,
-        "emailTouchpoints": 4277,
-        "phoneTouchpoints": 1220,
+        "accounts": 58,
+        "touchpoints": 5858,
+        "emailTouchpoints": 4340,
+        "phoneTouchpoints": 1235,
         "latestTouchDate": "2026-09-04"
       },
       {
@@ -64,20 +64,20 @@
         "latestTouchDate": "2026-09-01"
       },
       {
+        "status": "Migration in progress",
+        "accounts": 6,
+        "touchpoints": 2019,
+        "emailTouchpoints": 1687,
+        "phoneTouchpoints": 295,
+        "latestTouchDate": "2026-09-05"
+      },
+      {
         "status": "Opent to Migrate - Missing features",
         "accounts": 4,
         "touchpoints": 3982,
         "emailTouchpoints": 3223,
         "phoneTouchpoints": 726,
         "latestTouchDate": "2026-09-04"
-      },
-      {
-        "status": "Migration in progress",
-        "accounts": 4,
-        "touchpoints": 1155,
-        "emailTouchpoints": 907,
-        "phoneTouchpoints": 219,
-        "latestTouchDate": "2026-09-03"
       },
       {
         "status": "Migration Pending",
@@ -115,6 +115,15 @@
         "emailTouchpoints": 27,
         "phoneTouchpoints": 6,
         "lastTouch": "2026-09-07"
+      },
+      {
+        "account": "Quick Copper Communications",
+        "status": "Migration in progress",
+        "owner": "",
+        "touchpoints": 836,
+        "emailTouchpoints": 757,
+        "phoneTouchpoints": 74,
+        "lastTouch": "2026-09-05"
       },
       {
         "account": "QCC",
@@ -243,15 +252,6 @@
         "lastTouch": "2026-09-04"
       },
       {
-        "account": "JES and Sons 2-Way LLC",
-        "status": "Want to migrate / timeline unknown",
-        "owner": "",
-        "touchpoints": 98,
-        "emailTouchpoints": 55,
-        "phoneTouchpoints": 36,
-        "lastTouch": "2026-09-04"
-      },
-      {
         "account": "Southeastern TeleCommunications",
         "status": "Want to migrate asap",
         "owner": "",
@@ -276,6 +276,15 @@
         "touchpoints": 59,
         "emailTouchpoints": 46,
         "phoneTouchpoints": 12,
+        "lastTouch": "2026-09-04"
+      },
+      {
+        "account": "i-2-i Technology",
+        "status": "Unknown",
+        "owner": "",
+        "touchpoints": 51,
+        "emailTouchpoints": 42,
+        "phoneTouchpoints": 6,
         "lastTouch": "2026-09-04"
       },
       {
@@ -529,15 +538,6 @@
         "emailTouchpoints": 7,
         "phoneTouchpoints": 8,
         "lastTouch": "2026-09-03"
-      },
-      {
-        "account": "SkySwitch",
-        "status": "Opent to Migrate - Missing features",
-        "owner": "",
-        "touchpoints": 2788,
-        "emailTouchpoints": 2447,
-        "phoneTouchpoints": 321,
-        "lastTouch": "2026-09-02"
       }
     ]
   },
@@ -546,8 +546,8 @@
     "firstWebinarDate": "2026-05-21T18:00:00Z",
     "totalExternalRegistrants": 377,
     "uniqueRegisteredCompaniesRaw": 203,
-    "registeredAccountsMatchedToMigrationAccounts": 179,
-    "registeredAccountsPreviouslyContacted": 179,
+    "registeredAccountsMatchedToMigrationAccounts": 180,
+    "registeredAccountsPreviouslyContacted": 180,
     "attendedAccounts": null,
     "attendanceSource": null,
     "oppsFromRegisteredAccounts": 69,
@@ -580,19 +580,19 @@
     ]
   },
   "contactStats": {
-    "migrationAccounts": 649,
-    "accountsContactedEmailOrPhone": 647,
+    "migrationAccounts": 674,
+    "accountsContactedEmailOrPhone": 672,
     "accountsUnreached": 2,
-    "totalTouchpoints": 69051,
-    "emailTouchpoints": 50540,
-    "phoneTouchpoints": 16362,
-    "otherTouchpoints": 2149,
+    "totalTouchpoints": 71669,
+    "emailTouchpoints": 52500,
+    "phoneTouchpoints": 16970,
+    "otherTouchpoints": 2199,
     "webinarExternalRegistrants": 377,
-    "latestTouchDate": "2026-09-07",
+    "latestTouchDate": "2026-09-08",
     "medianLastTouchDate": "2026-08-14",
-    "accountsTouchedLast30Days": 367,
-    "accountsTouchedLast60Days": 518,
-    "accountsTouchedLast90Days": 538,
+    "accountsTouchedLast30Days": 377,
+    "accountsTouchedLast60Days": 539,
+    "accountsTouchedLast90Days": 561,
     "relatedMrr": null
   },
   "conversionStats": {
@@ -619,14 +619,6 @@
       "stage": "Closed Won",
       "closeDate": "2026-08-27",
       "owner": "Jakob Champion"
-    },
-    {
-      "account": "Dividia",
-      "opportunity": "Dividia - PSA Migration",
-      "amount": 1180,
-      "stage": "Closed Won",
-      "closeDate": "2026-07-16",
-      "owner": "Ingrid Beard"
     },
     {
       "account": "Digital Telecommunications",
@@ -691,6 +683,14 @@
       "stage": "Closed Won",
       "closeDate": "2026-01-15",
       "owner": "Blaine Villafuerte"
+    },
+    {
+      "account": "Dividia",
+      "opportunity": "Dividia - PSA Migration",
+      "amount": 1180,
+      "stage": "Closed Won",
+      "closeDate": "2026-07-16",
+      "owner": "Ingrid Beard"
     },
     {
       "account": "ICS Communications",
@@ -805,14 +805,6 @@
       "owner": "Ingrid Beard"
     },
     {
-      "account": "The RHINO Group",
-      "opportunity": "The Rhino Group PSA Migration",
-      "amount": 1890,
-      "stage": "Closed Won",
-      "closeDate": "2026-08-25",
-      "owner": "Ingrid Beard"
-    },
-    {
       "account": "Richmond Security",
       "opportunity": "Richmond- TP to PSA Web",
       "amount": 1680,
@@ -909,6 +901,14 @@
       "owner": "Olivia Sandefur"
     },
     {
+      "account": "The RHINO Group",
+      "opportunity": "The Rhino Group PSA Migration",
+      "amount": 1890,
+      "stage": "Closed Won",
+      "closeDate": "2026-08-25",
+      "owner": "Ingrid Beard"
+    },
+    {
       "account": "TRM",
       "opportunity": "TRM - PSA Migration",
       "amount": 1220,
@@ -969,7 +969,7 @@
     {
       "name": "Bridge Communications",
       "sfAccount": "Bridge Communications",
-      "status": "Want to migrate asap",
+      "status": "Migration in progress",
       "psaAccountStatus": null,
       "touchpoints": {
         "email": 231,
@@ -1054,13 +1054,13 @@
       "name": "Xclutel",
       "sfAccount": "Xclutel",
       "status": "Want to migrate / timeline unknown",
-      "psaAccountStatus": null,
+      "psaAccountStatus": "Active - Tigerpaw One",
       "touchpoints": {
-        "email": 1,
-        "phone": 0,
-        "other": 0,
-        "total": 1,
-        "lastTouch": null
+        "email": 240,
+        "phone": 32,
+        "other": 6,
+        "total": 278,
+        "lastTouch": "2026-08-01"
       },
       "opportunities": [
         {
@@ -1179,6 +1179,17 @@
       "total": 51,
       "webinarRegistrants": 0,
       "lastTouch": "2026-08-27"
+    },
+    {
+      "accountId": "001PX00000LTJGBYA5",
+      "account": "210 Solutions",
+      "mrr": null,
+      "email": 148,
+      "phone": 44,
+      "other": 4,
+      "total": 196,
+      "webinarRegistrants": 0,
+      "lastTouch": "2026-09-01"
     },
     {
       "accountId": "0016O00003dmuJQQAY",
@@ -1390,6 +1401,17 @@
       "lastTouch": "2026-05-28"
     },
     {
+      "accountId": "001PX0000071NPzYAM",
+      "account": "Advanced Audio",
+      "mrr": null,
+      "email": 6,
+      "phone": 0,
+      "other": 0,
+      "total": 6,
+      "webinarRegistrants": 0,
+      "lastTouch": "2026-08-27"
+    },
+    {
       "accountId": "0016O00003dmuJjQAI",
       "account": "Advanced Communication Technologies",
       "mrr": null,
@@ -1498,6 +1520,17 @@
       "total": 31,
       "webinarRegistrants": 0,
       "lastTouch": "2026-07-29"
+    },
+    {
+      "accountId": "001PX000003tpoKYAQ",
+      "account": "Advanosys",
+      "mrr": null,
+      "email": 64,
+      "phone": 23,
+      "other": 4,
+      "total": 91,
+      "webinarRegistrants": 0,
+      "lastTouch": "2026-08-07"
     },
     {
       "accountId": "0016O00003dmuJpQAI",
@@ -1819,6 +1852,17 @@
       "lastTouch": "2026-07-27"
     },
     {
+      "accountId": "001PX00000Syv4xYAB",
+      "account": "Ataraxis Solutions",
+      "mrr": null,
+      "email": 86,
+      "phone": 29,
+      "other": 1,
+      "total": 116,
+      "webinarRegistrants": 0,
+      "lastTouch": "2026-08-24"
+    },
+    {
       "accountId": "0016O00003dmuKEQAY",
       "account": "Atel Technologies",
       "mrr": null,
@@ -1916,6 +1960,17 @@
       "total": 95,
       "webinarRegistrants": 0,
       "lastTouch": "2026-08-28"
+    },
+    {
+      "accountId": "001PX00000RlHkDYAV",
+      "account": "Audio Video Experts",
+      "mrr": null,
+      "email": 40,
+      "phone": 23,
+      "other": 1,
+      "total": 64,
+      "webinarRegistrants": 0,
+      "lastTouch": "2026-06-23"
     },
     {
       "accountId": "0016O00003dmuKPQAY",
@@ -2567,6 +2622,17 @@
       "lastTouch": "2026-08-21"
     },
     {
+      "accountId": "0016O0000370KGaQAM",
+      "account": "Citi-Telecom Voice & Data Inc",
+      "mrr": null,
+      "email": 138,
+      "phone": 47,
+      "other": 0,
+      "total": 185,
+      "webinarRegistrants": 0,
+      "lastTouch": "2026-05-20"
+    },
+    {
       "accountId": "0016O00003dmuLKQAY",
       "account": "City Tel Communications Inc.",
       "mrr": null,
@@ -2845,12 +2911,12 @@
       "accountId": "0016O00003dmos9QAA",
       "account": "Compu-Tech, Inc.",
       "mrr": null,
-      "email": 188,
+      "email": 189,
       "phone": 21,
       "other": 29,
-      "total": 238,
+      "total": 239,
       "webinarRegistrants": 0,
-      "lastTouch": "2026-09-03"
+      "lastTouch": "2026-09-08"
     },
     {
       "accountId": "0016O00003dmosuQAA",
@@ -3033,11 +3099,22 @@
       "account": "Cross Country Telephone Systems",
       "mrr": null,
       "email": 95,
-      "phone": 26,
+      "phone": 25,
       "other": 5,
-      "total": 126,
+      "total": 125,
       "webinarRegistrants": 0,
       "lastTouch": "2026-09-04"
+    },
+    {
+      "accountId": "001PX000004hS22YAE",
+      "account": "crosscountrycomm.com",
+      "mrr": null,
+      "email": 5,
+      "phone": 3,
+      "other": 0,
+      "total": 8,
+      "webinarRegistrants": 0,
+      "lastTouch": "2026-07-24"
     },
     {
       "accountId": "0016O00003dmuLzQAI",
@@ -3247,6 +3324,17 @@
       "total": 65,
       "webinarRegistrants": 0,
       "lastTouch": "2026-07-20"
+    },
+    {
+      "accountId": "001PX00000NIlzJYAT",
+      "account": "DeTel Communications",
+      "mrr": null,
+      "email": 40,
+      "phone": 12,
+      "other": 2,
+      "total": 54,
+      "webinarRegistrants": 0,
+      "lastTouch": "2026-07-15"
     },
     {
       "accountId": "0016O00003dmuOkQAI",
@@ -3722,6 +3810,17 @@
       "lastTouch": "2026-03-26"
     },
     {
+      "accountId": "001PX00000NZjt8YAD",
+      "account": "Evotech",
+      "mrr": null,
+      "email": 38,
+      "phone": 26,
+      "other": 1,
+      "total": 65,
+      "webinarRegistrants": 0,
+      "lastTouch": "2026-07-15"
+    },
+    {
       "accountId": "0016O00003dmuPGQAY",
       "account": "Ex-Cel Solutions",
       "mrr": null,
@@ -3964,6 +4063,17 @@
       "lastTouch": "2026-03-17"
     },
     {
+      "accountId": "0016O00003ebleOQAQ",
+      "account": "Galaxy Integrated Technologies",
+      "mrr": null,
+      "email": 110,
+      "phone": 45,
+      "other": 2,
+      "total": 157,
+      "webinarRegistrants": 0,
+      "lastTouch": "2026-08-14"
+    },
+    {
       "accountId": "001PX00000S11uuYAB",
       "account": "Gamut",
       "mrr": null,
@@ -3984,6 +4094,17 @@
       "total": 45,
       "webinarRegistrants": 0,
       "lastTouch": "2026-08-14"
+    },
+    {
+      "accountId": "001PX00000FgqYeYAJ",
+      "account": "Generex Systems",
+      "mrr": null,
+      "email": 8,
+      "phone": 0,
+      "other": 1,
+      "total": 9,
+      "webinarRegistrants": 1,
+      "lastTouch": "2026-07-15"
     },
     {
       "accountId": "0016O00003dmuPhQAI",
@@ -4228,6 +4349,17 @@
       "lastTouch": "2026-08-22"
     },
     {
+      "accountId": "001PX00000CbOBHYA3",
+      "account": "Heartland Steel Doors Ltd.",
+      "mrr": null,
+      "email": 8,
+      "phone": 16,
+      "other": 2,
+      "total": 26,
+      "webinarRegistrants": 0,
+      "lastTouch": "2026-07-07"
+    },
+    {
       "accountId": "0016O00003dmoxJQAQ",
       "account": "Helios TFB",
       "mrr": null,
@@ -4424,6 +4556,17 @@
       "total": 635,
       "webinarRegistrants": 1,
       "lastTouch": "2026-09-03"
+    },
+    {
+      "accountId": "001PX000006dndYYAQ",
+      "account": "i-2-i Technology",
+      "mrr": null,
+      "email": 42,
+      "phone": 6,
+      "other": 3,
+      "total": 51,
+      "webinarRegistrants": 0,
+      "lastTouch": "2026-09-04"
     },
     {
       "accountId": "0016O00003dmuQCQAY",
@@ -4756,6 +4899,17 @@
       "lastTouch": "2026-05-09"
     },
     {
+      "accountId": "0011C00002H73UsQAJ",
+      "account": "Intermax Networks",
+      "mrr": null,
+      "email": 121,
+      "phone": 67,
+      "other": 7,
+      "total": 195,
+      "webinarRegistrants": 0,
+      "lastTouch": "2026-08-31"
+    },
+    {
       "accountId": "0016O00003dmuQjQAI",
       "account": "Intermed-Pal",
       "mrr": null,
@@ -4921,6 +5075,17 @@
       "lastTouch": "2026-09-03"
     },
     {
+      "accountId": "001PX00000RENwaYAH",
+      "account": "Jeffery Forrester",
+      "mrr": null,
+      "email": 3,
+      "phone": 4,
+      "other": 0,
+      "total": 7,
+      "webinarRegistrants": 0,
+      "lastTouch": "2026-07-30"
+    },
+    {
       "accountId": "0016O00003dmudoQAA",
       "account": "JES and Sons 2-Way LLC",
       "mrr": null,
@@ -5053,6 +5218,17 @@
       "lastTouch": "2026-08-25"
     },
     {
+      "accountId": "001PX0000078JhVYAU",
+      "account": "Life Safety Integrated Systems, Inc",
+      "mrr": null,
+      "email": 57,
+      "phone": 45,
+      "other": 0,
+      "total": 102,
+      "webinarRegistrants": 0,
+      "lastTouch": "2026-07-15"
+    },
+    {
       "accountId": "0016O00003dmuTbQAI",
       "account": "Lightning Technologies LLC",
       "mrr": null,
@@ -5073,6 +5249,17 @@
       "total": 144,
       "webinarRegistrants": 1,
       "lastTouch": "2026-08-27"
+    },
+    {
+      "accountId": "001PX000005WpiwYAC",
+      "account": "Low Voltage Integrators",
+      "mrr": null,
+      "email": 41,
+      "phone": 28,
+      "other": 7,
+      "total": 76,
+      "webinarRegistrants": 0,
+      "lastTouch": "2026-07-17"
     },
     {
       "accountId": "0016O00003dmuTgQAI",
@@ -5425,6 +5612,17 @@
       "total": 52,
       "webinarRegistrants": 0,
       "lastTouch": "2026-08-19"
+    },
+    {
+      "accountId": "0016O00003edXLeQAM",
+      "account": "Midwest Technology Specialists",
+      "mrr": null,
+      "email": 51,
+      "phone": 20,
+      "other": 1,
+      "total": 72,
+      "webinarRegistrants": 0,
+      "lastTouch": "2026-07-23"
     },
     {
       "accountId": "0016O00003IQXTaQAP",
@@ -6230,6 +6428,17 @@
       "lastTouch": "2026-08-06"
     },
     {
+      "accountId": "001PX000004hVS4YAM",
+      "account": "Plan B Technology",
+      "mrr": null,
+      "email": 27,
+      "phone": 8,
+      "other": 2,
+      "total": 37,
+      "webinarRegistrants": 0,
+      "lastTouch": "2026-08-27"
+    },
+    {
       "accountId": "0016O00003dmuVEQAY",
       "account": "Politon",
       "mrr": null,
@@ -6470,6 +6679,17 @@
       "total": 26,
       "webinarRegistrants": 0,
       "lastTouch": "2025-08-18"
+    },
+    {
+      "accountId": "0011C00002cDMhqQAG",
+      "account": "Quick Copper Communications",
+      "mrr": null,
+      "email": 757,
+      "phone": 74,
+      "other": 5,
+      "total": 836,
+      "webinarRegistrants": 0,
+      "lastTouch": "2026-09-05"
     },
     {
       "accountId": "0016O00003dmuVcQAI",
@@ -6747,6 +6967,17 @@
       "lastTouch": "2026-08-12"
     },
     {
+      "accountId": "0016O00003ebjMyQAI",
+      "account": "Romeo Computer",
+      "mrr": null,
+      "email": 1,
+      "phone": 0,
+      "other": 1,
+      "total": 2,
+      "webinarRegistrants": 0,
+      "lastTouch": "2026-07-17"
+    },
+    {
       "accountId": "001PX000001jnr6YAA",
       "account": "Romeo Computer Company",
       "mrr": null,
@@ -6800,6 +7031,17 @@
       "total": 20,
       "webinarRegistrants": 0,
       "lastTouch": "2026-02-18"
+    },
+    {
+      "accountId": "0016O00003ebjR2QAI",
+      "account": "Sabre Integrated Security Systems",
+      "mrr": null,
+      "email": 28,
+      "phone": 17,
+      "other": 1,
+      "total": 46,
+      "webinarRegistrants": 0,
+      "lastTouch": "2026-06-08"
     },
     {
       "accountId": "0016O00003dmuYXQAY",
@@ -7550,17 +7792,6 @@
       "lastTouch": "2026-08-28"
     },
     {
-      "accountId": "001PX000004hVRqYAM",
-      "account": "The Phone Experts - Communications Ltd.",
-      "mrr": null,
-      "email": 71,
-      "phone": 13,
-      "other": 1,
-      "total": 85,
-      "webinarRegistrants": 1,
-      "lastTouch": "2026-09-01"
-    },
-    {
       "accountId": "001PX00000Abt4dYAB",
       "account": "The Phone Experts - Communications Ltd.",
       "mrr": null,
@@ -7570,6 +7801,17 @@
       "total": 1,
       "webinarRegistrants": 1,
       "lastTouch": null
+    },
+    {
+      "accountId": "001PX000004hVRqYAM",
+      "account": "The Phone Experts - Communications Ltd.",
+      "mrr": null,
+      "email": 71,
+      "phone": 13,
+      "other": 1,
+      "total": 85,
+      "webinarRegistrants": 1,
+      "lastTouch": "2026-09-01"
     },
     {
       "accountId": "0016O00003dmuZsQAI",
@@ -7724,6 +7966,17 @@
       "total": 14,
       "webinarRegistrants": 0,
       "lastTouch": "2026-03-16"
+    },
+    {
+      "accountId": "0016O00003dmudKQAQ",
+      "account": "TRC Networks",
+      "mrr": null,
+      "email": 6,
+      "phone": 0,
+      "other": 0,
+      "total": 6,
+      "webinarRegistrants": 0,
+      "lastTouch": "2026-07-15"
     },
     {
       "accountId": "0016O00003dmua3QAA",
@@ -8078,6 +8331,17 @@
       "lastTouch": "2026-08-11"
     },
     {
+      "accountId": "001PX000001rdZdYAI",
+      "account": "VITEC Solutions",
+      "mrr": null,
+      "email": 68,
+      "phone": 36,
+      "other": 4,
+      "total": 108,
+      "webinarRegistrants": 0,
+      "lastTouch": "2026-08-28"
+    },
+    {
       "accountId": "0011500001bh7enAAA",
       "account": "Votacall Inc - 2nd Database",
       "mrr": null,
@@ -8166,6 +8430,17 @@
       "lastTouch": "2026-09-03"
     },
     {
+      "accountId": "001PX00000D4yfdYAB",
+      "account": "Wired Media Solutions",
+      "mrr": null,
+      "email": 66,
+      "phone": 36,
+      "other": 1,
+      "total": 103,
+      "webinarRegistrants": 0,
+      "lastTouch": "2026-08-27"
+    },
+    {
       "accountId": "0011500001IIF86AAH",
       "account": "Wolf Technology Group",
       "mrr": null,
@@ -8243,17 +8518,6 @@
       "lastTouch": "2026-08-19"
     },
     {
-      "accountId": "001PX00000h1w4RYAQ",
-      "account": "Xclutel",
-      "mrr": null,
-      "email": 1,
-      "phone": 0,
-      "other": 0,
-      "total": 1,
-      "webinarRegistrants": 1,
-      "lastTouch": null
-    },
-    {
       "accountId": "0011500001HNPlFAAX",
       "account": "Xclutel",
       "mrr": null,
@@ -8263,6 +8527,17 @@
       "total": 278,
       "webinarRegistrants": 1,
       "lastTouch": "2026-08-01"
+    },
+    {
+      "accountId": "001PX00000h1w4RYAQ",
+      "account": "Xclutel",
+      "mrr": null,
+      "email": 1,
+      "phone": 0,
+      "other": 0,
+      "total": 1,
+      "webinarRegistrants": 1,
+      "lastTouch": null
     },
     {
       "accountId": "0016O00003dmuakQAA",
