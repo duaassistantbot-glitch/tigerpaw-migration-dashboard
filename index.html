@@ -126,14 +126,16 @@
   .modal-count { margin-top: 2px; font-size: 12px; color: #FFFFFF; }
   .modal-close { width: 30px; height: 30px; border: 0; border-radius: 6px; cursor: pointer; color: #FFFFFF; background: rgba(255,255,255,.16); font-size: 17px; }
   .modal-close:hover { background: rgba(255,255,255,.26); }
-  .modal-search { padding: 12px 16px; border-bottom: 1px solid #DDE2E8; }
-  .modal-search input { width: 100%; padding: 9px 11px; border: 1px solid #DDE2E8; border-radius: 6px; font: inherit; color: #1D3756; }
+  .modal-search { padding: 12px 16px; border-bottom: 1px solid #DDE2E8; display: grid; grid-template-columns: minmax(220px, 1fr) repeat(2, minmax(170px, 230px)); gap: 10px; align-items: center; }
+  .modal-search input, .modal-search select { width: 100%; padding: 9px 11px; border: 1px solid #DDE2E8; border-radius: 6px; font: inherit; color: #1D3756; background: #FFFFFF; }
   .modal-body { overflow: auto; }
   .modal-table thead th { position: sticky; top: 0; }
+  .modal-table th button { border: 0; background: transparent; color: inherit; cursor: pointer; font: inherit; text-transform: inherit; letter-spacing: inherit; padding: 0; display: inline-flex; gap: 5px; align-items: center; }
+  .modal-table th button:hover { color: #2399B5; }
   .modal-table td { font-size: 12px; }
   @media (max-width: 900px) {
     .header-inner { align-items: flex-start; flex-direction: column; }
-    .hero-grid, .grid-2, .key-stat-grid, .recency-grid, .impact-grid { grid-template-columns: 1fr; }
+    .hero-grid, .grid-2, .key-stat-grid, .recency-grid, .impact-grid, .modal-search { grid-template-columns: 1fr; }
     .bar-row { grid-template-columns: 1fr; gap: 8px; }
     .num { text-align: left; }
     .summary-strip { flex-direction: column; }
@@ -154,6 +156,8 @@
     </div>
     <div class="modal-search">
       <input id="drill-search" type="search" placeholder="Search this list" oninput="renderDrilldownRows()">
+      <select id="drill-psa-filter" onchange="renderDrilldownRows()"></select>
+      <select id="drill-status-filter" onchange="renderDrilldownRows()"></select>
     </div>
     <div class="modal-body">
       <table class="modal-table">
@@ -324,6 +328,7 @@
       <thead>
         <tr>
           <th>Company</th>
+          <th>PSA Account Status</th>
           <th>Onboarding Status</th>
           <th>Onboarding Owner</th>
           <th>Sales Rep</th>
@@ -333,7 +338,7 @@
         </tr>
       </thead>
       <tbody id="active-conversions-table">
-        <tr><td colspan="7" class="empty">Loading graduated accounts...</td></tr>
+        <tr><td colspan="8" class="empty">Loading graduated accounts...</td></tr>
       </tbody>
     </table>
   </section>
@@ -423,6 +428,7 @@
 let MASTER = null;
 let KEY_STATS = null;
 let DRILLDOWN = { type: 'accounts', rows: [], title: '' };
+let DRILL_SORT = { key: 'account', dir: 'asc' };
 let ACCOUNT_BY_ID = new Map();
 let ACCOUNT_BY_NAME = new Map();
 const EXPANDED_STATUS_ROWS = new Set();
@@ -617,62 +623,107 @@ function closeDrilldown() {
   document.getElementById('drill-modal').classList.remove('open');
 }
 
-function openAccounts(title, rows) {
-  if (!MASTER) return;
-  DRILLDOWN = { type: 'accounts', rows: rows || [], title };
+function drillSortButton(label, key, align = '') {
+  const active = DRILL_SORT.key === key;
+  const indicator = active ? (DRILL_SORT.dir === 'asc' ? '▲' : '▼') : '↕';
+  return `<th class="${align}"><button type="button" onclick="setDrillSort('${esc(key)}')"><span>${esc(label)}</span><span class="sort-indicator ${active ? '' : 'inactive'}">${indicator}</span></button></th>`;
+}
+
+function setDrillSort(key) {
+  DRILL_SORT = {
+    key,
+    dir: DRILL_SORT.key === key && DRILL_SORT.dir === 'asc' ? 'desc' : 'asc'
+  };
+  renderDrilldownHead();
+  renderDrilldownRows();
+}
+
+function resetDrilldown(type, rows, title, defaultSort = 'account') {
+  DRILLDOWN = { type, rows: rows || [], title };
+  DRILL_SORT = { key: defaultSort, dir: 'asc' };
   document.getElementById('drill-title').textContent = title;
   document.getElementById('drill-search').value = '';
-  document.getElementById('drill-head').innerHTML = `
-    <tr>
-      <th>Account</th>
-      <th>Web Migration Status</th>
-      <th>PSA Account Status</th>
-      <th>Type</th>
-      <th>Owner</th>
-    </tr>`;
+  renderDrilldownFilters();
+  renderDrilldownHead();
   document.getElementById('drill-modal').classList.add('open');
   renderDrilldownRows();
+}
+
+function drillPsaStatus(row) {
+  if (DRILLDOWN.type === 'accounts') return psaAccountStatus(row);
+  if (DRILLDOWN.type === 'opps') return psaAccountStatusForOpp(row);
+  return row.psaAccountStatus || 'Blank';
+}
+
+function drillStatus(row) {
+  if (DRILLDOWN.type === 'accounts') return row.webMigrationStatus || 'Blank';
+  if (DRILLDOWN.type === 'opps') return row.stage || 'Blank';
+  return row.onboardingStatus || 'Unknown';
+}
+
+function fillDrillSelect(id, label, values) {
+  const select = document.getElementById(id);
+  select.innerHTML = `<option value="all">${esc(label)}: All</option>` + values.map(value => `<option value="${esc(value)}">${esc(value)}</option>`).join('');
+}
+
+function renderDrilldownFilters() {
+  const psaValues = uniqueValues(DRILLDOWN.rows, drillPsaStatus);
+  const statusValues = uniqueValues(DRILLDOWN.rows, drillStatus);
+  fillDrillSelect('drill-psa-filter', 'PSA Account Status', psaValues);
+  fillDrillSelect('drill-status-filter', DRILLDOWN.type === 'opps' ? 'Stage' : DRILLDOWN.type === 'onboarding' ? 'Onboarding Status' : 'Web Migration Status', statusValues);
+}
+
+function renderDrilldownHead() {
+  if (DRILLDOWN.type === 'accounts') {
+    document.getElementById('drill-head').innerHTML = `<tr>
+      ${drillSortButton('Account', 'account')}
+      ${drillSortButton('Web Migration Status', 'status')}
+      ${drillSortButton('PSA Account Status', 'psaAccountStatus')}
+      ${drillSortButton('Type', 'type')}
+      ${drillSortButton('Owner', 'owner')}
+    </tr>`;
+    return;
+  }
+  if (DRILLDOWN.type === 'onboarding') {
+    document.getElementById('drill-head').innerHTML = `<tr>
+      ${drillSortButton('Account', 'account')}
+      ${drillSortButton('PSA Account Status', 'psaAccountStatus')}
+      ${drillSortButton('Onboarding Status', 'status')}
+      ${drillSortButton('Onboarding Bucket', 'bucket')}
+      ${drillSortButton('Onboarding Owner', 'owner')}
+      ${drillSortButton('Sales Rep', 'salesRep')}
+      ${drillSortButton('Forecast / Grad Date', 'forecastedGraduationDate')}
+      ${drillSortButton('MRR', 'amount', 'num-h')}
+      ${drillSortButton('Closed Won Date', 'closeDate')}
+    </tr>`;
+    return;
+  }
+  document.getElementById('drill-head').innerHTML = `<tr>
+    ${drillSortButton('Account Name', 'account')}
+    ${drillSortButton('PSA Account Status', 'psaAccountStatus')}
+    ${drillSortButton('Renewal Amount', 'amount', 'num-h')}
+    ${drillSortButton('Opportunity Owner', 'owner')}
+    ${drillSortButton('Next Step', 'nextStep')}
+    ${drillSortButton('Stage', 'stage')}
+    ${drillSortButton('Close Date', 'closeDate')}
+    ${drillSortButton('Loss Reason', 'lossReason')}
+    ${drillSortButton('Loss Reason Detail', 'lossDetail')}
+    ${drillSortButton('Viking One Release', 'vikingRelease')}
+  </tr>`;
+}
+
+function openAccounts(title, rows) {
+  if (!MASTER) return;
+  resetDrilldown('accounts', rows, title, 'account');
 }
 
 function openOpps(title, rows) {
   if (!MASTER) return;
-  DRILLDOWN = { type: 'opps', rows: rows || [], title };
-  document.getElementById('drill-title').textContent = title;
-  document.getElementById('drill-search').value = '';
-  document.getElementById('drill-head').innerHTML = `
-    <tr>
-      <th>Account Name</th>
-      <th>PSA Account Status</th>
-      <th class="num-h">Renewal Amount</th>
-      <th>Opportunity Owner</th>
-      <th>Next Step</th>
-      <th>Stage</th>
-      <th>Close Date</th>
-      <th>Loss Reason</th>
-      <th>Loss Reason Detail</th>
-      <th>Viking One Release</th>
-    </tr>`;
-  document.getElementById('drill-modal').classList.add('open');
-  renderDrilldownRows();
+  resetDrilldown('opps', rows, title, 'account');
 }
 
 function openOnboardingRows(title, rows) {
-  DRILLDOWN = { type: 'onboarding', rows: rows || [], title };
-  document.getElementById('drill-title').textContent = title;
-  document.getElementById('drill-search').value = '';
-  document.getElementById('drill-head').innerHTML = `
-    <tr>
-      <th>Account</th>
-      <th>Onboarding Status</th>
-      <th>Onboarding Bucket</th>
-      <th>Onboarding Owner</th>
-      <th>Sales Rep</th>
-      <th>Forecasted Graduation</th>
-      <th class="num-h">MRR</th>
-      <th>Closed Won Date</th>
-    </tr>`;
-  document.getElementById('drill-modal').classList.add('open');
-  renderDrilldownRows();
+  resetDrilldown('onboarding', rows, title, 'account');
 }
 
 function openWonOnboardingRows(status = null) {
@@ -693,11 +744,22 @@ function openCanceledTigerpawRows() {
 
 function renderDrilldownRows() {
   const search = document.getElementById('drill-search').value.trim().toLowerCase();
-  const rows = DRILLDOWN.rows.filter(row => Object.values(row).join(' ').toLowerCase().includes(search));
+  const psaFilter = document.getElementById('drill-psa-filter').value;
+  const statusFilter = document.getElementById('drill-status-filter').value;
+  const filteredRows = DRILLDOWN.rows.filter(row => {
+    const matchesSearch = !search || Object.values(row).join(' ').toLowerCase().includes(search);
+    const matchesPsa = psaFilter === 'all' || drillPsaStatus(row) === psaFilter;
+    const matchesStatus = statusFilter === 'all' || drillStatus(row) === statusFilter;
+    return matchesSearch && matchesPsa && matchesStatus;
+  });
+  const rows = [...filteredRows].sort((a, b) => {
+    const result = compareSortValues(drillSortValue(a), drillSortValue(b));
+    return DRILL_SORT.dir === 'asc' ? result : -result;
+  });
   const body = document.getElementById('drill-body');
   const empty = document.getElementById('drill-empty');
 
-  document.getElementById('drill-count').textContent = `${fmt.format(rows.length)} ${DRILLDOWN.type === 'accounts' ? 'account' : 'opportunit'}${rows.length === 1 ? (DRILLDOWN.type === 'accounts' ? '' : 'y') : (DRILLDOWN.type === 'accounts' ? 's' : 'ies')}`;
+  document.getElementById('drill-count').textContent = `${fmt.format(rows.length)} of ${fmt.format(DRILLDOWN.rows.length)} ${DRILLDOWN.type === 'opps' ? 'opportunities' : 'accounts'}`;
   empty.style.display = rows.length ? 'none' : 'block';
 
   if (DRILLDOWN.type === 'accounts') {
@@ -716,6 +778,7 @@ function renderDrilldownRows() {
     body.innerHTML = rows.map(row => `
       <tr>
         <td><strong>${esc(row.account)}</strong><br><span class="key-stat-sub">${esc(row.opportunity || '')}</span></td>
+        <td><span class="pill">${esc(row.psaAccountStatus || 'Blank')}</span></td>
         <td><span class="pill">${esc(row.onboardingStatus || 'Unknown')}</span></td>
         <td>${esc(row.onboardingBucket || '')}</td>
         <td>${esc(row.onboardingOwner || '')}</td>
@@ -728,6 +791,27 @@ function renderDrilldownRows() {
   }
 
   body.innerHTML = rows.map(opp => oppDetailRow(opp)).join('');
+}
+
+function drillSortValue(row) {
+  const key = DRILL_SORT.key;
+  if (key === 'psaAccountStatus') return drillPsaStatus(row);
+  if (key === 'status') return drillStatus(row);
+  if (key === 'amount') return Number(row.amount || 0);
+  if (DRILLDOWN.type === 'accounts') {
+    if (key === 'account') return row.name || '';
+    if (key === 'type') return row.type || '';
+    if (key === 'owner') return row.owner || '';
+  }
+  if (DRILLDOWN.type === 'onboarding') {
+    if (key === 'account') return row.account || '';
+    if (key === 'bucket') return row.onboardingBucket || '';
+    if (key === 'owner') return row.onboardingOwner || '';
+    if (key === 'salesRep') return row.salesRep || '';
+    if (key === 'forecastedGraduationDate') return row.forecastedGraduationDate || '';
+    if (key === 'closeDate') return row.closeDate || '';
+  }
+  return sortValue('opp', key, row);
 }
 
 function unlockStatusClass(status) {
@@ -962,13 +1046,14 @@ function renderKeyStats(stats) {
   document.getElementById('active-conversions-table').innerHTML = graduatedRows.map(row => `
       <tr>
         <td><strong>${esc(row.account)}</strong></td>
+        <td><span class="pill">${esc(row.psaAccountStatus || 'Blank')}</span></td>
         <td><span class="pill">${esc(row.onboardingStatus || 'Graduated')}</span></td>
         <td>${esc(row.onboardingOwner || '')}</td>
         <td>${esc(row.salesRep || '')}</td>
         <td>${row.forecastedGraduationDate ? formatDate(row.forecastedGraduationDate) : '--'}</td>
         <td class="num-c">${money.format(row.amount || 0)}</td>
         <td>${row.notionUrl ? `<a href="${esc(row.notionUrl)}" target="_blank" rel="noopener">Open</a>` : ''}</td>
-      </tr>`).join('') || '<tr><td colspan="7" class="empty">No graduated Tigerpaw accounts loaded.</td></tr>';
+      </tr>`).join('') || '<tr><td colspan="8" class="empty">No graduated Tigerpaw accounts loaded.</td></tr>';
 
   const caveats = stats.caveats || [];
   if (caveats.length) {

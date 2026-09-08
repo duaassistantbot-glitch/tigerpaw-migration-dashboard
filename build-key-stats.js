@@ -92,9 +92,10 @@ function isLikelySameCompany(a, b) {
 function bucketLabel(bucket) {
   return ({ activeClients: 'Actively Onboarding', onHoldClients: 'On Hold', rtsClients: 'RTS', canceledClients: 'Canceled' })[bucket] || bucket;
 }
-function onboardingClientRow(client, bucket, statusFallback = 'Unknown') {
+function onboardingClientRow(client, bucket, statusFallback = 'Unknown', account = null) {
   return {
     account: client.name,
+    psaAccountStatus: account?.psaAccountStatus || account?.accountStatus || 'Blank',
     opportunity: '',
     amount: client.mrru || 0,
     closeDate: client.dateSold || null,
@@ -220,6 +221,7 @@ async function main() {
   const sortedTouchDates = contactedWithDates.map(x => x.lastTouch).sort();
   const medianLastTouchDate = sortedTouchDates.length ? sortedTouchDates[Math.floor(sortedTouchDates.length / 2)] : null;
   const soldOpps = (master.opportunities || []).filter(o => o.isWon || o.stage === 'Closed Won');
+  const accountForName = name => accounts.find(account => isLikelySameCompany(name, account.name)) || null;
 
   console.log('Fetching PSA onboarding dashboard for Tigerpaw status match...');
   const onboardingDashboard = await fetchOnboardingDashboard();
@@ -237,6 +239,7 @@ async function main() {
     return [{
       account: opp.account,
       opportunity: opp.name,
+      psaAccountStatus: accountById[opp.accountId]?.psaAccountStatus || accountById[opp.accountId]?.accountStatus || 'Blank',
       amount: opp.amount,
       closeDate: opp.closeDate,
       owner: opp.owner,
@@ -260,10 +263,10 @@ async function main() {
   const tigerpawGraduatedClients = onboardingDashboard ? (onboardingDashboard.graduatedClients || [])
     .filter(client => ['yes', 'true', '1'].includes(String(client.existingTigerpaw || '').trim().toLowerCase()))
     .filter(client => !GRADUATED_EXCLUDE.has(norm(client.name)))
-    .map(client => onboardingClientRow(client, 'Graduated', 'Graduated')) : [];
+    .map(client => onboardingClientRow(client, 'Graduated', 'Graduated', accountForName(client.name))) : [];
   const tigerpawCanceledClients = onboardingDashboard ? (onboardingDashboard.canceledClients || [])
     .filter(client => ['yes', 'true', '1'].includes(String(client.existingTigerpaw || '').trim().toLowerCase()))
-    .map(client => onboardingClientRow(client, 'Canceled', 'Canceled')) : [];
+    .map(client => onboardingClientRow(client, 'Canceled', 'Canceled', accountForName(client.name))) : [];
 
   const activeNorm = new Set(ACTIVE_CONVERSIONS.map(norm));
   const fuzzyMatch = (source, target) => {

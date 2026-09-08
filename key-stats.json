@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-08T14:08:12.886Z",
+  "generatedAt": "2026-09-08T14:52:24.705Z",
   "sourceGeneratedAt": "2026-09-08T12:56:10.669Z",
   "caveats": [
     "Notion PSA Onboarding Dashboard and Client Master/MRR databases were not accessible to the current integration at build time; CS graduation and account MRR are left as Notion-dependent until shared.",
@@ -8,7 +8,7 @@
   ],
   "funnelStats": {
     "webinarsRun": 3,
-    "cbrsSinceFirstWebinar": 195,
+    "cbrsSinceFirstWebinar": 202,
     "accountsWithCbrSinceFirstWebinar": 64,
     "contactedAccounts": 672,
     "accountsWithOpps": 121,
@@ -32,6 +32,7 @@
           {
             "account": "Dividia",
             "opportunity": "Dividia - PSA Migration",
+            "psaAccountStatus": "Active - Tigerpaw One",
             "amount": 1180,
             "closeDate": "2026-07-16",
             "owner": "Ingrid Beard",
@@ -47,6 +48,7 @@
           {
             "account": "Integrated Systems",
             "opportunity": "Integrated Systems - Web Migration",
+            "psaAccountStatus": "Active - Tigerpaw One",
             "amount": 1870,
             "closeDate": "2026-08-04",
             "owner": "Justin Lee",
@@ -62,6 +64,7 @@
           {
             "account": "Raytec Systems",
             "opportunity": "Raytec Systems - Tigerpaw Migration",
+            "psaAccountStatus": "Active - Unleashed",
             "amount": 635,
             "closeDate": "2026-08-04",
             "owner": "Jakob Champion",
@@ -77,6 +80,7 @@
           {
             "account": "Telecom Unlimited",
             "opportunity": "Telecom Unlimited",
+            "psaAccountStatus": "Active - Unleashed",
             "amount": 635,
             "closeDate": "2026-07-28",
             "owner": "Ingrid Beard",
@@ -92,6 +96,7 @@
           {
             "account": "Richmond Security",
             "opportunity": "Richmond- TP to PSA Web",
+            "psaAccountStatus": "Active - Tigerpaw One",
             "amount": 1680,
             "closeDate": "2026-07-28",
             "owner": "Katerra Stephenson Greenwood",
@@ -107,6 +112,7 @@
           {
             "account": "Omidi Enterprises",
             "opportunity": "Omidi TP Migration",
+            "psaAccountStatus": "Active - Unleashed",
             "amount": 770,
             "closeDate": "2026-07-23",
             "owner": "Ingrid Beard",
@@ -122,6 +128,7 @@
           {
             "account": "RingStreet",
             "opportunity": "RingStreet PSA Migration",
+            "psaAccountStatus": "Active - Tigerpaw One",
             "amount": 572,
             "closeDate": "2026-07-10",
             "owner": "Katerra Stephenson Greenwood",
@@ -137,6 +144,7 @@
           {
             "account": "Roadrunner Lock & Safe",
             "opportunity": "Roadrunner - TP Migration",
+            "psaAccountStatus": "Blank",
             "amount": 1600,
             "closeDate": "2026-06-24",
             "owner": "Ingrid Beard",
@@ -152,6 +160,7 @@
           {
             "account": "West Coast Cabling, Inc.",
             "opportunity": "West Coast (Teldata)- Tigerpaw to Web Migration",
+            "psaAccountStatus": "Active - Tigerpaw One",
             "amount": 948,
             "closeDate": "2026-06-24",
             "owner": "Ingrid Beard",
@@ -173,6 +182,7 @@
           {
             "account": "B. Moyer Radio Communications LLC",
             "opportunity": "Moyer - Legacy Migration Renewal",
+            "psaAccountStatus": "Active - Unleashed",
             "amount": 1580,
             "closeDate": "2026-07-01",
             "owner": "Ingrid Beard",
@@ -188,6 +198,7 @@
           {
             "account": "Hosted America",
             "opportunity": "Hosted America - Web Migration",
+            "psaAccountStatus": "Blank",
             "amount": 1180,
             "closeDate": "2026-06-30",
             "owner": "Justin Lee",
@@ -196,13 +207,14 @@
             "onboardingBucket": "Actively Onboarding",
             "onboardingOwner": "Jeremy Adams",
             "salesRep": "Justin Lee",
-            "forecastedGraduationDate": "2026-10-16",
+            "forecastedGraduationDate": "2027-01-07",
             "startKoDate": "2026-07-06",
             "notionUrl": "https://app.notion.com/p/Hosted-America-395a59b7e7b2811fa7adf5e9a0ff3a5c"
           },
           {
             "account": "Rel Comm",
             "opportunity": "Tigerpaw Web Conversion",
+            "psaAccountStatus": "Active - Unleashed",
             "amount": 0,
             "closeDate": "2026-04-06",
             "owner": "Olivia Sandefur",
@@ -218,6 +230,7 @@
           {
             "account": "Xclutel",
             "opportunity": "Tigerpaw Web Conversion (dual client)",
+            "psaAccountStatus": "Active - Tigerpaw One",
             "amount": 0,
             "closeDate": "2026-05-28",
             "owner": "Blaine Villafuerte",
@@ -239,6 +252,7 @@
           {
             "account": "Compu-Tech, Inc.",
             "opportunity": "Tigerpaw Web Conversion",
+            "psaAccountStatus": "Active - Unleashed",
             "amount": 0,
             "closeDate": "2026-04-06",
             "owner": "Olivia Sandefur",
@@ -254,6 +268,7 @@
           {
             "account": "Arcomm Communications",
             "opportunity": "Tigerpaw to Web Migration",
+            "psaAccountStatus": "Active - Unleashed",
             "amount": 2058,
             "closeDate": "2026-05-27",
             "owner": "Blaine Villafuerte",
@@ -269,6 +284,7 @@
           {
             "account": "Franklin Electric Co Inc",
             "opportunity": "Tigerpaw Web Migration",
+            "psaAccountStatus": "Active - Tigerpaw One",
             "amount": 0,
             "closeDate": "2026-04-14",
             "owner": "Blaine Villafuerte",
@@ -284,6 +300,7 @@
           {
             "account": "SmartCom Home Technologies, Inc.",
             "opportunity": "TIgerpaw Web Migration",
+            "psaAccountStatus": "Active - Unleashed",
             "amount": 0,
             "closeDate": "2026-04-14",
             "owner": "Blaine Villafuerte",
@@ -305,6 +322,7 @@
           {
             "account": "Grennan Communications",
             "opportunity": "Grennan - TP Migration",
+            "psaAccountStatus": "Active - Tigerpaw One",
             "amount": 820,
             "closeDate": "2026-06-25",
             "owner": "Ingrid Beard",
@@ -320,6 +338,7 @@
           {
             "account": "Virtual Guard",
             "opportunity": "Virtual Guard - TP Web Migration",
+            "psaAccountStatus": "Active - Unleashed",
             "amount": 1280,
             "closeDate": "2026-06-24",
             "owner": "Ingrid Beard",
@@ -341,6 +360,7 @@
           {
             "account": "Network Datacom Solutions",
             "opportunity": "Network Datacom Solutions - TP Migration",
+            "psaAccountStatus": "Active - Tigerpaw One",
             "amount": 1345,
             "closeDate": "2026-08-06",
             "owner": "Jakob Champion",
@@ -362,6 +382,7 @@
           {
             "account": "Intec - CA",
             "opportunity": "Intec - CA - TP Migration",
+            "psaAccountStatus": "Active - Tigerpaw One",
             "amount": 474,
             "closeDate": "2026-06-17",
             "owner": "Ingrid Beard",
@@ -383,6 +404,7 @@
           {
             "account": "ICS Communications",
             "opportunity": "ICS Communications - Web Migration",
+            "psaAccountStatus": "Active - Tigerpaw One",
             "amount": 665,
             "closeDate": "2026-07-21",
             "owner": "Justin Lee",
@@ -404,6 +426,7 @@
           {
             "account": "Rave Systems, LLC dba Reference Audio Video & Security (now known as Reference Smart)",
             "opportunity": "Reference AV - TP Migration",
+            "psaAccountStatus": "Active - Tigerpaw One",
             "amount": 1325,
             "closeDate": "2026-07-08",
             "owner": "Ingrid Beard",
@@ -423,6 +446,7 @@
       {
         "account": "B. Moyer Radio Communications LLC",
         "opportunity": "Moyer - Legacy Migration Renewal",
+        "psaAccountStatus": "Active - Unleashed",
         "amount": 1580,
         "closeDate": "2026-07-01",
         "owner": "Ingrid Beard",
@@ -438,6 +462,7 @@
       {
         "account": "Compu-Tech, Inc.",
         "opportunity": "Tigerpaw Web Conversion",
+        "psaAccountStatus": "Active - Unleashed",
         "amount": 0,
         "closeDate": "2026-04-06",
         "owner": "Olivia Sandefur",
@@ -453,6 +478,7 @@
       {
         "account": "Arcomm Communications",
         "opportunity": "Tigerpaw to Web Migration",
+        "psaAccountStatus": "Active - Unleashed",
         "amount": 2058,
         "closeDate": "2026-05-27",
         "owner": "Blaine Villafuerte",
@@ -468,6 +494,7 @@
       {
         "account": "Dividia",
         "opportunity": "Dividia - PSA Migration",
+        "psaAccountStatus": "Active - Tigerpaw One",
         "amount": 1180,
         "closeDate": "2026-07-16",
         "owner": "Ingrid Beard",
@@ -483,6 +510,7 @@
       {
         "account": "ICS Communications",
         "opportunity": "ICS Communications - Web Migration",
+        "psaAccountStatus": "Active - Tigerpaw One",
         "amount": 665,
         "closeDate": "2026-07-21",
         "owner": "Justin Lee",
@@ -498,6 +526,7 @@
       {
         "account": "Hosted America",
         "opportunity": "Hosted America - Web Migration",
+        "psaAccountStatus": "Blank",
         "amount": 1180,
         "closeDate": "2026-06-30",
         "owner": "Justin Lee",
@@ -506,13 +535,14 @@
         "onboardingBucket": "Actively Onboarding",
         "onboardingOwner": "Jeremy Adams",
         "salesRep": "Justin Lee",
-        "forecastedGraduationDate": "2026-10-16",
+        "forecastedGraduationDate": "2027-01-07",
         "startKoDate": "2026-07-06",
         "notionUrl": "https://app.notion.com/p/Hosted-America-395a59b7e7b2811fa7adf5e9a0ff3a5c"
       },
       {
         "account": "Intec - CA",
         "opportunity": "Intec - CA - TP Migration",
+        "psaAccountStatus": "Active - Tigerpaw One",
         "amount": 474,
         "closeDate": "2026-06-17",
         "owner": "Ingrid Beard",
@@ -528,6 +558,7 @@
       {
         "account": "Grennan Communications",
         "opportunity": "Grennan - TP Migration",
+        "psaAccountStatus": "Active - Tigerpaw One",
         "amount": 820,
         "closeDate": "2026-06-25",
         "owner": "Ingrid Beard",
@@ -543,6 +574,7 @@
       {
         "account": "Integrated Systems",
         "opportunity": "Integrated Systems - Web Migration",
+        "psaAccountStatus": "Active - Tigerpaw One",
         "amount": 1870,
         "closeDate": "2026-08-04",
         "owner": "Justin Lee",
@@ -558,6 +590,7 @@
       {
         "account": "Franklin Electric Co Inc",
         "opportunity": "Tigerpaw Web Migration",
+        "psaAccountStatus": "Active - Tigerpaw One",
         "amount": 0,
         "closeDate": "2026-04-14",
         "owner": "Blaine Villafuerte",
@@ -573,6 +606,7 @@
       {
         "account": "Raytec Systems",
         "opportunity": "Raytec Systems - Tigerpaw Migration",
+        "psaAccountStatus": "Active - Unleashed",
         "amount": 635,
         "closeDate": "2026-08-04",
         "owner": "Jakob Champion",
@@ -588,6 +622,7 @@
       {
         "account": "Network Datacom Solutions",
         "opportunity": "Network Datacom Solutions - TP Migration",
+        "psaAccountStatus": "Active - Tigerpaw One",
         "amount": 1345,
         "closeDate": "2026-08-06",
         "owner": "Jakob Champion",
@@ -603,6 +638,7 @@
       {
         "account": "Telecom Unlimited",
         "opportunity": "Telecom Unlimited",
+        "psaAccountStatus": "Active - Unleashed",
         "amount": 635,
         "closeDate": "2026-07-28",
         "owner": "Ingrid Beard",
@@ -618,6 +654,7 @@
       {
         "account": "Richmond Security",
         "opportunity": "Richmond- TP to PSA Web",
+        "psaAccountStatus": "Active - Tigerpaw One",
         "amount": 1680,
         "closeDate": "2026-07-28",
         "owner": "Katerra Stephenson Greenwood",
@@ -633,6 +670,7 @@
       {
         "account": "Omidi Enterprises",
         "opportunity": "Omidi TP Migration",
+        "psaAccountStatus": "Active - Unleashed",
         "amount": 770,
         "closeDate": "2026-07-23",
         "owner": "Ingrid Beard",
@@ -648,6 +686,7 @@
       {
         "account": "RingStreet",
         "opportunity": "RingStreet PSA Migration",
+        "psaAccountStatus": "Active - Tigerpaw One",
         "amount": 572,
         "closeDate": "2026-07-10",
         "owner": "Katerra Stephenson Greenwood",
@@ -663,6 +702,7 @@
       {
         "account": "Rave Systems, LLC dba Reference Audio Video & Security (now known as Reference Smart)",
         "opportunity": "Reference AV - TP Migration",
+        "psaAccountStatus": "Active - Tigerpaw One",
         "amount": 1325,
         "closeDate": "2026-07-08",
         "owner": "Ingrid Beard",
@@ -678,6 +718,7 @@
       {
         "account": "Roadrunner Lock & Safe",
         "opportunity": "Roadrunner - TP Migration",
+        "psaAccountStatus": "Blank",
         "amount": 1600,
         "closeDate": "2026-06-24",
         "owner": "Ingrid Beard",
@@ -693,6 +734,7 @@
       {
         "account": "SmartCom Home Technologies, Inc.",
         "opportunity": "TIgerpaw Web Migration",
+        "psaAccountStatus": "Active - Unleashed",
         "amount": 0,
         "closeDate": "2026-04-14",
         "owner": "Blaine Villafuerte",
@@ -708,6 +750,7 @@
       {
         "account": "Rel Comm",
         "opportunity": "Tigerpaw Web Conversion",
+        "psaAccountStatus": "Active - Unleashed",
         "amount": 0,
         "closeDate": "2026-04-06",
         "owner": "Olivia Sandefur",
@@ -723,6 +766,7 @@
       {
         "account": "Virtual Guard",
         "opportunity": "Virtual Guard - TP Web Migration",
+        "psaAccountStatus": "Active - Unleashed",
         "amount": 1280,
         "closeDate": "2026-06-24",
         "owner": "Ingrid Beard",
@@ -738,6 +782,7 @@
       {
         "account": "Xclutel",
         "opportunity": "Tigerpaw Web Conversion (dual client)",
+        "psaAccountStatus": "Active - Tigerpaw One",
         "amount": 0,
         "closeDate": "2026-05-28",
         "owner": "Blaine Villafuerte",
@@ -753,6 +798,7 @@
       {
         "account": "West Coast Cabling, Inc.",
         "opportunity": "West Coast (Teldata)- Tigerpaw to Web Migration",
+        "psaAccountStatus": "Active - Tigerpaw One",
         "amount": 948,
         "closeDate": "2026-06-24",
         "owner": "Ingrid Beard",
@@ -772,6 +818,7 @@
     "rows": [
       {
         "account": "All Secure",
+        "psaAccountStatus": "Active - Unleashed",
         "opportunity": "",
         "amount": 1110,
         "closeDate": "2026-04-14",
@@ -787,6 +834,7 @@
       },
       {
         "account": "American Security Devices",
+        "psaAccountStatus": "Blank",
         "opportunity": "",
         "amount": 963,
         "closeDate": "2026-01-21",
@@ -802,6 +850,7 @@
       },
       {
         "account": "Ataraxis Solutions",
+        "psaAccountStatus": "Active - Web",
         "opportunity": "",
         "amount": 500,
         "closeDate": "2025-07-10",
@@ -817,6 +866,7 @@
       },
       {
         "account": "BankTec South",
+        "psaAccountStatus": "Blank",
         "opportunity": "",
         "amount": 6520,
         "closeDate": "2026-02-09",
@@ -832,6 +882,7 @@
       },
       {
         "account": "CL Sams",
+        "psaAccountStatus": "Blank",
         "opportunity": "",
         "amount": 1100,
         "closeDate": "2025-12-18",
@@ -847,6 +898,7 @@
       },
       {
         "account": "Fire Team Security, Inc.",
+        "psaAccountStatus": "Active - Tigerpaw One",
         "opportunity": "",
         "amount": 1288,
         "closeDate": "2026-04-09",
@@ -862,6 +914,7 @@
       },
       {
         "account": "IMC Facility Management",
+        "psaAccountStatus": "Active - Tigerpaw One",
         "opportunity": "",
         "amount": 1809,
         "closeDate": "2026-06-30",
@@ -877,6 +930,7 @@
       },
       {
         "account": "QuickCopper",
+        "psaAccountStatus": "Blank",
         "opportunity": "",
         "amount": 2200,
         "closeDate": "2026-03-17",
@@ -892,6 +946,7 @@
       },
       {
         "account": "Raven Tech LLC",
+        "psaAccountStatus": "Blank",
         "opportunity": "",
         "amount": 400,
         "closeDate": "2026-01-23",
@@ -907,6 +962,7 @@
       },
       {
         "account": "Sunrise Solutions Inc",
+        "psaAccountStatus": "Active - Tigerpaw One",
         "opportunity": "",
         "amount": 698.88,
         "closeDate": "2026-04-23",
@@ -922,6 +978,7 @@
       },
       {
         "account": "VanRan Communications Services",
+        "psaAccountStatus": "Blank",
         "opportunity": "",
         "amount": 2184,
         "closeDate": "2026-03-12",
@@ -942,6 +999,7 @@
     "rows": [
       {
         "account": "210 Solutions",
+        "psaAccountStatus": "Blank",
         "opportunity": "",
         "amount": 500,
         "closeDate": "2025-08-05",
@@ -957,6 +1015,7 @@
       },
       {
         "account": "A Sound Look",
+        "psaAccountStatus": "Blank",
         "opportunity": "",
         "amount": 600,
         "closeDate": "2025-05-19",
@@ -972,6 +1031,7 @@
       },
       {
         "account": "Acoma Lock and Security",
+        "psaAccountStatus": "Blank",
         "opportunity": "",
         "amount": 400,
         "closeDate": "2025-12-30",
@@ -987,6 +1047,7 @@
       },
       {
         "account": "CMJ/Securco",
+        "psaAccountStatus": "Blank",
         "opportunity": "",
         "amount": 1700,
         "closeDate": null,
@@ -1002,6 +1063,7 @@
       },
       {
         "account": "Davis AV",
+        "psaAccountStatus": "Blank",
         "opportunity": "",
         "amount": 560,
         "closeDate": "2024-12-30",
@@ -1017,6 +1079,7 @@
       },
       {
         "account": "Dearadh",
+        "psaAccountStatus": "Blank",
         "opportunity": "",
         "amount": 500,
         "closeDate": null,
@@ -1032,6 +1095,7 @@
       },
       {
         "account": "Eternal Networks",
+        "psaAccountStatus": "Blank",
         "opportunity": "",
         "amount": 770,
         "closeDate": "2025-06-26",
@@ -1047,6 +1111,7 @@
       },
       {
         "account": "Fits Technogloy",
+        "psaAccountStatus": "Blank",
         "opportunity": "",
         "amount": 640,
         "closeDate": null,
@@ -1062,6 +1127,7 @@
       },
       {
         "account": "Half Past Five Technologies",
+        "psaAccountStatus": "Blank",
         "opportunity": "",
         "amount": 500,
         "closeDate": null,
@@ -1077,6 +1143,7 @@
       },
       {
         "account": "High Country Workplace Technologies",
+        "psaAccountStatus": "Active - Tigerpaw One",
         "opportunity": "",
         "amount": 425,
         "closeDate": "2026-02-09",
@@ -1092,6 +1159,7 @@
       },
       {
         "account": "Hiscall",
+        "psaAccountStatus": "Blank",
         "opportunity": "",
         "amount": 3000,
         "closeDate": "2024-10-28",
@@ -1107,6 +1175,7 @@
       },
       {
         "account": "Network Enhancement Systems",
+        "psaAccountStatus": "Active - Unleashed",
         "opportunity": "",
         "amount": 920,
         "closeDate": "2026-06-17",
@@ -1122,6 +1191,7 @@
       },
       {
         "account": "Newport Network Solutions",
+        "psaAccountStatus": "Blank",
         "opportunity": "",
         "amount": 1105,
         "closeDate": "2025-05-30",
@@ -1137,6 +1207,7 @@
       },
       {
         "account": "Prestige Security Solutions",
+        "psaAccountStatus": "Blank",
         "opportunity": "",
         "amount": 630,
         "closeDate": null,
@@ -1152,6 +1223,7 @@
       },
       {
         "account": "Soundworks & Security",
+        "psaAccountStatus": "Blank",
         "opportunity": "",
         "amount": 690,
         "closeDate": "2025-01-28",
@@ -1167,6 +1239,7 @@
       },
       {
         "account": "Wired Media Solutions",
+        "psaAccountStatus": "Blank",
         "opportunity": "",
         "amount": 500,
         "closeDate": "2025-03-05",
@@ -1188,9 +1261,9 @@
       {
         "status": "Unknown",
         "accounts": 286,
-        "touchpoints": 19657,
-        "emailTouchpoints": 13136,
-        "phoneTouchpoints": 5913,
+        "touchpoints": 19668,
+        "emailTouchpoints": 13139,
+        "phoneTouchpoints": 5914,
         "latestTouchDate": "2026-09-08",
         "latestContactDate": "2026-09-08",
         "latestContactType": "phone",
@@ -1199,8 +1272,8 @@
       {
         "status": "Want to migrate / timeline unknown",
         "accounts": 95,
-        "touchpoints": 13555,
-        "emailTouchpoints": 10391,
+        "touchpoints": 13558,
+        "emailTouchpoints": 10394,
         "phoneTouchpoints": 2793,
         "latestTouchDate": "2026-09-08",
         "latestContactDate": "2026-09-08",
@@ -1210,24 +1283,24 @@
       {
         "status": "Do not want to migrate",
         "accounts": 73,
-        "touchpoints": 5966,
-        "emailTouchpoints": 4145,
+        "touchpoints": 5967,
+        "emailTouchpoints": 4146,
         "phoneTouchpoints": 1581,
-        "latestTouchDate": "2026-09-07",
-        "latestContactDate": "2026-09-07",
+        "latestTouchDate": "2026-09-08",
+        "latestContactDate": "2026-09-08",
         "latestContactType": "email",
         "latestCbrDate": "2026-08-31"
       },
       {
         "status": "Want to migrate asap",
         "accounts": 58,
-        "touchpoints": 5858,
-        "emailTouchpoints": 4340,
+        "touchpoints": 5861,
+        "emailTouchpoints": 4342,
         "phoneTouchpoints": 1235,
-        "latestTouchDate": "2026-09-04",
-        "latestContactDate": "2026-09-04",
-        "latestContactType": "phone",
-        "latestCbrDate": "2026-09-04"
+        "latestTouchDate": "2026-09-08",
+        "latestContactDate": "2026-09-08",
+        "latestContactType": "email",
+        "latestCbrDate": "2026-09-08"
       },
       {
         "status": "Inactive",
@@ -1303,13 +1376,25 @@
         "account": "Access 411",
         "status": "Want to migrate / timeline unknown",
         "owner": "Ingrid Beard",
-        "touchpoints": 109,
-        "emailTouchpoints": 83,
+        "touchpoints": 110,
+        "emailTouchpoints": 84,
         "phoneTouchpoints": 19,
         "lastTouch": "2026-09-08",
         "lastContact": "2026-09-08",
         "lastContactType": "email",
         "lastCbr": "2026-09-08"
+      },
+      {
+        "account": "Audio-Video Corporation",
+        "status": "Unknown",
+        "owner": "Gavin Aylward",
+        "touchpoints": 106,
+        "emailTouchpoints": 62,
+        "phoneTouchpoints": 39,
+        "lastTouch": "2026-09-08",
+        "lastContact": "2026-09-08",
+        "lastContactType": "email",
+        "lastCbr": "2026-09-03"
       },
       {
         "account": "Tidal Communications LLC",
@@ -1324,16 +1409,64 @@
         "lastCbr": "2026-09-08"
       },
       {
+        "account": "Audio Video Design",
+        "status": "Do not want to migrate",
+        "owner": "Blaine Villafuerte",
+        "touchpoints": 96,
+        "emailTouchpoints": 58,
+        "phoneTouchpoints": 35,
+        "lastTouch": "2026-09-08",
+        "lastContact": "2026-09-08",
+        "lastContactType": "email",
+        "lastCbr": "2026-06-29"
+      },
+      {
+        "account": "Southeastern TeleCommunications",
+        "status": "Want to migrate asap",
+        "owner": "",
+        "touchpoints": 95,
+        "emailTouchpoints": 72,
+        "phoneTouchpoints": 15,
+        "lastTouch": "2026-09-08",
+        "lastContact": "2026-09-08",
+        "lastContactType": "email",
+        "lastCbr": "2026-09-08"
+      },
+      {
+        "account": "Optivor Technologies",
+        "status": "Unknown",
+        "owner": "Gavin Aylward",
+        "touchpoints": 93,
+        "emailTouchpoints": 62,
+        "phoneTouchpoints": 28,
+        "lastTouch": "2026-09-08",
+        "lastContact": "2026-09-08",
+        "lastContactType": "email",
+        "lastCbr": "2026-09-08"
+      },
+      {
         "account": "PC Netsource",
         "status": "Want to migrate / timeline unknown",
         "owner": "Blaine Villafuerte",
-        "touchpoints": 66,
-        "emailTouchpoints": 51,
+        "touchpoints": 67,
+        "emailTouchpoints": 52,
         "phoneTouchpoints": 13,
         "lastTouch": "2026-09-08",
         "lastContact": "2026-09-08",
         "lastContactType": "email",
         "lastCbr": "2026-08-06"
+      },
+      {
+        "account": "Telephone Communications Inc",
+        "status": "Want to migrate / timeline unknown",
+        "owner": "Gavin Aylward",
+        "touchpoints": 65,
+        "emailTouchpoints": 36,
+        "phoneTouchpoints": 17,
+        "lastTouch": "2026-09-08",
+        "lastContact": "2026-09-08",
+        "lastContactType": "email",
+        "lastCbr": null
       },
       {
         "account": "Voxcom Solutions Inc",
@@ -1348,6 +1481,30 @@
         "lastCbr": "2026-06-03"
       },
       {
+        "account": "Genie Innovations, Inc.",
+        "status": "Unknown",
+        "owner": "Blaine Villafuerte",
+        "touchpoints": 31,
+        "emailTouchpoints": 5,
+        "phoneTouchpoints": 26,
+        "lastTouch": "2026-09-08",
+        "lastContact": "2026-09-08",
+        "lastContactType": "phone",
+        "lastCbr": "2026-05-08"
+      },
+      {
+        "account": "Phones Plus.biz",
+        "status": "Unknown",
+        "owner": "Drew Acorn",
+        "touchpoints": 24,
+        "emailTouchpoints": 8,
+        "phoneTouchpoints": 16,
+        "lastTouch": "2026-09-08",
+        "lastContact": "2026-09-08",
+        "lastContactType": "email",
+        "lastCbr": "2026-09-08"
+      },
+      {
         "account": "DCR-Nashville",
         "status": "Want to migrate / timeline unknown",
         "owner": "Blaine Villafuerte",
@@ -1358,6 +1515,78 @@
         "lastContact": "2026-09-07",
         "lastContactType": "email",
         "lastCbr": "2026-08-12"
+      },
+      {
+        "account": "Pathcom",
+        "status": "Unknown",
+        "owner": "Drew Acorn",
+        "touchpoints": 142,
+        "emailTouchpoints": 96,
+        "phoneTouchpoints": 42,
+        "lastTouch": "2026-09-07",
+        "lastContact": "2026-09-04",
+        "lastContactType": "email",
+        "lastCbr": "2026-09-07"
+      },
+      {
+        "account": "Executive Network Technologies Inc",
+        "status": "Unknown",
+        "owner": "Gavin Aylward",
+        "touchpoints": 137,
+        "emailTouchpoints": 105,
+        "phoneTouchpoints": 30,
+        "lastTouch": "2026-09-07",
+        "lastContact": "2026-09-04",
+        "lastContactType": "email",
+        "lastCbr": "2026-09-07"
+      },
+      {
+        "account": "Amtek Computer Services",
+        "status": "Unknown",
+        "owner": "Gavin Aylward",
+        "touchpoints": 90,
+        "emailTouchpoints": 60,
+        "phoneTouchpoints": 28,
+        "lastTouch": "2026-09-07",
+        "lastContact": "2026-09-03",
+        "lastContactType": "email",
+        "lastCbr": "2026-09-07"
+      },
+      {
+        "account": "i-2-i Technology",
+        "status": "Unknown",
+        "owner": "",
+        "touchpoints": 52,
+        "emailTouchpoints": 42,
+        "phoneTouchpoints": 6,
+        "lastTouch": "2026-09-07",
+        "lastContact": "2026-09-04",
+        "lastContactType": "email",
+        "lastCbr": "2026-09-07"
+      },
+      {
+        "account": "Gracon Services",
+        "status": "Unknown",
+        "owner": "Gavin Aylward",
+        "touchpoints": 45,
+        "emailTouchpoints": 26,
+        "phoneTouchpoints": 15,
+        "lastTouch": "2026-09-07",
+        "lastContact": "2026-09-04",
+        "lastContactType": "email",
+        "lastCbr": "2026-09-07"
+      },
+      {
+        "account": "Commworld Metro",
+        "status": "Unknown",
+        "owner": "Blaine Villafuerte",
+        "touchpoints": 35,
+        "emailTouchpoints": 19,
+        "phoneTouchpoints": 15,
+        "lastTouch": "2026-09-07",
+        "lastContact": "2026-09-04",
+        "lastContactType": "email",
+        "lastCbr": "2026-09-07"
       },
       {
         "account": "Dominion Lock And Security",
@@ -1382,6 +1611,18 @@
         "lastContact": "2026-09-07",
         "lastContactType": "email",
         "lastCbr": "2026-08-12"
+      },
+      {
+        "account": "James Teleco",
+        "status": "Unknown",
+        "owner": "Gavin Aylward",
+        "touchpoints": 30,
+        "emailTouchpoints": 20,
+        "phoneTouchpoints": 8,
+        "lastTouch": "2026-09-07",
+        "lastContact": "2026-09-04",
+        "lastContactType": "email",
+        "lastCbr": "2026-09-07"
       },
       {
         "account": "Quick Copper Communications",
@@ -1468,30 +1709,6 @@
         "lastCbr": "2025-07-23"
       },
       {
-        "account": "Pathcom",
-        "status": "Unknown",
-        "owner": "Drew Acorn",
-        "touchpoints": 141,
-        "emailTouchpoints": 96,
-        "phoneTouchpoints": 42,
-        "lastTouch": "2026-09-04",
-        "lastContact": "2026-09-04",
-        "lastContactType": "email",
-        "lastCbr": "2026-09-04"
-      },
-      {
-        "account": "Executive Network Technologies Inc",
-        "status": "Unknown",
-        "owner": "Gavin Aylward",
-        "touchpoints": 136,
-        "emailTouchpoints": 105,
-        "phoneTouchpoints": 30,
-        "lastTouch": "2026-09-04",
-        "lastContact": "2026-09-04",
-        "lastContactType": "email",
-        "lastCbr": "2026-09-04"
-      },
-      {
         "account": "ET&T Corporation",
         "status": "Unknown",
         "owner": "Ingrid Beard",
@@ -1516,30 +1733,6 @@
         "lastCbr": "2026-05-08"
       },
       {
-        "account": "Audio-Video Corporation",
-        "status": "Unknown",
-        "owner": "Gavin Aylward",
-        "touchpoints": 105,
-        "emailTouchpoints": 61,
-        "phoneTouchpoints": 39,
-        "lastTouch": "2026-09-04",
-        "lastContact": "2026-09-04",
-        "lastContactType": "email",
-        "lastCbr": "2026-09-03"
-      },
-      {
-        "account": "Southeastern TeleCommunications",
-        "status": "Want to migrate asap",
-        "owner": "",
-        "touchpoints": 92,
-        "emailTouchpoints": 70,
-        "phoneTouchpoints": 15,
-        "lastTouch": "2026-09-04",
-        "lastContact": "2026-09-04",
-        "lastContactType": "email",
-        "lastCbr": "2026-09-04"
-      },
-      {
         "account": "MDU Security Systems",
         "status": "Opent to Migrate - Missing features",
         "owner": "",
@@ -1562,30 +1755,6 @@
         "lastContact": "2026-09-04",
         "lastContactType": "phone",
         "lastCbr": "2026-07-15"
-      },
-      {
-        "account": "i-2-i Technology",
-        "status": "Unknown",
-        "owner": "",
-        "touchpoints": 51,
-        "emailTouchpoints": 42,
-        "phoneTouchpoints": 6,
-        "lastTouch": "2026-09-04",
-        "lastContact": "2026-09-04",
-        "lastContactType": "email",
-        "lastCbr": "2026-09-04"
-      },
-      {
-        "account": "Gracon Services",
-        "status": "Unknown",
-        "owner": "Gavin Aylward",
-        "touchpoints": 44,
-        "emailTouchpoints": 26,
-        "phoneTouchpoints": 15,
-        "lastTouch": "2026-09-04",
-        "lastContact": "2026-09-04",
-        "lastContactType": "email",
-        "lastCbr": "2026-09-04"
       },
       {
         "account": "Introtel Communications",
@@ -1624,30 +1793,6 @@
         "lastCbr": "2026-09-04"
       },
       {
-        "account": "Commworld Metro",
-        "status": "Unknown",
-        "owner": "Blaine Villafuerte",
-        "touchpoints": 34,
-        "emailTouchpoints": 19,
-        "phoneTouchpoints": 15,
-        "lastTouch": "2026-09-04",
-        "lastContact": "2026-09-04",
-        "lastContactType": "email",
-        "lastCbr": "2026-09-04"
-      },
-      {
-        "account": "James Teleco",
-        "status": "Unknown",
-        "owner": "Gavin Aylward",
-        "touchpoints": 29,
-        "emailTouchpoints": 20,
-        "phoneTouchpoints": 8,
-        "lastTouch": "2026-09-04",
-        "lastContact": "2026-09-04",
-        "lastContactType": "email",
-        "lastCbr": "2026-09-04"
-      },
-      {
         "account": "L & S Truck Service",
         "status": "Want to migrate asap",
         "owner": "Ingrid Beard",
@@ -1658,18 +1803,6 @@
         "lastContact": "2026-09-04",
         "lastContactType": "phone",
         "lastCbr": null
-      },
-      {
-        "account": "Phones Plus.biz",
-        "status": "Unknown",
-        "owner": "Drew Acorn",
-        "touchpoints": 23,
-        "emailTouchpoints": 7,
-        "phoneTouchpoints": 16,
-        "lastTouch": "2026-09-04",
-        "lastContact": "2026-09-04",
-        "lastContactType": "phone",
-        "lastCbr": "2026-06-08"
       },
       {
         "account": "Core3 Pty Ltd",
@@ -1814,66 +1947,6 @@
         "lastContact": "2026-09-03",
         "lastContactType": "phone",
         "lastCbr": "2024-08-16"
-      },
-      {
-        "account": "Amtek Computer Services",
-        "status": "Unknown",
-        "owner": "Gavin Aylward",
-        "touchpoints": 89,
-        "emailTouchpoints": 60,
-        "phoneTouchpoints": 28,
-        "lastTouch": "2026-09-03",
-        "lastContact": "2026-09-03",
-        "lastContactType": "email",
-        "lastCbr": "2026-09-03"
-      },
-      {
-        "account": "Velosity Electronics",
-        "status": "Unknown",
-        "owner": "Gavin Aylward",
-        "touchpoints": 63,
-        "emailTouchpoints": 28,
-        "phoneTouchpoints": 33,
-        "lastTouch": "2026-09-03",
-        "lastContact": "2026-09-03",
-        "lastContactType": "email",
-        "lastCbr": "2026-08-31"
-      },
-      {
-        "account": "Roger's Two Way Radio",
-        "status": "Want to migrate / timeline unknown",
-        "owner": "Blaine Villafuerte",
-        "touchpoints": 62,
-        "emailTouchpoints": 45,
-        "phoneTouchpoints": 17,
-        "lastTouch": "2026-09-03",
-        "lastContact": "2026-09-03",
-        "lastContactType": "email",
-        "lastCbr": "2026-09-03"
-      },
-      {
-        "account": "Technical Solutions",
-        "status": "Unknown",
-        "owner": "Blaine Villafuerte",
-        "touchpoints": 45,
-        "emailTouchpoints": 32,
-        "phoneTouchpoints": 11,
-        "lastTouch": "2026-09-03",
-        "lastContact": "2026-09-03",
-        "lastContactType": "email",
-        "lastCbr": "2026-08-31"
-      },
-      {
-        "account": "Dominion Design & Integration",
-        "status": "Unknown",
-        "owner": "Blaine Villafuerte",
-        "touchpoints": 37,
-        "emailTouchpoints": 24,
-        "phoneTouchpoints": 13,
-        "lastTouch": "2026-09-03",
-        "lastContact": "2026-09-03",
-        "lastContactType": "phone",
-        "lastCbr": "2026-09-03"
       }
     ]
   },
@@ -1888,7 +1961,7 @@
     "attendanceSource": null,
     "oppsFromRegisteredAccounts": 69,
     "wonOppsFromRegisteredAccounts": 21,
-    "cbrsSinceFirstWebinar": 195,
+    "cbrsSinceFirstWebinar": 202,
     "accountsWithCbrSinceFirstWebinar": 64,
     "latestCbrDate": "2026-09-08",
     "byEvent": [
@@ -1919,16 +1992,16 @@
     "migrationAccounts": 674,
     "accountsContactedEmailOrPhone": 672,
     "accountsUnreached": 2,
-    "totalTouchpoints": 71679,
-    "emailTouchpoints": 52507,
-    "phoneTouchpoints": 16973,
-    "otherTouchpoints": 2199,
+    "totalTouchpoints": 71706,
+    "emailTouchpoints": 52523,
+    "phoneTouchpoints": 16976,
+    "otherTouchpoints": 2207,
     "webinarExternalRegistrants": 377,
     "latestTouchDate": "2026-09-08",
     "medianLastTouchDate": "2026-08-14",
-    "accountsTouchedLast30Days": 379,
-    "accountsTouchedLast60Days": 540,
-    "accountsTouchedLast90Days": 562,
+    "accountsTouchedLast30Days": 381,
+    "accountsTouchedLast60Days": 541,
+    "accountsTouchedLast90Days": 563,
     "relatedMrr": null
   },
   "conversionStats": {
@@ -2455,11 +2528,11 @@
       "status": "Migration in progress",
       "psaAccountStatus": "Active - Tigerpaw One",
       "touchpoints": {
-        "email": 146,
+        "email": 147,
         "phone": 34,
         "other": 7,
-        "total": 187,
-        "lastTouch": "2026-09-04"
+        "total": 188,
+        "lastTouch": "2026-09-08"
       },
       "opportunities": [
         {
@@ -2705,10 +2778,10 @@
       "accountId": "0016O00003dmuJbQAI",
       "account": "Access 411",
       "mrr": null,
-      "email": 83,
+      "email": 84,
       "phone": 19,
       "other": 7,
-      "total": 109,
+      "total": 110,
       "webinarRegistrants": 1,
       "lastTouch": "2026-09-08",
       "lastContact": "2026-09-08",
@@ -3225,13 +3298,13 @@
       "mrr": null,
       "email": 60,
       "phone": 28,
-      "other": 1,
-      "total": 89,
+      "other": 2,
+      "total": 90,
       "webinarRegistrants": 0,
-      "lastTouch": "2026-09-03",
+      "lastTouch": "2026-09-07",
       "lastContact": "2026-09-03",
       "lastContactKind": "email",
-      "lastCbr": "2026-09-03"
+      "lastCbr": "2026-09-07"
     },
     {
       "accountId": "0016O00003dmuK2QAI",
@@ -3503,13 +3576,13 @@
       "accountId": "0016O00003dmuKNQAY",
       "account": "Audio Video Design",
       "mrr": null,
-      "email": 57,
+      "email": 58,
       "phone": 35,
       "other": 3,
-      "total": 95,
+      "total": 96,
       "webinarRegistrants": 0,
-      "lastTouch": "2026-08-28",
-      "lastContact": "2026-08-28",
+      "lastTouch": "2026-09-08",
+      "lastContact": "2026-09-08",
       "lastContactKind": "email",
       "lastCbr": "2026-06-29"
     },
@@ -3531,13 +3604,13 @@
       "accountId": "0016O00003dmuKPQAY",
       "account": "Audio-Video Corporation",
       "mrr": null,
-      "email": 61,
+      "email": 62,
       "phone": 39,
       "other": 5,
-      "total": 105,
+      "total": 106,
       "webinarRegistrants": 0,
-      "lastTouch": "2026-09-04",
-      "lastContact": "2026-09-04",
+      "lastTouch": "2026-09-08",
+      "lastContact": "2026-09-08",
       "lastContactKind": "email",
       "lastCbr": "2026-09-03"
     },
@@ -4595,14 +4668,14 @@
       "accountId": "0016O00003dmuLaQAI",
       "account": "Communication Service Solutions",
       "mrr": null,
-      "email": 320,
+      "email": 323,
       "phone": 36,
       "other": 5,
-      "total": 361,
+      "total": 364,
       "webinarRegistrants": 0,
-      "lastTouch": "2026-08-27",
-      "lastContact": "2026-08-27",
-      "lastContactKind": "phone",
+      "lastTouch": "2026-09-08",
+      "lastContact": "2026-09-08",
+      "lastContactKind": "email",
       "lastCbr": "2026-03-18"
     },
     {
@@ -4667,13 +4740,13 @@
       "mrr": null,
       "email": 19,
       "phone": 15,
-      "other": 0,
-      "total": 34,
+      "other": 1,
+      "total": 35,
       "webinarRegistrants": 0,
-      "lastTouch": "2026-09-04",
+      "lastTouch": "2026-09-07",
       "lastContact": "2026-09-04",
       "lastContactKind": "email",
-      "lastCbr": "2026-09-04"
+      "lastCbr": "2026-09-07"
     },
     {
       "accountId": "0016O00003dmuLfQAI",
@@ -5899,13 +5972,13 @@
       "mrr": null,
       "email": 105,
       "phone": 30,
-      "other": 1,
-      "total": 136,
+      "other": 2,
+      "total": 137,
       "webinarRegistrants": 0,
-      "lastTouch": "2026-09-04",
+      "lastTouch": "2026-09-07",
       "lastContact": "2026-09-04",
       "lastContactKind": "email",
-      "lastCbr": "2026-09-04"
+      "lastCbr": "2026-09-07"
     },
     {
       "accountId": "0016O00003dmuPIQAY",
@@ -6262,12 +6335,12 @@
       "account": "Genie Innovations, Inc.",
       "mrr": null,
       "email": 5,
-      "phone": 25,
+      "phone": 26,
       "other": 0,
-      "total": 30,
+      "total": 31,
       "webinarRegistrants": 0,
-      "lastTouch": "2026-06-02",
-      "lastContact": "2026-06-02",
+      "lastTouch": "2026-09-08",
+      "lastContact": "2026-09-08",
       "lastContactKind": "phone",
       "lastCbr": "2026-05-08"
     },
@@ -6375,13 +6448,13 @@
       "mrr": null,
       "email": 26,
       "phone": 15,
-      "other": 3,
-      "total": 44,
+      "other": 4,
+      "total": 45,
       "webinarRegistrants": 1,
-      "lastTouch": "2026-09-04",
+      "lastTouch": "2026-09-07",
       "lastContact": "2026-09-04",
       "lastContactKind": "email",
-      "lastCbr": "2026-09-04"
+      "lastCbr": "2026-09-07"
     },
     {
       "accountId": "0016O00003dmuPoQAI",
@@ -6823,13 +6896,13 @@
       "mrr": null,
       "email": 42,
       "phone": 6,
-      "other": 3,
-      "total": 51,
+      "other": 4,
+      "total": 52,
       "webinarRegistrants": 0,
-      "lastTouch": "2026-09-04",
+      "lastTouch": "2026-09-07",
       "lastContact": "2026-09-04",
       "lastContactKind": "email",
-      "lastCbr": "2026-09-04"
+      "lastCbr": "2026-09-07"
     },
     {
       "accountId": "0016O00003dmuQCQAY",
@@ -6961,13 +7034,13 @@
       "accountId": "0016O00003dmuQLQAY",
       "account": "IMC Facility Management",
       "mrr": null,
-      "email": 146,
+      "email": 147,
       "phone": 34,
       "other": 7,
-      "total": 187,
+      "total": 188,
       "webinarRegistrants": 1,
-      "lastTouch": "2026-09-04",
-      "lastContact": "2026-09-04",
+      "lastTouch": "2026-09-08",
+      "lastContact": "2026-09-08",
       "lastContactKind": "email",
       "lastCbr": "2025-09-16"
     },
@@ -7453,13 +7526,13 @@
       "mrr": null,
       "email": 20,
       "phone": 8,
-      "other": 1,
-      "total": 29,
+      "other": 2,
+      "total": 30,
       "webinarRegistrants": 0,
-      "lastTouch": "2026-09-04",
+      "lastTouch": "2026-09-07",
       "lastContact": "2026-09-04",
       "lastContactKind": "email",
-      "lastCbr": "2026-09-04"
+      "lastCbr": "2026-09-07"
     },
     {
       "accountId": "001PX000005OktGYAS",
@@ -7983,10 +8056,10 @@
       "accountId": "001PX00000STvpBYAT",
       "account": "Memory Lane Computers",
       "mrr": null,
-      "email": 85,
+      "email": 87,
       "phone": 20,
       "other": 1,
-      "total": 106,
+      "total": 108,
       "webinarRegistrants": 1,
       "lastTouch": "2026-09-08",
       "lastContact": "2026-09-08",
@@ -8753,13 +8826,13 @@
       "accountId": "0016O00003dmuUjQAI",
       "account": "Omidi Enterprises",
       "mrr": null,
-      "email": 129,
+      "email": 130,
       "phone": 28,
       "other": 0,
-      "total": 157,
+      "total": 158,
       "webinarRegistrants": 0,
-      "lastTouch": "2026-09-04",
-      "lastContact": "2026-09-04",
+      "lastTouch": "2026-09-08",
+      "lastContact": "2026-09-08",
       "lastContactKind": "email",
       "lastCbr": "2024-08-05"
     },
@@ -8809,15 +8882,15 @@
       "accountId": "0016O00003dmuUmQAI",
       "account": "Optivor Technologies",
       "mrr": null,
-      "email": 61,
+      "email": 62,
       "phone": 28,
       "other": 3,
-      "total": 92,
+      "total": 93,
       "webinarRegistrants": 0,
-      "lastTouch": "2026-09-02",
-      "lastContact": "2026-09-02",
+      "lastTouch": "2026-09-08",
+      "lastContact": "2026-09-08",
       "lastContactKind": "email",
-      "lastCbr": "2024-12-04"
+      "lastCbr": "2026-09-08"
     },
     {
       "accountId": "0016O00003dmuUnQAI",
@@ -8965,13 +9038,13 @@
       "mrr": null,
       "email": 96,
       "phone": 42,
-      "other": 3,
-      "total": 141,
+      "other": 4,
+      "total": 142,
       "webinarRegistrants": 1,
-      "lastTouch": "2026-09-04",
+      "lastTouch": "2026-09-07",
       "lastContact": "2026-09-04",
       "lastContactKind": "email",
-      "lastCbr": "2026-09-04"
+      "lastCbr": "2026-09-07"
     },
     {
       "accountId": "0016O00003dmuV0QAI",
@@ -9005,10 +9078,10 @@
       "accountId": "0016O00003dmuV1QAI",
       "account": "PC Netsource",
       "mrr": null,
-      "email": 51,
+      "email": 52,
       "phone": 13,
       "other": 2,
-      "total": 66,
+      "total": 67,
       "webinarRegistrants": 1,
       "lastTouch": "2026-09-08",
       "lastContact": "2026-09-08",
@@ -9159,15 +9232,15 @@
       "accountId": "0016O00003dmuV9QAI",
       "account": "Phones Plus.biz",
       "mrr": null,
-      "email": 7,
+      "email": 8,
       "phone": 16,
       "other": 0,
-      "total": 23,
+      "total": 24,
       "webinarRegistrants": 0,
-      "lastTouch": "2026-09-04",
-      "lastContact": "2026-09-04",
-      "lastContactKind": "phone",
-      "lastCbr": "2026-06-08"
+      "lastTouch": "2026-09-08",
+      "lastContact": "2026-09-08",
+      "lastContactKind": "email",
+      "lastCbr": "2026-09-08"
     },
     {
       "accountId": "0011C00002T6IlxQAF",
@@ -10307,15 +10380,15 @@
       "accountId": "0016O00003dmucjQAA",
       "account": "Southeastern TeleCommunications",
       "mrr": null,
-      "email": 70,
+      "email": 72,
       "phone": 15,
-      "other": 7,
-      "total": 92,
+      "other": 8,
+      "total": 95,
       "webinarRegistrants": 1,
-      "lastTouch": "2026-09-04",
-      "lastContact": "2026-09-04",
+      "lastTouch": "2026-09-08",
+      "lastContact": "2026-09-08",
       "lastContactKind": "email",
-      "lastCbr": "2026-09-04"
+      "lastCbr": "2026-09-08"
     },
     {
       "accountId": "0016O00003dmuYyQAI",
@@ -10839,13 +10912,13 @@
       "accountId": "0016O00003dmuZfQAI",
       "account": "Telephone Communications Inc",
       "mrr": null,
-      "email": 35,
+      "email": 36,
       "phone": 17,
       "other": 12,
-      "total": 64,
+      "total": 65,
       "webinarRegistrants": 1,
-      "lastTouch": "2026-07-29",
-      "lastContact": "2026-07-29",
+      "lastTouch": "2026-09-08",
+      "lastContact": "2026-09-08",
       "lastContactKind": "email",
       "lastCbr": null
     },
@@ -11344,12 +11417,12 @@
       "account": "Unique Communications",
       "mrr": null,
       "email": 30,
-      "phone": 25,
+      "phone": 27,
       "other": 1,
-      "total": 56,
+      "total": 58,
       "webinarRegistrants": 0,
-      "lastTouch": "2026-08-21",
-      "lastContact": "2026-08-21",
+      "lastTouch": "2026-09-08",
+      "lastContact": "2026-09-08",
       "lastContactKind": "phone",
       "lastCbr": "2026-08-21"
     },
