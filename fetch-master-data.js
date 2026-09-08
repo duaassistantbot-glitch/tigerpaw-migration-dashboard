@@ -205,25 +205,8 @@ function normalize(value) {
   return String(value || '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
 }
 
-const WEB_MIGRATION_STATUS_OVERRIDES = new Map([
-  ['All Secure Lock Service', 'Want to migrate / timeline unknown'],
-  ['American Security Devices', 'Want to migrate / timeline unknown'],
-  ['Arcomm Communications', 'Want to migrate / timeline unknown'],
-  ['Bank-Tec South', 'Want to migrate / timeline unknown'],
-  ['Centerpoint IT', 'Want to migrate / timeline unknown'],
-  ['Eastern DataComm', 'Want to migrate asap'],
-  ['ECI-Empire Communications', 'Want to migrate / timeline unknown'],
-  ['Fire Team Security, Inc', 'Want to migrate asap'],
-  ['Intelligent Power Solutions', 'Want to migrate asap'],
-  ['JCT Solutions', 'Want to migrate / timeline unknown'],
-  ['Protex Central', 'Want to migrate / timeline unknown'],
-  ['Rel Comm Inc', 'Want to migrate asap'],
-  ['Sunrise Solutions Inc', 'Want to migrate / timeline unknown'],
-  ['Xclutel', 'Want to migrate / timeline unknown']
-]);
-
 function webMigrationStatus(account) {
-  return WEB_MIGRATION_STATUS_OVERRIDES.get(account.Name) || clean(account.Web_Migration__c, 'Blank');
+  return clean(account.Web_Migration__c, 'Blank');
 }
 
 function roadmapMatcher(roadmapItems) {
