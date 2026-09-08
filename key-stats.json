@@ -1,11 +1,546 @@
 {
-  "generatedAt": "2026-09-08T01:41:04.623Z",
+  "generatedAt": "2026-09-08T01:54:15.547Z",
   "sourceGeneratedAt": "2026-09-07T22:27:09.402Z",
   "caveats": [
     "Notion PSA Onboarding Dashboard and Client Master/MRR databases were not accessible to the current integration at build time; CS graduation and account MRR are left as Notion-dependent until shared.",
     "Account contacted = Salesforce Task classified as email/phone on the Account or related Contacts, plus matched webinar registrant company as email-confirmed.",
     "Webinar attendance is not in the current webinar export; attendance remains null until an attendance/join-duration export is available."
   ],
+  "funnelStats": {
+    "webinarsRun": 3,
+    "cbrsSinceFirstWebinar": 193,
+    "accountsWithCbrSinceFirstWebinar": 64,
+    "contactedAccounts": 647,
+    "accountsWithOpps": 120,
+    "oppsCreated": 136,
+    "openOpps": 30,
+    "wonOpps": 45,
+    "activeConversions": 9,
+    "contactedNoOppAccounts": 527,
+    "latestTouchDate": "2026-09-07",
+    "firstWebinarDate": "2026-05-21T18:00:00Z"
+  },
+  "noOppGameplan": {
+    "accounts": 527,
+    "statusBreakdown": [
+      {
+        "status": "Unknown",
+        "accounts": 269,
+        "touchpoints": 18448,
+        "emailTouchpoints": 12319,
+        "phoneTouchpoints": 5540,
+        "latestTouchDate": "2026-09-07"
+      },
+      {
+        "status": "Want to migrate / timeline unknown",
+        "accounts": 93,
+        "touchpoints": 13532,
+        "emailTouchpoints": 10372,
+        "phoneTouchpoints": 2794,
+        "latestTouchDate": "2026-09-07"
+      },
+      {
+        "status": "Do not want to migrate",
+        "accounts": 71,
+        "touchpoints": 5614,
+        "emailTouchpoints": 3914,
+        "phoneTouchpoints": 1469,
+        "latestTouchDate": "2026-09-07"
+      },
+      {
+        "status": "Want to migrate asap",
+        "accounts": 57,
+        "touchpoints": 5778,
+        "emailTouchpoints": 4277,
+        "phoneTouchpoints": 1220,
+        "latestTouchDate": "2026-09-04"
+      },
+      {
+        "status": "Inactive",
+        "accounts": 28,
+        "touchpoints": 2828,
+        "emailTouchpoints": 2011,
+        "phoneTouchpoints": 738,
+        "latestTouchDate": "2026-09-01"
+      },
+      {
+        "status": "Opent to Migrate - Missing features",
+        "accounts": 4,
+        "touchpoints": 3982,
+        "emailTouchpoints": 3223,
+        "phoneTouchpoints": 726,
+        "latestTouchDate": "2026-09-04"
+      },
+      {
+        "status": "Migration in progress",
+        "accounts": 4,
+        "touchpoints": 1155,
+        "emailTouchpoints": 907,
+        "phoneTouchpoints": 219,
+        "latestTouchDate": "2026-09-03"
+      },
+      {
+        "status": "Migration Pending",
+        "accounts": 1,
+        "touchpoints": 87,
+        "emailTouchpoints": 73,
+        "phoneTouchpoints": 13,
+        "latestTouchDate": "2026-08-07"
+      }
+    ],
+    "sampleAccounts": [
+      {
+        "account": "DCR-Nashville",
+        "status": "Want to migrate / timeline unknown",
+        "owner": "Blaine Villafuerte",
+        "touchpoints": 143,
+        "emailTouchpoints": 105,
+        "phoneTouchpoints": 35,
+        "lastTouch": "2026-09-07"
+      },
+      {
+        "account": "Dominion Lock And Security",
+        "status": "Do not want to migrate",
+        "owner": "Ingrid Beard",
+        "touchpoints": 35,
+        "emailTouchpoints": 17,
+        "phoneTouchpoints": 16,
+        "lastTouch": "2026-09-07"
+      },
+      {
+        "account": "Secure Technologies",
+        "status": "Unknown",
+        "owner": "Blaine Villafuerte",
+        "touchpoints": 34,
+        "emailTouchpoints": 27,
+        "phoneTouchpoints": 6,
+        "lastTouch": "2026-09-07"
+      },
+      {
+        "account": "QCC",
+        "status": "Unknown",
+        "owner": "Blaine Villafuerte",
+        "touchpoints": 73,
+        "emailTouchpoints": 43,
+        "phoneTouchpoints": 30,
+        "lastTouch": "2026-09-05"
+      },
+      {
+        "account": "POPP Communications",
+        "status": "Unknown",
+        "owner": "Blaine Villafuerte",
+        "touchpoints": 517,
+        "emailTouchpoints": 377,
+        "phoneTouchpoints": 122,
+        "lastTouch": "2026-09-04"
+      },
+      {
+        "account": "Converged Networks",
+        "status": "Want to migrate / timeline unknown",
+        "owner": "",
+        "touchpoints": 414,
+        "emailTouchpoints": 306,
+        "phoneTouchpoints": 104,
+        "lastTouch": "2026-09-04"
+      },
+      {
+        "account": "Green Electronic Solutions",
+        "status": "Want to migrate / timeline unknown",
+        "owner": "Blaine Villafuerte",
+        "touchpoints": 332,
+        "emailTouchpoints": 220,
+        "phoneTouchpoints": 108,
+        "lastTouch": "2026-09-04"
+      },
+      {
+        "account": "Nightwatch Security & Telephone",
+        "status": "Want to migrate asap",
+        "owner": "",
+        "touchpoints": 268,
+        "emailTouchpoints": 210,
+        "phoneTouchpoints": 48,
+        "lastTouch": "2026-09-04"
+      },
+      {
+        "account": "ACS Fire & Security",
+        "status": "Want to migrate / timeline unknown",
+        "owner": "",
+        "touchpoints": 235,
+        "emailTouchpoints": 141,
+        "phoneTouchpoints": 91,
+        "lastTouch": "2026-09-04"
+      },
+      {
+        "account": "Gamut",
+        "status": "Want to migrate / timeline unknown",
+        "owner": "",
+        "touchpoints": 171,
+        "emailTouchpoints": 156,
+        "phoneTouchpoints": 2,
+        "lastTouch": "2026-09-04"
+      },
+      {
+        "account": "Grand Central Station Internet Services, Inc.",
+        "status": "Want to migrate / timeline unknown",
+        "owner": "Blaine Villafuerte",
+        "touchpoints": 156,
+        "emailTouchpoints": 138,
+        "phoneTouchpoints": 14,
+        "lastTouch": "2026-09-04"
+      },
+      {
+        "account": "Pathcom",
+        "status": "Unknown",
+        "owner": "Drew Acorn",
+        "touchpoints": 141,
+        "emailTouchpoints": 96,
+        "phoneTouchpoints": 42,
+        "lastTouch": "2026-09-04"
+      },
+      {
+        "account": "Executive Network Technologies Inc",
+        "status": "Unknown",
+        "owner": "Gavin Aylward",
+        "touchpoints": 136,
+        "emailTouchpoints": 105,
+        "phoneTouchpoints": 30,
+        "lastTouch": "2026-09-04"
+      },
+      {
+        "account": "ET&T Corporation",
+        "status": "Unknown",
+        "owner": "Ingrid Beard",
+        "touchpoints": 111,
+        "emailTouchpoints": 97,
+        "phoneTouchpoints": 14,
+        "lastTouch": "2026-09-04"
+      },
+      {
+        "account": "Access 411",
+        "status": "Want to migrate / timeline unknown",
+        "owner": "Ingrid Beard",
+        "touchpoints": 108,
+        "emailTouchpoints": 82,
+        "phoneTouchpoints": 19,
+        "lastTouch": "2026-09-04"
+      },
+      {
+        "account": "Infrastructure Technology Solutions",
+        "status": "Want to migrate asap",
+        "owner": "Gavin Aylward",
+        "touchpoints": 108,
+        "emailTouchpoints": 98,
+        "phoneTouchpoints": 7,
+        "lastTouch": "2026-09-04"
+      },
+      {
+        "account": "Audio-Video Corporation",
+        "status": "Unknown",
+        "owner": "Gavin Aylward",
+        "touchpoints": 105,
+        "emailTouchpoints": 61,
+        "phoneTouchpoints": 39,
+        "lastTouch": "2026-09-04"
+      },
+      {
+        "account": "JES and Sons 2-Way LLC",
+        "status": "Want to migrate / timeline unknown",
+        "owner": "",
+        "touchpoints": 98,
+        "emailTouchpoints": 55,
+        "phoneTouchpoints": 36,
+        "lastTouch": "2026-09-04"
+      },
+      {
+        "account": "Southeastern TeleCommunications",
+        "status": "Want to migrate asap",
+        "owner": "",
+        "touchpoints": 92,
+        "emailTouchpoints": 70,
+        "phoneTouchpoints": 15,
+        "lastTouch": "2026-09-04"
+      },
+      {
+        "account": "MDU Security Systems",
+        "status": "Opent to Migrate - Missing features",
+        "owner": "",
+        "touchpoints": 66,
+        "emailTouchpoints": 47,
+        "phoneTouchpoints": 19,
+        "lastTouch": "2026-09-04"
+      },
+      {
+        "account": "Doing Things Simply",
+        "status": "Want to migrate asap",
+        "owner": "",
+        "touchpoints": 59,
+        "emailTouchpoints": 46,
+        "phoneTouchpoints": 12,
+        "lastTouch": "2026-09-04"
+      },
+      {
+        "account": "Gracon Services",
+        "status": "Unknown",
+        "owner": "Gavin Aylward",
+        "touchpoints": 44,
+        "emailTouchpoints": 26,
+        "phoneTouchpoints": 15,
+        "lastTouch": "2026-09-04"
+      },
+      {
+        "account": "Introtel Communications",
+        "status": "Unknown",
+        "owner": "Blaine Villafuerte",
+        "touchpoints": 44,
+        "emailTouchpoints": 37,
+        "phoneTouchpoints": 6,
+        "lastTouch": "2026-09-04"
+      },
+      {
+        "account": "Managed Technology",
+        "status": "Unknown",
+        "owner": "Drew Acorn",
+        "touchpoints": 36,
+        "emailTouchpoints": 20,
+        "phoneTouchpoints": 15,
+        "lastTouch": "2026-09-04"
+      },
+      {
+        "account": "Aldeberan",
+        "status": "Want to migrate / timeline unknown",
+        "owner": "Blaine Villafuerte",
+        "touchpoints": 35,
+        "emailTouchpoints": 24,
+        "phoneTouchpoints": 1,
+        "lastTouch": "2026-09-04"
+      },
+      {
+        "account": "Commworld Metro",
+        "status": "Unknown",
+        "owner": "Blaine Villafuerte",
+        "touchpoints": 34,
+        "emailTouchpoints": 19,
+        "phoneTouchpoints": 15,
+        "lastTouch": "2026-09-04"
+      },
+      {
+        "account": "James Teleco",
+        "status": "Unknown",
+        "owner": "Gavin Aylward",
+        "touchpoints": 29,
+        "emailTouchpoints": 20,
+        "phoneTouchpoints": 8,
+        "lastTouch": "2026-09-04"
+      },
+      {
+        "account": "L & S Truck Service",
+        "status": "Want to migrate asap",
+        "owner": "Ingrid Beard",
+        "touchpoints": 25,
+        "emailTouchpoints": 14,
+        "phoneTouchpoints": 11,
+        "lastTouch": "2026-09-04"
+      },
+      {
+        "account": "Phones Plus.biz",
+        "status": "Unknown",
+        "owner": "Drew Acorn",
+        "touchpoints": 23,
+        "emailTouchpoints": 7,
+        "phoneTouchpoints": 16,
+        "lastTouch": "2026-09-04"
+      },
+      {
+        "account": "Core3 Pty Ltd",
+        "status": "Unknown",
+        "owner": "Blaine Villafuerte",
+        "touchpoints": 19,
+        "emailTouchpoints": 17,
+        "phoneTouchpoints": 2,
+        "lastTouch": "2026-09-04"
+      },
+      {
+        "account": "MNJ Technologies",
+        "status": "Opent to Migrate - Missing features",
+        "owner": "",
+        "touchpoints": 1042,
+        "emailTouchpoints": 679,
+        "phoneTouchpoints": 352,
+        "lastTouch": "2026-09-03"
+      },
+      {
+        "account": "Techmode",
+        "status": "Unknown",
+        "owner": "Gavin Aylward",
+        "touchpoints": 850,
+        "emailTouchpoints": 651,
+        "phoneTouchpoints": 186,
+        "lastTouch": "2026-09-03"
+      },
+      {
+        "account": "Centra IP Networks",
+        "status": "Migration in progress",
+        "owner": "Bryan Bettiol",
+        "touchpoints": 647,
+        "emailTouchpoints": 476,
+        "phoneTouchpoints": 159,
+        "lastTouch": "2026-09-03"
+      },
+      {
+        "account": "HyVee, Inc. dba A+ Communications & Security",
+        "status": "Want to migrate / timeline unknown",
+        "owner": "Ingrid Beard",
+        "touchpoints": 635,
+        "emailTouchpoints": 574,
+        "phoneTouchpoints": 51,
+        "lastTouch": "2026-09-03"
+      },
+      {
+        "account": "JCT Solutions",
+        "status": "Want to migrate / timeline unknown",
+        "owner": "",
+        "touchpoints": 200,
+        "emailTouchpoints": 161,
+        "phoneTouchpoints": 36,
+        "lastTouch": "2026-09-03"
+      },
+      {
+        "account": "Raven Tech LLC",
+        "status": "Migration in progress",
+        "owner": "",
+        "touchpoints": 183,
+        "emailTouchpoints": 144,
+        "phoneTouchpoints": 28,
+        "lastTouch": "2026-09-03"
+      },
+      {
+        "account": "Fusion Digital",
+        "status": "Want to migrate / timeline unknown",
+        "owner": "Gavin Aylward",
+        "touchpoints": 153,
+        "emailTouchpoints": 139,
+        "phoneTouchpoints": 13,
+        "lastTouch": "2026-09-03"
+      },
+      {
+        "account": "Executone Systems Co Of LA",
+        "status": "Unknown",
+        "owner": "Blaine Villafuerte",
+        "touchpoints": 147,
+        "emailTouchpoints": 119,
+        "phoneTouchpoints": 23,
+        "lastTouch": "2026-09-03"
+      },
+      {
+        "account": "Premier Communications",
+        "status": "Unknown",
+        "owner": "Gavin Aylward",
+        "touchpoints": 127,
+        "emailTouchpoints": 95,
+        "phoneTouchpoints": 29,
+        "lastTouch": "2026-09-03"
+      },
+      {
+        "account": "BestComm Networks",
+        "status": "Unknown",
+        "owner": "Ingrid Beard",
+        "touchpoints": 98,
+        "emailTouchpoints": 79,
+        "phoneTouchpoints": 15,
+        "lastTouch": "2026-09-03"
+      },
+      {
+        "account": "Optivor Technologies - Florida",
+        "status": "Want to migrate / timeline unknown",
+        "owner": "Ingrid Beard",
+        "touchpoints": 91,
+        "emailTouchpoints": 69,
+        "phoneTouchpoints": 21,
+        "lastTouch": "2026-09-03"
+      },
+      {
+        "account": "Amtek Computer Services",
+        "status": "Unknown",
+        "owner": "Gavin Aylward",
+        "touchpoints": 89,
+        "emailTouchpoints": 60,
+        "phoneTouchpoints": 28,
+        "lastTouch": "2026-09-03"
+      },
+      {
+        "account": "Velosity Electronics",
+        "status": "Unknown",
+        "owner": "Gavin Aylward",
+        "touchpoints": 63,
+        "emailTouchpoints": 28,
+        "phoneTouchpoints": 33,
+        "lastTouch": "2026-09-03"
+      },
+      {
+        "account": "Roger's Two Way Radio",
+        "status": "Want to migrate / timeline unknown",
+        "owner": "Blaine Villafuerte",
+        "touchpoints": 62,
+        "emailTouchpoints": 45,
+        "phoneTouchpoints": 17,
+        "lastTouch": "2026-09-03"
+      },
+      {
+        "account": "Technical Solutions",
+        "status": "Unknown",
+        "owner": "Blaine Villafuerte",
+        "touchpoints": 45,
+        "emailTouchpoints": 32,
+        "phoneTouchpoints": 11,
+        "lastTouch": "2026-09-03"
+      },
+      {
+        "account": "Dominion Design & Integration",
+        "status": "Unknown",
+        "owner": "Blaine Villafuerte",
+        "touchpoints": 37,
+        "emailTouchpoints": 24,
+        "phoneTouchpoints": 13,
+        "lastTouch": "2026-09-03"
+      },
+      {
+        "account": "ClearBearing",
+        "status": "Unknown",
+        "owner": "Gavin Aylward",
+        "touchpoints": 29,
+        "emailTouchpoints": 12,
+        "phoneTouchpoints": 16,
+        "lastTouch": "2026-09-03"
+      },
+      {
+        "account": "SoundTel",
+        "status": "Unknown",
+        "owner": "Gavin Aylward",
+        "touchpoints": 22,
+        "emailTouchpoints": 16,
+        "phoneTouchpoints": 6,
+        "lastTouch": "2026-09-03"
+      },
+      {
+        "account": "MAC'S HEATING",
+        "status": "Unknown",
+        "owner": "Blaine Villafuerte",
+        "touchpoints": 15,
+        "emailTouchpoints": 7,
+        "phoneTouchpoints": 8,
+        "lastTouch": "2026-09-03"
+      },
+      {
+        "account": "SkySwitch",
+        "status": "Opent to Migrate - Missing features",
+        "owner": "",
+        "touchpoints": 2788,
+        "emailTouchpoints": 2447,
+        "phoneTouchpoints": 321,
+        "lastTouch": "2026-09-02"
+      }
+    ]
+  },
   "webinarStats": {
     "webinarsRun": 3,
     "firstWebinarDate": "2026-05-21T18:00:00Z",

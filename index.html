@@ -46,8 +46,9 @@
   .impact-value { font-family: 'Montserrat', sans-serif; font-size: 24px; line-height: 1; font-weight: 800; color: #1D3756; }
   .impact-label { margin-top: 6px; color: #687789; font-size: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: .45px; line-height: 1.25; }
   .impact-sub { margin-top: 6px; color: #3d4d5c; font-size: 11px; line-height: 1.35; }
-  .webinar-events { border-top: 1px solid #DDE2E8; padding: 11px 14px; display: flex; flex-wrap: wrap; gap: 8px; background: #FFFFFF; }
+  .timeline-strip { border-top: 1px solid #DDE2E8; padding: 11px 14px; display: flex; flex-wrap: wrap; gap: 8px; background: #FFFFFF; }
   .event-pill { border: 1px solid #DDE2E8; border-radius: 999px; padding: 5px 9px; color: #1D3756; background: #EAF6F9; font-size: 11px; font-weight: 800; }
+  .gameplan-table td:first-child { font-weight: 800; color: #1D3756; }
   .active-list { margin: 0 0 18px; }
   .active-list table td, .active-list table th { font-size: 12px; }
   .label { font-size: 11px; text-transform: uppercase; letter-spacing: .6px; font-weight: 800; color: #FFFFFF; }
@@ -243,44 +244,66 @@
     </div>
   </section>
 
-  <section class="card active-list" aria-label="Webinar impact summary">
+  <section class="card active-list" aria-label="Migration funnel timeline">
     <div class="card-head">
-      <h2>Webinar Impact</h2>
-      <span>Registrants matched to migration accounts, then tied to SF outreach, opps, and CBR activity</span>
+      <h2>Migration Funnel Timeline</h2>
+      <span>Webinars, CBRs, and outreach → migration opp creation → open/won/active conversions</span>
     </div>
     <div class="impact-grid">
       <div class="impact-metric highlight">
-        <div class="impact-value" id="wi-webinars">--</div>
-        <div class="impact-label">Webinars run</div>
-        <div class="impact-sub" id="wi-registrants">Loading registrants...</div>
+        <div class="impact-value" id="fl-engaged">--</div>
+        <div class="impact-label">Webinars / CBRs / outreach</div>
+        <div class="impact-sub" id="fl-engaged-sub">Loading engagement...</div>
       </div>
       <div class="impact-metric">
-        <div class="impact-value" id="wi-accounts">--</div>
-        <div class="impact-label">Registered accounts</div>
-        <div class="impact-sub">Matched to migration account list</div>
+        <div class="impact-value" id="fl-opps-created">--</div>
+        <div class="impact-label">Opps created</div>
+        <div class="impact-sub" id="fl-opp-accounts">Migration opp accounts</div>
       </div>
       <div class="impact-metric highlight">
-        <div class="impact-value" id="wi-contacted">--</div>
-        <div class="impact-label">Already contacted</div>
-        <div class="impact-sub" id="wi-contacted-sub">SF task/webinar touchpoints</div>
+        <div class="impact-value" id="fl-open">--</div>
+        <div class="impact-label">Open opps</div>
+        <div class="impact-sub">Currently in pipeline</div>
       </div>
       <div class="impact-metric">
-        <div class="impact-value" id="wi-attended">Needs export</div>
-        <div class="impact-label">Attended</div>
-        <div class="impact-sub">Current export has registrants only</div>
+        <div class="impact-value" id="fl-won">--</div>
+        <div class="impact-label">Won</div>
+        <div class="impact-sub" id="fl-won-sub">Closed Won migrations</div>
       </div>
       <div class="impact-metric highlight">
-        <div class="impact-value" id="wi-opps">--</div>
-        <div class="impact-label">Got into opps</div>
-        <div class="impact-sub" id="wi-won-opps">Loading won opps...</div>
+        <div class="impact-value" id="fl-active">9</div>
+        <div class="impact-label">Active</div>
+        <div class="impact-sub">Hardcoded active conversion list</div>
       </div>
       <div class="impact-metric">
-        <div class="impact-value" id="wi-cbrs">--</div>
-        <div class="impact-label">CBRs since first webinar</div>
-        <div class="impact-sub" id="wi-cbr-accounts">Loading accounts...</div>
+        <div class="impact-value" id="fl-no-opp">--</div>
+        <div class="impact-label">Engaged, no opp yet</div>
+        <div class="impact-sub">Gameplan pool</div>
       </div>
     </div>
-    <div class="webinar-events" id="wi-events"></div>
+    <div class="timeline-strip" id="fl-detail"></div>
+  </section>
+
+  <section class="card active-list" aria-label="No opportunity gameplan breakdown">
+    <div class="card-head">
+      <h2>Gameplan Pool: Contacted Accounts Without Migration Opps</h2>
+      <span>Status breakdown for accounts reached but not yet converted into a Legacy Migration opportunity</span>
+    </div>
+    <table class="gameplan-table">
+      <thead>
+        <tr>
+          <th>Web Migration Status</th>
+          <th class="num-h">Accounts</th>
+          <th class="num-h">Touchpoints</th>
+          <th class="num-h">Email</th>
+          <th class="num-h">Phone</th>
+          <th>Latest Touch</th>
+        </tr>
+      </thead>
+      <tbody id="no-opp-status-table">
+        <tr><td colspan="6" class="empty">Loading gameplan breakdown...</td></tr>
+      </tbody>
+    </table>
   </section>
 
   <section class="card active-list" aria-label="Active conversions provided by Ardit">
@@ -798,7 +821,8 @@ function renderKeyStats(stats) {
   if (!stats) return;
   const c = stats.contactStats || {};
   const v = stats.conversionStats || {};
-  const w = stats.webinarStats || {};
+  const f = stats.funnelStats || {};
+  const gp = stats.noOppGameplan || {};
   document.getElementById('ks-contacted').textContent = fmt.format(c.accountsContactedEmailOrPhone || 0);
   document.getElementById('ks-contacted-sub').textContent = `${fmt.format(c.emailTouchpoints || 0)} email + ${fmt.format(c.phoneTouchpoints || 0)} phone touchpoints`;
   document.getElementById('ks-active').textContent = fmt.format(v.activeConversionsProvided || 9);
@@ -809,17 +833,30 @@ function renderKeyStats(stats) {
   document.getElementById('ks-sold').textContent = fmt.format(v.soldConversions || 0);
   document.getElementById('ks-sold-sub').textContent = `${money.format(v.soldConversionMrr || 0)} sold migration MRR tracked in SF opps`;
   document.getElementById('ks-cs').textContent = v.graduatedToCs == null ? 'Needs Notion' : fmt.format(v.graduatedToCs);
-  document.getElementById('wi-webinars').textContent = fmt.format(w.webinarsRun || 0);
-  document.getElementById('wi-registrants').textContent = `${fmt.format(w.totalExternalRegistrants || 0)} external registrants`;
-  document.getElementById('wi-accounts').textContent = fmt.format(w.registeredAccountsMatchedToMigrationAccounts || 0);
-  document.getElementById('wi-contacted').textContent = fmt.format(w.registeredAccountsPreviouslyContacted || 0);
-  document.getElementById('wi-contacted-sub').textContent = `of ${fmt.format(w.registeredAccountsMatchedToMigrationAccounts || 0)} matched registered accounts`;
-  document.getElementById('wi-attended').textContent = w.attendedAccounts == null ? 'Needs export' : fmt.format(w.attendedAccounts);
-  document.getElementById('wi-opps').textContent = fmt.format(w.oppsFromRegisteredAccounts || 0);
-  document.getElementById('wi-won-opps').textContent = `${fmt.format(w.wonOppsFromRegisteredAccounts || 0)} won from registered accounts`;
-  document.getElementById('wi-cbrs').textContent = fmt.format(w.cbrsSinceFirstWebinar || 0);
-  document.getElementById('wi-cbr-accounts').textContent = `${fmt.format(w.accountsWithCbrSinceFirstWebinar || 0)} accounts • latest ${w.latestCbrDate ? formatDate(w.latestCbrDate) : '--'}`;
-  document.getElementById('wi-events').innerHTML = (w.byEvent || []).map(event => `<span class="event-pill">${esc(event.title || event.key)}: ${fmt.format(event.externalRegistrants || 0)} regs / ${fmt.format(event.uniqueAccounts || 0)} accounts</span>`).join('');
+  document.getElementById('fl-engaged').textContent = fmt.format(f.contactedAccounts || c.accountsContactedEmailOrPhone || 0);
+  document.getElementById('fl-engaged-sub').textContent = `${fmt.format(f.webinarsRun || 0)} webinars • ${fmt.format(f.cbrsSinceFirstWebinar || 0)} CBRs • latest touch ${f.latestTouchDate ? formatDate(f.latestTouchDate) : '--'}`;
+  document.getElementById('fl-opps-created').textContent = fmt.format(f.oppsCreated || 0);
+  document.getElementById('fl-opp-accounts').textContent = `${fmt.format(f.accountsWithOpps || 0)} accounts with migration opps`;
+  document.getElementById('fl-open').textContent = fmt.format(f.openOpps || 0);
+  document.getElementById('fl-won').textContent = fmt.format(f.wonOpps || 0);
+  document.getElementById('fl-won-sub').textContent = `${money.format(v.soldConversionMrr || 0)} sold migration MRR tracked in SF`;
+  document.getElementById('fl-active').textContent = fmt.format(f.activeConversions || v.activeConversionsProvided || 9);
+  document.getElementById('fl-no-opp').textContent = fmt.format(f.contactedNoOppAccounts || gp.accounts || 0);
+  document.getElementById('fl-detail').innerHTML = [
+    `${fmt.format(c.emailTouchpoints || 0)} emails`,
+    `${fmt.format(c.phoneTouchpoints || 0)} calls`,
+    `${fmt.format(f.accountsWithCbrSinceFirstWebinar || 0)} accounts with CBRs`,
+    `${fmt.format(c.accountsTouchedLast30Days || 0)} touched in last 30 days`
+  ].map(x => `<span class="event-pill">${esc(x)}</span>`).join('');
+  document.getElementById('no-opp-status-table').innerHTML = (gp.statusBreakdown || []).map(row => `
+    <tr>
+      <td>${esc(row.status)}</td>
+      <td class="num-c">${fmt.format(row.accounts || 0)}</td>
+      <td class="num-c">${fmt.format(row.touchpoints || 0)}</td>
+      <td class="num-c">${fmt.format(row.emailTouchpoints || 0)}</td>
+      <td class="num-c">${fmt.format(row.phoneTouchpoints || 0)}</td>
+      <td>${row.latestTouchDate ? formatDate(row.latestTouchDate) : '--'}</td>
+    </tr>`).join('') || '<tr><td colspan="6" class="empty">No contacted/no-opp accounts found.</td></tr>';
   const activeRows = stats.activeConversions || [];
   document.getElementById('active-conversions-table').innerHTML = activeRows.map(row => {
     const opp = (row.opportunities || [])[0] || {};

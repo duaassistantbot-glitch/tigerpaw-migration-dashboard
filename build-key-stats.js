@@ -179,6 +179,23 @@ async function main() {
     return { name, sfAccount: account?.name || null, status: account?.webMigrationStatus || null, psaAccountStatus: account?.psaAccountStatus || null, touchpoints: touch ? { email: touch.email, phone: touch.phone, other: touch.other, total: touch.total, lastTouch: touch.lastTouch } : null, opportunities: opps.map(o => ({ name: o.name, stage: o.stage, amount: o.amount, closeDate: o.closeDate })) };
   });
 
+  const oppAccountIds = new Set((master.opportunities || []).map(o => o.accountId).filter(Boolean));
+  const openOpps = (master.opportunities || []).filter(o => !o.isClosed && o.stage !== 'Closed Lost' && !(o.isWon || o.stage === 'Closed Won'));
+  const contactedNoOppAccounts = contacted
+    .filter(x => !oppAccountIds.has(x.accountId))
+    .map(x => ({ ...x, accountRecord: accountById[x.accountId] }))
+    .sort((a,b) => String(b.lastTouch || '').localeCompare(String(a.lastTouch || '')) || b.total - a.total);
+  const contactedNoOppStatusBreakdown = Object.values(contactedNoOppAccounts.reduce((acc, x) => {
+    const status = x.accountRecord?.webMigrationStatus || 'Unknown';
+    if (!acc[status]) acc[status] = { status, accounts: 0, touchpoints: 0, emailTouchpoints: 0, phoneTouchpoints: 0, latestTouchDate: null };
+    acc[status].accounts++;
+    acc[status].touchpoints += x.total || 0;
+    acc[status].emailTouchpoints += x.email || 0;
+    acc[status].phoneTouchpoints += x.phone || 0;
+    if (x.lastTouch && (!acc[status].latestTouchDate || x.lastTouch > acc[status].latestTouchDate)) acc[status].latestTouchDate = x.lastTouch;
+    return acc;
+  }, {})).sort((a,b) => b.accounts - a.accounts);
+
   const output = {
     generatedAt: new Date().toISOString(),
     sourceGeneratedAt: master.generatedAt,
@@ -187,6 +204,33 @@ async function main() {
       'Account contacted = Salesforce Task classified as email/phone on the Account or related Contacts, plus matched webinar registrant company as email-confirmed.',
       'Webinar attendance is not in the current webinar export; attendance remains null until an attendance/join-duration export is available.'
     ],
+    funnelStats: {
+      webinarsRun: webinarEvents.length,
+      cbrsSinceFirstWebinar: cbrTaskIds.size,
+      accountsWithCbrSinceFirstWebinar: cbrAccountIds.size,
+      contactedAccounts: contacted.length,
+      accountsWithOpps: oppAccountIds.size,
+      oppsCreated: (master.opportunities || []).length,
+      openOpps: openOpps.length,
+      wonOpps: soldOpps.length,
+      activeConversions: ACTIVE_CONVERSIONS.length,
+      contactedNoOppAccounts: contactedNoOppAccounts.length,
+      latestTouchDate,
+      firstWebinarDate
+    },
+    noOppGameplan: {
+      accounts: contactedNoOppAccounts.length,
+      statusBreakdown: contactedNoOppStatusBreakdown,
+      sampleAccounts: contactedNoOppAccounts.slice(0, 50).map(x => ({
+        account: x.account,
+        status: x.accountRecord?.webMigrationStatus || 'Unknown',
+        owner: x.accountRecord?.owner || '',
+        touchpoints: x.total,
+        emailTouchpoints: x.email,
+        phoneTouchpoints: x.phone,
+        lastTouch: x.lastTouch
+      }))
+    },
     webinarStats: {
       webinarsRun: webinarEvents.length,
       firstWebinarDate,
