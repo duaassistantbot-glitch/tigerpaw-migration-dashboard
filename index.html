@@ -40,7 +40,7 @@
   .recency-card.green { background: #EAF7E6; border-left-color: #6EBE4F; }
   .recency-value { font-family: 'Montserrat', sans-serif; font-size: 22px; font-weight: 800; color: #1D3756; }
   .recency-label { margin-top: 4px; font-size: 11px; font-weight: 800; color: #3d4d5c; text-transform: uppercase; letter-spacing: .4px; }
-  .impact-grid { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 12px; padding: 14px; background: #FFFFFF; }
+  .impact-grid { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 12px; padding: 14px; background: #FFFFFF; }
   .impact-metric { border: 1px solid #DDE2E8; border-radius: 8px; padding: 13px; background: #F5F7FA; }
   .impact-metric.highlight { background: #EAF7E6; border-color: #CFE8C6; }
   .impact-value { font-family: 'Montserrat', sans-serif; font-size: 24px; line-height: 1; font-weight: 800; color: #1D3756; }
@@ -269,6 +269,11 @@
         <div class="impact-value"><button id="fl-won" type="button" onclick="openOpps('Won Legacy Migration Opportunities', wonMigrationOppRows())">--</button></div>
         <div class="impact-label">Won</div>
         <div class="impact-sub" id="fl-won-sub">Closed Won migrations</div>
+      </div>
+      <div class="impact-metric highlight">
+        <div class="impact-value"><button id="fl-onboarding" type="button" onclick="openWonOnboardingRows()">--</button></div>
+        <div class="impact-label">Onboarding</div>
+        <div class="impact-sub">Closed Won currently onboarding</div>
       </div>
       <div class="impact-metric highlight">
         <div class="impact-value"><button id="fl-active" type="button" onclick="openAccounts('Graduated Accounts', activeConversionAccountRows())">9</button></div>
@@ -646,6 +651,31 @@ function openOpps(title, rows) {
   renderDrilldownRows();
 }
 
+function openOnboardingRows(title, rows) {
+  DRILLDOWN = { type: 'onboarding', rows: rows || [], title };
+  document.getElementById('drill-title').textContent = title;
+  document.getElementById('drill-search').value = '';
+  document.getElementById('drill-head').innerHTML = `
+    <tr>
+      <th>Account</th>
+      <th>Onboarding Status</th>
+      <th>Onboarding Bucket</th>
+      <th>Onboarding Owner</th>
+      <th>Sales Rep</th>
+      <th>Forecasted Graduation</th>
+      <th class="num-h">MRR</th>
+      <th>Closed Won Date</th>
+    </tr>`;
+  document.getElementById('drill-modal').classList.add('open');
+  renderDrilldownRows();
+}
+
+function openWonOnboardingRows(status = null) {
+  if (!KEY_STATS) return;
+  const rows = (KEY_STATS.wonOnboardingStats?.rows || []).filter(row => !status || row.onboardingStatus === status);
+  openOnboardingRows(status ? `Closed Won Currently Onboarding - ${status}` : 'Closed Won Currently Onboarding', rows);
+}
+
 function renderDrilldownRows() {
   const search = document.getElementById('drill-search').value.trim().toLowerCase();
   const rows = DRILLDOWN.rows.filter(row => Object.values(row).join(' ').toLowerCase().includes(search));
@@ -663,6 +693,21 @@ function renderDrilldownRows() {
         <td><span class="pill">${esc(psaAccountStatus(account))}</span></td>
         <td>${esc(account.type || '')}</td>
         <td>${esc(account.owner || '')}</td>
+      </tr>`).join('');
+    return;
+  }
+
+  if (DRILLDOWN.type === 'onboarding') {
+    body.innerHTML = rows.map(row => `
+      <tr>
+        <td><strong>${esc(row.account)}</strong><br><span class="key-stat-sub">${esc(row.opportunity || '')}</span></td>
+        <td><span class="pill">${esc(row.onboardingStatus || 'Unknown')}</span></td>
+        <td>${esc(row.onboardingBucket || '')}</td>
+        <td>${esc(row.onboardingOwner || '')}</td>
+        <td>${esc(row.salesRep || '')}</td>
+        <td>${row.forecastedGraduationDate ? formatDate(row.forecastedGraduationDate) : '--'}</td>
+        <td class="num-c">${money.format(row.amount || 0)}</td>
+        <td>${row.closeDate ? formatDate(row.closeDate) : '--'}</td>
       </tr>`).join('');
     return;
   }
@@ -879,6 +924,7 @@ function renderKeyStats(stats) {
   document.getElementById('fl-open').textContent = fmt.format(f.openOpps || 0);
   document.getElementById('fl-won').textContent = fmt.format(f.wonOpps || 0);
   document.getElementById('fl-won-sub').textContent = `${money.format(v.soldConversionMrr || 0)} sold migration MRR tracked in SF`;
+  document.getElementById('fl-onboarding').textContent = fmt.format(f.currentlyOnboardingWonOpps || stats.wonOnboardingStats?.count || 0);
   document.getElementById('fl-active').textContent = fmt.format(f.activeConversions || v.activeConversionsProvided || 9);
   document.getElementById('fl-no-opp').textContent = fmt.format(f.contactedNoOppAccounts || gp.accounts || 0);
   document.getElementById('fl-detail').innerHTML = [

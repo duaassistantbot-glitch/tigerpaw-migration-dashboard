@@ -68,6 +68,42 @@ const q = s => `'${String(s).replace(/'/g, "\\'")}'`;
 const norm = s => String(s || '').toLowerCase().replace(/&/g,'and').replace(/[^a-z0-9]+/g,' ').trim();
 const money = n => Math.round((Number(n)||0)*100)/100;
 const daysBetween = (a, b) => Math.floor((a - b) / 86400000);
+const compact = s => norm(s).replace(/\s+/g, '');
+const STOP_TOKENS = new Set('communications communication telecom telecommunications technologies technology systems system inc llc ltd co corp corporation service services solutions security group company the and of'.split(' '));
+function meaningfulTokens(value) {
+  return norm(value).split(' ').filter(token => token && !STOP_TOKENS.has(token));
+}
+function isLikelySameCompany(a, b) {
+  const na = norm(a), nb = norm(b);
+  if (!na || !nb) return false;
+  if (na === nb || compact(a) === compact(b)) return true;
+  const at = meaningfulTokens(a);
+  const bt = meaningfulTokens(b);
+  if (!at.length || !bt.length) return false;
+  const aSet = new Set(at), bSet = new Set(bt);
+  const intersection = [...aSet].filter(token => bSet.has(token));
+  const smaller = at.length <= bt.length ? at : bt;
+  const smallerIsSubset = smaller.length >= 2 && smaller.every(token => (at.length <= bt.length ? bSet : aSet).has(token));
+  const unionSize = new Set([...at, ...bt]).size;
+  const jaccard = unionSize ? intersection.length / unionSize : 0;
+  return smallerIsSubset || (intersection.length >= 2 && jaccard >= 0.67);
+}
+function bucketLabel(bucket) {
+  return ({ activeClients: 'Actively Onboarding', onHoldClients: 'On Hold', rtsClients: 'RTS' })[bucket] || bucket;
+}
+async function fetchOnboardingDashboard() {
+  try {
+    const result = await requestJson({
+      hostname: 'green-river-03f870c10.4.azurestaticapps.net',
+      path: '/api/dashboard?lob=psa',
+      headers: { Accept: 'application/json' }
+    });
+    return result || {};
+  } catch (err) {
+    console.warn(`Unable to fetch onboarding dashboard: ${err.message}`);
+    return null;
+  }
+}
 function isCbrTask(t) {
   const hay = [t.Subject, t.Type, t.TaskSubtype, t.CallDisposition, t.Call_Disposition2__c, t.Description].filter(Boolean).join(' ').toLowerCase();
   return /\bcbr\b|client business review|business review/.test(hay);
@@ -166,6 +202,44 @@ async function main() {
   const sortedTouchDates = contactedWithDates.map(x => x.lastTouch).sort();
   const medianLastTouchDate = sortedTouchDates.length ? sortedTouchDates[Math.floor(sortedTouchDates.length / 2)] : null;
   const soldOpps = (master.opportunities || []).filter(o => o.isWon || o.stage === 'Closed Won');
+
+  console.log('Fetching PSA onboarding dashboard for Tigerpaw status match...');
+  const onboardingDashboard = await fetchOnboardingDashboard();
+  const onboardingBuckets = ['activeClients', 'onHoldClients', 'rtsClients'];
+  const tigerpawOnboardingClients = onboardingDashboard ? onboardingBuckets.flatMap(bucket =>
+    (onboardingDashboard[bucket] || [])
+      .filter(client => ['yes', 'true', '1'].includes(String(client.existingTigerpaw || '').trim().toLowerCase()))
+      .map(client => ({ ...client, onboardingBucket: bucketLabel(bucket) }))
+  ) : [];
+  const matchedOnboardingClientIds = new Set();
+  const wonCurrentlyOnboarding = soldOpps.flatMap(opp => {
+    const client = tigerpawOnboardingClients.find(client => !matchedOnboardingClientIds.has(client.id) && isLikelySameCompany(opp.account, client.name));
+    if (!client) return [];
+    matchedOnboardingClientIds.add(client.id);
+    return [{
+      account: opp.account,
+      opportunity: opp.name,
+      amount: opp.amount,
+      closeDate: opp.closeDate,
+      owner: opp.owner,
+      onboardingName: client.name,
+      onboardingStatus: client.status || 'Unknown',
+      onboardingBucket: client.onboardingBucket,
+      onboardingOwner: client.owner || client.projectManager || client.solutionsAnalyst || '',
+      salesRep: client.salesRep || '',
+      forecastedGraduationDate: client.forecastedGraduationDate || client.currentGraduationDate || null,
+      startKoDate: client.startKoDate || null,
+      notionUrl: client.notionUrl || ''
+    }];
+  });
+  const onboardingStatusBreakdown = Object.values(wonCurrentlyOnboarding.reduce((acc, row) => {
+    const status = row.onboardingStatus || 'Unknown';
+    if (!acc[status]) acc[status] = { status, count: 0, rows: [] };
+    acc[status].count++;
+    acc[status].rows.push(row);
+    return acc;
+  }, {})).sort((a,b) => b.count - a.count || a.status.localeCompare(b.status));
+
   const activeNorm = new Set(ACTIVE_CONVERSIONS.map(norm));
   const fuzzyMatch = (source, target) => {
     const s = norm(source), t = norm(target);
@@ -223,10 +297,16 @@ async function main() {
       oppsCreated: (master.opportunities || []).length,
       openOpps: openOpps.length,
       wonOpps: soldOpps.length,
+      currentlyOnboardingWonOpps: wonCurrentlyOnboarding.length,
       activeConversions: ACTIVE_CONVERSIONS.length,
       contactedNoOppAccounts: contactedNoOppAccounts.length,
       latestTouchDate,
       firstWebinarDate
+    },
+    wonOnboardingStats: {
+      count: wonCurrentlyOnboarding.length,
+      statusBreakdown: onboardingStatusBreakdown,
+      rows: wonCurrentlyOnboarding
     },
     noOppGameplan: {
       accounts: contactedNoOppAccounts.length,
