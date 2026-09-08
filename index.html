@@ -30,6 +30,7 @@
   .key-stat-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; margin-bottom: 18px; }
   .key-stat-card { background: #FFFFFF; border: 1px solid #DDE2E8; border-radius: 8px; padding: 16px; border-top: 4px solid #2399B5; }
   .key-stat-card.green { border-top-color: #6EBE4F; }
+  .key-stat-card.no-accent { border-top-color: transparent; }
   .key-stat-label { font-size: 10px; text-transform: uppercase; letter-spacing: .55px; font-weight: 800; color: #687789; }
   .key-stat-value { margin-top: 7px; font-family: 'Montserrat', sans-serif; font-size: 26px; line-height: 1; font-weight: 800; color: #1D3756; }
   .key-stat-sub { margin-top: 7px; color: #687789; font-size: 11px; line-height: 1.35; }
@@ -194,12 +195,12 @@
 
   <div class="section-title">Executive Key Statistics</div>
   <section class="key-stat-grid" aria-label="Tigerpaw migration key statistics">
-    <div class="key-stat-card">
+    <div class="key-stat-card no-accent">
       <div class="key-stat-label">Companies contacted</div>
       <div class="key-stat-value" id="ks-contacted">--</div>
       <div class="key-stat-sub" id="ks-contacted-sub">Loading touchpoints...</div>
     </div>
-    <div class="key-stat-card green">
+    <div class="key-stat-card green no-accent">
       <div class="key-stat-label">Active conversions</div>
       <div class="key-stat-value" id="ks-active">9</div>
       <div class="key-stat-sub">Hardcoded from Ardit's active list</div>
