@@ -90,7 +90,24 @@ function isLikelySameCompany(a, b) {
   return smallerIsSubset || (intersection.length >= 2 && jaccard >= 0.67);
 }
 function bucketLabel(bucket) {
-  return ({ activeClients: 'Actively Onboarding', onHoldClients: 'On Hold', rtsClients: 'RTS' })[bucket] || bucket;
+  return ({ activeClients: 'Actively Onboarding', onHoldClients: 'On Hold', rtsClients: 'RTS', canceledClients: 'Canceled' })[bucket] || bucket;
+}
+function onboardingClientRow(client, bucket, statusFallback = 'Unknown') {
+  return {
+    account: client.name,
+    opportunity: '',
+    amount: client.mrru || 0,
+    closeDate: client.dateSold || null,
+    owner: '',
+    onboardingName: client.name,
+    onboardingStatus: client.status || statusFallback,
+    onboardingBucket: bucket,
+    onboardingOwner: client.owner || client.projectManager || client.solutionsAnalyst || '',
+    salesRep: client.salesRep || '',
+    forecastedGraduationDate: client.actualGraduationDate || client.currentGraduationDate || client.forecastedGraduationDate || null,
+    startKoDate: client.startKoDate || null,
+    notionUrl: client.notionUrl || ''
+  };
 }
 async function fetchOnboardingDashboard() {
   try {
@@ -243,21 +260,10 @@ async function main() {
   const tigerpawGraduatedClients = onboardingDashboard ? (onboardingDashboard.graduatedClients || [])
     .filter(client => ['yes', 'true', '1'].includes(String(client.existingTigerpaw || '').trim().toLowerCase()))
     .filter(client => !GRADUATED_EXCLUDE.has(norm(client.name)))
-    .map(client => ({
-      account: client.name,
-      opportunity: '',
-      amount: client.mrru || 0,
-      closeDate: client.dateSold || null,
-      owner: '',
-      onboardingName: client.name,
-      onboardingStatus: client.status || 'Graduated',
-      onboardingBucket: 'Graduated',
-      onboardingOwner: client.owner || client.projectManager || client.solutionsAnalyst || '',
-      salesRep: client.salesRep || '',
-      forecastedGraduationDate: client.actualGraduationDate || client.currentGraduationDate || client.forecastedGraduationDate || null,
-      startKoDate: client.startKoDate || null,
-      notionUrl: client.notionUrl || ''
-    })) : [];
+    .map(client => onboardingClientRow(client, 'Graduated', 'Graduated')) : [];
+  const tigerpawCanceledClients = onboardingDashboard ? (onboardingDashboard.canceledClients || [])
+    .filter(client => ['yes', 'true', '1'].includes(String(client.existingTigerpaw || '').trim().toLowerCase()))
+    .map(client => onboardingClientRow(client, 'Canceled', 'Canceled')) : [];
 
   const activeNorm = new Set(ACTIVE_CONVERSIONS.map(norm));
   const fuzzyMatch = (source, target) => {
@@ -318,6 +324,7 @@ async function main() {
       wonOpps: soldOpps.length,
       currentlyOnboardingWonOpps: wonCurrentlyOnboarding.length,
       activeConversions: tigerpawGraduatedClients.length || ACTIVE_CONVERSIONS.length,
+      canceledConversions: tigerpawCanceledClients.length,
       contactedNoOppAccounts: contactedNoOppAccounts.length,
       latestTouchDate,
       firstWebinarDate
@@ -330,6 +337,10 @@ async function main() {
     graduatedTigerpawStats: {
       count: tigerpawGraduatedClients.length,
       rows: tigerpawGraduatedClients
+    },
+    canceledTigerpawStats: {
+      count: tigerpawCanceledClients.length,
+      rows: tigerpawCanceledClients
     },
     noOppGameplan: {
       accounts: contactedNoOppAccounts.length,

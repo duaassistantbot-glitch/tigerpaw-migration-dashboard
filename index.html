@@ -40,7 +40,7 @@
   .recency-card.green { background: #EAF7E6; border-left-color: #6EBE4F; }
   .recency-value { font-family: 'Montserrat', sans-serif; font-size: 22px; font-weight: 800; color: #1D3756; }
   .recency-label { margin-top: 4px; font-size: 11px; font-weight: 800; color: #3d4d5c; text-transform: uppercase; letter-spacing: .4px; }
-  .impact-grid { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 12px; padding: 14px; background: #FFFFFF; }
+  .impact-grid { display: grid; grid-template-columns: repeat(8, minmax(0, 1fr)); gap: 12px; padding: 14px; background: #FFFFFF; }
   .impact-metric { border: 1px solid #DDE2E8; border-radius: 8px; padding: 13px; background: #F5F7FA; }
   .impact-metric.highlight { background: #EAF7E6; border-color: #CFE8C6; }
   .impact-value { font-family: 'Montserrat', sans-serif; font-size: 24px; line-height: 1; font-weight: 800; color: #1D3756; }
@@ -279,6 +279,11 @@
         <div class="impact-value"><button id="fl-active" type="button" onclick="openGraduatedTigerpawRows()">--</button></div>
         <div class="impact-label">Graduated</div>
         <div class="impact-sub">Graduated conversion list</div>
+      </div>
+      <div class="impact-metric">
+        <div class="impact-value"><button id="fl-canceled" type="button" onclick="openCanceledTigerpawRows()">--</button></div>
+        <div class="impact-label">Canceled</div>
+        <div class="impact-sub">Canceled onboarding list</div>
       </div>
       <div class="impact-metric">
         <div class="impact-value"><button id="fl-no-opp" type="button" onclick="openAccounts('Contacted Accounts Without Migration Opps', contactedNoOppAccountRows())">--</button></div>
@@ -681,6 +686,11 @@ function openGraduatedTigerpawRows() {
   openOnboardingRows('Graduated Tigerpaw Accounts', KEY_STATS.graduatedTigerpawStats?.rows || []);
 }
 
+function openCanceledTigerpawRows() {
+  if (!KEY_STATS) return;
+  openOnboardingRows('Canceled Tigerpaw Accounts', KEY_STATS.canceledTigerpawStats?.rows || []);
+}
+
 function renderDrilldownRows() {
   const search = document.getElementById('drill-search').value.trim().toLowerCase();
   const rows = DRILLDOWN.rows.filter(row => Object.values(row).join(' ').toLowerCase().includes(search));
@@ -931,6 +941,7 @@ function renderKeyStats(stats) {
   document.getElementById('fl-won-sub').textContent = `${money.format(v.soldConversionMrr || 0)} sold migration MRR tracked in SF`;
   document.getElementById('fl-onboarding').textContent = fmt.format(f.currentlyOnboardingWonOpps || stats.wonOnboardingStats?.count || 0);
   document.getElementById('fl-active').textContent = fmt.format(stats.graduatedTigerpawStats?.count || f.activeConversions || v.activeConversionsProvided || 0);
+  document.getElementById('fl-canceled').textContent = fmt.format(stats.canceledTigerpawStats?.count || f.canceledConversions || 0);
   document.getElementById('fl-no-opp').textContent = fmt.format(f.contactedNoOppAccounts || gp.accounts || 0);
   document.getElementById('fl-detail').innerHTML = [
     `${fmt.format(f.webinarsRun || 0)} webinars run`,
