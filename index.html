@@ -229,9 +229,9 @@
       <div class="key-stat-sub" id="ks-sold-sub">Closed Won Legacy Migration opps</div>
     </div>
     <div class="key-stat-card green">
-      <div class="key-stat-label">Graduated to CS</div>
-      <div class="key-stat-value" id="ks-cs">Needs Notion</div>
-      <div class="key-stat-sub">Requires PSA Onboarding Dashboard access</div>
+      <div class="key-stat-label">Top No-Opp MRR</div>
+      <div class="key-stat-value"><button class="num-btn" id="ks-top-no-opp-mrr" type="button" onclick="openAccounts('Top 20 Accounts by MRR Without Migration Opps', topNoOppByMrrRows())">--</button></div>
+      <div class="key-stat-sub" id="ks-top-no-opp-sub">Top 20 accounts without migration opps</div>
     </div>
   </section>
   <section class="recency-grid" aria-label="Contact recency summary">
@@ -272,7 +272,7 @@
       <div class="impact-metric highlight">
         <div class="impact-value"><button id="fl-open" type="button" onclick="openOpps('Open Legacy Migration Opportunities', openMigrationOppRows())">--</button></div>
         <div class="impact-label">Open opps</div>
-        <div class="impact-sub">Currently in pipeline</div>
+        <div class="impact-sub" id="fl-open-sub">Currently in pipeline</div>
       </div>
       <div class="impact-metric">
         <div class="impact-value"><button id="fl-won" type="button" onclick="openOpps('Won Legacy Migration Opportunities', wonMigrationOppRows())">--</button></div>
@@ -282,22 +282,22 @@
       <div class="impact-metric highlight">
         <div class="impact-value"><button id="fl-onboarding" type="button" onclick="openWonOnboardingRows()">--</button></div>
         <div class="impact-label">Onboarding</div>
-        <div class="impact-sub">Closed Won currently onboarding</div>
+        <div class="impact-sub" id="fl-onboarding-sub">Closed Won currently onboarding</div>
       </div>
       <div class="impact-metric highlight">
         <div class="impact-value"><button id="fl-active" type="button" onclick="openGraduatedTigerpawRows()">--</button></div>
         <div class="impact-label">Graduated</div>
-        <div class="impact-sub">Graduated conversion list</div>
+        <div class="impact-sub" id="fl-active-sub">Graduated conversion list</div>
       </div>
       <div class="impact-metric">
         <div class="impact-value"><button id="fl-canceled" type="button" onclick="openCanceledTigerpawRows()">--</button></div>
         <div class="impact-label">Canceled</div>
-        <div class="impact-sub">Canceled onboarding list</div>
+        <div class="impact-sub" id="fl-canceled-sub">Canceled onboarding list</div>
       </div>
       <div class="impact-metric">
         <div class="impact-value"><button id="fl-no-opp" type="button" onclick="openAccounts('Contacted Accounts Without Migration Opps', contactedNoOppAccountRows())">--</button></div>
         <div class="impact-label">Engaged, no opp yet</div>
-        <div class="impact-sub">Gameplan pool</div>
+        <div class="impact-sub" id="fl-no-opp-sub">Gameplan pool</div>
       </div>
     </div>
     <div class="timeline-strip" id="fl-detail"></div>
@@ -440,7 +440,7 @@ let ACCOUNT_BY_ID = new Map();
 let ACCOUNT_BY_NAME = new Map();
 const EXPANDED_STATUS_ROWS = new Set();
 let TABLE_SORT = {
-  opp: { key: 'account', dir: 'asc' }
+  opp: { key: 'accountMrr', dir: 'desc' }
 };
 const DATA_SYNC_URL = 'https://dua-revio.msappproxy.net/tigerpaw-data-sync';
 
@@ -647,9 +647,9 @@ function setDrillSort(key) {
   renderDrilldownRows();
 }
 
-function resetDrilldown(type, rows, title, defaultSort = 'account') {
+function resetDrilldown(type, rows, title, defaultSort = 'account', defaultDir = 'asc') {
   DRILLDOWN = { type, rows: rows || [], title };
-  DRILL_SORT = { key: defaultSort, dir: 'asc' };
+  DRILL_SORT = { key: defaultSort, dir: defaultDir };
   document.getElementById('drill-title').textContent = title;
   document.getElementById('drill-search').value = '';
   renderDrilldownFilters();
@@ -725,16 +725,16 @@ function renderDrilldownHead() {
 
 function openAccounts(title, rows) {
   if (!MASTER) return;
-  resetDrilldown('accounts', rows, title, 'account');
+  resetDrilldown('accounts', rows, title, 'mrr', 'desc');
 }
 
 function openOpps(title, rows) {
   if (!MASTER) return;
-  resetDrilldown('opps', rows, title, 'account');
+  resetDrilldown('opps', rows, title, 'accountMrr', 'desc');
 }
 
 function openOnboardingRows(title, rows) {
-  resetDrilldown('onboarding', rows, title, 'account');
+  resetDrilldown('onboarding', rows, title, 'amount', 'desc');
 }
 
 function openWonOnboardingRows(status = null) {
@@ -758,7 +758,7 @@ function renderDrilldownRows() {
   const psaFilter = document.getElementById('drill-psa-filter').value;
   const statusFilter = document.getElementById('drill-status-filter').value;
   const filteredRows = DRILLDOWN.rows.filter(row => {
-    const matchesSearch = !search || Object.values(row).join(' ').toLowerCase().includes(search);
+    const matchesSearch = !search || [Object.values(row).join(' '), DRILLDOWN.type === 'opps' ? accountForOpp(row)?.mrr : ''].join(' ').toLowerCase().includes(search);
     const matchesPsa = psaFilter === 'all' || drillPsaStatus(row) === psaFilter;
     const matchesStatus = statusFilter === 'all' || drillStatus(row) === statusFilter;
     return matchesSearch && matchesPsa && matchesStatus;
@@ -1015,6 +1015,46 @@ function contactedNoOppAccountRows(status = null) {
   });
 }
 
+function noOppAccountRows(status = null) {
+  if (!MASTER) return [];
+  const oppAccountIds = new Set(MASTER.opportunities.map(opp => opp.accountId).filter(Boolean));
+  return MASTER.accounts.filter(account =>
+    !oppAccountIds.has(account.id) &&
+    (!status || (account.webMigrationStatus || 'Unknown') === status)
+  );
+}
+
+function topNoOppByMrrRows(limit = 20) {
+  return noOppAccountRows()
+    .filter(account => account.mrr !== null && account.mrr !== undefined)
+    .sort((a, b) => (b.mrr || 0) - (a.mrr || 0) || String(a.name).localeCompare(String(b.name)))
+    .slice(0, limit);
+}
+
+
+function accountMrrSum(rows) {
+  const seen = new Set();
+  return (rows || []).reduce((sum, account) => {
+    if (!account?.id || seen.has(account.id)) return sum;
+    seen.add(account.id);
+    return sum + (account.mrr || 0);
+  }, 0);
+}
+
+function oppAccountMrrSum(rows) {
+  const seen = new Set();
+  return (rows || []).reduce((sum, opp) => {
+    const account = accountForOpp(opp);
+    if (!account?.id || seen.has(account.id)) return sum;
+    seen.add(account.id);
+    return sum + (account.mrr || 0);
+  }, 0);
+}
+
+function onboardingMrrSum(rows) {
+  return (rows || []).reduce((sum, row) => sum + (row.amount || 0), 0);
+}
+
 function renderKeyStats(stats) {
   KEY_STATS = stats;
   if (!stats) return;
@@ -1030,18 +1070,34 @@ function renderKeyStats(stats) {
   document.getElementById('ks-median-touch').textContent = c.medianLastTouchDate ? formatDate(c.medianLastTouchDate) : '--';
   document.getElementById('ks-sold').textContent = fmt.format(v.soldConversions || 0);
   document.getElementById('ks-sold-sub').textContent = `${money.format(v.soldConversionMrr || 0)} sold migration MRR tracked in SF opps`;
-  document.getElementById('ks-cs').textContent = v.graduatedToCs == null ? 'Needs Notion' : fmt.format(v.graduatedToCs);
+  const topNoOpp = topNoOppByMrrRows();
+  const topNoOppMrr = topNoOpp.reduce((sum, account) => sum + (account.mrr || 0), 0);
+  document.getElementById('ks-top-no-opp-mrr').textContent = money.format(topNoOppMrr || 0);
+  document.getElementById('ks-top-no-opp-sub').textContent = `${fmt.format(topNoOpp.length)} highest-MRR accounts without migration opps`;
   document.getElementById('fl-engaged').textContent = fmt.format(f.contactedAccounts || c.accountsContactedEmailOrPhone || 0);
-  document.getElementById('fl-engaged-sub').textContent = `${fmt.format(f.webinarsRun || 0)} webinars • ${fmt.format(f.cbrsSinceFirstWebinar || 0)} CBRs • latest touch ${f.latestTouchDate ? formatDate(f.latestTouchDate) : '--'}`;
+  const contactedRows = contactedAccountRows();
+  const allOppRows = MASTER?.opportunities || [];
+  const openOppRows = openMigrationOppRows();
+  const wonOppRows = wonMigrationOppRows();
+  const noOppRows = contactedNoOppAccountRows();
+  const onboardingRows = stats.wonOnboardingStats?.rows || [];
+  const graduatedRows = stats.graduatedTigerpawStats?.rows || [];
+  const canceledRows = stats.canceledTigerpawStats?.rows || [];
+  document.getElementById('fl-engaged-sub').textContent = `${money.format(accountMrrSum(contactedRows))} Account MRR • ${fmt.format(f.webinarsRun || 0)} webinars • ${fmt.format(f.cbrsSinceFirstWebinar || 0)} CBRs • latest touch ${f.latestTouchDate ? formatDate(f.latestTouchDate) : '--'}`;
   document.getElementById('fl-opps-created').textContent = fmt.format(f.oppsCreated || 0);
-  document.getElementById('fl-opp-accounts').textContent = `${fmt.format(f.accountsWithOpps || 0)} accounts with migration opps`;
+  document.getElementById('fl-opp-accounts').textContent = `${money.format(oppAccountMrrSum(allOppRows))} Account MRR • ${fmt.format(f.accountsWithOpps || 0)} accounts with migration opps`;
   document.getElementById('fl-open').textContent = fmt.format(f.openOpps || 0);
   document.getElementById('fl-won').textContent = fmt.format(f.wonOpps || 0);
-  document.getElementById('fl-won-sub').textContent = `${money.format(v.soldConversionMrr || 0)} sold migration MRR tracked in SF`;
+  document.getElementById('fl-open-sub').textContent = `${money.format(oppAccountMrrSum(openOppRows))} Account MRR • Currently in pipeline`;
+  document.getElementById('fl-won-sub').textContent = `${money.format(oppAccountMrrSum(wonOppRows))} Account MRR • ${money.format(v.soldConversionMrr || 0)} sold migration MRR tracked in SF`;
   document.getElementById('fl-onboarding').textContent = fmt.format(f.currentlyOnboardingWonOpps || stats.wonOnboardingStats?.count || 0);
+  document.getElementById('fl-onboarding-sub').textContent = `${money.format(onboardingMrrSum(onboardingRows))} MRR • Closed Won currently onboarding`;
   document.getElementById('fl-active').textContent = fmt.format(stats.graduatedTigerpawStats?.count || f.activeConversions || v.activeConversionsProvided || 0);
+  document.getElementById('fl-active-sub').textContent = `${money.format(onboardingMrrSum(graduatedRows))} MRR • Graduated conversion list`;
   document.getElementById('fl-canceled').textContent = fmt.format(stats.canceledTigerpawStats?.count || f.canceledConversions || 0);
+  document.getElementById('fl-canceled-sub').textContent = `${money.format(onboardingMrrSum(canceledRows))} MRR • Canceled onboarding list`;
   document.getElementById('fl-no-opp').textContent = fmt.format(f.contactedNoOppAccounts || gp.accounts || 0);
+  document.getElementById('fl-no-opp-sub').textContent = `${money.format(accountMrrSum(noOppRows))} Account MRR • Gameplan pool`;
   document.getElementById('fl-detail').innerHTML = [
     `${fmt.format(f.webinarsRun || 0)} webinars run`,
     `${fmt.format(f.cbrsSinceFirstWebinar || 0)} CBRs since first webinar`,
@@ -1058,7 +1114,6 @@ function renderKeyStats(stats) {
       <td>${row.latestContactType ? esc(row.latestContactType[0].toUpperCase() + row.latestContactType.slice(1)) : '--'}</td>
       <td>${row.latestCbrDate ? formatDate(row.latestCbrDate) : '--'}</td>
     </tr>`).join('') || '<tr><td colspan="6" class="empty">No contacted/no-opp accounts found.</td></tr>';
-  const graduatedRows = stats.graduatedTigerpawStats?.rows || [];
   document.getElementById('active-conversions-table').innerHTML = graduatedRows.map(row => `
       <tr>
         <td><strong>${esc(row.account)}</strong></td>
