@@ -22,7 +22,7 @@
   .main { max-width: 1200px; margin: 0 auto; padding: 26px 24px 44px; }
   .section-title { margin: 24px 0 12px; color: #2399B5; font-size: 12px; font-weight: 800; letter-spacing: .8px; text-transform: uppercase; display: flex; align-items: center; gap: 10px; }
   .section-title::after { content: ""; height: 1px; background: #DDE2E8; flex: 1; }
-  .hero-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }
+  .hero-grid { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 14px; }
   .hero-card { background: #1D3756; color: #FFFFFF; border-radius: 8px; padding: 18px; border-top: 4px solid #2399B5; min-height: 112px; }
   .hero-card.green { border-top-color: #6EBE4F; }
   .population-note { margin: 12px 0 18px; padding: 10px 12px; background: #FFFFFF; border: 1px solid #DDE2E8; border-left: 3px solid #2399B5; border-radius: 6px; color: #687789; font-size: 12px; line-height: 1.45; }
@@ -203,6 +203,11 @@
       <div class="label">Closed Lost Opps</div>
       <div class="value"><button class="value-btn" id="closed-lost" onclick="openClosedLostOpps()">--</button></div>
     </div>
+    <div class="hero-card">
+      <div class="label">Account MRR</div>
+      <div class="value"><button class="value-btn" id="total-mrr" onclick="openAllAccounts()">--</button></div>
+      <div class="sub" id="total-mrr-sub">Matched client master MRR</div>
+    </div>
   </section>
   <div class="population-note" aria-label="Dashboard population legend">
     <strong>Dashboard scope:</strong> Salesforce accounts where Web Migration Status is populated. Blank Web Migration Status accounts are excluded from all Master Overview account counts.
@@ -308,13 +313,14 @@
         <tr>
           <th>Web Migration Status</th>
           <th class="num-h">Accounts</th>
+          <th class="num-h">MRR</th>
           <th>Last Contact</th>
           <th>Type</th>
           <th>Last CBR</th>
         </tr>
       </thead>
       <tbody id="no-opp-status-table">
-        <tr><td colspan="5" class="empty">Loading gameplan breakdown...</td></tr>
+        <tr><td colspan="6" class="empty">Loading gameplan breakdown...</td></tr>
       </tbody>
     </table>
   </section>
@@ -406,6 +412,7 @@
         <tr>
           <th><button class="sort-btn" type="button" onclick="setSort('opp','account')">Account Name <span class="sort-indicator" data-sort-table="opp" data-sort-key="account"></span></button></th>
           <th><button class="sort-btn" type="button" onclick="setSort('opp','psaAccountStatus')">PSA Account Status <span class="sort-indicator" data-sort-table="opp" data-sort-key="psaAccountStatus"></span></button></th>
+          <th class="num-h"><button class="sort-btn" type="button" onclick="setSort('opp','accountMrr')">Account MRR <span class="sort-indicator" data-sort-table="opp" data-sort-key="accountMrr"></span></button></th>
           <th class="num-h"><button class="sort-btn" type="button" onclick="setSort('opp','amount')">Renewal Amount <span class="sort-indicator" data-sort-table="opp" data-sort-key="amount"></span></button></th>
           <th><button class="sort-btn" type="button" onclick="setSort('opp','owner')">Opportunity Owner <span class="sort-indicator" data-sort-table="opp" data-sort-key="owner"></span></button></th>
           <th><button class="sort-btn" type="button" onclick="setSort('opp','nextStep')">Next Step <span class="sort-indicator" data-sort-table="opp" data-sort-key="nextStep"></span></button></th>
@@ -543,6 +550,8 @@ function roadmapMatchText(opp) {
 
 function sortValue(table, key, row) {
   if (key === 'amount') return Number(row.amount || 0);
+  if (key === 'mrr') return Number(row.mrr || 0);
+  if (key === 'accountMrr') return Number(accountForOpp(row)?.mrr || 0);
   if (key === 'account') return row.account || '';
 
   if (table === 'opp') {
@@ -679,6 +688,7 @@ function renderDrilldownHead() {
       ${drillSortButton('Account', 'account')}
       ${drillSortButton('Web Migration Status', 'status')}
       ${drillSortButton('PSA Account Status', 'psaAccountStatus')}
+      ${drillSortButton('MRR', 'mrr', 'num-h')}
       ${drillSortButton('Type', 'type')}
       ${drillSortButton('Owner', 'owner')}
     </tr>`;
@@ -701,6 +711,7 @@ function renderDrilldownHead() {
   document.getElementById('drill-head').innerHTML = `<tr>
     ${drillSortButton('Account Name', 'account')}
     ${drillSortButton('PSA Account Status', 'psaAccountStatus')}
+    ${drillSortButton('Account MRR', 'accountMrr', 'num-h')}
     ${drillSortButton('Renewal Amount', 'amount', 'num-h')}
     ${drillSortButton('Opportunity Owner', 'owner')}
     ${drillSortButton('Next Step', 'nextStep')}
@@ -768,6 +779,7 @@ function renderDrilldownRows() {
         <td><strong>${esc(account.name)}</strong></td>
         <td><span class="pill">${esc(account.webMigrationStatus || 'Blank')}</span></td>
         <td><span class="pill">${esc(psaAccountStatus(account))}</span></td>
+        <td class="num-c">${account.mrr == null ? '--' : money.format(account.mrr || 0)}</td>
         <td>${esc(account.type || '')}</td>
         <td>${esc(account.owner || '')}</td>
       </tr>`).join('');
@@ -798,6 +810,8 @@ function drillSortValue(row) {
   if (key === 'psaAccountStatus') return drillPsaStatus(row);
   if (key === 'status') return drillStatus(row);
   if (key === 'amount') return Number(row.amount || 0);
+  if (key === 'mrr') return Number(row.mrr || 0);
+  if (key === 'accountMrr') return Number(DRILLDOWN.type === 'opps' ? (accountForOpp(row)?.mrr || 0) : (row.mrr || 0));
   if (DRILLDOWN.type === 'accounts') {
     if (key === 'account') return row.name || '';
     if (key === 'type') return row.type || '';
@@ -842,6 +856,7 @@ function oppDetailRow(opp) {
     <tr>
       <td><strong>${esc(opp.account)}</strong></td>
       <td><span class="pill">${esc(psaAccountStatusForOpp(opp))}</span></td>
+      <td class="num-c">${accountForOpp(opp)?.mrr == null ? '--' : money.format(accountForOpp(opp)?.mrr || 0)}</td>
       <td class="num-c">${money.format(opp.amount || 0)}</td>
       <td>${esc(opp.owner || '')}</td>
       <td class="detail">${esc(opp.nextStep || '')}</td>
@@ -857,7 +872,7 @@ function barRows(groups, total, kind) {
   return groups.map((group, idx) => {
     const pct = total ? Math.max(2, Math.round((group.count / total) * 100)) : 0;
     const dotClass = idx % 4 === 0 ? '' : idx % 4 === 1 ? 'green' : idx % 4 === 2 ? 'navy' : 'gray';
-    const sub = kind === 'stage' ? `${money.format(group.amount || 0)} Renewal` : `${group.pct || Math.round((group.count / total) * 1000) / 10}% of accounts`;
+    const sub = kind === 'stage' ? `${money.format(group.amount || 0)} Renewal` : `${money.format(group.mrr || 0)} MRR • ${group.pct || Math.round((group.count / total) * 1000) / 10}% of accounts`;
     const onclick = kind === 'stage'
       ? `openOpps('${esc(group.label)} Opportunities', oppRowsByStage('${esc(group.label)}'))`
       : `openAccounts('${esc(group.label)} Accounts', accountRowsByStatus('${esc(group.label)}'))`;
@@ -915,7 +930,7 @@ function renderOppTable() {
     const matchesPsaStatus = psaStatus === 'all' || (psaStatus === 'none' ? !oppPsaStatus || oppPsaStatus === 'Blank' : oppPsaStatus === psaStatus);
     const unlock = opp.vikingOneUnlock || {};
     const unlockMatches = Array.isArray(unlock.matches) ? unlock.matches.map(match => match.feature).join(' ') : '';
-    const haystack = [opp.account, opp.stage, opp.amount, opp.owner, opp.nextStep, opp.lossReason, opp.lossDetail, oppWebStatus, oppPsaStatus, unlock.status, unlock.summary, unlockMatches].join(' ').toLowerCase();
+    const haystack = [opp.account, opp.stage, opp.amount, accountForOpp(opp)?.mrr, opp.owner, opp.nextStep, opp.lossReason, opp.lossDetail, oppWebStatus, oppPsaStatus, unlock.status, unlock.summary, unlockMatches].join(' ').toLowerCase();
     return matchesStage && matchesViking && matchesOwner && matchesLoss && matchesWebStatus && matchesPsaStatus && (!search || haystack.includes(search));
   });
   const sorted = sortedRows('opp', rows);
@@ -1038,10 +1053,11 @@ function renderKeyStats(stats) {
     <tr>
       <td>${esc(row.status)}</td>
       <td class="num-c"><button class="num-btn" type="button" onclick="openAccounts('Contacted ${esc(row.status)} Accounts Without Migration Opps', contactedNoOppAccountRows('${esc(row.status)}'))">${fmt.format(row.accounts || 0)}</button></td>
+      <td class="num-c">${money.format(row.mrr || 0)}</td>
       <td>${row.latestContactDate ? formatDate(row.latestContactDate) : '--'}</td>
       <td>${row.latestContactType ? esc(row.latestContactType[0].toUpperCase() + row.latestContactType.slice(1)) : '--'}</td>
       <td>${row.latestCbrDate ? formatDate(row.latestCbrDate) : '--'}</td>
-    </tr>`).join('') || '<tr><td colspan="5" class="empty">No contacted/no-opp accounts found.</td></tr>';
+    </tr>`).join('') || '<tr><td colspan="6" class="empty">No contacted/no-opp accounts found.</td></tr>';
   const graduatedRows = stats.graduatedTigerpawStats?.rows || [];
   document.getElementById('active-conversions-table').innerHTML = graduatedRows.map(row => `
       <tr>
@@ -1078,6 +1094,8 @@ function render(data) {
   document.getElementById('want-migrate').textContent = fmt.format(want);
   document.getElementById('total-opps').textContent = fmt.format(data.totals.legacyMigrationOpps);
   document.getElementById('closed-lost').textContent = fmt.format(data.totals.closedLostOpps);
+  document.getElementById('total-mrr').textContent = money.format(data.totals.accountMrr || 0);
+  document.getElementById('total-mrr-sub').textContent = `${fmt.format(data.totals.accountsWithMrr || 0)} of ${fmt.format(data.totals.tigerpawAccounts || 0)} accounts matched`;
 
   renderStatusRows();
   document.getElementById('stage-bars').innerHTML = barRows(data.stageBreakdown, data.totals.legacyMigrationOpps, 'stage');

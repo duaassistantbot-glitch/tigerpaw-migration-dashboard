@@ -163,7 +163,7 @@ async function main() {
   tasks = tasks.filter(t => !seenTask.has(t.Id) && seenTask.add(t.Id));
 
   const touchByAccount = {};
-  for (const a of accounts) touchByAccount[a.id] = { accountId: a.id, account: a.name, mrr: null, email: 0, phone: 0, other: 0, total: 0, webinarRegistrants: 0, lastTouch: null, lastContact: null, lastContactKind: null, lastCbr: null };
+  for (const a of accounts) touchByAccount[a.id] = { accountId: a.id, account: a.name, mrr: a.mrr ?? null, email: 0, phone: 0, other: 0, total: 0, webinarRegistrants: 0, lastTouch: null, lastContact: null, lastContactKind: null, lastCbr: null };
   const todayIso = new Date().toISOString().slice(0, 10);
   for (const t of tasks) {
     const aid = accountById[t.WhatId] ? t.WhatId : contactAccount[t.WhoId];
@@ -296,6 +296,7 @@ async function main() {
     const status = x.accountRecord?.webMigrationStatus || 'Unknown';
     if (!acc[status]) acc[status] = { status, accounts: 0, touchpoints: 0, emailTouchpoints: 0, phoneTouchpoints: 0, latestTouchDate: null, latestContactDate: null, latestContactType: null, latestCbrDate: null };
     acc[status].accounts++;
+    acc[status].mrr = (acc[status].mrr || 0) + (x.accountRecord?.mrr || 0);
     acc[status].touchpoints += x.total || 0;
     acc[status].emailTouchpoints += x.email || 0;
     acc[status].phoneTouchpoints += x.phone || 0;
@@ -312,7 +313,7 @@ async function main() {
     generatedAt: new Date().toISOString(),
     sourceGeneratedAt: master.generatedAt,
     caveats: [
-      'Notion PSA Onboarding Dashboard and Client Master/MRR databases were not accessible to the current integration at build time; CS graduation and account MRR are left as Notion-dependent until shared.',
+      'Account MRR is cross-referenced from the uploaded Master Client List when a reliable account-name match is available.',
       'Account contacted = Salesforce Task classified as email/phone on the Account or related Contacts, plus matched webinar registrant company as email-confirmed.',
       'Webinar attendance is not in the current webinar export; attendance remains null until an attendance/join-duration export is available.'
     ],
@@ -397,7 +398,8 @@ async function main() {
       accountsTouchedLast30Days: touchedWithin(30),
       accountsTouchedLast60Days: touchedWithin(60),
       accountsTouchedLast90Days: touchedWithin(90),
-      relatedMrr: null
+      relatedMrr: money(accounts.reduce((s,a)=>s+(a.mrr||0),0)),
+      accountsWithMrr: accounts.filter(a => a.mrr !== null && a.mrr !== undefined).length
     },
     conversionStats: {
       soldConversions: soldOpps.length,

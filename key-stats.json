@@ -2,7 +2,9 @@
   "generatedAt": "2026-09-08T21:24:09.589Z",
   "sourceGeneratedAt": "2026-09-08T21:23:04.639Z",
   "caveats": [
-    "Notion PSA Onboarding Dashboard and Client Master/MRR databases were not accessible to the current integration at build time; CS graduation and account MRR are left as Notion-dependent until shared.",
+    "Account MRR is cross-referenced from client-master-mrr.csv (640 matched of 674 dashboard accounts).",
+    "Account MRR is cross-referenced from client-master-mrr.csv (640 matched of 674 dashboard accounts).",
+    "Account MRR is cross-referenced from client-master-mrr.csv (640 matched of 674 dashboard accounts).",
     "Account contacted = Salesforce Task classified as email/phone on the Account or related Contacts, plus matched webinar registrant company as email-confirmed.",
     "Webinar attendance is not in the current webinar export; attendance remains null until an attendance/join-duration export is available."
   ],
@@ -1255,7 +1257,8 @@
         "latestTouchDate": "2026-09-08",
         "latestContactDate": "2026-09-08",
         "latestContactType": "phone",
-        "latestCbrDate": "2026-09-08"
+        "latestCbrDate": "2026-09-08",
+        "mrr": 248387.0500000002
       },
       {
         "status": "Want to migrate / timeline unknown",
@@ -1266,7 +1269,8 @@
         "latestTouchDate": "2026-09-08",
         "latestContactDate": "2026-09-08",
         "latestContactType": "phone",
-        "latestCbrDate": "2026-09-08"
+        "latestCbrDate": "2026-09-08",
+        "mrr": 166235.18999999994
       },
       {
         "status": "Do not want to migrate",
@@ -1277,7 +1281,8 @@
         "latestTouchDate": "2026-09-08",
         "latestContactDate": "2026-09-08",
         "latestContactType": "phone",
-        "latestCbrDate": "2026-09-08"
+        "latestCbrDate": "2026-09-08",
+        "mrr": 73371
       },
       {
         "status": "Want to migrate asap",
@@ -1288,7 +1293,8 @@
         "latestTouchDate": "2026-09-08",
         "latestContactDate": "2026-09-08",
         "latestContactType": "phone",
-        "latestCbrDate": "2026-09-07"
+        "latestCbrDate": "2026-09-07",
+        "mrr": 55003.93000000001
       },
       {
         "status": "Inactive",
@@ -1299,7 +1305,8 @@
         "latestTouchDate": "2026-09-03",
         "latestContactDate": "2026-09-03",
         "latestContactType": "email",
-        "latestCbrDate": "2026-08-20"
+        "latestCbrDate": "2026-08-20",
+        "mrr": 18482.88
       },
       {
         "status": "Migration in progress",
@@ -1310,7 +1317,8 @@
         "latestTouchDate": "2026-09-08",
         "latestContactDate": "2026-09-08",
         "latestContactType": "email",
-        "latestCbrDate": "2026-09-02"
+        "latestCbrDate": "2026-09-02",
+        "mrr": 32008.58
       },
       {
         "status": "Opent to Migrate - Missing features",
@@ -1321,7 +1329,8 @@
         "latestTouchDate": "2026-09-08",
         "latestContactDate": "2026-09-08",
         "latestContactType": "email",
-        "latestCbrDate": "2026-09-08"
+        "latestCbrDate": "2026-09-08",
+        "mrr": 121197.13
       },
       {
         "status": "Migration Pending",
@@ -1332,7 +1341,8 @@
         "latestTouchDate": "2026-08-07",
         "latestContactDate": "2026-08-07",
         "latestContactType": "email",
-        "latestCbrDate": null
+        "latestCbrDate": null,
+        "mrr": 1560
       }
     ],
     "sampleAccounts": [
@@ -1990,7 +2000,8 @@
     "accountsTouchedLast30Days": 392,
     "accountsTouchedLast60Days": 542,
     "accountsTouchedLast90Days": 565,
-    "relatedMrr": null
+    "relatedMrr": 883661.5099999998,
+    "accountsWithMrr": 640
   },
   "conversionStats": {
     "soldConversions": 45,
@@ -2569,7 +2580,7 @@
     {
       "accountId": "0016O00003dmuJPQAY",
       "account": "1st Business Solutions, Inc.",
-      "mrr": null,
+      "mrr": 0,
       "email": 45,
       "phone": 4,
       "other": 2,
@@ -2583,7 +2594,7 @@
     {
       "accountId": "001PX00000LTJGBYA5",
       "account": "210 Solutions",
-      "mrr": null,
+      "mrr": 0,
       "email": 148,
       "phone": 44,
       "other": 4,
@@ -2597,7 +2608,7 @@
     {
       "accountId": "0016O00003dmuJQQAY",
       "account": "4D IT",
-      "mrr": null,
+      "mrr": 740.19,
       "email": 57,
       "phone": 8,
       "other": 0,
@@ -2611,7 +2622,7 @@
     {
       "accountId": "001PX000004hVzmYAE",
       "account": "A & A Telecom Group Inc.",
-      "mrr": null,
+      "mrr": 758.88,
       "email": 115,
       "phone": 37,
       "other": 5,
@@ -2625,7 +2636,7 @@
     {
       "accountId": "0016O00003dmuJSQAY",
       "account": "A & G Telephone Service Inc.",
-      "mrr": null,
+      "mrr": 650.42,
       "email": 41,
       "phone": 23,
       "other": 0,
@@ -2639,7 +2650,7 @@
     {
       "accountId": "001PX00000CkbNwYAJ",
       "account": "A Sound Look",
-      "mrr": null,
+      "mrr": 758.88,
       "email": 66,
       "phone": 40,
       "other": 0,
@@ -2653,7 +2664,7 @@
     {
       "accountId": "0016O00003ebbEFQAY",
       "account": "A-Z Printers Plus",
-      "mrr": null,
+      "mrr": 1093.4,
       "email": 21,
       "phone": 8,
       "other": 2,
@@ -2695,7 +2706,7 @@
     {
       "accountId": "0016O00003ee5MMQAY",
       "account": "AA LOCK AND ALARM",
-      "mrr": null,
+      "mrr": 0,
       "email": 74,
       "phone": 21,
       "other": 4,
@@ -2709,7 +2720,7 @@
     {
       "accountId": "0016O00003dmuJWQAY",
       "account": "ABIS - American Business Information Systems",
-      "mrr": null,
+      "mrr": 450,
       "email": 92,
       "phone": 35,
       "other": 7,
@@ -2723,7 +2734,7 @@
     {
       "accountId": "0016O00003dmuJXQAY",
       "account": "ABSI Telecom",
-      "mrr": null,
+      "mrr": 432.6,
       "email": 27,
       "phone": 12,
       "other": 2,
@@ -2737,7 +2748,7 @@
     {
       "accountId": "0016O00003dmuJZQAY",
       "account": "Acada Communications",
-      "mrr": null,
+      "mrr": 880,
       "email": 56,
       "phone": 9,
       "other": 6,
@@ -2751,7 +2762,7 @@
     {
       "accountId": "0016O00003dmuJaQAI",
       "account": "Accent Voice",
-      "mrr": null,
+      "mrr": 2054,
       "email": 176,
       "phone": 180,
       "other": 10,
@@ -2765,7 +2776,7 @@
     {
       "accountId": "0016O00003dmuJbQAI",
       "account": "Access 411",
-      "mrr": null,
+      "mrr": 2270.48,
       "email": 84,
       "phone": 19,
       "other": 7,
@@ -2779,7 +2790,7 @@
     {
       "accountId": "0016O00003dmuJdQAI",
       "account": "Accurate Security Pros, Inc.",
-      "mrr": null,
+      "mrr": 1342.26,
       "email": 69,
       "phone": 13,
       "other": 23,
@@ -2793,7 +2804,7 @@
     {
       "accountId": "001PX000006Do8SYAS",
       "account": "Acoma Security Group, LLC",
-      "mrr": null,
+      "mrr": 0,
       "email": 153,
       "phone": 32,
       "other": 24,
@@ -2807,7 +2818,7 @@
     {
       "accountId": "001PX000004hVnfYAE",
       "account": "ACS Fire & Security",
-      "mrr": null,
+      "mrr": 500,
       "email": 141,
       "phone": 91,
       "other": 3,
@@ -2821,7 +2832,7 @@
     {
       "accountId": "0016O000035VoK4QAK",
       "account": "Adalex Communications",
-      "mrr": null,
+      "mrr": 562.45,
       "email": 46,
       "phone": 12,
       "other": 1,
@@ -2835,7 +2846,7 @@
     {
       "accountId": "0016O00003dmuJhQAI",
       "account": "Adtel Solutions",
-      "mrr": null,
+      "mrr": 580.91,
       "email": 42,
       "phone": 15,
       "other": 4,
@@ -2849,7 +2860,7 @@
     {
       "accountId": "0016O00003dmuJiQAI",
       "account": "Advanced Alarm Inc",
-      "mrr": null,
+      "mrr": 774.13,
       "email": 10,
       "phone": 16,
       "other": 2,
@@ -2863,7 +2874,7 @@
     {
       "accountId": "001PX0000071NPzYAM",
       "account": "Advanced Audio",
-      "mrr": null,
+      "mrr": 774.13,
       "email": 6,
       "phone": 0,
       "other": 0,
@@ -2877,7 +2888,7 @@
     {
       "accountId": "0016O00003dmuJjQAI",
       "account": "Advanced Communication Technologies",
-      "mrr": null,
+      "mrr": 774.13,
       "email": 119,
       "phone": 12,
       "other": 1,
@@ -2891,7 +2902,7 @@
     {
       "accountId": "0016O00003dmuJkQAI",
       "account": "Advanced Concepts",
-      "mrr": null,
+      "mrr": 553,
       "email": 47,
       "phone": 4,
       "other": 0,
@@ -2905,7 +2916,7 @@
     {
       "accountId": "0016O00003Ou42cQAB",
       "account": "Advanced Global Communications, Inc.",
-      "mrr": null,
+      "mrr": 409.52,
       "email": 61,
       "phone": 41,
       "other": 6,
@@ -2919,7 +2930,7 @@
     {
       "accountId": "0016O00003dmuJlQAI",
       "account": "Advanced Hospitality Systems",
-      "mrr": null,
+      "mrr": 2054,
       "email": 78,
       "phone": 16,
       "other": 0,
@@ -2933,7 +2944,7 @@
     {
       "accountId": "0016O00003dmuJmQAI",
       "account": "Advanced Integration Security (AIS)",
-      "mrr": null,
+      "mrr": 1725.77,
       "email": 86,
       "phone": 31,
       "other": 2,
@@ -2947,7 +2958,7 @@
     {
       "accountId": "0016O00003dmuJnQAI",
       "account": "Advanced Lighting & Sound",
-      "mrr": null,
+      "mrr": 1128.6,
       "email": 17,
       "phone": 11,
       "other": 0,
@@ -2961,7 +2972,7 @@
     {
       "accountId": "0016O00003ebjumQAA",
       "account": "Advanced Procomm, Inc.",
-      "mrr": null,
+      "mrr": 545.57,
       "email": 66,
       "phone": 26,
       "other": 5,
@@ -2975,7 +2986,7 @@
     {
       "accountId": "0016O00003ebhteQAA",
       "account": "Advanced Security Technologies",
-      "mrr": null,
+      "mrr": 1112.87,
       "email": 105,
       "phone": 55,
       "other": 2,
@@ -2989,7 +3000,7 @@
     {
       "accountId": "0011C00002RTQbYQAX",
       "account": "Advanced Telecom Inc",
-      "mrr": null,
+      "mrr": 474,
       "email": 232,
       "phone": 66,
       "other": 10,
@@ -3003,7 +3014,7 @@
     {
       "accountId": "0016O00003dmuJoQAI",
       "account": "Advanced Telephone & Data",
-      "mrr": null,
+      "mrr": 735,
       "email": 15,
       "phone": 15,
       "other": 1,
@@ -3017,7 +3028,7 @@
     {
       "accountId": "001PX000003tpoKYAQ",
       "account": "Advanosys",
-      "mrr": null,
+      "mrr": 635.08,
       "email": 64,
       "phone": 23,
       "other": 4,
@@ -3031,7 +3042,7 @@
     {
       "accountId": "0016O00003dmuJpQAI",
       "account": "Advantage Computer Enterprises",
-      "mrr": null,
+      "mrr": 2576,
       "email": 94,
       "phone": 30,
       "other": 1,
@@ -3045,7 +3056,7 @@
     {
       "accountId": "001PX000004hThkYAE",
       "account": "Advantage Print Solutions",
-      "mrr": null,
+      "mrr": 0,
       "email": 34,
       "phone": 31,
       "other": 0,
@@ -3059,7 +3070,7 @@
     {
       "accountId": "0016O00003dmuJqQAI",
       "account": "AFEC Guardian Fire Protection",
-      "mrr": null,
+      "mrr": 937.17,
       "email": 10,
       "phone": 7,
       "other": 0,
@@ -3073,7 +3084,7 @@
     {
       "accountId": "0016O00003dmuJrQAI",
       "account": "AFEC Guardian Fire Protection (GUARDIAN 2nd Database)",
-      "mrr": null,
+      "mrr": 937.17,
       "email": 1,
       "phone": 8,
       "other": 0,
@@ -3087,7 +3098,7 @@
     {
       "accountId": "0011500001HNQ9uAAH",
       "account": "Affiliated Communications",
-      "mrr": null,
+      "mrr": 18133.77,
       "email": 96,
       "phone": 29,
       "other": 1,
@@ -3101,7 +3112,7 @@
     {
       "accountId": "0016O00003dmuJsQAI",
       "account": "Agility Integration",
-      "mrr": null,
+      "mrr": 765.72,
       "email": 12,
       "phone": 7,
       "other": 0,
@@ -3115,7 +3126,7 @@
     {
       "accountId": "0016O00003ee6WPQAY",
       "account": "AJK Communications",
-      "mrr": null,
+      "mrr": 745.89,
       "email": 67,
       "phone": 39,
       "other": 6,
@@ -3129,7 +3140,7 @@
     {
       "accountId": "0016O00003dmuJtQAI",
       "account": "Alarm and Communication Technologies",
-      "mrr": null,
+      "mrr": 2072.1,
       "email": 16,
       "phone": 16,
       "other": 1,
@@ -3157,7 +3168,7 @@
     {
       "accountId": "0016O00003dmudIQAQ",
       "account": "Aldeberan",
-      "mrr": null,
+      "mrr": 2221.46,
       "email": 24,
       "phone": 2,
       "other": 10,
@@ -3171,7 +3182,7 @@
     {
       "accountId": "0016O00003dmuJuQAI",
       "account": "All Secure Lock Service",
-      "mrr": null,
+      "mrr": 1121.18,
       "email": 421,
       "phone": 23,
       "other": 17,
@@ -3185,7 +3196,7 @@
     {
       "accountId": "0011C00002jC8JtQAK",
       "account": "All-Mode Communications Inc",
-      "mrr": null,
+      "mrr": 1740.32,
       "email": 103,
       "phone": 43,
       "other": 5,
@@ -3199,7 +3210,7 @@
     {
       "accountId": "0016O00003dmuJvQAI",
       "account": "Allison Royce & Associates",
-      "mrr": null,
+      "mrr": 474,
       "email": 23,
       "phone": 5,
       "other": 0,
@@ -3213,7 +3224,7 @@
     {
       "accountId": "0016O00003ebkGQQAY",
       "account": "America's Phone Guys",
-      "mrr": null,
+      "mrr": 1324.36,
       "email": 105,
       "phone": 36,
       "other": 3,
@@ -3227,7 +3238,7 @@
     {
       "accountId": "0016O00003dmuJzQAI",
       "account": "American Business Phones",
-      "mrr": null,
+      "mrr": 902.88,
       "email": 126,
       "phone": 25,
       "other": 0,
@@ -3241,7 +3252,7 @@
     {
       "accountId": "0016O00003ebjznQAA",
       "account": "American Security Devices",
-      "mrr": null,
+      "mrr": 1030.42,
       "email": 95,
       "phone": 23,
       "other": 6,
@@ -3269,7 +3280,7 @@
     {
       "accountId": "001PX000004hTh5YAE",
       "account": "Ameritel Northridge",
-      "mrr": null,
+      "mrr": 551.25,
       "email": 89,
       "phone": 48,
       "other": 5,
@@ -3283,7 +3294,7 @@
     {
       "accountId": "0011500001WgTdtAAF",
       "account": "Ameritel Voice and Data",
-      "mrr": null,
+      "mrr": 824.32,
       "email": 117,
       "phone": 77,
       "other": 1,
@@ -3297,7 +3308,7 @@
     {
       "accountId": "0016O00003dmuK1QAI",
       "account": "Amtek Computer Services",
-      "mrr": null,
+      "mrr": 875.2,
       "email": 60,
       "phone": 28,
       "other": 2,
@@ -3311,7 +3322,7 @@
     {
       "accountId": "0016O00003dmuK2QAI",
       "account": "Anderson Pump Service",
-      "mrr": null,
+      "mrr": 1433.44,
       "email": 40,
       "phone": 36,
       "other": 5,
@@ -3325,7 +3336,7 @@
     {
       "accountId": "001PX0000078HfUYAU",
       "account": "Anderson Security Integration",
-      "mrr": null,
+      "mrr": 0,
       "email": 20,
       "phone": 9,
       "other": 1,
@@ -3339,7 +3350,7 @@
     {
       "accountId": "0016O00003dmuK3QAI",
       "account": "Anderson Systems Integration (ASI)",
-      "mrr": null,
+      "mrr": 0,
       "email": 16,
       "phone": 5,
       "other": 1,
@@ -3353,7 +3364,7 @@
     {
       "accountId": "0016O00003dmuK6QAI",
       "account": "Arcomm Communications",
-      "mrr": null,
+      "mrr": 2094.67,
       "email": 152,
       "phone": 17,
       "other": 0,
@@ -3367,7 +3378,7 @@
     {
       "accountId": "0016O00003dmuK7QAI",
       "account": "Area Wide Communications, LLC",
-      "mrr": null,
+      "mrr": 2147.15,
       "email": 94,
       "phone": 18,
       "other": 1,
@@ -3381,7 +3392,7 @@
     {
       "accountId": "0016O00003dmuK9QAI",
       "account": "Argo Medical, Inc",
-      "mrr": null,
+      "mrr": 1070.86,
       "email": 17,
       "phone": 7,
       "other": 0,
@@ -3395,7 +3406,7 @@
     {
       "accountId": "001PX000001fDNgYAM",
       "account": "Artcom",
-      "mrr": null,
+      "mrr": 624.66,
       "email": 30,
       "phone": 16,
       "other": 2,
@@ -3409,7 +3420,7 @@
     {
       "accountId": "0016O00003dmuKAQAY",
       "account": "ARTCOM Assoc Inc",
-      "mrr": null,
+      "mrr": 624.66,
       "email": 65,
       "phone": 34,
       "other": 1,
@@ -3423,7 +3434,7 @@
     {
       "accountId": "0016O00003dmuKBQAY",
       "account": "ASAP Security Services",
-      "mrr": null,
+      "mrr": 2739.38,
       "email": 146,
       "phone": 49,
       "other": 4,
@@ -3437,7 +3448,7 @@
     {
       "accountId": "0016O00003dmuKDQAY",
       "account": "Aspen Communications",
-      "mrr": null,
+      "mrr": 513.6,
       "email": 44,
       "phone": 8,
       "other": 5,
@@ -3451,7 +3462,7 @@
     {
       "accountId": "001PX00000Syv4xYAB",
       "account": "Ataraxis Solutions",
-      "mrr": null,
+      "mrr": 500,
       "email": 86,
       "phone": 29,
       "other": 1,
@@ -3465,7 +3476,7 @@
     {
       "accountId": "0016O00003dmuKEQAY",
       "account": "Atel Technologies",
-      "mrr": null,
+      "mrr": 0,
       "email": 33,
       "phone": 10,
       "other": 0,
@@ -3493,7 +3504,7 @@
     {
       "accountId": "0016O00003dmuKIQAY",
       "account": "Atlantic Security & Telecom Solutions, Inc.",
-      "mrr": null,
+      "mrr": 500,
       "email": 142,
       "phone": 17,
       "other": 4,
@@ -3507,7 +3518,7 @@
     {
       "accountId": "0016O00003dmuKHQAY",
       "account": "Atlantic Smart Technologies",
-      "mrr": null,
+      "mrr": 661.5,
       "email": 27,
       "phone": 29,
       "other": 1,
@@ -3521,7 +3532,7 @@
     {
       "accountId": "0016O00003dmoT3QAI",
       "account": "ATS Communications, Inc.",
-      "mrr": null,
+      "mrr": 0,
       "email": 99,
       "phone": 52,
       "other": 16,
@@ -3535,7 +3546,7 @@
     {
       "accountId": "0016O00003dmuKKQAY",
       "account": "Audio & Light, Inc.",
-      "mrr": null,
+      "mrr": 761.39,
       "email": 67,
       "phone": 13,
       "other": 1,
@@ -3549,7 +3560,7 @@
     {
       "accountId": "0016O00003dmuKLQAY",
       "account": "Audio Advice",
-      "mrr": null,
+      "mrr": 8.09,
       "email": 111,
       "phone": 29,
       "other": 2,
@@ -3563,7 +3574,7 @@
     {
       "accountId": "0016O00003dmuKMQAY",
       "account": "Audio Electronics Inc.",
-      "mrr": null,
+      "mrr": 1128.6,
       "email": 45,
       "phone": 25,
       "other": 1,
@@ -3577,7 +3588,7 @@
     {
       "accountId": "0016O00003dmuKNQAY",
       "account": "Audio Video Design",
-      "mrr": null,
+      "mrr": 1332.25,
       "email": 58,
       "phone": 35,
       "other": 3,
@@ -3591,7 +3602,7 @@
     {
       "accountId": "001PX00000RlHkDYAV",
       "account": "Audio Video Experts",
-      "mrr": null,
+      "mrr": 0,
       "email": 40,
       "phone": 23,
       "other": 1,
@@ -3605,7 +3616,7 @@
     {
       "accountId": "0016O00003dmuKPQAY",
       "account": "Audio-Video Corporation",
-      "mrr": null,
+      "mrr": 1522.78,
       "email": 62,
       "phone": 39,
       "other": 5,
@@ -3619,7 +3630,7 @@
     {
       "accountId": "0016O00003ebhnMQAQ",
       "account": "Audio-Video Corporation",
-      "mrr": null,
+      "mrr": 1522.78,
       "email": 21,
       "phone": 26,
       "other": 3,
@@ -3633,7 +3644,7 @@
     {
       "accountId": "0016O00003dmuKQQAY",
       "account": "Augusta Communications",
-      "mrr": null,
+      "mrr": 948,
       "email": 47,
       "phone": 10,
       "other": 4,
@@ -3647,7 +3658,7 @@
     {
       "accountId": "0016O00003ZLkdZQAT",
       "account": "Austen Consultants",
-      "mrr": null,
+      "mrr": 0,
       "email": 85,
       "phone": 77,
       "other": 4,
@@ -3661,7 +3672,7 @@
     {
       "accountId": "0016O00003dmud1QAA",
       "account": "Austin Security Ltd.",
-      "mrr": null,
+      "mrr": 861.66,
       "email": 25,
       "phone": 15,
       "other": 2,
@@ -3675,7 +3686,7 @@
     {
       "accountId": "0016O00003dmuKRQAY",
       "account": "Automated Systems Inc (Automated mailroom)",
-      "mrr": null,
+      "mrr": 1040,
       "email": 13,
       "phone": 10,
       "other": 6,
@@ -3689,7 +3700,7 @@
     {
       "accountId": "0016O00003dmuKSQAY",
       "account": "AV Innovations",
-      "mrr": null,
+      "mrr": 588.5,
       "email": 33,
       "phone": 15,
       "other": 3,
@@ -3703,7 +3714,7 @@
     {
       "accountId": "0016O00003dmuKTQAY",
       "account": "Avante Technologies",
-      "mrr": null,
+      "mrr": 474,
       "email": 25,
       "phone": 17,
       "other": 0,
@@ -3717,7 +3728,7 @@
     {
       "accountId": "0016O00003dmuKUQAY",
       "account": "Avarus Solutions, LLC",
-      "mrr": null,
+      "mrr": 474,
       "email": 38,
       "phone": 15,
       "other": 1,
@@ -3731,7 +3742,7 @@
     {
       "accountId": "0016O00003dmuKVQAY",
       "account": "AVC Home Theaters",
-      "mrr": null,
+      "mrr": 790,
       "email": 21,
       "phone": 11,
       "other": 0,
@@ -3745,7 +3756,7 @@
     {
       "accountId": "0011C00002SEHTUQA5",
       "account": "AVSi",
-      "mrr": null,
+      "mrr": 3045.8,
       "email": 171,
       "phone": 57,
       "other": 10,
@@ -3759,7 +3770,7 @@
     {
       "accountId": "0016O00003dmuKXQAY",
       "account": "B & L Telephone",
-      "mrr": null,
+      "mrr": 782.66,
       "email": 16,
       "phone": 25,
       "other": 1,
@@ -3773,7 +3784,7 @@
     {
       "accountId": "0016O00003dmuKYQAY",
       "account": "B. Moyer Radio Communications LLC",
-      "mrr": null,
+      "mrr": 1633.32,
       "email": 61,
       "phone": 22,
       "other": 0,
@@ -3787,7 +3798,7 @@
     {
       "accountId": "0016O00003dmuciQAA",
       "account": "Bahamas Information Access Systems Limited",
-      "mrr": null,
+      "mrr": 476.37,
       "email": 7,
       "phone": 5,
       "other": 0,
@@ -3801,7 +3812,7 @@
     {
       "accountId": "0011500001HNQ48AAH",
       "account": "BalsamWest Fibernet",
-      "mrr": null,
+      "mrr": 18146.94,
       "email": 1486,
       "phone": 194,
       "other": 2,
@@ -3815,7 +3826,7 @@
     {
       "accountId": "0016O00003doC3SQAU",
       "account": "Bank-Tec South",
-      "mrr": null,
+      "mrr": 6520,
       "email": 299,
       "phone": 31,
       "other": 3,
@@ -3829,7 +3840,7 @@
     {
       "accountId": "0016O00003dmuKaQAI",
       "account": "Banner Security Systems Inc",
-      "mrr": null,
+      "mrr": 506,
       "email": 17,
       "phone": 13,
       "other": 1,
@@ -3843,7 +3854,7 @@
     {
       "accountId": "0016O00003Endv5QAB",
       "account": "Barry Communications",
-      "mrr": null,
+      "mrr": 409.5,
       "email": 193,
       "phone": 40,
       "other": 2,
@@ -3857,7 +3868,7 @@
     {
       "accountId": "0016O00003dmuKbQAI",
       "account": "Bartholomew Electric",
-      "mrr": null,
+      "mrr": 832.85,
       "email": 69,
       "phone": 37,
       "other": 3,
@@ -3871,7 +3882,7 @@
     {
       "accountId": "0016O00003dmuKcQAI",
       "account": "Baystate Office Solutions",
-      "mrr": null,
+      "mrr": 474,
       "email": 32,
       "phone": 13,
       "other": 6,
@@ -3885,7 +3896,7 @@
     {
       "accountId": "0016O00003dmuKdQAI",
       "account": "BCS Voice and Data",
-      "mrr": null,
+      "mrr": 1373.88,
       "email": 114,
       "phone": 34,
       "other": 8,
@@ -3899,7 +3910,7 @@
     {
       "accountId": "0016O00003dmuKeQAI",
       "account": "Beacon Telecom",
-      "mrr": null,
+      "mrr": 259.18,
       "email": 114,
       "phone": 43,
       "other": 2,
@@ -3913,7 +3924,7 @@
     {
       "accountId": "0016O00003dmuKfQAI",
       "account": "Behnke Enterprise dba WeKnowBest",
-      "mrr": null,
+      "mrr": 474,
       "email": 25,
       "phone": 10,
       "other": 3,
@@ -3927,7 +3938,7 @@
     {
       "accountId": "0016O00003dmuKgQAI",
       "account": "BEK Business Solutions",
-      "mrr": null,
+      "mrr": 2054,
       "email": 35,
       "phone": 6,
       "other": 1,
@@ -3941,7 +3952,7 @@
     {
       "accountId": "0016O00003GTq0mQAD",
       "account": "BEK Communications",
-      "mrr": null,
+      "mrr": 4427.69,
       "email": 167,
       "phone": 49,
       "other": 9,
@@ -3955,7 +3966,7 @@
     {
       "accountId": "0016O00003dmuKhQAI",
       "account": "Bendix Imaging",
-      "mrr": null,
+      "mrr": 595.14,
       "email": 76,
       "phone": 18,
       "other": 3,
@@ -3969,7 +3980,7 @@
     {
       "accountId": "0016O00003dmuKiQAI",
       "account": "Best Products Sales & Service",
-      "mrr": null,
+      "mrr": 813.89,
       "email": 34,
       "phone": 15,
       "other": 6,
@@ -3983,7 +3994,7 @@
     {
       "accountId": "0016O00003dmuKkQAI",
       "account": "BestComm Networks",
-      "mrr": null,
+      "mrr": 1082.68,
       "email": 80,
       "phone": 15,
       "other": 4,
@@ -4011,7 +4022,7 @@
     {
       "accountId": "0016O00003eaohBQAQ",
       "account": "Bfpe International, Inc.",
-      "mrr": null,
+      "mrr": 572.45,
       "email": 51,
       "phone": 27,
       "other": 1,
@@ -4025,7 +4036,7 @@
     {
       "accountId": "0016O00003dmuKmQAI",
       "account": "Bi-County Scale & Equipment",
-      "mrr": null,
+      "mrr": 1046.77,
       "email": 66,
       "phone": 20,
       "other": 10,
@@ -4039,7 +4050,7 @@
     {
       "accountId": "0016O00003dmuKoQAI",
       "account": "BlueWire Communications",
-      "mrr": null,
+      "mrr": 1160.54,
       "email": 45,
       "phone": 9,
       "other": 1,
@@ -4053,7 +4064,7 @@
     {
       "accountId": "0016O00003dmuKtQAI",
       "account": "Bri-Tech Inc.",
-      "mrr": null,
+      "mrr": 1318.72,
       "email": 165,
       "phone": 40,
       "other": 8,
@@ -4067,7 +4078,7 @@
     {
       "accountId": "0011500001eNpDxAAK",
       "account": "Bridge Communications",
-      "mrr": null,
+      "mrr": 3282.23,
       "email": 231,
       "phone": 60,
       "other": 7,
@@ -4081,7 +4092,7 @@
     {
       "accountId": "0016O00003dmuKsQAI",
       "account": "Brite Ideas",
-      "mrr": null,
+      "mrr": 476.37,
       "email": 14,
       "phone": 6,
       "other": 0,
@@ -4095,7 +4106,7 @@
     {
       "accountId": "0016O00003dmuKuQAI",
       "account": "Brothers Lazer Svc",
-      "mrr": null,
+      "mrr": 899.92,
       "email": 61,
       "phone": 13,
       "other": 4,
@@ -4109,7 +4120,7 @@
     {
       "accountId": "0016O00003dmuKvQAI",
       "account": "Brown Security Solutions",
-      "mrr": null,
+      "mrr": 5696.29,
       "email": 206,
       "phone": 44,
       "other": 2,
@@ -4123,7 +4134,7 @@
     {
       "accountId": "0011500001HNPjcAAH",
       "account": "BTI Communications Group",
-      "mrr": null,
+      "mrr": 1896.18,
       "email": 502,
       "phone": 197,
       "other": 4,
@@ -4137,7 +4148,7 @@
     {
       "accountId": "0016O00003dmuKyQAI",
       "account": "Business Communications Solutions",
-      "mrr": null,
+      "mrr": 0,
       "email": 46,
       "phone": 14,
       "other": 0,
@@ -4151,7 +4162,7 @@
     {
       "accountId": "0016O00003dmuKzQAI",
       "account": "Business Telecom Equipment Inc",
-      "mrr": null,
+      "mrr": 474,
       "email": 43,
       "phone": 12,
       "other": 2,
@@ -4165,7 +4176,7 @@
     {
       "accountId": "0016O00003dmuL0QAI",
       "account": "BusinessWare",
-      "mrr": null,
+      "mrr": 474,
       "email": 59,
       "phone": 22,
       "other": 2,
@@ -4179,7 +4190,7 @@
     {
       "accountId": "0016O00003dmuL2QAI",
       "account": "C&W Technologies",
-      "mrr": null,
+      "mrr": 1203.84,
       "email": 102,
       "phone": 31,
       "other": 4,
@@ -4193,7 +4204,7 @@
     {
       "accountId": "001PX000002HGYhYAO",
       "account": "Calibration, Validation & Research Inc.",
-      "mrr": null,
+      "mrr": 546.96,
       "email": 12,
       "phone": 5,
       "other": 0,
@@ -4207,7 +4218,7 @@
     {
       "accountId": "0016O00003dmuL3QAI",
       "account": "Canyon Telecom",
-      "mrr": null,
+      "mrr": 551.25,
       "email": 95,
       "phone": 68,
       "other": 6,
@@ -4221,7 +4232,7 @@
     {
       "accountId": "001PX00000JPbKqYAL",
       "account": "Carolina Wiring Service, LLC",
-      "mrr": null,
+      "mrr": 34.01,
       "email": 119,
       "phone": 32,
       "other": 11,
@@ -4235,7 +4246,7 @@
     {
       "accountId": "001PX00000Ad0yoYAB",
       "account": "Carrier SI",
-      "mrr": null,
+      "mrr": 790,
       "email": 63,
       "phone": 28,
       "other": 2,
@@ -4249,7 +4260,7 @@
     {
       "accountId": "0016O00003dmuL9QAI",
       "account": "CC-Teknologies Inc.",
-      "mrr": null,
+      "mrr": 2485.39,
       "email": 31,
       "phone": 15,
       "other": 0,
@@ -4263,7 +4274,7 @@
     {
       "accountId": "0016O00003dmuL5QAI",
       "account": "CC&M Inc.",
-      "mrr": null,
+      "mrr": 869,
       "email": 42,
       "phone": 29,
       "other": 5,
@@ -4277,7 +4288,7 @@
     {
       "accountId": "0016O00003dmuL7QAI",
       "account": "CCPlus",
-      "mrr": null,
+      "mrr": 1343,
       "email": 31,
       "phone": 16,
       "other": 1,
@@ -4291,7 +4302,7 @@
     {
       "accountId": "0016O00003dmuLAQAY",
       "account": "Centerpoint IT",
-      "mrr": null,
+      "mrr": 3091.2,
       "email": 188,
       "phone": 30,
       "other": 7,
@@ -4305,7 +4316,7 @@
     {
       "accountId": "0011C00001sb1uDQAQ",
       "account": "Centra IP Networks",
-      "mrr": null,
+      "mrr": 5593.46,
       "email": 477,
       "phone": 159,
       "other": 12,
@@ -4319,7 +4330,7 @@
     {
       "accountId": "0016O00003dmuLBQAY",
       "account": "Central Maine Communications",
-      "mrr": null,
+      "mrr": 535.5,
       "email": 55,
       "phone": 13,
       "other": 3,
@@ -4347,7 +4358,7 @@
     {
       "accountId": "0016O00003dmuLEQAY",
       "account": "Chesapeake Communications, Inc.",
-      "mrr": null,
+      "mrr": 543.85,
       "email": 65,
       "phone": 55,
       "other": 2,
@@ -4361,7 +4372,7 @@
     {
       "accountId": "0016O00003dmuLFQAY",
       "account": "Chesapeake Telephone Systems",
-      "mrr": null,
+      "mrr": 543.85,
       "email": 50,
       "phone": 19,
       "other": 5,
@@ -4375,7 +4386,7 @@
     {
       "accountId": "0016O00003dmuLGQAY",
       "account": "Chief Datacom",
-      "mrr": null,
+      "mrr": 661.5,
       "email": 63,
       "phone": 55,
       "other": 3,
@@ -4403,7 +4414,7 @@
     {
       "accountId": "0016O00003dmuLHQAY",
       "account": "Circle Industries, Inc.",
-      "mrr": null,
+      "mrr": 1268.2,
       "email": 52,
       "phone": 13,
       "other": 1,
@@ -4417,7 +4428,7 @@
     {
       "accountId": "001PX000004hZppYAE",
       "account": "Citi-Telecom Solutions",
-      "mrr": null,
+      "mrr": 343.47,
       "email": 13,
       "phone": 4,
       "other": 0,
@@ -4431,7 +4442,7 @@
     {
       "accountId": "0016O0000370KGaQAM",
       "account": "Citi-Telecom Voice & Data Inc",
-      "mrr": null,
+      "mrr": 343.47,
       "email": 138,
       "phone": 47,
       "other": 0,
@@ -4445,7 +4456,7 @@
     {
       "accountId": "0016O00003dmuLKQAY",
       "account": "City Tel Communications Inc.",
-      "mrr": null,
+      "mrr": 553,
       "email": 11,
       "phone": 23,
       "other": 0,
@@ -4459,7 +4470,7 @@
     {
       "accountId": "0016O00003dmuLLQAY",
       "account": "City Utilities of Springfield",
-      "mrr": null,
+      "mrr": 0,
       "email": 87,
       "phone": 7,
       "other": 1,
@@ -4473,7 +4484,7 @@
     {
       "accountId": "0016O00003dmuLMQAY",
       "account": "CityBlue Technologies, LLC",
-      "mrr": null,
+      "mrr": 502.5,
       "email": 20,
       "phone": 8,
       "other": 0,
@@ -4487,7 +4498,7 @@
     {
       "accountId": "001PX00000XEo0OYAT",
       "account": "CL Sams",
-      "mrr": null,
+      "mrr": 1100,
       "email": 154,
       "phone": 1,
       "other": 4,
@@ -4501,7 +4512,7 @@
     {
       "accountId": "0016O00003dmuLNQAY",
       "account": "Clear Connection (Davis Ulmer)",
-      "mrr": null,
+      "mrr": 3250.38,
       "email": 88,
       "phone": 63,
       "other": 2,
@@ -4515,7 +4526,7 @@
     {
       "accountId": "0016O00003dmuLOQAY",
       "account": "ClearBearing",
-      "mrr": null,
+      "mrr": 1244.36,
       "email": 12,
       "phone": 16,
       "other": 1,
@@ -4529,7 +4540,7 @@
     {
       "accountId": "0016O00003dmuLPQAY",
       "account": "ClearPath Connections",
-      "mrr": null,
+      "mrr": 2146.82,
       "email": 39,
       "phone": 13,
       "other": 2,
@@ -4543,7 +4554,7 @@
     {
       "accountId": "0016O00003dmuLRQAY",
       "account": "CNR Inc.",
-      "mrr": null,
+      "mrr": 816.33,
       "email": 51,
       "phone": 21,
       "other": 0,
@@ -4557,7 +4568,7 @@
     {
       "accountId": "0016O00003dmuLVQAY",
       "account": "Comm-Tronics, Inc.",
-      "mrr": null,
+      "mrr": 481.5,
       "email": 50,
       "phone": 16,
       "other": 4,
@@ -4571,7 +4582,7 @@
     {
       "accountId": "0016O00003dmuLSQAY",
       "account": "Commeg Systems Inc",
-      "mrr": null,
+      "mrr": 474,
       "email": 25,
       "phone": 10,
       "other": 0,
@@ -4585,7 +4596,7 @@
     {
       "accountId": "0016O00003dmuLTQAY",
       "account": "Commercial Refrigeration Systems, Inc.",
-      "mrr": null,
+      "mrr": 699.72,
       "email": 14,
       "phone": 17,
       "other": 1,
@@ -4599,7 +4610,7 @@
     {
       "accountId": "0016O00003dmuLUQAY",
       "account": "Commlink Communications",
-      "mrr": null,
+      "mrr": 1100,
       "email": 40,
       "phone": 10,
       "other": 1,
@@ -4613,7 +4624,7 @@
     {
       "accountId": "0016O00003dmuLWQAY",
       "account": "Communication Experts Group",
-      "mrr": null,
+      "mrr": 474,
       "email": 13,
       "phone": 13,
       "other": 0,
@@ -4627,7 +4638,7 @@
     {
       "accountId": "0016O00003dmuLXQAY",
       "account": "Communication Innovators",
-      "mrr": null,
+      "mrr": 3926.86,
       "email": 206,
       "phone": 19,
       "other": 6,
@@ -4641,7 +4652,7 @@
     {
       "accountId": "0016O00003dmuLYQAY",
       "account": "Communication Network Corp",
-      "mrr": null,
+      "mrr": 1607.52,
       "email": 39,
       "phone": 25,
       "other": 2,
@@ -4655,7 +4666,7 @@
     {
       "accountId": "0016O00003dmuLZQAY",
       "account": "Communication Resources",
-      "mrr": null,
+      "mrr": 2060.58,
       "email": 59,
       "phone": 9,
       "other": 3,
@@ -4669,7 +4680,7 @@
     {
       "accountId": "0016O00003dmuLaQAI",
       "account": "Communication Service Solutions",
-      "mrr": null,
+      "mrr": 1642,
       "email": 323,
       "phone": 36,
       "other": 5,
@@ -4697,7 +4708,7 @@
     {
       "accountId": "0016O00003dmuLcQAI",
       "account": "Communications Diversified",
-      "mrr": null,
+      "mrr": 0,
       "email": 26,
       "phone": 6,
       "other": 0,
@@ -4711,7 +4722,7 @@
     {
       "accountId": "0011C00001sazLFQAY",
       "account": "Communications Unlimited",
-      "mrr": null,
+      "mrr": 788.45,
       "email": 53,
       "phone": 23,
       "other": 4,
@@ -4725,7 +4736,7 @@
     {
       "accountId": "0011500001U7ZPEAA3",
       "account": "Communications Unlimited Inc.",
-      "mrr": null,
+      "mrr": 788.45,
       "email": 90,
       "phone": 110,
       "other": 8,
@@ -4739,7 +4750,7 @@
     {
       "accountId": "0016O00003dmuLeQAI",
       "account": "Commworld Metro",
-      "mrr": null,
+      "mrr": 572.45,
       "email": 19,
       "phone": 15,
       "other": 1,
@@ -4753,7 +4764,7 @@
     {
       "accountId": "0016O00003dmuLfQAI",
       "account": "CommWorld Of Kansas City",
-      "mrr": null,
+      "mrr": 553,
       "email": 70,
       "phone": 4,
       "other": 1,
@@ -4767,7 +4778,7 @@
     {
       "accountId": "0016O00003dmudFQAQ",
       "account": "Complete Communications Inc.",
-      "mrr": null,
+      "mrr": 930.9,
       "email": 59,
       "phone": 12,
       "other": 1,
@@ -4781,7 +4792,7 @@
     {
       "accountId": "0016O00003dmuLgQAI",
       "account": "Compu-net Systems",
-      "mrr": null,
+      "mrr": 0,
       "email": 46,
       "phone": 14,
       "other": 0,
@@ -4795,7 +4806,7 @@
     {
       "accountId": "0016O00003dmos9QAA",
       "account": "Compu-Tech, Inc.",
-      "mrr": null,
+      "mrr": 810,
       "email": 189,
       "phone": 21,
       "other": 29,
@@ -4809,7 +4820,7 @@
     {
       "accountId": "0016O00003dmosuQAA",
       "account": "Computer World Inc",
-      "mrr": null,
+      "mrr": 1251.9,
       "email": 1,
       "phone": 7,
       "other": 0,
@@ -4823,7 +4834,7 @@
     {
       "accountId": "0016O00003dmuL8QAI",
       "account": "Computer World Inc",
-      "mrr": null,
+      "mrr": 1251.9,
       "email": 41,
       "phone": 34,
       "other": 2,
@@ -4837,7 +4848,7 @@
     {
       "accountId": "0016O00003dmuLlQAI",
       "account": "Comtech Business Systems Inc",
-      "mrr": null,
+      "mrr": 680.08,
       "email": 48,
       "phone": 15,
       "other": 0,
@@ -4851,7 +4862,7 @@
     {
       "accountId": "0016O00003dmuLmQAI",
       "account": "Comtel, S.A.",
-      "mrr": null,
+      "mrr": 758.88,
       "email": 5,
       "phone": 2,
       "other": 3,
@@ -4865,7 +4876,7 @@
     {
       "accountId": "0016O00003dmuLnQAI",
       "account": "Connect Telephone & Computer",
-      "mrr": null,
+      "mrr": 1279.08,
       "email": 28,
       "phone": 20,
       "other": 1,
@@ -4879,7 +4890,7 @@
     {
       "accountId": "0016O00003dmuLoQAI",
       "account": "Connecticut Communications",
-      "mrr": null,
+      "mrr": 1982.3,
       "email": 141,
       "phone": 38,
       "other": 7,
@@ -4893,7 +4904,7 @@
     {
       "accountId": "0011C000021D9oLQAS",
       "account": "Converged Networks",
-      "mrr": null,
+      "mrr": 4304.19,
       "email": 306,
       "phone": 104,
       "other": 4,
@@ -4907,7 +4918,7 @@
     {
       "accountId": "001PX00000CkqfvYAB",
       "account": "Convergent Solutions",
-      "mrr": null,
+      "mrr": 810.39,
       "email": 92,
       "phone": 29,
       "other": 14,
@@ -4921,7 +4932,7 @@
     {
       "accountId": "0016O00003dmuLsQAI",
       "account": "Corbell Telephone & Electronic (CTE)",
-      "mrr": null,
+      "mrr": 489.8,
       "email": 13,
       "phone": 11,
       "other": 0,
@@ -4935,7 +4946,7 @@
     {
       "accountId": "0016O00003ebavfQAA",
       "account": "Core3 Pty Ltd",
-      "mrr": null,
+      "mrr": 661.92,
       "email": 17,
       "phone": 2,
       "other": 0,
@@ -4949,7 +4960,7 @@
     {
       "accountId": "0016O00003dmuLtQAI",
       "account": "Corporate Telephone Services, Inc",
-      "mrr": null,
+      "mrr": 1279.08,
       "email": 60,
       "phone": 20,
       "other": 4,
@@ -4963,7 +4974,7 @@
     {
       "accountId": "0016O00003dmuLuQAI",
       "account": "COS COB TV LLC",
-      "mrr": null,
+      "mrr": 474,
       "email": 80,
       "phone": 8,
       "other": 2,
@@ -4977,7 +4988,7 @@
     {
       "accountId": "0016O00003dmuLvQAI",
       "account": "CPE Communications and Security Systems Inc. DBA CPE Interlink",
-      "mrr": null,
+      "mrr": 960.86,
       "email": 45,
       "phone": 13,
       "other": 0,
@@ -4991,7 +5002,7 @@
     {
       "accountId": "0011C00002M3wP3QAJ",
       "account": "CPI Technologies, LLC",
-      "mrr": null,
+      "mrr": 455,
       "email": 194,
       "phone": 71,
       "other": 27,
@@ -5005,7 +5016,7 @@
     {
       "accountId": "0016O00003dmucxQAA",
       "account": "CRC Communications Limited",
-      "mrr": null,
+      "mrr": 1325.64,
       "email": 73,
       "phone": 11,
       "other": 2,
@@ -5019,7 +5030,7 @@
     {
       "accountId": "0016O00003dmoeGQAQ",
       "account": "CREG Systems Corp",
-      "mrr": null,
+      "mrr": 1254.15,
       "email": 38,
       "phone": 17,
       "other": 1,
@@ -5033,7 +5044,7 @@
     {
       "accountId": "0016O00003ebnluQAA",
       "account": "Cross Country Telephone Systems",
-      "mrr": null,
+      "mrr": 926.16,
       "email": 95,
       "phone": 25,
       "other": 5,
@@ -5061,7 +5072,7 @@
     {
       "accountId": "0016O00003dmuLzQAI",
       "account": "CTI (Concate Technologies)",
-      "mrr": null,
+      "mrr": 577.32,
       "email": 40,
       "phone": 30,
       "other": 2,
@@ -5075,7 +5086,7 @@
     {
       "accountId": "0016O00003dmuOTQAY",
       "account": "CTS Services",
-      "mrr": null,
+      "mrr": 1714.3,
       "email": 130,
       "phone": 17,
       "other": 6,
@@ -5089,7 +5100,7 @@
     {
       "accountId": "0016O00003ebbE8QAI",
       "account": "Custom Communications & Security",
-      "mrr": null,
+      "mrr": 8.14,
       "email": 2,
       "phone": 1,
       "other": 0,
@@ -5103,7 +5114,7 @@
     {
       "accountId": "0016O00003ebirGQAQ",
       "account": "Cyber Technology Security",
-      "mrr": null,
+      "mrr": 1412.4,
       "email": 34,
       "phone": 25,
       "other": 3,
@@ -5117,7 +5128,7 @@
     {
       "accountId": "0016O00003dmuOUQAY",
       "account": "DakMinn Technologies",
-      "mrr": null,
+      "mrr": 474,
       "email": 11,
       "phone": 10,
       "other": 0,
@@ -5131,7 +5142,7 @@
     {
       "accountId": "0016O00003dmuOVQAY",
       "account": "Dakota Structured Cabling",
-      "mrr": null,
+      "mrr": 580.65,
       "email": 111,
       "phone": 35,
       "other": 6,
@@ -5145,7 +5156,7 @@
     {
       "accountId": "0016O00003dmuOWQAY",
       "account": "Darley's Plumbing, Inc.",
-      "mrr": null,
+      "mrr": -240,
       "email": 33,
       "phone": 21,
       "other": 0,
@@ -5159,7 +5170,7 @@
     {
       "accountId": "0016O00003dmuOYQAY",
       "account": "Data Smart Computers Inc",
-      "mrr": null,
+      "mrr": 1343.92,
       "email": 126,
       "phone": 26,
       "other": 2,
@@ -5173,7 +5184,7 @@
     {
       "accountId": "0016O00003dmudqQAA",
       "account": "DataCom Solutions, Inc.",
-      "mrr": null,
+      "mrr": 73.13,
       "email": 24,
       "phone": 16,
       "other": 1,
@@ -5187,7 +5198,7 @@
     {
       "accountId": "0016O00003dmuOZQAY",
       "account": "Datapro Solutions",
-      "mrr": null,
+      "mrr": 782.66,
       "email": 15,
       "phone": 4,
       "other": 0,
@@ -5215,7 +5226,7 @@
     {
       "accountId": "0016O00003dmuObQAI",
       "account": "David Carroll Associates, Inc.",
-      "mrr": null,
+      "mrr": 3724.86,
       "email": 79,
       "phone": 7,
       "other": 21,
@@ -5257,7 +5268,7 @@
     {
       "accountId": "0016O00003dmuOdQAI",
       "account": "DCR-Nashville",
-      "mrr": null,
+      "mrr": 3917.55,
       "email": 105,
       "phone": 35,
       "other": 3,
@@ -5271,7 +5282,7 @@
     {
       "accountId": "0016O00003ebkAoQAI",
       "account": "Delaware Audio Visual",
-      "mrr": null,
+      "mrr": 1011.15,
       "email": 62,
       "phone": 30,
       "other": 2,
@@ -5285,7 +5296,7 @@
     {
       "accountId": "0016O00003dmuOeQAI",
       "account": "Delaware Business Systems",
-      "mrr": null,
+      "mrr": 1570.93,
       "email": 37,
       "phone": 15,
       "other": 2,
@@ -5299,7 +5310,7 @@
     {
       "accountId": "0016O00003dmuOgQAI",
       "account": "Delta Telephone & Cabling",
-      "mrr": null,
+      "mrr": 553,
       "email": 20,
       "phone": 12,
       "other": 3,
@@ -5313,7 +5324,7 @@
     {
       "accountId": "0016O00003dmuOhQAI",
       "account": "DEP Technologies",
-      "mrr": null,
+      "mrr": 629.7,
       "email": 38,
       "phone": 23,
       "other": 4,
@@ -5327,7 +5338,7 @@
     {
       "accountId": "001PX00000NIlzJYAT",
       "account": "DeTel Communications",
-      "mrr": null,
+      "mrr": 428,
       "email": 40,
       "phone": 12,
       "other": 2,
@@ -5341,7 +5352,7 @@
     {
       "accountId": "0016O00003dmuOkQAI",
       "account": "Digicorp",
-      "mrr": null,
+      "mrr": 500,
       "email": 111,
       "phone": 73,
       "other": 12,
@@ -5355,7 +5366,7 @@
     {
       "accountId": "0016O00003dmuOlQAI",
       "account": "Digital Provisions, Inc.",
-      "mrr": null,
+      "mrr": 2171.72,
       "email": 29,
       "phone": 8,
       "other": 2,
@@ -5369,7 +5380,7 @@
     {
       "accountId": "0011C00002iU7CcQAK",
       "account": "Digital Telecommunications",
-      "mrr": null,
+      "mrr": 2171.72,
       "email": 129,
       "phone": 40,
       "other": 5,
@@ -5383,7 +5394,7 @@
     {
       "accountId": "0016O00003dmuc2QAA",
       "account": "Digitel Systems Inc.",
-      "mrr": null,
+      "mrr": 1102.5,
       "email": 58,
       "phone": 12,
       "other": 1,
@@ -5397,7 +5408,7 @@
     {
       "accountId": "0011C00001tki4GQAQ",
       "account": "Dish Network",
-      "mrr": null,
+      "mrr": 0,
       "email": 84,
       "phone": 3,
       "other": 3,
@@ -5411,7 +5422,7 @@
     {
       "accountId": "0016O00003dmuOmQAI",
       "account": "Diversified Digital Group - Main",
-      "mrr": null,
+      "mrr": 715.39,
       "email": 73,
       "phone": 50,
       "other": 6,
@@ -5425,7 +5436,7 @@
     {
       "accountId": "0016O00003dmuOnQAI",
       "account": "Dividia",
-      "mrr": null,
+      "mrr": 1396.53,
       "email": 86,
       "phone": 30,
       "other": 1,
@@ -5439,7 +5450,7 @@
     {
       "accountId": "0016O00003dmuOoQAI",
       "account": "Docuquest",
-      "mrr": null,
+      "mrr": 753.9,
       "email": 49,
       "phone": 20,
       "other": 0,
@@ -5453,7 +5464,7 @@
     {
       "accountId": "0016O00003dmucfQAA",
       "account": "Doing Things Simply",
-      "mrr": null,
+      "mrr": 2818.8,
       "email": 46,
       "phone": 12,
       "other": 1,
@@ -5467,7 +5478,7 @@
     {
       "accountId": "0016O00003dmuOpQAI",
       "account": "Dolbey Jamison Optical",
-      "mrr": null,
+      "mrr": 376.2,
       "email": 12,
       "phone": 4,
       "other": 0,
@@ -5481,7 +5492,7 @@
     {
       "accountId": "0016O00003dmuOqQAI",
       "account": "Dominion Design & Integration",
-      "mrr": null,
+      "mrr": 1009.24,
       "email": 24,
       "phone": 13,
       "other": 0,
@@ -5495,7 +5506,7 @@
     {
       "accountId": "0016O00003dmuOrQAI",
       "account": "Dominion Lock And Security",
-      "mrr": null,
+      "mrr": 1507.77,
       "email": 17,
       "phone": 16,
       "other": 2,
@@ -5509,7 +5520,7 @@
     {
       "accountId": "0016O00003dmuOsQAI",
       "account": "DSR Inc.",
-      "mrr": null,
+      "mrr": 553,
       "email": 56,
       "phone": 10,
       "other": 1,
@@ -5523,7 +5534,7 @@
     {
       "accountId": "0016O00003dmuOtQAI",
       "account": "DTEL Telecommunications Inc",
-      "mrr": null,
+      "mrr": 914.64,
       "email": 131,
       "phone": 46,
       "other": 4,
@@ -5537,7 +5548,7 @@
     {
       "accountId": "0016O00003dmuOuQAI",
       "account": "Duffie's Copier Consultants LLC ( now CL Sams)",
-      "mrr": null,
+      "mrr": 120.74,
       "email": 56,
       "phone": 21,
       "other": 19,
@@ -5551,7 +5562,7 @@
     {
       "accountId": "0016O00003dmuOvQAI",
       "account": "DVX Inc _Data Voice Exchange",
-      "mrr": null,
+      "mrr": 474,
       "email": 16,
       "phone": 7,
       "other": 1,
@@ -5565,7 +5576,7 @@
     {
       "accountId": "0016O00003dmuOwQAI",
       "account": "E & H Integrated Systems",
-      "mrr": null,
+      "mrr": 790,
       "email": 67,
       "phone": 17,
       "other": 7,
@@ -5579,7 +5590,7 @@
     {
       "accountId": "0011500001HNQIUAA5",
       "account": "E Tech Communications",
-      "mrr": null,
+      "mrr": 474,
       "email": 27,
       "phone": 18,
       "other": 2,
@@ -5593,7 +5604,7 @@
     {
       "accountId": "0016O00003dmuPKQAY",
       "account": "E Z Tel Inc",
-      "mrr": null,
+      "mrr": 759.42,
       "email": 67,
       "phone": 23,
       "other": 1,
@@ -5607,7 +5618,7 @@
     {
       "accountId": "0016O00003dmuOyQAI",
       "account": "Eagle Networks",
-      "mrr": null,
+      "mrr": 474,
       "email": 26,
       "phone": 3,
       "other": 0,
@@ -5621,7 +5632,7 @@
     {
       "accountId": "0016O00003dmuclQAA",
       "account": "EagleCraft Boats",
-      "mrr": null,
+      "mrr": 474,
       "email": 6,
       "phone": 4,
       "other": 0,
@@ -5635,7 +5646,7 @@
     {
       "accountId": "0016O00003dmuOzQAI",
       "account": "Eastern American Data / Voice Inc.",
-      "mrr": null,
+      "mrr": 1297.93,
       "email": 89,
       "phone": 28,
       "other": 10,
@@ -5649,7 +5660,7 @@
     {
       "accountId": "0016O00003dmuP0QAI",
       "account": "Eastern Communications",
-      "mrr": null,
+      "mrr": 3941.3,
       "email": 23,
       "phone": 23,
       "other": 0,
@@ -5663,7 +5674,7 @@
     {
       "accountId": "0016O00003dmo9TQAQ",
       "account": "Eastern DataComm",
-      "mrr": null,
+      "mrr": 5943.89,
       "email": 546,
       "phone": 30,
       "other": 24,
@@ -5677,7 +5688,7 @@
     {
       "accountId": "0016O00003dmuP1QAI",
       "account": "Eastern Fire & Safety, LLC",
-      "mrr": null,
+      "mrr": 1413.64,
       "email": 59,
       "phone": 52,
       "other": 0,
@@ -5691,7 +5702,7 @@
     {
       "accountId": "0016O00003dmuP2QAI",
       "account": "ECI Systems LLC",
-      "mrr": null,
+      "mrr": 535.5,
       "email": 24,
       "phone": 14,
       "other": 0,
@@ -5705,7 +5716,7 @@
     {
       "accountId": "001PX000004hVa5YAE",
       "account": "ECI-Empire Communications",
-      "mrr": null,
+      "mrr": 1354.5,
       "email": 208,
       "phone": 33,
       "other": 0,
@@ -5719,7 +5730,7 @@
     {
       "accountId": "0016O00003dmuP3QAI",
       "account": "Edge One",
-      "mrr": null,
+      "mrr": 449.13,
       "email": 28,
       "phone": 7,
       "other": 0,
@@ -5733,7 +5744,7 @@
     {
       "accountId": "0016O00003dmuP4QAI",
       "account": "eDigitalDeals, Inc",
-      "mrr": null,
+      "mrr": 474,
       "email": 61,
       "phone": 11,
       "other": 1,
@@ -5747,7 +5758,7 @@
     {
       "accountId": "001PX00000GUkE7YAL",
       "account": "Electronic Innovations",
-      "mrr": null,
+      "mrr": 0,
       "email": 25,
       "phone": 16,
       "other": 3,
@@ -5761,7 +5772,7 @@
     {
       "accountId": "0016O00003IS0O0QAL",
       "account": "Electronic Specialties, Inc",
-      "mrr": null,
+      "mrr": 474,
       "email": 104,
       "phone": 7,
       "other": 8,
@@ -5775,7 +5786,7 @@
     {
       "accountId": "0016O00003dmuP7QAI",
       "account": "Electronic Specialty Company",
-      "mrr": null,
+      "mrr": 2088.54,
       "email": 56,
       "phone": 28,
       "other": 1,
@@ -5789,7 +5800,7 @@
     {
       "accountId": "0011C00002ZDHpmQAH",
       "account": "Emi Business Communications",
-      "mrr": null,
+      "mrr": 474,
       "email": 18,
       "phone": 30,
       "other": 0,
@@ -5803,7 +5814,7 @@
     {
       "accountId": "0016O00003dmuP9QAI",
       "account": "Empire Communication Systems Inc",
-      "mrr": null,
+      "mrr": 895.73,
       "email": 53,
       "phone": 8,
       "other": 1,
@@ -5817,7 +5828,7 @@
     {
       "accountId": "0011500001X82QZAAZ",
       "account": "Enhanced Telecommunications & Data",
-      "mrr": null,
+      "mrr": 890.44,
       "email": 106,
       "phone": 30,
       "other": 3,
@@ -5831,7 +5842,7 @@
     {
       "accountId": "0011500001HNQF2AAP",
       "account": "Enterprise Systems",
-      "mrr": null,
+      "mrr": 474,
       "email": 98,
       "phone": 54,
       "other": 15,
@@ -5845,7 +5856,7 @@
     {
       "accountId": "0016O00003dmuPAQAY",
       "account": "Environmental & Safety Support",
-      "mrr": null,
+      "mrr": 561.75,
       "email": 158,
       "phone": 22,
       "other": 3,
@@ -5859,7 +5870,7 @@
     {
       "accountId": "0016O00003dmuPBQAY",
       "account": "ERP Safety",
-      "mrr": null,
+      "mrr": 403.01,
       "email": 11,
       "phone": 11,
       "other": 0,
@@ -5873,7 +5884,7 @@
     {
       "accountId": "0016O00003dmuPCQAY",
       "account": "ESM Security Systems",
-      "mrr": null,
+      "mrr": 553,
       "email": 25,
       "phone": 29,
       "other": 1,
@@ -5887,7 +5898,7 @@
     {
       "accountId": "0016O000035WCFlQAO",
       "account": "ET&T Corporation",
-      "mrr": null,
+      "mrr": 769.58,
       "email": 97,
       "phone": 14,
       "other": 0,
@@ -5901,7 +5912,7 @@
     {
       "accountId": "0016O00003dmpJZQAY",
       "account": "Eternal Networks",
-      "mrr": null,
+      "mrr": 784.67,
       "email": 91,
       "phone": 38,
       "other": 5,
@@ -5915,7 +5926,7 @@
     {
       "accountId": "0016O00003dmuPDQAY",
       "account": "ETG Systems",
-      "mrr": null,
+      "mrr": 20.83,
       "email": 80,
       "phone": 48,
       "other": 2,
@@ -5929,7 +5940,7 @@
     {
       "accountId": "0016O00003dmuPEQAY",
       "account": "Euclid Telecom Inc",
-      "mrr": null,
+      "mrr": 474,
       "email": 11,
       "phone": 14,
       "other": 1,
@@ -5943,7 +5954,7 @@
     {
       "accountId": "001PX00000NZjt8YAD",
       "account": "Evotech",
-      "mrr": null,
+      "mrr": 636.65,
       "email": 38,
       "phone": 26,
       "other": 1,
@@ -5957,7 +5968,7 @@
     {
       "accountId": "0016O00003dmuPGQAY",
       "account": "Ex-Cel Solutions",
-      "mrr": null,
+      "mrr": 948,
       "email": 46,
       "phone": 11,
       "other": 0,
@@ -5971,7 +5982,7 @@
     {
       "accountId": "0016O00003dmuPHQAY",
       "account": "Executive Network Technologies Inc",
-      "mrr": null,
+      "mrr": 1408.23,
       "email": 105,
       "phone": 30,
       "other": 2,
@@ -5985,7 +5996,7 @@
     {
       "accountId": "0016O00003dmuPIQAY",
       "account": "Executone Systems Co Of LA",
-      "mrr": null,
+      "mrr": 1128.6,
       "email": 119,
       "phone": 23,
       "other": 5,
@@ -6013,7 +6024,7 @@
     {
       "accountId": "0016O00003dmuPLQAY",
       "account": "Falcon Communications Solution",
-      "mrr": null,
+      "mrr": 656.4,
       "email": 40,
       "phone": 21,
       "other": 2,
@@ -6027,7 +6038,7 @@
     {
       "accountId": "0016O00003dmuPMQAY",
       "account": "Favorite Office Automation",
-      "mrr": null,
+      "mrr": 539,
       "email": 55,
       "phone": 11,
       "other": 3,
@@ -6041,7 +6052,7 @@
     {
       "accountId": "0016O00003dmuPOQAY",
       "account": "Fire Team Security, Inc",
-      "mrr": null,
+      "mrr": 1295,
       "email": 120,
       "phone": 18,
       "other": 14,
@@ -6055,7 +6066,7 @@
     {
       "accountId": "0016O00003dmuPPQAY",
       "account": "First Choice Communication Svc",
-      "mrr": null,
+      "mrr": 2844.84,
       "email": 11,
       "phone": 3,
       "other": 0,
@@ -6069,7 +6080,7 @@
     {
       "accountId": "0016O00003dmuPQQAY",
       "account": "Firstline Communications",
-      "mrr": null,
+      "mrr": 1881,
       "email": 123,
       "phone": 75,
       "other": 13,
@@ -6083,7 +6094,7 @@
     {
       "accountId": "0016O00003dmuPRQAY",
       "account": "FirstLink Communications",
-      "mrr": null,
+      "mrr": 474,
       "email": 41,
       "phone": 18,
       "other": 1,
@@ -6097,7 +6108,7 @@
     {
       "accountId": "0016O00003dmuPSQAY",
       "account": "Fisher Systems Inc.",
-      "mrr": null,
+      "mrr": 1209.75,
       "email": 43,
       "phone": 8,
       "other": 1,
@@ -6111,7 +6122,7 @@
     {
       "accountId": "0016O00003dmuPTQAY",
       "account": "FITT Telecommunications, Inc",
-      "mrr": null,
+      "mrr": 707.82,
       "email": 33,
       "phone": 8,
       "other": 2,
@@ -6125,7 +6136,7 @@
     {
       "accountId": "0016O00003dmuPUQAY",
       "account": "Fitzgerald Lighting",
-      "mrr": null,
+      "mrr": 396.9,
       "email": 35,
       "phone": 8,
       "other": 1,
@@ -6139,7 +6150,7 @@
     {
       "accountId": "001PX0000026cPjYAI",
       "account": "Five Star Telecom",
-      "mrr": null,
+      "mrr": 1041.93,
       "email": 94,
       "phone": 12,
       "other": 1,
@@ -6153,7 +6164,7 @@
     {
       "accountId": "0016O00003dmuPWQAY",
       "account": "FleetBoss GPS",
-      "mrr": null,
+      "mrr": 474,
       "email": 23,
       "phone": 19,
       "other": 1,
@@ -6167,7 +6178,7 @@
     {
       "accountId": "0016O00003dmuPXQAY",
       "account": "Forth Foods",
-      "mrr": null,
+      "mrr": 991.26,
       "email": 20,
       "phone": 18,
       "other": 0,
@@ -6181,7 +6192,7 @@
     {
       "accountId": "0016O00003ebi5PQAQ",
       "account": "Franklin Electric Co Inc",
-      "mrr": null,
+      "mrr": 975,
       "email": 144,
       "phone": 30,
       "other": 5,
@@ -6195,7 +6206,7 @@
     {
       "accountId": "0016O00003dmuPaQAI",
       "account": "FST Technologies, LLC",
-      "mrr": null,
+      "mrr": 1041.93,
       "email": 26,
       "phone": 3,
       "other": 2,
@@ -6209,7 +6220,7 @@
     {
       "accountId": "0016O00003dmuPbQAI",
       "account": "FTI Services",
-      "mrr": null,
+      "mrr": 3224.7,
       "email": 141,
       "phone": 15,
       "other": 25,
@@ -6223,7 +6234,7 @@
     {
       "accountId": "0016O00003dmuPcQAI",
       "account": "Fusion Digital",
-      "mrr": null,
+      "mrr": 2356,
       "email": 140,
       "phone": 13,
       "other": 1,
@@ -6237,7 +6248,7 @@
     {
       "accountId": "0016O00003dmue8QAA",
       "account": "Fusion Security",
-      "mrr": null,
+      "mrr": 2356,
       "email": 78,
       "phone": 21,
       "other": 3,
@@ -6251,7 +6262,7 @@
     {
       "accountId": "0016O00003dmuPdQAI",
       "account": "Gage Telephone Systems Inc",
-      "mrr": null,
+      "mrr": 1279.08,
       "email": 108,
       "phone": 30,
       "other": 2,
@@ -6265,7 +6276,7 @@
     {
       "accountId": "0016O00003ebleOQAQ",
       "account": "Galaxy Integrated Technologies",
-      "mrr": null,
+      "mrr": 2792.7,
       "email": 110,
       "phone": 45,
       "other": 2,
@@ -6293,7 +6304,7 @@
     {
       "accountId": "0016O00003dmuPfQAI",
       "account": "Gemba Security",
-      "mrr": null,
+      "mrr": 200,
       "email": 29,
       "phone": 15,
       "other": 1,
@@ -6307,7 +6318,7 @@
     {
       "accountId": "001PX00000FgqYeYAJ",
       "account": "Generex Systems",
-      "mrr": null,
+      "mrr": 321,
       "email": 8,
       "phone": 0,
       "other": 1,
@@ -6321,7 +6332,7 @@
     {
       "accountId": "0016O00003dmuPhQAI",
       "account": "Genesis Computers",
-      "mrr": null,
+      "mrr": 1229.16,
       "email": 53,
       "phone": 22,
       "other": 3,
@@ -6335,7 +6346,7 @@
     {
       "accountId": "0016O00003dmuPiQAI",
       "account": "Genie Innovations, Inc.",
-      "mrr": null,
+      "mrr": 652.62,
       "email": 5,
       "phone": 26,
       "other": 0,
@@ -6349,7 +6360,7 @@
     {
       "accountId": "0016O00003dmuPjQAI",
       "account": "Glessner Alarm & Communication",
-      "mrr": null,
+      "mrr": 2528,
       "email": 92,
       "phone": 51,
       "other": 0,
@@ -6363,7 +6374,7 @@
     {
       "accountId": "0016O00003ZKD4AQAX",
       "account": "Global Telecom Supply",
-      "mrr": null,
+      "mrr": 1132.83,
       "email": 127,
       "phone": 27,
       "other": 2,
@@ -6377,7 +6388,7 @@
     {
       "accountId": "0011C00001xpww3QAA",
       "account": "Globalscope Communications",
-      "mrr": null,
+      "mrr": 801.43,
       "email": 49,
       "phone": 21,
       "other": 4,
@@ -6391,7 +6402,7 @@
     {
       "accountId": "0016O00003dmuPlQAI",
       "account": "Golden West Technologies",
-      "mrr": null,
+      "mrr": 200,
       "email": 137,
       "phone": 4,
       "other": 0,
@@ -6405,7 +6416,7 @@
     {
       "accountId": "0016O00003dmuPmQAI",
       "account": "Goldfield Telecom",
-      "mrr": null,
+      "mrr": 1185,
       "email": 59,
       "phone": 39,
       "other": 11,
@@ -6419,7 +6430,7 @@
     {
       "accountId": "0011C00001vBO3qQAG",
       "account": "Goosetown Communications",
-      "mrr": null,
+      "mrr": 0,
       "email": 109,
       "phone": 28,
       "other": 2,
@@ -6433,7 +6444,7 @@
     {
       "accountId": "0016O00003edGmmQAE",
       "account": "Gotham Telecom",
-      "mrr": null,
+      "mrr": 0,
       "email": 84,
       "phone": 98,
       "other": 0,
@@ -6447,7 +6458,7 @@
     {
       "accountId": "0016O00003dmuPnQAI",
       "account": "Gracon Services",
-      "mrr": null,
+      "mrr": 545.66,
       "email": 26,
       "phone": 15,
       "other": 4,
@@ -6461,7 +6472,7 @@
     {
       "accountId": "0016O00003dmuPoQAI",
       "account": "Grand Central Station Internet Services, Inc.",
-      "mrr": null,
+      "mrr": 588.5,
       "email": 141,
       "phone": 14,
       "other": 4,
@@ -6489,7 +6500,7 @@
     {
       "accountId": "001PX000004hVziYAE",
       "account": "Greenbrier Communications",
-      "mrr": null,
+      "mrr": 1580.04,
       "email": 173,
       "phone": 109,
       "other": 6,
@@ -6503,7 +6514,7 @@
     {
       "accountId": "0016O00003dmuPqQAI",
       "account": "Gregg Communications Systems",
-      "mrr": null,
+      "mrr": 1106,
       "email": 68,
       "phone": 43,
       "other": 10,
@@ -6517,7 +6528,7 @@
     {
       "accountId": "0016O00003dmuPrQAI",
       "account": "Grennan Communications",
-      "mrr": null,
+      "mrr": 825.79,
       "email": 77,
       "phone": 26,
       "other": 1,
@@ -6545,7 +6556,7 @@
     {
       "accountId": "001PX00000S1NwzYAF",
       "account": "Guardian Advanced Solutions",
-      "mrr": null,
+      "mrr": 435.48,
       "email": 151,
       "phone": 13,
       "other": 3,
@@ -6559,7 +6570,7 @@
     {
       "accountId": "0016O00003dmuPtQAI",
       "account": "H & H COMMUNICATIONS, INC",
-      "mrr": null,
+      "mrr": 790,
       "email": 10,
       "phone": 9,
       "other": 0,
@@ -6573,7 +6584,7 @@
     {
       "accountId": "0016O00003dmuPuQAI",
       "account": "Haivision MCS",
-      "mrr": null,
+      "mrr": 2783,
       "email": 34,
       "phone": 60,
       "other": 4,
@@ -6587,7 +6598,7 @@
     {
       "accountId": "0016O00003dmue5QAA",
       "account": "Hardwire Telecom",
-      "mrr": null,
+      "mrr": 480.03,
       "email": 83,
       "phone": 13,
       "other": 1,
@@ -6601,7 +6612,7 @@
     {
       "accountId": "0016O00003dmuPwQAI",
       "account": "Harris Computer",
-      "mrr": null,
+      "mrr": 875.88,
       "email": 26,
       "phone": 5,
       "other": 3,
@@ -6615,7 +6626,7 @@
     {
       "accountId": "0016O00003dmolcQAA",
       "account": "Harris Technology Services, Inc",
-      "mrr": null,
+      "mrr": 0,
       "email": 42,
       "phone": 20,
       "other": 0,
@@ -6629,7 +6640,7 @@
     {
       "accountId": "001PX00000CbOBHYA3",
       "account": "Heartland Steel Doors Ltd.",
-      "mrr": null,
+      "mrr": 551.05,
       "email": 8,
       "phone": 16,
       "other": 2,
@@ -6643,7 +6654,7 @@
     {
       "accountId": "0016O00003dmoxJQAQ",
       "account": "Helios TFB",
-      "mrr": null,
+      "mrr": 666.36,
       "email": 35,
       "phone": 15,
       "other": 9,
@@ -6657,7 +6668,7 @@
     {
       "accountId": "0016O00003dmuPzQAI",
       "account": "Heritage Communications Inc",
-      "mrr": null,
+      "mrr": 474,
       "email": 5,
       "phone": 15,
       "other": 0,
@@ -6671,7 +6682,7 @@
     {
       "accountId": "0016O00003doC5KQAU",
       "account": "Herring Technology",
-      "mrr": null,
+      "mrr": 2846.44,
       "email": 63,
       "phone": 15,
       "other": 2,
@@ -6685,7 +6696,7 @@
     {
       "accountId": "0016O00003dmuQ2QAI",
       "account": "Hi Tech Enterprises, Inc",
-      "mrr": null,
+      "mrr": 661.5,
       "email": 8,
       "phone": 15,
       "other": 0,
@@ -6699,7 +6710,7 @@
     {
       "accountId": "0016O00003dmuQ0QAI",
       "account": "High Country Workplace Technologies",
-      "mrr": null,
+      "mrr": 425,
       "email": 135,
       "phone": 32,
       "other": 2,
@@ -6713,7 +6724,7 @@
     {
       "accountId": "0016O00003dmucnQAA",
       "account": "High Tech Communications Inc.",
-      "mrr": null,
+      "mrr": 1190.7,
       "email": 57,
       "phone": 2,
       "other": 2,
@@ -6727,7 +6738,7 @@
     {
       "accountId": "0016O00003dmuQ1QAI",
       "account": "High Tech Innovations",
-      "mrr": null,
+      "mrr": 0,
       "email": 90,
       "phone": 129,
       "other": 2,
@@ -6741,7 +6752,7 @@
     {
       "accountId": "0011500001HNPmMAAX",
       "account": "Hinson Communications Inc.",
-      "mrr": null,
+      "mrr": 2004.05,
       "email": 136,
       "phone": 91,
       "other": 9,
@@ -6755,7 +6766,7 @@
     {
       "accountId": "001PX00000bg3ayYAA",
       "account": "Hiscall Inc. (2nd DB)",
-      "mrr": null,
+      "mrr": 0,
       "email": 0,
       "phone": 0,
       "other": 0,
@@ -6769,7 +6780,7 @@
     {
       "accountId": "0016O00003dmuQ3QAI",
       "account": "Home Automation Hawaii",
-      "mrr": null,
+      "mrr": 439.77,
       "email": 28,
       "phone": 9,
       "other": 0,
@@ -6783,7 +6794,7 @@
     {
       "accountId": "0016O00003dmuQ4QAI",
       "account": "Home Technology Experts",
-      "mrr": null,
+      "mrr": 1435.94,
       "email": 170,
       "phone": 20,
       "other": 19,
@@ -6797,7 +6808,7 @@
     {
       "accountId": "0016O00003dmuQ5QAI",
       "account": "Homeland Technology Group",
-      "mrr": null,
+      "mrr": 2158.8,
       "email": 61,
       "phone": 8,
       "other": 1,
@@ -6811,7 +6822,7 @@
     {
       "accountId": "001PX000005vHMDYA2",
       "account": "Hoosier Equipment Brokers",
-      "mrr": null,
+      "mrr": 342.9,
       "email": 112,
       "phone": 45,
       "other": 0,
@@ -6825,7 +6836,7 @@
     {
       "accountId": "0011C00002KRBkAQAX",
       "account": "Hosted America",
-      "mrr": null,
+      "mrr": 419.18,
       "email": 319,
       "phone": 66,
       "other": 22,
@@ -6839,7 +6850,7 @@
     {
       "accountId": "0011500001HNQA1AAP",
       "account": "Huntel Communications",
-      "mrr": null,
+      "mrr": 753.6,
       "email": 37,
       "phone": 36,
       "other": 1,
@@ -6853,7 +6864,7 @@
     {
       "accountId": "0011500001HNQBTAA5",
       "account": "Huntleigh Telecommunications Group",
-      "mrr": null,
+      "mrr": 409.52,
       "email": 75,
       "phone": 23,
       "other": 2,
@@ -6867,7 +6878,7 @@
     {
       "accountId": "0016O00003dmuQ9QAI",
       "account": "HyVee, Inc. dba A+ Communications & Security",
-      "mrr": null,
+      "mrr": 7081.5,
       "email": 576,
       "phone": 52,
       "other": 10,
@@ -6881,7 +6892,7 @@
     {
       "accountId": "001PX000006dndYYAQ",
       "account": "i-2-i Technology",
-      "mrr": null,
+      "mrr": 474,
       "email": 42,
       "phone": 6,
       "other": 4,
@@ -6895,7 +6906,7 @@
     {
       "accountId": "0016O00003dmuQCQAY",
       "account": "Ic2s",
-      "mrr": null,
+      "mrr": 474,
       "email": 24,
       "phone": 13,
       "other": 0,
@@ -6909,7 +6920,7 @@
     {
       "accountId": "0011500001HNQIWAA5",
       "account": "ICS Communications",
-      "mrr": null,
+      "mrr": 596.17,
       "email": 152,
       "phone": 54,
       "other": 8,
@@ -6923,7 +6934,7 @@
     {
       "accountId": "0016O00003dmudNQAQ",
       "account": "Idea Networks Inc.",
-      "mrr": null,
+      "mrr": 823.9,
       "email": 58,
       "phone": 13,
       "other": 2,
@@ -6937,7 +6948,7 @@
     {
       "accountId": "001PX000004hTagYAE",
       "account": "Ideal Tech Solutions",
-      "mrr": null,
+      "mrr": 621.95,
       "email": 120,
       "phone": 47,
       "other": 2,
@@ -6951,7 +6962,7 @@
     {
       "accountId": "0016O00003dmuQIQAY",
       "account": "IET Labs (3rd DB)",
-      "mrr": null,
+      "mrr": 165.9,
       "email": 47,
       "phone": 6,
       "other": 2,
@@ -6965,7 +6976,7 @@
     {
       "accountId": "001PX00000t6h4DYAQ",
       "account": "IET Labs 2nd db",
-      "mrr": null,
+      "mrr": 410.25,
       "email": 0,
       "phone": 0,
       "other": 0,
@@ -6979,7 +6990,7 @@
     {
       "accountId": "0016O00003dmuQJQAY",
       "account": "Illinois Business Communications, Inc.",
-      "mrr": null,
+      "mrr": 474,
       "email": 20,
       "phone": 11,
       "other": 0,
@@ -6993,7 +7004,7 @@
     {
       "accountId": "0016O00003dmudrQAA",
       "account": "Images et Technologie",
-      "mrr": null,
+      "mrr": 0,
       "email": 10,
       "phone": 1,
       "other": 0,
@@ -7007,7 +7018,7 @@
     {
       "accountId": "0016O00003dmuQKQAY",
       "account": "Imagine Solutions",
-      "mrr": null,
+      "mrr": 500,
       "email": 67,
       "phone": 18,
       "other": 7,
@@ -7021,7 +7032,7 @@
     {
       "accountId": "0016O00003dmuQLQAY",
       "account": "IMC Facility Management",
-      "mrr": null,
+      "mrr": 1897.25,
       "email": 147,
       "phone": 34,
       "other": 7,
@@ -7035,7 +7046,7 @@
     {
       "accountId": "0016O00003ebbEAQAY",
       "account": "INCOTEL-ISQ INC.",
-      "mrr": null,
+      "mrr": 535,
       "email": 7,
       "phone": 4,
       "other": 0,
@@ -7049,7 +7060,7 @@
     {
       "accountId": "0016O00003dmuQMQAY",
       "account": "Independent Phone Services Inc",
-      "mrr": null,
+      "mrr": 474,
       "email": 5,
       "phone": 16,
       "other": 0,
@@ -7063,7 +7074,7 @@
     {
       "accountId": "0016O00003dmuQNQAY",
       "account": "Independent Telecommunications Corp",
-      "mrr": null,
+      "mrr": 875.16,
       "email": 29,
       "phone": 28,
       "other": 2,
@@ -7077,7 +7088,7 @@
     {
       "accountId": "0016O00003dmuQOQAY",
       "account": "Indiana Electronics Corp",
-      "mrr": null,
+      "mrr": 1128.6,
       "email": 54,
       "phone": 11,
       "other": 12,
@@ -7091,7 +7102,7 @@
     {
       "accountId": "0016O00003dmuQSQAY",
       "account": "Infotel Systems",
-      "mrr": null,
+      "mrr": 711,
       "email": 83,
       "phone": 34,
       "other": 3,
@@ -7105,7 +7116,7 @@
     {
       "accountId": "0016O00003dmuQTQAY",
       "account": "Infrastructure Technology Solutions",
-      "mrr": null,
+      "mrr": 1501,
       "email": 98,
       "phone": 7,
       "other": 3,
@@ -7119,7 +7130,7 @@
     {
       "accountId": "0016O00003dmuQUQAY",
       "account": "Innovative Technologies",
-      "mrr": null,
+      "mrr": 553,
       "email": 7,
       "phone": 5,
       "other": 1,
@@ -7133,7 +7144,7 @@
     {
       "accountId": "0016O00003dmuQVQAY",
       "account": "Innovative Telephone & Data Solutions, LLC",
-      "mrr": null,
+      "mrr": 1700.2,
       "email": 123,
       "phone": 18,
       "other": 7,
@@ -7147,7 +7158,7 @@
     {
       "accountId": "001PX000002MF4BYAW",
       "account": "Intec - CA",
-      "mrr": null,
+      "mrr": 518,
       "email": 74,
       "phone": 9,
       "other": 7,
@@ -7161,7 +7172,7 @@
     {
       "accountId": "0016O00003dmuQWQAY",
       "account": "Intec Solutions",
-      "mrr": null,
+      "mrr": 944.24,
       "email": 100,
       "phone": 21,
       "other": 16,
@@ -7175,7 +7186,7 @@
     {
       "accountId": "0016O00003dmuQYQAY",
       "account": "IntegraServ",
-      "mrr": null,
+      "mrr": 1429.56,
       "email": 40,
       "phone": 12,
       "other": 0,
@@ -7189,7 +7200,7 @@
     {
       "accountId": "0011C00002Un6slQAB",
       "account": "Integrated Communications",
-      "mrr": null,
+      "mrr": 1259.39,
       "email": 23,
       "phone": 21,
       "other": 2,
@@ -7203,7 +7214,7 @@
     {
       "accountId": "0016O00003dmuQZQAY",
       "account": "Integrated Connections",
-      "mrr": null,
+      "mrr": 1259.39,
       "email": 15,
       "phone": 12,
       "other": 0,
@@ -7217,7 +7228,7 @@
     {
       "accountId": "0016O00003dmuQaQAI",
       "account": "Integrated Health Systems",
-      "mrr": null,
+      "mrr": 474,
       "email": 44,
       "phone": 18,
       "other": 0,
@@ -7231,7 +7242,7 @@
     {
       "accountId": "0016O00003dmuQbQAI",
       "account": "Integrated POS",
-      "mrr": null,
+      "mrr": 720,
       "email": 40,
       "phone": 12,
       "other": 3,
@@ -7245,7 +7256,7 @@
     {
       "accountId": "0016O00003dmuQcQAI",
       "account": "Integrated Protection Services",
-      "mrr": null,
+      "mrr": 1717.35,
       "email": 83,
       "phone": 27,
       "other": 3,
@@ -7259,7 +7270,7 @@
     {
       "accountId": "0016O00003dmuQeQAI",
       "account": "Integrated Systems",
-      "mrr": null,
+      "mrr": 1810.16,
       "email": 122,
       "phone": 52,
       "other": 15,
@@ -7273,7 +7284,7 @@
     {
       "accountId": "0016O00003dmuQgQAI",
       "account": "IntelesysOne",
-      "mrr": null,
+      "mrr": 1265.16,
       "email": 135,
       "phone": 24,
       "other": 4,
@@ -7287,7 +7298,7 @@
     {
       "accountId": "0016O00003dmuQhQAI",
       "account": "Intelligent Power Solutions",
-      "mrr": null,
+      "mrr": 1209.5,
       "email": 59,
       "phone": 6,
       "other": 3,
@@ -7301,7 +7312,7 @@
     {
       "accountId": "0016O00003dmuQiQAI",
       "account": "Interface Technologies Northwest",
-      "mrr": null,
+      "mrr": 0,
       "email": 16,
       "phone": 7,
       "other": 1,
@@ -7315,7 +7326,7 @@
     {
       "accountId": "0011C00002H73UsQAJ",
       "account": "Intermax Networks",
-      "mrr": null,
+      "mrr": 583.92,
       "email": 121,
       "phone": 67,
       "other": 7,
@@ -7329,7 +7340,7 @@
     {
       "accountId": "0016O00003dmuQjQAI",
       "account": "Intermed-Pal",
-      "mrr": null,
+      "mrr": 903.44,
       "email": 22,
       "phone": 14,
       "other": 1,
@@ -7343,7 +7354,7 @@
     {
       "accountId": "0016O00003dmuQkQAI",
       "account": "Interseckt Corporation",
-      "mrr": null,
+      "mrr": 553,
       "email": 18,
       "phone": 3,
       "other": 1,
@@ -7357,7 +7368,7 @@
     {
       "accountId": "0016O00003dmuQlQAI",
       "account": "Interstate Business Systems",
-      "mrr": null,
+      "mrr": 644.94,
       "email": 47,
       "phone": 25,
       "other": 1,
@@ -7371,7 +7382,7 @@
     {
       "accountId": "0016O00003dmuQmQAI",
       "account": "InTouch Communications",
-      "mrr": null,
+      "mrr": 429.96,
       "email": 8,
       "phone": 3,
       "other": 1,
@@ -7385,7 +7396,7 @@
     {
       "accountId": "0016O00003ebbEBQAY",
       "account": "Introtel Communications",
-      "mrr": null,
+      "mrr": 1934.82,
       "email": 37,
       "phone": 6,
       "other": 1,
@@ -7399,7 +7410,7 @@
     {
       "accountId": "001PX00000YtisrYAB",
       "account": "Iowa Solutions",
-      "mrr": null,
+      "mrr": 0,
       "email": 53,
       "phone": 8,
       "other": 1,
@@ -7413,7 +7424,7 @@
     {
       "accountId": "0011500001HNQOFAA5",
       "account": "IP Communications, Inc.",
-      "mrr": null,
+      "mrr": 698.09,
       "email": 97,
       "phone": 35,
       "other": 1,
@@ -7427,7 +7438,7 @@
     {
       "accountId": "0016O00003dmuQoQAI",
       "account": "ISET",
-      "mrr": null,
+      "mrr": 656.08,
       "email": 21,
       "phone": 5,
       "other": 1,
@@ -7455,7 +7466,7 @@
     {
       "accountId": "0011500001HNQDBAA5",
       "account": "IT Voice",
-      "mrr": null,
+      "mrr": 740.19,
       "email": 66,
       "phone": 79,
       "other": 3,
@@ -7469,7 +7480,7 @@
     {
       "accountId": "0016O00003dmuQPQAY",
       "account": "IVS Silo Services",
-      "mrr": null,
+      "mrr": 474,
       "email": 13,
       "phone": 16,
       "other": 1,
@@ -7483,7 +7494,7 @@
     {
       "accountId": "0016O00003dmuQsQAI",
       "account": "J & K Communications, Inc.",
-      "mrr": null,
+      "mrr": 3362.67,
       "email": 27,
       "phone": 20,
       "other": 1,
@@ -7497,7 +7508,7 @@
     {
       "accountId": "0016O00003dmuQtQAI",
       "account": "J&M Systems LLC",
-      "mrr": null,
+      "mrr": 0,
       "email": 50,
       "phone": 34,
       "other": 2,
@@ -7511,7 +7522,7 @@
     {
       "accountId": "0016O00003dmuTNQAY",
       "account": "James Teleco",
-      "mrr": null,
+      "mrr": 474,
       "email": 20,
       "phone": 8,
       "other": 2,
@@ -7525,7 +7536,7 @@
     {
       "accountId": "001PX000005OktGYAS",
       "account": "JCT Solutions",
-      "mrr": null,
+      "mrr": 9744.18,
       "email": 162,
       "phone": 36,
       "other": 3,
@@ -7553,7 +7564,7 @@
     {
       "accountId": "0016O00003dmudoQAA",
       "account": "JES and Sons 2-Way LLC",
-      "mrr": null,
+      "mrr": 1872.96,
       "email": 55,
       "phone": 37,
       "other": 7,
@@ -7567,7 +7578,7 @@
     {
       "accountId": "0016O00003dmuTPQAY",
       "account": "Joy Communications",
-      "mrr": null,
+      "mrr": 0,
       "email": 47,
       "phone": 19,
       "other": 5,
@@ -7581,7 +7592,7 @@
     {
       "accountId": "0016O00003dmuTSQAY",
       "account": "KCG Communications",
-      "mrr": null,
+      "mrr": 711,
       "email": 34,
       "phone": 26,
       "other": 3,
@@ -7595,7 +7606,7 @@
     {
       "accountId": "0016O00003dmuTTQAY",
       "account": "Kellan Systems, Inc.",
-      "mrr": null,
+      "mrr": 553,
       "email": 70,
       "phone": 42,
       "other": 2,
@@ -7609,7 +7620,7 @@
     {
       "accountId": "0016O00003dmud0QAA",
       "account": "Kerr Controls Inc.",
-      "mrr": null,
+      "mrr": 806.4,
       "email": 62,
       "phone": 12,
       "other": 3,
@@ -7623,7 +7634,7 @@
     {
       "accountId": "0016O00003dmuTUQAY",
       "account": "KeyComm",
-      "mrr": null,
+      "mrr": 826.68,
       "email": 63,
       "phone": 27,
       "other": 5,
@@ -7637,7 +7648,7 @@
     {
       "accountId": "0016O00003dmuTVQAY",
       "account": "KGM Gaming",
-      "mrr": null,
+      "mrr": 931.02,
       "email": 16,
       "phone": 14,
       "other": 0,
@@ -7651,7 +7662,7 @@
     {
       "accountId": "0016O00003dmuTXQAY",
       "account": "Kozi Media Design",
-      "mrr": null,
+      "mrr": 899.51,
       "email": 13,
       "phone": 12,
       "other": 2,
@@ -7665,7 +7676,7 @@
     {
       "accountId": "0016O00003dmuTYQAY",
       "account": "L & S Truck Service",
-      "mrr": null,
+      "mrr": 543.85,
       "email": 14,
       "phone": 11,
       "other": 0,
@@ -7679,7 +7690,7 @@
     {
       "accountId": "0016O00003dmuTZQAY",
       "account": "Laketec Communications",
-      "mrr": null,
+      "mrr": 3472.86,
       "email": 49,
       "phone": 36,
       "other": 2,
@@ -7693,7 +7704,7 @@
     {
       "accountId": "0016O00003dmudVQAQ",
       "account": "Langguth America Ltd.",
-      "mrr": null,
+      "mrr": 1881,
       "email": 18,
       "phone": 5,
       "other": 0,
@@ -7707,7 +7718,7 @@
     {
       "accountId": "0016O00003L3E0ZQAV",
       "account": "Leverage Information Systems",
-      "mrr": null,
+      "mrr": 535.5,
       "email": 252,
       "phone": 50,
       "other": 13,
@@ -7721,7 +7732,7 @@
     {
       "accountId": "001PX0000078JhVYAU",
       "account": "Life Safety Integrated Systems, Inc",
-      "mrr": null,
+      "mrr": 909.5,
       "email": 57,
       "phone": 45,
       "other": 0,
@@ -7735,7 +7746,7 @@
     {
       "accountId": "0016O00003dmuTbQAI",
       "account": "Lightning Technologies LLC",
-      "mrr": null,
+      "mrr": 1608.97,
       "email": 140,
       "phone": 27,
       "other": 2,
@@ -7749,7 +7760,7 @@
     {
       "accountId": "0016O00003dmuTcQAI",
       "account": "LinkUs Corporation",
-      "mrr": null,
+      "mrr": 5922.82,
       "email": 91,
       "phone": 54,
       "other": 1,
@@ -7763,7 +7774,7 @@
     {
       "accountId": "001PX000005WpiwYAC",
       "account": "Low Voltage Integrators",
-      "mrr": null,
+      "mrr": 631.3,
       "email": 41,
       "phone": 28,
       "other": 7,
@@ -7777,7 +7788,7 @@
     {
       "accountId": "0016O00003dmuTgQAI",
       "account": "M D Communications",
-      "mrr": null,
+      "mrr": 632,
       "email": 54,
       "phone": 17,
       "other": 0,
@@ -7791,7 +7802,7 @@
     {
       "accountId": "0016O00003dmuThQAI",
       "account": "M&L Technical Systems",
-      "mrr": null,
+      "mrr": 1398.62,
       "email": 19,
       "phone": 17,
       "other": 1,
@@ -7805,7 +7816,7 @@
     {
       "accountId": "0016O00003dmudMQAQ",
       "account": "MAC'S HEATING",
-      "mrr": null,
+      "mrr": 1792.7,
       "email": 7,
       "phone": 8,
       "other": 0,
@@ -7819,7 +7830,7 @@
     {
       "accountId": "0016O00003dmuTiQAI",
       "account": "Madrona Digital",
-      "mrr": null,
+      "mrr": 2438.6,
       "email": 167,
       "phone": 36,
       "other": 5,
@@ -7833,7 +7844,7 @@
     {
       "accountId": "0016O00003dmuTjQAI",
       "account": "Mammoth Fire Alarms Inc dba MFPS / a Division of Sciens Building Solutions",
-      "mrr": null,
+      "mrr": 4312.1,
       "email": 152,
       "phone": 15,
       "other": 2,
@@ -7847,7 +7858,7 @@
     {
       "accountId": "0016O00003dmuTkQAI",
       "account": "Managed Technology",
-      "mrr": null,
+      "mrr": 1343,
       "email": 20,
       "phone": 15,
       "other": 1,
@@ -7861,7 +7872,7 @@
     {
       "accountId": "001PX00000SADTiYAP",
       "account": "MAPS Security",
-      "mrr": null,
+      "mrr": 1560,
       "email": 73,
       "phone": 13,
       "other": 1,
@@ -7875,7 +7886,7 @@
     {
       "accountId": "0016O00003dmuTmQAI",
       "account": "Marchese Computer Products",
-      "mrr": null,
+      "mrr": 879.08,
       "email": 20,
       "phone": 5,
       "other": 0,
@@ -7889,7 +7900,7 @@
     {
       "accountId": "001PX00000CktiYYAR",
       "account": "Marcotek",
-      "mrr": null,
+      "mrr": 0,
       "email": 65,
       "phone": 20,
       "other": 0,
@@ -7903,7 +7914,7 @@
     {
       "accountId": "001PX000004hW06YAE",
       "account": "Maritime Dock & Door Limited",
-      "mrr": null,
+      "mrr": 474,
       "email": 11,
       "phone": 1,
       "other": 0,
@@ -7917,7 +7928,7 @@
     {
       "accountId": "0016O00003dmudnQAA",
       "account": "Marvin's Management & Maintenance",
-      "mrr": null,
+      "mrr": 6000,
       "email": 8,
       "phone": 14,
       "other": 1,
@@ -7931,7 +7942,7 @@
     {
       "accountId": "0016O00003dmuTpQAI",
       "account": "Masergy Cloud Communications",
-      "mrr": null,
+      "mrr": 3920.8,
       "email": 1253,
       "phone": 235,
       "other": 30,
@@ -7945,7 +7956,7 @@
     {
       "accountId": "0016O00003dmuTqQAI",
       "account": "Master Technology Group",
-      "mrr": null,
+      "mrr": 492,
       "email": 18,
       "phone": 18,
       "other": 0,
@@ -7959,7 +7970,7 @@
     {
       "accountId": "0016O00003dmuTrQAI",
       "account": "Mathias Lock and Key, Inc.",
-      "mrr": null,
+      "mrr": 4658.45,
       "email": 237,
       "phone": 25,
       "other": 8,
@@ -7973,7 +7984,7 @@
     {
       "accountId": "0016O00003dmuTuQAI",
       "account": "Maverick Networks",
-      "mrr": null,
+      "mrr": 1191.58,
       "email": 87,
       "phone": 28,
       "other": 4,
@@ -7987,7 +7998,7 @@
     {
       "accountId": "0016O00003dmuTvQAI",
       "account": "Mayatel Systems",
-      "mrr": null,
+      "mrr": 697.56,
       "email": 34,
       "phone": 28,
       "other": 2,
@@ -8001,7 +8012,7 @@
     {
       "accountId": "0016O00003dmuTwQAI",
       "account": "Mc Cormack-Missouri",
-      "mrr": null,
+      "mrr": 474,
       "email": 29,
       "phone": 5,
       "other": 0,
@@ -8015,7 +8026,7 @@
     {
       "accountId": "0016O00003ee67uQAA",
       "account": "McElheney Security Solutions, Inc.",
-      "mrr": null,
+      "mrr": 1348.2,
       "email": 55,
       "phone": 33,
       "other": 6,
@@ -8029,7 +8040,7 @@
     {
       "accountId": "001PX000002PT0tYAG",
       "account": "MDU Security Systems",
-      "mrr": null,
+      "mrr": 650,
       "email": 47,
       "phone": 19,
       "other": 0,
@@ -8057,7 +8068,7 @@
     {
       "accountId": "0016O00003dmuTxQAI",
       "account": "Merchant Data Solutions, LLC",
-      "mrr": null,
+      "mrr": 474,
       "email": 30,
       "phone": 15,
       "other": 8,
@@ -8071,7 +8082,7 @@
     {
       "accountId": "0016O00003dmuTzQAI",
       "account": "Mercury Systems Corporation",
-      "mrr": null,
+      "mrr": 497.7,
       "email": 19,
       "phone": 16,
       "other": 0,
@@ -8085,7 +8096,7 @@
     {
       "accountId": "0016O00003dmuU0QAI",
       "account": "Metro Datacom, Llc",
-      "mrr": null,
+      "mrr": 351.33,
       "email": 38,
       "phone": 10,
       "other": 1,
@@ -8099,7 +8110,7 @@
     {
       "accountId": "0011500001HNQ3zAAH",
       "account": "Metropolitan Telephone",
-      "mrr": null,
+      "mrr": 935,
       "email": 159,
       "phone": 47,
       "other": 12,
@@ -8113,7 +8124,7 @@
     {
       "accountId": "0016O00003dmp9EQAQ",
       "account": "Micro Tech Systems",
-      "mrr": null,
+      "mrr": 474,
       "email": 22,
       "phone": 7,
       "other": 1,
@@ -8127,7 +8138,7 @@
     {
       "accountId": "0016O00003dmue9QAA",
       "account": "MicroAge Basics",
-      "mrr": null,
+      "mrr": 1098.48,
       "email": 17,
       "phone": 21,
       "other": 1,
@@ -8141,7 +8152,7 @@
     {
       "accountId": "0016O00003dmud9QAA",
       "account": "MicroAge Hanover",
-      "mrr": null,
+      "mrr": 632,
       "email": 17,
       "phone": 7,
       "other": 0,
@@ -8155,7 +8166,7 @@
     {
       "accountId": "0016O00003ebbECQAY",
       "account": "MicroAge Lethbridge",
-      "mrr": null,
+      "mrr": 474,
       "email": 24,
       "phone": 17,
       "other": 4,
@@ -8169,7 +8180,7 @@
     {
       "accountId": "0016O00003dmudwQAA",
       "account": "MicroAge Prince George / DEFAU",
-      "mrr": null,
+      "mrr": 553,
       "email": 15,
       "phone": 12,
       "other": 1,
@@ -8183,7 +8194,7 @@
     {
       "accountId": "0016O00003dmuU1QAI",
       "account": "MicroMed",
-      "mrr": null,
+      "mrr": 915.92,
       "email": 29,
       "phone": 14,
       "other": 6,
@@ -8197,7 +8208,7 @@
     {
       "accountId": "0016O00003dmuU4QAI",
       "account": "Mid South Telecom Inc",
-      "mrr": null,
+      "mrr": 474,
       "email": 31,
       "phone": 10,
       "other": 1,
@@ -8211,7 +8222,7 @@
     {
       "accountId": "0016O00003dmuU2QAI",
       "account": "Mid-Cities Data Comm Inc.",
-      "mrr": null,
+      "mrr": 1036.38,
       "email": 31,
       "phone": 20,
       "other": 1,
@@ -8225,7 +8236,7 @@
     {
       "accountId": "0016O00003edXLeQAM",
       "account": "Midwest Technology Specialists",
-      "mrr": null,
+      "mrr": 0,
       "email": 51,
       "phone": 20,
       "other": 1,
@@ -8239,7 +8250,7 @@
     {
       "accountId": "0016O00003IQXTaQAP",
       "account": "Midwest Telecom Communications",
-      "mrr": null,
+      "mrr": 632,
       "email": 71,
       "phone": 45,
       "other": 6,
@@ -8253,7 +8264,7 @@
     {
       "accountId": "0016O00003dmuU6QAI",
       "account": "Miken Technologies",
-      "mrr": null,
+      "mrr": 1587.6,
       "email": 102,
       "phone": 35,
       "other": 2,
@@ -8267,7 +8278,7 @@
     {
       "accountId": "0011C000028ISCLQA4",
       "account": "Minnesota Telephone Networks",
-      "mrr": null,
+      "mrr": 474,
       "email": 58,
       "phone": 27,
       "other": 0,
@@ -8281,7 +8292,7 @@
     {
       "accountId": "0016O00003dmuU7QAI",
       "account": "Minuteman Security Technologies",
-      "mrr": null,
+      "mrr": 575,
       "email": 23,
       "phone": 37,
       "other": 7,
@@ -8295,7 +8306,7 @@
     {
       "accountId": "0011C00002G6GNUQA3",
       "account": "MNJ Technologies",
-      "mrr": null,
+      "mrr": 11505.12,
       "email": 679,
       "phone": 352,
       "other": 11,
@@ -8309,7 +8320,7 @@
     {
       "accountId": "0016O00003dmuU9QAI",
       "account": "Modelithics, Inc.",
-      "mrr": null,
+      "mrr": 474,
       "email": 18,
       "phone": 11,
       "other": 0,
@@ -8323,7 +8334,7 @@
     {
       "accountId": "0016O00003dmuUAQAY",
       "account": "Modern Office Systems",
-      "mrr": null,
+      "mrr": 350,
       "email": 34,
       "phone": 10,
       "other": 3,
@@ -8337,7 +8348,7 @@
     {
       "accountId": "0016O00003dmuUCQAY",
       "account": "Moseley Electronics, LLC",
-      "mrr": null,
+      "mrr": 474,
       "email": 89,
       "phone": 35,
       "other": 1,
@@ -8351,7 +8362,7 @@
     {
       "accountId": "0016O00003dmuUFQAY",
       "account": "Motorola - Ft. Myers",
-      "mrr": null,
+      "mrr": 3112.2,
       "email": 1,
       "phone": 4,
       "other": 0,
@@ -8365,7 +8376,7 @@
     {
       "accountId": "0016O00003dmuUGQAY",
       "account": "Motorola - Lakeland",
-      "mrr": null,
+      "mrr": 3112.2,
       "email": 1,
       "phone": 4,
       "other": 0,
@@ -8379,7 +8390,7 @@
     {
       "accountId": "0016O00003dmuUHQAY",
       "account": "Motorola - Orlando",
-      "mrr": null,
+      "mrr": 1097.4,
       "email": 94,
       "phone": 4,
       "other": 3,
@@ -8393,7 +8404,7 @@
     {
       "accountId": "0016O00003dmuUJQAY",
       "account": "Motorola - Sarasota",
-      "mrr": null,
+      "mrr": 3112.2,
       "email": 11,
       "phone": 3,
       "other": 0,
@@ -8407,7 +8418,7 @@
     {
       "accountId": "0016O00003dmuUDQAY",
       "account": "Motorola Solutions",
-      "mrr": null,
+      "mrr": 0,
       "email": 8,
       "phone": 7,
       "other": 4,
@@ -8421,7 +8432,7 @@
     {
       "accountId": "0016O00003dmuUEQAY",
       "account": "Motorola Solutions - Asia",
-      "mrr": null,
+      "mrr": 0,
       "email": 65,
       "phone": 27,
       "other": 5,
@@ -8435,7 +8446,7 @@
     {
       "accountId": "0016O00003dmuUIQAY",
       "account": "Motorola Solutions Inc - Plantation",
-      "mrr": null,
+      "mrr": 642.72,
       "email": 54,
       "phone": 42,
       "other": 3,
@@ -8449,7 +8460,7 @@
     {
       "accountId": "0016O00003dmuUKQAY",
       "account": "Motorola Solutions Inc. - Saint Petersberg",
-      "mrr": null,
+      "mrr": 0,
       "email": 18,
       "phone": 11,
       "other": 0,
@@ -8463,7 +8474,7 @@
     {
       "accountId": "0011C00002xtRlIQAU",
       "account": "Mountain Telecom",
-      "mrr": null,
+      "mrr": 250,
       "email": 24,
       "phone": 17,
       "other": 5,
@@ -8477,7 +8488,7 @@
     {
       "accountId": "0016O00003dmuUMQAY",
       "account": "MPS Works",
-      "mrr": null,
+      "mrr": 474,
       "email": 47,
       "phone": 18,
       "other": 1,
@@ -8491,7 +8502,7 @@
     {
       "accountId": "0016O00003dmuUNQAY",
       "account": "MTI Unified Communications",
-      "mrr": null,
+      "mrr": 511.2,
       "email": 16,
       "phone": 8,
       "other": 0,
@@ -8533,7 +8544,7 @@
     {
       "accountId": "0016O00003dmuUSQAY",
       "account": "NCC Systems inc",
-      "mrr": null,
+      "mrr": 843.39,
       "email": 44,
       "phone": 35,
       "other": 10,
@@ -8547,7 +8558,7 @@
     {
       "accountId": "001PX000001iwNwYAI",
       "account": "Netagen Communication Technologies",
-      "mrr": null,
+      "mrr": 9067.25,
       "email": 32,
       "phone": 21,
       "other": 2,
@@ -8561,7 +8572,7 @@
     {
       "accountId": "0016O00003ebbEDQAY",
       "account": "Network Answer Pty Ltd",
-      "mrr": null,
+      "mrr": 474,
       "email": 6,
       "phone": 4,
       "other": 0,
@@ -8575,7 +8586,7 @@
     {
       "accountId": "0016O00003dmuUVQAY",
       "account": "Network Datacom Solutions",
-      "mrr": null,
+      "mrr": 1344.96,
       "email": 56,
       "phone": 21,
       "other": 1,
@@ -8589,7 +8600,7 @@
     {
       "accountId": "0016O00003dmuUXQAY",
       "account": "Network Enhancement Systems",
-      "mrr": null,
+      "mrr": 854.15,
       "email": 52,
       "phone": 11,
       "other": 0,
@@ -8603,7 +8614,7 @@
     {
       "accountId": "001PX0000026kQQYAY",
       "account": "NetX Inc",
-      "mrr": null,
+      "mrr": 2633.4,
       "email": 47,
       "phone": 3,
       "other": 0,
@@ -8617,7 +8628,7 @@
     {
       "accountId": "0016O00003dmuUZQAY",
       "account": "Neuwave Systems Inc",
-      "mrr": null,
+      "mrr": 1317.05,
       "email": 154,
       "phone": 32,
       "other": 6,
@@ -8631,7 +8642,7 @@
     {
       "accountId": "0011C00002dwWlFQAU",
       "account": "New England Communications",
-      "mrr": null,
+      "mrr": 1690.6,
       "email": 163,
       "phone": 60,
       "other": 3,
@@ -8645,7 +8656,7 @@
     {
       "accountId": "0016O00003dmuUaQAI",
       "account": "New Haven Cash Register",
-      "mrr": null,
+      "mrr": 553,
       "email": 8,
       "phone": 6,
       "other": 1,
@@ -8659,7 +8670,7 @@
     {
       "accountId": "0016O00003dmuUbQAI",
       "account": "New Paris Telephone",
-      "mrr": null,
+      "mrr": 481.9,
       "email": 76,
       "phone": 20,
       "other": 10,
@@ -8673,7 +8684,7 @@
     {
       "accountId": "0016O00003ee5YrQAI",
       "account": "Nightwatch Security & Telephone",
-      "mrr": null,
+      "mrr": 1605,
       "email": 210,
       "phone": 48,
       "other": 10,
@@ -8687,7 +8698,7 @@
     {
       "accountId": "0016O00003dmuUcQAI",
       "account": "Norcomm Communication Svc Inc",
-      "mrr": null,
+      "mrr": 425,
       "email": 44,
       "phone": 1,
       "other": 5,
@@ -8701,7 +8712,7 @@
     {
       "accountId": "0016O00003ebbEEQAY",
       "account": "North American Telecommunications Group",
-      "mrr": null,
+      "mrr": 1947.54,
       "email": 49,
       "phone": 21,
       "other": 2,
@@ -8715,7 +8726,7 @@
     {
       "accountId": "0016O00003dmuUdQAI",
       "account": "North Atlantic Communications",
-      "mrr": null,
+      "mrr": 497.7,
       "email": 29,
       "phone": 22,
       "other": 0,
@@ -8729,7 +8740,7 @@
     {
       "accountId": "0016O00003dmuUeQAI",
       "account": "North Carolina Sound of Goldsboro, LLC",
-      "mrr": null,
+      "mrr": 2957.57,
       "email": 112,
       "phone": 26,
       "other": 5,
@@ -8743,7 +8754,7 @@
     {
       "accountId": "001PX000004VhftYAC",
       "account": "Northeast Remote Surveillance and Alarm",
-      "mrr": null,
+      "mrr": 2072.1,
       "email": 26,
       "phone": 19,
       "other": 1,
@@ -8757,7 +8768,7 @@
     {
       "accountId": "0016O00003dmudPQAQ",
       "account": "Northern Optotronics",
-      "mrr": null,
+      "mrr": 500,
       "email": 52,
       "phone": 13,
       "other": 3,
@@ -8771,7 +8782,7 @@
     {
       "accountId": "0016O00003dmudAQAQ",
       "account": "Nutec Electro-Tel",
-      "mrr": null,
+      "mrr": 2686,
       "email": 62,
       "phone": 26,
       "other": 2,
@@ -8785,7 +8796,7 @@
     {
       "accountId": "0016O00003dmuUhQAI",
       "account": "Nutec Systems, Inc",
-      "mrr": null,
+      "mrr": 686.94,
       "email": 26,
       "phone": 12,
       "other": 1,
@@ -8799,7 +8810,7 @@
     {
       "accountId": "001PX00000RiEVzYAN",
       "account": "Oakley Alarms Ltd",
-      "mrr": null,
+      "mrr": 0,
       "email": 72,
       "phone": 22,
       "other": 1,
@@ -8813,7 +8824,7 @@
     {
       "accountId": "0016O00003dmuUjQAI",
       "account": "Omidi Enterprises",
-      "mrr": null,
+      "mrr": 973.15,
       "email": 131,
       "phone": 28,
       "other": 0,
@@ -8827,7 +8838,7 @@
     {
       "accountId": "0016O000034vJrcQAE",
       "account": "One Communications",
-      "mrr": null,
+      "mrr": 4120,
       "email": 50,
       "phone": 25,
       "other": 1,
@@ -8841,7 +8852,7 @@
     {
       "accountId": "0016O000038AAaPQAW",
       "account": "One Source Communications",
-      "mrr": null,
+      "mrr": 553,
       "email": 90,
       "phone": 19,
       "other": 6,
@@ -8855,7 +8866,7 @@
     {
       "accountId": "0016O00003dmuUlQAI",
       "account": "Optel BCS, Inc",
-      "mrr": null,
+      "mrr": 574.85,
       "email": 34,
       "phone": 10,
       "other": 0,
@@ -8869,7 +8880,7 @@
     {
       "accountId": "0016O00003dmuUmQAI",
       "account": "Optivor Technologies",
-      "mrr": null,
+      "mrr": 3663.75,
       "email": 62,
       "phone": 28,
       "other": 3,
@@ -8883,7 +8894,7 @@
     {
       "accountId": "0016O00003dmuUnQAI",
       "account": "Optivor Technologies - Florida",
-      "mrr": null,
+      "mrr": 3663.75,
       "email": 69,
       "phone": 21,
       "other": 1,
@@ -8897,7 +8908,7 @@
     {
       "accountId": "0016O00003dmuUoQAI",
       "account": "Ormsbys Computer Store, Inc.",
-      "mrr": null,
+      "mrr": 553,
       "email": 55,
       "phone": 9,
       "other": 11,
@@ -8911,7 +8922,7 @@
     {
       "accountId": "0016O00003dmuUpQAI",
       "account": "OSI Technology",
-      "mrr": null,
+      "mrr": 409.5,
       "email": 17,
       "phone": 15,
       "other": 2,
@@ -8925,7 +8936,7 @@
     {
       "accountId": "0016O00003dmuUrQAI",
       "account": "P. J. Kortens and Company, Inc.",
-      "mrr": null,
+      "mrr": 802.5,
       "email": 22,
       "phone": 6,
       "other": 1,
@@ -8939,7 +8950,7 @@
     {
       "accountId": "0016O00003dmuUsQAI",
       "account": "P.O.S. Technologies",
-      "mrr": null,
+      "mrr": 661.5,
       "email": 35,
       "phone": 11,
       "other": 2,
@@ -8953,7 +8964,7 @@
     {
       "accountId": "0016O00003dmuUtQAI",
       "account": "PACE Security",
-      "mrr": null,
+      "mrr": 562.26,
       "email": 18,
       "phone": 13,
       "other": 10,
@@ -8967,7 +8978,7 @@
     {
       "accountId": "001PX00000LPpRTYA1",
       "account": "Pando Tech Solutions",
-      "mrr": null,
+      "mrr": 0,
       "email": 87,
       "phone": 39,
       "other": 0,
@@ -8981,7 +8992,7 @@
     {
       "accountId": "0016O00003dmuUwQAI",
       "account": "Parallel Synergistic Consulting",
-      "mrr": null,
+      "mrr": 429.96,
       "email": 4,
       "phone": 9,
       "other": 1,
@@ -8995,7 +9006,7 @@
     {
       "accountId": "0016O00003dmuUxQAI",
       "account": "Paramount Security Partners, LLC",
-      "mrr": null,
+      "mrr": 986.99,
       "email": 61,
       "phone": 34,
       "other": 1,
@@ -9009,7 +9020,7 @@
     {
       "accountId": "0016O00003dmuUyQAI",
       "account": "Parts Consulting Group",
-      "mrr": null,
+      "mrr": 0,
       "email": 9,
       "phone": 11,
       "other": 0,
@@ -9023,7 +9034,7 @@
     {
       "accountId": "0016O00003dmuUzQAI",
       "account": "Pathcom",
-      "mrr": null,
+      "mrr": 1033.2,
       "email": 96,
       "phone": 42,
       "other": 4,
@@ -9037,7 +9048,7 @@
     {
       "accountId": "0016O00003dmuV0QAI",
       "account": "Paulson's Audio & Video",
-      "mrr": null,
+      "mrr": 1659,
       "email": 93,
       "phone": 20,
       "other": 10,
@@ -9051,7 +9062,7 @@
     {
       "accountId": "0016O00003dmuQdQAI",
       "account": "Pavion Corp (fka Integrated Security & Communicati",
-      "mrr": null,
+      "mrr": 5338.79,
       "email": 29,
       "phone": 30,
       "other": 0,
@@ -9065,7 +9076,7 @@
     {
       "accountId": "0016O00003dmuV1QAI",
       "account": "PC Netsource",
-      "mrr": null,
+      "mrr": 545.66,
       "email": 52,
       "phone": 13,
       "other": 2,
@@ -9079,7 +9090,7 @@
     {
       "accountId": "0016O00003dmuV2QAI",
       "account": "PCM Networking",
-      "mrr": null,
+      "mrr": 948,
       "email": 27,
       "phone": 17,
       "other": 2,
@@ -9093,7 +9104,7 @@
     {
       "accountId": "0016O00003dmuV3QAI",
       "account": "PCS Technologies, Inc.",
-      "mrr": null,
+      "mrr": 849,
       "email": 46,
       "phone": 13,
       "other": 1,
@@ -9107,7 +9118,7 @@
     {
       "accountId": "0016O00003dmuV4QAI",
       "account": "Peace of Mind Technologies (POM)",
-      "mrr": null,
+      "mrr": 898.8,
       "email": 56,
       "phone": 7,
       "other": 2,
@@ -9121,7 +9132,7 @@
     {
       "accountId": "0011C000031N0aOQAS",
       "account": "Peak Communication",
-      "mrr": null,
+      "mrr": 450,
       "email": 59,
       "phone": 21,
       "other": 2,
@@ -9135,7 +9146,7 @@
     {
       "accountId": "0016O00003dmuV5QAI",
       "account": "Peerless Energy Systems",
-      "mrr": null,
+      "mrr": 2579.76,
       "email": 52,
       "phone": 16,
       "other": 2,
@@ -9149,7 +9160,7 @@
     {
       "accountId": "0011500001HNPqnAAH",
       "account": "Peerless Network",
-      "mrr": null,
+      "mrr": 628,
       "email": 205,
       "phone": 76,
       "other": 6,
@@ -9163,7 +9174,7 @@
     {
       "accountId": "0016O00003dmuV6QAI",
       "account": "Perfect Connections, Inc",
-      "mrr": null,
+      "mrr": 0,
       "email": 25,
       "phone": 31,
       "other": 1,
@@ -9177,7 +9188,7 @@
     {
       "accountId": "0016O00003dmuV7QAI",
       "account": "Phoenix Energy Supply",
-      "mrr": null,
+      "mrr": 0,
       "email": 46,
       "phone": 31,
       "other": 3,
@@ -9191,7 +9202,7 @@
     {
       "accountId": "0016O00003dmuVBQAY",
       "account": "Phone & Data Works",
-      "mrr": null,
+      "mrr": 585.75,
       "email": 105,
       "phone": 27,
       "other": 9,
@@ -9205,7 +9216,7 @@
     {
       "accountId": "0016O00003dmuV8QAI",
       "account": "PhoneAmerica Corp",
-      "mrr": null,
+      "mrr": 474,
       "email": 24,
       "phone": 2,
       "other": 5,
@@ -9219,7 +9230,7 @@
     {
       "accountId": "0016O00003dmuV9QAI",
       "account": "Phones Plus.biz",
-      "mrr": null,
+      "mrr": 446.52,
       "email": 8,
       "phone": 16,
       "other": 0,
@@ -9233,7 +9244,7 @@
     {
       "accountId": "0011C00002T6IlxQAF",
       "account": "Phonesuite Direct",
-      "mrr": null,
+      "mrr": 0,
       "email": 103,
       "phone": 78,
       "other": 4,
@@ -9247,7 +9258,7 @@
     {
       "accountId": "0016O00003dmuVCQAY",
       "account": "Pilothouse Communications",
-      "mrr": null,
+      "mrr": 616.09,
       "email": 26,
       "phone": 11,
       "other": 0,
@@ -9261,7 +9272,7 @@
     {
       "accountId": "001PX000004hVS4YAM",
       "account": "Plan B Technology",
-      "mrr": null,
+      "mrr": 642,
       "email": 27,
       "phone": 8,
       "other": 2,
@@ -9275,7 +9286,7 @@
     {
       "accountId": "0016O00003dmuVEQAY",
       "account": "Politon",
-      "mrr": null,
+      "mrr": 474,
       "email": 39,
       "phone": 22,
       "other": 2,
@@ -9289,7 +9300,7 @@
     {
       "accountId": "0016O00003RvloDQAR",
       "account": "POPP Communications",
-      "mrr": null,
+      "mrr": 9733.06,
       "email": 378,
       "phone": 123,
       "other": 18,
@@ -9303,7 +9314,7 @@
     {
       "accountId": "0016O00003dmuVFQAY",
       "account": "Pos Hawaii, Inc.",
-      "mrr": null,
+      "mrr": 474,
       "email": 4,
       "phone": 5,
       "other": 0,
@@ -9317,7 +9328,7 @@
     {
       "accountId": "0016O00003dmuVHQAY",
       "account": "Positive Technologies",
-      "mrr": null,
+      "mrr": 1206.09,
       "email": 60,
       "phone": 9,
       "other": 2,
@@ -9331,7 +9342,7 @@
     {
       "accountId": "0016O00003dmuVJQAY",
       "account": "PreCom",
-      "mrr": null,
+      "mrr": 474,
       "email": 54,
       "phone": 16,
       "other": 0,
@@ -9345,7 +9356,7 @@
     {
       "accountId": "0016O00003dmuVKQAY",
       "account": "PremCom",
-      "mrr": null,
+      "mrr": 2910.88,
       "email": 82,
       "phone": 27,
       "other": 1,
@@ -9359,7 +9370,7 @@
     {
       "accountId": "0016O00003d73UfQAI",
       "account": "Premier Communications",
-      "mrr": null,
+      "mrr": 1007.52,
       "email": 95,
       "phone": 29,
       "other": 3,
@@ -9373,7 +9384,7 @@
     {
       "accountId": "0011C00001nSNd7QAG",
       "account": "Priority Communications",
-      "mrr": null,
+      "mrr": 5220.69,
       "email": 256,
       "phone": 118,
       "other": 13,
@@ -9401,7 +9412,7 @@
     {
       "accountId": "0016O00003dmuVNQAY",
       "account": "Pro Video Security",
-      "mrr": null,
+      "mrr": 403,
       "email": 34,
       "phone": 20,
       "other": 2,
@@ -9415,7 +9426,7 @@
     {
       "accountId": "0016O00003dmuVOQAY",
       "account": "ProComm Voice & Data Solutions, Inc.",
-      "mrr": null,
+      "mrr": 0,
       "email": 41,
       "phone": 26,
       "other": 1,
@@ -9429,7 +9440,7 @@
     {
       "accountId": "0016O00003dmuVPQAY",
       "account": "Professional Communication Solutions",
-      "mrr": null,
+      "mrr": 711,
       "email": 69,
       "phone": 6,
       "other": 0,
@@ -9443,7 +9454,7 @@
     {
       "accountId": "0016O00003dmuceQAA",
       "account": "Professional Computer Services",
-      "mrr": null,
+      "mrr": 0,
       "email": 87,
       "phone": 6,
       "other": 2,
@@ -9457,7 +9468,7 @@
     {
       "accountId": "0016O00003dmuVQQAY",
       "account": "Professional Security Innovations",
-      "mrr": null,
+      "mrr": 1591.24,
       "email": 121,
       "phone": 61,
       "other": 1,
@@ -9471,7 +9482,7 @@
     {
       "accountId": "0016O00003dmuVSQAY",
       "account": "Property Services Of Atlanta, Inc",
-      "mrr": null,
+      "mrr": 474,
       "email": 21,
       "phone": 13,
       "other": 0,
@@ -9485,7 +9496,7 @@
     {
       "accountId": "0016O00003dmuVUQAY",
       "account": "Protecom",
-      "mrr": null,
+      "mrr": 474,
       "email": 34,
       "phone": 21,
       "other": 2,
@@ -9499,7 +9510,7 @@
     {
       "accountId": "0016O00003dmucoQAA",
       "account": "Protector Security",
-      "mrr": null,
+      "mrr": 955.32,
       "email": 40,
       "phone": 32,
       "other": 4,
@@ -9513,7 +9524,7 @@
     {
       "accountId": "0016O00003dmuVWQAY",
       "account": "Protex Central",
-      "mrr": null,
+      "mrr": 4578.52,
       "email": 202,
       "phone": 10,
       "other": 10,
@@ -9527,7 +9538,7 @@
     {
       "accountId": "0016O00003dmuVXQAY",
       "account": "Prowire",
-      "mrr": null,
+      "mrr": 656.4,
       "email": 12,
       "phone": 13,
       "other": 0,
@@ -9541,7 +9552,7 @@
     {
       "accountId": "0016O00003dmuVYQAY",
       "account": "QCC",
-      "mrr": null,
+      "mrr": 1170.32,
       "email": 43,
       "phone": 30,
       "other": 0,
@@ -9555,7 +9566,7 @@
     {
       "accountId": "0016O00003dmuVZQAY",
       "account": "Quality Alarm Systems",
-      "mrr": null,
+      "mrr": 678.75,
       "email": 12,
       "phone": 23,
       "other": 1,
@@ -9583,7 +9594,7 @@
     {
       "accountId": "0011C00002cDMhqQAG",
       "account": "Quick Copper Communications",
-      "mrr": null,
+      "mrr": 11537.93,
       "email": 759,
       "phone": 74,
       "other": 5,
@@ -9611,7 +9622,7 @@
     {
       "accountId": "0011500001nQZQkAAO",
       "account": "Radio Communications of Charleston",
-      "mrr": null,
+      "mrr": 618,
       "email": 31,
       "phone": 22,
       "other": 3,
@@ -9625,7 +9636,7 @@
     {
       "accountId": "0016O00003dmuVeQAI",
       "account": "Ragan Communications",
-      "mrr": null,
+      "mrr": 711,
       "email": 5,
       "phone": 10,
       "other": 0,
@@ -9639,7 +9650,7 @@
     {
       "accountId": "0016O000034yaRJQAY",
       "account": "Rage Technologies",
-      "mrr": null,
+      "mrr": 0,
       "email": 247,
       "phone": 63,
       "other": 15,
@@ -9653,7 +9664,7 @@
     {
       "accountId": "0016O00003dmuVfQAI",
       "account": "RAM Technologies",
-      "mrr": null,
+      "mrr": 674.94,
       "email": 19,
       "phone": 30,
       "other": 0,
@@ -9667,7 +9678,7 @@
     {
       "accountId": "0016O00003ebhidQAA",
       "account": "Ram Technologies",
-      "mrr": null,
+      "mrr": 674.94,
       "email": 40,
       "phone": 16,
       "other": 0,
@@ -9681,7 +9692,7 @@
     {
       "accountId": "0016O00003dmuVnQAI",
       "account": "Rave Systems, LLC dba Reference Audio Video & Security (now known as Reference Smart)",
-      "mrr": null,
+      "mrr": 1522.78,
       "email": 153,
       "phone": 38,
       "other": 7,
@@ -9695,7 +9706,7 @@
     {
       "accountId": "001PX00000H25JbYAJ",
       "account": "Raven Tech LLC",
-      "mrr": null,
+      "mrr": 400,
       "email": 144,
       "phone": 28,
       "other": 11,
@@ -9709,7 +9720,7 @@
     {
       "accountId": "0016O00003dmuVhQAI",
       "account": "Raytec Systems",
-      "mrr": null,
+      "mrr": 810.39,
       "email": 45,
       "phone": 28,
       "other": 1,
@@ -9723,7 +9734,7 @@
     {
       "accountId": "001PX00000D4NYNYA3",
       "account": "RCH Communications",
-      "mrr": null,
+      "mrr": 1251.56,
       "email": 125,
       "phone": 37,
       "other": 2,
@@ -9737,7 +9748,7 @@
     {
       "accountId": "0016O00003dmuVjQAI",
       "account": "Rco Systems, Inc",
-      "mrr": null,
+      "mrr": 382.92,
       "email": 27,
       "phone": 24,
       "other": 1,
@@ -9751,7 +9762,7 @@
     {
       "accountId": "0016O00003dmuVkQAI",
       "account": "Realm Connect Solutions",
-      "mrr": null,
+      "mrr": 344,
       "email": 59,
       "phone": 53,
       "other": 2,
@@ -9765,7 +9776,7 @@
     {
       "accountId": "0016O00003dmuVoQAI",
       "account": "Rel Comm",
-      "mrr": null,
+      "mrr": 2295,
       "email": 183,
       "phone": 59,
       "other": 7,
@@ -9779,7 +9790,7 @@
     {
       "accountId": "0016O00003dmuVpQAI",
       "account": "Reliable Voice & Data Systems",
-      "mrr": null,
+      "mrr": 359.1,
       "email": 35,
       "phone": 32,
       "other": 4,
@@ -9793,7 +9804,7 @@
     {
       "accountId": "0016O00003dmuYJQAY",
       "account": "Retail Control Solutions",
-      "mrr": null,
+      "mrr": 0,
       "email": 3,
       "phone": 9,
       "other": 0,
@@ -9807,7 +9818,7 @@
     {
       "accountId": "0016O00003dmucyQAA",
       "account": "Richards CCTV",
-      "mrr": null,
+      "mrr": 390,
       "email": 10,
       "phone": 4,
       "other": 14,
@@ -9821,7 +9832,7 @@
     {
       "accountId": "0016O00003dmuYMQAY",
       "account": "Richmond Security",
-      "mrr": null,
+      "mrr": 2041.33,
       "email": 127,
       "phone": 47,
       "other": 8,
@@ -9835,7 +9846,7 @@
     {
       "accountId": "0016O00003ebbEGQAY",
       "account": "Riello UPS Australia Pty Ltd",
-      "mrr": null,
+      "mrr": 1910.83,
       "email": 19,
       "phone": 3,
       "other": 0,
@@ -9849,7 +9860,7 @@
     {
       "accountId": "0011C00002uinPDQAY",
       "account": "RingStreet",
-      "mrr": null,
+      "mrr": 3858.89,
       "email": 178,
       "phone": 49,
       "other": 1,
@@ -9863,7 +9874,7 @@
     {
       "accountId": "0016O00003dmuYNQAY",
       "account": "River Parish Security",
-      "mrr": null,
+      "mrr": 588.5,
       "email": 273,
       "phone": 51,
       "other": 4,
@@ -9877,7 +9888,7 @@
     {
       "accountId": "0016O00003dmuYOQAY",
       "account": "RJR Solutions, Inc.",
-      "mrr": null,
+      "mrr": 153.36,
       "email": 84,
       "phone": 8,
       "other": 3,
@@ -9891,7 +9902,7 @@
     {
       "accountId": "0016O00003dmuYQQAY",
       "account": "Rms Omega Technologies",
-      "mrr": null,
+      "mrr": 53.85,
       "email": 16,
       "phone": 7,
       "other": 1,
@@ -9905,7 +9916,7 @@
     {
       "accountId": "0016O00003ebjkxQAA",
       "account": "Roadrunner Lock & Safe",
-      "mrr": null,
+      "mrr": 643.5,
       "email": 91,
       "phone": 29,
       "other": 4,
@@ -9919,7 +9930,7 @@
     {
       "accountId": "0016O00003dmuYSQAY",
       "account": "Roger's Two Way Radio",
-      "mrr": null,
+      "mrr": 933.49,
       "email": 45,
       "phone": 17,
       "other": 0,
@@ -9947,7 +9958,7 @@
     {
       "accountId": "0016O00003ebjMyQAI",
       "account": "Romeo Computer",
-      "mrr": null,
+      "mrr": 0,
       "email": 1,
       "phone": 0,
       "other": 1,
@@ -9961,7 +9972,7 @@
     {
       "accountId": "001PX000001jnr6YAA",
       "account": "Romeo Computer Company",
-      "mrr": null,
+      "mrr": 0,
       "email": 62,
       "phone": 20,
       "other": 1,
@@ -9975,7 +9986,7 @@
     {
       "accountId": "0016O00003dmuYUQAY",
       "account": "Rosenwach Group",
-      "mrr": null,
+      "mrr": 1323,
       "email": 21,
       "phone": 15,
       "other": 2,
@@ -9989,7 +10000,7 @@
     {
       "accountId": "0016O00003dmuYVQAY",
       "account": "RSS (Restaurant Service Solutions)",
-      "mrr": null,
+      "mrr": 3107.1,
       "email": 205,
       "phone": 100,
       "other": 3,
@@ -10003,7 +10014,7 @@
     {
       "accountId": "0016O00003dmuYWQAY",
       "account": "Ruder Electric, Inc.",
-      "mrr": null,
+      "mrr": 1133.88,
       "email": 11,
       "phone": 9,
       "other": 1,
@@ -10031,7 +10042,7 @@
     {
       "accountId": "0016O00003ebjR2QAI",
       "account": "Sabre Integrated Security Systems",
-      "mrr": null,
+      "mrr": 607.07,
       "email": 28,
       "phone": 17,
       "other": 1,
@@ -10045,7 +10056,7 @@
     {
       "accountId": "0016O00003dmuYXQAY",
       "account": "Sam E Mitchell Jr. Associate Inc",
-      "mrr": null,
+      "mrr": 673.2,
       "email": 69,
       "phone": 33,
       "other": 0,
@@ -10073,7 +10084,7 @@
     {
       "accountId": "0016O00003dmuYYQAY",
       "account": "SAS Services",
-      "mrr": null,
+      "mrr": 0,
       "email": 24,
       "phone": 9,
       "other": 2,
@@ -10087,7 +10098,7 @@
     {
       "accountId": "001PX00000WhWGjYAN",
       "account": "Secure Property Solutions",
-      "mrr": null,
+      "mrr": 400,
       "email": 57,
       "phone": 10,
       "other": 1,
@@ -10101,7 +10112,7 @@
     {
       "accountId": "0016O00003dmuYdQAI",
       "account": "Secure Technologies",
-      "mrr": null,
+      "mrr": 1121.18,
       "email": 27,
       "phone": 6,
       "other": 1,
@@ -10115,7 +10126,7 @@
     {
       "accountId": "0016O00003ee6aFQAQ",
       "account": "Security Systems Unlimited",
-      "mrr": null,
+      "mrr": 788.45,
       "email": 65,
       "phone": 63,
       "other": 7,
@@ -10129,7 +10140,7 @@
     {
       "accountId": "0016O00003dmuYfQAI",
       "account": "Seibold Security",
-      "mrr": null,
+      "mrr": 1759.35,
       "email": 69,
       "phone": 9,
       "other": 2,
@@ -10143,7 +10154,7 @@
     {
       "accountId": "0016O00003dmuYgQAI",
       "account": "Select Telecom Inc.",
-      "mrr": null,
+      "mrr": 395,
       "email": 36,
       "phone": 5,
       "other": 0,
@@ -10157,7 +10168,7 @@
     {
       "accountId": "0016O00003dmuYhQAI",
       "account": "Sentenia Systems",
-      "mrr": null,
+      "mrr": 1343,
       "email": 54,
       "phone": 33,
       "other": 7,
@@ -10171,7 +10182,7 @@
     {
       "accountId": "0016O00003dmuYiQAI",
       "account": "Shoreline Systems",
-      "mrr": null,
+      "mrr": 474,
       "email": 22,
       "phone": 18,
       "other": 1,
@@ -10185,7 +10196,7 @@
     {
       "accountId": "0016O00003dmuYjQAI",
       "account": "Shotrok LLC",
-      "mrr": null,
+      "mrr": 474,
       "email": 13,
       "phone": 10,
       "other": 2,
@@ -10199,7 +10210,7 @@
     {
       "accountId": "0016O00003dmuYmQAI",
       "account": "SK Technology Group, Inc.",
-      "mrr": null,
+      "mrr": 409.5,
       "email": 15,
       "phone": 7,
       "other": 5,
@@ -10213,7 +10224,7 @@
     {
       "accountId": "0016O00003dmuYnQAI",
       "account": "Sky Communications, Inc.",
-      "mrr": null,
+      "mrr": 686.94,
       "email": 56,
       "phone": 22,
       "other": 0,
@@ -10227,7 +10238,7 @@
     {
       "accountId": "0011500001nQiaxAAC",
       "account": "SkySwitch",
-      "mrr": null,
+      "mrr": 96774.32,
       "email": 2447,
       "phone": 321,
       "other": 20,
@@ -10241,7 +10252,7 @@
     {
       "accountId": "0016O00003dmuYoQAI",
       "account": "SmartCom Home Technologies, Inc.",
-      "mrr": null,
+      "mrr": 845,
       "email": 20,
       "phone": 15,
       "other": 2,
@@ -10255,7 +10266,7 @@
     {
       "accountId": "0016O00003dmuYpQAI",
       "account": "Smplsolutions",
-      "mrr": null,
+      "mrr": 661.5,
       "email": 47,
       "phone": 12,
       "other": 7,
@@ -10269,7 +10280,7 @@
     {
       "accountId": "0016O00003ebavgQAA",
       "account": "Sng Electrics P/l",
-      "mrr": null,
+      "mrr": 474,
       "email": 10,
       "phone": 3,
       "other": 0,
@@ -10283,7 +10294,7 @@
     {
       "accountId": "0016O00003dmuYsQAI",
       "account": "So Cal Light",
-      "mrr": null,
+      "mrr": 694.56,
       "email": 12,
       "phone": 18,
       "other": 1,
@@ -10311,7 +10322,7 @@
     {
       "accountId": "0016O00003dmuYtQAI",
       "account": "Sound & Vision Design Center",
-      "mrr": null,
+      "mrr": 836.12,
       "email": 13,
       "phone": 4,
       "other": 2,
@@ -10339,7 +10350,7 @@
     {
       "accountId": "0016O00003dmuYvQAI",
       "account": "SoundTel",
-      "mrr": null,
+      "mrr": 315,
       "email": 16,
       "phone": 6,
       "other": 0,
@@ -10353,7 +10364,7 @@
     {
       "accountId": "0016O00003dmuYxQAI",
       "account": "Southeastern Communications Services Inc.",
-      "mrr": null,
+      "mrr": 911.76,
       "email": 31,
       "phone": 17,
       "other": 3,
@@ -10367,7 +10378,7 @@
     {
       "accountId": "0016O00003dmucjQAA",
       "account": "Southeastern TeleCommunications",
-      "mrr": null,
+      "mrr": 1244.43,
       "email": 82,
       "phone": 15,
       "other": 8,
@@ -10381,7 +10392,7 @@
     {
       "accountId": "0016O00003dmuYyQAI",
       "account": "Southern Communications & Cons",
-      "mrr": null,
+      "mrr": 899.24,
       "email": 67,
       "phone": 6,
       "other": 0,
@@ -10395,7 +10406,7 @@
     {
       "accountId": "0016O00003dmuYzQAI",
       "account": "Southern Integrated Technologies",
-      "mrr": null,
+      "mrr": 476.37,
       "email": 34,
       "phone": 12,
       "other": 14,
@@ -10409,7 +10420,7 @@
     {
       "accountId": "0016O00003dmuZ4QAI",
       "account": "Starfish Computer Company",
-      "mrr": null,
+      "mrr": 2541.08,
       "email": 69,
       "phone": 29,
       "other": 8,
@@ -10423,7 +10434,7 @@
     {
       "accountId": "0016O00003ebgW9QAI",
       "account": "Starlight Security",
-      "mrr": null,
+      "mrr": 701.97,
       "email": 96,
       "phone": 43,
       "other": 7,
@@ -10437,7 +10448,7 @@
     {
       "accountId": "0016O00003dmuZ6QAI",
       "account": "Strategic Communications, LLC",
-      "mrr": null,
+      "mrr": 7016.82,
       "email": 87,
       "phone": 67,
       "other": 3,
@@ -10451,7 +10462,7 @@
     {
       "accountId": "0016O00003dmuKFQAY",
       "account": "streamWrite Connect",
-      "mrr": null,
+      "mrr": 628,
       "email": 40,
       "phone": 5,
       "other": 6,
@@ -10465,7 +10476,7 @@
     {
       "accountId": "0016O00003dmuZ7QAI",
       "account": "Strobe Tech",
-      "mrr": null,
+      "mrr": 915.92,
       "email": 10,
       "phone": 16,
       "other": 1,
@@ -10479,7 +10490,7 @@
     {
       "accountId": "0011500001HNPwtAAH",
       "account": "Sunrise Solutions Inc",
-      "mrr": null,
+      "mrr": 702.37,
       "email": 231,
       "phone": 51,
       "other": 4,
@@ -10493,7 +10504,7 @@
     {
       "accountId": "0016O00003dmuZ9QAI",
       "account": "Surf Fire & Security Inc",
-      "mrr": null,
+      "mrr": 1014.46,
       "email": 38,
       "phone": 34,
       "other": 3,
@@ -10507,7 +10518,7 @@
     {
       "accountId": "0016O00003dmuZAQAY",
       "account": "SymTech Solutions",
-      "mrr": null,
+      "mrr": 661.5,
       "email": 27,
       "phone": 24,
       "other": 1,
@@ -10521,7 +10532,7 @@
     {
       "accountId": "0011C00001qJTujQAG",
       "account": "Synectic Technologies",
-      "mrr": null,
+      "mrr": 2370,
       "email": 119,
       "phone": 34,
       "other": 16,
@@ -10535,7 +10546,7 @@
     {
       "accountId": "0016O00003ebkKXQAY",
       "account": "Synergy",
-      "mrr": null,
+      "mrr": 4810.3,
       "email": 7,
       "phone": 15,
       "other": 0,
@@ -10549,7 +10560,7 @@
     {
       "accountId": "0016O00003dmuZBQAY",
       "account": "Synergy",
-      "mrr": null,
+      "mrr": 4810.3,
       "email": 172,
       "phone": 30,
       "other": 3,
@@ -10563,7 +10574,7 @@
     {
       "accountId": "0016O00003dmuZDQAY",
       "account": "T. Daniels Consulting, Inc.",
-      "mrr": null,
+      "mrr": 711.92,
       "email": 33,
       "phone": 12,
       "other": 1,
@@ -10605,7 +10616,7 @@
     {
       "accountId": "0016O00003dmuZFQAY",
       "account": "Tate Communications, LLC",
-      "mrr": null,
+      "mrr": 588.5,
       "email": 16,
       "phone": 12,
       "other": 0,
@@ -10619,7 +10630,7 @@
     {
       "accountId": "0016O00003dmuZIQAY",
       "account": "TCW Computer Systems",
-      "mrr": null,
+      "mrr": 714,
       "email": 49,
       "phone": 3,
       "other": 3,
@@ -10633,7 +10644,7 @@
     {
       "accountId": "0016O00003dmuZJQAY",
       "account": "TDS-Phone",
-      "mrr": null,
+      "mrr": 1264,
       "email": 61,
       "phone": 14,
       "other": 2,
@@ -10647,7 +10658,7 @@
     {
       "accountId": "0011500001e8gQQAAY",
       "account": "Techmode",
-      "mrr": null,
+      "mrr": 9347.68,
       "email": 651,
       "phone": 186,
       "other": 13,
@@ -10661,7 +10672,7 @@
     {
       "accountId": "0016O00003dmuZLQAY",
       "account": "Technesis Greenwood",
-      "mrr": null,
+      "mrr": 474,
       "email": 3,
       "phone": 15,
       "other": 0,
@@ -10675,7 +10686,7 @@
     {
       "accountId": "0016O00003dmuZMQAY",
       "account": "Technical Computer Solutions Inc",
-      "mrr": null,
+      "mrr": 382.92,
       "email": 38,
       "phone": 8,
       "other": 0,
@@ -10689,7 +10700,7 @@
     {
       "accountId": "0016O00003dmuZNQAY",
       "account": "Technical Solutions",
-      "mrr": null,
+      "mrr": 1389.2,
       "email": 32,
       "phone": 11,
       "other": 2,
@@ -10703,7 +10714,7 @@
     {
       "accountId": "0016O00003dmuZTQAY",
       "account": "Technology System Consultants",
-      "mrr": null,
+      "mrr": 437.58,
       "email": 13,
       "phone": 9,
       "other": 0,
@@ -10717,7 +10728,7 @@
     {
       "accountId": "0016O00003dmuZUQAY",
       "account": "Technology Unlimited",
-      "mrr": null,
+      "mrr": 1414.66,
       "email": 54,
       "phone": 8,
       "other": 9,
@@ -10731,7 +10742,7 @@
     {
       "accountId": "0016O00003dmuZVQAY",
       "account": "Techoptics, Inc",
-      "mrr": null,
+      "mrr": 837.92,
       "email": 18,
       "phone": 17,
       "other": 1,
@@ -10745,7 +10756,7 @@
     {
       "accountId": "0011C00002i5ll0QAA",
       "account": "Tel-net",
-      "mrr": null,
+      "mrr": 2362.9,
       "email": 43,
       "phone": 19,
       "other": 1,
@@ -10759,7 +10770,7 @@
     {
       "accountId": "0016O00003dmuZWQAY",
       "account": "Telbon Communications",
-      "mrr": null,
+      "mrr": 474,
       "email": 24,
       "phone": 14,
       "other": 0,
@@ -10773,7 +10784,7 @@
     {
       "accountId": "0016O00003dmuZXQAY",
       "account": "Telco Data",
-      "mrr": null,
+      "mrr": 0,
       "email": 63,
       "phone": 47,
       "other": 3,
@@ -10787,7 +10798,7 @@
     {
       "accountId": "0016O00003dmuZYQAY",
       "account": "Telcom Innovations Group",
-      "mrr": null,
+      "mrr": 1620.78,
       "email": 39,
       "phone": 16,
       "other": 3,
@@ -10801,7 +10812,7 @@
     {
       "accountId": "0016O00003dmuZZQAY",
       "account": "Teldata USA, Inc.",
-      "mrr": null,
+      "mrr": 1905.75,
       "email": 34,
       "phone": 25,
       "other": 1,
@@ -10815,7 +10826,7 @@
     {
       "accountId": "0016O00003dmuZeQAI",
       "account": "Tele Link Communications",
-      "mrr": null,
+      "mrr": 503.76,
       "email": 50,
       "phone": 19,
       "other": 1,
@@ -10829,7 +10840,7 @@
     {
       "accountId": "0016O00003dmuZjQAI",
       "account": "Tele-Plus Corporation",
-      "mrr": null,
+      "mrr": 4338.59,
       "email": 94,
       "phone": 30,
       "other": 3,
@@ -10843,7 +10854,7 @@
     {
       "accountId": "0016O00003dmuZaQAI",
       "account": "Teleco Charleston",
-      "mrr": null,
+      "mrr": 880.4,
       "email": 114,
       "phone": 9,
       "other": 10,
@@ -10857,7 +10868,7 @@
     {
       "accountId": "0016O00003dmuZcQAI",
       "account": "Teleco Wilmington",
-      "mrr": null,
+      "mrr": 577.1,
       "email": 84,
       "phone": 9,
       "other": 0,
@@ -10871,7 +10882,7 @@
     {
       "accountId": "0016O00003a9uJlQAI",
       "account": "Telecom Unlimited",
-      "mrr": null,
+      "mrr": 820.48,
       "email": 154,
       "phone": 41,
       "other": 1,
@@ -10885,7 +10896,7 @@
     {
       "accountId": "0016O00003dmuZdQAI",
       "account": "Telecommunications Designs",
-      "mrr": null,
+      "mrr": 1004.98,
       "email": 22,
       "phone": 8,
       "other": 4,
@@ -10899,7 +10910,7 @@
     {
       "accountId": "0016O00003dmuZfQAI",
       "account": "Telephone Communications Inc",
-      "mrr": null,
+      "mrr": 1279.08,
       "email": 36,
       "phone": 17,
       "other": 12,
@@ -10913,7 +10924,7 @@
     {
       "accountId": "0016O00003dmuZkQAI",
       "account": "Telewire Inc.",
-      "mrr": null,
+      "mrr": 733.39,
       "email": 122,
       "phone": 65,
       "other": 2,
@@ -10927,7 +10938,7 @@
     {
       "accountId": "0016O00003dmuZmQAI",
       "account": "Telstar Networks",
-      "mrr": null,
+      "mrr": 652.62,
       "email": 35,
       "phone": 45,
       "other": 2,
@@ -10941,7 +10952,7 @@
     {
       "accountId": "0016O00003dmuZnQAI",
       "account": "Temecula Valley Communications",
-      "mrr": null,
+      "mrr": 0,
       "email": 77,
       "phone": 11,
       "other": 11,
@@ -10955,7 +10966,7 @@
     {
       "accountId": "0016O00003dmuZoQAI",
       "account": "Texas Computer Associates",
-      "mrr": null,
+      "mrr": 390,
       "email": 53,
       "phone": 7,
       "other": 0,
@@ -10969,7 +10980,7 @@
     {
       "accountId": "0016O00003dmuZpQAI",
       "account": "The Computer Store",
-      "mrr": null,
+      "mrr": 1361.54,
       "email": 36,
       "phone": 14,
       "other": 0,
@@ -10983,7 +10994,7 @@
     {
       "accountId": "0016O00003dmuZqQAI",
       "account": "The Crowley Company",
-      "mrr": null,
+      "mrr": 1727.2,
       "email": 50,
       "phone": 10,
       "other": 0,
@@ -10997,7 +11008,7 @@
     {
       "accountId": "001PX000004hVRqYAM",
       "account": "The Phone Experts - Communications Ltd.",
-      "mrr": null,
+      "mrr": 3022.48,
       "email": 71,
       "phone": 13,
       "other": 1,
@@ -11011,7 +11022,7 @@
     {
       "accountId": "001PX00000Abt4dYAB",
       "account": "The Phone Experts - Communications Ltd.",
-      "mrr": null,
+      "mrr": 3022.48,
       "email": 1,
       "phone": 0,
       "other": 0,
@@ -11025,7 +11036,7 @@
     {
       "accountId": "0016O00003dmuZsQAI",
       "account": "The RHINO Group",
-      "mrr": null,
+      "mrr": 2099.56,
       "email": 171,
       "phone": 12,
       "other": 3,
@@ -11039,7 +11050,7 @@
     {
       "accountId": "0016O00003dmuZtQAI",
       "account": "The SMS Group",
-      "mrr": null,
+      "mrr": 474,
       "email": 27,
       "phone": 16,
       "other": 0,
@@ -11067,7 +11078,7 @@
     {
       "accountId": "0016O00003dmuZwQAI",
       "account": "Thomas Electronics Inc",
-      "mrr": null,
+      "mrr": 1128.6,
       "email": 27,
       "phone": 11,
       "other": 0,
@@ -11081,7 +11092,7 @@
     {
       "accountId": "0011500001n8agGAAQ",
       "account": "Tidal Communications LLC",
-      "mrr": null,
+      "mrr": 966.3,
       "email": 79,
       "phone": 20,
       "other": 1,
@@ -11095,7 +11106,7 @@
     {
       "accountId": "0016O00003ebbEJQAY",
       "account": "Time Business Machines LTD.",
-      "mrr": null,
+      "mrr": 1192.77,
       "email": 59,
       "phone": 10,
       "other": 4,
@@ -11109,7 +11120,7 @@
     {
       "accountId": "001PX000001GQijYAG",
       "account": "TIPS Resources",
-      "mrr": null,
+      "mrr": 824.34,
       "email": 53,
       "phone": 16,
       "other": 1,
@@ -11123,7 +11134,7 @@
     {
       "accountId": "0016O00003eaZDPQA2",
       "account": "Tolleson Inc",
-      "mrr": null,
+      "mrr": 798.05,
       "email": 94,
       "phone": 31,
       "other": 2,
@@ -11137,7 +11148,7 @@
     {
       "accountId": "0016O00003dmuZyQAI",
       "account": "Total Comfort Weatherization",
-      "mrr": null,
+      "mrr": 553,
       "email": 58,
       "phone": 10,
       "other": 1,
@@ -11151,7 +11162,7 @@
     {
       "accountId": "0016O00003L3EolQAF",
       "account": "Total Communications, Inc.",
-      "mrr": null,
+      "mrr": 844.2,
       "email": 247,
       "phone": 46,
       "other": 14,
@@ -11165,7 +11176,7 @@
     {
       "accountId": "0016O00003dmuZzQAI",
       "account": "Total Technology Management",
-      "mrr": null,
+      "mrr": 409.52,
       "email": 13,
       "phone": 20,
       "other": 1,
@@ -11179,7 +11190,7 @@
     {
       "accountId": "0011500001eAb1GAAS",
       "account": "Towner Communications Systems",
-      "mrr": null,
+      "mrr": 0,
       "email": 98,
       "phone": 14,
       "other": 2,
@@ -11193,7 +11204,7 @@
     {
       "accountId": "0011C00002pFDu5QAG",
       "account": "Transcom Telecommunications",
-      "mrr": null,
+      "mrr": 745.36,
       "email": 158,
       "phone": 27,
       "other": 4,
@@ -11207,7 +11218,7 @@
     {
       "accountId": "0016O00003dmua2QAA",
       "account": "Traviss Audio Video",
-      "mrr": null,
+      "mrr": 0,
       "email": 5,
       "phone": 7,
       "other": 2,
@@ -11221,7 +11232,7 @@
     {
       "accountId": "0016O00003dmudKQAQ",
       "account": "TRC Networks",
-      "mrr": null,
+      "mrr": 474,
       "email": 6,
       "phone": 0,
       "other": 0,
@@ -11235,7 +11246,7 @@
     {
       "accountId": "0016O00003dmua3QAA",
       "account": "TRG Networking",
-      "mrr": null,
+      "mrr": 632,
       "email": 13,
       "phone": 12,
       "other": 0,
@@ -11249,7 +11260,7 @@
     {
       "accountId": "0016O00003dmua5QAA",
       "account": "Tri-State Security",
-      "mrr": null,
+      "mrr": 790,
       "email": 23,
       "phone": 8,
       "other": 0,
@@ -11263,7 +11274,7 @@
     {
       "accountId": "0011C00002lbOxLQAU",
       "account": "Tri-Tec Communications",
-      "mrr": null,
+      "mrr": 1923.41,
       "email": 103,
       "phone": 14,
       "other": 2,
@@ -11277,7 +11288,7 @@
     {
       "accountId": "0016O00003dmua6QAA",
       "account": "Tri-Tel Technical Svc",
-      "mrr": null,
+      "mrr": 474,
       "email": 13,
       "phone": 17,
       "other": 1,
@@ -11305,7 +11316,7 @@
     {
       "accountId": "0016O00003dmudEQAQ",
       "account": "Triware Technologies Incorporated",
-      "mrr": null,
+      "mrr": 3017.66,
       "email": 57,
       "phone": 3,
       "other": 4,
@@ -11319,7 +11330,7 @@
     {
       "accountId": "0016O00003dmua7QAA",
       "account": "TRM",
-      "mrr": null,
+      "mrr": 1475.24,
       "email": 57,
       "phone": 15,
       "other": 1,
@@ -11333,7 +11344,7 @@
     {
       "accountId": "0016O00003dmuaCQAQ",
       "account": "Turner Teleco",
-      "mrr": null,
+      "mrr": 0,
       "email": 56,
       "phone": 11,
       "other": 0,
@@ -11347,7 +11358,7 @@
     {
       "accountId": "001PX00000Csp0DYAR",
       "account": "Turner Teleco - Alexandria",
-      "mrr": null,
+      "mrr": 195,
       "email": 68,
       "phone": 10,
       "other": 3,
@@ -11361,7 +11372,7 @@
     {
       "accountId": "0016O00003dmuaDQAQ",
       "account": "TW Enterprises",
-      "mrr": null,
+      "mrr": 892.5,
       "email": 14,
       "phone": 8,
       "other": 0,
@@ -11375,7 +11386,7 @@
     {
       "accountId": "0016O00003dmuaEQAQ",
       "account": "U.S. Communications Group, Inc.",
-      "mrr": null,
+      "mrr": 474,
       "email": 12,
       "phone": 10,
       "other": 1,
@@ -11389,7 +11400,7 @@
     {
       "accountId": "0016O00003ebkAEQAY",
       "account": "Unified Communications Integrators, LLC",
-      "mrr": null,
+      "mrr": 537.72,
       "email": 132,
       "phone": 35,
       "other": 9,
@@ -11403,7 +11414,7 @@
     {
       "accountId": "0011500001HNQIoAAP",
       "account": "Unique Communications",
-      "mrr": null,
+      "mrr": 506.58,
       "email": 30,
       "phone": 27,
       "other": 1,
@@ -11417,7 +11428,7 @@
     {
       "accountId": "0016O00003dmuaFQAQ",
       "account": "United Automation",
-      "mrr": null,
+      "mrr": 847.44,
       "email": 4,
       "phone": 11,
       "other": 0,
@@ -11431,7 +11442,7 @@
     {
       "accountId": "0016O00003dmuaGQAQ",
       "account": "United Security Communications, Inc.",
-      "mrr": null,
+      "mrr": 661.5,
       "email": 16,
       "phone": 14,
       "other": 0,
@@ -11445,7 +11456,7 @@
     {
       "accountId": "0016O00003ebjmAQAQ",
       "account": "United Systems",
-      "mrr": null,
+      "mrr": 847.44,
       "email": 98,
       "phone": 8,
       "other": 4,
@@ -11459,7 +11470,7 @@
     {
       "accountId": "0016O00003dmuaHQAQ",
       "account": "United Systems Inc",
-      "mrr": null,
+      "mrr": 1227.65,
       "email": 106,
       "phone": 36,
       "other": 8,
@@ -11473,7 +11484,7 @@
     {
       "accountId": "0016O00003PugCiQAJ",
       "account": "Unitel",
-      "mrr": null,
+      "mrr": 869,
       "email": 40,
       "phone": 35,
       "other": 5,
@@ -11487,7 +11498,7 @@
     {
       "accountId": "0016O00003dmuaIQAQ",
       "account": "Universal Security and Fire",
-      "mrr": null,
+      "mrr": 497.7,
       "email": 49,
       "phone": 19,
       "other": 1,
@@ -11501,7 +11512,7 @@
     {
       "accountId": "0016O00003dmuaJQAQ",
       "account": "Universal Systems",
-      "mrr": null,
+      "mrr": 1273.8,
       "email": 50,
       "phone": 33,
       "other": 2,
@@ -11515,7 +11526,7 @@
     {
       "accountId": "0016O00003dmuaKQAQ",
       "account": "Uptime Electronics, Inc.",
-      "mrr": null,
+      "mrr": 1373.88,
       "email": 28,
       "phone": 7,
       "other": 7,
@@ -11529,7 +11540,7 @@
     {
       "accountId": "0016O00003dmuaMQAQ",
       "account": "USA Security",
-      "mrr": null,
+      "mrr": 6000,
       "email": 36,
       "phone": 21,
       "other": 1,
@@ -11543,7 +11554,7 @@
     {
       "accountId": "0016O00003dmuaNQAQ",
       "account": "Ustele Inc.",
-      "mrr": null,
+      "mrr": 831.22,
       "email": 63,
       "phone": 10,
       "other": 0,
@@ -11557,7 +11568,7 @@
     {
       "accountId": "0016O00003dmuaOQAQ",
       "account": "UT Networks",
-      "mrr": null,
+      "mrr": 500,
       "email": 133,
       "phone": 31,
       "other": 2,
@@ -11571,7 +11582,7 @@
     {
       "accountId": "0016O00003dmuaQQAQ",
       "account": "Valhalla",
-      "mrr": null,
+      "mrr": 532.86,
       "email": 101,
       "phone": 15,
       "other": 6,
@@ -11585,7 +11596,7 @@
     {
       "accountId": "0016O00003dmuaRQAQ",
       "account": "Valley Lock & Security",
-      "mrr": null,
+      "mrr": 591.04,
       "email": 38,
       "phone": 28,
       "other": 2,
@@ -11599,7 +11610,7 @@
     {
       "accountId": "0011C000021EV9PQAW",
       "account": "VanRan Communications Services, Inc.",
-      "mrr": null,
+      "mrr": 4518.35,
       "email": 362,
       "phone": 96,
       "other": 11,
@@ -11613,7 +11624,7 @@
     {
       "accountId": "0016O00003dmuaTQAQ",
       "account": "Velosity Electronics",
-      "mrr": null,
+      "mrr": 1102.24,
       "email": 28,
       "phone": 34,
       "other": 2,
@@ -11627,7 +11638,7 @@
     {
       "accountId": "0016O00003dmuaVQAQ",
       "account": "Vertex Security",
-      "mrr": null,
+      "mrr": 300,
       "email": 16,
       "phone": 29,
       "other": 6,
@@ -11641,7 +11652,7 @@
     {
       "accountId": "0016O00003dmuaWQAQ",
       "account": "Veterans Communications Corp",
-      "mrr": null,
+      "mrr": 455.28,
       "email": 72,
       "phone": 31,
       "other": 7,
@@ -11655,7 +11666,7 @@
     {
       "accountId": "0016O00003dmuaXQAQ",
       "account": "Vidtek Associates",
-      "mrr": null,
+      "mrr": 481.9,
       "email": 17,
       "phone": 11,
       "other": 0,
@@ -11669,7 +11680,7 @@
     {
       "accountId": "0016O00003eao1eQAA",
       "account": "Virtual Guard",
-      "mrr": null,
+      "mrr": 1510.23,
       "email": 101,
       "phone": 8,
       "other": 5,
@@ -11683,7 +11694,7 @@
     {
       "accountId": "001PX000001rdZdYAI",
       "account": "VITEC Solutions",
-      "mrr": null,
+      "mrr": 607.76,
       "email": 68,
       "phone": 36,
       "other": 4,
@@ -11697,7 +11708,7 @@
     {
       "accountId": "0011500001bh7enAAA",
       "account": "Votacall Inc - 2nd Database",
-      "mrr": null,
+      "mrr": 158,
       "email": 289,
       "phone": 36,
       "other": 3,
@@ -11711,7 +11722,7 @@
     {
       "accountId": "0016O00003dmuaZQAQ",
       "account": "Voxcom Solutions Inc",
-      "mrr": null,
+      "mrr": 481.9,
       "email": 35,
       "phone": 25,
       "other": 1,
@@ -11725,7 +11736,7 @@
     {
       "accountId": "0016O00003WFBGFQA5",
       "account": "Voysis IP Solutions",
-      "mrr": null,
+      "mrr": 0,
       "email": 180,
       "phone": 28,
       "other": 5,
@@ -11739,7 +11750,7 @@
     {
       "accountId": "0011500001HNQIIAA5",
       "account": "W & W Telephone Co., Inc.",
-      "mrr": null,
+      "mrr": 1279.08,
       "email": 17,
       "phone": 7,
       "other": 0,
@@ -11753,7 +11764,7 @@
     {
       "accountId": "0016O00003dmuacQAA",
       "account": "Watson Communications Corp.",
-      "mrr": null,
+      "mrr": 632,
       "email": 151,
       "phone": 28,
       "other": 5,
@@ -11767,7 +11778,7 @@
     {
       "accountId": "0016O00003dmuaeQAA",
       "account": "Werner National",
-      "mrr": null,
+      "mrr": 1704,
       "email": 41,
       "phone": 16,
       "other": 2,
@@ -11781,7 +11792,7 @@
     {
       "accountId": "0016O00003dmuafQAA",
       "account": "West Coast Cabling, Inc.",
-      "mrr": null,
+      "mrr": 949.33,
       "email": 117,
       "phone": 12,
       "other": 21,
@@ -11795,7 +11806,7 @@
     {
       "accountId": "0016O00003dmuagQAA",
       "account": "West Coast Cash Register Systems",
-      "mrr": null,
+      "mrr": 720.3,
       "email": 43,
       "phone": 22,
       "other": 1,
@@ -11809,7 +11820,7 @@
     {
       "accountId": "001PX00000D4yfdYAB",
       "account": "Wired Media Solutions",
-      "mrr": null,
+      "mrr": 535,
       "email": 66,
       "phone": 36,
       "other": 1,
@@ -11823,7 +11834,7 @@
     {
       "accountId": "0011500001IIF86AAH",
       "account": "Wolf Technology Group",
-      "mrr": null,
+      "mrr": 437.58,
       "email": 61,
       "phone": 8,
       "other": 1,
@@ -11837,7 +11848,7 @@
     {
       "accountId": "0016O00003dmuahQAA",
       "account": "World Class Aviation",
-      "mrr": null,
+      "mrr": 390,
       "email": 14,
       "phone": 27,
       "other": 3,
@@ -11851,7 +11862,7 @@
     {
       "accountId": "0016O00003dmuaiQAA",
       "account": "World Radio Telecommunications",
-      "mrr": null,
+      "mrr": 790,
       "email": 17,
       "phone": 7,
       "other": 0,
@@ -11865,7 +11876,7 @@
     {
       "accountId": "0016O00003dmuajQAA",
       "account": "Worldcom Exchange",
-      "mrr": null,
+      "mrr": 7920.22,
       "email": 78,
       "phone": 17,
       "other": 10,
@@ -11879,7 +11890,7 @@
     {
       "accountId": "0011500001HNQK5AAP",
       "account": "WSB Computer Services, Inc.",
-      "mrr": null,
+      "mrr": 1984.5,
       "email": 91,
       "phone": 36,
       "other": 1,
@@ -11893,7 +11904,7 @@
     {
       "accountId": "0011C00002wbGFxQAM",
       "account": "WTS (waccamaw Telcommunications Systems Inc)",
-      "mrr": null,
+      "mrr": 3575.14,
       "email": 268,
       "phone": 201,
       "other": 9,
@@ -11907,7 +11918,7 @@
     {
       "accountId": "0016O00003dmualQAA",
       "account": "X-Tech Services",
-      "mrr": null,
+      "mrr": 474,
       "email": 20,
       "phone": 10,
       "other": 0,
@@ -11921,7 +11932,7 @@
     {
       "accountId": "0011500001HNPlFAAX",
       "account": "Xclutel",
-      "mrr": null,
+      "mrr": 0,
       "email": 240,
       "phone": 32,
       "other": 6,
@@ -11935,7 +11946,7 @@
     {
       "accountId": "001PX00000h1w4RYAQ",
       "account": "Xclutel",
-      "mrr": null,
+      "mrr": 0,
       "email": 1,
       "phone": 0,
       "other": 0,
@@ -11949,7 +11960,7 @@
     {
       "accountId": "0016O00003dmuakQAA",
       "account": "Xpedient Communications",
-      "mrr": null,
+      "mrr": 2049.11,
       "email": 53,
       "phone": 15,
       "other": 3,
@@ -11963,7 +11974,7 @@
     {
       "accountId": "0016O00003dmuamQAA",
       "account": "Young Scale",
-      "mrr": null,
+      "mrr": 902.88,
       "email": 15,
       "phone": 7,
       "other": 0,
@@ -11977,7 +11988,7 @@
     {
       "accountId": "0016O00003dmuanQAA",
       "account": "Your Environment's Solution",
-      "mrr": null,
+      "mrr": 401.25,
       "email": 61,
       "phone": 16,
       "other": 1,
@@ -11991,7 +12002,7 @@
     {
       "accountId": "0016O00003dmuaoQAA",
       "account": "Zadar Technology",
-      "mrr": null,
+      "mrr": 395,
       "email": 46,
       "phone": 21,
       "other": 1,

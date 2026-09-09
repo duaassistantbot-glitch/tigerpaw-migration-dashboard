@@ -114,6 +114,114 @@ async function sfQueryAll(token, soql) {
   return records;
 }
 
+
+function parseCsv(text) {
+  const rows = [];
+  let row = [];
+  let field = '';
+  let quoted = false;
+  for (let i = 0; i < text.length; i++) {
+    const char = text[i];
+    const next = text[i + 1];
+    if (quoted) {
+      if (char === '"' && next === '"') { field += '"'; i++; }
+      else if (char === '"') quoted = false;
+      else field += char;
+    } else if (char === '"') quoted = true;
+    else if (char === ',') { row.push(field); field = ''; }
+    else if (char === '\n') { row.push(field); rows.push(row); row = []; field = ''; }
+    else if (char !== '\r') field += char;
+  }
+  if (field || row.length) { row.push(field); rows.push(row); }
+  const headers = (rows.shift() || []).map(header => header.replace(/^\uFEFF/, ''));
+  return rows.filter(r => r.some(Boolean)).map(r => Object.fromEntries(headers.map((h, i) => [h, r[i] || ''])));
+}
+
+function parseMoney(value) {
+  if (value === null || value === undefined || value === '') return null;
+  const parsed = Number(String(value).replace(/[$,]/g, '').trim());
+  return Number.isFinite(parsed) ? Math.round(parsed * 100) / 100 : null;
+}
+
+const MRR_STOP_TOKENS = new Set('communications communication telecom telecommunications technologies technology systems system inc incorporated llc ltd limited co corp corporation service services solutions security group company the and of dba fka c o voice data'.split(' '));
+function mrrNorm(value) {
+  return String(value || '').toLowerCase().replace(/&/g, 'and').replace(/[^a-z0-9]+/g, ' ').trim();
+}
+function mrrCompact(value) { return mrrNorm(value).replace(/\s+/g, ''); }
+function mrrMeaningfulTokens(value) {
+  return mrrNorm(value).split(' ').filter(token => token && !MRR_STOP_TOKENS.has(token));
+}
+function mrrMatchScore(a, b) {
+  const na = mrrNorm(a), nb = mrrNorm(b);
+  if (!na || !nb) return 0;
+  if (na === nb) return 100;
+  if (mrrCompact(a) === mrrCompact(b)) return 97;
+  const at = mrrMeaningfulTokens(a);
+  const bt = mrrMeaningfulTokens(b);
+  if (!at.length || !bt.length) return 0;
+  const aSet = new Set(at), bSet = new Set(bt);
+  const intersection = [...aSet].filter(token => bSet.has(token));
+  if (!intersection.length) return 0;
+  const unionSize = new Set([...at, ...bt]).size;
+  const jaccard = unionSize ? intersection.length / unionSize : 0;
+  const smaller = at.length <= bt.length ? at : bt;
+  const otherSet = at.length <= bt.length ? bSet : aSet;
+  const subset = smaller.length >= 1 && smaller.every(token => otherSet.has(token));
+  let score = Math.round(jaccard * 80);
+  if (subset) score = Math.max(score, smaller.length === 1 ? 82 : 92);
+  if (intersection.length >= 2) score += 8;
+  return Math.min(score, 99);
+}
+
+function loadMrrLookup() {
+  const csvPath = path.join(__dirname, 'client-master-mrr.csv');
+  if (!fs.existsSync(csvPath)) return { enrich(account) { return account; }, summary: { matched: 0, source: null } };
+  const rows = parseCsv(fs.readFileSync(csvPath, 'utf8'))
+    .map(row => ({
+      client: row.Client || '',
+      customerId: row.Customer_ID || '',
+      averageMrr: parseMoney(row['Average MRR']),
+      billingMrr: parseMoney(row['Billing MRR']),
+      odinMrr: parseMoney(row['Odin MRR']),
+      psaWebMrr: parseMoney(row['PSA Web MRR']),
+      paymentsMrr: parseMoney(row['Payments MRR']),
+      tigerpawMrr: parseMoney(row['Tigerpaw MRR']),
+      product: row['Rev.io Product'] || '',
+      status: row.Status || ''
+    }))
+    .filter(row => row.client);
+
+  let matched = 0;
+  return {
+    summary: { matched: 0, rows: rows.length, source: 'client-master-mrr.csv' },
+    enrich(account) {
+      const candidates = rows.map(row => ({ row, score: mrrMatchScore(account.Name, row.client) }))
+        .filter(candidate => candidate.score >= 82)
+        .sort((a, b) => b.score - a.score || String(a.row.client).localeCompare(String(b.row.client)));
+      const best = candidates[0];
+      if (!best) return { ...account, __mrr: null };
+      matched++;
+      this.summary.matched = matched;
+      return {
+        ...account,
+        __mrr: {
+          accountMrr: best.row.averageMrr,
+          averageMrr: best.row.averageMrr,
+          billingMrr: best.row.billingMrr,
+          odinMrr: best.row.odinMrr,
+          psaWebMrr: best.row.psaWebMrr,
+          paymentsMrr: best.row.paymentsMrr,
+          tigerpawMrr: best.row.tigerpawMrr,
+          sourceClient: best.row.client,
+          sourceCustomerId: best.row.customerId,
+          sourceProduct: best.row.product,
+          matchScore: best.score
+        }
+      };
+    }
+  };
+}
+
 function clean(value, fallback = 'Unknown') {
   if (value === null || value === undefined || value === '') return fallback;
   return String(value);
@@ -312,6 +420,7 @@ function enrichOppsWithRoadmap(opps, roadmapItems) {
 
 function publicAccount(account) {
   const psaAccountStatus = account.TigerPaw_Account_Status__c || '';
+  const mrr = account.__mrr || null;
   return {
     id: account.Id,
     name: account.Name,
@@ -323,7 +432,18 @@ function publicAccount(account) {
     accountStatus: psaAccountStatus,
     owner: account.Tigerpaw_Owner__c || '',
     vertical: account.Tigerpaw_Vertical__c || '',
-    psaWeb: !!account.PSA_Web__c
+    psaWeb: !!account.PSA_Web__c,
+    mrr: mrr?.accountMrr ?? null,
+    averageMrr: mrr?.averageMrr ?? null,
+    billingMrr: mrr?.billingMrr ?? null,
+    odinMrr: mrr?.odinMrr ?? null,
+    psaWebMrr: mrr?.psaWebMrr ?? null,
+    paymentsMrr: mrr?.paymentsMrr ?? null,
+    tigerpawMrr: mrr?.tigerpawMrr ?? null,
+    mrrSourceClient: mrr?.sourceClient || '',
+    mrrSourceCustomerId: mrr?.sourceCustomerId || '',
+    mrrSourceProduct: mrr?.sourceProduct || '',
+    mrrMatchScore: mrr?.matchScore || 0
   };
 }
 
@@ -357,14 +477,16 @@ async function main() {
   const roadmapItems = await fetchRoadmapItems();
   console.log(`  Found ${roadmapItems.length} roadmap items`);
 
+  const mrrLookup = loadMrrLookup();
+
   console.log('Fetching accounts with Web Migration Status populated...');
-  const accounts = await sfQueryAll(token, `
+  const accounts = (await sfQueryAll(token, `
     SELECT Id, Name, Type, Tigerpaw__c, Web_Migration__c, Web_Migration_Status_Details__c,
            TigerPaw_Account_Status__c, Tigerpaw_Vertical__c, Tigerpaw_Owner__c, PSA_Web__c
     FROM Account
     WHERE Web_Migration__c != null
     ORDER BY Name
-  `);
+  `)).map(account => mrrLookup.enrich(account));
 
   const accountIds = accounts.map(account => account.Id);
   console.log(`  Found ${accounts.length} accounts with Web Migration Status populated`);
@@ -392,9 +514,10 @@ async function main() {
   const closedLostOpps = publicOpps.filter(opp => opp.stage === 'Closed Lost');
   const totalAmount = publicOpps.reduce((sum, opp) => sum + opp.amount, 0);
 
-  const statusBreakdown = groupBy(publicAccounts, account => account.webMigrationStatus).map(group => ({
+  const statusBreakdown = groupBy(publicAccounts, account => account.webMigrationStatus, account => account.mrr || 0).map(group => ({
     label: group.label,
     count: group.count,
+    mrr: group.amount,
     pct: pct(group.count, publicAccounts.length),
     accounts: group.records
   }));
@@ -418,6 +541,7 @@ async function main() {
     generatedAt: new Date().toISOString(),
     filters: {
       account: "Web_Migration__c != null",
+      mrr: `Cross-referenced from ${mrrLookup.summary.source || 'no local MRR CSV'} (${mrrLookup.summary.matched || 0} matched of ${publicAccounts.length} accounts)`,
       opportunity: "Type = 'Legacy Migration'",
       closedLost: "StageName = 'Closed Lost'"
     },
@@ -425,7 +549,9 @@ async function main() {
       tigerpawAccounts: publicAccounts.length,
       legacyMigrationOpps: publicOpps.length,
       legacyMigrationAmount: totalAmount,
-      closedLostOpps: closedLostOpps.length
+      closedLostOpps: closedLostOpps.length,
+      accountMrr: publicAccounts.reduce((sum, account) => sum + (account.mrr || 0), 0),
+      accountsWithMrr: publicAccounts.filter(account => account.mrr !== null && account.mrr !== undefined).length
     },
     statusBreakdown,
     stageBreakdown,
