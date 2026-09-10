@@ -1026,7 +1026,11 @@ function noOppAccountRows(status = null) {
 
 function topNoOppByMrrRows(limit = 20) {
   return noOppAccountRows()
-    .filter(account => account.mrr !== null && account.mrr !== undefined)
+    .filter(account =>
+      account.mrr !== null &&
+      account.mrr !== undefined &&
+      psaAccountStatus(account) !== 'Blank'
+    )
     .sort((a, b) => (b.mrr || 0) - (a.mrr || 0) || String(a.name).localeCompare(String(b.name)))
     .slice(0, limit);
 }
