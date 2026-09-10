@@ -430,7 +430,7 @@ function publicAccount(account) {
     psaAccountStatus,
     // Backward-compatible alias for older dashboard/data consumers.
     accountStatus: psaAccountStatus,
-    owner: account.Tigerpaw_Owner__c || '',
+    owner: account.Owner?.Name || account.Tigerpaw_Owner__c || '',
     vertical: account.Tigerpaw_Vertical__c || '',
     psaWeb: !!account.PSA_Web__c,
     mrr: mrr?.accountMrr ?? null,
@@ -482,7 +482,7 @@ async function main() {
   console.log('Fetching accounts with Web Migration Status populated...');
   const accounts = (await sfQueryAll(token, `
     SELECT Id, Name, Type, Tigerpaw__c, Web_Migration__c, Web_Migration_Status_Details__c,
-           TigerPaw_Account_Status__c, Tigerpaw_Vertical__c, Tigerpaw_Owner__c, PSA_Web__c
+           TigerPaw_Account_Status__c, Tigerpaw_Vertical__c, Tigerpaw_Owner__c, PSA_Web__c, Owner.Name
     FROM Account
     WHERE Web_Migration__c != null
     ORDER BY Name
