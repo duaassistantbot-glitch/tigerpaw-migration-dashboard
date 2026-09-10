@@ -230,8 +230,8 @@
     </div>
     <div class="key-stat-card green">
       <div class="key-stat-label">Top No-Opp MRR</div>
-      <div class="key-stat-value"><button class="num-btn" id="ks-top-no-opp-mrr" type="button" onclick="openAccounts('Top 20 Accounts by MRR Without Migration Opps', topNoOppByMrrRows())">--</button></div>
-      <div class="key-stat-sub" id="ks-top-no-opp-sub">Top 20 accounts without migration opps</div>
+      <div class="key-stat-value"><button class="num-btn" id="ks-top-no-opp-mrr" type="button" onclick="openAccounts('Top 20 Unleashed Unknown-Status Accounts Without Migration Opps', topNoOppByMrrRows())">--</button></div>
+      <div class="key-stat-sub" id="ks-top-no-opp-sub">Top 20 Unleashed unknown-status accounts without migration opps</div>
     </div>
   </section>
   <section class="recency-grid" aria-label="Contact recency summary">
@@ -1025,13 +1025,29 @@ function noOppAccountRows(status = null) {
 }
 
 function topNoOppByMrrRows(limit = 20) {
+  const seenNames = new Set();
+  const normalizedName = account => String(account.name || '')
+    .toLowerCase()
+    .replace(/&/g, 'and')
+    .replace(/[^a-z0-9]+/g, ' ')
+    .replace(/\b(inc|incorporated|llc|ltd|limited|co|corp|corporation|company)\b/g, '')
+    .replace(/\s+/g, ' ')
+    .trim();
+
   return noOppAccountRows()
     .filter(account =>
       account.mrr !== null &&
       account.mrr !== undefined &&
-      psaAccountStatus(account) !== 'Blank'
+      psaAccountStatus(account) === 'Active - Unleashed' &&
+      (account.webMigrationStatus || 'Blank') === 'Unknown'
     )
     .sort((a, b) => (b.mrr || 0) - (a.mrr || 0) || String(a.name).localeCompare(String(b.name)))
+    .filter(account => {
+      const key = normalizedName(account) || account.id;
+      if (seenNames.has(key)) return false;
+      seenNames.add(key);
+      return true;
+    })
     .slice(0, limit);
 }
 
@@ -1077,7 +1093,7 @@ function renderKeyStats(stats) {
   const topNoOpp = topNoOppByMrrRows();
   const topNoOppMrr = topNoOpp.reduce((sum, account) => sum + (account.mrr || 0), 0);
   document.getElementById('ks-top-no-opp-mrr').textContent = money.format(topNoOppMrr || 0);
-  document.getElementById('ks-top-no-opp-sub').textContent = `${fmt.format(topNoOpp.length)} highest-MRR accounts without migration opps`;
+  document.getElementById('ks-top-no-opp-sub').textContent = `${fmt.format(topNoOpp.length)} highest-MRR Unleashed unknown-status accounts without migration opps`;
   document.getElementById('fl-engaged').textContent = fmt.format(f.contactedAccounts || c.accountsContactedEmailOrPhone || 0);
   const contactedRows = contactedAccountRows();
   const allOppRows = MASTER?.opportunities || [];
