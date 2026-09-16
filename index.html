@@ -525,7 +525,8 @@ function webMigrationStatusForOpp(opp) {
 }
 
 function psaAccountStatus(account) {
-  return account?.psaAccountStatus || account?.accountStatus || 'Blank';
+  const status = String(account?.psaAccountStatus || account?.accountStatus || '').trim();
+  return status || 'Blank';
 }
 
 function psaAccountStatusForOpp(opp) {
@@ -546,9 +547,10 @@ function engagementForAccount(account) {
 
 function populateAccountDetailFilters() {
   if (!MASTER) return;
-  fillDrillSelect('account-detail-engagement', 'Engagement', uniqueValues(MASTER.accounts, account => engagementForAccount(account).label));
-  fillDrillSelect('account-detail-psa', 'PSA Account Status', uniqueValues(MASTER.accounts, psaAccountStatus));
-  fillDrillSelect('account-detail-web', 'Web Migration Status', uniqueValues(MASTER.accounts, account => account.webMigrationStatus || 'Blank'));
+  const accountsWithStatus = MASTER.accounts.filter(account => psaAccountStatus(account) !== 'Blank');
+  fillDrillSelect('account-detail-engagement', 'Engagement', uniqueValues(accountsWithStatus, account => engagementForAccount(account).label));
+  fillDrillSelect('account-detail-psa', 'PSA Account Status', uniqueValues(accountsWithStatus, psaAccountStatus));
+  fillDrillSelect('account-detail-web', 'Web Migration Status', uniqueValues(accountsWithStatus, account => account.webMigrationStatus || 'Blank'));
 }
 
 function renderAccountDetail() {
@@ -558,6 +560,7 @@ function renderAccountDetail() {
   const psaFilter = document.getElementById('account-detail-psa').value;
   const webFilter = document.getElementById('account-detail-web').value;
   const rows = sortedRows('accountDetail', MASTER.accounts.filter(account => {
+    if (psaAccountStatus(account) === 'Blank') return false;
     const engagement = engagementForAccount(account).label;
     const accountNumbers = (account.tigerpawSnapshotAccountNumbers || []).join(' ');
     const matchesSearch = !search || `${account.name} ${accountNumbers}`.toLowerCase().includes(search);
