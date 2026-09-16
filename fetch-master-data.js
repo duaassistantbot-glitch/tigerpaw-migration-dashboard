@@ -601,6 +601,7 @@ async function main() {
       account: "Web_Migration__c != null",
       mrr: `Cross-referenced from ${mrrLookup.summary.source || 'no local MRR CSV'} (${mrrLookup.summary.matched || 0} matched of ${publicAccounts.length} accounts)`,
       tigerpawSnapshot: `${tigerpawSnapshot.summary.source || 'no Tigerpaw snapshot'} (${tigerpawSnapshot.summary.matched || 0} matched of ${publicAccounts.length} accounts)`,
+      tigerpawSnapshotAsOf: '2026-08-26',
       opportunity: "Type = 'Legacy Migration'",
       closedLost: "StageName = 'Closed Lost'"
     },

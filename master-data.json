@@ -1,9 +1,10 @@
 {
-  "generatedAt": "2026-09-16T14:21:45.018Z",
+  "generatedAt": "2026-09-16T17:23:30.337Z",
   "filters": {
     "account": "Web_Migration__c != null",
     "mrr": "Cross-referenced from client-master-mrr.csv (637 matched of 671 accounts)",
     "tigerpawSnapshot": "tigerpaw-account-snapshot-2026-08-26.csv (545 matched of 671 accounts)",
+    "tigerpawSnapshotAsOf": "2026-08-26",
     "opportunity": "Type = 'Legacy Migration'",
     "closedLost": "StageName = 'Closed Lost'"
   },
@@ -18,9 +19,9 @@
   "statusBreakdown": [
     {
       "label": "Unknown",
-      "count": 260,
-      "mrr": 222170.45000000007,
-      "pct": 38.7,
+      "count": 256,
+      "mrr": 219529.08000000005,
+      "pct": 38.2,
       "accounts": [
         {
           "id": "001PX00000LTJGBYA5",
@@ -143,36 +144,6 @@
           "psaAccountStatus": "Active - Unleashed",
           "accountStatus": "Active - Unleashed",
           "owner": "Abbey McIntosh",
-          "vertical": "",
-          "psaWeb": false,
-          "mrr": 809.41,
-          "lastLoginDate": "2026-08-26",
-          "tigerpawSnapshotAccountNumbers": [
-            "1054747"
-          ],
-          "tigerpawSnapshotSourceNames": [
-            "Advanced Communication Technologies, Inc."
-          ],
-          "averageMrr": 774.13,
-          "billingMrr": 0,
-          "odinMrr": 0,
-          "psaWebMrr": 0,
-          "paymentsMrr": 0,
-          "tigerpawMrr": 756.49,
-          "mrrSourceClient": "Advanced Communication Technologies, Inc.",
-          "mrrSourceCustomerId": "22180",
-          "mrrSourceProduct": "Tigerpaw",
-          "mrrMatchScore": 82
-        },
-        {
-          "id": "001PX0000071NPzYAM",
-          "name": "Advanced Audio",
-          "type": "Rev.io PSA Client",
-          "webMigrationStatus": "Unknown",
-          "webMigrationDetails": "",
-          "psaAccountStatus": "Active - Unleashed",
-          "accountStatus": "Active - Unleashed",
-          "owner": "Jakob Champion",
           "vertical": "",
           "psaWeb": false,
           "mrr": 809.41,
@@ -2445,36 +2416,6 @@
           "mrrMatchScore": 82
         },
         {
-          "id": "0016O00003dmuPCQAY",
-          "name": "ESM Security Systems",
-          "type": "Rev.io PSA Client",
-          "webMigrationStatus": "Unknown",
-          "webMigrationDetails": "TP one- no recent contact with POC",
-          "psaAccountStatus": "Active - Tigerpaw One",
-          "accountStatus": "Active - Tigerpaw One",
-          "owner": "Katerra Stephenson Greenwood",
-          "vertical": "",
-          "psaWeb": false,
-          "mrr": 553,
-          "lastLoginDate": "2026-08-26",
-          "tigerpawSnapshotAccountNumbers": [
-            "1049905"
-          ],
-          "tigerpawSnapshotSourceNames": [
-            "ESM Security Systems"
-          ],
-          "averageMrr": 553,
-          "billingMrr": 0,
-          "odinMrr": 0,
-          "psaWebMrr": 0,
-          "paymentsMrr": 0,
-          "tigerpawMrr": 553,
-          "mrrSourceClient": "ESM Security Systems",
-          "mrrSourceCustomerId": "22141",
-          "mrrSourceProduct": "Tigerpaw",
-          "mrrMatchScore": 100
-        },
-        {
           "id": "0016O000035WCFlQAO",
           "name": "ET&T Corporation",
           "type": "Client",
@@ -3653,36 +3594,6 @@
           "mrrSourceCustomerId": "22715",
           "mrrSourceProduct": "Tigerpaw",
           "mrrMatchScore": 100
-        },
-        {
-          "id": "0016O00003dmuQmQAI",
-          "name": "InTouch Communications",
-          "type": "Rev.io PSA Client",
-          "webMigrationStatus": "Unknown",
-          "webMigrationDetails": "TP one- need to make contact with POC",
-          "psaAccountStatus": "Active - Tigerpaw One",
-          "accountStatus": "Active - Tigerpaw One",
-          "owner": "Katerra Stephenson Greenwood",
-          "vertical": "",
-          "psaWeb": false,
-          "mrr": 429.96,
-          "lastLoginDate": "2026-08-26",
-          "tigerpawSnapshotAccountNumbers": [
-            "1010271"
-          ],
-          "tigerpawSnapshotSourceNames": [
-            "InTouch Communications, Inc."
-          ],
-          "averageMrr": 429.96,
-          "billingMrr": 0,
-          "odinMrr": 0,
-          "psaWebMrr": 0,
-          "paymentsMrr": 0,
-          "tigerpawMrr": 429.96,
-          "mrrSourceClient": "InTouch Communications, Inc.",
-          "mrrSourceCustomerId": "22001",
-          "mrrSourceProduct": "Tigerpaw",
-          "mrrMatchScore": 82
         },
         {
           "id": "0016O00003ebbEBQAY",
@@ -5209,36 +5120,6 @@
           "tigerpawMrr": 948,
           "mrrSourceClient": "PCM Networking",
           "mrrSourceCustomerId": "22020",
-          "mrrSourceProduct": "Tigerpaw",
-          "mrrMatchScore": 100
-        },
-        {
-          "id": "0016O00003dmuV3QAI",
-          "name": "PCS Technologies, Inc.",
-          "type": "Rev.io PSA Client",
-          "webMigrationStatus": "Unknown",
-          "webMigrationDetails": "",
-          "psaAccountStatus": "Active - Unleashed",
-          "accountStatus": "Active - Unleashed",
-          "owner": "Jakob Champion",
-          "vertical": "",
-          "psaWeb": false,
-          "mrr": 849,
-          "lastLoginDate": "2026-08-26",
-          "tigerpawSnapshotAccountNumbers": [
-            "1111550"
-          ],
-          "tigerpawSnapshotSourceNames": [
-            "PCS Technologies Inc"
-          ],
-          "averageMrr": 849,
-          "billingMrr": 0,
-          "odinMrr": 0,
-          "psaWebMrr": 0,
-          "paymentsMrr": 0,
-          "tigerpawMrr": 849,
-          "mrrSourceClient": "PCS Technologies Inc",
-          "mrrSourceCustomerId": "22403",
           "mrrSourceProduct": "Tigerpaw",
           "mrrMatchScore": 100
         },
@@ -11076,9 +10957,9 @@
     },
     {
       "label": "Do not want to migrate",
-      "count": 88,
-      "mrr": 84350.43000000002,
-      "pct": 13.1,
+      "count": 91,
+      "mrr": 86182.39000000001,
+      "pct": 13.6,
       "accounts": [
         {
           "id": "0016O00003dmuJSQAY",
@@ -12017,6 +11898,36 @@
           "mrrMatchScore": 100
         },
         {
+          "id": "0016O00003dmuPCQAY",
+          "name": "ESM Security Systems",
+          "type": "Rev.io PSA Client",
+          "webMigrationStatus": "Do not want to migrate",
+          "webMigrationDetails": "TP one- SPoke to poc and they do not wnat to move currently",
+          "psaAccountStatus": "Active - Tigerpaw One",
+          "accountStatus": "Active - Tigerpaw One",
+          "owner": "Katerra Stephenson Greenwood",
+          "vertical": "",
+          "psaWeb": false,
+          "mrr": 553,
+          "lastLoginDate": "2026-08-26",
+          "tigerpawSnapshotAccountNumbers": [
+            "1049905"
+          ],
+          "tigerpawSnapshotSourceNames": [
+            "ESM Security Systems"
+          ],
+          "averageMrr": 553,
+          "billingMrr": 0,
+          "odinMrr": 0,
+          "psaWebMrr": 0,
+          "paymentsMrr": 0,
+          "tigerpawMrr": 553,
+          "mrrSourceClient": "ESM Security Systems",
+          "mrrSourceCustomerId": "22141",
+          "mrrSourceProduct": "Tigerpaw",
+          "mrrMatchScore": 100
+        },
+        {
           "id": "0016O00003dmuPSQAY",
           "name": "Fisher Systems Inc.",
           "type": "Rev.io PSA Client",
@@ -12421,6 +12332,36 @@
           "mrrMatchScore": 100
         },
         {
+          "id": "0016O00003dmuQmQAI",
+          "name": "InTouch Communications",
+          "type": "Rev.io PSA Client",
+          "webMigrationStatus": "Do not want to migrate",
+          "webMigrationDetails": "TP one- spoke to owner and he doesn't want to migrate to TP",
+          "psaAccountStatus": "Active - Tigerpaw One",
+          "accountStatus": "Active - Tigerpaw One",
+          "owner": "Katerra Stephenson Greenwood",
+          "vertical": "",
+          "psaWeb": false,
+          "mrr": 429.96,
+          "lastLoginDate": "2026-08-26",
+          "tigerpawSnapshotAccountNumbers": [
+            "1010271"
+          ],
+          "tigerpawSnapshotSourceNames": [
+            "InTouch Communications, Inc."
+          ],
+          "averageMrr": 429.96,
+          "billingMrr": 0,
+          "odinMrr": 0,
+          "psaWebMrr": 0,
+          "paymentsMrr": 0,
+          "tigerpawMrr": 429.96,
+          "mrrSourceClient": "InTouch Communications, Inc.",
+          "mrrSourceCustomerId": "22001",
+          "mrrSourceProduct": "Tigerpaw",
+          "mrrMatchScore": 82
+        },
+        {
           "id": "0011500001HNQOFAA5",
           "name": "IP Communications, Inc.",
           "type": "Rev.io PSA Client",
@@ -12777,6 +12718,36 @@
           "tigerpawMrr": 686.94,
           "mrrSourceClient": "Nutec Systems, Inc",
           "mrrSourceCustomerId": "22718",
+          "mrrSourceProduct": "Tigerpaw",
+          "mrrMatchScore": 100
+        },
+        {
+          "id": "0016O00003dmuV3QAI",
+          "name": "PCS Technologies, Inc.",
+          "type": "Rev.io PSA Client",
+          "webMigrationStatus": "Do not want to migrate",
+          "webMigrationDetails": "As of right now, Donna does not have time to see the new PSA Web platform, currently marking as don't want to migrate to due her seeming uninterested. But that may change in the future.",
+          "psaAccountStatus": "Active - Unleashed",
+          "accountStatus": "Active - Unleashed",
+          "owner": "Jakob Champion",
+          "vertical": "",
+          "psaWeb": false,
+          "mrr": 849,
+          "lastLoginDate": "2026-08-26",
+          "tigerpawSnapshotAccountNumbers": [
+            "1111550"
+          ],
+          "tigerpawSnapshotSourceNames": [
+            "PCS Technologies Inc"
+          ],
+          "averageMrr": 849,
+          "billingMrr": 0,
+          "odinMrr": 0,
+          "psaWebMrr": 0,
+          "paymentsMrr": 0,
+          "tigerpawMrr": 849,
+          "mrrSourceClient": "PCS Technologies Inc",
+          "mrrSourceCustomerId": "22403",
           "mrrSourceProduct": "Tigerpaw",
           "mrrMatchScore": 100
         },
@@ -13652,9 +13623,9 @@
     },
     {
       "label": "Want to migrate asap",
-      "count": 83,
-      "mrr": 84442.36,
-      "pct": 12.4,
+      "count": 84,
+      "mrr": 85251.76999999999,
+      "pct": 12.5,
       "accounts": [
         {
           "id": "0016O00003dmuJQQAY",
@@ -13801,6 +13772,36 @@
           "mrrSourceCustomerId": "22481",
           "mrrSourceProduct": "PSA Web",
           "mrrMatchScore": 100
+        },
+        {
+          "id": "001PX0000071NPzYAM",
+          "name": "Advanced Audio",
+          "type": "Rev.io PSA Client",
+          "webMigrationStatus": "Want to migrate asap",
+          "webMigrationDetails": "Open to migrating, spoke with Don on their team and he is interested in PSA Web.",
+          "psaAccountStatus": "Active - Unleashed",
+          "accountStatus": "Active - Unleashed",
+          "owner": "Jakob Champion",
+          "vertical": "",
+          "psaWeb": false,
+          "mrr": 809.41,
+          "lastLoginDate": "2026-08-26",
+          "tigerpawSnapshotAccountNumbers": [
+            "1054747"
+          ],
+          "tigerpawSnapshotSourceNames": [
+            "Advanced Communication Technologies, Inc."
+          ],
+          "averageMrr": 774.13,
+          "billingMrr": 0,
+          "odinMrr": 0,
+          "psaWebMrr": 0,
+          "paymentsMrr": 0,
+          "tigerpawMrr": 756.49,
+          "mrrSourceClient": "Advanced Communication Technologies, Inc.",
+          "mrrSourceCustomerId": "22180",
+          "mrrSourceProduct": "Tigerpaw",
+          "mrrMatchScore": 82
         },
         {
           "id": "0016O00003ebjumQAA",
@@ -26171,8 +26172,8 @@
       "id": "001PX0000071NPzYAM",
       "name": "Advanced Audio",
       "type": "Rev.io PSA Client",
-      "webMigrationStatus": "Unknown",
-      "webMigrationDetails": "",
+      "webMigrationStatus": "Want to migrate asap",
+      "webMigrationDetails": "Open to migrating, spoke with Don on their team and he is interested in PSA Web.",
       "psaAccountStatus": "Active - Unleashed",
       "accountStatus": "Active - Unleashed",
       "owner": "Jakob Champion",
@@ -32419,8 +32420,8 @@
       "id": "0016O00003dmuPCQAY",
       "name": "ESM Security Systems",
       "type": "Rev.io PSA Client",
-      "webMigrationStatus": "Unknown",
-      "webMigrationDetails": "TP one- no recent contact with POC",
+      "webMigrationStatus": "Do not want to migrate",
+      "webMigrationDetails": "TP one- SPoke to poc and they do not wnat to move currently",
       "psaAccountStatus": "Active - Tigerpaw One",
       "accountStatus": "Active - Tigerpaw One",
       "owner": "Katerra Stephenson Greenwood",
@@ -35553,8 +35554,8 @@
       "id": "0016O00003dmuQmQAI",
       "name": "InTouch Communications",
       "type": "Rev.io PSA Client",
-      "webMigrationStatus": "Unknown",
-      "webMigrationDetails": "TP one- need to make contact with POC",
+      "webMigrationStatus": "Do not want to migrate",
+      "webMigrationDetails": "TP one- spoke to owner and he doesn't want to migrate to TP",
       "psaAccountStatus": "Active - Tigerpaw One",
       "accountStatus": "Active - Tigerpaw One",
       "owner": "Katerra Stephenson Greenwood",
@@ -39141,8 +39142,8 @@
       "id": "0016O00003dmuV3QAI",
       "name": "PCS Technologies, Inc.",
       "type": "Rev.io PSA Client",
-      "webMigrationStatus": "Unknown",
-      "webMigrationDetails": "",
+      "webMigrationStatus": "Do not want to migrate",
+      "webMigrationDetails": "As of right now, Donna does not have time to see the new PSA Web platform, currently marking as don't want to migrate to due her seeming uninterested. But that may change in the future.",
       "psaAccountStatus": "Active - Unleashed",
       "accountStatus": "Active - Unleashed",
       "owner": "Jakob Champion",

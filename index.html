@@ -50,7 +50,16 @@
   .impact-sub { margin-top: 6px; color: #3d4d5c; font-size: 11px; line-height: 1.35; }
   .timeline-strip { border-top: 1px solid #DDE2E8; padding: 11px 14px; display: flex; flex-wrap: wrap; gap: 8px; background: #FFFFFF; }
   .event-pill { border: 1px solid #DDE2E8; border-radius: 999px; padding: 5px 9px; color: #1D3756; background: #EAF6F9; font-size: 11px; font-weight: 800; }
-  .gameplan-table td:first-child { font-weight: 800; color: #1D3756; }
+  .account-detail-summary { color: #FFFFFF; font-size: 11px; }
+  .account-detail-controls { padding: 12px 14px; background: #F5F7FA; border-bottom: 1px solid #DDE2E8; display: grid; grid-template-columns: minmax(240px, 1fr) repeat(3, minmax(175px, 220px)); gap: 10px; }
+  .account-detail-controls input, .account-detail-controls select { width: 100%; padding: 9px 11px; border: 1px solid #DDE2E8; border-radius: 6px; font: inherit; color: #1D3756; background: #FFFFFF; }
+  .account-detail-wrap { max-height: 560px; overflow: auto; }
+  .account-detail-table thead th { position: sticky; top: 0; z-index: 2; }
+  .account-detail-table td:first-child { font-weight: 800; color: #1D3756; }
+  .engagement-pill { display: inline-block; padding: 3px 8px; border-radius: 999px; font-size: 10px; font-weight: 800; color: #1D3756; background: #EEF2F6; white-space: nowrap; }
+  .engagement-pill.engaged { color: #256D1B; background: #EAF7E6; }
+  .engagement-pill.recent { color: #1D3756; background: #EAF6F9; }
+  .engagement-pill.aging { color: #7A4A00; background: #FFF4DA; }
   .active-list { margin: 0 0 18px; }
   .active-list table td, .active-list table th { font-size: 12px; }
   .label { font-size: 11px; text-transform: uppercase; letter-spacing: .6px; font-weight: 800; color: #FFFFFF; }
@@ -135,7 +144,7 @@
   .modal-table td { font-size: 12px; }
   @media (max-width: 900px) {
     .header-inner { align-items: flex-start; flex-direction: column; }
-    .hero-grid, .grid-2, .key-stat-grid, .recency-grid, .impact-grid, .modal-search { grid-template-columns: 1fr; }
+    .hero-grid, .grid-2, .key-stat-grid, .recency-grid, .impact-grid, .modal-search, .account-detail-controls { grid-template-columns: 1fr; }
     .bar-row { grid-template-columns: 1fr; gap: 8px; }
     .num { text-align: left; }
     .summary-strip { flex-direction: column; }
@@ -303,26 +312,30 @@
     <div class="timeline-strip" id="fl-detail"></div>
   </section>
 
-  <section class="card active-list" aria-label="No opportunity gameplan breakdown">
+  <section class="card active-list" aria-label="Tigerpaw account detail">
     <div class="card-head">
-      <h2>Gameplan Pool: Contacted Accounts Without Migration Opps</h2>
-      <span>Status breakdown for accounts reached but not yet converted into a Legacy Migration opportunity</span>
+      <h2>Legacy Tigerpaw Account Detail</h2>
+      <span class="account-detail-summary" id="account-detail-summary">Loading accounts...</span>
     </div>
-    <table class="gameplan-table">
-      <thead>
-        <tr>
-          <th>Web Migration Status</th>
-          <th class="num-h">Accounts</th>
-          <th class="num-h">MRR</th>
-          <th>Last Contact</th>
-          <th>Type</th>
-          <th>Last CBR</th>
-        </tr>
-      </thead>
-      <tbody id="no-opp-status-table">
-        <tr><td colspan="6" class="empty">Loading gameplan breakdown...</td></tr>
-      </tbody>
-    </table>
+    <div class="account-detail-controls">
+      <input id="account-detail-search" type="search" placeholder="Search account or account number">
+      <select id="account-detail-engagement"><option value="all">All engagement states</option></select>
+      <select id="account-detail-psa"><option value="all">All PSA account statuses</option></select>
+      <select id="account-detail-web"><option value="all">All web migration statuses</option></select>
+    </div>
+    <div class="account-detail-wrap">
+      <table class="account-detail-table">
+        <thead><tr>
+          <th><button class="sort-btn" type="button" onclick="setSort('accountDetail','account')">Account <span class="sort-indicator" data-sort-table="accountDetail" data-sort-key="account"></span></button></th>
+          <th><button class="sort-btn" type="button" onclick="setSort('accountDetail','psaAccountStatus')">PSA Account Status <span class="sort-indicator" data-sort-table="accountDetail" data-sort-key="psaAccountStatus"></span></button></th>
+          <th><button class="sort-btn" type="button" onclick="setSort('accountDetail','engagement')">Engagement <span class="sort-indicator" data-sort-table="accountDetail" data-sort-key="engagement"></span></button></th>
+          <th><button class="sort-btn" type="button" onclick="setSort('accountDetail','lastLoginDate')">Last Login <span class="sort-indicator" data-sort-table="accountDetail" data-sort-key="lastLoginDate"></span></button></th>
+          <th class="num-h"><button class="sort-btn" type="button" onclick="setSort('accountDetail','mrr')">Account MRR <span class="sort-indicator" data-sort-table="accountDetail" data-sort-key="mrr"></span></button></th>
+          <th><button class="sort-btn" type="button" onclick="setSort('accountDetail','webMigrationStatus')">Web Migration Status <span class="sort-indicator" data-sort-table="accountDetail" data-sort-key="webMigrationStatus"></span></button></th>
+        </tr></thead>
+        <tbody id="account-detail-body"><tr><td colspan="6" class="empty">Loading account detail...</td></tr></tbody>
+      </table>
+    </div>
   </section>
 
   <section class="card active-list" aria-label="Graduated conversions">
@@ -441,6 +454,7 @@ let ACCOUNT_BY_ID = new Map();
 let ACCOUNT_BY_NAME = new Map();
 const EXPANDED_STATUS_ROWS = new Set();
 let TABLE_SORT = {
+  accountDetail: { key: 'mrr', dir: 'desc' },
   opp: { key: 'accountMrr', dir: 'desc' }
 };
 const DATA_SYNC_URL = 'https://dua-revio.msappproxy.net/tigerpaw-data-sync';
@@ -518,6 +532,56 @@ function psaAccountStatusForOpp(opp) {
   return psaAccountStatus(accountForOpp(opp));
 }
 
+function engagementForAccount(account) {
+  if (!account?.lastLoginDate) return { label: 'No login data', className: '', days: 999999 };
+  const asOf = MASTER?.filters?.tigerpawSnapshotAsOf || MASTER?.generatedAt?.slice(0, 10);
+  const end = new Date(`${asOf}T00:00:00Z`);
+  const start = new Date(`${account.lastLoginDate}T00:00:00Z`);
+  const days = Math.max(0, Math.round((end - start) / 86400000));
+  if (days <= 7) return { label: 'Engaged (0-7 days)', className: 'engaged', days };
+  if (days <= 30) return { label: 'Recent (8-30 days)', className: 'recent', days };
+  if (days <= 90) return { label: 'Aging (31-90 days)', className: 'aging', days };
+  return { label: 'Dormant (91+ days)', className: '', days };
+}
+
+function populateAccountDetailFilters() {
+  if (!MASTER) return;
+  fillDrillSelect('account-detail-engagement', 'Engagement', uniqueValues(MASTER.accounts, account => engagementForAccount(account).label));
+  fillDrillSelect('account-detail-psa', 'PSA Account Status', uniqueValues(MASTER.accounts, psaAccountStatus));
+  fillDrillSelect('account-detail-web', 'Web Migration Status', uniqueValues(MASTER.accounts, account => account.webMigrationStatus || 'Blank'));
+}
+
+function renderAccountDetail() {
+  if (!MASTER) return;
+  const search = document.getElementById('account-detail-search').value.trim().toLowerCase();
+  const engagementFilter = document.getElementById('account-detail-engagement').value;
+  const psaFilter = document.getElementById('account-detail-psa').value;
+  const webFilter = document.getElementById('account-detail-web').value;
+  const rows = sortedRows('accountDetail', MASTER.accounts.filter(account => {
+    const engagement = engagementForAccount(account).label;
+    const accountNumbers = (account.tigerpawSnapshotAccountNumbers || []).join(' ');
+    const matchesSearch = !search || `${account.name} ${accountNumbers}`.toLowerCase().includes(search);
+    return matchesSearch &&
+      (engagementFilter === 'all' || engagement === engagementFilter) &&
+      (psaFilter === 'all' || psaAccountStatus(account) === psaFilter) &&
+      (webFilter === 'all' || (account.webMigrationStatus || 'Blank') === webFilter);
+  }));
+  const totalMrr = rows.reduce((sum, account) => sum + (account.mrr || 0), 0);
+  document.getElementById('account-detail-summary').textContent = `${fmt.format(rows.length)} accounts • ${money.format(totalMrr)} MRR`;
+  document.getElementById('account-detail-body').innerHTML = rows.map(account => {
+    const engagement = engagementForAccount(account);
+    return `<tr>
+      <td>${esc(account.name)}</td>
+      <td><span class="pill">${esc(psaAccountStatus(account))}</span></td>
+      <td><span class="engagement-pill ${esc(engagement.className)}">${esc(engagement.label)}</span></td>
+      <td>${account.lastLoginDate ? formatDate(account.lastLoginDate) : '--'}</td>
+      <td class="num-c">${account.mrr == null ? '--' : money.format(account.mrr || 0)}</td>
+      <td><span class="pill">${esc(account.webMigrationStatus || 'Blank')}</span></td>
+    </tr>`;
+  }).join('') || '<tr><td colspan="6" class="empty">No accounts match this view.</td></tr>';
+  updateSortIndicators('accountDetail');
+}
+
 function oppRowsByWebStatusAndBucket(status, bucket) {
   return MASTER.opportunities.filter(opp =>
     webMigrationStatusForOpp(opp) === status &&
@@ -556,6 +620,14 @@ function sortValue(table, key, row) {
   if (key === 'lastLoginDate') return accountForOpp(row)?.lastLoginDate || '';
   if (key === 'account') return row.account || '';
 
+  if (table === 'accountDetail') {
+    if (key === 'account') return row.name || '';
+    if (key === 'psaAccountStatus') return psaAccountStatus(row);
+    if (key === 'engagement') return engagementForAccount(row).days;
+    if (key === 'lastLoginDate') return row.lastLoginDate || '';
+    if (key === 'webMigrationStatus') return row.webMigrationStatus || 'Blank';
+  }
+
   if (table === 'opp') {
     if (key === 'owner') return row.owner || '';
     if (key === 'nextStep') return row.nextStep || '';
@@ -593,6 +665,7 @@ function setSort(table, key) {
   };
 
   if (table === 'opp') renderOppTable();
+  if (table === 'accountDetail') renderAccountDetail();
 }
 
 function updateSortIndicators(table) {
@@ -1132,15 +1205,7 @@ function renderKeyStats(stats) {
     `${fmt.format(c.accountsTouchedLast30Days || 0)} accounts touched in last 30 days`,
     `most recent outreach ${f.latestTouchDate ? formatDate(f.latestTouchDate) : '--'}`
   ].map(x => `<span class="event-pill">${esc(x)}</span>`).join('');
-  document.getElementById('no-opp-status-table').innerHTML = (gp.statusBreakdown || []).map(row => `
-    <tr>
-      <td>${esc(row.status)}</td>
-      <td class="num-c"><button class="num-btn" type="button" onclick="openAccounts('Contacted ${esc(row.status)} Accounts Without Migration Opps', contactedNoOppAccountRows('${esc(row.status)}'))">${fmt.format(row.accounts || 0)}</button></td>
-      <td class="num-c">${money.format(row.mrr || 0)}</td>
-      <td>${row.latestContactDate ? formatDate(row.latestContactDate) : '--'}</td>
-      <td>${row.latestContactType ? esc(row.latestContactType[0].toUpperCase() + row.latestContactType.slice(1)) : '--'}</td>
-      <td>${row.latestCbrDate ? formatDate(row.latestCbrDate) : '--'}</td>
-    </tr>`).join('') || '<tr><td colspan="6" class="empty">No contacted/no-opp accounts found.</td></tr>';
+  renderAccountDetail();
   document.getElementById('active-conversions-table').innerHTML = graduatedRows.map(row => `
       <tr>
         <td><strong>${esc(row.account)}</strong></td>
@@ -1188,8 +1253,15 @@ function render(data) {
 
   populateStageFilter(data.stageBreakdown);
   populateOpportunityFilters(data.opportunities);
+  populateAccountDetailFilters();
+  renderAccountDetail();
   renderOppTable();
 }
+
+document.getElementById('account-detail-search').addEventListener('input', renderAccountDetail);
+document.getElementById('account-detail-engagement').addEventListener('change', renderAccountDetail);
+document.getElementById('account-detail-psa').addEventListener('change', renderAccountDetail);
+document.getElementById('account-detail-web').addEventListener('change', renderAccountDetail);
 
 document.getElementById('opp-search').addEventListener('input', renderOppTable);
 document.getElementById('stage-filter').addEventListener('change', renderOppTable);
