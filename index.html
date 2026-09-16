@@ -413,6 +413,7 @@
           <th><button class="sort-btn" type="button" onclick="setSort('opp','account')">Account Name <span class="sort-indicator" data-sort-table="opp" data-sort-key="account"></span></button></th>
           <th><button class="sort-btn" type="button" onclick="setSort('opp','psaAccountStatus')">PSA Account Status <span class="sort-indicator" data-sort-table="opp" data-sort-key="psaAccountStatus"></span></button></th>
           <th class="num-h"><button class="sort-btn" type="button" onclick="setSort('opp','accountMrr')">Account MRR <span class="sort-indicator" data-sort-table="opp" data-sort-key="accountMrr"></span></button></th>
+          <th><button class="sort-btn" type="button" onclick="setSort('opp','lastLoginDate')">Last Login <span class="sort-indicator" data-sort-table="opp" data-sort-key="lastLoginDate"></span></button></th>
           <th class="num-h"><button class="sort-btn" type="button" onclick="setSort('opp','amount')">Renewal Amount <span class="sort-indicator" data-sort-table="opp" data-sort-key="amount"></span></button></th>
           <th><button class="sort-btn" type="button" onclick="setSort('opp','owner')">Opportunity Owner <span class="sort-indicator" data-sort-table="opp" data-sort-key="owner"></span></button></th>
           <th><button class="sort-btn" type="button" onclick="setSort('opp','nextStep')">Next Step <span class="sort-indicator" data-sort-table="opp" data-sort-key="nextStep"></span></button></th>
@@ -552,6 +553,7 @@ function sortValue(table, key, row) {
   if (key === 'amount') return Number(row.amount || 0);
   if (key === 'mrr') return Number(row.mrr || 0);
   if (key === 'accountMrr') return Number(accountForOpp(row)?.mrr || 0);
+  if (key === 'lastLoginDate') return accountForOpp(row)?.lastLoginDate || '';
   if (key === 'account') return row.account || '';
 
   if (table === 'opp') {
@@ -689,6 +691,7 @@ function renderDrilldownHead() {
       ${drillSortButton('Web Migration Status', 'status')}
       ${drillSortButton('PSA Account Status', 'psaAccountStatus')}
       ${drillSortButton('MRR', 'mrr', 'num-h')}
+      ${drillSortButton('Last Login', 'lastLoginDate')}
       ${drillSortButton('Type', 'type')}
       ${drillSortButton('Owner', 'owner')}
     </tr>`;
@@ -712,6 +715,7 @@ function renderDrilldownHead() {
     ${drillSortButton('Account Name', 'account')}
     ${drillSortButton('PSA Account Status', 'psaAccountStatus')}
     ${drillSortButton('Account MRR', 'accountMrr', 'num-h')}
+    ${drillSortButton('Last Login', 'lastLoginDate')}
     ${drillSortButton('Renewal Amount', 'amount', 'num-h')}
     ${drillSortButton('Opportunity Owner', 'owner')}
     ${drillSortButton('Next Step', 'nextStep')}
@@ -780,6 +784,7 @@ function renderDrilldownRows() {
         <td><span class="pill">${esc(account.webMigrationStatus || 'Blank')}</span></td>
         <td><span class="pill">${esc(psaAccountStatus(account))}</span></td>
         <td class="num-c">${account.mrr == null ? '--' : money.format(account.mrr || 0)}</td>
+        <td>${account.lastLoginDate ? formatDate(account.lastLoginDate) : '--'}</td>
         <td>${esc(account.type || '')}</td>
         <td>${esc(account.owner || '')}</td>
       </tr>`).join('');
@@ -812,6 +817,7 @@ function drillSortValue(row) {
   if (key === 'amount') return Number(row.amount || 0);
   if (key === 'mrr') return Number(row.mrr || 0);
   if (key === 'accountMrr') return Number(DRILLDOWN.type === 'opps' ? (accountForOpp(row)?.mrr || 0) : (row.mrr || 0));
+  if (key === 'lastLoginDate') return DRILLDOWN.type === 'opps' ? (accountForOpp(row)?.lastLoginDate || '') : (row.lastLoginDate || '');
   if (DRILLDOWN.type === 'accounts') {
     if (key === 'account') return row.name || '';
     if (key === 'type') return row.type || '';
@@ -857,6 +863,7 @@ function oppDetailRow(opp) {
       <td><strong>${esc(opp.account)}</strong></td>
       <td><span class="pill">${esc(psaAccountStatusForOpp(opp))}</span></td>
       <td class="num-c">${accountForOpp(opp)?.mrr == null ? '--' : money.format(accountForOpp(opp)?.mrr || 0)}</td>
+      <td>${accountForOpp(opp)?.lastLoginDate ? formatDate(accountForOpp(opp).lastLoginDate) : '--'}</td>
       <td class="num-c">${money.format(opp.amount || 0)}</td>
       <td>${esc(opp.owner || '')}</td>
       <td class="detail">${esc(opp.nextStep || '')}</td>

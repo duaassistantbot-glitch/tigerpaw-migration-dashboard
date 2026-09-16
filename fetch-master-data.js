@@ -222,6 +222,59 @@ function loadMrrLookup() {
   };
 }
 
+function loadTigerpawSnapshot() {
+  const csvPath = path.join(__dirname, 'tigerpaw-account-snapshot-2026-08-26.csv');
+  if (!fs.existsSync(csvPath)) {
+    return { enrich(account) { return account; }, summary: { matched: 0, rows: 0, source: null } };
+  }
+
+  const rows = parseCsv(fs.readFileSync(csvPath, 'utf8')).map(row => ({
+    accountNumber: row['Tigerpaw Account Number'] || '',
+    name: row['Account Name'] || '',
+    psaAccountStatus: row['PSA Account Status'] || '',
+    accountExecutiveVersion: row['Account Executive Version'] || '',
+    lastLoginDate: /^\d{4}-\d{2}-\d{2}$/.test(row['Last Login Date'] || '') ? row['Last Login Date'] : '',
+    accountMrr: parseMoney(row['Account MRR'])
+  })).filter(row => row.name);
+
+  const byName = new Map();
+  rows.forEach(row => {
+    const key = mrrNorm(row.name);
+    if (!byName.has(key)) byName.set(key, []);
+    byName.get(key).push(row);
+  });
+
+  let matched = 0;
+  return {
+    summary: { matched: 0, rows: rows.length, source: path.basename(csvPath) },
+    enrich(account) {
+      const keys = [account.Name, account.__mrr?.sourceClient]
+        .filter(Boolean)
+        .map(mrrNorm);
+      const matches = keys.flatMap(key => byName.get(key) || []);
+      const uniqueMatches = [...new Map(matches.map(row => [row.accountNumber, row])).values()];
+      if (!uniqueMatches.length) return account;
+
+      matched++;
+      this.summary.matched = matched;
+      const newestLogin = uniqueMatches.map(row => row.lastLoginDate).filter(Boolean).sort().at(-1) || '';
+      const status = uniqueMatches.find(row => row.psaAccountStatus)?.psaAccountStatus || '';
+      const accountMrr = uniqueMatches.reduce((sum, row) => sum + (row.accountMrr || 0), 0);
+      return {
+        ...account,
+        __tigerpawSnapshot: {
+          psaAccountStatus: status,
+          accountMrr,
+          lastLoginDate: newestLogin,
+          accountNumbers: uniqueMatches.map(row => row.accountNumber),
+          accountExecutiveVersions: [...new Set(uniqueMatches.map(row => row.accountExecutiveVersion).filter(Boolean))],
+          sourceNames: uniqueMatches.map(row => row.name)
+        }
+      };
+    }
+  };
+}
+
 function clean(value, fallback = 'Unknown') {
   if (value === null || value === undefined || value === '') return fallback;
   return String(value);
@@ -419,7 +472,8 @@ function enrichOppsWithRoadmap(opps, roadmapItems) {
 }
 
 function publicAccount(account) {
-  const psaAccountStatus = account.TigerPaw_Account_Status__c || '';
+  const snapshot = account.__tigerpawSnapshot || null;
+  const psaAccountStatus = snapshot?.psaAccountStatus || account.TigerPaw_Account_Status__c || '';
   const mrr = account.__mrr || null;
   return {
     id: account.Id,
@@ -433,7 +487,10 @@ function publicAccount(account) {
     owner: account.Owner?.Name || account.Tigerpaw_Owner__c || '',
     vertical: account.Tigerpaw_Vertical__c || '',
     psaWeb: !!account.PSA_Web__c,
-    mrr: mrr?.accountMrr ?? null,
+    mrr: snapshot?.accountMrr ?? mrr?.accountMrr ?? null,
+    lastLoginDate: snapshot?.lastLoginDate || '',
+    tigerpawSnapshotAccountNumbers: snapshot?.accountNumbers || [],
+    tigerpawSnapshotSourceNames: snapshot?.sourceNames || [],
     averageMrr: mrr?.averageMrr ?? null,
     billingMrr: mrr?.billingMrr ?? null,
     odinMrr: mrr?.odinMrr ?? null,
@@ -478,6 +535,7 @@ async function main() {
   console.log(`  Found ${roadmapItems.length} roadmap items`);
 
   const mrrLookup = loadMrrLookup();
+  const tigerpawSnapshot = loadTigerpawSnapshot();
 
   console.log('Fetching accounts with Web Migration Status populated...');
   const accounts = (await sfQueryAll(token, `
@@ -486,7 +544,7 @@ async function main() {
     FROM Account
     WHERE Web_Migration__c != null
     ORDER BY Name
-  `)).map(account => mrrLookup.enrich(account));
+  `)).map(account => tigerpawSnapshot.enrich(mrrLookup.enrich(account)));
 
   const accountIds = accounts.map(account => account.Id);
   console.log(`  Found ${accounts.length} accounts with Web Migration Status populated`);
@@ -542,6 +600,7 @@ async function main() {
     filters: {
       account: "Web_Migration__c != null",
       mrr: `Cross-referenced from ${mrrLookup.summary.source || 'no local MRR CSV'} (${mrrLookup.summary.matched || 0} matched of ${publicAccounts.length} accounts)`,
+      tigerpawSnapshot: `${tigerpawSnapshot.summary.source || 'no Tigerpaw snapshot'} (${tigerpawSnapshot.summary.matched || 0} matched of ${publicAccounts.length} accounts)`,
       opportunity: "Type = 'Legacy Migration'",
       closedLost: "StageName = 'Closed Lost'"
     },
