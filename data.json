@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-17T10:00:32.963Z",
+  "generatedAt": "2026-09-18T10:00:32.649Z",
   "audienceStats": {
     "Ready to Migrate": {
       "uniqueContactsEmailed": 558,
@@ -13,7 +13,7 @@
     },
     "Unknown": {
       "uniqueContactsEmailed": 1874,
-      "uniqueAccountsEmailed": 295,
+      "uniqueAccountsEmailed": 293,
       "totalSent": 1856,
       "totalDelivered": 1821,
       "totalOpens": 235,
@@ -35,8 +35,8 @@
   "verticalSummary": [
     {
       "vertical": "Unknown",
-      "registeredContacts": 185,
-      "registeredCompanies": 83
+      "registeredContacts": 186,
+      "registeredCompanies": 84
     },
     {
       "vertical": "MSP",
@@ -45,8 +45,8 @@
     },
     {
       "vertical": "Integrator",
-      "registeredContacts": 74,
-      "registeredCompanies": 43
+      "registeredContacts": 73,
+      "registeredCompanies": 42
     },
     {
       "vertical": "Legacy Telecom",
