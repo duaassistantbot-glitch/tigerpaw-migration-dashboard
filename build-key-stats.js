@@ -140,7 +140,7 @@ async function main() {
   const master = JSON.parse(fs.readFileSync(path.join(__dirname, 'master-data.json'), 'utf8'));
   const webinar = JSON.parse(fs.readFileSync(path.join(__dirname, 'webinar-data.json'), 'utf8'));
   const accounts = master.accounts || [];
-  const accountIds = accounts.map(a => a.id);
+  const accountIds = accounts.map(a => a.id).filter(id => /^001/.test(id));
   const accountById = Object.fromEntries(accounts.map(a => [a.id, a]));
 
   console.log(`Querying contacts for ${accountIds.length} migration accounts...`);

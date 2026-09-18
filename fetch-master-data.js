@@ -246,7 +246,14 @@ function loadTigerpawSnapshot() {
 
   let matched = 0;
   return {
+    rows,
     summary: { matched: 0, rows: rows.length, source: path.basename(csvPath) },
+    includes(account) {
+      const keys = [account.Name, account.__mrr?.sourceClient]
+        .filter(Boolean)
+        .map(mrrNorm);
+      return keys.some(key => byName.has(key));
+    },
     enrich(account) {
       const keys = [account.Name, account.__mrr?.sourceClient]
         .filter(Boolean)
@@ -537,17 +544,57 @@ async function main() {
   const mrrLookup = loadMrrLookup();
   const tigerpawSnapshot = loadTigerpawSnapshot();
 
-  console.log('Fetching accounts with Web Migration Status populated...');
-  const accounts = (await sfQueryAll(token, `
+  console.log('Fetching Salesforce accounts for the uploaded Tigerpaw source list...');
+  const salesforceAccounts = (await sfQueryAll(token, `
     SELECT Id, Name, Type, Tigerpaw__c, Web_Migration__c, Web_Migration_Status_Details__c,
            TigerPaw_Account_Status__c, Tigerpaw_Vertical__c, Tigerpaw_Owner__c, PSA_Web__c, Owner.Name
     FROM Account
-    WHERE Web_Migration__c != null
+    WHERE Tigerpaw__c = true OR Web_Migration__c != null
     ORDER BY Name
-  `)).map(account => tigerpawSnapshot.enrich(mrrLookup.enrich(account)));
+  `)).map(account => mrrLookup.enrich(account));
+  const usedSalesforceIds = new Set();
+  const accounts = tigerpawSnapshot.rows.map(sourceRow => {
+    const candidates = salesforceAccounts
+      .filter(account => !usedSalesforceIds.has(account.Id))
+      .map(account => ({
+        account,
+        score: Math.max(
+          mrrMatchScore(sourceRow.name, account.Name),
+          mrrMatchScore(sourceRow.name, account.__mrr?.sourceClient)
+        )
+      }))
+      .filter(candidate => candidate.score >= 82)
+      .sort((a, b) => b.score - a.score || String(a.account.Name).localeCompare(String(b.account.Name)));
+    const matched = candidates[0]?.account || null;
+    if (matched) usedSalesforceIds.add(matched.Id);
+    return {
+      ...(matched || {
+        Id: `tp-${sourceRow.accountNumber}`,
+        Name: sourceRow.name,
+        Type: '',
+        Web_Migration__c: null,
+        Web_Migration_Status_Details__c: '',
+        TigerPaw_Account_Status__c: sourceRow.psaAccountStatus,
+        Tigerpaw_Vertical__c: '',
+        Tigerpaw_Owner__c: '',
+        PSA_Web__c: false,
+        Owner: null,
+        __mrr: null
+      }),
+      Name: sourceRow.name,
+      __tigerpawSnapshot: {
+        psaAccountStatus: sourceRow.psaAccountStatus,
+        accountMrr: sourceRow.accountMrr,
+        lastLoginDate: sourceRow.lastLoginDate,
+        accountNumbers: [sourceRow.accountNumber],
+        accountExecutiveVersions: sourceRow.accountExecutiveVersion ? [sourceRow.accountExecutiveVersion] : [],
+        sourceNames: [sourceRow.name]
+      }
+    };
+  });
 
-  const accountIds = accounts.map(account => account.Id);
-  console.log(`  Found ${accounts.length} accounts with Web Migration Status populated`);
+  const accountIds = accounts.map(account => account.Id).filter(id => /^001/.test(id));
+  console.log(`  Built ${accounts.length} dashboard accounts from the uploaded source; ${accountIds.length} matched Salesforce accounts`);
 
   const allOpps = [];
   for (let i = 0; i < accountIds.length; i += 200) {
@@ -598,7 +645,7 @@ async function main() {
   const output = {
     generatedAt: new Date().toISOString(),
     filters: {
-      account: "Web_Migration__c != null",
+      account: `Authoritative Tigerpaw source: ${tigerpawSnapshot.summary.source}; one dashboard row per uploaded account`,
       mrr: `Cross-referenced from ${mrrLookup.summary.source || 'no local MRR CSV'} (${mrrLookup.summary.matched || 0} matched of ${publicAccounts.length} accounts)`,
       tigerpawSnapshot: `${tigerpawSnapshot.summary.source || 'no Tigerpaw snapshot'} (${tigerpawSnapshot.summary.matched || 0} matched of ${publicAccounts.length} accounts)`,
       tigerpawSnapshotAsOf: '2026-08-26',

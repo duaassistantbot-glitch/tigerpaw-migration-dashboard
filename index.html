@@ -197,7 +197,7 @@
   <div class="section-title">Web Migration Overview</div>
   <section class="hero-grid">
     <div class="hero-card">
-      <div class="label">Accounts with Web Migration Status</div>
+      <div class="label">Tigerpaw Source Accounts</div>
       <div class="value"><button class="value-btn" id="total-accounts" onclick="openAllAccounts()">--</button></div>
     </div>
     <div class="hero-card green">
@@ -219,15 +219,11 @@
     </div>
   </section>
   <div class="population-note" aria-label="Dashboard population legend">
-    <strong>Dashboard scope:</strong> Salesforce accounts where Web Migration Status is populated. Blank Web Migration Status accounts are excluded from all Master Overview account counts.
+    <strong>Dashboard scope:</strong> Only accounts from the uploaded Tigerpaw account workbook are included in Master Overview views and counts.
   </div>
 
   <div class="section-title">Executive Key Statistics</div>
   <section class="key-stat-grid" aria-label="Tigerpaw migration key statistics">
-    <div class="key-stat-card no-accent">
-      <div class="key-stat-label">Companies contacted</div>
-      <div class="key-stat-value" id="ks-contacted">--</div>
-    </div>
     <div class="key-stat-card green no-accent">
       <div class="key-stat-label">Graduated</div>
       <div class="key-stat-value" id="ks-active">--</div>
@@ -693,7 +689,7 @@ function updateSortIndicators(table) {
 
 function openAllAccounts() {
   if (!MASTER) return;
-  openAccounts('Accounts with Web Migration Status', MASTER.accounts);
+  openAccounts('Tigerpaw Source Accounts', MASTER.accounts);
 }
 
 function openAllOpps() {
@@ -1165,7 +1161,6 @@ function renderKeyStats(stats) {
   const v = stats.conversionStats || {};
   const f = stats.funnelStats || {};
   const gp = stats.noOppGameplan || {};
-  document.getElementById('ks-contacted').textContent = fmt.format(c.accountsContactedEmailOrPhone || 0);
   document.getElementById('ks-active').textContent = fmt.format(stats.graduatedTigerpawStats?.count || f.activeConversions || v.activeConversionsProvided || 0);
   document.getElementById('ks-last-touch').textContent = c.latestTouchDate ? formatDate(c.latestTouchDate) : '--';
   document.getElementById('ks-touch-30').textContent = fmt.format(c.accountsTouchedLast30Days || 0);
