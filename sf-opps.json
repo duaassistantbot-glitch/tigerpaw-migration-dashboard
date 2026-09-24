@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-09-23T10:00:54.141Z",
-  "wmrContactCount": 15,
+  "generatedAt": "2026-09-24T10:00:46.315Z",
+  "wmrContactCount": 16,
   "oppsByAudience": {
     "Ready to Migrate": {
       "count": 5,
@@ -49,8 +49,8 @@
       ]
     },
     "Unknown": {
-      "count": 7,
-      "amount": 4237,
+      "count": 8,
+      "amount": 4826,
       "opps": [
         {
           "id": "006PX00000b3crTYAQ",
@@ -83,6 +83,14 @@
           "stage": "Closed Won",
           "amount": 575,
           "createdDate": "2026-05-21T19:01:48.000+0000"
+        },
+        {
+          "id": "006PX00000gPNKbYAO",
+          "name": "Tate Communications, LLC Web Migration",
+          "account": "Tate Communications, LLC",
+          "stage": "6 - Verbal Commit",
+          "amount": 589,
+          "createdDate": "2026-09-23T13:38:37.000+0000"
         },
         {
           "id": "006PX00000cb74hYAA",
@@ -158,7 +166,7 @@
     }
   },
   "grandTotal": {
-    "count": 17,
-    "amount": 16245.09
+    "count": 18,
+    "amount": 16834.09
   }
 }
