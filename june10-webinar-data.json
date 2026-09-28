@@ -4,30 +4,30 @@
   "eventDate": "2026-06-10T19:00:00Z",
   "startDate": "2026-06-10T00:00:00Z",
   "endDate": "2026-06-11T00:00:00Z",
-  "rawTotal": 135,
-  "externalTotal": 128,
-  "internalExcluded": 7,
-  "uniqueAccounts": 81,
+  "rawTotal": 128,
+  "externalTotal": 126,
+  "internalExcluded": 2,
+  "uniqueAccounts": 80,
   "byAudience": {
-    "Migrate Later": 90,
+    "Migrate Later": 88,
     "Ready to Migrate": 10,
     "Unknown": 28
   },
   "byVertical": {
-    "Integrator": 20,
-    "MSP": 108
+    "Integrator": 22,
+    "MSP": 104
   },
   "lastWeek": {
     "start": "2026-05-25",
     "end": "2026-05-31",
-    "externalTotal": 15,
-    "uniqueAccounts": 12,
+    "externalTotal": 13,
+    "uniqueAccounts": 11,
     "byAudience": {
-      "Migrate Later": 15
+      "Migrate Later": 13
     },
     "byVertical": {
       "Integrator": 5,
-      "MSP": 10
+      "MSP": 8
     },
     "registrants": [
       {
@@ -35,22 +35,6 @@
         "email": "jim@aalock.com",
         "company": "AA LOCK AND ALARM",
         "vertical": "Integrator",
-        "audience": "Migrate Later",
-        "registrationDate": "2026-05-29"
-      },
-      {
-        "name": "Brad Delmar",
-        "email": "bdelmar@bluewirecomm.com",
-        "company": "BlueWire Communications",
-        "vertical": "MSP",
-        "audience": "Migrate Later",
-        "registrationDate": "2026-05-29"
-      },
-      {
-        "name": "Deta Itaya",
-        "email": "ditaya@bluewirecomm.com",
-        "company": "BlueWire Communications",
-        "vertical": "MSP",
         "audience": "Migrate Later",
         "registrationDate": "2026-05-29"
       },
@@ -158,22 +142,6 @@
       "email": "jim@aalock.com",
       "company": "AA LOCK AND ALARM",
       "vertical": "Integrator",
-      "audience": "Migrate Later",
-      "registrationDate": "2026-05-29"
-    },
-    {
-      "name": "Brad Delmar",
-      "email": "bdelmar@bluewirecomm.com",
-      "company": "BlueWire Communications",
-      "vertical": "MSP",
-      "audience": "Migrate Later",
-      "registrationDate": "2026-05-29"
-    },
-    {
-      "name": "Deta Itaya",
-      "email": "ditaya@bluewirecomm.com",
-      "company": "BlueWire Communications",
-      "vertical": "MSP",
       "audience": "Migrate Later",
       "registrationDate": "2026-05-29"
     },
@@ -298,14 +266,6 @@
       "registrationDate": "2026-06-01"
     },
     {
-      "name": "Kevin Crowley",
-      "email": "kevin@thecrowleycompany.com",
-      "company": "Crowley",
-      "vertical": "MSP",
-      "audience": "Migrate Later",
-      "registrationDate": "2026-06-01"
-    },
-    {
       "name": "Jay Knight",
       "email": "jknight@g1c.net",
       "company": "Grand Central Station Internet Services, Inc.",
@@ -325,6 +285,14 @@
       "name": "Shannon Slater",
       "email": "shannons@tdaniels.com",
       "company": "T. Daniels Consulting, Inc.",
+      "vertical": "MSP",
+      "audience": "Migrate Later",
+      "registrationDate": "2026-06-01"
+    },
+    {
+      "name": "Kevin Crowley",
+      "email": "kevin@thecrowleycompany.com",
+      "company": "The Crowley Company",
       "vertical": "MSP",
       "audience": "Migrate Later",
       "registrationDate": "2026-06-01"
@@ -357,7 +325,7 @@
       "name": "John Brenneis",
       "email": "jlb@davidcarroll.com",
       "company": "David Carroll Associates, Inc.",
-      "vertical": "MSP",
+      "vertical": "Integrator",
       "audience": "Migrate Later",
       "registrationDate": "2026-06-02"
     },
@@ -402,7 +370,7 @@
       "registrationDate": "2026-06-02"
     },
     {
-      "name": "Chris Tabbert",
+      "name": "CHRIS TABBERT",
       "email": "chris.tabbert@onlineaplus.com",
       "company": "Onlineaplus",
       "vertical": "MSP",
@@ -436,7 +404,7 @@
     {
       "name": "Joe Osika",
       "email": "josika@premcom.com",
-      "company": "Prem Com",
+      "company": "PremCom",
       "vertical": "MSP",
       "audience": "Migrate Later",
       "registrationDate": "2026-06-02"
@@ -444,7 +412,7 @@
     {
       "name": "Joel Proulx",
       "email": "jproulx@premcom.com",
-      "company": "Prem Com",
+      "company": "PremCom",
       "vertical": "MSP",
       "audience": "Migrate Later",
       "registrationDate": "2026-06-02"
@@ -452,7 +420,7 @@
     {
       "name": "Rick Andrews",
       "email": "randrews@premcom.com",
-      "company": "Prem Com",
+      "company": "PremCom",
       "vertical": "MSP",
       "audience": "Migrate Later",
       "registrationDate": "2026-06-02"
@@ -460,7 +428,7 @@
     {
       "name": "Steve Klose",
       "email": "sklose@premcom.com",
-      "company": "Prem Com",
+      "company": "PremCom",
       "vertical": "MSP",
       "audience": "Migrate Later",
       "registrationDate": "2026-06-02"
@@ -476,7 +444,7 @@
     {
       "name": "Jordan Ray",
       "email": "jordan.ray@4ditsolutions.com",
-      "company": "4D IT",
+      "company": "4D IT Solutions",
       "vertical": "MSP",
       "audience": "Ready to Migrate",
       "registrationDate": "2026-06-03"
@@ -492,7 +460,7 @@
     {
       "name": "Sonya Allen",
       "email": "sallen@cti4u.com",
-      "company": "Communications Technologies",
+      "company": "Communication technologies",
       "vertical": "MSP",
       "audience": "Migrate Later",
       "registrationDate": "2026-06-03"
@@ -626,14 +594,6 @@
       "registrationDate": "2026-06-04"
     },
     {
-      "name": "Greg Roszkowski",
-      "email": "greg@sngpower.com.au",
-      "company": "Generex Systems",
-      "vertical": "MSP",
-      "audience": "Unknown",
-      "registrationDate": "2026-06-04"
-    },
-    {
       "name": "Patrick Sullivan",
       "email": "pat@hebusa.com",
       "company": "Hoosier Equipment Brokers",
@@ -655,6 +615,14 @@
       "company": "Idea Networks Inc.",
       "vertical": "MSP",
       "audience": "Migrate Later",
+      "registrationDate": "2026-06-04"
+    },
+    {
+      "name": "Greg Roszkowski",
+      "email": "greg@sngpower.com.au",
+      "company": "Sng Electrics P/l",
+      "vertical": "Integrator",
+      "audience": "Unknown",
       "registrationDate": "2026-06-04"
     },
     {
@@ -698,14 +666,6 @@
       "registrationDate": "2026-06-08"
     },
     {
-      "name": "Vincent Galante",
-      "email": "vinny.galante@arcomm1.com",
-      "company": "Arcomm Communications",
-      "vertical": "MSP",
-      "audience": "Migrate Later",
-      "registrationDate": "2026-06-08"
-    },
-    {
       "name": "Cody Boynton",
       "email": "cody@augustacommunications.com",
       "company": "Augusta Communications",
@@ -724,7 +684,7 @@
     {
       "name": "Kimberly Bridge",
       "email": "kimberly@dtsinc.ca",
-      "company": "Diversified Technology Systems",
+      "company": "Doing Things Simply",
       "vertical": "Integrator",
       "audience": "Migrate Later",
       "registrationDate": "2026-06-08"
@@ -754,17 +714,9 @@
       "registrationDate": "2026-06-08"
     },
     {
-      "name": "Jim Gerow",
-      "email": "j.gerow@positivetech.com",
-      "company": "Positive Technologies",
-      "vertical": "MSP",
-      "audience": "Migrate Later",
-      "registrationDate": "2026-06-08"
-    },
-    {
       "name": "Tammy Barry",
       "email": "tbarry@premcom.com",
-      "company": "Prem Com",
+      "company": "PremCom",
       "vertical": "MSP",
       "audience": "Migrate Later",
       "registrationDate": "2026-06-08"
@@ -962,7 +914,7 @@
       "registrationDate": "2026-06-09"
     },
     {
-      "name": "Rosemary  Bertin",
+      "name": "Rosemary Bertin",
       "email": "roseb@wsbcs.net",
       "company": "WSB Computer Services, Inc.",
       "vertical": "MSP",
@@ -1026,7 +978,7 @@
       "registrationDate": "2026-06-10"
     },
     {
-      "name": "Samuel  Tiili",
+      "name": "Samuel Tiili",
       "email": "samuel@electronicspecialtiesinc.com",
       "company": "Electronic Specialties, Inc",
       "vertical": "MSP",
@@ -1176,6 +1128,22 @@
       "vertical": "MSP",
       "audience": "Migrate Later",
       "registrationDate": "2026-06-22"
+    },
+    {
+      "name": "Brad Delmar",
+      "email": "bdelmar@bluewirecomm.com",
+      "company": "BlueWire Communications",
+      "vertical": "MSP",
+      "audience": "Migrate Later",
+      "registrationDate": "2026-07-07"
+    },
+    {
+      "name": "Deta Itaya",
+      "email": "ditaya@bluewirecomm.com",
+      "company": "BlueWire Communications",
+      "vertical": "MSP",
+      "audience": "Migrate Later",
+      "registrationDate": "2026-07-07"
     }
   ]
 }
