@@ -238,7 +238,7 @@
   <div class="header-inner">
     <div class="header-left">
       <h1>🔄 Tigerpaw Migration Campaign Dashboard</h1>
-      <p id="data-as-of">Data as of October 1, 2026 · Rev.io Marketing Ops · Internal registrants excluded</p>
+      <p id="data-as-of">Data as of October 2, 2026 · Rev.io Marketing Ops · Internal registrants excluded</p>
     </div>
     <nav class="nav">
       <a href="./">Master Overview</a>
@@ -291,9 +291,9 @@
       <div class="wb-sub">Through June 2 · first webinar bucket · external registrants only</div>
     </div>
     <div class="wb-metrics">
-      <div class="wm"><div class="v" id="wb-contacts" style="cursor:pointer;text-decoration:underline;text-decoration-style:dotted;text-underline-offset:3px" onclick="showRegistrants('all','all','first')" title="Click to see registrant list">428<span class="wb-search-icon"></span></div><div class="l">Contacts Registered</div></div>
+      <div class="wm"><div class="v" id="wb-contacts" style="cursor:pointer;text-decoration:underline;text-decoration-style:dotted;text-underline-offset:3px" onclick="showRegistrants('all','all','first')" title="Click to see registrant list">428</span></div><div class="l">Contacts Registered</div></div>
       <div class="wm"><div class="v teal" id="wb-accounts">222</div><div class="l">Unique Accounts</div></div>
-      <div class="wm"><div class="v" id="wb-rate" style="color:#fff;font-size:20px;margin-top:4px;">45+156+227</div><div class="l">RTM + Unknown + Other</div></div>
+      <div class="wm"><div class="v" id="wb-rate" style="color:#fff;font-size:20px;margin-top:4px;">45 + 155 + 228</div><div class="l">RTM + Unknown + Other</div></div>
     </div>
   </div>
 
@@ -769,16 +769,16 @@
             <div class="vbar-name"><span class="dot d-orange"></span>Unknown</div>
             <div class="vbar-wrap"><div class="vbar-bg"><div class="vbar-fill" id="ab-unk-bar" style="width:36%;background:linear-gradient(90deg,#f59e0b,#f59e0b)"></div></div></div>
             <div class="vbar-nums">
-              <div class="big"><button class="bar-reg-link" onclick="showRegistrants('all','unknown')" id="ab-unk-count">156</button></div>
-              <div class="sm" id="ab-unk-accts">99 accounts</div>
+              <div class="big"><button class="bar-reg-link" onclick="showRegistrants('all','unknown')" id="ab-unk-count">155</button></div>
+              <div class="sm" id="ab-unk-accts">98 accounts</div>
             </div>
           </div>
           <div class="vbar-row">
             <div class="vbar-name"><span class="dot d-gray"></span>Migrate Later</div>
             <div class="vbar-wrap"><div class="vbar-bg"><div class="vbar-fill" id="ab-ml-bar" style="width:53%;background:linear-gradient(90deg,#94a3b8,#64748b)"></div></div></div>
             <div class="vbar-nums">
-              <div class="big"><button class="bar-reg-link" onclick="showRegistrants('all','later')" id="ab-ml-count">227</button></div>
-              <div class="sm" id="ab-ml-accts">92 accounts</div>
+              <div class="big"><button class="bar-reg-link" onclick="showRegistrants('all','later')" id="ab-ml-count">228</button></div>
+              <div class="sm" id="ab-ml-accts">93 accounts</div>
             </div>
           </div>
           <div style="padding:11px 20px;background:#F5F7FA;border-top:1px solid #DDE2E8;display:flex;justify-content:space-between;font-size:12px;color:#3d4d5c;" id="ab-summary">
@@ -801,19 +801,19 @@
         <div class="insight-card">
           <div class="eyebrow">🎯 Webinar</div>
           <h3>222 Accounts Registered</h3>
-          <p>45+156 from emailed audiences, +227 organic / direct. <strong>Internal @rev.io contacts excluded.</strong></p>
+          <p>45+155 from emailed audiences, +228 organic / direct. <strong>Internal @rev.io contacts excluded.</strong></p>
         </div>
         <div class="insight-card">
           <div class="eyebrow">⏳ Next Step</div>
           <h3>Migrate Later — No Campaign Sent</h3>
-          <p>227 contacts from this group registered for the webinar organically / direct. A dedicated sequence is the logical next step.</p>
+          <p>228 contacts from this group registered for the webinar organically / direct. A dedicated sequence is the logical next step.</p>
         </div>
       </div>
     </div>
   </div><!-- end two-col -->
 
   <div class="footer-note">
-    Rev.io Marketing Ops · Tigerpaw Migration Campaign · HubSpot API · October 1, 2026 · Internal @rev.io contacts excluded from registration counts
+    Rev.io Marketing Ops · Tigerpaw Migration Campaign · HubSpot API · October 2, 2026 · Internal @rev.io contacts excluded from registration counts
   </div>
 
 </div><!-- end main -->
@@ -823,16 +823,16 @@
 const DATA = {
   "all": {
     "contacts": "2,432",
-    "accts": "Unique · 380 accounts",
+    "accts": "Unique \u00b7 380 accounts",
     "sent": "3,493",
     "delivered": "3,449 delivered",
     "openRate": "12.4%",
-    "openSub": "429 opens · of delivered",
+    "openSub": "429 opens \u00b7 of delivered",
     "clickRate": "2.9%",
-    "clickSub": "100 clicks · of delivered",
+    "clickSub": "100 clicks \u00b7 of delivered",
     "wbContacts": "428",
     "wbAccts": "222",
-    "wbBreak": "45 + 156 + 227",
+    "wbBreak": "45 + 155 + 228",
     "totals": {
       "accts": "380",
       "contacts": "2,432",
@@ -855,10 +855,10 @@ const DATA = {
     "abars": {
       "rtmReg": 45,
       "rtmAccts": 31,
-      "unkReg": 156,
-      "unkAccts": 99,
-      "mlReg": 227,
-      "mlAccts": 92,
+      "unkReg": 155,
+      "unkAccts": 98,
+      "mlReg": 228,
+      "mlAccts": 93,
       "total": 428,
       "totalAccts": 222
     },
@@ -1033,13 +1033,13 @@ const DATA = {
   },
   "ready": {
     "contacts": "558",
-    "accts": "Unique · 85 accounts",
+    "accts": "Unique \u00b7 85 accounts",
     "sent": "1,638",
     "delivered": "1,628 delivered",
     "openRate": "11.6%",
-    "openSub": "189 opens · of delivered",
+    "openSub": "189 opens \u00b7 of delivered",
     "clickRate": "1.2%",
-    "clickSub": "20 clicks · of delivered",
+    "clickSub": "20 clicks \u00b7 of delivered",
     "wbContacts": "45",
     "wbAccts": "31",
     "totals": {
@@ -1126,15 +1126,15 @@ const DATA = {
   },
   "unknown": {
     "contacts": "1,874",
-    "accts": "Unique · 295 accounts",
+    "accts": "Unique \u00b7 295 accounts",
     "sent": "1,855",
     "delivered": "1,821 delivered",
     "openRate": "13.2%",
-    "openSub": "240 opens · of delivered",
+    "openSub": "240 opens \u00b7 of delivered",
     "clickRate": "4.4%",
-    "clickSub": "80 clicks · of delivered",
-    "wbContacts": "156",
-    "wbAccts": "99",
+    "clickSub": "80 clicks \u00b7 of delivered",
+    "wbContacts": "155",
+    "wbAccts": "98",
     "totals": {
       "accts": "295",
       "contacts": "1,874",
@@ -1143,31 +1143,31 @@ const DATA = {
       "openRate": "13.2%",
       "clicks": "80",
       "clickRate": "4.4%",
-      "reg": "156",
-      "regAccts": "99"
+      "reg": "155",
+      "regAccts": "98"
     },
     "wbBreak": "Unknown only",
     "vbars": {
-      "mspReg": 108,
+      "mspReg": 107,
       "mspAccts": 0,
       "intReg": 48,
       "intAccts": 0,
-      "total": 156,
-      "totalAccts": 99
+      "total": 155,
+      "totalAccts": 98
     },
     "abars": {
       "rtmReg": 0,
       "rtmAccts": 0,
-      "unkReg": 156,
-      "unkAccts": 99,
+      "unkReg": 155,
+      "unkAccts": 98,
       "mlReg": 0,
       "mlAccts": 0,
-      "total": 156,
-      "totalAccts": 99
+      "total": 155,
+      "totalAccts": 98
     },
     "sfOpps": {
       "count": 8,
-      "amount": 4826,
+      "amount": 4826.0,
       "opps": [
         {
           "id": "006PX00000b3crTYAQ",
@@ -1245,45 +1245,45 @@ const DATA = {
     }
   },
   "later": {
-    "contacts": "—",
+    "contacts": "\u2014",
     "accts": "No campaign sent",
-    "sent": "—",
-    "delivered": "—",
-    "openRate": "—",
+    "sent": "\u2014",
+    "delivered": "\u2014",
+    "openRate": "\u2014",
     "openSub": "No campaign sent",
-    "clickRate": "—",
-    "clickSub": "—",
-    "wbContacts": "227",
-    "wbAccts": "92",
+    "clickRate": "\u2014",
+    "clickSub": "\u2014",
+    "wbContacts": "228",
+    "wbAccts": "93",
     "wbBreak": "Organic / direct",
     "totals": {
-      "accts": "—",
-      "contacts": "—",
-      "sent": "—",
-      "opens": "—",
+      "accts": "\u2014",
+      "contacts": "\u2014",
+      "sent": "\u2014",
+      "opens": "\u2014",
       "openRate": "",
-      "clicks": "—",
+      "clicks": "\u2014",
       "clickRate": "",
-      "reg": "227",
-      "regAccts": "92"
+      "reg": "228",
+      "regAccts": "93"
     },
     "vbars": {
-      "mspReg": 192,
+      "mspReg": 193,
       "mspAccts": 0,
       "intReg": 35,
       "intAccts": 0,
-      "total": 227,
-      "totalAccts": 92
+      "total": 228,
+      "totalAccts": 93
     },
     "abars": {
       "rtmReg": 0,
       "rtmAccts": 0,
       "unkReg": 0,
       "unkAccts": 0,
-      "mlReg": 227,
-      "mlAccts": 92,
-      "total": 227,
-      "totalAccts": 92
+      "mlReg": 228,
+      "mlAccts": 93,
+      "total": 228,
+      "totalAccts": 93
     },
     "sfOpps": {
       "count": 5,

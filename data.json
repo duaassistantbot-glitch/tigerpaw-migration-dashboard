@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-01T10:00:35.047Z",
+  "generatedAt": "2026-10-02T10:00:35.793Z",
   "audienceStats": {
     "Ready to Migrate": {
       "uniqueContactsEmailed": 558,
@@ -18,8 +18,8 @@
       "totalDelivered": 1821,
       "totalOpens": 235,
       "totalClicks": 78,
-      "webinarRegistrants": 156,
-      "uniqueAccountsRegistered": 99
+      "webinarRegistrants": 155,
+      "uniqueAccountsRegistered": 98
     },
     "Migrate Later": {
       "uniqueContactsEmailed": 0,
@@ -35,13 +35,13 @@
   "verticalSummary": [
     {
       "vertical": "Unknown",
-      "registeredContacts": 185,
-      "registeredCompanies": 83
+      "registeredContacts": 186,
+      "registeredCompanies": 84
     },
     {
       "vertical": "MSP",
-      "registeredContacts": 174,
-      "registeredCompanies": 97
+      "registeredContacts": 173,
+      "registeredCompanies": 96
     },
     {
       "vertical": "Integrator",
