@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-02T10:01:08.712Z",
+  "generatedAt": "2026-10-03T10:01:01.966Z",
   "audienceStats": {
     "Ready to Migrate": {
       "sent": 1638,
@@ -2491,7 +2491,7 @@
     ]
   },
   "sfOpps": {
-    "generatedAt": "2026-10-02T10:00:52.048Z",
+    "generatedAt": "2026-10-03T10:00:50.077Z",
     "wmrContactCount": 16,
     "oppsByAudience": {
       "Ready to Migrate": {
@@ -2650,7 +2650,7 @@
             "id": "006PX00000dhFGfYAM",
             "name": "PremCom Web Migration",
             "account": "PremCom",
-            "stage": "1- Discovery Scheduled",
+            "stage": "Closed Lost",
             "amount": 2910.88,
             "createdDate": "2026-07-20T16:10:14.000+0000"
           }
