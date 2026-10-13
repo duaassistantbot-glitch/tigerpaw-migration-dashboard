@@ -326,7 +326,7 @@
           <th><button class="sort-btn" type="button" onclick="setSort('accountDetail','psaAccountStatus')">PSA Account Status <span class="sort-indicator" data-sort-table="accountDetail" data-sort-key="psaAccountStatus"></span></button></th>
           <th><button class="sort-btn" type="button" onclick="setSort('accountDetail','engagement')">Engagement <span class="sort-indicator" data-sort-table="accountDetail" data-sort-key="engagement"></span></button></th>
           <th><button class="sort-btn" type="button" onclick="setSort('accountDetail','lastLoginDate')">Last Login <span class="sort-indicator" data-sort-table="accountDetail" data-sort-key="lastLoginDate"></span></button></th>
-          <th><button class="sort-btn" type="button" onclick="setSort('accountDetail','competitorContractEndDate')">Competitor Contract End Date <span class="sort-indicator" data-sort-table="accountDetail" data-sort-key="competitorContractEndDate"></span></button></th>
+          <th><button class="sort-btn" type="button" onclick="setSort('accountDetail','contractEndDate')">Contract End Date <span class="sort-indicator" data-sort-table="accountDetail" data-sort-key="contractEndDate"></span></button></th>
           <th class="num-h"><button class="sort-btn" type="button" onclick="setSort('accountDetail','mrr')">Account MRR <span class="sort-indicator" data-sort-table="accountDetail" data-sort-key="mrr"></span></button></th>
           <th><button class="sort-btn" type="button" onclick="setSort('accountDetail','webMigrationStatus')">Web Migration Status <span class="sort-indicator" data-sort-table="accountDetail" data-sort-key="webMigrationStatus"></span></button></th>
         </tr></thead>
@@ -575,7 +575,7 @@ function renderAccountDetail() {
       <td><span class="pill">${esc(psaAccountStatus(account))}</span></td>
       <td><span class="engagement-pill ${esc(engagement.className)}">${esc(engagement.label)}</span></td>
       <td>${account.lastLoginDate ? formatDate(account.lastLoginDate) : '--'}</td>
-      <td>${account.competitorContractEndDate ? formatDate(account.competitorContractEndDate) : '--'}</td>
+      <td>${account.contractEndDate ? formatDate(account.contractEndDate) : '--'}</td>
       <td class="num-c">${account.mrr == null ? '--' : money.format(account.mrr || 0)}</td>
       <td><span class="pill">${esc(account.webMigrationStatus || 'Blank')}</span></td>
     </tr>`;
@@ -626,7 +626,7 @@ function sortValue(table, key, row) {
     if (key === 'psaAccountStatus') return psaAccountStatus(row);
     if (key === 'engagement') return engagementForAccount(row).days;
     if (key === 'lastLoginDate') return row.lastLoginDate || '';
-    if (key === 'competitorContractEndDate') return row.competitorContractEndDate || '';
+    if (key === 'contractEndDate') return row.contractEndDate || '';
     if (key === 'webMigrationStatus') return row.webMigrationStatus || 'Blank';
   }
 
@@ -767,7 +767,7 @@ function renderDrilldownHead() {
       ${drillSortButton('PSA Account Status', 'psaAccountStatus')}
       ${drillSortButton('MRR', 'mrr', 'num-h')}
       ${drillSortButton('Last Login', 'lastLoginDate')}
-      ${drillSortButton('Competitor Contract End Date', 'competitorContractEndDate')}
+      ${drillSortButton('Contract End Date', 'contractEndDate')}
       ${drillSortButton('Type', 'type')}
       ${drillSortButton('Owner', 'owner')}
     </tr>`;
@@ -861,7 +861,7 @@ function renderDrilldownRows() {
         <td><span class="pill">${esc(psaAccountStatus(account))}</span></td>
         <td class="num-c">${account.mrr == null ? '--' : money.format(account.mrr || 0)}</td>
         <td>${account.lastLoginDate ? formatDate(account.lastLoginDate) : '--'}</td>
-        <td>${account.competitorContractEndDate ? formatDate(account.competitorContractEndDate) : '--'}</td>
+        <td>${account.contractEndDate ? formatDate(account.contractEndDate) : '--'}</td>
         <td>${esc(account.type || '')}</td>
         <td>${esc(account.owner || '')}</td>
       </tr>`).join('');
@@ -895,7 +895,7 @@ function drillSortValue(row) {
   if (key === 'mrr') return Number(row.mrr || 0);
   if (key === 'accountMrr') return Number(DRILLDOWN.type === 'opps' ? (accountForOpp(row)?.mrr || 0) : (row.mrr || 0));
   if (key === 'lastLoginDate') return DRILLDOWN.type === 'opps' ? (accountForOpp(row)?.lastLoginDate || '') : (row.lastLoginDate || '');
-  if (key === 'competitorContractEndDate') return DRILLDOWN.type === 'opps' ? (accountForOpp(row)?.competitorContractEndDate || '') : (row.competitorContractEndDate || '');
+  if (key === 'contractEndDate') return DRILLDOWN.type === 'opps' ? (accountForOpp(row)?.contractEndDate || '') : (row.contractEndDate || '');
   if (DRILLDOWN.type === 'accounts') {
     if (key === 'account') return row.name || '';
     if (key === 'type') return row.type || '';
