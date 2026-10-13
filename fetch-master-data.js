@@ -488,6 +488,7 @@ function publicAccount(account) {
     type: clean(account.Type, 'Blank'),
     webMigrationStatus: webMigrationStatus(account),
     webMigrationDetails: account.Web_Migration_Status_Details__c || '',
+    competitorContractEndDate: account.Competitor_Contract_End_Date__c || '',
     psaAccountStatus,
     // Backward-compatible alias for older dashboard/data consumers.
     accountStatus: psaAccountStatus,
@@ -547,7 +548,8 @@ async function main() {
   console.log('Fetching Salesforce accounts for the uploaded Tigerpaw source list...');
   const salesforceAccounts = (await sfQueryAll(token, `
     SELECT Id, Name, Type, Tigerpaw__c, Web_Migration__c, Web_Migration_Status_Details__c,
-           TigerPaw_Account_Status__c, Tigerpaw_Vertical__c, Tigerpaw_Owner__c, PSA_Web__c, Owner.Name
+           Competitor_Contract_End_Date__c, TigerPaw_Account_Status__c, Tigerpaw_Vertical__c,
+           Tigerpaw_Owner__c, PSA_Web__c, Owner.Name
     FROM Account
     WHERE Tigerpaw__c = true OR Web_Migration__c != null
     ORDER BY Name
@@ -574,6 +576,7 @@ async function main() {
         Type: '',
         Web_Migration__c: null,
         Web_Migration_Status_Details__c: '',
+        Competitor_Contract_End_Date__c: null,
         TigerPaw_Account_Status__c: sourceRow.psaAccountStatus,
         Tigerpaw_Vertical__c: '',
         Tigerpaw_Owner__c: '',
