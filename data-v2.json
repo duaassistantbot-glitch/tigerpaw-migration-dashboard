@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-13T12:01:10.342Z",
+  "generatedAt": "2026-10-14T12:01:16.287Z",
   "audienceStats": {
     "Ready to Migrate": {
       "sent": 1638,
@@ -36,8 +36,8 @@
       "clicks": 63,
       "openRate": "12.3%",
       "clickRate": "2.7%",
-      "webinarReg": 330,
-      "webinarRegAccts": 161
+      "webinarReg": 329,
+      "webinarRegAccts": 160
     },
     "Integrator": {
       "emailedContacts": 867,
@@ -2491,12 +2491,12 @@
     ]
   },
   "sfOpps": {
-    "generatedAt": "2026-10-13T12:00:53.624Z",
-    "wmrContactCount": 16,
+    "generatedAt": "2026-10-14T12:01:01.512Z",
+    "wmrContactCount": 17,
     "oppsByAudience": {
       "Ready to Migrate": {
         "count": 5,
-        "amount": 4586.21,
+        "amount": 4605.21,
         "opps": [
           {
             "id": "006PX00000ctLAnYAM",
@@ -2524,10 +2524,10 @@
           },
           {
             "id": "006PX00000e8YVJYA2",
-            "name": "SOLVD Instrument Solutions Web Migration",
+            "name": "SOLVD Instrument Solutions - Web Migration",
             "account": "SOLVD Instrument Solutions",
-            "stage": "5 - Product / Contract Validated",
-            "amount": 595,
+            "stage": "Closed Lost",
+            "amount": 614,
             "createdDate": "2026-07-30T12:57:41.000+0000"
           },
           {
@@ -2611,7 +2611,7 @@
         ]
       },
       "Other": {
-        "count": 5,
+        "count": 6,
         "amount": 7421.88,
         "opps": [
           {
@@ -2653,13 +2653,21 @@
             "stage": "Closed Lost",
             "amount": 2910.88,
             "createdDate": "2026-07-20T16:10:14.000+0000"
+          },
+          {
+            "id": "006PX00000hHwYHYA0",
+            "name": "R.E. Michel Company LLC Web Migration",
+            "account": "R.E. Michel Company LLC",
+            "stage": "1- Discovery Scheduled",
+            "amount": 0,
+            "createdDate": "2026-10-14T10:29:32.000+0000"
           }
         ]
       }
     },
     "grandTotal": {
-      "count": 18,
-      "amount": 16834.09
+      "count": 19,
+      "amount": 16853.09
     }
   },
   "grandTotals": {
@@ -2671,8 +2679,8 @@
     "clickRate": "2.9%",
     "uniqueContacts": 2432,
     "uniqueAccts": 380,
-    "webinarReg": 427,
-    "webinarRegAccts": 221,
+    "webinarReg": 426,
+    "webinarRegAccts": 220,
     "internalExcluded": 8
   },
   "regBreakdown": {
@@ -2685,7 +2693,7 @@
       "Integrator": 48
     },
     "Other": {
-      "MSP": 192,
+      "MSP": 191,
       "Integrator": 35
     }
   }
