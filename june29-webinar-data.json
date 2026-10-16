@@ -4,17 +4,17 @@
   "eventDate": "2026-06-29T19:00:00Z",
   "startDate": "2026-06-29T00:00:00Z",
   "endDate": "2026-06-30T00:00:00Z",
-  "rawTotal": 74,
-  "externalTotal": 73,
+  "rawTotal": 73,
+  "externalTotal": 72,
   "internalExcluded": 1,
-  "uniqueAccounts": 52,
+  "uniqueAccounts": 51,
   "byAudience": {
     "Ready to Migrate": 9,
     "Unknown": 21,
-    "Migrate Later": 43
+    "Migrate Later": 42
   },
   "byVertical": {
-    "MSP": 61,
+    "MSP": 60,
     "Integrator": 12
   },
   "lastWeek": {
@@ -89,14 +89,6 @@
       "company": "Norcomm Communication Svc Inc",
       "vertical": "MSP",
       "audience": "Unknown",
-      "registrationDate": "2026-06-16"
-    },
-    {
-      "name": "Kelly Hile",
-      "email": "khile@pcnetsource.com",
-      "company": "PC Netsource",
-      "vertical": "MSP",
-      "audience": "Migrate Later",
       "registrationDate": "2026-06-16"
     },
     {
@@ -364,7 +356,7 @@
       "registrationDate": "2026-06-29"
     },
     {
-      "name": "Vinnie Chisler",
+      "name": "Vinnie Brothers Lazer Svc",
       "email": "vinnie@brotherslazer.com",
       "company": "Brothers Lazer Svc",
       "vertical": "MSP",
@@ -396,7 +388,7 @@
       "registrationDate": "2026-06-29"
     },
     {
-      "name": "Rajinder Gill",
+      "name": "rajgill_56151 Fusion Security Inc.",
       "email": "rajgill@ssrg.ca",
       "company": "Fusion Security, Inc",
       "vertical": "MSP",
@@ -436,7 +428,7 @@
       "registrationDate": "2026-06-29"
     },
     {
-      "name": "Brad Ormsby",
+      "name": "Brad J. Ormsby",
       "email": "brad@ormsbys.com",
       "company": "Ormsbys Computer Store, Inc.",
       "vertical": "MSP",
@@ -532,7 +524,7 @@
       "registrationDate": "2026-06-29"
     },
     {
-      "name": "Curtis Cox",
+      "name": "Curtis cox",
       "email": "ccox@teleco-ilm.com",
       "company": "Teleco Wilmington",
       "vertical": "MSP",

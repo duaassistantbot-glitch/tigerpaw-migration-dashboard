@@ -1,24 +1,24 @@
 {
-  "generatedAt": "2026-09-28T18:48:48.370Z",
+  "generatedAt": "2026-10-16T15:26:18.844Z",
   "webinarName": "Webinar: See it for yourself. Introducing Rev.io PSA.",
   "registrationDateSplit": {
     "firstWebinarThrough": "2026-05-31",
     "june10From": "2026-06-01",
     "firstWebinar": {
-      "externalTotal": 179,
-      "uniqueAccounts": 108,
+      "externalTotal": 177,
+      "uniqueAccounts": 106,
       "byAudience": {
-        "Migrate Later": 69,
-        "Unknown": 88,
+        "Migrate Later": 68,
+        "Unknown": 87,
         "Ready to Migrate": 22
       },
       "byVertical": {
-        "MSP": 123,
+        "MSP": 121,
         "Integrator": 56
       },
       "registrants": [
         {
-          "name": "Tina Kay",
+          "name": "Tina Kerekes",
           "email": "tina@empire-team.com",
           "company": "Empire Communications Inc.",
           "vertical": "MSP",
@@ -122,7 +122,7 @@
           "registrationDate": "2026-05-07"
         },
         {
-          "name": "Joanne Lanteigne",
+          "name": "Joanne ECI-Empire Communications",
           "email": "joanne@empire-team.com",
           "company": "ECI-Empire Communications",
           "vertical": "MSP",
@@ -162,7 +162,7 @@
           "registrationDate": "2026-05-13"
         },
         {
-          "name": "Aaron Brookes",
+          "name": "Aaron Advantage Computer Enterprises, Inc.",
           "email": "aaron@jayhawksoftware.com",
           "company": "Advantage Computer Enterprises",
           "vertical": "MSP",
@@ -218,7 +218,7 @@
           "registrationDate": "2026-05-13"
         },
         {
-          "name": "Rhiannon Dodgen",
+          "name": "Cnr Service",
           "email": "cnr-service@cnr-inc.com",
           "company": "CNR Inc.",
           "vertical": "MSP",
@@ -242,7 +242,7 @@
           "registrationDate": "2026-05-13"
         },
         {
-          "name": "Mike LaPlante",
+          "name": "Mike Dividia",
           "email": "mike@dividia.net",
           "company": "Dividia",
           "vertical": "Integrator",
@@ -250,7 +250,7 @@
           "registrationDate": "2026-05-13"
         },
         {
-          "name": "Nicole Pritchard",
+          "name": "Nicole Innovative Telephone & Data Solutions, LLC",
           "email": "npritchard@innovativetds.com",
           "company": "Innovative Telephone & Data Solutions, LLC",
           "vertical": "MSP",
@@ -290,7 +290,7 @@
           "registrationDate": "2026-05-14"
         },
         {
-          "name": "Ross McNar",
+          "name": "Ross McNary",
           "email": "rmcnary@digitel.ca",
           "company": "Digitel Systems Inc.",
           "vertical": "MSP",
@@ -370,7 +370,7 @@
           "registrationDate": "2026-05-15"
         },
         {
-          "name": "Robert Armstrong",
+          "name": "Rob Armstrong",
           "email": "rob@cc-tek.net",
           "company": "CC-Teknologies Inc.",
           "vertical": "Integrator",
@@ -396,7 +396,7 @@
         {
           "name": "Noa Williamson",
           "email": "nwilliamson@eaglecraft.com",
-          "company": "EagleCraft",
+          "company": "EagleCraft Boats",
           "vertical": "MSP",
           "audience": "Migrate Later",
           "registrationDate": "2026-05-15"
@@ -474,7 +474,7 @@
           "registrationDate": "2026-05-15"
         },
         {
-          "name": "Richard Munro",
+          "name": "Richard Memory Lane Computer Electronics LTD",
           "email": "richard@memlane.ca",
           "company": "Memory Lane Computers",
           "vertical": "MSP",
@@ -485,14 +485,6 @@
           "name": "Karrie Gadorus",
           "email": "karrie@mercsys.com",
           "company": "Mercury Systems Corporation",
-          "vertical": "MSP",
-          "audience": "Unknown",
-          "registrationDate": "2026-05-15"
-        },
-        {
-          "name": "Mark Goldman",
-          "email": "markg@microtechsystems.com",
-          "company": "Micro Tech Systems",
           "vertical": "MSP",
           "audience": "Unknown",
           "registrationDate": "2026-05-15"
@@ -634,7 +626,7 @@
           "registrationDate": "2026-05-15"
         },
         {
-          "name": "Sonny Souder",
+          "name": "ssouder_37875 Thomas Electronics Inc",
           "email": "ssouder@te-usa.com",
           "company": "Thomas Electronics Inc",
           "vertical": "MSP",
@@ -738,7 +730,7 @@
           "registrationDate": "2026-05-18"
         },
         {
-          "name": "Nate Danielson",
+          "name": "Nathan Danielson",
           "email": "ndanielson@htechus.com",
           "company": "Herring Technology",
           "vertical": "Integrator",
@@ -930,7 +922,7 @@
           "registrationDate": "2026-05-19"
         },
         {
-          "name": "Chelsea Perez",
+          "name": "Chelsea Hubal",
           "email": "accounting@profcom.com",
           "company": "Professional Communication Solutions",
           "vertical": "MSP",
@@ -1042,7 +1034,7 @@
           "registrationDate": "2026-05-20"
         },
         {
-          "name": "Jeremy Vargas",
+          "name": "JeremyVargas Network Enhancement Systems, Inc",
           "email": "jeremyvargas@nes.cc",
           "company": "Network Enhancement Systems",
           "vertical": "MSP",
@@ -1146,7 +1138,7 @@
           "registrationDate": "2026-05-21"
         },
         {
-          "name": "Ashly Price",
+          "name": "Ashley Price",
           "email": "aprice@imcservice.com",
           "company": "IMC Facility Management",
           "vertical": "MSP",
@@ -1154,7 +1146,7 @@
           "registrationDate": "2026-05-21"
         },
         {
-          "name": "James Michael",
+          "name": "Jim Michael",
           "email": "jwm@imcservice.com",
           "company": "IMC Facility Management",
           "vertical": "MSP",
@@ -1186,7 +1178,7 @@
           "registrationDate": "2026-05-21"
         },
         {
-          "name": "Robert Bohacek",
+          "name": "Robert Boacek",
           "email": "robert@mpsworks.com",
           "company": "MPS Works",
           "vertical": "MSP",
@@ -1218,7 +1210,7 @@
           "registrationDate": "2026-05-21"
         },
         {
-          "name": "Frankie Gagliardi",
+          "name": "fgagliardi_56117 Pathcom Inc.",
           "email": "fgagliardi@pathcominc.com",
           "company": "Pathcom",
           "vertical": "MSP",
@@ -1266,7 +1258,7 @@
           "registrationDate": "2026-05-21"
         },
         {
-          "name": "Juan Francisco Castaneda",
+          "name": "Juan Fransisco",
           "email": "jfransisco@virtualguard.com",
           "company": "Virtual Guard",
           "vertical": "Integrator",
@@ -1290,7 +1282,7 @@
           "registrationDate": "2026-05-21"
         },
         {
-          "name": "Sasha Fitzpatrick",
+          "name": "sfitzpatrick_46523 Beacon Telecom Inc",
           "email": "sfitzpatrick@beacontelecom.com",
           "company": "Beacon Telecom",
           "vertical": "MSP",
@@ -1362,7 +1354,7 @@
           "registrationDate": "2026-05-29"
         },
         {
-          "name": "Amy Labianca",
+          "name": "Amy LaBianca",
           "email": "amy.labianca@crinj.com",
           "company": "Communication Resources",
           "vertical": "MSP",
@@ -1378,7 +1370,7 @@
           "registrationDate": "2026-05-29"
         },
         {
-          "name": "Michelle Tomlin",
+          "name": "MichelleTomlin DCR-Nashville",
           "email": "mtomlin@dcrpos.com",
           "company": "DCR-Nashville",
           "vertical": "Integrator",
@@ -1386,7 +1378,7 @@
           "registrationDate": "2026-05-29"
         },
         {
-          "name": "Donald Hilsenroth",
+          "name": "Don Hilsenroth",
           "email": "don@diversifieddigital.com",
           "company": "Diversified Digital Group - Main",
           "vertical": "MSP",
@@ -1394,7 +1386,7 @@
           "registrationDate": "2026-05-29"
         },
         {
-          "name": "Jeff Mortensen",
+          "name": "Jeffrey Mortensen",
           "email": "jeff@electronicspecialtiesinc.com",
           "company": "Electronic Specialties, Inc",
           "vertical": "MSP",
@@ -1405,14 +1397,6 @@
           "name": "Wendy Froehlich",
           "email": "wendy@electronicspecialtiesinc.com",
           "company": "Electronic Specialties, Inc",
-          "vertical": "MSP",
-          "audience": "Migrate Later",
-          "registrationDate": "2026-05-29"
-        },
-        {
-          "name": "Al Stewart",
-          "email": "als@glessner.net",
-          "company": "Glessner Alarm & Communication",
           "vertical": "MSP",
           "audience": "Migrate Later",
           "registrationDate": "2026-05-29"
@@ -1434,7 +1418,7 @@
           "registrationDate": "2026-05-29"
         },
         {
-          "name": "brad reiber",
+          "name": "Brad Reiber",
           "email": "brad.reiber@protexcentral.net",
           "company": "Protex Central",
           "vertical": "Integrator",
@@ -1585,7 +1569,7 @@
           "registrationDate": "2026-06-29"
         },
         {
-          "name": "Reggie Majarrez",
+          "name": "rmajarrez_56182 Ring Street",
           "email": "rmajarrez@ringstreet.net",
           "company": "RingStreet",
           "vertical": "MSP",
@@ -1649,6 +1633,14 @@
           "registrationDate": "2026-08-31"
         },
         {
+          "name": "Jesse Cole",
+          "email": "jcole@innovativetds.com",
+          "company": "Innovative Telephone and Data Solutions",
+          "vertical": "MSP",
+          "audience": "Migrate Later",
+          "registrationDate": "2026-10-01"
+        },
+        {
           "name": "Chris Chao",
           "email": "chris.chao@centerpointit.com",
           "company": "Centerpoint IT",
@@ -1689,7 +1681,7 @@
           "registrationDate": "2026-06-01"
         },
         {
-          "name": "Shannon Slater",
+          "name": "shannons_55776 T. Daniels Consulting, Inc.",
           "email": "shannons@tdaniels.com",
           "company": "T. Daniels Consulting, Inc.",
           "vertical": "MSP",
@@ -1777,7 +1769,7 @@
           "registrationDate": "2026-06-02"
         },
         {
-          "name": "CHRIS TABBERT",
+          "name": "Chris Tabbert",
           "email": "chris.tabbert@onlineaplus.com",
           "company": "Onlineaplus",
           "vertical": "MSP",
@@ -1867,7 +1859,7 @@
         {
           "name": "Sonya Allen",
           "email": "sallen@cti4u.com",
-          "company": "Communication technologies",
+          "company": "Communications Technologies Inc.",
           "vertical": "MSP",
           "audience": "Migrate Later",
           "registrationDate": "2026-06-03"
@@ -1985,9 +1977,9 @@
           "registrationDate": "2026-06-03"
         },
         {
-          "name": "Lisa Ruston",
+          "name": "Empire-PA .",
           "email": "lruston@empire-pa.com",
-          "company": "Votacall Inc - 2nd Database",
+          "company": "Votacall",
           "vertical": "MSP",
           "audience": "Unknown",
           "registrationDate": "2026-06-03"
@@ -2001,7 +1993,7 @@
           "registrationDate": "2026-06-04"
         },
         {
-          "name": "Patrick Sullivan",
+          "name": "Pat Sullivan",
           "email": "pat@hebusa.com",
           "company": "Hoosier Equipment Brokers",
           "vertical": "Integrator",
@@ -2089,7 +2081,7 @@
           "registrationDate": "2026-06-08"
         },
         {
-          "name": "Kimberly Bridge",
+          "name": "Kimberly Doing Things Simply, Inc.",
           "email": "kimberly@dtsinc.ca",
           "company": "Doing Things Simply",
           "vertical": "Integrator",
@@ -2105,7 +2097,7 @@
           "registrationDate": "2026-06-08"
         },
         {
-          "name": "Michael Castellano",
+          "name": "Michael Castellano JR",
           "email": "michaeljr@g1c.net",
           "company": "Grand Central Station Internet Services, Inc.",
           "vertical": "MSP",
@@ -2297,7 +2289,7 @@
           "registrationDate": "2026-06-09"
         },
         {
-          "name": "Nelson Guzman",
+          "name": "Transcom Service Department",
           "email": "service@transcomla.com",
           "company": "Transcom Telecommunications",
           "vertical": "MSP",
@@ -2337,7 +2329,7 @@
           "registrationDate": "2026-06-10"
         },
         {
-          "name": "Michael Hogan",
+          "name": "Mike Hogan",
           "email": "mhogan@andersonpump.com",
           "company": "Anderson Pump Service",
           "vertical": "MSP",
@@ -2435,7 +2427,7 @@
         {
           "name": "Matt Leonow",
           "email": "mleonow@raytecsystems.com",
-          "company": "Raytec Systems",
+          "company": "RayTec Systems",
           "vertical": "MSP",
           "audience": "Unknown",
           "registrationDate": "2026-06-10"
@@ -2449,7 +2441,7 @@
           "registrationDate": "2026-06-10"
         },
         {
-          "name": "Pavlina Bellanti",
+          "name": "Palvina Bellanti",
           "email": "pbellanti@sentenia.net",
           "company": "Sentenia Systems",
           "vertical": "MSP",
@@ -2481,14 +2473,6 @@
           "registrationDate": "2026-06-10"
         },
         {
-          "name": "Tom Wilson",
-          "email": "twilson@ustele.com",
-          "company": "Ustele Inc.",
-          "vertical": "MSP",
-          "audience": "Unknown",
-          "registrationDate": "2026-06-11"
-        },
-        {
           "name": "TJ McDonald",
           "email": "tmcdonald@tdsnetworks.com",
           "company": "TDS-Phone",
@@ -2497,7 +2481,7 @@
           "registrationDate": "2026-06-13"
         },
         {
-          "name": "Jay Hunt",
+          "name": "J Hunt",
           "email": "jhunt@neuwavesystems.com",
           "company": "Neuwave Systems Inc",
           "vertical": "Integrator",
@@ -2551,6 +2535,14 @@
           "vertical": "MSP",
           "audience": "Migrate Later",
           "registrationDate": "2026-07-07"
+        },
+        {
+          "name": "Tom Wilson",
+          "email": "twilson@ustele.com",
+          "company": "Ustele Inc.",
+          "vertical": "MSP",
+          "audience": "Unknown",
+          "registrationDate": "2026-10-02"
         },
         {
           "name": "Holly Whipple",
@@ -2614,14 +2606,6 @@
           "company": "Norcomm Communication Svc Inc",
           "vertical": "MSP",
           "audience": "Unknown",
-          "registrationDate": "2026-06-16"
-        },
-        {
-          "name": "Kelly Hile",
-          "email": "khile@pcnetsource.com",
-          "company": "PC Netsource",
-          "vertical": "MSP",
-          "audience": "Migrate Later",
           "registrationDate": "2026-06-16"
         },
         {
@@ -2889,7 +2873,7 @@
           "registrationDate": "2026-06-29"
         },
         {
-          "name": "Vinnie Chisler",
+          "name": "Vinnie Brothers Lazer Svc",
           "email": "vinnie@brotherslazer.com",
           "company": "Brothers Lazer Svc",
           "vertical": "MSP",
@@ -2921,7 +2905,7 @@
           "registrationDate": "2026-06-29"
         },
         {
-          "name": "Rajinder Gill",
+          "name": "rajgill_56151 Fusion Security Inc.",
           "email": "rajgill@ssrg.ca",
           "company": "Fusion Security, Inc",
           "vertical": "MSP",
@@ -2961,7 +2945,7 @@
           "registrationDate": "2026-06-29"
         },
         {
-          "name": "Brad Ormsby",
+          "name": "Brad J. Ormsby",
           "email": "brad@ormsbys.com",
           "company": "Ormsbys Computer Store, Inc.",
           "vertical": "MSP",
@@ -3057,7 +3041,7 @@
           "registrationDate": "2026-06-29"
         },
         {
-          "name": "Curtis Cox",
+          "name": "Curtis cox",
           "email": "ccox@teleco-ilm.com",
           "company": "Teleco Wilmington",
           "vertical": "MSP",
@@ -3149,8 +3133,8 @@
       "internalExcluded": 5,
       "uniqueAccounts": 110,
       "byAudience": {
-        "Migrate Later": 76,
-        "Unknown": 90,
+        "Migrate Later": 77,
+        "Unknown": 89,
         "Ready to Migrate": 23
       },
       "byVertical": {
@@ -3215,7 +3199,7 @@
       },
       "registrants": [
         {
-          "name": "Tina Kay",
+          "name": "Tina Kerekes",
           "email": "tina@empire-team.com",
           "company": "Empire Communications Inc.",
           "vertical": "MSP",
@@ -3319,7 +3303,7 @@
           "registrationDate": "2026-05-07"
         },
         {
-          "name": "Joanne Lanteigne",
+          "name": "Joanne ECI-Empire Communications",
           "email": "joanne@empire-team.com",
           "company": "ECI-Empire Communications",
           "vertical": "MSP",
@@ -3359,7 +3343,7 @@
           "registrationDate": "2026-05-13"
         },
         {
-          "name": "Aaron Brookes",
+          "name": "Aaron Advantage Computer Enterprises, Inc.",
           "email": "aaron@jayhawksoftware.com",
           "company": "Advantage Computer Enterprises",
           "vertical": "MSP",
@@ -3415,7 +3399,7 @@
           "registrationDate": "2026-05-13"
         },
         {
-          "name": "Rhiannon Dodgen",
+          "name": "Cnr Service",
           "email": "cnr-service@cnr-inc.com",
           "company": "CNR Inc.",
           "vertical": "MSP",
@@ -3439,7 +3423,7 @@
           "registrationDate": "2026-05-13"
         },
         {
-          "name": "Mike LaPlante",
+          "name": "Mike Dividia",
           "email": "mike@dividia.net",
           "company": "Dividia",
           "vertical": "Integrator",
@@ -3447,7 +3431,7 @@
           "registrationDate": "2026-05-13"
         },
         {
-          "name": "Nicole Pritchard",
+          "name": "Nicole Innovative Telephone & Data Solutions, LLC",
           "email": "npritchard@innovativetds.com",
           "company": "Innovative Telephone & Data Solutions, LLC",
           "vertical": "MSP",
@@ -3487,7 +3471,7 @@
           "registrationDate": "2026-05-14"
         },
         {
-          "name": "Ross McNar",
+          "name": "Ross McNary",
           "email": "rmcnary@digitel.ca",
           "company": "Digitel Systems Inc.",
           "vertical": "MSP",
@@ -3567,7 +3551,7 @@
           "registrationDate": "2026-05-15"
         },
         {
-          "name": "Robert Armstrong",
+          "name": "Rob Armstrong",
           "email": "rob@cc-tek.net",
           "company": "CC-Teknologies Inc.",
           "vertical": "Integrator",
@@ -3593,7 +3577,7 @@
         {
           "name": "Noa Williamson",
           "email": "nwilliamson@eaglecraft.com",
-          "company": "EagleCraft",
+          "company": "EagleCraft Boats",
           "vertical": "MSP",
           "audience": "Migrate Later",
           "registrationDate": "2026-05-15"
@@ -3671,7 +3655,7 @@
           "registrationDate": "2026-05-15"
         },
         {
-          "name": "Richard Munro",
+          "name": "Richard Memory Lane Computer Electronics LTD",
           "email": "richard@memlane.ca",
           "company": "Memory Lane Computers",
           "vertical": "MSP",
@@ -3682,14 +3666,6 @@
           "name": "Karrie Gadorus",
           "email": "karrie@mercsys.com",
           "company": "Mercury Systems Corporation",
-          "vertical": "MSP",
-          "audience": "Unknown",
-          "registrationDate": "2026-05-15"
-        },
-        {
-          "name": "Mark Goldman",
-          "email": "markg@microtechsystems.com",
-          "company": "Micro Tech Systems",
           "vertical": "MSP",
           "audience": "Unknown",
           "registrationDate": "2026-05-15"
@@ -3831,7 +3807,7 @@
           "registrationDate": "2026-05-15"
         },
         {
-          "name": "Sonny Souder",
+          "name": "ssouder_37875 Thomas Electronics Inc",
           "email": "ssouder@te-usa.com",
           "company": "Thomas Electronics Inc",
           "vertical": "MSP",
@@ -3935,7 +3911,7 @@
           "registrationDate": "2026-05-18"
         },
         {
-          "name": "Nate Danielson",
+          "name": "Nathan Danielson",
           "email": "ndanielson@htechus.com",
           "company": "Herring Technology",
           "vertical": "Integrator",
@@ -4127,7 +4103,7 @@
           "registrationDate": "2026-05-19"
         },
         {
-          "name": "Chelsea Perez",
+          "name": "Chelsea Hubal",
           "email": "accounting@profcom.com",
           "company": "Professional Communication Solutions",
           "vertical": "MSP",
@@ -4239,7 +4215,7 @@
           "registrationDate": "2026-05-20"
         },
         {
-          "name": "Jeremy Vargas",
+          "name": "JeremyVargas Network Enhancement Systems, Inc",
           "email": "jeremyvargas@nes.cc",
           "company": "Network Enhancement Systems",
           "vertical": "MSP",
@@ -4343,7 +4319,7 @@
           "registrationDate": "2026-05-21"
         },
         {
-          "name": "Ashly Price",
+          "name": "Ashley Price",
           "email": "aprice@imcservice.com",
           "company": "IMC Facility Management",
           "vertical": "MSP",
@@ -4351,7 +4327,7 @@
           "registrationDate": "2026-05-21"
         },
         {
-          "name": "James Michael",
+          "name": "Jim Michael",
           "email": "jwm@imcservice.com",
           "company": "IMC Facility Management",
           "vertical": "MSP",
@@ -4383,7 +4359,7 @@
           "registrationDate": "2026-05-21"
         },
         {
-          "name": "Robert Bohacek",
+          "name": "Robert Boacek",
           "email": "robert@mpsworks.com",
           "company": "MPS Works",
           "vertical": "MSP",
@@ -4415,7 +4391,7 @@
           "registrationDate": "2026-05-21"
         },
         {
-          "name": "Frankie Gagliardi",
+          "name": "fgagliardi_56117 Pathcom Inc.",
           "email": "fgagliardi@pathcominc.com",
           "company": "Pathcom",
           "vertical": "MSP",
@@ -4463,7 +4439,7 @@
           "registrationDate": "2026-05-21"
         },
         {
-          "name": "Juan Francisco Castaneda",
+          "name": "Juan Fransisco",
           "email": "jfransisco@virtualguard.com",
           "company": "Virtual Guard",
           "vertical": "Integrator",
@@ -4487,7 +4463,7 @@
           "registrationDate": "2026-05-21"
         },
         {
-          "name": "Sasha Fitzpatrick",
+          "name": "sfitzpatrick_46523 Beacon Telecom Inc",
           "email": "sfitzpatrick@beacontelecom.com",
           "company": "Beacon Telecom",
           "vertical": "MSP",
@@ -4663,7 +4639,7 @@
           "registrationDate": "2026-06-29"
         },
         {
-          "name": "Reggie Majarrez",
+          "name": "rmajarrez_56182 Ring Street",
           "email": "rmajarrez@ringstreet.net",
           "company": "RingStreet",
           "vertical": "MSP",
@@ -4725,6 +4701,14 @@
           "vertical": "MSP",
           "audience": "Migrate Later",
           "registrationDate": "2026-08-31"
+        },
+        {
+          "name": "Jesse Cole",
+          "email": "jcole@innovativetds.com",
+          "company": "Innovative Telephone and Data Solutions",
+          "vertical": "MSP",
+          "audience": "Migrate Later",
+          "registrationDate": "2026-10-01"
         }
       ]
     },
@@ -4734,30 +4718,30 @@
       "eventDate": "2026-06-10T19:00:00Z",
       "startDate": "2026-06-10T00:00:00Z",
       "endDate": "2026-06-11T00:00:00Z",
-      "rawTotal": 128,
-      "externalTotal": 126,
+      "rawTotal": 127,
+      "externalTotal": 125,
       "internalExcluded": 2,
-      "uniqueAccounts": 80,
+      "uniqueAccounts": 79,
       "byAudience": {
-        "Migrate Later": 88,
+        "Migrate Later": 87,
         "Ready to Migrate": 10,
         "Unknown": 28
       },
       "byVertical": {
         "Integrator": 22,
-        "MSP": 104
+        "MSP": 103
       },
       "lastWeek": {
         "start": "2026-05-25",
         "end": "2026-05-31",
-        "externalTotal": 13,
-        "uniqueAccounts": 11,
+        "externalTotal": 12,
+        "uniqueAccounts": 10,
         "byAudience": {
-          "Migrate Later": 13
+          "Migrate Later": 12
         },
         "byVertical": {
           "Integrator": 5,
-          "MSP": 8
+          "MSP": 7
         },
         "registrants": [
           {
@@ -4777,7 +4761,7 @@
             "registrationDate": "2026-05-29"
           },
           {
-            "name": "Amy Labianca",
+            "name": "Amy LaBianca",
             "email": "amy.labianca@crinj.com",
             "company": "Communication Resources",
             "vertical": "MSP",
@@ -4793,7 +4777,7 @@
             "registrationDate": "2026-05-29"
           },
           {
-            "name": "Michelle Tomlin",
+            "name": "MichelleTomlin DCR-Nashville",
             "email": "mtomlin@dcrpos.com",
             "company": "DCR-Nashville",
             "vertical": "Integrator",
@@ -4801,7 +4785,7 @@
             "registrationDate": "2026-05-29"
           },
           {
-            "name": "Donald Hilsenroth",
+            "name": "Don Hilsenroth",
             "email": "don@diversifieddigital.com",
             "company": "Diversified Digital Group - Main",
             "vertical": "MSP",
@@ -4809,7 +4793,7 @@
             "registrationDate": "2026-05-29"
           },
           {
-            "name": "Jeff Mortensen",
+            "name": "Jeffrey Mortensen",
             "email": "jeff@electronicspecialtiesinc.com",
             "company": "Electronic Specialties, Inc",
             "vertical": "MSP",
@@ -4820,14 +4804,6 @@
             "name": "Wendy Froehlich",
             "email": "wendy@electronicspecialtiesinc.com",
             "company": "Electronic Specialties, Inc",
-            "vertical": "MSP",
-            "audience": "Migrate Later",
-            "registrationDate": "2026-05-29"
-          },
-          {
-            "name": "Al Stewart",
-            "email": "als@glessner.net",
-            "company": "Glessner Alarm & Communication",
             "vertical": "MSP",
             "audience": "Migrate Later",
             "registrationDate": "2026-05-29"
@@ -4849,7 +4825,7 @@
             "registrationDate": "2026-05-29"
           },
           {
-            "name": "brad reiber",
+            "name": "Brad Reiber",
             "email": "brad.reiber@protexcentral.net",
             "company": "Protex Central",
             "vertical": "Integrator",
@@ -4884,7 +4860,7 @@
           "registrationDate": "2026-05-29"
         },
         {
-          "name": "Amy Labianca",
+          "name": "Amy LaBianca",
           "email": "amy.labianca@crinj.com",
           "company": "Communication Resources",
           "vertical": "MSP",
@@ -4900,7 +4876,7 @@
           "registrationDate": "2026-05-29"
         },
         {
-          "name": "Michelle Tomlin",
+          "name": "MichelleTomlin DCR-Nashville",
           "email": "mtomlin@dcrpos.com",
           "company": "DCR-Nashville",
           "vertical": "Integrator",
@@ -4908,7 +4884,7 @@
           "registrationDate": "2026-05-29"
         },
         {
-          "name": "Donald Hilsenroth",
+          "name": "Don Hilsenroth",
           "email": "don@diversifieddigital.com",
           "company": "Diversified Digital Group - Main",
           "vertical": "MSP",
@@ -4916,7 +4892,7 @@
           "registrationDate": "2026-05-29"
         },
         {
-          "name": "Jeff Mortensen",
+          "name": "Jeffrey Mortensen",
           "email": "jeff@electronicspecialtiesinc.com",
           "company": "Electronic Specialties, Inc",
           "vertical": "MSP",
@@ -4927,14 +4903,6 @@
           "name": "Wendy Froehlich",
           "email": "wendy@electronicspecialtiesinc.com",
           "company": "Electronic Specialties, Inc",
-          "vertical": "MSP",
-          "audience": "Migrate Later",
-          "registrationDate": "2026-05-29"
-        },
-        {
-          "name": "Al Stewart",
-          "email": "als@glessner.net",
-          "company": "Glessner Alarm & Communication",
           "vertical": "MSP",
           "audience": "Migrate Later",
           "registrationDate": "2026-05-29"
@@ -4956,7 +4924,7 @@
           "registrationDate": "2026-05-29"
         },
         {
-          "name": "brad reiber",
+          "name": "Brad Reiber",
           "email": "brad.reiber@protexcentral.net",
           "company": "Protex Central",
           "vertical": "Integrator",
@@ -5012,7 +4980,7 @@
           "registrationDate": "2026-06-01"
         },
         {
-          "name": "Shannon Slater",
+          "name": "shannons_55776 T. Daniels Consulting, Inc.",
           "email": "shannons@tdaniels.com",
           "company": "T. Daniels Consulting, Inc.",
           "vertical": "MSP",
@@ -5100,7 +5068,7 @@
           "registrationDate": "2026-06-02"
         },
         {
-          "name": "CHRIS TABBERT",
+          "name": "Chris Tabbert",
           "email": "chris.tabbert@onlineaplus.com",
           "company": "Onlineaplus",
           "vertical": "MSP",
@@ -5190,7 +5158,7 @@
         {
           "name": "Sonya Allen",
           "email": "sallen@cti4u.com",
-          "company": "Communication technologies",
+          "company": "Communications Technologies Inc.",
           "vertical": "MSP",
           "audience": "Migrate Later",
           "registrationDate": "2026-06-03"
@@ -5308,9 +5276,9 @@
           "registrationDate": "2026-06-03"
         },
         {
-          "name": "Lisa Ruston",
+          "name": "Empire-PA .",
           "email": "lruston@empire-pa.com",
-          "company": "Votacall Inc - 2nd Database",
+          "company": "Votacall",
           "vertical": "MSP",
           "audience": "Unknown",
           "registrationDate": "2026-06-03"
@@ -5324,7 +5292,7 @@
           "registrationDate": "2026-06-04"
         },
         {
-          "name": "Patrick Sullivan",
+          "name": "Pat Sullivan",
           "email": "pat@hebusa.com",
           "company": "Hoosier Equipment Brokers",
           "vertical": "Integrator",
@@ -5412,7 +5380,7 @@
           "registrationDate": "2026-06-08"
         },
         {
-          "name": "Kimberly Bridge",
+          "name": "Kimberly Doing Things Simply, Inc.",
           "email": "kimberly@dtsinc.ca",
           "company": "Doing Things Simply",
           "vertical": "Integrator",
@@ -5428,7 +5396,7 @@
           "registrationDate": "2026-06-08"
         },
         {
-          "name": "Michael Castellano",
+          "name": "Michael Castellano JR",
           "email": "michaeljr@g1c.net",
           "company": "Grand Central Station Internet Services, Inc.",
           "vertical": "MSP",
@@ -5620,7 +5588,7 @@
           "registrationDate": "2026-06-09"
         },
         {
-          "name": "Nelson Guzman",
+          "name": "Transcom Service Department",
           "email": "service@transcomla.com",
           "company": "Transcom Telecommunications",
           "vertical": "MSP",
@@ -5660,7 +5628,7 @@
           "registrationDate": "2026-06-10"
         },
         {
-          "name": "Michael Hogan",
+          "name": "Mike Hogan",
           "email": "mhogan@andersonpump.com",
           "company": "Anderson Pump Service",
           "vertical": "MSP",
@@ -5758,7 +5726,7 @@
         {
           "name": "Matt Leonow",
           "email": "mleonow@raytecsystems.com",
-          "company": "Raytec Systems",
+          "company": "RayTec Systems",
           "vertical": "MSP",
           "audience": "Unknown",
           "registrationDate": "2026-06-10"
@@ -5772,7 +5740,7 @@
           "registrationDate": "2026-06-10"
         },
         {
-          "name": "Pavlina Bellanti",
+          "name": "Palvina Bellanti",
           "email": "pbellanti@sentenia.net",
           "company": "Sentenia Systems",
           "vertical": "MSP",
@@ -5804,14 +5772,6 @@
           "registrationDate": "2026-06-10"
         },
         {
-          "name": "Tom Wilson",
-          "email": "twilson@ustele.com",
-          "company": "Ustele Inc.",
-          "vertical": "MSP",
-          "audience": "Unknown",
-          "registrationDate": "2026-06-11"
-        },
-        {
           "name": "TJ McDonald",
           "email": "tmcdonald@tdsnetworks.com",
           "company": "TDS-Phone",
@@ -5820,7 +5780,7 @@
           "registrationDate": "2026-06-13"
         },
         {
-          "name": "Jay Hunt",
+          "name": "J Hunt",
           "email": "jhunt@neuwavesystems.com",
           "company": "Neuwave Systems Inc",
           "vertical": "Integrator",
@@ -5874,6 +5834,14 @@
           "vertical": "MSP",
           "audience": "Migrate Later",
           "registrationDate": "2026-07-07"
+        },
+        {
+          "name": "Tom Wilson",
+          "email": "twilson@ustele.com",
+          "company": "Ustele Inc.",
+          "vertical": "MSP",
+          "audience": "Unknown",
+          "registrationDate": "2026-10-02"
         }
       ]
     },
@@ -5883,17 +5851,17 @@
       "eventDate": "2026-06-29T19:00:00Z",
       "startDate": "2026-06-29T00:00:00Z",
       "endDate": "2026-06-30T00:00:00Z",
-      "rawTotal": 74,
-      "externalTotal": 73,
+      "rawTotal": 73,
+      "externalTotal": 72,
       "internalExcluded": 1,
-      "uniqueAccounts": 52,
+      "uniqueAccounts": 51,
       "byAudience": {
         "Ready to Migrate": 9,
         "Unknown": 21,
-        "Migrate Later": 43
+        "Migrate Later": 42
       },
       "byVertical": {
-        "MSP": 61,
+        "MSP": 60,
         "Integrator": 12
       },
       "lastWeek": {
@@ -5968,14 +5936,6 @@
           "company": "Norcomm Communication Svc Inc",
           "vertical": "MSP",
           "audience": "Unknown",
-          "registrationDate": "2026-06-16"
-        },
-        {
-          "name": "Kelly Hile",
-          "email": "khile@pcnetsource.com",
-          "company": "PC Netsource",
-          "vertical": "MSP",
-          "audience": "Migrate Later",
           "registrationDate": "2026-06-16"
         },
         {
@@ -6243,7 +6203,7 @@
           "registrationDate": "2026-06-29"
         },
         {
-          "name": "Vinnie Chisler",
+          "name": "Vinnie Brothers Lazer Svc",
           "email": "vinnie@brotherslazer.com",
           "company": "Brothers Lazer Svc",
           "vertical": "MSP",
@@ -6275,7 +6235,7 @@
           "registrationDate": "2026-06-29"
         },
         {
-          "name": "Rajinder Gill",
+          "name": "rajgill_56151 Fusion Security Inc.",
           "email": "rajgill@ssrg.ca",
           "company": "Fusion Security, Inc",
           "vertical": "MSP",
@@ -6315,7 +6275,7 @@
           "registrationDate": "2026-06-29"
         },
         {
-          "name": "Brad Ormsby",
+          "name": "Brad J. Ormsby",
           "email": "brad@ormsbys.com",
           "company": "Ormsbys Computer Store, Inc.",
           "vertical": "MSP",
@@ -6411,7 +6371,7 @@
           "registrationDate": "2026-06-29"
         },
         {
-          "name": "Curtis Cox",
+          "name": "Curtis cox",
           "email": "ccox@teleco-ilm.com",
           "company": "Teleco Wilmington",
           "vertical": "MSP",

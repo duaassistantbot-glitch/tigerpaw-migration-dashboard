@@ -143,6 +143,7 @@ async function getRegistrantsForEvent(eventConfig) {
     const result = await requestJson('POST', '/crm/v3/objects/contacts/search', {
       filterGroups: [{
         filters: [
+          { propertyName: 'contrast_last_registration', operator: 'EQ', value: WEBINAR_NAME },
           { propertyName: 'contrast_last_event_date', operator: 'GTE', value: eventConfig.startDate },
           { propertyName: 'contrast_last_event_date', operator: 'LT', value: eventConfig.endDate }
         ]
